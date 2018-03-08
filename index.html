@@ -323,6 +323,7 @@
         border: 2px solid white;
         border-radius: 5px;
         margin-right:8px;
+        margin-bottom:10px;
     }
 
     .btn2 {
@@ -890,7 +891,7 @@
 <html>
 <body>
     <div id="myBtnContainer" style="margin-left:10px;line-height:55px;">
-        <button class="btn active background-button-all"  onclick="filterSelection('all'); "> ALL</button>
+        <button class="btn active background-button-all" onclick="filterSelection('all'); "> ALL</button>
         <button class="btn background-color-automated" onclick="filterSelection('automated')"> AUTOMATED</button>
         <button class="btn background-color-active" onclick="filterSelection('active')"> ACTIVE</button>
         <button class="btn background-color-events" onclick="filterSelection('events')"> EVENTS</button>
@@ -911,28 +912,24 @@
         <button class="btn2 tag-event" style="line-height:40px;vertical-align:bottom;" onclick="filterSelection('eventTag')"></button>
         <button class="btn2 tag-venus" onclick="filterSelection('venusTag')"></button>
     </div>
-  
-    <input type="text" id="myInput" onkeyup="myFunction()" onfocus="this.value = '';myFunction()" placeholder="Search by name or key words..." title="Type in a name">
-
+    <input type="text" id="myInput" onkeyup="myFunction()" onfocus="this.value = '';myFunction();" placeholder="Search by name or key words..." title="Type in a name">
     <!--
-    <div class="key-words">
-        <button class="btn4" onclick="myFunction2('m$')">M$</button>
-        <button class="btn4" onclick="myFunction2('steel')">steel</button>
-        <button class="btn4" onclick="myFunction2('titanium')">titanium</button>
-        <button class="btn4" onclick="myFunction2('plant')">plant</button>
-        <button class="btn4" onclick="myFunction2('energy')">energy</button>
-        <button class="btn4" onclick="myFunction2('heat')">heat</button>
-        <button class="btn4" onclick="myFunction2('temperature')">temperature</button>
-        <button class="btn4" onclick="myFunction2('ocean')">ocean</button>
-        <button class="btn4" onclick="myFunction2('oxygen')">oxygen</button>
-        <button class="btn4" onclick="myFunction2('forest')">forest</button>
-        <button class="btn4" onclick="myFunction2('city')">city</button>
-        <button class="btn4" onclick="myFunction2('special')">special</button>
-    </div>
+      <div class="key-words">
+          <button class="btn4" onclick="myFunction2('m$')">M$</button>
+          <button class="btn4" onclick="myFunction2('steel')">steel</button>
+          <button class="btn4" onclick="myFunction2('titanium')">titanium</button>
+          <button class="btn4" onclick="myFunction2('plant')">plant</button>
+          <button class="btn4" onclick="myFunction2('energy')">energy</button>
+          <button class="btn4" onclick="myFunction2('heat')">heat</button>
+          <button class="btn4" onclick="myFunction2('temperature')">temperature</button>
+          <button class="btn4" onclick="myFunction2('ocean')">ocean</button>
+          <button class="btn4" onclick="myFunction2('oxygen')">oxygen</button>
+          <button class="btn4" onclick="myFunction2('forest')">forest</button>
+          <button class="btn4" onclick="myFunction2('city')">city</button>
+          <button class="btn4" onclick="myFunction2('special')">special</button>
+      </div>
 
-  -->
-
-
+    -->
     <!-------------------CARDS LIST----------------------->
     <ul id="myUL">
         <!--1-->
@@ -969,7 +966,7 @@
         </li>
 
         <!--3-->
-        <li class="filterDiv automated builderTag powerTag standard">
+        <li class="filterDiv automated builderTag energyTag standard">
             <div class="title background-color-automated">Cloud Seeding</div>
             <div class="price">13</div>
             <div class="tag tag1 tag-builder"></div>
@@ -1472,7 +1469,7 @@
         </li>
 
         <!--30-->
-        <li class="filterDiv automated earthTag powerTag standard">
+        <li class="filterDiv automated earthTag energyTag standard">
             <div class="title background-color-automated">Lunar Beam</div>
             <div class="price">13</div>
             <div class="tag tag1 tag-energy"></div>
@@ -1545,42 +1542,68 @@
 
 
         <!--
-            <li class="filterDiv standard  ">
-                <div class="title "></div>
-                <div class="price"></div>
-                <div class="tag tag1 "></div>
-                <div class="tag tag2 "></div>
-                <div class="number"></div>
-                <div class="corporate-icon"></div>
-                <div class="content">
-                    <div class="points">1</div>
-                    <div class="requirements"></div>
-                    <div class="production-box production-box-size1a">
-                        <div class="production-prefix">&#x2796&#xFE0E</div><div class=" production"></div>
-                        <div class="production-prefix">&#x2795&#xFE0E</div><div class=" production"></div>
-                    </div>
+                <li class="filterDiv standard  ">
+                    <div class="title "></div>
+                    <div class="price"></div>
+                    <div class="tag tag1 "></div>
+                    <div class="tag tag2 "></div>
+                    <div class="number"></div>
+                    <div class="corporate-icon"></div>
+                    <div class="content">
+                        <div class="points">1</div>
+                        <div class="requirements"></div>
+                        <div class="production-box production-box-size1a">
+                            <div class="production-prefix">&#x2796&#xFE0E</div><div class=" production"></div>
+                            <div class="production-prefix">&#x2795&#xFE0E</div><div class=" production"></div>
+                        </div>
 
-                    <div class="description">
+                        <div class="description">
 
+                        </div>
                     </div>
-                </div>
-            </li>
-    -->
+                </li>
+        -->
 
 
     </ul>
 
     <script>
-        filterSelection("all")
+
+        filterSelection("all");
+
+        var filterButton = "";
+
         function filterSelection(c) {
             var x, i;
+            counter = document.getElementById("countNumber");
             x = document.querySelectorAll('.filterDiv');
-            if (c == "all")  c = "";       
+            if (c == "all") c = "";
             for (i = 0; i < x.length; i++) {
                 w3RemoveClass(x[i], "show");
-                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) {
+                    w3AddClass(x[i], "show");
+                }
             }
         }
+
+        function myFunction() {
+            var input, filter, ul, li, a, i;
+            counter = document.getElementById("countNumber");
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i];
+                if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+
+
         function clearInput() {
             document.getElementById("myInput").value = "";
         }
@@ -1615,39 +1638,6 @@
                 current[0].className = current[0].className.replace(" active", "");
                 this.className += " active";
             });
-        }
-
-        function myFunction() {
-            var input, filter, ul, li, a, i;
-            input = document.getElementById("myInput");
-            filter = input.value.toUpperCase();
-            ul = document.getElementById("myUL");
-            li = ul.getElementsByTagName("li");
-            for (i = 0; i < li.length; i++) {
-                a = li[i];
-                if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                    li[i].style.display = "";
-                } else {
-                    li[i].style.display = "none";
-                }
-            }
-        }
-
-        function myFunction2(text) {
-            var input, filter, ul, li, a, i;
-            input = document.getElementById("myInput");
-            input.value = text;
-            filter = text.toUpperCase();
-            ul = document.getElementById("myUL");
-            li = ul.getElementsByTagName("li");
-            for (i = 0; i < li.length; i++) {
-                a = li[i];
-                if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                    li[i].style.display = "";
-                } else {
-                    li[i].style.display = "none";
-                }
-            }
         }
     </script>
 
