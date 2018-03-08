@@ -1,7 +1,1655 @@
 <!DOCTYPE html>
+
+<style>
+
+    .filterDiv {
+        float: left;
+        background: #eeeeee;
+        background: linear-gradient(to bottom right, #ffffff, #aaaaaa, #eeeeee, #cecece, #dddddd, #eeeeee, #cccccc);
+        width: 240px;
+        height: 300px;
+        display: none;
+        font-size: 12px;
+        font-family: Arial;
+        margin: 10px;
+        margin-right: 10px;
+        border: 2px solid black;
+        border-radius: 20px;
+        box-shadow: 0px 5px 10px 5px rgba(0,0,0,.4);
+    }
+
+    .price {
+        float: left;
+        font-size: 22px;
+        border: 1px solid black;
+        background: rgb(255,228,4);
+        background: linear-gradient(rgb(255,208,4),rgb(255,255,104),rgb(255,208,4),rgb(255,208,4));
+        width: 44px;
+        height: 44px;
+        line-height: 44px;
+        border-radius: 10px;
+        text-align: center;
+        margin-top: -72px;
+        margin-left: -7px;
+        font-weight: bold;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.7), 0 0 0 2px rgba(0,0,0,0.4);
+    }
+
+    .number {
+        float: left;
+        width: 40px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        margin-top: -58px;
+        margin-left: 50px;
+        font-size: 11px;
+        font-weight: bold;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.4), 0 0 0 2px rgba(0,0,0,0.2);
+        background: #cccccc;
+        background: linear-gradient(to right, #aaaaaa, #eeeeee, #eeeeee,  #aaaaaa);
+        border-radius: 2px;
+    }
+
+    .corporate-icon:after {
+        position: absolute;
+        content: "\25b2";
+        background-color: red;
+        padding-top: 2px;
+        padding-bottom: 4px;
+        padding-right: 4px;
+        padding-left: 4px;
+        font-size: 12px;
+        color: white;
+        border-radius: 50%;
+        border: 1px solid black;
+        margin-left: -252px;
+        margin-top: 258px;
+        vertical-align: top;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.5),0 0 0 2px rgba(0,0,0,0.3);
+    }
+
+    .base-icon {
+        display: inline-block;
+        padding: 1px;
+        padding-left: 6px;
+        padding-right: 6px;
+        border: 1px solid black;
+        border-radius: 3px;
+        background-color: rgb(221,221,221);
+        color: rgb(221,221,221);
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.5),0 0 0 2px rgba(0,0,0,0.3);
+    }
+    .corporate-icon2 {
+        border: 1px solid black;
+        background-color: red;
+        padding-top: 2px;
+        padding-bottom: 4px;
+        padding-right: 4px;
+        padding-left: 4px;
+        font-size: 12px;
+        color: white;
+        border-radius: 50%;
+        vertical-align: top;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.5),0 0 0 2px rgba(0,0,0,0.3);
+    }
+
+    .venus-icon2 {
+        border: 1px solid black;
+        color: white;
+        padding: 2px;
+        padding-left: 5px;
+        padding-right: 5px;
+        background: rgb(44,132,196);
+        border-radius: 3px;
+        vertical-align: top;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.5),0 0 0 2px rgba(0,0,0,0.3);
+    }
+
+    .tag {
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.7), 0 0 0 2px rgba(0,0,0,0.4);
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 50%;
+        border: 1px solid black;
+        background-color: white;
+        margin-top: -8px;
+    }
+
+    .tag1 {
+        margin-left: 205px;
+    }
+
+    .tag2 {
+        margin-left: 159px;
+    }
+
+    .tag3 {
+        margin-left: 113px;
+    }
+
+
+    .title {
+        text-transform: uppercase;
+        float: left;
+        margin-top: 30px;
+        margin-left: -1px;
+        width: 100%;
+        border: 1px solid black;
+        line-height: 30px;
+        text-align: center;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .show {
+        display: block;
+    }
+
+    .container {
+        margin-top: 20px;
+        overflow: hidden;
+    }
+    /*********** Background colors************/
+
+    .background-color-automated {
+        background: linear-gradient(to right,rgb(0,102,0), rgb(0,180,0), rgb(0,220,0), rgb(0,180,0),rgb(0,102,0));
+    }
+
+    .background-color-active {
+        background: linear-gradient(to right,rgb(15,96,151),rgb(84,150,201),rgb(0,204,204),rgb(84,150,201),rgb(15,96,151));
+    }
+
+    .background-color-events {
+        background: linear-gradient(to right, orange,rgb(255,51,51),rgb(255,51,51),rgb(240,100,00),rgb(255,255,150),rgb(240,100,00),orange,orange,yellow);
+    }
+    .background-button-all {
+        background: linear-gradient(to right, #aaaaaa, #ffffff, #aaaaaa, #eeeeee, #cecece, #bbbbbb, #eeeeee, #aaaaaa);
+    }
+
+    /*********** Style the tags ************/
+    .tag-builder {
+        background-color: rgb(128,87,0);
+    }
+        .tag-builder:after {
+            color: rgb(73,54,40);
+            content: "\2617";
+            line-height: 35px;
+            vertical-align: top;
+            font-size: 20px;
+            display: inline-block;
+            -webkit-transform: scale(2.7,1); /* Safari and Chrome */
+            -moz-transform: scale(2.7,1); /* Firefox */
+            -ms-transform: scale(2.7,1); /* IE 9 */
+            -o-transform: scale(2.7,1); /* Opera */
+            transform: scale(2.7,1); /* W3C */
+        }
+
+    .tag-space {
+        background-color: rgb(44,44,44);
+    }
+        .tag-space:after {
+            color: yellow;
+            content: "\2734";
+            font-size: 30px;
+            line-height: 40px;
+        }
+
+    .tag-energy {
+        background-color: rgb(174,0,255);
+    }
+        .tag-energy:after {
+            content: "\26A1\FE0E";
+            font-size: 26px;
+            line-height: 38px;
+            color: white;
+            font-weight:bold;
+        }
+
+    .tag-jovian {
+        background-color: rgb(235,200,148);
+        background: linear-gradient(rgb(235,200,148),beige,rgb(235,200,148),beige,rgb(235,200,148),rosybrown,beige,beige,rgb(235,200,148),rosybrown,rgb(235,200,148),beige,rgb(235,200,148),rgb(235,200,148), rgb(235,200,148));
+    }
+
+
+
+    .tag-venus {
+        background-color: rgb(44,132,196);
+    }
+        .tag-venus:after {
+            content: "V";
+            color: white;
+            font-weight: bold;
+            font-size: 26px;
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        }
+
+    .tag-earth {
+        background-color: dodgerblue;
+        color: white;
+        font-size: 32px;
+        line-height: 43px;
+    }
+        .tag-earth:after {
+            content: "\1f30f\FE0E";
+
+        }
+
+    .tag-city {
+        background-color: rgb(190,190,190);
+        color: rgb(50,50,50);
+        font-size: 18px;
+    }
+        .tag-city:after {
+            line-height: 30px;
+            content: "\1f3d9\FE0E";
+            vertical-align: top;
+            display: inline-block;
+            -webkit-transform: scale(1.6,1); /* Safari and Chrome */
+            -moz-transform: scale(1.6,1); /* Firefox */
+            -ms-transform: scale(1.6,1); /* IE 9 */
+            -o-transform: scale(1.6,1); /* Opera */
+            transform: scale(1.6,1); /* W3C */
+        }
+
+    .tag-microbe {
+        background-color: rgb(212,217,78);
+        color: rgb(63,112,58);
+        line-height: 36px;
+    }
+        .tag-microbe:after {
+            content: "\2042";
+            font-size: 32px;
+            
+            
+        }
+
+    .tag-plant {
+        background-color: rgb(85,176,52);
+        color: rgb(63,112,58);
+    }
+        .tag-plant:after {
+            content: "\1F331\FE0E";
+            font-size: 26px;
+            line-height: 40px;
+        }
+
+
+    .tag-animal {
+        background-color: rgb(63,112,58);
+        color: darkseagreen;
+    }
+        .tag-animal:after {
+            content: "\1F43e\FE0E";
+            font-size: 26px;
+            line-height: 40px;
+        }
+
+
+    .tag-event {
+        background-color: rgb(255,230,35);
+        
+    }
+        .tag-event:after {
+            content: "\2B07\FE0E";
+            font-size: 30px;
+            vertical-align:bottom;
+            display: inline-block;
+            -webkit-transform: scale(2,1); /* Safari and Chrome */
+            -moz-transform: scale(2,1); /* Firefox */
+            -ms-transform: scale(2,1); /* IE 9 */
+            -o-transform: scale(2,1); /* Opera */
+            transform: scale(2,1); /* W3C */
+        }
+
+    .tag-science:after {
+        content: "\269b";
+        font-size: 38px;
+        line-height: 40px;
+    }
+
+
+    /************** Style the buttons ************/
+    .btn {
+        outline: none;
+        height: 40px;
+        width: 137px;
+        cursor: pointer;
+        font-weight: bold;
+        border: 2px solid white;
+        border-radius: 5px;
+        margin-right:8px;
+    }
+
+    .btn2 {
+        outline: none;
+        height: 54px;
+        width: 54px;
+        cursor: pointer;
+        border: 2px solid white;
+        border-radius: 50%;
+        text-align: center;
+        vertical-align: middle;
+        font-weight: normal;
+        margin-right: 8px;
+        margin-bottom: 8px;
+    }
+
+    .btn3 {
+        outline: none;
+        height: 40px;
+        width: 52px;
+        cursor: pointer;
+        font-weight: bold;
+        border: 2px solid white;
+        border-radius: 5px;
+        margin-right: 8px;
+    }
+
+    .btn4 {
+        outline: none;
+        height: 40px;
+        cursor: pointer;
+        font-weight: bold;
+        border: 2px solid white;
+        border-radius: 5px;
+        margin-right: 4px;
+        padding-left:15px;
+        padding-right:15px;
+    }
+
+    .btn:hover {
+        border: 1px solid #bbbbbb;
+    }
+
+    .btn2:hover {
+        border: 1px solid #bbbbbb;
+    }
+
+    .btn3:hover {
+        border: 1px solid #bbbbbb;
+    }
+
+
+
+    .btn.active {
+        border: 1px solid rgb(47,44,42);
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.5), 0 0 0 2px rgba(0,0,0,0.4), 0 0 0 3px rgba(0,0,0,0.3), 0 0 0 4px rgba(0,0,0,0.2);
+    }
+
+    .btn2.active {
+        border: 1px solid rgb(47,44,42);
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.5), 0 0 0 2px rgba(0,0,0,0.4), 0 0 0 3px rgba(0,0,0,0.3), 0 0 0 4px rgba(0,0,0,0.2);
+    }
+
+    .btn3.active {
+        border: 1px solid rgb(47,44,42);
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.5), 0 0 0 2px rgba(0,0,0,0.4), 0 0 0 3px rgba(0,0,0,0.3), 0 0 0 4px rgba(0,0,0,0.2);
+    }
+
+
+    /************** Style the Content ************/
+    .content {
+        position: relative;
+        display: inline-block;
+        width: 220px;
+        padding: 10px;
+        line-height: 20px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .requirements {
+        background-color: rgb(255,204,100);
+        border-style: outset;
+        margin-top: -5px;
+        margin-bottom: 10px;
+        font-weight: normal;
+        text-align: center;
+        font-weight: bold;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.4), 0 0 0 2px rgba(0,0,0,0.2);
+    }
+
+    .points {
+        position: absolute;
+        margin-top: 175px;
+        margin-left: 138px;
+        width: 80px;
+        height: 42px;
+        line-height: 35px;
+        font-size: 28px;
+        text-align: center;
+        border-radius: 12px;
+        border: 1px solid black;
+        background-color: rgb(205,162, 130);
+        background: linear-gradient(to right, rgb(128, 87, 0), rgb(205,162, 130), rgb(205,162, 130), rgb(128, 87, 0));
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.4), 0 0 0 3px rgba(0,0,0,0.2);
+    }
+
+    .points-big {
+        line-height: 40px;
+        font-size: 36px;
+    }
+
+
+    .description {
+        margin-top: 7px;
+        font-size: 11px;
+        font-weight: normal;
+        text-align: left;
+        line-height: 14px;
+    }
+
+    .production-box {
+        width: 44px;
+        display: inline-block;
+        border-style: outset;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.4), 0 0 0 2px rgba(0,0,0,0.2);
+        background-color: rgb(128, 87, 0);
+        background: linear-gradient(to right, rgb(73,54,40), rgb(128, 87, 0),rgb(73,54,40), rgb(128, 87, 0), rgb(73,54,40));
+        padding-top: 4px;
+        padding-bottom: 4px;
+        text-align: center;
+        margin-bottom: 5px;
+        margin-left: 5px;
+    }
+
+    .production-box-size1a {
+        width: 66px;
+    }
+
+    .production-box-size2 {
+        width: 81px;
+    }
+
+    .production-box-size2a {
+        width: 100px;
+    }
+
+    .production-box-size3 {
+        width: 115px;
+    }
+
+    .production-box-size3a {
+        width: 130px;
+    }
+
+    .production {
+        display: inline-block;
+        position: relative;
+        width: 28px;
+        height: 25px;
+        line-height: 25px;
+        border: 1px solid black;
+        margin: 2px;
+        text-align: center;
+        font-size: 16px;
+        border-radius: 2px;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.2);
+    }
+
+    .production-prefix {
+        display: inline-block;
+        position: relative;
+        color:black;
+        width: 23px;
+        vertical-align:central;
+        line-height:10px;
+        z-index: +2;
+        font-weight:normal;
+    }
+
+
+    .empty-production {
+        display: inline-block;
+        position: relative;
+        width: 30px;
+        height: 25px;
+        line-height: 25px;
+        margin-top: 2px;
+        margin-left: 3px;
+        margin-right: 6px;
+        text-align: center;
+        background-color: rgb(128, 87, 0);
+        border: 1px solid rgb(128, 87, 0);
+    }
+
+    .affected:after {
+        content: "";
+        position: absolute;
+        top: -3px;
+        left: -3px;
+        right: -3px;
+        bottom: -3px;
+        border: 3px solid red;
+    }
+
+    .red-outline {
+        border: 3px solid red;
+    }
+
+    /************** Tiles**************/
+    .tile {
+        position: relative;
+        display: inline-block;
+        width: 40px;
+        line-height: 16px;
+        text-align: center;
+        margin-bottom: 10px;
+        margin-left: 5px;
+        border-style: outset;
+        border-radius: 5px;
+        padding: 5px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.4), 0 0 0 2px rgba(0,0,0,0.2);
+    }
+
+    .temperature-tile {
+        background-color: rgb(240,124,47);
+        background: linear-gradient(to right, red, orange, yellow, orange, red);
+        font-size: 26px;
+        line-height: 26px;
+        font-weight: normal;
+        padding-top: 5px;
+        width: 34px;
+        text-align: center;
+    }
+        .temperature-tile:after {
+            content: "\1f321\FE0E ";
+        }
+
+    .forest-tile {
+        background-color: rgb(85,176,52);
+    }
+
+    .ocean-tile {
+        background-color: cornflowerblue;
+        background: linear-gradient(to right, rgb(46,87,143), cornflowerblue, cornflowerblue, rgb(46,87,143));
+        padding-top: 12px;
+        padding-bottom: 13px;
+        color: rgb(46,87,143);
+        font-size: 20px;
+    }
+        .ocean-tile:after {
+            content: "\1f4a7\FE0E";
+        }
+
+    .ocean-resource {
+        background-color: cornflowerblue;
+        color: rgb(46,87,143); 
+    }
+        .ocean-resource:after {
+            content: "\1f4a7\FE0E";
+        }
+
+    .city-tile {
+        background-color: rgb(190,190,190);
+        background: linear-gradient(to right, #aaaaaa, #eeeeee, #eeeeee, #aaaaaa);
+        color: rgb(50,50,50);
+        font-weight: normal;
+    }
+        .city-tile:before {
+            padding-top:2px;
+            content: "\1f3d9\FE0E";
+            font-size: 26px;
+            display: inline-block;
+            -webkit-transform: scale(1.6,1); /* Safari and Chrome */
+            -moz-transform: scale(1.6,1); /* Firefox */
+            -ms-transform: scale(1.6,1); /* IE 9 */
+            -o-transform: scale(1.6,1); /* Opera */
+            transform: scale(1.6,1); /* W3C */
+        }
+
+    .special-tile {
+        background-color: rgb(240,124,47);
+    }
+
+
+    .capitol {
+        background-color: white;
+        background: linear-gradient(to right, #cccccc, white, white, #cccccc);
+        margin-left: 20px;
+        font-size: 50px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+
+
+    /**************Resources***********/
+    .resource {
+        border: 1px solid black;
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        line-height: 24px;
+       margin-left: 3px;
+        margin-right: 3px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        font-size: 16px;
+        min-width: 26px;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.4), 0 0 0 2px rgba(0,0,0,0.2);
+    }
+
+
+    .money {
+        background-color: rgb(255,228,4);
+        background: linear-gradient(rgb(255,208,4),rgb(255,255,104),rgb(255,208,4),rgb(255,208,4));
+        font-weight: bold;
+        border-radius: 5px;
+    }
+
+    .steel {
+        background-color: rgb(162,113,71);
+        color: rgb(73,54,40);
+    }
+
+        .steel:after {
+            content: "\2692";
+            font-size:20px;
+        }
+
+    .titanium {
+        background-color: rgb(44,44,44);
+        color: yellow;
+    }
+
+        .titanium:after {
+            content: "\2606\FE0E";
+            font-weight: normal;
+            font-size: 20px;
+        }
+
+    .plant {
+        background-color: rgb(85,176,52);
+        color: rgb(63,112,58);
+        font-weight: normal;
+    }
+
+        .plant:before {
+            content: "\1F331\FE0E";
+            font-size: 18px;
+        }
+
+    .energy {
+        background-color: rgb(174,0,255);
+        color: white;
+        font-weight: bold;
+    }
+
+        .energy:after {
+            content: "\00a0\26A1\FE0E\00a0";
+            font-size: 18px;
+        }
+
+    .heat {
+        background-color: rgb(240,70,47);
+        
+    }
+        .heat:after {
+            font-weight:normal;
+            content: "III";
+            color: yellow;
+        }
+
+    /**************cards resources***********/
+
+    .microbe {
+        background-color: rgb(212,217,78);
+        color: rgb(63,112,58);
+        font-weight: normal;
+    }
+        .microbe:before {
+            content: "\2042";
+            font-size: 19px;
+        }
+
+    .animal {
+        background-color: rgb(63,112,58);
+        color: darkseagreen;
+        font-weight: normal;
+
+    }
+        .animal:before {
+            content: "\1F43e\FE0E";
+            font-size: 20px;
+        }
+
+    .science {
+        display: inline-block;
+        background-color: white;
+        border: 1px solid black;
+        padding-left: 4px;
+        padding-right: 4px;
+        font-size: 26px;
+        font-weight: normal;
+        border-radius: 50px;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.4), 0 0 0 2px rgba(0,0,0,0.2);
+        line-height: 28px;
+    }
+        .science:after {
+            content: "\269b";
+        }
+
+    .card {
+        background-color: rgb(44,44,44);
+        background: linear-gradient(to right, black, rgb(60,60,60), rgb(150,150,150), rgb(60,60,60), rgb(60,60,60),black);
+        color: white;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+        .card:after {
+            content: "\1F30F\FE0E";
+            font-size: 20px;
+        }
+
+    .space-resource {
+        background-color: rgb(44,44,44);
+        color: yellow;
+        border-radius: 50%;
+        font-weight: normal;
+        font-size: 22px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        padding-left: 1px;
+        padding-right: 1px;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.4), 0 0 0 2px rgba(0,0,0,0.2);
+    }
+
+        .space-resource:after {
+            content: "\2734";
+        }
+
+    .oxygen {
+        background-color: rgb(246,241,175);
+        color: red;
+        font-size: 24px;
+        width:30px;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.4), 0 0 0 2px rgba(0,0,0,0.2);
+    }
+
+        .oxygen:after {
+
+            content: "O\00B2";
+        }
+
+
+    .event-resource {
+        background-color: rgb(255,230,35);
+        border-radius: 50%;
+        font-weight: normal;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        padding-left: 1px;
+        padding-right: 1px;
+        font-size: 22px;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.4), 0 0 0 2px rgba(0,0,0,0.2);
+    }
+
+        .event-resource:after {
+
+            padding-left: 3px;
+            padding-right: 3px;
+            content: "\2B07\FE0E";
+            vertical-align: bottom;
+            display: inline-block;
+            -webkit-transform: scale(2,1); /* Safari and Chrome */
+            -moz-transform: scale(2,1); /* Firefox */
+            -ms-transform: scale(2,1); /* IE 9 */
+            -o-transform: scale(2,1); /* Opera */
+            transform: scale(2,1); /* W3C */
+        }
+
+    .jovian {
+        background-color: rgb(235,200,148);
+        background: linear-gradient(rgb(235,200,148),beige,rgb(235,200,148),beige,rgb(235,200,148),rosybrown,beige,beige,rgb(235,200,148),rosybrown,rgb(235,200,148),beige,rgb(235,200,148),rgb(235,200,148), rgb(235,200,148));
+        border: 1px solid black;
+        font-size: 24px;
+        font-weight: normal;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        padding-right: 16px;
+        padding-left: 16px;
+        border-radius: 16px;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.4), 0 0 0 2px rgba(0,0,0,0.2);
+        margin-left: 2px;
+        line-height: 42px;
+    }
+
+    .rating {
+        background-color: rgb(240,100,00);
+        background: linear-gradient(to right, red,rgb(240,100,00),rgb(240,100,00),rgb(240,100,00),red);
+        width: 40px;
+        font-size: 24px;
+        padding-bottom: 8px;
+        padding-left: 6px;
+    }
+        .rating:after {
+            content: "\1F30F\FE0E";   
+        }
+
+    /************** Extras ************/
+    .red-arrow {
+        display: inline-block;
+    }
+
+    .red-arrow:after {
+        position: relative;
+        color: red;
+        content: "\27a1";
+    }
+
+    /************** Style the Input field************/
+    #myInput {
+        outline: none;
+        background-position: 10px 12px;
+        background-repeat: no-repeat;
+        width: 335px;
+        font-size: 16px;
+        padding: 10px 2px 10px 20px;
+        border: 2px solid #ddd;
+        margin-top: 8px;
+        margin-left: 8px;
+        margin-right: 6px;
+        margin-bottom: 30px;
+        border-radius: 5px;
+    }
+
+    #myUL {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+        #myUL li a {
+            border: 1px solid #ddd;
+            margin-top: -1px; /* Prevent double borders */
+            background-color: #f6f6f6;
+            padding: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            color: black;
+            display: block;
+        }
+
+            #myUL li a:hover:not(.header) {
+                background-color: #eee;
+            }
+
+    .key-words {
+        display:inline-block;
+
+    }
+</style>
 <html>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <div id="myBtnContainer" style="margin-left:10px;line-height:55px;">
+        <button class="btn active background-button-all"  onclick="filterSelection('all'); "> ALL</button>
+        <button class="btn background-color-automated" onclick="filterSelection('automated')"> AUTOMATED</button>
+        <button class="btn background-color-active" onclick="filterSelection('active')"> ACTIVE</button>
+        <button class="btn background-color-events" onclick="filterSelection('events')"> EVENTS</button>
+        <button class="btn3" onclick="filterSelection('standard')"><div class="base-icon">I</div></button>
+        <button class="btn3 corporateButton" onclick="filterSelection('corporate')"><span class="corporate-icon2">&#x25b2</span></button>
+        <button class="btn3 venusNext" style="color:rgb(44,132,196);" onclick="filterSelection('venusNext')"><span class="venus-icon2">V</span></button>
+        <br>
+        <button class="btn2 tag-builder" style="line-height:40px" onclick="filterSelection('builderTag')"></button>
+        <button class="btn2 tag-space" onclick="filterSelection('spaceTag')"></button>
+        <button class="btn2 tag-energy" onclick="filterSelection('energyTag')"></button>
+        <button class="btn2 tag-science" onclick="filterSelection('scienceTag')"></button>
+        <button class="btn2 tag-jovian" onclick="filterSelection('jovianTag')"></button>
+        <button class="btn2 tag-earth" style="font-size:38px;padding-top:2px;" onclick="filterSelection('earthTag')"></button>
+        <button class="btn2 tag-plant" onclick="filterSelection('plantTag')"></button>
+        <button class="btn2 tag-microbe" onclick="filterSelection('microbeTag')"></button>
+        <button class="btn2 tag-animal" onclick="filterSelection('animalTag')"></button>
+        <button class="btn2 tag-city" style="font-size: 22px;line-height:40px" onclick="filterSelection('cityTag')"></button>
+        <button class="btn2 tag-event" style="line-height:40px;vertical-align:bottom;" onclick="filterSelection('eventTag')"></button>
+        <button class="btn2 tag-venus" onclick="filterSelection('venusTag')"></button>
+    </div>
+  
+    <input type="text" id="myInput" onkeyup="myFunction()" onfocus="this.value = '';myFunction()" placeholder="Search by name or key words..." title="Type in a name">
+
+    <!--
+    <div class="key-words">
+        <button class="btn4" onclick="myFunction2('m$')">M$</button>
+        <button class="btn4" onclick="myFunction2('steel')">steel</button>
+        <button class="btn4" onclick="myFunction2('titanium')">titanium</button>
+        <button class="btn4" onclick="myFunction2('plant')">plant</button>
+        <button class="btn4" onclick="myFunction2('energy')">energy</button>
+        <button class="btn4" onclick="myFunction2('heat')">heat</button>
+        <button class="btn4" onclick="myFunction2('temperature')">temperature</button>
+        <button class="btn4" onclick="myFunction2('ocean')">ocean</button>
+        <button class="btn4" onclick="myFunction2('oxygen')">oxygen</button>
+        <button class="btn4" onclick="myFunction2('forest')">forest</button>
+        <button class="btn4" onclick="myFunction2('city')">city</button>
+        <button class="btn4" onclick="myFunction2('special')">special</button>
+    </div>
+
+  -->
+
+
+    <!-------------------CARDS LIST----------------------->
+    <ul id="myUL">
+        <!--1-->
+        <li class="filterDiv automated builderTag jovianTag standard">
+            <div class="title background-color-automated">Colonizer Training Camp</div>
+            <div class="price">8</div>
+            <div class="tag tag1 tag-builder"></div>
+            <div class="tag tag2 tag-jovian"></div>
+            <div class="number">001</div>
+            <div class="content">
+                <div class="points points-big">2</div>
+                <div class="requirements"> Requires: max 5% O2</div>
+            </div>
+        </li>
+
+        <!--2-->
+        <li class="filterDiv automated jovianTag corporate">
+            <div class="title background-color-automated">Asteroid Mining Consortium</div>
+            <div class="price">13</div>
+            <div class="tag tag1 tag-jovian"></div>
+            <div class="number">002</div>
+            <div class="corporate-icon"></div>
+            <div class="content">
+                <div class="points points-big">1</div>
+                <div class="requirements">Requires: Titanium production.</div>
+                <div class="production-box production-box-size1a">
+                    <div class="production-prefix">&#x2796&#xFE0E</div><div class="titanium production red-outline"></div><br>
+                    <div class="production-prefix">&#x2795&#xFE0E</div><div class="titanium production"></div>
+                </div>
+                <div class="description">
+                    (Requires that you have titanium production. Decrease any titanium production 1 step and increase your own 1 step.)
+                </div>
+            </div>
+        </li>
+
+        <!--3-->
+        <li class="filterDiv automated builderTag powerTag standard">
+            <div class="title background-color-automated">Cloud Seeding</div>
+            <div class="price">13</div>
+            <div class="tag tag1 tag-builder"></div>
+            <div class="tag tag2 tag-energy"></div>
+            <div class="number">003</div>
+            <div class="content">
+                <div class="points points-big">1</div>
+                <div class="requirements">Requires: Titanium production.</div>
+                <div class="production-box">
+                    <div class="energy production"></div>
+                </div>&nbsp;
+                <div class="tile temperature-tile"></div>
+                <div class="description">
+                    (Increase your Energy production 1 step. Increase temperature 1 step.)
+                </div>
+            </div>
+        </li>
+
+        <!--4-->
+        <li class="filterDiv automated standard">
+            <div class="title background-color-automated">Deep Well Heating</div>
+            <div class="price">11</div>
+            <div class="number">004</div>
+            <div class="content">
+                <div class="requirements">Requires: 3 Oceans</div>
+                <div class="production-box production-box-size2a">
+                    <div class="production-prefix">&#x2796&#xFE0E</div><div class="money production">1</div><div class="heat production red-outline"></div><br>
+                    <div class="production-prefix">&#x2795&#xFE0E</div><div class="plant production"></div><div class="plant production"></div>
+                </div>
+                <div class="description">
+                    (Requires 3 ocean tiles. Decrease your M$ production 1 step and any heat production 1 step. Increase your Plant production 2 steps.)
+                </div>
+            </div>
+        </li>
+
+        <!--5-->
+        <li class="filterDiv active scienceTag standard">
+            <div class="title background-color-active">Search for Life</div>
+            <div class="price">3</div>
+            <div class="tag tag1 tag-science"></div>
+            <div class="number">005</div>
+            <div class="content">
+                <div class="points" style="line-height:38px;"><div class="science"></div>:3</div>
+                <div class="requirements">Requires: max 6% O2</div>
+                <div class=""><span class=" money resource">1</span> <span class="red-arrow"></span> <span class="microbe resource"></span>*  :  <div class="science"></div> </div>
+                <div class="description">
+                    (Action: Spend 1 M$ to reveal the top card of the draw deck. If that card has a Microbe tag, add a Science resource here.)<br><br>
+                    (3 VPs if you have one or more Science resources here.)
+                </div>
+            </div>
+        </li>
+
+        <!--6-->
+        <li class="filterDiv active scienceTag corporate">
+            <div class="title background-color-active">Inventors' Guild</div>
+            <div class="price">9</div>
+            <div class="corporate-icon"></div>
+            <div class="tag tag1 tag-science"></div>
+            <div class="number">006</div>
+            <div class="content">
+                <div> <span class="red-arrow"></span> ACTION: LOOK AT THE TOP CARD AND EITHER BUY IT OR DISCARD IT</div>
+
+            </div>
+        </li>
+
+        <!--7-->
+        <li class="filterDiv active builderTag standard">
+            <div class="title background-color-active">Martian Rails</div>
+            <div class="price">13</div>
+            <div class="tag tag1 tag-builder"></div>
+            <div class="number">007</div>
+            <div class="content">
+                <div class="points points-big">1</div>
+                <span class="energy resource"></span> <span class="red-arrow"></span>
+                <span class=" money resource">1</span> / <span class="city-tile tile affected"></span>
+                <div class="description">
+                    (Action: Spend 1 Energy to gain 1 M$ for each City tile ON MARS.)
+                </div>
+            </div>
+        </li>
+
+        <!--8-->
+        <li class="filterDiv automated cityTag builderTag standard">
+            <div class="title background-color-automated">Capital</div>
+            <div class="price">26</div>
+            <div class="tag tag1 tag-builder"></div>
+            <div class="tag tag2 tag-city"></div>
+            <div class="number">008</div>
+            <div class="content">
+                <div class="points">1/<span class="resource ocean-resource"></span></div>
+                <div class="requirements">Requires: 4 Oceans</div>
+                <div class="production-box production-box-size2a">
+                    <div class="production-prefix">&#x2796&#xFE0E</div><div class="energy production"></div><div class="energy production"></div><br>
+                    <div class="production-prefix">&#x2795&#xFE0E</div><div class="money production">5</div>
+                </div>
+                <div class="special-tile tile capitol">&#x2302&#xFE0E</div>
+                <div class="description">
+                    (Requires 4 ocean tiles. Place this tile. Decrease your Energy production 2 steps and increase your M$ production 5 steps.<br>
+                    <div style="font-size:9px;line-height:12px;margin-top:10px">
+                        1 ADDITIONAL VP FOR EACH <br>OCEAN TILE ADJACENT <br> TO THIS CITY TILE.
+                    </div>
+                </div>
+            </div>
+        </li>
+        <!--9-->
+        <li class="filterDiv events spaceTag eventTag standard">
+            <div class="title background-color-events">Asteroid</div>
+            <div class="price">14</div>
+            <div class="tag tag1 tag-event"></div>
+            <div class="tag tag2 tag-space"></div>
+            <div class="number">009</div>
+            <div class="content">
+                <div class="tile temperature-tile"></div><br>
+                <div class=" titanium resource"></div><div class=" titanium resource"></div>
+                <div class="resource plant affected"></div><div class="plant resource affected"></div><div class="plant resource affected"></div>
+                <div class="description">
+                    (Raise temperature 1 step and gain 2 titanium. Remove up to 3 Plants from any player.)
+                </div>
+            </div>
+        </li>
+
+        <!--10-->
+        <li class="filterDiv events spaceTag eventTag standard">
+            <div class="title background-color-events">Comet</div>
+            <div class="price">21</div>
+            <div class="tag tag1 tag-event"></div>
+            <div class="tag tag2 tag-space"></div>
+            <div class="number">010</div>
+            <div class="content">
+                <div class="tile temperature-tile"></div>
+                <div class="tile ocean-tile"></div>
+                <br>
+                <div class="plant resource affected"></div><div class="plant resource affected"></div><div class="plant resource affected"></div>
+                <div class="description">
+                    (Raise temperature 1 step and place an ocean tile. Remove up to 3 Plants from any player.)
+                </div>
+            </div>
+        </li>
+
+        <!--11-->
+        <li class="filterDiv events spaceTag eventTag standard">
+            <div class="title background-color-events">Big Asteroid</div>
+            <div class="price">27</div>
+            <div class="tag tag1 tag-event"></div>
+            <div class="tag tag2 tag-space"></div>
+            <div class="number">011</div>
+            <div class="content">
+                <div class="tile temperature-tile"></div>
+                <div class="tile temperature-tile"></div><br>
+                <div class="titanium resource"></div><div class="titanium resource"></div><div class="titanium resource"></div><div class="titanium resource"></div> <br>
+                <div class="plant resource affected"></div><div class="plant resource affected"></div><div class="plant resource affected"></div><div class="plant resource affected"></div>
+                <div class="description">
+                    (Raise temperature 2 steps and gain 4 titanium. Remove up to 4 Plants from any player.)
+                </div>
+            </div>
+        </li>
+
+        <!--12-->
+        <li class="filterDiv active spaceTag jovianTag standard">
+            <div class="title background-color-active">Water Import from Europa</div>
+            <div class="price">25</div>
+            <div class="tag tag1 tag-jovian"></div>
+            <div class="tag tag2 tag-space"></div>
+            <div class="number">012</div>
+            <div class="content">
+                <div class="points">1/<span class="jovian"></span></div>
+                <div class=" money resource">12</div> (<span class="titanium" style="margin:0px;padding-top:4px"></span>)
+                <span class="red-arrow"></span> <div class="ocean-tile tile"></div>
+                <div class="description">
+                    (Action: Pay 12 M$ to place an ocean tile. TITANIUM MAY BE USED as if playing a Space card.)<br><br>
+                    (1 VP for each Jovian tag you have.)
+                </div>
+            </div>
+        </li>
+
+        <!--13-->
+        <li class="filterDiv active spaceTag builderTag corporate">
+            <div class="title background-color-active">Space Elevator</div>
+            <div class="price">27</div>
+            <div class="tag tag1 tag-space"></div>
+            <div class="tag tag2 tag-builder"></div>
+            <div class="number">013</div>
+            <div class="corporate-icon"></div>
+            <div class="content">
+                <div class="points points-big">2</div>
+                <span class=" steel resource"></span><span class="red-arrow"></span> <span class="money resource">5</span>
+                <div class="description">
+                    (Action: Spend 1 steel to gain 5 M$.)
+                </div><br>
+                <div class="production-box"><div class="titanium production"></div></div>
+                <div class="description">
+                    (Increase your titanium production 1 step.)
+                </div>
+            </div>
+        </li>
+
+        <!--14-->
+        <li class="filterDiv active scienceTag builderTag corporate">
+            <div class="title background-color-active">Development Center</div>
+            <div class="price">11</div>
+            <div class="tag tag1 tag-builder"></div>
+            <div class="tag tag2 tag-science"></div>
+            <div class="number">014</div>
+            <div class="corporate-icon"></div>
+            <div class="content">
+                <span class="energy resource"></span> <span class="red-arrow"></span> <span class="card resource"></span>
+                <div class="description">
+                    (Action: Spend 1 Energy to draw a card.)
+                </div>
+            </div>
+        </li>
+
+        <!--15-->
+        <li class="filterDiv active scienceTag builderTag standard">
+            <div class="title background-color-active">Equatorial Magnetizer</div>
+            <div class="price">24</div>
+            <div class="tag tag1 tag-builder"></div>
+            <div class="number">015</div>
+            <div class="content">
+                <div class="production-box production-box-size1a">
+                    <div class="production-prefix">&#x2796&#xFE0E</div><div class="energy production"></div>
+                </div>
+                <span class="red-arrow" style="margin-left:5px;"></span>
+                <div class="rating tile" style="margin-bottom:5px;"></div>
+                <div class="description">
+                    (Action: Decrease your Energy production 1 step to increase your terraform rating 1 step.)
+                </div>
+            </div>
+        </li>
+
+        <!--16-->
+        <li class="filterDiv automated cityTag builderTag standard">
+            <div class="title background-color-automated">Domed Crater</div>
+            <div class="price">24</div>
+            <div class="tag tag1 tag-builder"></div>
+            <div class="tag tag2 tag-city"></div>
+            <div class="number">016</div>
+            <div class="content">
+                <div class="points points-big">1</div>
+                <div class="requirements">Requires: max 7% O2</div>
+                <div class="production-box production-box-size1a" style="margin-top:-5px">
+                    <div class="production-prefix">&#x2796&#xFE0E</div><div class="energy production"></div>
+                    <div class="production-prefix">&#x2795&#xFE0E</div><div class="money production">3</div>
+                </div>
+                <div class="tile city-tile" style="margin-left:20px"></div><br>
+                <div class="plant resource"></div><div class="plant resource "></div><div class="plant resource"></div>
+                <div class="description" style="margin-top:-5px">
+                    (Oxygen must be 7% or less. Gain 3 Plants and place a City tile.
+                    Decrease your Energy production 1 step and <br>increase your M$ <br>production 3 steps.)
+                </div>
+            </div>
+        </li>
+
+        <!--17-->
+        <li class="filterDiv automated cityTag builderTag standard">
+            <div class="title background-color-automated">Noctis City</div>
+            <div class="price">18</div>
+            <div class="tag tag1 tag-builder"></div>
+            <div class="tag tag2 tag-city"></div>
+            <div class="number">017</div>
+            <div class="content">
+                <div class="production-box production-box-size1a">
+                    <div class="production-prefix">&#x2796&#xFE0E</div><div class="energy production"></div>
+                    <div class="production-prefix">&#x2795&#xFE0E</div><div class="money production">3</div>
+                </div>
+                <div class="tile city-tile" style="margin-left:20px"></div><br>
+                <div class="plant resource"></div><div class="plant resource"></div><div class="plant resource"></div>
+                <div class="description">
+                    (Decrease your Energy production 1 step and increase your M$ production 3 steps.
+                    Place a City ON THE RESERVED AREA, disregarding normal placement restrictions.)
+
+                </div>
+            </div>
+        </li>
+
+        <!--18-->
+        <li class="filterDiv automated spaceTag jovianTag standard">
+            <div class="title background-color-automated">Methane from Titan</div>
+            <div class="price">28</div>
+            <div class="tag tag1 tag-space"></div>
+            <div class="tag tag2 tag-jovian"></div>
+            <div class="number">018</div>
+            <div class="content">
+                <div class="points points-big">2</div>
+                <div class="requirements">Requires: 2% O2</div>
+                <div class="production-box production-box-size2">
+                    <div class="production heat"></div><div class="production heat"></div>
+                    <div class="production plant"></div><div class="production plant"></div>
+
+                </div>
+                <div class="description">
+                    (Requires 2% oxygen. Increase your heat production 2 steps and your Plant production 2 steps.)
+                </div>
+            </div>
+        </li>
+
+        <!--19-->
+        <li class="filterDiv events earthTag spaceTag eventTag standard">
+            <div class="title background-color-events">Imported Hydrogen</div>
+            <div class="price">16</div>
+            <div class="tag tag1 tag-event"></div>
+            <div class="tag tag2 tag-space"></div>
+            <div class="tag tag3 tag-earth"></div>
+            <div class="number">019</div>
+            <div class="content">
+                3<div class="resource plant"></div> OR 3<div class="resource microbe"></div>*<br> OR 2<div class="resource animal"></div>*<br>
+                <div class="tile ocean-tile"></div>
+                <div class="description">
+                    (Gain 3 Plants, or add 3 Microbes or 2 Animals to ANOTHER card. Place an ocean tile.)
+                </div>
+            </div>
+        </li>
+
+        <!--20-->
+        <li class="filterDiv active cityTag builderTag scienceTag">
+            <div class="title background-color-active">Research Outpost</div>
+            <div class="price">18</div>
+            <div class="tag tag1 tag-builder"></div>
+            <div class="tag tag2 tag-city"></div>
+            <div class="tag tag3 tag-science"></div>
+            <div class="number">020</div>
+            <div class="content">
+                <div class="points points-big">1</div>
+                : <span class="money resource">-1</span>
+                <div class="description">
+                    (Effect: When you play a card, you pay 1 M$ less for it.)
+                </div>
+                <div class="tile city-tile"></div>
+                <div class="description">
+                    (Place a ciy tile NEXT TO NO OTHER TILE.)
+                </div>
+            </div>
+        </li>
+
+        <!--21-->
+        <li class="filterDiv automated spaceTag cityTag standard">
+            <div class="title background-color-automated">Phobos Space Haven</div>
+            <div class="price">25</div>
+            <div class="tag tag1 tag-space"></div>
+            <div class="tag tag2 tag-city"></div>
+            <div class="number">021</div>
+            <div class="content">
+                <div class="points points-big">3</div>
+                <div class="production-box"><div class="titanium production"></div></div>
+                <div class="tile city-tile" style="margin-left:20px"></div>
+                <div class="description">
+                    (Increase your titanium production 1 step and place a City tile ON THE RESERVED AREA.)
+                </div>
+            </div>
+
+        </li>
+
+        <!--22-->
+        <li class="filterDiv automated standard">
+            <div class="title background-color-automated">Black Polar Dust</div>
+            <div class="price">15</div>
+            <div class="number">022</div>
+            <div class="content">
+
+                <div class="production-box production-box-size3a">
+                    <div class="production-prefix">&#x2796&#xFE0E</div><div class="money production">2</div><br>
+                    <div class="production-prefix">&#x2795&#xFE0E</div><div class="heat production"></div><div class="heat production"></div><div class="heat production"></div>
+                </div>
+                <div class="tile ocean-tile"></div>
+
+                <div class="description">
+                    (Place an ocean tile. Decrease your M$ production 2 steps and increase your heat production 3 steps.)
+                </div>
+            </div>
+        </li>
+
+
+        <!--23-->
+        <li class="filterDiv active plantTag standard">
+            <div class="title background-color-active">Artic Algae</div>
+            <div class="price">12</div>
+            <div class="tag tag1 tag-plant"></div>
+            <div class="number">023</div>
+            <div class="content">
+                <div class="requirements">Requires: max -12°C </div>
+                <div class="tile ocean-tile red-outline"></div> : <div class="resource plant"></div><div class="resource plant"></div><br>
+                <div class="description">
+                    (Effect: When anyone places an ocean tile, gain 2 Plants.)
+                </div>
+                <div class="resource plant"></div>
+                <div class="description">
+                    (It must be -12 C or colder to play. Gain 1 Plant.)
+                </div>
+            </div>
+        </li>
+
+        <!--24-->
+        <li class="filterDiv active animalTag standard">
+            <div class="title background-color-active">Predators</div>
+            <div class="price">14</div>
+            <div class="tag tag1 tag-animal"></div>
+            <div class="number">024</div>
+            <div class="content">
+                <div class="points">1/<div class="animal resource"></div></div>
+                <div class="requirements">Requires: max 11% O2</div>
+                <div class="resource animal affected"></div><span class="red-arrow"></span><div class="animal resource"></div>
+                <div class="description">
+                    (Action: Remove 1 Animal from any card and add it to this card.)
+                </div>
+                <div class="description">
+                    (Requires 11% oxygen. 1 VP per Animal on this card.)
+                </div>
+            </div>
+        </li>
+
+        <!--25-->
+        <li class="filterDiv active spaceTag corporate">
+            <div class="title background-color-active">Space Station</div>
+            <div class="price">10</div>
+            <div class="tag tag1 tag-space"></div>
+            <div class="number">025</div>
+            <div class="corporate-icon"></div>
+            <div class="content">
+                <div class="points points-big">1</div>
+                <div class="resource space-resource"></div> : <div class="money resource">- 2</div>
+                <div class="description">
+                    (When you play a Space card, you pay 2 M$ less for it.)
+                </div>
+            </div>
+        </li>
+
+        <!--26-->
+        <li class="filterDiv plantTag builderTag automated standard">
+            <div class="title background-color-automated">Eos Chasma National Park</div>
+            <div class="price">16</div>
+            <div class="tag tag1 tag-builder"></div>
+            <div class="tag tag2 tag-plant"></div>
+            <div class="number">026</div>
+            <div class="content">
+                <div class="points points-big">1</div>
+                <div class="resource animal"></div>* <div class="resource plant"></div><div class="resource plant"></div><div class="resource plant"></div><br>
+                <div class="production-box production-box">
+                    <div class="money production">2</div>
+                </div>
+                <div class="description">
+                    (Requires -12 C or warmer. Add 1 Animal TO ANY ANIMAL CARD. Gain 3 Plants. Increase your M$ production 2 steps.)
+                </div>
+            </div>
+        </li>
+
+        <!--27-->
+        <li class="filterDiv eventTag earthTag spaceTag corporate events">
+            <div class="title background-color-events">Interstellar Colony Ship</div>
+            <div class="price">24</div>
+            <div class="tag tag1 tag-event"></div>
+            <div class="tag tag2 tag-space"></div>
+            <div class="tag tag3 tag-earth"></div>
+            <div class="number">027</div>
+            <div class="corporate-icon"></div>
+            <div class="content">
+                <div class="points points-big">4</div>
+                <div class="requirements">Requires: 5 Science</div>
+            </div>
+            </div>
+        </li>
+
+        <!--28-->
+        <li class="filterDiv spaceTag corporate active">
+            <div class="title background-color-active">Security Fleet</div>
+            <div class="price">12</div>
+            <div class="tag tag1 tag-space"></div>
+            <div class="number">028</div>
+            <div class="corporate-icon"></div>
+            <div class="content">
+                <div class="points">1/<div class="resource" style="padding-bottom:2px;padding-top:2px;font-size:22px;background-color:rgb(230,230,230);font-weight:normal">&#x1F680&#xFE0E</div></div>
+                <div class="resource titanium"> </div><span class="red-arrow"></span><div class="resource" style="padding-bottom:2px;padding-top:2px;font-size:22px;background-color:rgb(230,230,230);font-weight:normal">&#x1F680&#xFE0E</div>
+                <div class="description">
+                    (Action: Spend 1 titanium to add 1 fighter resource to this card.)
+                </div>
+                <div class="description">
+                    (1 VP for each fighter resource on this card.)
+                </div>
+            </div>
+        </li>
+
+
+        <!--29-->
+        <li class="filterDiv automated cityTag builderTag standard">
+            <div class="title background-color-automated ">Cupola City</div>
+            <div class="price">16</div>
+            <div class="tag tag1 tag-builder"></div>
+            <div class="tag tag2 tag-city"></div>
+            <div class="number">029</div>
+            <div class="content">
+                <div class="requirements">Requires: max 9% 02</div>
+                <div class="production-box production-box-size1a">
+                    <div class="production-prefix">&#x2796&#xFE0E</div><div class="energy production"></div>
+                    <div class="production-prefix">&#x2795&#xFE0E</div><div class="money production">3</div>
+                </div>
+                <div class="tile city-tile" style="margin-left:20px"></div>
+                <div class="description">
+                    (Oxygen must be 9% or less. Place a City tile. Decrease your Energy production 1 step and increase your M$ production 3 steps.)
+                </div>
+            </div>
+        </li>
+
+        <!--30-->
+        <li class="filterDiv automated earthTag powerTag standard">
+            <div class="title background-color-automated">Lunar Beam</div>
+            <div class="price">13</div>
+            <div class="tag tag1 tag-energy"></div>
+            <div class="tag tag2 tag-earth"></div>
+            <div class="number">030</div>
+            <div class="content">
+                <div class="production-box production-box-size2a">
+                    <div class="production-prefix">&#x2796&#xFE0E</div><div class="money production">2</div><br>
+                    <div class="production-prefix">&#x2795&#xFE0E</div><div class="heat production"></div><div class="heat production"></div><br>
+                    <div class="production-prefix">&#x2795&#xFE0E</div><div class="energy production"></div><div class="energy production"></div>
+                </div>
+                <div class="description">
+                    (Decrease your M$ production 2 steps and increase your heat production and Energy production 2 steps each.)
+                </div>
+            </div>
+        </li>
+
+        <!--31-->
+        <li class="filterDiv active spaceTag">
+            <div class="title background-color-active">Optimal Aerobraking</div>
+            <div class="price">7</div>
+            <div class="tag tag1 tag-space"></div>
+            <div class="number">031</div>
+            <div class="content">
+                <div class="resource space-resource"></div><div class="resource event-resource"></div> : <div class="resource money">3</div><div class="resource heat"></div><div class="resource heat"></div><div class="resource heat"></div>
+                <div class="description">
+                    (Effect: When you play a Space Event, you gain 3 M$ and 3 heat.)
+                </div>
+            </div>
+        </li>
+
+        <!--32-->
+        <li class="filterDiv cityTag builderTag standard automated">
+            <div class="title background-color-automated">Underground city</div>
+            <div class="price">18</div>
+            <div class="tag tag1 tag-builder"></div>
+            <div class="tag tag2 tag-city"></div>
+            <div class="number">032</div>
+            <div class="content">
+                <div class="production-box production-box-size2a">
+                    <div class="production-prefix">&#x2796&#xFE0E</div><div class="energy production"></div><div class="energy production"></div>
+                    <div class="production-prefix">&#x2795&#xFE0E</div><div class="steel production"></div><div class="steel production"></div>
+                </div>
+                <div class="tile city-tile" style="margin-left:20px"></div>
+                <div class="description">
+                    (Place a City tile. Decrease your Energy production 2 steps and increase your steel production 2 steps.)
+                </div>
+            </div>
+        </li>
+
+        <!--33-->
+        <li class="filterDiv standard active scienceTag microbeTag ">
+            <div class="title background-color-active">Regolith Eaters</div>
+            <div class="price">13</div>
+            <div class="tag tag1 tag-microbe"></div>
+            <div class="tag tag2 tag-science"></div>
+            <div class="number">033</div>
+            <div class="corporate-icon"></div>
+            <div class="content">
+                <div class="red-arrow"></div> <div class="microbe resource"></div><br>
+                OR <div class="microbe resource"></div><div class="microbe resource"></div> <div class="red-arrow"></div> <div class="tile oxygen"></div>
+                <div class="description">
+                    (Action: Add 1 Microbe to this card, or remove 2 Microbes from this card to raise oxygen level 1 step.)
+                </div>
+            </div>
+        </li>
+
+
+
+
+
+        <!--
+            <li class="filterDiv standard  ">
+                <div class="title "></div>
+                <div class="price"></div>
+                <div class="tag tag1 "></div>
+                <div class="tag tag2 "></div>
+                <div class="number"></div>
+                <div class="corporate-icon"></div>
+                <div class="content">
+                    <div class="points">1</div>
+                    <div class="requirements"></div>
+                    <div class="production-box production-box-size1a">
+                        <div class="production-prefix">&#x2796&#xFE0E</div><div class=" production"></div>
+                        <div class="production-prefix">&#x2795&#xFE0E</div><div class=" production"></div>
+                    </div>
+
+                    <div class="description">
+
+                    </div>
+                </div>
+            </li>
+    -->
+
+
+    </ul>
+
+    <script>
+        filterSelection("all")
+        function filterSelection(c) {
+            var x, i;
+            x = document.querySelectorAll('.filterDiv');
+            if (c == "all")  c = "";       
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
+        function clearInput() {
+            document.getElementById("myInput").value = "";
+        }
+
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
+            }
+        }
+
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.querySelectorAll('.btn2, .btn, .btn3');
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+
+        function myFunction() {
+            var input, filter, ul, li, a, i;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i];
+                if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+
+        function myFunction2(text) {
+            var input, filter, ul, li, a, i;
+            input = document.getElementById("myInput");
+            input.value = text;
+            filter = text.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i];
+                if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
 </body>
 </html>
