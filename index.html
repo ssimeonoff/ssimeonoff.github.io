@@ -11,8 +11,7 @@
         display: none;
         font-size: 12px;
         font-family: Arial;
-        margin: 10px;
-        margin-right: 10px;
+        margin: 20px;
         border-style: outset;
         border-radius: 20px;
         box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
@@ -214,7 +213,7 @@
 
     .tag-jovian {
         background-color: rgb(235,200,148);
-        background: linear-gradient(rgb(235,200,148),beige,rgb(235,200,148),beige,rgb(235,200,148),rosybrown,beige,beige,rgb(235,200,148),rosybrown,rgb(235,200,148),beige,rgb(235,200,148),rgb(235,200,148), rgb(235,200,148));
+        background: linear-gradient(rgb(235,200,148),beige,rgb(235,200,148),beige,rosybrown,rgb(235,200,148),rgb(235,200,148),beige,beige,beige,rgb(235,200,148),beige,rosybrown,rgb(235,200,148),beige,rgb(235,200,148),rgb(235,200,148), beige,rgb(235,200,148),beige);
     }
 
 
@@ -323,28 +322,28 @@
 
 
     /************** Style the buttons ************/
-    .btn {
+    .btn1 {
         outline: none;
         height: 40px;
-        width: 137px;
+        width: 245px;
         cursor: pointer;
         font-weight: bold;
         border-radius: 5px;
-        margin-right: 8px;
+        margin-right: 37px;
         margin-bottom: 10px;
         box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
     }
 
     .btn2 {
         outline: none;
-        height: 54px;
-        width: 54px;
+        height: 66px;
+        width: 66px;
         cursor: pointer;
         border-radius: 50%;
         text-align: center;
         vertical-align: middle;
         font-weight: normal;
-        margin-right: 8px;
+        margin-right: 20px;
         margin-bottom: 8px;
         box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
     }
@@ -352,16 +351,16 @@
     .btn3 {
         outline: none;
         height: 40px;
-        width: 52px;
+        width: 66px;
         cursor: pointer;
         font-weight: bold;
         border-radius: 5px;
-        margin-right: 8px;
+        margin-right: 20px;
         box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
     }
 
 
-    .btn:hover {
+    .btn1:hover {
         border: 2px solid rgb(137,137,137);
     }
 
@@ -375,20 +374,23 @@
 
 
 
-    .btn.active {
-        border-style: none;
+    .btn1.active {
         border: 2px solid rgb(137,137,137);
-        box-shadow: 0 0 0 1px rgba(0,0,0,0.5), 0 0 0 2px rgba(0,0,0,0.5), 0 0 0 3px rgba(0,0,0,0.4), 0 0 0 4px rgba(0,0,0,0.3), 0 0 0 5px rgba(0,0,0,0.2);
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.5), 0 0 0 2px rgba(0,0,0,0.5), 0 0 0 3px rgba(0,0,0,0.5), 0 0 0 4px rgba(0,0,0,0.4), 0 0 0 5px rgba(0,0,0,0.3), 0 0 0 6px rgba(0,0,0,0.2);
     }
 
+    .btn1:target {
+        border: 2px solid rgb(137,137,137);
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.5), 0 0 0 2px rgba(0,0,0,0.5), 0 0 0 3px rgba(0,0,0,0.5), 0 0 0 4px rgba(0,0,0,0.4), 0 0 0 5px rgba(0,0,0,0.3), 0 0 0 6px rgba(0,0,0,0.2);
+    }
     .btn2.active {
         border: 2px solid rgb(137,137,137);
-        box-shadow: 0 0 0 1px rgba(0,0,0,0.5), 0 0 0 2px rgba(0,0,0,0.5), 0 0 0 3px rgba(0,0,0,0.4), 0 0 0 4px rgba(0,0,0,0.3), 0 0 0 5px rgba(0,0,0,0.2);
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.5), 0 0 0 2px rgba(0,0,0,0.5), 0 0 0 3px rgba(0,0,0,0.5), 0 0 0 4px rgba(0,0,0,0.4), 0 0 0 5px rgba(0,0,0,0.3), 0 0 0 6px rgba(0,0,0,0.2);
     }
 
     .btn3.active {
         border: 2px solid rgb(137,137,137);
-        box-shadow: 0 0 0 1px rgba(0,0,0,0.5), 0 0 0 2px rgba(0,0,0,0.5), 0 0 0 3px rgba(0,0,0,0.4), 0 0 0 4px rgba(0,0,0,0.3), 0 0 0 5px rgba(0,0,0,0.2);
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.5), 0 0 0 2px rgba(0,0,0,0.5), 0 0 0 3px rgba(0,0,0,0.5), 0 0 0 4px rgba(0,0,0,0.4), 0 0 0 5px rgba(0,0,0,0.3), 0 0 0 6px rgba(0,0,0,0.2);
     }
 
 
@@ -427,7 +429,6 @@
         border-style: outset;
         background-color: rgb(205,162, 130);
         background: linear-gradient(to right, rgb(128, 87, 0), rgb(205,162, 130), rgb(205,162, 130), rgb(128, 87, 0));
-        //box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.4), 0 0 0 3px rgba(0,0,0,0.2);
         box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
     }
 
@@ -452,7 +453,7 @@
         border-style: outset;
         box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
         background-color: rgb(128, 87, 0);
-        background: linear-gradient(to right, rgb(73,54,40), rgb(128, 87, 0),rgb(73,54,40), rgb(128, 87, 0), rgb(73,54,40));
+        background: linear-gradient(to right, rgb(73,54,40), rgb(128, 87, 0),rgb(73,54,40), rgb(128, 87, 0), rgb(73,54,40), rgb(128, 87, 0), rgb(73,54,40), rgb(128, 87, 0), rgb(73,54,40)rgb(128, 87, 0), rgb(73,54,40));
         padding-top: 4px;
         padding-bottom: 4px;
         text-align: center;
@@ -801,7 +802,7 @@
 
     .jovian {
         background-color: rgb(235,200,148);
-        background: linear-gradient(rgb(235,200,148),beige,rgb(235,200,148),beige,rgb(235,200,148),rosybrown,beige,beige,rgb(235,200,148),rosybrown,rgb(235,200,148),beige,rgb(235,200,148),rgb(235,200,148), rgb(235,200,148));
+        background: linear-gradient(rgb(235,200,148),beige,rgb(235,200,148),beige,rosybrown,rgb(235,200,148),beige,beige,rgb(235,200,148),rosybrown,rgb(235,200,148),beige,rgb(235,200,148),rgb(235,200,148), rgb(235,200,148));
         border: 1px solid black;
         font-size: 24px;
         font-weight: normal;
@@ -843,13 +844,13 @@
         outline: none;
         background-position: 10px 12px;
         background-repeat: no-repeat;
-        width: 335px;
+        width: 508px;
         font-size: 16px;
-        padding: 10px 2px 10px 20px;
+        padding: 10px 2px 12px 20px;
         border: 2px solid #ddd;
         margin-top: 8px;
-        margin-left: 8px;
-        margin-right: 6px;
+        margin-left:20px;
+        margin-right: 35px;
         margin-bottom: 30px;
         border-radius: 5px;
     }
@@ -880,48 +881,42 @@
 
     }
 </style>
+
+
 <html>
 <body>
-    <div id="myBtnContainer" style="margin-left:10px;line-height:55px;">
-        <button class="btn active background-button-all" onclick="filterSelection('all'); "> ALL</button>
-        <button class="btn background-color-automated" onclick="filterSelection('automated')"> AUTOMATED</button>
-        <button class="btn background-color-active" onclick="filterSelection('active')"> ACTIVE</button>
-        <button class="btn background-color-events" onclick="filterSelection('events')"> EVENTS</button>
-        <button class="btn3" onclick="filterSelection('standard')"><div class="base-icon">I</div></button>
-        <button class="btn3 corporateButton" onclick="filterSelection('corporate')"><span class="corporate-icon2">&#x25b2</span></button>
-        <button class="btn3 venusNext" style="color:rgb(44,132,196);" onclick="filterSelection('venusNext')"><span class="venus-icon2">V</span></button>
-        <br>
+    
+    <div id="myBtnContainer1" style="margin-left:20px;line-height:55px;margin-bottom:10px;margin-top:20px;">
+        <button class="btn1 active background-button-all" onclick="filterSelection('all'); "> ALL</button>
+        <button class="btn1 background-color-automated" onclick="filterSelection('automated')"> AUTOMATED</button>
+        <button class="btn1 background-color-active" onclick="filterSelection('active')"> ACTIVE</button>
+        <button class="btn1 background-color-events" onclick="filterSelection('events')"> EVENTS</button>
+    </div>
+    <div id="myBtnContainer2" style="margin-left:20px;line-height:55px;">
         <button class="btn2 tag-builder" style="line-height:40px" onclick="filterSelection('builderTag')"></button>
         <button class="btn2 tag-space" onclick="filterSelection('spaceTag')"></button>
-        <button class="btn2 tag-energy" onclick="filterSelection('energyTag')"></button>
         <button class="btn2 tag-science" onclick="filterSelection('scienceTag')"></button>
-        <button class="btn2 tag-jovian" onclick="filterSelection('jovianTag')"></button>
-        <button class="btn2 tag-earth" style="font-size:38px;padding-top:5px;padding-left:1px;padding-right:1px;" onclick="filterSelection('earthTag')"></button>
-        <button class="btn2 tag-plant" onclick="filterSelection('plantTag')"></button>
+
+        <button class="btn2 tag-plant" style="margin-left:16px;" onclick="filterSelection('plantTag')"></button>
         <button class="btn2 tag-microbe" onclick="filterSelection('microbeTag')"></button>
         <button class="btn2 tag-animal" onclick="filterSelection('animalTag')"></button>
-        <button class="btn2 tag-city" style="font-size: 22px;line-height:40px" onclick="filterSelection('cityTag')"></button>
+
+        <button class="btn2 tag-energy" style="margin-left:16px;" onclick="filterSelection('energyTag')"></button>
+        <button class="btn2 tag-jovian" onclick="filterSelection('jovianTag')"></button>
+        <button class="btn2 tag-earth" style="font-size:38px;padding-top:5px;padding-left:1px;padding-right:1px;" onclick="filterSelection('earthTag')"></button>
+
+        <button class="btn2 tag-city" style="margin-left:16px;font-size:22px;line-height:40px" onclick="filterSelection('cityTag')"></button>
         <button class="btn2 tag-event" style="line-height:40px;vertical-align:bottom;" onclick="filterSelection('eventTag')"></button>
         <button class="btn2 tag-venus" onclick="filterSelection('venusTag')"></button>
     </div>
-    <input type="text" id="myInput" onkeyup="myFunction()" onfocus="this.value = '';myFunction();" placeholder="Search by name or key words..." title="Type in a name">
-    <!--
-      <div class="key-words">
-          <button class="btn4" onclick="myFunction2('m$')">M$</button>
-          <button class="btn4" onclick="myFunction2('steel')">steel</button>
-          <button class="btn4" onclick="myFunction2('titanium')">titanium</button>
-          <button class="btn4" onclick="myFunction2('plant')">plant</button>
-          <button class="btn4" onclick="myFunction2('energy')">energy</button>
-          <button class="btn4" onclick="myFunction2('heat')">heat</button>
-          <button class="btn4" onclick="myFunction2('temperature')">temperature</button>
-          <button class="btn4" onclick="myFunction2('ocean')">ocean</button>
-          <button class="btn4" onclick="myFunction2('oxygen')">oxygen</button>
-          <button class="btn4" onclick="myFunction2('forest')">forest</button>
-          <button class="btn4" onclick="myFunction2('city')">city</button>
-          <button class="btn4" onclick="myFunction2('special')">special</button>
-      </div>
 
-    -->
+    <input type="text" id="myInput" onkeyup="myFunction()" onfocus="this.value = '';myFunction();" placeholder="Search by name or key words..." title="Type in a name">
+    <div id="myBtnContainer3" style="display:inline-block">
+        <button class="btn3" onclick="filterSelection('standard')"><div class="base-icon">I</div></button>
+        <button class="btn3 corporateButton" onclick="filterSelection('corporate')"><span class="corporate-icon2">&#x25b2</span></button>
+        <button class="btn3 venusNext" style="color:rgb(44,132,196);" onclick="filterSelection('venusNext')"><span class="venus-icon2">V</span></button>
+    </div>
+
     <!-------------------CARDS LIST----------------------->
     <ul id="myUL">
         <!--1-->
@@ -1622,15 +1617,35 @@
         }
 
         // Add active class to the current button (highlight it)
-        var btnContainer = document.getElementById("myBtnContainer");
-        var btns = btnContainer.querySelectorAll('.btn2, .btn, .btn3');
-        for (var i = 0; i < btns.length; i++) {
-            btns[i].addEventListener("click", function () {
+        var btnContainer1 = document.getElementById("myBtnContainer1");
+        var btnContainer2 = document.getElementById("myBtnContainer2");
+        var btnContainer3 = document.getElementById("myBtnContainer3");
+        var btns1 = btnContainer1.querySelectorAll('.btn1');
+        var btns2 = btnContainer2.querySelectorAll('.btn2');
+        var btns3 = btnContainer3.querySelectorAll('.btn3');
+        for (var i = 0; i < btns1.length; i++) {
+            btns1[i].addEventListener("click", function () {
                 var current = document.getElementsByClassName("active");
                 current[0].className = current[0].className.replace(" active", "");
                 this.className += " active";
             });
         }
+        for (var i = 0; i < btns2.length; i++) {
+            btns2[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+        for (var i = 0; i < btns3.length; i++) {
+            btns3[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+
+
     </script>
 
 </body>
