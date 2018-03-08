@@ -309,6 +309,12 @@
             transform: scale(2,1); /* W3C */
         }
 
+
+    .tag-science{
+        background: white;
+    }
+     
+
     .tag-science:after {
         content: "\269b";
         font-size: 38px;
@@ -323,10 +329,10 @@
         width: 137px;
         cursor: pointer;
         font-weight: bold;
-        border: 2px solid white;
         border-radius: 5px;
-        margin-right:8px;
-        margin-bottom:10px;
+        margin-right: 8px;
+        margin-bottom: 10px;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
     }
 
     .btn2 {
@@ -340,6 +346,7 @@
         font-weight: normal;
         margin-right: 8px;
         margin-bottom: 8px;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
     }
 
     .btn3 {
@@ -348,51 +355,40 @@
         width: 52px;
         cursor: pointer;
         font-weight: bold;
-        border: 2px solid white;
         border-radius: 5px;
         margin-right: 8px;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
     }
 
-    .btn4 {
-        outline: none;
-        height: 40px;
-        cursor: pointer;
-        font-weight: bold;
-        border: 2px solid white;
-        border-radius: 5px;
-        margin-right: 4px;
-        padding-left:15px;
-        padding-right:15px;
-    }
 
     .btn:hover {
-        border: 1px solid #bbbbbb;
+        border: 2px solid rgb(137,137,137);
     }
 
     .btn2:hover {
-        box-shadow: 0 0 0 1px rgba(0,0,0,0.3);
+        border: 2px solid rgb(137,137,137);
     }
 
     .btn3:hover {
-        border: 1px solid #bbbbbb;
+        border: 2px solid rgb(137,137,137);
     }
 
 
 
     .btn.active {
-        border: 1px solid rgb(47,44,42);
-        box-shadow: 0 0 0 1px rgba(0,0,0,0.5), 0 0 0 2px rgba(0,0,0,0.4), 0 0 0 3px rgba(0,0,0,0.3), 0 0 0 4px rgba(0,0,0,0.2);
+        border-style: none;
+        border: 2px solid rgb(137,137,137);
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.5), 0 0 0 2px rgba(0,0,0,0.5), 0 0 0 3px rgba(0,0,0,0.4), 0 0 0 4px rgba(0,0,0,0.3), 0 0 0 5px rgba(0,0,0,0.2);
     }
 
     .btn2.active {
-        //border: 1px solid rgb(47,44,42);
-        border-style:outset;
-        box-shadow: 0 0 0 1px rgba(0,0,0,0.5), 0 0 0 2px rgba(0,0,0,0.4), 0 0 0 3px rgba(0,0,0,0.3), 0 0 0 4px rgba(0,0,0,0.2);
+        border: 2px solid rgb(137,137,137);
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.5), 0 0 0 2px rgba(0,0,0,0.5), 0 0 0 3px rgba(0,0,0,0.4), 0 0 0 4px rgba(0,0,0,0.3), 0 0 0 5px rgba(0,0,0,0.2);
     }
 
     .btn3.active {
-        border: 1px solid rgb(47,44,42);
-        box-shadow: 0 0 0 1px rgba(0,0,0,0.5), 0 0 0 2px rgba(0,0,0,0.4), 0 0 0 3px rgba(0,0,0,0.3), 0 0 0 4px rgba(0,0,0,0.2);
+        border: 2px solid rgb(137,137,137);
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.5), 0 0 0 2px rgba(0,0,0,0.5), 0 0 0 3px rgba(0,0,0,0.4), 0 0 0 4px rgba(0,0,0,0.3), 0 0 0 5px rgba(0,0,0,0.2);
     }
 
 
@@ -728,8 +724,7 @@
         border-radius: 50px;
         box-shadow: 0 0 0 1px rgba(0,0,0,0.4), 0 0 0 2px rgba(0,0,0,0.2);
         line-height: 32px;
-        margin-left:2px;
-
+        margin-left: 2px;
     }
         .science:after {
             content: "\269b";
@@ -901,7 +896,7 @@
         <button class="btn2 tag-energy" onclick="filterSelection('energyTag')"></button>
         <button class="btn2 tag-science" onclick="filterSelection('scienceTag')"></button>
         <button class="btn2 tag-jovian" onclick="filterSelection('jovianTag')"></button>
-        <button class="btn2 tag-earth" style="font-size:38px;padding-top:4px;padding-left:1px;padding-right:1px;" onclick="filterSelection('earthTag')"></button>
+        <button class="btn2 tag-earth" style="font-size:38px;padding-top:5px;padding-left:1px;padding-right:1px;" onclick="filterSelection('earthTag')"></button>
         <button class="btn2 tag-plant" onclick="filterSelection('plantTag')"></button>
         <button class="btn2 tag-microbe" onclick="filterSelection('microbeTag')"></button>
         <button class="btn2 tag-animal" onclick="filterSelection('animalTag')"></button>
