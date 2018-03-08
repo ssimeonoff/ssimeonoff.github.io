@@ -51,7 +51,7 @@
         border-style:outset;
     }
 
-    .corporate-icon:after {
+    .corporate-icon:before {
         position: absolute;
         border: 1px solid black;
         content: "\25b2";
@@ -60,7 +60,7 @@
         padding-bottom: 4px;
         padding-right: 4px;
         padding-left: 4px;
-        font-size: 10px;
+        font-size: 12px;
         color: white;
         border-radius: 50%;
         margin-left: -232px;
@@ -601,6 +601,18 @@
         background-color: rgb(240,124,47);
     }
 
+    .oxygen-tile {
+        background-color: rgb(246,241,175);
+        color: red;
+        font-size: 24px;
+        width: 30px;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.4), 0 0 0 2px rgba(0,0,0,0.2);
+    }
+
+        .oxygen-tile:after {
+            content: "O\00B2";
+        }
+
 
     .capitol {
         background-color: white;
@@ -756,19 +768,6 @@
 
         .space-resource:after {
             content: "\2734";
-        }
-
-    .oxygen {
-        background-color: rgb(246,241,175);
-        color: red;
-        font-size: 24px;
-        width:30px;
-        box-shadow: 0 0 0 1px rgba(0,0,0,0.4), 0 0 0 2px rgba(0,0,0,0.2);
-    }
-
-        .oxygen:after {
-
-            content: "O\00B2";
         }
 
 
@@ -1512,12 +1511,29 @@
             <div class="tag tag1 tag-microbe"></div>
             <div class="tag tag2 tag-science"></div>
             <div class="number">033</div>
-            <div class="corporate-icon"></div>
             <div class="content">
                 <div class="red-arrow"></div> <div class="microbe resource"></div><br>
-                OR <div class="microbe resource"></div><div class="microbe resource"></div> <div class="red-arrow"></div> <div class="tile oxygen"></div>
+                OR <div class="microbe resource"></div><div class="microbe resource"></div> <div class="red-arrow"></div> <div class="tile oxygen-tile"></div>
                 <div class="description">
                     (Action: Add 1 Microbe to this card, or remove 2 Microbes from this card to raise oxygen level 1 step.)
+                </div>
+            </div>
+        </li>
+
+        <!--34-->
+        <li class="filterDiv standard active scienceTag microbeTag ">
+            <div class="title background-color-active">GHG Producing Bacteria</div>
+            <div class="price">8</div>
+            <div class="tag tag1 tag-microbe"></div>
+            <div class="tag tag2 tag-science"></div>
+            <div class="number">034</div>
+            <div class="content">
+                <div class="requirements">Requires: 9% 02</div>
+                <div class="red-arrow"></div> <div class="microbe resource"></div><br>
+                OR <div class="microbe resource"></div><div class="microbe resource"></div> <div class="red-arrow"></div> <div class="tile temperature-tile"></div>
+                <div class="description">
+                    (Action: Add 1 Microbe to this card, or remove 2 Microbes to raise temperature 1 step.)
+                    (Requires 4% oxygen.)
                 </div>
             </div>
         </li>
@@ -1525,29 +1541,28 @@
 
 
 
-
         <!--
-                <li class="filterDiv standard  ">
-                    <div class="title "></div>
-                    <div class="price"></div>
-                    <div class="tag tag1 "></div>
-                    <div class="tag tag2 "></div>
-                    <div class="number"></div>
-                    <div class="corporate-icon"></div>
-                    <div class="content">
-                        <div class="points">1</div>
-                        <div class="requirements"></div>
-                        <div class="production-box production-box-size1a">
-                            <div class="production-prefix">&#x2796&#xFE0E</div><div class=" production"></div>
-                            <div class="production-prefix">&#x2795&#xFE0E</div><div class=" production"></div>
-                        </div>
-
-                        <div class="description">
-
-                        </div>
+            <li class="filterDiv standard  ">
+                <div class="title "></div>
+                <div class="price"></div>
+                <div class="tag tag1 "></div>
+                <div class="tag tag2 "></div>
+                <div class="number"></div>
+                <div class="corporate-icon"></div>
+                <div class="content">
+                    <div class="points">1</div>
+                    <div class="requirements"></div>
+                    <div class="production-box production-box-size1a">
+                        <div class="production-prefix">&#x2796&#xFE0E</div><div class=" production"></div>
+                        <div class="production-prefix">&#x2795&#xFE0E</div><div class=" production"></div>
                     </div>
-                </li>
-        -->
+
+                    <div class="description">
+
+                    </div>
+                </div>
+            </li>
+    -->
 
 
     </ul>
