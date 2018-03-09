@@ -10,7 +10,7 @@
         height: 300px;
         display: none;
         font-size: 12px;
-        font-family: Arial;
+        font-family: Arial, Helvetica, sans-serif;
         margin: 20px;
         border-style: outset;
         border-radius: 20px;
@@ -492,7 +492,6 @@
         width: 28px;
         height: 25px;
         line-height: 25px;
-        //border: 1px solid black;
         margin: 2px;
         text-align: center;
         font-size: 16px;
@@ -868,10 +867,9 @@
         padding: 10px 2px 12px 20px;
         border: 2px solid #ddd;
         margin-top: 8px;
-        margin-left: 40px;
         margin-right: 10px;
-        margin-bottom: 40px;
         border-radius: 5px;
+        border-style:outset;
     }
 
     #myUL {
@@ -900,18 +898,37 @@
     }
 
 
+    #buttonsContainer {
+        background: #cccccc;
+        border-style: outset;
+        border-radius: 20px;
+        margin-left: 25px;
+        padding-left: 15px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        width: 830px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    #containerTitle {
+        font-size: 29px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
 </style>
 
 <html>
 <body>
-
-    <div id="myBtnContainer1" style="margin-left:40px;line-height:55px;margin-bottom:10px;margin-top:40px;">
+    <div id="buttonsContainer">
+    <div id="containerTitle">TERRAFORMING MARS - PROJECT CARDS</div>
+    <div id="myBtnContainer1" style="line-height:55px;margin-bottom:10px;">
         <button class="btn1 active background-button-all" onclick="filterSelection('all'); "> ALL</button>
         <button class="btn1 background-color-automated" onclick="filterSelection('automated')"> AUTOMATED</button>
         <button class="btn1 background-color-active" onclick="filterSelection('active')"> ACTIVE</button>
         <button class="btn1 background-color-events" onclick="filterSelection('events')"> EVENTS</button>
     </div>
-    <div id="myBtnContainer2" style="margin-left:40px;line-height:55px;">
+    <div id="myBtnContainer2" style="line-height:55px;">
         <button class="btn2 tag-builder" style="line-height:40px" onclick="filterSelection('builderTag')"></button>
         <button class="btn2 tag-space" onclick="filterSelection('spaceTag')"></button>
         <button class="btn2 tag-science" onclick="filterSelection('scienceTag')"></button>
@@ -935,7 +952,7 @@
         <button class="btn3 corporateButton" onclick="filterSelection('corporate')"><span class="corporate-icon2">&#x25b2</span></button>
         <button class="btn3 venusNext" style="color:rgb(44,132,196);" onclick="filterSelection('venusNext')"><span class="venus-icon2">V</span></button>
     </div>
-
+    </div>
     <!-------------------CARDS LIST----------------------->
     <ul id="myUL" style="margin-left:20px;">
         <!--1-->
