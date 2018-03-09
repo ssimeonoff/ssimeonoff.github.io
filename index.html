@@ -453,7 +453,7 @@
         border-style: outset;
         box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
         background-color: rgb(128, 87, 0);
-        background: linear-gradient(to right, rgb(73,54,40), rgb(128, 87, 0),rgb(73,54,40), rgb(128, 87, 0), rgb(73,54,40), rgb(128, 87, 0), rgb(73,54,40), rgb(128, 87, 0), rgb(73,54,40)rgb(128, 87, 0), rgb(73,54,40));
+        background: linear-gradient(rgb(73,54,40)10%, rgb(128, 87, 0), rgb(73,54,40));
         padding-top: 4px;
         padding-bottom: 4px;
         text-align: center;
@@ -487,7 +487,7 @@
         width: 28px;
         height: 25px;
         line-height: 25px;
-        margin: 2px;
+        margin: 3px;
         text-align: center;
         font-size: 16px;
         border-radius: 2px;
@@ -607,7 +607,12 @@
         }
 
     .special-tile {
-        background-color: rgb(240,124,47);
+        background: rgb(205,162, 130);
+        padding-top: 10px;
+        padding-bottom: 14px;
+        width: 40px;
+        font-size: 22px;
+        font-weight: bold;
     }
 
     .oxygen-tile {
@@ -646,7 +651,7 @@
         border-radius: 5px;
         font-size: 16px;
         min-width: 26px;
-        box-shadow: 0 0 0 1px rgba(0,0,0,0.4), 0 0 0 2px rgba(0,0,0,0.2);
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
     }
 
 
@@ -1709,28 +1714,84 @@
             </div>
         </li>
 
+        <!--40-->
+        <li class="filterDiv automated spaceTag jovianTag standard">
+            <div class="title background-color-automated">Asteroid Mining</div>
+            <div class="price">30</div>
+            <div class="tag tag1 tag-space"></div>
+            <div class="tag tag2 tag-jovian"></div>
+            <div class="number">040</div>
+            <div class="content">
+                <div class="points points-big">2</div>
+                <div class="production-box production-box-size2">
+                    <div class="production titanium"></div><div class="production titanium"></div>
+                </div>
+                <div class="description">
+                    (Increase your titanium production 2 steps.)
+                </div>
+            </div>
+        </li>
+
+        <!--41-->
+        <li class="filterDiv automated builderTag standard">
+            <div class="title background-color-automated">Food Factory</div>
+            <div class="price">12</div>
+            <div class="tag tag1 tag-builder"></div>
+            <div class="number">041</div>
+            <div class="content">
+                <div class="points points-big">1</div>
+                <div class="production-box production-box-size1a">
+                    <div class="production-prefix">&#x2796&#xFE0E</div><div class="plant production"></div>
+                    <div class="production-prefix">&#x2795&#xFE0E</div><div class="money production">4</div>
+                </div>
+                <div class="description">
+                    (Decrease your Plant production 1 step and increase your M$ production 4 steps.)
+                </div>
+            </div>
+        </li>
+
+        <!--44-->
+        <li class="filterDiv automated builderTag scienceTag standard">
+            <div class="title background-color-automated">Natural Preserve</div>
+            <div class="price">9</div>
+            <div class="tag tag1 tag-builder"></div>
+            <div class="tag tag2 tag-science"></div>
+            <div class="number">044</div>
+            <div class="content">
+                <div class="points points-big">1</div>
+                <div class="requirements">Requires: max 4% O2</div>
+                <div class="production-box">
+                    <div class="money production">1</div>
+                </div>
+                <div class="tile special-tile">&#x2642</div> *
+                <div class="description">
+                    (Oxygen must be 4% or less. Place this tile NEXT TO NO OTHER TILE. Increase your M$ production 1 step.)
+                </div>
+            </div>
+        </li>
+
         <!--
-                <li class="filterDiv standard  ">
-                    <div class="title "></div>
-                    <div class="price"></div>
-                    <div class="tag tag1 "></div>
-                    <div class="tag tag2 "></div>
-                    <div class="number"></div>
-                    <div class="corporate-icon"></div>
-                    <div class="content">
-                        <div class="points points-big">1</div>
-                        <div class="requirements"></div>
-                        <div class="production-box production-box-size1a">
-                            <div class="production-prefix">&#x2796&#xFE0E</div><div class=" production"></div>
-                            <div class="production-prefix">&#x2795&#xFE0E</div><div class=" production"></div>
-                        </div>
-
-                        <div class="description">
-
-                        </div>
+            <li class="filterDiv standard  ">
+                <div class="title "></div>
+                <div class="price"></div>
+                <div class="tag tag1 "></div>
+                <div class="tag tag2 "></div>
+                <div class="number"></div>
+                <div class="corporate-icon"></div>
+                <div class="content">
+                    <div class="points points-big">1</div>
+                    <div class="requirements"></div>
+                    <div class="production-box production-box-size1a">
+                        <div class="production-prefix">&#x2796&#xFE0E</div><div class=" production"></div>
+                        <div class="production-prefix">&#x2795&#xFE0E</div><div class=" production"></div>
                     </div>
-                </li>
-        -->
+
+                    <div class="description">
+
+                    </div>
+                </div>
+            </li>
+    -->
 
 
     </ul>
