@@ -382,14 +382,18 @@
 
     .btn1.active {
         border: 2px solid black;
+        opacity: 0.8;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.4), 0 0 0 2px rgba(0,0,0,0.1);
     }
 
     .btn2.active {
         border: 2px solid black;
+        opacity: 0.8;
     }
 
     .btn3.active {
         border: 2px solid black;
+        opacity: 0.8;
     }
 
 
@@ -399,6 +403,7 @@
         display: inline-block;
         width: 220px;
         padding: 10px;
+        font-size:16px;
         line-height: 20px;
         font-weight: bold;
         text-align: center;
@@ -412,6 +417,7 @@
         font-weight: normal;
         text-align: center;
         font-weight: bold;
+        font-size:12px;
         box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
     }
 
@@ -504,7 +510,7 @@
         line-height: 10px;
         z-index: +2;
         font-weight: normal;
-        font-size:14px;
+        font-size:12px;
     }
 
 
@@ -745,6 +751,7 @@
         box-shadow: 0 0 0 1px rgba(0,0,0,0.4), 0 0 0 2px rgba(0,0,0,0.2);
         line-height: 32px;
         margin-left: 2px;
+        margin-top:4px;
     }
 
         .science:after {
@@ -759,6 +766,7 @@
         padding-bottom: 8px;
         padding-left:3px;
         padding-right:3px;
+        border-radius:2px;
     }
 
         .card:after {
@@ -832,6 +840,7 @@
         font-size: 24px;
         padding-bottom: 8px;
         padding-left: 6px;
+        vertical-align:bottom;
     }
 
         .rating:after {
@@ -975,7 +984,7 @@
                 <div class="production-box">
                     <div class="energy production"></div>
                 </div>
-                <div class="tile temperature-tile" style="margin-left:10px;"></div>
+                <div class="tile temperature-tile"  style="margin-left:20px"></div>
                 <div class="description">
                     (Increase your Energy production 1 step. Increase temperature 1 step.)
                 </div>
@@ -1006,11 +1015,11 @@
             <div class="tag tag1 tag-science"></div>
             <div class="number">005</div>
             <div class="content">
-                <div class="points">3/<div class="science" style="margin-top:4px;"></div></div>
+                <div class="points">3/<div class="science"></div></div>
                 <div class="requirements">Requires: max 6% O2</div>
                 <div class=""><span class=" money resource">1</span> <span class="red-arrow"></span> <span class="microbe resource"></span>*  :  <div class="science"></div> </div>
                 <div class="description">
-                    (Action: Spend 1 M$ to reveal the top card of the draw deck. If that card has a Microbe tag, add a Science resource here.)<br><br>
+                    (Action: Spend 1 M$ to reveal the top card of the draw deck. If that card has a Microbe tag, add a Science resource here.)<br>
                     (3 VPs if you have one or more Science resources here.)
                 </div>
             </div>
@@ -1024,7 +1033,7 @@
             <div class="tag tag1 tag-science"></div>
             <div class="number">006</div>
             <div class="content">
-                <div> <span class="red-arrow"></span> ACTION: LOOK AT THE TOP CARD AND EITHER BUY IT OR DISCARD IT</div>
+                <span class="red-arrow"></span> <span style="font-size:12px;">ACTION: LOOK AT THE TOP CARD AND EITHER BUY IT OR DISCARD IT</span>
 
             </div>
         </li>
@@ -1093,8 +1102,7 @@
             <div class="tag tag2 tag-space"></div>
             <div class="number">010</div>
             <div class="content">
-                <div class="tile temperature-tile"></div>
-                <div class="tile ocean-tile"></div>
+                <div class="tile temperature-tile"></div><div class="tile ocean-tile"></div>
                 <br>
                 <div class="plant resource red-outline"></div><div class="plant resource red-outline"></div><div class="plant resource red-outline"></div>
                 <div class="description">
@@ -1149,7 +1157,7 @@
             <div class="corporate-icon"></div>
             <div class="content">
                 <div class="points points-big">2</div>
-                <span class=" steel resource"></span><span class="red-arrow"></span> <span class="money resource">5</span>
+                <span class=" steel resource"></span> <span class="red-arrow"></span> <span class="money resource">5</span>
                 <div class="description">
                     (Action: Spend 1 steel to gain 5 M$.)
                 </div><br>
@@ -1187,7 +1195,7 @@
                     <div class="production-prefix">&#x2796&#xFE0E</div><div class="energy production"></div>
                 </div>
                 <span class="red-arrow" style="margin-left:5px;"></span>
-                <div class="rating tile" style="margin-bottom:5px;"></div>
+                <div class="rating tile" style="line-height:11px;"></div>
                 <div class="description">
                     (Action: Decrease your Energy production 1 step to increase your terraform rating 1 step.)
                 </div>
@@ -1204,13 +1212,13 @@
             <div class="content">
                 <div class="points points-big">1</div>
                 <div class="requirements">Requires: max 7% O2</div>
-                <div class="production-box production-box-size1a" style="margin-top:-5px">
+                <div class="production-box production-box-size1a">
                     <div class="production-prefix">&#x2796&#xFE0E</div><div class="energy production"></div>
                     <div class="production-prefix">&#x2795&#xFE0E</div><div class="money production">3</div>
                 </div>
                 <div class="tile city-tile" style="margin-left:20px"></div><br>
                 <div class="plant resource"></div><div class="plant resource "></div><div class="plant resource"></div>
-                <div class="description" style="margin-top:-5px;font-size:10px;">
+                <div class="description" style="margin-top:-5px;font-size:9px;">
                     (Oxygen must be 7% or less. Gain 3 Plants and place a City tile.
                     Decrease your <br>Energy production 1 step and <br>increase your M$ <br>production 3 steps.)
                 </div>
@@ -1269,8 +1277,8 @@
             <div class="tag tag3 tag-earth"></div>
             <div class="number">019</div>
             <div class="content">
-                3<div class="resource plant"></div> OR 3<div class="resource microbe"></div>*<br> OR 2<div class="resource animal"></div>*<br>
-                <div class="tile ocean-tile"></div>
+                3<div class="resource plant"></div> OR 3<div class="resource microbe"></div>* OR 2<div class="resource animal"></div>*
+                <br><div class="tile ocean-tile"></div>
                 <div class="description">
                     (Gain 3 Plants, or add 3 Microbes or 2 Animals to ANOTHER card. Place an ocean tile.)
                 </div>
@@ -1399,7 +1407,7 @@
             <div class="number">026</div>
             <div class="content">
                 <div class="points points-big">1</div>
-                <div class="resource animal"></div>* <div class="resource plant" style="padding-left:10px"></div><div class="resource plant"></div><div class="resource plant"></div><br>
+                <div class="resource animal"></div>*<div class="resource plant" style="margin-left:15px"></div><div class="resource plant"></div><div class="resource plant"></div><br>
                 <div class="production-box production-box">
                     <div class="money production">2</div>
                 </div>
@@ -1595,7 +1603,7 @@
             <div class="content">
                 <div class="production-box production-box-size3" ">
                     <div class="plant production" style="margin-left:25px"></div> OR <br>
-                    3 <div class="plant production" style="border-radius:50%;padding-top:2px;"></div> : 4 <div class="plant production"></div>
+                    3<div class="plant production" style="border-radius:50%;padding-top:2px;"></div> : 4<div class="plant production"></div>
                 </div><br>
                 <div class="tile rating"></div>  <div class="tile rating"></div>
                 <div class="tile temperature-tile"></div><br>
@@ -1630,7 +1638,7 @@
             <div class="content">
                 <div class="tile temperature-tile"></div> <div class="tile temperature-tile"></div> <div class="tile temperature-tile"></div><br>
                 <div class=" steel resource"></div><div class=" steel resource"></div><div class=" steel resource"></div><div class=" steel resource"></div><br>
-                <span style="font-size:20px">-8</span> <div class="resource plant red-outline"></div>
+                <span style="font-size:20px">-8</span><div class="resource plant red-outline"></div>
                 <div class="description">
                     (Raise temperature 3 steps and gain 4 steel. Remove up to 8 Plants from any player.)
                 </div>
