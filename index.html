@@ -551,7 +551,8 @@
         font-size: 26px;
         line-height: 26px;
         font-weight: normal;
-        padding-top: 5px;
+        padding-top: 7px;
+        padding-bottom:11px;
         width: 40px;
         text-align: center;
     }
@@ -562,11 +563,20 @@
 
     .forest-tile {
         background-color: rgb(85,176,52);
+        background: linear-gradient(to right,rgb(0,102,0), rgb(0,180,0), rgb(0,220,0), rgb(0,180,0),rgb(0,102,0));
+        color: darkgreen;
+        line-height:24px;
+        vertical-align:middle;
+        font-size: 30px;
+    }
+
+    .forest-tile:after {
+        content: "\1f334";
     }
 
     .ocean-tile {
         background-color: cornflowerblue;
-        background: linear-gradient(to right, rgb(46,87,143), cornflowerblue, cornflowerblue, rgb(46,87,143));
+        background: linear-gradient(to right,rgb(15,96,151),rgb(84,150,201),rgb(0,204,204),rgb(84,150,201),rgb(15,96,151));
         padding-top: 14px;
         padding-bottom: 14px;
         color: rgb(46,87,143);
@@ -838,6 +848,7 @@
         color: white;
         font-size: 20px;
         padding-top: 2px;
+        padding-bottom:1px;
         border-radius:50%;
     }
 
@@ -1999,6 +2010,125 @@
                 </div>
             </div>
         </li>
+
+        <!--55-->
+        <li class="filterDiv automated plantTag standard">
+            <div class="title background-color-automated">Kelp Farming</div>
+            <div class="price">17</div>
+            <div class="tag tag1 tag-plant"></div>
+            <div class="number">055</div>
+            <div class="content">
+                <div class="points points-big">1</div>
+                <div class="requirements">Requires: 6 Oceans</div>
+                <div class="production-box production-box-size3">
+                    <div class="money production">2</div><br>
+                    <div class="plant production"></div><div class="plant production"></div><div class="plant production"></div>
+                </div><div class="plant resource" style="margin-left:20px"></div><div class="plant resource"></div>
+                <div class="description">
+                    (Requires 6 ocean tiles. Increase your M$ production 2 steps and your Plant production 3 steps. Gain 2 Plants.)
+                </div>
+            </div>
+        </li>
+
+        <!--56-->
+        <li class="filterDiv automated builderTag corporate">
+            <div class="title background-color-automated">Mine</div>
+            <div class="price">4</div>
+            <div class="tag tag1 tag-builder"></div>
+            <div class="number">056</div>
+            <div class="corporate-icon"></div>
+            <div class="content">
+                <div class="production-box">
+                    <div class="steel production"></div>
+                </div>
+                <div class="description">
+                    (Increase your steel production 1 step.)
+                </div>
+            </div>
+        </li>
+
+        <!--57-->
+        <li class="filterDiv automated spaceTag jovianTag corporate">
+            <div class="title background-color-automated">Vesta Shipyard</div>
+            <div class="price">15</div>
+            <div class="tag tag1 tag-space"></div>
+            <div class="tag tag2 tag-jovian"></div>
+            <div class="number">057</div>
+            <div class="content">
+                <div class="points points-big">1</div>
+                <div class="production-box">
+                    <div class="production titanium"></div>
+                </div>
+                <div class="description">
+                    (Increase your titanium production 1 step.)
+                </div>
+            </div>
+        </li>
+
+        <!--58-->
+        <li class="filterDiv automated spaceTag jovianTag energyTag standard">
+            <div class="title background-color-automated">Beam from Thorium Asteroid</div>
+            <div class="price">32</div>
+            <div class="tag tag1 tag-energy"></div>
+            <div class="tag tag2 tag-space"></div>
+            <div class="tag tag3 tag-jovian"></div>
+            <div class="number">058</div>
+            <div class="content">
+                <div class="points points-big">1</div>
+                <div class="requirements">Requires: Jovian</div>
+
+                <div class="production-box production-box-size3">
+                    <div class="production heat"></div><div class="production heat"></div><div class="production heat"></div><br>
+                    <div class="production energy"></div><div class="production energy"></div><div class="production energy"></div>
+                </div>
+                <div class="description">
+                    (Requires a Jovian tag. Increase your heat production and Energy production 3 steps each.)
+                </div>
+            </div>
+        </li>
+
+        <!--59-->
+        <li class="filterDiv automated plantTag standard">
+            <div class="title background-color-automated">Mangrove</div>
+            <div class="price">17</div>
+            <div class="tag tag1 tag-plant"></div>
+            <div class="number">059</div>
+            <div class="content">
+                <div class="points points-big">1</div>
+                <div class="requirements">Requires: +4 C</div>
+                <div class="tile forest-tile"></div>
+                
+                <div class="description">
+                    (Requires +4 C or warmer. Place a greenery tile ON AN AREA RESERVED FOR OCEAN and raise oxygen 1 step. Disregard normal placement restrictions for this.)
+                </div>
+            </div>
+        </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
