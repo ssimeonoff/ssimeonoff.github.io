@@ -10,7 +10,7 @@
         height: 310px;
         display: none;
         font-size: 1px;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: Helvetica, Arial, sans-serif;
         margin: 15px;
         margin-right: 25px;
         border-style: outset;
@@ -179,6 +179,7 @@
     /*********** Style the tags ************/
     .tag-builder {
         background-color: rgb(128,87,0);
+        background: linear-gradient(#cc8b00,rgb(128,87,0),rgb(128,87,0))
     }
 
         .tag-builder:after {
@@ -197,6 +198,7 @@
 
     .tag-space {
         background-color: black;
+        background: linear-gradient(rgb(100,100,100),black,black)
     }
 
         .tag-space:after {
@@ -208,6 +210,7 @@
 
     .tag-energy {
         background-color: rgb(174,0,255);
+        background: linear-gradient(#d780ff,rgb(174,0,255),rgb(174,0,255));
     }
 
         .tag-energy:after {
@@ -227,6 +230,7 @@
 
     .tag-venus {
         background-color: rgb(44,132,196);
+        background: linear-gradient(#6eafde,rgb(44,132,196),rgb(44,132,196));
     }
 
         .tag-venus:after {
@@ -238,8 +242,8 @@
         }
 
     .tag-earth {
-        background-color: dodgerblue;
-        background: linear-gradient(to right,rgb(15,96,151),rgb(84,150,201),rgb(84,150,201),rgb(15,96,151));
+        background-color: rgb(15,96,151);
+        background: linear-gradient(#1794e8,rgb(15,96,151),rgb(15,96,151));
         color: white;
         font-size: 32px;
         line-height: 43px;
@@ -251,6 +255,7 @@
 
     .tag-city {
         background-color: rgb(190,190,190);
+        background: linear-gradient(#e6e6e6,rgb(190,190,190),rgb(190,190,190));
         color: rgb(50,50,50);
         font-size: 18px;
     }
@@ -269,6 +274,7 @@
 
     .tag-microbe {
         background-color: rgb(212,217,78);
+        background: linear-gradient(#94cc7f, rgb(212,217,78), #99cc00);
         color: rgb(63,112,58);
         line-height: 36px;
     }
@@ -280,6 +286,7 @@
 
     .tag-plant {
         background-color: #6cba50;
+        background: linear-gradient(#85c56d,#5ca441,#5ca441);
         color: rgb(63,112,58);
     }
 
@@ -292,6 +299,7 @@
 
     .tag-animal {
         background-color: rgb(63,112,58);
+        background: linear-gradient( #55974e,rgb(63,112,58),rgb(63,112,58));
         color: darkseagreen;
     }
 
@@ -304,6 +312,7 @@
 
     .tag-event {
         background-color: rgb(255,230,35);
+        background: linear-gradient(#ffed66,rgb(255,230,35),rgb(255,230,35));
     }
 
         .tag-event:after {
@@ -600,8 +609,9 @@
 
     .ocean-resource {
         background-color: cornflowerblue;
+        background: linear-gradient(to right,rgb(15,96,151),rgb(84,150,201),rgb(0,204,204),rgb(84,150,201),rgb(15,96,151));
         color: rgb(46,87,143);
-        padding:2px;
+        padding: 2px;
     }
 
         .ocean-resource:after {
@@ -697,6 +707,7 @@
     .titanium {
         background-color: black;
         color: yellow;
+        background: linear-gradient(rgb(100,100,100),black,black);
     }
 
         .titanium:after {
@@ -707,6 +718,7 @@
 
     .plant {
         background-color: #6cba50;
+        background: linear-gradient(#85c56d,#5ca441,#5ca441);
         color: rgb(63,112,58);
         font-weight: normal;
     }
@@ -973,8 +985,8 @@
         border-style: inset;
         background: #eeeeee;
         border-radius: 10px;
-        width: 602px;
-        margin-right: 10px;
+        width: 604px;
+        margin-right: 8px;
         margin-bottom: 5px;
         background: linear-gradient(to right, rgb(128, 87, 0), rgb(205,162, 130), rgb(205,162, 130), rgb(128, 87, 0));
         text-shadow: 0 0 5px darkorange;
@@ -997,9 +1009,9 @@
 <html>
 <body>
     <div id="buttonsContainer">
-        <div id="titleContainer">
+        <a id="titleContainer"href="https://boardgamegeek.com/boardgame/167791/terraforming-mars" target="_blank">
             TERRAFORMING MARS
-        </div>
+        </a>
         <div id="cardsContainer">
             <div class="totalCardsCount">61</div>
             <div class="resource card" style="display:inline-block;transform: rotate(-8deg);"></div>
