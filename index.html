@@ -981,20 +981,19 @@
 
     .corporationLabel {
         float: left;
-        width: 120px;
-        height: 20px;
-        line-height: 20px;
+        width: 100px;
+        height: 12px;
+        line-height: 13px;
         text-align: center;
-        margin-top: 5px;
-        margin-left: 14px;
-        font-size: 11px;
+        margin-top: -7px;
+        margin-left: 24px;
+        font-size: 10px;
         font-weight: bold;
         box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
         background: #cccccc;
         background-color: rgb(255,204,100);
         background: linear-gradient(to right, #e28c22, rgb(255,204,100),rgb(255,204,100), #e28c22);
-        border-radius: 5px;
-        border-style: outset;
+        border-radius: 2px;
     }
 
     .corporationEffectBox {
@@ -1004,14 +1003,15 @@
         border-radius: 10px;
         text-align: center;
         box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
-        background: linear-gradient(to bottom right, #aaaaaa, #ffffff , #cccccc, #ffffff);
+        background: linear-gradient(to bottom right, #dddddd,#a1a1a1, #dddddd, #a1a1a1,#dddddd);
     }
 
     .corporationEffectBoxLabel {
-        background-color: dodgerblue;
-        margin-left:55px;
-        margin-bottom:10px;
-        width:100px;        
+        background-color: rgb(44,132,196);
+        background: linear-gradient(#6eafde,rgb(44,132,196),rgb(44,132,196));
+        margin-left: 55px;
+        margin-bottom: 10px;
+        width: 100px;
         height: 12px;
         line-height: 12px;
         text-align: center;
@@ -2285,11 +2285,16 @@
             </li>
     -->
         <!--corp1-->
-        <li class="filterDiv corporation">
-            <div class="tag tag1 tag-plant" style="display:inline-block"></div>
+        <li class="filterDiv corporation plantTag">
+            <div class="tag tag1 tag-plant"></div>
+            <div class="corporationLabel">CORPORATION</div>
             <div class="contentCorporation">
-                ECOLINE <br><br>
-                <div class="production-box production-box-size2">
+                <span style="font-size:30px;
+                        color:#85c56d;
+                        text-shadow: -1px 0 #404040, 0 1px #404040, 1px 0 #404040, 0 -1px #404040, 5px 5px 5px grey;">
+                    E C O L I N E
+                </span><br>
+                <div class="production-box production-box-size2" style="margin-top:10px;">
                     <div class="production plant"></div><div class="production plant"></div>
                 </div> <div class="resource money">36</div>
                 <div class="resource plant"></div><div class="resource plant"></div><div class="resource plant"></div>
@@ -2297,11 +2302,39 @@
                 <div class="corporationEffectBox">
                     <div class="corporationEffectBoxLabel">EFFECT</div>
                     7 <div class="resource plant"></div><span class="red-arrow"></span> <div class="forest-tile tile"></div><br>
-                    <div class="description">(Effect: You may always pay 7 plants, istead of 8, to place greeny.) </div>
-
+                    <div class="description" style="text-align:center;margin-top:0px;">
+                    (Effect: You may always pay 7 plants, istead of 8, to place greeny.) </div>
                 </div>
             </div>
+        </li>
 
+        <!--corp2-->
+        <li class="filterDiv corporation builderTag">
+            <div class="tag tag1 tag-builder"></div>
+            <div class="corporationLabel">CORPORATION</div>
+            <div class="contentCorporation">
+                <span style="font-size:26px;
+                        color:#c9380e;
+                        text-shadow: -1px 0 #333333, 0 1px #333333, 1px 0 #333333, 0 -1px #333333, 2px 2px 2px  black;">
+                    M I N I N G <br>G U I L D
+                </span><br>
+                <div class="resource money" style="margin-left:35px;">30</div>
+                5<div class="production steel"></div> <div class="production-box" style="margin-top:10px;margin-left:20px;">
+                    <div class="production steel"></div>
+                </div>
+                <div class="description" style="margin-top:0px">
+                    (You start with 30 M$, 5 steel, and 1 steel production)
+                </div>
+                <div class="corporationEffectBox">
+                    <div class="corporationEffectBoxLabel">EFFECT</div>
+                    <div class="resource steel"></div> / <div class="resource titanium"></div> : <div class="production-box">
+    <div class="production steel"></div>
+</div>
+    <div class="description" style="text-align:center;margin-top:-5px;">
+        (Effect: Each time you get any steel or titanium as a placement bonus on the map, increase your steel production 1 step.)
+    </div>
+</div>
+            </div>
         </li>
 
 
