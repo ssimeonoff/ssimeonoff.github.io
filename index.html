@@ -70,6 +70,24 @@
             content: "\25b2";
         }
 
+    .corporation-corporateEra-icon:after {
+        position: absolute;
+        border: 1px solid black;
+        background-color: red;
+        padding-right: 3px;
+        padding-left: 3px;
+        padding-top: 2px;
+        padding-bottom: 3px;
+        font-size: 8px;
+        margin-left: 133px;
+        margin-top: -11px;
+        vertical-align: top;
+        color: white;
+        border-radius: 8px;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.4);
+        content: "\25b2";
+    }
+
     .base-icon {
         display: inline-block;
         padding: 1px;
@@ -891,7 +909,6 @@ padding:2px;        padding-left: 5px;
             content: "\1f30f\FE0E";
         }
 
-
     .rating {
         background-color: rgb(240,100,00);
         //background: linear-gradient(to right, orange,rgb(240,100,00),rgb(240,100,00),rgb(240,100,00),orange);
@@ -988,7 +1005,7 @@ padding:2px;        padding-left: 5px;
         height: 14px;
         line-height: 15px;
         text-align: center;
-        margin-top: -9px;
+        margin-top: -10px;
         margin-left: 24px;
         font-size: 10px;
         font-weight: bold;
@@ -1032,8 +1049,8 @@ padding:2px;        padding-left: 5px;
         position: absolute;
         color: white;
         font-size:10px;
-        margin-top: -9px;
-        margin-left:130px;
+        margin-top: -10px;
+        margin-left:135px;
         padding-top:2px;
         padding-bottom:1px;
         padding-left: 4px;
@@ -1041,9 +1058,6 @@ padding:2px;        padding-left: 5px;
         background: rgb(44,132,196);
         border-radius: 3px;
         box-shadow: 0 0 0 1px rgba(0,0,0,0.6),0 0 0 2px rgba(0,0,0,0.3);
-    }
-
-    .corporation-corporateEra-icon {
     }
 
     #buttonsContainer {
@@ -1231,6 +1245,92 @@ padding:2px;        padding-left: 5px;
                 </div>
             </div>
         </li>
+
+        <!--corp4-->
+        <li class="filterDiv corporation earthTag corporate">
+            <div class="tag tag1 tag-earth"></div>
+            <div class="corporationLabel">CORPORATION</div>
+            <div class="corporation-corporateEra-icon"></div>
+            <div class="contentCorporation">
+                <div class="corporationEffectBox">
+                    <div class="corporationEffectBoxLabel">EFFECT</div>
+                    <div class="resource earth-resource"></div> : <div class="resource money">-3</div>
+                    <div class="description" style="text-align:center;margin-top:-5px;">
+                        (Effect: When playing an EArth card, you pay 3 M$ less for it.)
+                    </div>
+                </div>
+                <span style="font-size:27px;
+                        color: orangered;
+                        font-family: 'Times New Roman';
+                        font-weight:normal;
+                        text-shadow: -1px 0 #333333, 0 1px #333333, 1px 0 #333333, 6px 3px 5px  grey;">
+                    T E R A C T O R
+                </span><br><br>
+                <div class="resource money" style="margin-left:85px;">60</div>
+                <div class="description" style="text-align:center;">
+                    (You start with 60 M$.)
+                </div>
+            </div>
+        </li>
+
+
+        <!--corp5-->
+        <li class="filterDiv corporation spaceTag ">
+            <div class="tag tag1 tag-space"></div>
+            <div class="corporationLabel">CORPORATION</div>
+            <div class="contentCorporation">
+                <div class="corporationEffectBox">
+                    <div class="corporationEffectBoxLabel">EFFECT</div>
+                    <div class="resource titanium"></div> : +<div class="resource money">1</div>
+                    <div class="description" style="text-align:center;margin-top:-5px;">
+                        (Effect: Your titanium resources are each worth 1 M$ extra.)
+                    </div>
+                </div>
+                <span style="font-size:20px;
+                        color:white;
+                        line-height:40px;
+                        background: rebeccapurple;
+                        padding:5px;
+                        border-radius:10px;
+                        font-family: 'Times New Roman';
+                        box-shadow:  6px 6px 5px  grey;">
+                    P H O B O L O G
+                </span><br><br>
+                <div class="resource money" style="margin-left:45px;">23</div>
+                10<div class="resource titanium"></div>
+                <div class="description" style="text-align:center;">
+                    (You start with 10 titanium and 23 M$.)
+                </div>
+            </div>
+        </li>
+
+        <!--corp6-->
+        <li class="filterDiv corporation energyTag ">
+            <div class="tag tag1 tag-energy"></div>
+            <div class="corporationLabel">CORPORATION</div>
+            <div class="contentCorporation">
+                <div class="corporationEffectBox">
+                    <div class="corporationEffectBoxLabel">EFFECT</div>
+                    <div class="resource energy" style="border-radius:50%;padding-top:1px;"></div>* : <div class="resource money">-3</div>
+                    <div class="description" style="text-align:center;margin-top:-5px;">
+                        (Effect: When playing a power card OR THE STANDARD PROJECT POWER PLANT, you pay 3 M$ less for it.)
+                    </div>
+                </div>
+                <span style="font-size:28px;
+                        font-family: 'Arial Narrow','Verdana';
+                         text-shadow: 6px 3px 5px  grey;">
+                    T H O R G A T E
+                </span><br><br>
+                <div class="production-box" style="margin-left:45px;"><div class="production energy"></div></div>
+                <div class="resource money" style="margin-left:20px;">48</div>
+
+                <div class="description" style="text-align:center;">
+                    (You start with 1 energy production and 48 M$.)
+                </div>
+            </div>
+        </li>
+
+
 
         <!--1-->
         <li class="filterDiv automated builderTag jovianTag standard">
