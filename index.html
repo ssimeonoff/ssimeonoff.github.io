@@ -95,7 +95,7 @@
         color: white;
         border-radius: 10px;
         vertical-align: top;
-        box-shadow: 0 0 0 1px rgba(0,0,0,0.6),0 0 0 2px rgba(0,0,0,0.3);
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.6);
     }
 
     .venus-icon2 {
@@ -107,7 +107,7 @@
         background: rgb(44,132,196);
         border-radius: 3px;
         vertical-align: top;
-        box-shadow: 0 0 0 1px rgba(0,0,0,0.6),0 0 0 2px rgba(0,0,0,0.3);
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.6);
     }
 
     .tag {
@@ -145,7 +145,7 @@
         border: 1px solid black;
         line-height: 30px;
         text-align: center;
-        font-size: 15px;
+        font-size: 14px;
         font-weight: bold;
         text-align: center;
     }
@@ -274,7 +274,7 @@
 
     .tag-microbe {
         background-color: rgb(212,217,78);
-        background: linear-gradient(#94cc7f, rgb(212,217,78), #99cc00);
+        background: linear-gradient(#94cc7f, rgb(212,217,78), #739900);
         color: rgb(63,112,58);
         line-height: 36px;
     }
@@ -448,7 +448,7 @@
         border-radius: 12px;
         border-style: outset;
         background-color: rgb(205,162, 130);
-        background: linear-gradient(to right, rgb(128, 87, 0), rgb(205,162, 130), rgb(205,162, 130), rgb(128, 87, 0));
+        background: linear-gradient(#cc8b00, rgb(128, 87, 0),rgb(128, 87, 0));
         box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
     }
 
@@ -567,7 +567,7 @@
 
     .temperature-tile {
         background-color: rgb(240,124,47);
-        background: linear-gradient(to right, red, orange, yellow, orange, red);
+        background: linear-gradient(yellow, orange, red);
         font-size: 26px;
         line-height: 26px;
         font-weight: normal;
@@ -583,7 +583,7 @@
 
     .forest-tile {
         background-color: rgb(85,176,52);
-        background: linear-gradient(to right,rgb(0,102,0), rgb(0,180,0), rgb(0,220,0), rgb(0,180,0),rgb(0,102,0));
+        background: linear-gradient(rgb(0,220,0), rgb(0,180,0),rgb(0,102,0));
         color: darkgreen;
         line-height:24px;
         vertical-align:middle;
@@ -596,7 +596,7 @@
 
     .ocean-tile {
         background-color: cornflowerblue;
-        background: linear-gradient(to right,rgb(15,96,151),rgb(84,150,201),rgb(0,204,204),rgb(84,150,201),rgb(15,96,151));
+        background: linear-gradient(rgb(0,204,204),rgb(84,150,201),rgb(15,96,151));
         padding-top: 14px;
         padding-bottom: 14px;
         color: rgb(46,87,143);
@@ -609,7 +609,7 @@
 
     .ocean-resource {
         background-color: cornflowerblue;
-        background: linear-gradient(to right,rgb(15,96,151),rgb(84,150,201),rgb(0,204,204),rgb(84,150,201),rgb(15,96,151));
+        background: linear-gradient(rgb(0,204,204),rgb(84,150,201),rgb(15,96,151));
         color: rgb(46,87,143);
         padding: 2px;
     }
@@ -620,7 +620,7 @@
 
     .city-tile {
         background-color: rgb(190,190,190);
-        background: linear-gradient(to right, #aaaaaa, #eeeeee, #eeeeee, #aaaaaa);
+        background: linear-gradient(#e6e6e6,rgb(190,190,190),rgb(190,190,190));
         color: rgb(50,50,50);
         font-weight: normal;
     }
@@ -639,7 +639,7 @@
 
     .special-tile {
         background: rgb(205,162, 130);
-        background: linear-gradient(to right, rgb(128, 87, 0), rgb(205,162, 130), rgb(128, 87, 0));
+        background: linear-gradient(#cc8b00, rgb(128, 87, 0),rgb(128, 87, 0));
         padding-top: 11px;
         padding-bottom: 17px;
         width: 40px;
@@ -661,8 +661,7 @@
 
 
     .capitol {
-        background-color: white;
-        background: linear-gradient(to right, #cccccc, white, white, #cccccc);
+        background: white;
         margin-left: 20px;
         font-size: 50px;
         padding-top: 20px;
@@ -692,10 +691,13 @@
         background: linear-gradient(rgb(255,208,4),rgb(255,255,104),rgb(255,208,4),rgb(255,208,4));
         font-weight: bold;
         border-radius: 5px;
+        padding-top:1px;
     }
 
     .steel {
         background-color: rgb(162,113,71);
+                background: linear-gradient(#cc8b00,rgb(128,87,0),rgb(128,87,0));
+
         color: rgb(73,54,40);
     }
 
@@ -730,6 +732,7 @@
 
     .energy {
         background-color: rgb(174,0,255);
+        background: linear-gradient(#d780ff,rgb(174,0,255),rgb(174,0,255));
         color: white;
         font-weight: bold;
     }
@@ -752,6 +755,7 @@
 
     .microbe {
         background-color: rgb(212,217,78);
+        background: linear-gradient(#94cc7f, rgb(212,217,78), #739900);
         color: rgb(63,112,58);
         font-weight: normal;
     }
@@ -763,6 +767,7 @@
 
     .animal {
         background-color: rgb(63,112,58);
+        background: linear-gradient( #55974e,rgb(63,112,58),rgb(63,112,58));
         color: darkseagreen;
         font-weight: normal;
     }
@@ -809,6 +814,7 @@
 
     .space-resource {
         background-color: black;
+                background: linear-gradient(rgb(100,100,100),black,black);
         color: yellow;
         border-radius: 50%;
         font-weight: normal;
@@ -868,12 +874,12 @@
 
     .earth-resource {
         background-color: dodgerblue;
-        background: linear-gradient(to right,rgb(15,96,151),rgb(84,150,201),rgb(84,150,201),rgb(15,96,151));
+        background: linear-gradient(#1794e8,rgb(15,96,151),rgb(15,96,151));
         color: white;
         font-size: 20px;
         padding-top: 2px;
-        padding-bottom:1px;
-        border-radius:50%;
+        padding-bottom: 1px;
+        border-radius: 50%;
     }
 
         .earth-resource:after {
@@ -884,7 +890,7 @@
     .rating {
         background-color: rgb(240,100,00);
         //background: linear-gradient(to right, orange,rgb(240,100,00),rgb(240,100,00),rgb(240,100,00),orange);
-        background: linear-gradient(to right, orangered,orange, orangered);
+        background: linear-gradient(orange, orangered);
         font-size: 24px;
         padding-bottom: 8px;
         padding-left: 6px;
@@ -911,7 +917,7 @@
         outline: none;
         background-position: 10px 12px;
         background-repeat: no-repeat;
-        width: 581px;
+        width: 373px;
         height:47px;
         font-size: 22px;
         padding: 0px 2px 0px 20px;
@@ -957,6 +963,16 @@
         text-shadow: 0 0 5px darkorange;
     }
 
+    .corporations {
+        background: orange;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.6);
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 3px;
+        padding-left: 27px;
+        padding-right: 27px;
+    }
+
     #buttonsContainer {
         background: #cccccc;
         border-style: outset;
@@ -985,7 +1001,7 @@
         border-style: inset;
         background: #eeeeee;
         border-radius: 10px;
-        width: 604px;
+        width: 602px;
         margin-right: 8px;
         margin-bottom: 5px;
         background: linear-gradient(to right, rgb(128, 87, 0), rgb(205,162, 130), rgb(205,162, 130), rgb(128, 87, 0));
@@ -1000,7 +1016,7 @@
         border-radius: 10px;
         padding-top: 11px;
         padding-right: 5px;
-        width: 182px;
+        width: 185px;
         margin-right:10px;
         background: linear-gradient(to right, rgb(128, 87, 0), rgb(205,162, 130), rgb(205,162, 130), rgb(128, 87, 0));
     }
@@ -1009,9 +1025,9 @@
 <html>
 <body>
     <div id="buttonsContainer">
-        <a id="titleContainer"href="https://boardgamegeek.com/boardgame/167791/terraforming-mars" target="_blank">
+        <div id="titleContainer" target="_blank">
             TERRAFORMING MARS
-        </a>
+        </div>
         <div id="cardsContainer">
             <div class="totalCardsCount">61</div>
             <div class="resource card" style="display:inline-block;transform: rotate(-8deg);"></div>
@@ -1050,6 +1066,8 @@
             <button class="btn3" onclick="filterSelection('standard')"><div class="base-icon">I</div></button>
             <button class="btn3 corporateButton" onclick="filterSelection('corporate')"><span class="corporate-icon2">&#x25b2</span></button>
             <button class="btn3 venusNext" style="color:rgb(44,132,196);" onclick="filterSelection('venusNext')"><span class="venus-icon2">V</span></button>
+            <button class="btn3" style="width:191px" onclick="filterSelection('corporation')"><span class="corporations">CORPORATIONS</span></button>
+
         </div>
     </div>
     <!-------------------CARDS LIST----------------------->
@@ -1257,7 +1275,7 @@
             <div class="number">012</div>
             <div class="content">
                 <div class="points">1/<span class="jovian"></span></div>
-                <div class=" money resource">12</div> (<span class="titanium" style="margin:0px;padding:1px;padding-top:5px;border-radius:5px;"></span>)
+                <div class=" money resource">12</div> (<span class="titanium" style="margin:0px;padding:1px;padding-top:3px;border-radius:5px;"></span>)
                 <span class="red-arrow"></span> <div class="ocean-tile tile"></div>
                 <div class="description">
                     (Action: Pay 12 M$ to place an ocean tile. TITANIUM MAY BE USED as if playing a Space card.)<br><br>
@@ -1314,7 +1332,7 @@
                     <div class="production-prefix">&#x2796&#xFE0E</div><div class="energy production"></div>
                 </div>
                 <span class="red-arrow" style="margin-left:5px;"></span>
-                <div class="rating tile" style="line-height:11px;"></div>
+                <div class="rating tile"></div>
                 <div class="description">
                     (Action: Decrease your Energy production 1 step to increase your terraform rating 1 step.)
                 </div>
@@ -2225,11 +2243,9 @@
 
         filterSelection("all");
 
-        var filterButton = "";
-
         function filterSelection(c) {
             var x, i;
-            counter = document.getElementById("countNumber");
+
             x = document.querySelectorAll('.filterDiv');
             if (c == "all") c = "";
             for (i = 0; i < x.length; i++) {
