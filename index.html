@@ -758,11 +758,11 @@ padding:2px;        padding-left: 5px;
         background: linear-gradient(#d780ff,rgb(174,0,255),rgb(174,0,255));
         color: white;
         font-weight: bold;
+        font-size: 18px;
     }
 
         .energy:after {
             content: "\00a0\26A1\FE0E\00a0";
-            font-size: 18px;
         }
 
     .heat {
@@ -900,8 +900,10 @@ padding:2px;        padding-left: 5px;
         background: linear-gradient(#1794e8,rgb(15,96,151),rgb(15,96,151));
         color: white;
         font-size: 20px;
-        padding-top: 2px;
-        padding-bottom: 1px;
+        padding-top: 3px;
+        padding-left:1px;
+        padding-right:1px;
+        padding-bottom: 2px;
         border-radius: 50%;
     }
 
@@ -909,6 +911,19 @@ padding:2px;        padding-left: 5px;
             content: "\1f30f\FE0E";
         }
 
+    .energy-resource {
+        background-color: rgb(174,0,255);
+        background: linear-gradient(#d780ff,rgb(174,0,255),rgb(174,0,255));
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        border-radius: 50%;
+        padding:3px;
+    }
+
+        .energy-resource:after {
+            content: "\00a0\26A1\FE0E\00a0";
+        }
     .rating {
         background-color: rgb(240,100,00);
         //background: linear-gradient(to right, orange,rgb(240,100,00),rgb(240,100,00),rgb(240,100,00),orange);
@@ -1311,7 +1326,7 @@ padding:2px;        padding-left: 5px;
             <div class="contentCorporation">
                 <div class="corporationEffectBox">
                     <div class="corporationEffectBoxLabel">EFFECT</div>
-                    <div class="resource energy" style="border-radius:50%;padding-top:1px;"></div>* : <div class="resource money">-3</div>
+                    <div class="resource energy-resource"></div>* : <div class="resource money">-3</div>
                     <div class="description" style="text-align:center;margin-top:-5px;">
                         (Effect: When playing a power card OR THE STANDARD PROJECT POWER PLANT, you pay 3 M$ less for it.)
                     </div>
