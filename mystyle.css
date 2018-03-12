@@ -1,0 +1,897 @@
+
+    .filterDiv {
+        float: left;
+        background: #eeeeee;
+        background: linear-gradient(to bottom right, #ffffff, #aaaaaa, #eeeeee, #cecece, #dddddd, #eeeeee, #cccccc);
+        width: 240px;
+        height: 300px;
+        display: none;
+        font-size: 12px;
+        font-family: Arial;
+        margin: 20px;
+        border-style: outset;
+        border-radius: 20px;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
+    }
+
+    .price {
+        float: left;
+        font-size: 22px;
+        border-style: outset;
+        background: rgb(255,228,4);
+        background: linear-gradient(rgb(255,208,4),rgb(255,255,104),rgb(255,208,4),rgb(255,208,4));
+        width: 44px;
+        height: 44px;
+        line-height: 44px;
+        border-radius: 10px;
+        text-align: center;
+        margin-top: -76px;
+        margin-left: -7px;
+        font-weight: bold;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
+    }
+
+    .number {
+        float: left;
+        width: 36px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        margin-top: -64px;
+        margin-left: 50px;
+        font-size: 11px;
+        font-weight: bold;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
+        background: #cccccc;
+        background: linear-gradient(to right, #aaaaaa, #eeeeee, #eeeeee, #aaaaaa);
+        border-radius: 2px;
+        border-style: outset;
+    }
+
+    .corporate-icon:before {
+        position: absolute;
+        border: 1px solid black;
+        content: "\25b2";
+        background-color: red;
+        padding-top: 2px;
+        padding-bottom: 4px;
+        padding-right: 4px;
+        padding-left: 4px;
+        font-size: 12px;
+        color: white;
+        border-radius: 50%;
+        margin-left: -232px;
+        margin-top: 269px;
+        vertical-align: top;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.4), 0 0 0 2px rgba(0,0,0,0.2);
+    }
+
+    .base-icon {
+        display: inline-block;
+        padding: 1px;
+        padding-left: 6px;
+        padding-right: 6px;
+        border: 1px solid black;
+        border-radius: 3px;
+        background-color: rgb(221,221,221);
+        color: rgb(221,221,221);
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.6),0 0 0 2px rgba(0,0,0,0.3);
+    }
+
+    .corporate-icon2 {
+        border: 1px solid black;
+        background-color: red;
+        padding-top: 2px;
+        padding-bottom: 4px;
+        padding-right: 4px;
+        padding-left: 4px;
+        font-size: 12px;
+        color: white;
+        border-radius: 50%;
+        vertical-align: top;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.6),0 0 0 2px rgba(0,0,0,0.3);
+    }
+
+    .venus-icon2 {
+        border: 1px solid black;
+        color: white;
+        padding: 2px;
+        padding-left: 5px;
+        padding-right: 5px;
+        background: rgb(44,132,196);
+        border-radius: 3px;
+        vertical-align: top;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.6),0 0 0 2px rgba(0,0,0,0.3);
+    }
+
+    .tag {
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        border-radius: 50%;
+        border: outset;
+        background-color: white;
+        margin-top: -6px;
+    }
+
+    .tag1 {
+        margin-left: 200px;
+    }
+
+    .tag2 {
+        margin-left: 150px;
+    }
+
+    .tag3 {
+        margin-left: 100px;
+    }
+
+
+    .title {
+        text-transform: uppercase;
+        float: left;
+        margin-top: 36px;
+        margin-left: -1px;
+        width: 100%;
+        border: 1px solid black;
+        line-height: 30px;
+        text-align: center;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .show {
+        display: block;
+    }
+
+    .container {
+        margin-top: 20px;
+        overflow: hidden;
+    }
+    /*********** Background colors************/
+
+    .background-color-automated {
+        background: linear-gradient(to right,rgb(0,102,0), rgb(0,180,0), rgb(0,220,0), rgb(0,180,0),rgb(0,102,0));
+    }
+
+    .background-color-active {
+        background: linear-gradient(to right,rgb(15,96,151),rgb(84,150,201),rgb(0,204,204),rgb(84,150,201),rgb(15,96,151));
+    }
+
+    .background-color-events {
+        background: linear-gradient(to right, orange,rgb(255,51,51),rgb(255,51,51),rgb(240,100,00),rgb(255,255,150),rgb(240,100,00),orange,orange,yellow);
+    }
+
+    .background-button-all {
+        background: linear-gradient(to right, #aaaaaa, #ffffff, #aaaaaa, #eeeeee, #cecece, #bbbbbb, #eeeeee, #aaaaaa);
+    }
+
+    /*********** Style the tags ************/
+    .tag-builder {
+        background-color: rgb(128,87,0);
+    }
+
+        .tag-builder:after {
+            color: rgb(73,54,40);
+            content: "\2617";
+            line-height: 35px;
+            vertical-align: top;
+            font-size: 20px;
+            display: inline-block;
+            -webkit-transform: scale(2.7,1); /* Safari and Chrome */
+            -moz-transform: scale(2.7,1); /* Firefox */
+            -ms-transform: scale(2.7,1); /* IE 9 */
+            -o-transform: scale(2.7,1); /* Opera */
+            transform: scale(2.7,1); /* W3C */
+        }
+
+    .tag-space {
+        background-color: black;
+    }
+
+        .tag-space:after {
+            color: yellow;
+            content: "\2734";
+            font-size: 30px;
+            line-height: 40px;
+        }
+
+    .tag-energy {
+        background-color: rgb(174,0,255);
+    }
+
+        .tag-energy:after {
+            content: "\26A1\FE0E";
+            font-size: 26px;
+            line-height: 38px;
+            color: white;
+            font-weight: bold;
+        }
+
+    .tag-jovian {
+        background-color: rgb(235,200,148);
+        background: linear-gradient(rgb(235,200,148),beige,rgb(235,200,148),beige,rosybrown,rgb(235,200,148),rgb(235,200,148),beige,beige,beige,rgb(235,200,148),beige,rosybrown,rgb(235,200,148),beige,rgb(235,200,148),rgb(235,200,148), beige,rgb(235,200,148),beige);
+    }
+
+
+
+    .tag-venus {
+        background-color: rgb(44,132,196);
+    }
+
+        .tag-venus:after {
+            content: "V";
+            color: white;
+            font-weight: bold;
+            font-size: 26px;
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        }
+
+    .tag-earth {
+        background-color: dodgerblue;
+        background: linear-gradient(to right,rgb(15,96,151),rgb(84,150,201),rgb(84,150,201),rgb(15,96,151));
+        color: white;
+        font-size: 32px;
+        line-height: 43px;
+    }
+
+        .tag-earth:after {
+            content: "\1f30f\FE0E";
+        }
+
+    .tag-city {
+        background-color: rgb(190,190,190);
+        color: rgb(50,50,50);
+        font-size: 18px;
+    }
+
+        .tag-city:after {
+            line-height: 30px;
+            content: "\1f3d9\FE0E";
+            vertical-align: top;
+            display: inline-block;
+            -webkit-transform: scale(1.6,1); /* Safari and Chrome */
+            -moz-transform: scale(1.6,1); /* Firefox */
+            -ms-transform: scale(1.6,1); /* IE 9 */
+            -o-transform: scale(1.6,1); /* Opera */
+            transform: scale(1.6,1); /* W3C */
+        }
+
+    .tag-microbe {
+        background-color: rgb(212,217,78);
+        color: rgb(63,112,58);
+        line-height: 36px;
+    }
+
+        .tag-microbe:after {
+            content: "\2042";
+            font-size: 32px;
+        }
+
+    .tag-plant {
+        background-color: rgb(85,176,52);
+        color: rgb(63,112,58);
+    }
+
+        .tag-plant:after {
+            content: "\1F331\FE0E";
+            font-size: 26px;
+            line-height: 40px;
+        }
+
+
+    .tag-animal {
+        background-color: rgb(63,112,58);
+        color: darkseagreen;
+    }
+
+        .tag-animal:after {
+            content: "\1F43e\FE0E";
+            font-size: 26px;
+            line-height: 40px;
+        }
+
+
+    .tag-event {
+        background-color: rgb(255,230,35);
+    }
+
+        .tag-event:after {
+            content: "\2B07\FE0E";
+            font-size: 30px;
+            vertical-align: bottom;
+            display: inline-block;
+            -webkit-transform: scale(2,1); /* Safari and Chrome */
+            -moz-transform: scale(2,1); /* Firefox */
+            -ms-transform: scale(2,1); /* IE 9 */
+            -o-transform: scale(2,1); /* Opera */
+            transform: scale(2,1); /* W3C */
+        }
+
+
+    .tag-science {
+        background: white;
+    }
+
+
+        .tag-science:after {
+            content: "\269b";
+            font-size: 38px;
+            line-height: 40px;
+        }
+
+
+    /************** Style the buttons ************/
+    .btn1 {
+        outline: none;
+        height: 40px;
+        width: 191px;
+        cursor: pointer;
+        font-weight: bold;
+        border-radius: 5px;
+        margin-right: 12px;
+        margin-bottom: 10px;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
+    }
+
+    .btn2 {
+        outline: none;
+        height: 55px;
+        width: 55px;
+        cursor: pointer;
+        border-radius: 50%;
+        text-align: center;
+        vertical-align: middle;
+        font-weight: normal;
+        margin-right: 10px;
+        margin-bottom: 8px;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
+    }
+
+    .btn3 {
+        outline: none;
+        height: 40px;
+        width: 55px;
+        cursor: pointer;
+        font-weight: bold;
+        border-radius: 5px;
+        margin-right: 10px;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
+    }
+
+
+    .btn1:hover {
+        border: 2px solid rgb(137,137,137);
+    }
+
+    .btn2:hover {
+        border: 2px solid rgb(137,137,137);
+    }
+
+    .btn3:hover {
+        border: 2px solid rgb(137,137,137);
+    }
+
+
+
+    .btn1.active {
+        border: 2px solid black;
+        opacity: 0.8;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.4), 0 0 0 2px rgba(0,0,0,0.1);
+    }
+
+    .btn2.active {
+        border: 2px solid black;
+        opacity: 0.8;
+    }
+
+    .btn3.active {
+        border: 2px solid black;
+        opacity: 0.8;
+    }
+
+
+    /************** Style the Content ************/
+    .content {
+        position: relative;
+        display: inline-block;
+        width: 220px;
+        padding: 10px;
+        font-size:16px;
+        line-height: 20px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .requirements {
+        background-color: rgb(255,204,100);
+        border-style: outset;
+        margin-top: -5px;
+        margin-bottom: 10px;
+        font-weight: normal;
+        text-align: center;
+        font-weight: bold;
+        font-size:12px;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
+    }
+
+    .points {
+        position: absolute;
+        margin-top: 167px;
+        margin-left: 137px;
+        width: 80px;
+        height: 42px;
+        line-height: 35px;
+        font-size: 28px;
+        text-align: center;
+        border-radius: 12px;
+        border-style: outset;
+        background-color: rgb(205,162, 130);
+        background: linear-gradient(to right, rgb(128, 87, 0), rgb(205,162, 130), rgb(205,162, 130), rgb(128, 87, 0));
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
+    }
+
+    .points-big {
+        line-height: 42px;
+        font-size: 36px;
+        text-shadow: 0 0 5px darkorange;
+    }
+
+
+    .description {
+        margin-top: 5px;
+        font-size: 11px;
+        text-align: left;
+        line-height: 14px;
+    }
+
+    .production-box {
+        font-size: 18px;
+        width: 44px;
+        display: inline-block;
+        border-style: outset;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
+        background-color: rgb(128, 87, 0);
+        background: linear-gradient(to right, rgb(73,54,40), rgb(128, 87, 0),rgb(73,54,40), rgb(128, 87, 0), rgb(73,54,40), rgb(128, 87, 0), rgb(73,54,40), rgb(128, 87, 0), rgb(73,54,40)rgb(128, 87, 0), rgb(73,54,40));
+        padding-top: 4px;
+        padding-bottom: 4px;
+        text-align: center;
+        margin-bottom: 5px;
+        margin-left: 5px;
+    }
+
+    .production-box-size1a {
+        width: 66px;
+    }
+
+    .production-box-size2 {
+        width: 81px;
+    }
+
+    .production-box-size2a {
+        width: 100px;
+    }
+
+    .production-box-size3 {
+        width: 115px;
+    }
+
+    .production-box-size3a {
+        width: 130px;
+    }
+
+    .production {
+        display: inline-block;
+        position: relative;
+        width: 28px;
+        height: 25px;
+        line-height: 25px;
+        //border: 1px solid black;
+        margin: 2px;
+        text-align: center;
+        font-size: 16px;
+        border-radius: 2px;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.2);
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
+    }
+
+    .production-prefix {
+        display: inline-block;
+        position: relative;
+        color: black;
+        width: 23px;
+        vertical-align: central;
+        line-height: 10px;
+        z-index: +2;
+        font-weight: normal;
+        font-size:12px;
+    }
+
+
+    .empty-production {
+        display: inline-block;
+        position: relative;
+        width: 30px;
+        height: 25px;
+        line-height: 25px;
+        margin-top: 2px;
+        margin-left: 3px;
+        margin-right: 6px;
+        text-align: center;
+        background-color: rgb(128, 87, 0);
+        border: 1px solid rgb(128, 87, 0);
+    }
+
+    .red-outline {
+        border: 2px solid red;
+    }
+
+    /************** Tiles**************/
+    .tile {
+        position: relative;
+        display: inline-block;
+        width: 40px;
+        line-height: 16px;
+        text-align: center;
+        margin-bottom: 10px;
+        margin-left: 5px;
+        margin-right:5px;
+        margin-top:5px;
+        border-style: outset;
+        border-radius: 5px;
+        padding: 5px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
+    }
+
+    .temperature-tile {
+        background-color: rgb(240,124,47);
+        background: linear-gradient(to right, red, orange, yellow, orange, red);
+        font-size: 26px;
+        line-height: 26px;
+        font-weight: normal;
+        padding-top: 5px;
+        width: 40px;
+        text-align: center;
+    }
+
+        .temperature-tile:after {
+            content: "\1f321\FE0E ";
+        }
+
+    .forest-tile {
+        background-color: rgb(85,176,52);
+    }
+
+    .ocean-tile {
+        background-color: cornflowerblue;
+        background: linear-gradient(to right, rgb(46,87,143), cornflowerblue, cornflowerblue, rgb(46,87,143));
+        padding-top: 14px;
+        padding-bottom: 14px;
+        color: rgb(46,87,143);
+        font-size: 20px;
+    }
+
+        .ocean-tile:after {
+            content: "\1f4a7\FE0E";
+        }
+
+    .ocean-resource {
+        background-color: cornflowerblue;
+        color: rgb(46,87,143);
+    }
+
+        .ocean-resource:after {
+            content: "\1f4a7\FE0E";
+        }
+
+    .city-tile {
+        background-color: rgb(190,190,190);
+        background: linear-gradient(to right, #aaaaaa, #eeeeee, #eeeeee, #aaaaaa);
+        color: rgb(50,50,50);
+        font-weight: normal;
+    }
+
+        .city-tile:before {
+            padding-top: 2px;
+            content: "\1f3d9\FE0E";
+            font-size: 26px;
+            display: inline-block;
+            -webkit-transform: scale(1.6,1); /* Safari and Chrome */
+            -moz-transform: scale(1.6,1); /* Firefox */
+            -ms-transform: scale(1.6,1); /* IE 9 */
+            -o-transform: scale(1.6,1); /* Opera */
+            transform: scale(1.6,1); /* W3C */
+        }
+
+    .special-tile {
+        background-color: rgb(240,124,47);
+    }
+
+    .oxygen-tile {
+        background-color: rgb(246,241,175);
+        color: red;
+        font-size: 24px;
+        width: 30px;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.4), 0 0 0 2px rgba(0,0,0,0.2);
+    }
+
+        .oxygen-tile:after {
+            content: "O\00B2";
+        }
+
+
+    .capitol {
+        background-color: white;
+        background: linear-gradient(to right, #cccccc, white, white, #cccccc);
+        margin-left: 20px;
+        font-size: 50px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+
+
+    /**************Resources***********/
+    .resource {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        line-height: 24px;
+        margin-left: 3px;
+        margin-right: 3px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        font-size: 16px;
+        min-width: 26px;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.4), 0 0 0 2px rgba(0,0,0,0.2);
+    }
+
+
+    .money {
+        background-color: rgb(255,228,4);
+        background: linear-gradient(rgb(255,208,4),rgb(255,255,104),rgb(255,208,4),rgb(255,208,4));
+        font-weight: bold;
+        border-radius: 5px;
+    }
+
+    .steel {
+        background-color: rgb(162,113,71);
+        color: rgb(73,54,40);
+    }
+
+        .steel:after {
+            content: "\2692";
+            font-size: 20px;
+        }
+
+    .titanium {
+        background-color: black;
+        color: yellow;
+    }
+
+        .titanium:after {
+            content: "\2606\FE0E";
+            font-weight: normal;
+            font-size: 20px;
+        }
+
+    .plant {
+        background-color: rgb(85,176,52);
+        color: rgb(63,112,58);
+        font-weight: normal;
+    }
+
+        .plant:before {
+            content: "\1F331\FE0E";
+            font-size: 18px;
+        }
+
+    .energy {
+        background-color: rgb(174,0,255);
+        color: white;
+        font-weight: bold;
+    }
+
+        .energy:after {
+            content: "\00a0\26A1\FE0E\00a0";
+            font-size: 18px;
+        }
+
+    .heat {
+        background-color: rgb(240,70,47);
+    }
+
+        .heat:after {
+            font-weight: normal;
+            content: "III";
+            color: yellow;
+        }
+
+    /**************cards resources***********/
+
+    .microbe {
+        background-color: rgb(212,217,78);
+        color: rgb(63,112,58);
+        font-weight: normal;
+    }
+
+        .microbe:before {
+            content: "\2042";
+            font-size: 19px;
+        }
+
+    .animal {
+        background-color: rgb(63,112,58);
+        color: darkseagreen;
+        font-weight: normal;
+    }
+
+        .animal:before {
+            content: "\1F43e\FE0E";
+            font-size: 20px;
+        }
+
+    .science {
+        display: inline-block;
+        background-color: white;
+        border: 1px solid black;
+        padding-left: 6px;
+        padding-right: 6px;
+        font-size: 26px;
+        font-weight: normal;
+        border-radius: 50px;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.4), 0 0 0 2px rgba(0,0,0,0.2);
+        line-height: 32px;
+        margin-left: 2px;
+        margin-top:4px;
+    }
+
+        .science:after {
+            content: "\269b";
+        }
+
+    .card {
+        background-color: rgb(44,44,44);
+        background: linear-gradient(to right, black, rgb(60,60,60), rgb(150,150,150), rgb(60,60,60), rgb(60,60,60),black);
+        color: white;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left:3px;
+        padding-right:3px;
+        border-radius:2px;
+    }
+
+        .card:after {
+            content: "\1F30F\FE0E";
+            font-size: 20px;
+        }
+
+    .space-resource {
+        background-color: black;
+        color: yellow;
+        border-radius: 50%;
+        font-weight: normal;
+        font-size: 22px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        padding-left: 1px;
+        padding-right: 1px;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.4), 0 0 0 2px rgba(0,0,0,0.2);
+    }
+
+        .space-resource:after {
+            content: "\2734";
+        }
+
+
+    .event-resource {
+        background-color: rgb(255,230,35);
+        border-radius: 50%;
+        font-weight: normal;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        padding-left: 1px;
+        padding-right: 1px;
+        font-size: 22px;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.4), 0 0 0 2px rgba(0,0,0,0.2);
+    }
+
+        .event-resource:after {
+            padding-left: 3px;
+            padding-right: 3px;
+            content: "\2B07\FE0E";
+            vertical-align: bottom;
+            display: inline-block;
+            -webkit-transform: scale(2,1); /* Safari and Chrome */
+            -moz-transform: scale(2,1); /* Firefox */
+            -ms-transform: scale(2,1); /* IE 9 */
+            -o-transform: scale(2,1); /* Opera */
+            transform: scale(2,1); /* W3C */
+        }
+
+    .jovian {
+        background-color: rgb(235,200,148);
+        background: linear-gradient(rgb(235,200,148),beige,rgb(235,200,148),beige,rosybrown,rgb(235,200,148),beige,beige,rgb(235,200,148),rosybrown,rgb(235,200,148),beige,rgb(235,200,148),rgb(235,200,148), rgb(235,200,148));
+        border: 1px solid black;
+        font-size: 24px;
+        font-weight: normal;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        padding-right: 16px;
+        padding-left: 16px;
+        border-radius: 16px;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.4), 0 0 0 2px rgba(0,0,0,0.2);
+        margin-left: 2px;
+        line-height: 42px;
+    }
+
+    .rating {
+        background-color: rgb(240,100,00);
+        //background: linear-gradient(to right, orange,rgb(240,100,00),rgb(240,100,00),rgb(240,100,00),orange);
+        background: linear-gradient(to right, orangered,orange, orangered);
+        font-size: 24px;
+        padding-bottom: 8px;
+        padding-left: 6px;
+        vertical-align:bottom;
+    }
+
+        .rating:after {
+            content: "\1F30F\FE0E";
+        }
+
+    /************** Extras ************/
+    .red-arrow {
+        display: inline-block;
+    }
+
+        .red-arrow:after {
+            position: relative;
+            color: red;
+            content: "\27a1";
+        }
+
+    /************** Style the Input field************/
+    #myInput {
+        outline: none;
+        background-position: 10px 12px;
+        background-repeat: no-repeat;
+        width: 581px;
+        font-size: 16px;
+        padding: 10px 2px 12px 20px;
+        border: 2px solid #ddd;
+        margin-top: 8px;
+        margin-left: 40px;
+        margin-right: 10px;
+        margin-bottom: 40px;
+        border-radius: 5px;
+    }
+
+    #myUL {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+        #myUL li a {
+            border: 1px solid #ddd;
+            margin-top: -1px; /* Prevent double borders */
+            background-color: #f6f6f6;
+            padding: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            color: black;
+            display: block;
+        }
+
+            #myUL li a:hover:not(.header) {
+                background-color: #eee;
+            }
+
+    .key-words {
+        display: inline-block;
+    }
