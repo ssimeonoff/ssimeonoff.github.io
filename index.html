@@ -1144,35 +1144,35 @@ padding:2px;        padding-left: 5px;
 
         </div>
         <div id="myBtnContainer1" style="line-height:55px;margin-bottom:10px;">
-            <button class="btn1 active background-button-all" onclick="filterSelection('all'); "> ALL</button>
-            <button class="btn1 background-color-automated" onclick="filterSelection('automated')"> AUTOMATED</button>
-            <button class="btn1 background-color-active" onclick="filterSelection('active')"> ACTIVE</button>
-            <button class="btn1 background-color-events" onclick="filterSelection('events')"> EVENTS</button>
+            <button id="all" class="btn1 active background-button-all" onclick="filterSelection(id); "> ALL</button>
+            <button id="automated" class="btn1 background-color-automated" onclick="filterSelection(id)"> AUTOMATED</button>
+            <button id="active" class="btn1 background-color-active" onclick="filterSelection(id)"> ACTIVE</button>
+            <button id="events" class="btn1 background-color-events" onclick="filterSelection(id)"> EVENTS</button>
         </div>
         <div id="myBtnContainer2" style="line-height:55px;">
-            <button class="btn2 tag-builder" style="line-height:40px" onclick="filterSelection('builderTag')"></button>
-            <button class="btn2 tag-space" onclick="filterSelection('spaceTag')"></button>
-            <button class="btn2 tag-science" onclick="filterSelection('scienceTag')"></button>
+            <button id="builderTag" class="btn2 tag-builder" style="line-height:40px" onclick="filterSelection(id)"></button>
+            <button id="spaceTag" class="btn2 tag-space" onclick="filterSelection(id)"></button>
+            <button id="scienceTag" class="btn2 tag-science" onclick="filterSelection(id)"></button>
 
-            <button class="btn2 tag-plant" onclick="filterSelection('plantTag')"></button>
-            <button class="btn2 tag-microbe" onclick="filterSelection('microbeTag')"></button>
-            <button class="btn2 tag-animal" onclick="filterSelection('animalTag')"></button>
+            <button id="plantTag" class="btn2 tag-plant" onclick="filterSelection(id)"></button>
+            <button id="microbeTag" class="btn2 tag-microbe" onclick="filterSelection(id)"></button>
+            <button id="animalTag" class="btn2 tag-animal" onclick="filterSelection(id)"></button>
 
-            <button class="btn2 tag-energy" onclick="filterSelection('energyTag')"></button>
-            <button class="btn2 tag-jovian" onclick="filterSelection('jovianTag')"></button>
-            <button class="btn2 tag-earth" style="font-size:38px;padding-top:5px;padding-left:1px;padding-right:1px;" onclick="filterSelection('earthTag')"></button>
+            <button id="energyTag" class="btn2 tag-energy" onclick="filterSelection(id)"></button>
+            <button id="jovianTag" class="btn2 tag-jovian" onclick="filterSelection(id)"></button>
+            <button id="earthTag" class="btn2 tag-earth" style="font-size:38px;padding-top:5px;padding-left:1px;padding-right:1px;" onclick="filterSelection(id)"></button>
 
-            <button class="btn2 tag-city" style="font-size:22px;line-height:40px" onclick="filterSelection('cityTag')"></button>
-            <button class="btn2 tag-event" style="line-height:40px;vertical-align:bottom;" onclick="filterSelection('eventTag')"></button>
-            <button class="btn2 tag-venus" onclick="filterSelection('venusTag')"></button>
+            <button id="cityTag" class="btn2 tag-city" style="font-size:22px;line-height:40px" onclick="filterSelection(id)"></button>
+            <button id="eventTag" class="btn2 tag-event" style="line-height:40px;vertical-align:bottom;" onclick="filterSelection(id)"></button>
+            <button id="venusTag" class="btn2 tag-venus" onclick="filterSelection(id)"></button>
         </div>
 
         <input type="text" id="myInput" onkeyup="myFunction()" onfocus="this.value = '';myFunction();" placeholder="Search by name or key words..." title="Type in a name">
         <div id="myBtnContainer3" style="display:inline-block">
-            <button class="btn3" onclick="filterSelection('standard')"><div class="base-icon">I</div></button>
-            <button class="btn3 corporateButton" onclick="filterSelection('corporate')"><span class="corporate-icon2">&#x25b2</span></button>
-            <button class="btn3 venusNext" onclick="filterSelection('venusNext')"><span class="venus-icon2">V</span></button>
-            <button class="btn3" style="width:191px" onclick="filterSelection('corporation')"><span class="buttonCorporations">CORPORATIONS</span></button>
+            <button id="standard" class="btn3" onclick="filterSelection(id)"><div class="base-icon">I</div></button>
+            <button id="corporate" class="btn3 corporateButton" onclick="filterSelection(id)"><span class="corporate-icon2">&#x25b2</span></button>
+            <button id="venusNext" class="btn3 venusNext" onclick="filterSelection(id)"><span class="venus-icon2">V</span></button>
+            <button id="corporation" class="btn3" style="width:191px" onclick="filterSelection(id)"><span class="buttonCorporations">CORPORATIONS</span></button>
 
         </div>
     </div>
@@ -2592,25 +2592,33 @@ padding:2px;        padding-left: 5px;
 
         filterSelection("all");
 
-        function filterSelection(c) {
-            var x, i;
-            //if ($(this).classList.contains('active')) {
-              //  $(this).classList.remove("active");
-                //c = "all";
-            //}
+        function filterSelection(id) {
+            var x, i, clickedElement,currentActive;
+
+            clickedElementID = document.getElementById(id);
+            currentActive = document.getElementsByClassName("active");
+            console.log(clickedElementID.id);
+            console.log(currentActive[0].id);
+            if (currentActive[0].id == clickedElementID.id) {
+              clickedElementID.classList.toggle("active");
+              id = "";
+            }
+            else {
+              currentActive[0].classList.remove("active");
+              clickedElementID.classList.toggle("active");
+            }
             x = document.querySelectorAll('.filterDiv');
-            if (c == "all") c = "";
+            if (id == "all") id = "";
             for (i = 0; i < x.length; i++) {
                 w3RemoveClass(x[i], "show");
-                if (x[i].className.indexOf(c) > -1) {
+                if (x[i].className.indexOf(id) > -1) {
                     w3AddClass(x[i], "show");
                 }
             }
         }
 
-        function myFunction() {
+        function myFunction(id) {
             var input, filter, ul, li, a, i;
-            counter = document.getElementById("countNumber");
             input = document.getElementById("myInput");
             filter = input.value.toUpperCase();
             ul = document.getElementById("myUL");
@@ -2650,37 +2658,6 @@ padding:2px;        padding-left: 5px;
             }
             element.className = arr1.join(" ");
         }
-
-        // Add active class to the current button (highlight it)
-        var btnContainer1 = document.getElementById("myBtnContainer1");
-        var btnContainer2 = document.getElementById("myBtnContainer2");
-        var btnContainer3 = document.getElementById("myBtnContainer3");
-        var btns1 = btnContainer1.querySelectorAll('.btn1');
-        var btns2 = btnContainer2.querySelectorAll('.btn2');
-        var btns3 = btnContainer3.querySelectorAll('.btn3');
-
-        for (var i = 0; i < btns1.length; i++) {
-            btns1[i].addEventListener("click", function () {
-                var current = document.getElementsByClassName("active");
-                current[0].className = current[0].className.replace(" active", "");
-                this.className += " active";
-            });
-        }
-        for (var i = 0; i < btns2.length; i++) {
-            btns2[i].addEventListener("click", function () {
-                var current = document.getElementsByClassName("active");
-                current[0].className = current[0].className.replace(" active", "");
-                this.className += " active";
-            });
-        }
-        for (var i = 0; i < btns3.length; i++) {
-            btns3[i].addEventListener("click", function () {
-                var current = document.getElementsByClassName("active");
-                current[0].className = current[0].className.replace(" active", "");
-                this.className += " active";
-            });
-        }
-
     </script>
 
 </body>
