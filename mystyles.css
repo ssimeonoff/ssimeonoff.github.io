@@ -429,8 +429,6 @@
     padding: 8px;
 }
 
-
-
 .requirements {
     background-color: rgb(255,204,100);
     background: linear-gradient(to right, #e28c22, rgb(255,204,100),rgb(255,204,100), #e28c22);
@@ -1011,6 +1009,10 @@
     padding: 3px;
     padding-left: 15px;
     padding-right: 15px;
+}
+
+.corporation {
+  background: white;
 }
 
 .corporationLabel {
