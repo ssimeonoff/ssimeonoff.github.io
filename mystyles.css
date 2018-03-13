@@ -131,6 +131,7 @@
     border: outset;
     background-color: white;
     margin-top: -6px;
+    z-index: 1;
 }
 
 .tag1 {
@@ -424,9 +425,16 @@
 
 .contentCorporation {
     position: relative;
+    margin-left: 5px;
+    margin-top: 5px;
+    width: 210px;
+    height:280px;
     display: inline-block;
     font-weight:bold;
     padding: 8px;
+    border: 2px solid black;
+    background: white;
+    border-radius: 20px;
 }
 
 
@@ -1033,12 +1041,12 @@
 
 .corporationEffectBox {
     position: absolute;
-    border-style: outset;
-    height: 135px;
-    width: 212px;
+    border-style: inset;
+    height: 125px;
+    width: 200px;
     margin-top: 145px;
     padding: 3px;
-    border-radius: 10px;
+    border-radius: 15px;
     text-align: center;
     box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
     background: linear-gradient(to bottom right, #dddddd,#a1a1a1, #dddddd,#bbbbbb,#dddddd, #a1a1a1,#dddddd);
