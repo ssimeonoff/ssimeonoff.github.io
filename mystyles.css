@@ -828,7 +828,7 @@
     padding-bottom: 4px;
     padding-left: 3px;
     padding-right: 3px;
-    border-radius: 3px;
+    border-radius: 4px;
     font-family: "Arial";
     font-size: 8px;
     vertical-align: middle;
@@ -837,7 +837,7 @@
 }
 
 .card-corporation-inner {
-  border-radius: 3px;
+  border-radius: 2px;
   background: #cccccc;
   padding-left:5px;
   padding-right:5px;
