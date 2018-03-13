@@ -1,71 +1,75 @@
 <!DOCTYPE html>
+
 <head>
-<link rel="stylesheet" type="text/css" href="mystyles.css">
+  <link rel="stylesheet" type="text/css" href="mystyles.css">
 </head>
 <html>
+
 <body>
-    <div id="buttonsContainer">
-        <div id="titleContainer">
-            TERRAFORMING MARS
-        </div>
-        <div id="cardsContainer">
-            <div class="totalCardsCount">61</div>
-            <div class="resource card" style="display:inline-block;transform: rotate(-8deg);"></div>
-            <div class="resource card" style="display:inline-block;transform: rotate(-4deg);margin-left:-25px;"></div>
-            <div class="resource card" style="display:inline-block;transform: rotate(0deg);margin-left:-25px;"></div>
-            <div class="resource card" style="display:inline-block;transform: rotate(4deg);margin-left:-25px;"></div>
-            <div class="resource card" style="display:inline-block;transform: rotate(8deg);margin-left:-25px;"></div>&nbsp&nbsp&nbsp
-            <div class="totalCardsCount">9</div>
-            <div class="resource card-corporation" style="display:inline-block;transform: rotate(100deg)"><span class="card-corporation-inner">CORP</span></div>
-            <div class="resource card-corporation" style="display:inline-block;transform: rotate(80deg);margin-left:-60px;"><span class="card-corporation-inner">CORP</span></div>
-        </div>
-        <div id="myBtnContainer1" style="line-height:55px;margin-bottom:10px;">
-            <button id="automated" class="btn1 background-color-automated" onclick="filterSelection(id)"> AUTOMATED</button>
-            <button id="active" class="btn1 background-color-active" onclick="filterSelection(id)"> ACTIVE</button>
-            <button id="events" class="btn1 background-color-events" onclick="filterSelection(id)"> EVENTS</button>
-        </div>
-        <div id="myBtnContainer2" style="line-height:55px;">
-            <button id="builderTag" class="btn2 tag-builder" style="line-height:40px" onclick="filterSelection(id)"></button>
-            <button id="spaceTag" class="btn2 tag-space" onclick="filterSelection(id)"></button>
-            <button id="scienceTag" class="btn2 tag-science" onclick="filterSelection(id)"></button>
-            <button id="energyTag" class="btn2 tag-energy" onclick="filterSelection(id)"></button>
-
-            <button id="plantTag" class="btn2 tag-plant" onclick="filterSelection(id)"></button>
-            <button id="microbeTag" class="btn2 tag-microbe" onclick="filterSelection(id)"></button>
-            <button id="animalTag" class="btn2 tag-animal" onclick="filterSelection(id)"></button>
-            <button id="jovianTag" class="btn2 tag-jovian" onclick="filterSelection(id)"></button>
-
-            <button id="earthTag" class="btn2 tag-earth" style="font-size:38px;padding-top:5px;padding-left:1px;padding-right:1px;" onclick="filterSelection(id)"></button>
-            <button id="cityTag" class="btn2 tag-city" style="font-size:22px;line-height:40px" onclick="filterSelection(id)"></button>
-            <button id="eventTag" class="btn2 tag-event" style="line-height:40px;vertical-align:bottom;" onclick="filterSelection(id)"></button>
-            <button id="venusTag" class="btn2 tag-venus" onclick="filterSelection(id)"></button>
-        </div>
-
-        <input type="text" id="myInput" onkeyup="myFunction()"  placeholder="Search by name or key words..." title="Type in a name">
-        <div id="myBtnContainer3" style="display:inline-block">
-            <button id="standard" class="btn3" onclick="filterSelection(id)"><div class="base-icon">I</div></button>
-            <button id="corporate" class="btn3 corporateButton" onclick="filterSelection(id)"><span class="corporate-icon2">&#x25b2</span></button>
-            <button id="venusNext" class="btn3 venusNext" onclick="filterSelection(id)"><span class="venus-icon2">V</span></button>
-            <button id="corporation" class="btn3" style="width:191px" onclick="filterSelection(id)"><span class="buttonCorporations">CORPORATIONS</span></button>
-
-        </div>
+  <div id="buttonsContainer">
+    <div id="titleContainer">
+      TERRAFORMING MARS
     </div>
-    <!-------------------CARDS LIST----------------------->
-    <ul id="myUL">
+    <div id="cardsContainer">
+      <div class="totalCardsCount">61</div>
+      <div class="resource card" style="display:inline-block;transform: rotate(-8deg);"></div>
+      <div class="resource card" style="display:inline-block;transform: rotate(-4deg);margin-left:-25px;"></div>
+      <div class="resource card" style="display:inline-block;transform: rotate(0deg);margin-left:-25px;"></div>
+      <div class="resource card" style="display:inline-block;transform: rotate(4deg);margin-left:-25px;"></div>
+      <div class="resource card" style="display:inline-block;transform: rotate(8deg);margin-left:-25px;"></div>&nbsp&nbsp&nbsp
+      <div class="totalCardsCount">9</div>
+      <div class="resource card-corporation" style="display:inline-block;transform: rotate(-10deg)">C</div>
+      <div class="resource card-corporation" style="display:inline-block;transform: rotate(10deg);margin-left:-30px;">C</div>
+    </div>
+    <div id="myBtnContainer1" style="line-height:55px;margin-bottom:10px;">
+      <button id="automated" class="btn1 background-color-automated" onclick="filterSelection(id)"> AUTOMATED</button>
+      <button id="active" class="btn1 background-color-active" onclick="filterSelection(id)"> ACTIVE</button>
+      <button id="events" class="btn1 background-color-events" onclick="filterSelection(id)"> EVENTS</button>
+    </div>
+    <div id="myBtnContainer2" style="line-height:55px;">
+      <button id="builderTag" class="btn2 tag-builder" style="line-height:40px" onclick="filterSelection(id)"></button>
+      <button id="spaceTag" class="btn2 tag-space" onclick="filterSelection(id)"></button>
+      <button id="scienceTag" class="btn2 tag-science" onclick="filterSelection(id)"></button>
+      <button id="energyTag" class="btn2 tag-energy" onclick="filterSelection(id)"></button>
 
-        <!--corp1-->
-        <li class="filterDiv corporation plantTag">
-            <div class="tag tag1 tag-plant"></div>
-            <div class="corporationLabel">CORPORATION</div>
-            <div class="contentCorporation">
-                <div class="corporationEffectBox">
-                    <div class="corporationEffectBoxLabel">EFFECT</div>
-                    7 <div class="resource plant"></div> <span class="red-arrow"></span> <div class="forest-tile tile"></div><br>
-                    <div class="description" style="text-align:center;margin-top:0px;">
-                        (Effect: You may always pay 7 plants, istead of 8, to place greeny.)
-                    </div>
-                </div>
-                <span style="font-size:40px;
+      <button id="plantTag" class="btn2 tag-plant" onclick="filterSelection(id)"></button>
+      <button id="microbeTag" class="btn2 tag-microbe" onclick="filterSelection(id)"></button>
+      <button id="animalTag" class="btn2 tag-animal" onclick="filterSelection(id)"></button>
+      <button id="jovianTag" class="btn2 tag-jovian" onclick="filterSelection(id)"></button>
+
+      <button id="earthTag" class="btn2 tag-earth" style="font-size:38px;padding-top:5px;padding-left:1px;padding-right:1px;" onclick="filterSelection(id)"></button>
+      <button id="cityTag" class="btn2 tag-city" style="font-size:22px;line-height:40px" onclick="filterSelection(id)"></button>
+      <button id="eventTag" class="btn2 tag-event" style="line-height:40px;vertical-align:bottom;" onclick="filterSelection(id)"></button>
+      <button id="venusTag" class="btn2 tag-venus" onclick="filterSelection(id)"></button>
+    </div>
+
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by name or key words..." title="Type in a name">
+    <div id="myBtnContainer3" style="display:inline-block">
+      <button id="standard" class="btn3" onclick="filterSelection(id)"><div class="base-icon">I</div></button>
+      <button id="corporate" class="btn3 corporateButton" onclick="filterSelection(id)"><span class="corporate-icon2">&#x25b2</span></button>
+      <button id="venusNext" class="btn3 venusNext" onclick="filterSelection(id)"><span class="venus-icon2">V</span></button>
+      <button id="corporation" class="btn3" style="width:191px" onclick="filterSelection(id)"><span class="buttonCorporations">CORPORATIONS</span></button>
+
+    </div>
+  </div>
+  <!-------------------CARDS LIST----------------------->
+  <ul id="myUL">
+
+    <!--corp1-->
+    <li class="filterDiv corporation plantTag">
+      <div class="tag tag1 tag-plant"></div>
+      <div class="corporationLabel">CORPORATION</div>
+      <div class="contentCorporation">
+        <div class="corporationEffectBox">
+          <div class="corporationEffectBoxLabel">EFFECT</div>
+          7
+          <div class="resource plant"></div> <span class="red-arrow"></span>
+          <div class="forest-tile tile"></div><br>
+          <div class="description" style="text-align:center;margin-top:0px;">
+            (Effect: You may always pay 7 plants, istead of 8, to place greeny.)
+          </div>
+        </div>
+        <span style="font-size:40px;
                 font-weight:normal;
                         color:rgb(0,180,0);
                         text-shadow: -1px 0 #404040, 0 1px #404040, 1px 0 #404040, 0 -1px #404040, 5px 5px 5px grey;
@@ -73,31 +77,37 @@
                         ">
                     ECOLINE
                 </span><br>
-                <div class="production-box production-box-size2" style="margin-top:10px;">
-                    <div class="production plant"></div><div class="production plant"></div>
-                </div> <div class="resource money">36</div>
-                <div class="resource plant"></div><div class="resource plant"></div><div class="resource plant"></div>
-                <div class="description" style="margin-top:0px;text-align:center;">(You start with 2 plant production, 3 plants, and 36M$)</div>
+        <div class="production-box production-box-size2" style="margin-top:10px;">
+          <div class="production plant"></div>
+          <div class="production plant"></div>
+        </div>
+        <div class="resource money">36</div>
+        <div class="resource plant"></div>
+        <div class="resource plant"></div>
+        <div class="resource plant"></div>
+        <div class="description" style="margin-top:0px;text-align:center;">(You start with 2 plant production, 3 plants, and 36M$)</div>
 
-            </div>
-        </li>
+      </div>
+    </li>
 
-        <!--corp2-->
-        <li class="filterDiv corporation builderTag">
-            <div class="tag tag1 tag-builder"></div>
-            <div class="tag tag2 tag-builder"></div>
-            <div class="corporationLabel">CORPORATION</div>
-            <div class="contentCorporation">
-                <div class="corporationEffectBox">
-                    <div class="corporationEffectBoxLabel">EFFECT</div>
-                    <div class="resource steel"></div> / <div class="resource titanium"></div> : <div class="production-box">
-                        <div class="production steel"></div>
-                    </div>
-                    <div class="description" style="text-align:center;margin-top:-5px;">
-                        (Effect: Each time you get any steel or titanium as a placement bonus on the map, increase your steel production 1 step.)
-                    </div>
-                </div>
-                <span style="font-size:24px;
+    <!--corp2-->
+    <li class="filterDiv corporation builderTag">
+      <div class="tag tag1 tag-builder"></div>
+      <div class="tag tag2 tag-builder"></div>
+      <div class="corporationLabel">CORPORATION</div>
+      <div class="contentCorporation">
+        <div class="corporationEffectBox">
+          <div class="corporationEffectBoxLabel">EFFECT</div>
+          <div class="resource steel"></div> /
+          <div class="resource titanium"></div> :
+          <div class="production-box">
+            <div class="production steel"></div>
+          </div>
+          <div class="description" style="text-align:center;margin-top:-5px;">
+            (Effect: Each time you get any steel or titanium as a placement bonus on the map, increase your steel production 1 step.)
+          </div>
+        </div>
+        <span style="font-size:24px;
                 margin-left:20px;
                         color:#c9380e;
                         text-shadow: -1px 0 #333333, 0 1px #333333, 1px 0 #333333, 0 -1px #333333, 2px 2px 2px  black;
@@ -110,87 +120,92 @@
                         ">
                     MINING<br>GUILD
                 </span><br>
-                <div class="resource money" style="margin-left:35px;">30</div>
-                5<div class="production steel"></div> <div class="production-box" style="margin-top:5px;margin-left:20px;">
-                    <div class="production steel"></div>
-                </div>
-                <div class="description" style="margin-top:-5px;text-align:center;">
-                    (You start with 30 M$, 5 steel, and 1 steel production)
-                </div>
-            </div>
-        </li>
+        <div class="resource money" style="margin-left:35px;">30</div>
+        5
+        <div class="production steel"></div>
+        <div class="production-box" style="margin-top:5px;margin-left:20px;">
+          <div class="production steel"></div>
+        </div>
+        <div class="description" style="margin-top:-5px;text-align:center;">
+          (You start with 30 M$, 5 steel, and 1 steel production)
+        </div>
+      </div>
+    </li>
 
-        <!--corp3-->
-        <li class="filterDiv corporation builderTag venusNext">
-            <div class="tag tag1 tag-builder"></div>
-            <div class="corporationLabel">CORPORATION</div>
-            <div class="corporation-venusNext-icon">V</div>
-            <div class="contentCorporation">
-                <div class="corporationEffectBox">
-                    <div class="corporationEffectBoxLabel">EFFECT</div>
-                    <div class="production-box">
-                        <div class="production" style="background:white;">?</div>
-                    </div> : <div class="resource" style="background:white;">?</div>
-                    <div class="description" style="text-align:center;margin-top:-5px;">
-                        (Effect: For each step you increase the production of a resource, including this, you also gain that resource.)
-                    </div>
-                </div>
-                <span style="font-size:30px;
+    <!--corp3-->
+    <li class="filterDiv corporation builderTag venusNext">
+      <div class="tag tag1 tag-builder"></div>
+      <div class="corporationLabel">CORPORATION</div>
+      <div class="corporation-venusNext-icon">V</div>
+      <div class="contentCorporation">
+        <div class="corporationEffectBox">
+          <div class="corporationEffectBoxLabel">EFFECT</div>
+          <div class="production-box">
+            <div class="production" style="background:white;">?</div>
+          </div> :
+          <div class="resource" style="background:white;">?</div>
+          <div class="description" style="text-align:center;margin-top:-5px;">
+            (Effect: For each step you increase the production of a resource, including this, you also gain that resource.)
+          </div>
+        </div>
+        <span style="font-size:30px;
                         color: #e63900;
                         text-shadow:  6px 3px 5px  grey;">
                     MANUTECH
-                </span><br><div class="production-box" style="margin-top:15px;margin-left:50px;">
-                    <div class="production steel"></div>
-                </div>
-                <div class="resource money" style="margin-left:20px;">35</div>
+                </span><br>
+        <div class="production-box" style="margin-top:15px;margin-left:50px;">
+          <div class="production steel"></div>
+        </div>
+        <div class="resource money" style="margin-left:20px;">35</div>
 
-                <div class="description" style="text-align:center;">
-                    (You start with 1 steel production, and 35 M$)
-                </div>
-            </div>
-        </li>
+        <div class="description" style="text-align:center;">
+          (You start with 1 steel production, and 35 M$)
+        </div>
+      </div>
+    </li>
 
-        <!--corp4-->
-        <li class="filterDiv corporation earthTag corporate">
-            <div class="tag tag1 tag-earth"></div>
-            <div class="corporationLabel">CORPORATION</div>
-            <div class="corporation-corporateEra-icon"></div>
-            <div class="contentCorporation">
-                <div class="corporationEffectBox">
-                    <div class="corporationEffectBoxLabel">EFFECT</div>
-                    <div class="resource earth-resource"></div> : <div class="resource money">-3</div>
-                    <div class="description" style="text-align:center;margin-top:-5px;">
-                        (Effect: When playing an EArth card, you pay 3 M$ less for it.)
-                    </div>
-                </div>
-                <span style="font-size:34px;
+    <!--corp4-->
+    <li class="filterDiv corporation earthTag corporate">
+      <div class="tag tag1 tag-earth"></div>
+      <div class="corporationLabel">CORPORATION</div>
+      <div class="corporation-corporateEra-icon"></div>
+      <div class="contentCorporation">
+        <div class="corporationEffectBox">
+          <div class="corporationEffectBoxLabel">EFFECT</div>
+          <div class="resource earth-resource"></div> :
+          <div class="resource money">-3</div>
+          <div class="description" style="text-align:center;margin-top:-5px;">
+            (Effect: When playing an EArth card, you pay 3 M$ less for it.)
+          </div>
+        </div>
+        <span style="font-size:34px;
                         color: orangered;
                         font-family: 'Times New Roman';
                         font-weight:normal;
                         text-shadow: -1px 0 #333333, 0 1px #333333, 1px 0 #333333,0px -1px #333333, 6px 3px 5px  grey;">
                     TERACTOR
                 </span><br><br>
-                <div class="description" style="text-align:center;">
-                <div class="resource money" >60</div><br>
-                    (You start with 60 M$.)
-                </div>
-            </div>
-        </li>
+        <div class="description" style="text-align:center;">
+          <div class="resource money">60</div><br> (You start with 60 M$.)
+        </div>
+      </div>
+    </li>
 
 
-        <!--corp5-->
-        <li class="filterDiv corporation spaceTag ">
-            <div class="tag tag1 tag-space"></div>
-            <div class="corporationLabel">CORPORATION</div>
-            <div class="contentCorporation">
-                <div class="corporationEffectBox">
-                    <div class="corporationEffectBoxLabel">EFFECT</div>
-                    <div class="resource titanium"></div> : +<div class="resource money">1</div>
-                    <div class="description" style="text-align:center;margin-top:-5px;">
-                        (Effect: Your titanium resources are each worth 1 M$ extra.)
-                    </div>
-                </div>
-                <span style="font-size:24px;
+    <!--corp5-->
+    <li class="filterDiv corporation spaceTag ">
+      <div class="tag tag1 tag-space"></div>
+      <div class="corporationLabel">CORPORATION</div>
+      <div class="contentCorporation">
+        <div class="corporationEffectBox">
+          <div class="corporationEffectBoxLabel">EFFECT</div>
+          <div class="resource titanium"></div> : +
+          <div class="resource money">1</div>
+          <div class="description" style="text-align:center;margin-top:-5px;">
+            (Effect: Your titanium resources are each worth 1 M$ extra.)
+          </div>
+        </div>
+        <span style="font-size:24px;
                         margin-left:15px;
                         color:white;
                         line-height:40px;
@@ -208,55 +223,62 @@
                         box-shadow:  6px 6px 5px  grey;">
                     PHOBOLOG
                 </span><br><br>
-                <div class="resource money" style="margin-left:45px;">23</div>
-                10<div class="resource titanium"></div>
-                <div class="description" style="text-align:center;">
-                    (You start with 10 titanium and 23 M$.)
-                </div>
-            </div>
-        </li>
+        <div class="resource money" style="margin-left:45px;">23</div>
+        10
+        <div class="resource titanium"></div>
+        <div class="description" style="text-align:center;">
+          (You start with 10 titanium and 23 M$.)
+        </div>
+      </div>
+    </li>
 
-        <!--corp6-->
-        <li class="filterDiv corporation energyTag ">
-            <div class="tag tag1 tag-energy"></div>
-            <div class="corporationLabel">CORPORATION</div>
-            <div class="contentCorporation">
-                <div class="corporationEffectBox">
-                    <div class="corporationEffectBoxLabel">EFFECT</div>
-                    <div class="resource energy-resource"></div>* : <div class="resource money">-3</div>
-                    <div class="description" style="text-align:center;margin-top:-5px;">
-                        (Effect: When playing a power card OR THE STANDARD PROJECT POWER PLANT, you pay 3 M$ less for it.)
-                    </div>
-                </div>
-                <span style="font-size:36px;
+    <!--corp6-->
+    <li class="filterDiv corporation energyTag ">
+      <div class="tag tag1 tag-energy"></div>
+      <div class="corporationLabel">CORPORATION</div>
+      <div class="contentCorporation">
+        <div class="corporationEffectBox">
+          <div class="corporationEffectBoxLabel">EFFECT</div>
+          <div class="resource energy-resource"></div>* :
+          <div class="resource money">-3</div>
+          <div class="description" style="text-align:center;margin-top:-5px;">
+            (Effect: When playing a power card OR THE STANDARD PROJECT POWER PLANT, you pay 3 M$ less for it.)
+          </div>
+        </div>
+        <span style="font-size:36px;
                         font-family: 'Arial Narrow','Verdana';
                         font-weight:normal;
                          text-shadow: 6px 3px 5px  grey;">
                     THORGATE
                 </span><br><br>
-                <div class="production-box" style="margin-left:45px;margin-top:-10px;"><div class="production energy"></div></div>
-                <div class="resource money" style="margin-left:20px;">48</div>
+        <div class="production-box" style="margin-left:45px;margin-top:-10px;">
+          <div class="production energy"></div>
+        </div>
+        <div class="resource money" style="margin-left:20px;">48</div>
 
-                <div class="description" style="text-align:center;">
-                    (You start with 1 energy production and 48 M$.)
-                </div>
-            </div>
-        </li>
+        <div class="description" style="text-align:center;">
+          (You start with 1 energy production and 48 M$.)
+        </div>
+      </div>
+    </li>
 
-        <!--corp7-->
-        <li class="filterDiv corporation jovianTag corporate">
-            <div class="tag tag1 tag-jovian"></div>
-            <div class="corporationLabel">CORPORATION</div>
-            <div class="corporation-corporateEra-icon"></div>
-            <div class="contentCorporation">
-                <div class="corporationEffectBox">
-                    <div class="corporationEffectBoxLabel">EFFECT</div>
-                    <span class="jovian" style="border: 1px solid red;"></span>&nbsp;: <div class="production-box"><div class="production money">1</div></div>
-                    <div class="description" style="text-align:center;margin-top:-5px;">
-                        (Effect: When playing an EArth card, you pay 3 M$ less for it.)
-                    </div>
-                </div>
-                <span style="font-size:14px;
+    <!--corp7-->
+    <li class="filterDiv corporation jovianTag corporate">
+      <div class="tag tag1 tag-jovian"></div>
+      <div class="corporationLabel">CORPORATION</div>
+      <div class="corporation-corporateEra-icon"></div>
+      <div class="contentCorporation">
+        <div class="corporationEffectBox">
+          <div class="corporationEffectBoxLabel">EFFECT</div>
+          <span class="jovian" style="border: 1px solid red;"></span>&nbsp;:
+          <div class="production-box">
+            <div class="production money">1</div>
+          </div>
+          <div class="description" style="text-align:center;margin-top:-5px;">
+            (Effect: When playing an EArth card, you pay 3 M$ less for it.)
+          </div>
+        </div>
+        <span style="font-size:14px;
                         color:white;
                         line-height:40px;
                         background: #32004d;
@@ -269,42 +291,43 @@
                         border:2px solid white;
                         box-shadow:  6px 6px 5px  grey;">
                     SATURN <span style="font-size:20px;display:inline-block;">&#x25CF</span> SYSTEMS
-                </span><br><br>
+        </span><br><br>
 
-                <div class="production-box" style="margin-left:45px;margin-top:-10px;"><div class="production titanium" ></div></div>
-                <div class="resource money" style="margin-left:20px;">42</div>
-                <div class="description" style="text-align:center;margin-top:0px;">
-                    (You start with 1 titanium production and 42 M$.)
-                </div>
+        <div class="production-box" style="margin-left:45px;margin-top:-10px;">
+          <div class="production titanium"></div>
+        </div>
+        <div class="resource money" style="margin-left:20px;">42</div>
+        <div class="description" style="text-align:center;margin-top:0px;">
+          (You start with 1 titanium production and 42 M$.)
+        </div>
+      </div>
+
+      <!--corp8-->
+      <li class="filterDiv corporation venusTag plantTag venusNext">
+        <div class="tag tag1 tag-plant"></div>
+        <div class="tag tag2 tag-venus"></div>
+        <div class="corporationLabel">CORPORATION</div>
+        <div class="corporation-venusNext-icon">V</div>
+        <div class="contentCorporation">
+          <div class="corporationEffectBox">
+            <div class="corporationEffectBoxLabel">EFFECT</div>
+            <div class="tile venus-tile">V</div> : +/-2
+            <div class="description" style="text-align:center;margin-top:-5px;">
+              (Effect: Whenever Venus is terraformed 1 step, you gain 2M$.)
             </div>
-
-            <!--corp8-->
-        <li class="filterDiv corporation venusTag plantTag venusNext">
-            <div class="tag tag1 tag-plant"></div>
-            <div class="tag tag2 tag-venus"></div>
-            <div class="corporationLabel">CORPORATION</div>
-            <div class="corporation-venusNext-icon">V</div>
-            <div class="contentCorporation">
-                <div class="corporationEffectBox">
-                    <div class="corporationEffectBoxLabel">EFFECT</div>
-                    <div class="tile venus-tile">V</div> : +/-2
-                    <div class="description" style="text-align:center;margin-top:-5px;">
-                        (Effect: Whenever Venus is terraformed 1 step, you gain 2M$.)
-                    </div>
-                </div>
-                <span style="font-size:22px;
+          </div>
+          <span style="font-size:22px;
                         color: orange;
                         font-weight:bold;
                         text-shadow:  6px 3px 5px  grey;
-                        text-shadow: -1px 0 #333333, 0 1px #333333, 1px 0 #333333,0px -1px #333333, 6px 3px 5px  grey;"
-                      ">
+                        text-shadow: -1px 0 #333333, 0 1px #333333, 1px 0 #333333,0px -1px #333333, 6px 3px 5px  grey;" ">
                     APHRODITE
-                </span><br><div class="production-box" style="margin-top:15px;margin-left:50px;">
-                    <div class="production plant"></div>
+                </span><br><div class="production-box " style="margin-top:15px;margin-left:50px; ">
+                    <div class="production plant "></div>
                 </div>
-                <div class="resource money" style="margin-left:20px;">47</div>
+                <div class="resource money " style="margin-left:20px; ">47</div>
 
-                <div class="description" style="text-align:center;">
+                <div class="description " style="text-align:center; ">
                     (You start with 1 plant production and 47 M$)
                 </div>
             </div>
@@ -312,30 +335,21 @@
 
         <!--corp9-->
         <li class="filterDiv corporation ">
-            <div class="corporationLabel">CORPORATION</div>
-            <div class="contentCorporation">
-                <div class="corporationEffectBox">
-                    <div class="corporationEffectBoxLabel">EFFECT</div>
-                    -<div class="resource money">20</div> : <div class="resource money">4</div>
-                    <div class="description" style="text-align:center;margin-top:-5px;">
+            <div class="corporationLabel ">CORPORATION</div>
+            <div class="contentCorporation ">
+                <div class="corporationEffectBox ">
+                    <div class="corporationEffectBoxLabel ">EFFECT</div>
+                    -<div class="resource money ">20</div> : <div class="resource money ">4</div>
+                    <div class="description " style="text-align:center;margin-top:-5px; ">
                         (Effect: After you pay for a card or standard project with a basic cost of 20M$ or more, you gain 4M$.)
                     </div>
                 </div>
-                <span style="font-size:40px;
-                        color: white;
-                        font-family: 'Times New Roman';
-                        font-weight:normal;
-                        font-weight:normal;
-                        border:2px solid purple;
-                        padding-left:5px;
-                        padding-bottom:5px;
-                        margin-left:10px;
-                        box-shadow:  6px 6px 10px  grey;
-                        text-shadow: -1px 0 purple, 0 1px purple, 1px 0 purple, 0 -1px purple, 6px 6px 10px  grey;">
+                <span style="font-size:40px; color: white; font-family: 'Times New Roman'; font-weight:normal; font-weight:normal; border:2px solid purple; padding-left:5px; padding-bottom:5px; margin-left:10px; box-shadow: 6px 6px 10px grey; text-shadow:
+            -1px 0 purple, 0 1px purple, 1px 0 purple, 0 -1px purple, 6px 6px 10px grey; ">
                     credicor
                 </span><br><br>
-                <div class="description" style="text-align:center">
-                <div class="resource money">57</div><br>
+                <div class="description " style="text-align:center ">
+                <div class="resource money ">57</div><br>
                     (You start with 57 M$.)
                 </div>
             </div>
@@ -346,89 +360,89 @@
 
 
         <!--1-->
-        <li class="filterDiv automated builderTag jovianTag standard">
-            <div class="title background-color-automated">Colonizer Training Camp</div>
-            <div class="price">8</div>
-            <div class="tag tag1 tag-builder"></div>
-            <div class="tag tag2 tag-jovian"></div>
-            <div class="number">001</div>
-            <div class="content">
-                <div class="points points-big">2</div>
-                <div class="requirements requirements-max">max 5% O2</div>
-                <div class="description">
+        <li class="filterDiv automated builderTag jovianTag standard ">
+            <div class="title background-color-automated ">Colonizer Training Camp</div>
+            <div class="price ">8</div>
+            <div class="tag tag1 tag-builder "></div>
+            <div class="tag tag2 tag-jovian "></div>
+            <div class="number ">001</div>
+            <div class="content ">
+                <div class="points points-big ">2</div>
+                <div class="requirements requirements-max ">max 5% O2</div>
+                <div class="description ">
                     (Oxygen must be 5% or less.)
                 </div>
             </div>
         </li>
 
         <!--2-->
-        <li class="filterDiv automated jovianTag corporate">
-            <div class="title background-color-automated">Asteroid Mining Consortium</div>
-            <div class="price">13</div>
-            <div class="tag tag1 tag-jovian"></div>
-            <div class="number">002</div>
-            <div class="corporate-icon"></div>
-            <div class="content">
-                <div class="points points-big">1</div>
-                <div class="requirements">Titanium production</div>
-                <div class="production-box production-box-size1a">
-                    <div class="production-prefix">&#x2796&#xFE0E</div><div class="titanium production red-outline"></div><br>
-                    <div class="production-prefix">&#x2795&#xFE0E</div><div class="titanium production"></div>
+        <li class="filterDiv automated jovianTag corporate ">
+            <div class="title background-color-automated ">Asteroid Mining Consortium</div>
+            <div class="price ">13</div>
+            <div class="tag tag1 tag-jovian "></div>
+            <div class="number ">002</div>
+            <div class="corporate-icon "></div>
+            <div class="content ">
+                <div class="points points-big ">1</div>
+                <div class="requirements ">Titanium production</div>
+                <div class="production-box production-box-size1a ">
+                    <div class="production-prefix ">&#x2796&#xFE0E</div><div class="titanium production red-outline "></div><br>
+                    <div class="production-prefix ">&#x2795&#xFE0E</div><div class="titanium production "></div>
                 </div>
-                <div class="description">
+                <div class="description ">
                     (Requires that you have titanium production. Decrease any titanium production 1 step and increase your own 1 step.)
                 </div>
             </div>
         </li>
 
         <!--3-->
-        <li class="filterDiv automated builderTag energyTag standard">
-            <div class="title background-color-automated">Cloud Seeding</div>
-            <div class="price">13</div>
-            <div class="tag tag1 tag-builder"></div>
-            <div class="tag tag2 tag-energy"></div>
-            <div class="number">003</div>
-            <div class="content">
-                <div class="points points-big">1</div>
-                <div class="requirements">Titanium production</div>
-                <div class="production-box">
-                    <div class="energy production"></div>
+        <li class="filterDiv automated builderTag energyTag standard ">
+            <div class="title background-color-automated ">Cloud Seeding</div>
+            <div class="price ">13</div>
+            <div class="tag tag1 tag-builder "></div>
+            <div class="tag tag2 tag-energy "></div>
+            <div class="number ">003</div>
+            <div class="content ">
+                <div class="points points-big ">1</div>
+                <div class="requirements ">Titanium production</div>
+                <div class="production-box ">
+                    <div class="energy production "></div>
                 </div>
-                <div class="tile temperature-tile" style="margin-left:20px"></div>
-                <div class="description">
+                <div class="tile temperature-tile " style="margin-left:20px "></div>
+                <div class="description ">
                     (Increase your Energy production 1 step. Increase temperature 1 step.)
                 </div>
             </div>
         </li>
 
         <!--4-->
-        <li class="filterDiv automated standard">
-            <div class="title background-color-automated">Deep Well Heating</div>
-            <div class="price">11</div>
-            <div class="number">004</div>
-            <div class="content">
-                <div class="requirements">3 Oceans</div>
-                <div class="production-box production-box-size2a">
-                    <div class="production-prefix">&#x2796&#xFE0E</div><div class="money production">1</div><div class="heat production red-outline"></div><br>
-                    <div class="production-prefix">&#x2795&#xFE0E</div><div class="plant production"></div><div class="plant production"></div>
+        <li class="filterDiv automated standard ">
+            <div class="title background-color-automated ">Deep Well Heating</div>
+            <div class="price ">11</div>
+            <div class="number ">004</div>
+            <div class="content ">
+                <div class="requirements ">3 Oceans</div>
+                <div class="production-box production-box-size2a ">
+                    <div class="production-prefix ">&#x2796&#xFE0E</div><div class="money production ">1</div><div class="heat production red-outline "></div><br>
+                    <div class="production-prefix ">&#x2795&#xFE0E</div><div class="plant production "></div><div class="plant production "></div>
                 </div>
-                <div class="description">
+                <div class="description ">
                     (Requires 3 ocean tiles. Decrease your M$ production 1 step and any heat production 1 step. Increase your Plant production 2 steps.)
                 </div>
             </div>
         </li>
 
         <!--5-->
-        <li class="filterDiv active scienceTag standard">
-            <div class="title background-color-active">Search for Life</div>
-            <div class="price">3</div>
-            <div class="tag tag1 tag-science"></div>
-            <div class="number">005</div>
-            <div class="content">
-                <div class="points">3/<div class="science"></div></div>
-                <div class="requirements requirements-max">max 6% O2</div>
-                <div class=""><span class=" money resource">1</span> <span class="red-arrow"></span> <span class="microbe resource"></span>*  :  <div class="science"></div> </div>
-                <div class="description">
+        <li class="filterDiv active scienceTag standard ">
+            <div class="title background-color-active ">Search for Life</div>
+            <div class="price ">3</div>
+            <div class="tag tag1 tag-science "></div>
+            <div class="number ">005</div>
+            <div class="content ">
+                <div class="points ">3/<div class="science "></div></div>
+                <div class="requirements requirements-max ">max 6% O2</div>
+                <div class=" "><span class=" money resource ">1</span> <span class="red-arrow "></span> <span class="microbe resource "></span>*  :  <div class="science "></div> </div>
+                <div class="description ">
                     (Action: Spend 1 M$ to reveal the top card of the draw deck. If that card has a Microbe tag, add a Science resource here.)<br>
                     (3 VPs if you have one or more Science resources here.)
                 </div>
@@ -436,121 +450,121 @@
         </li>
 
         <!--6-->
-        <li class="filterDiv active scienceTag corporate">
-            <div class="title background-color-active">Inventors' Guild</div>
-            <div class="price">9</div>
-            <div class="corporate-icon"></div>
-            <div class="tag tag1 tag-science"></div>
-            <div class="number">006</div>
-            <div class="content">
-                <span class="red-arrow"></span> <span style="font-size:12px;">ACTION: LOOK AT THE TOP CARD AND EITHER BUY IT OR DISCARD IT</span>
+        <li class="filterDiv active scienceTag corporate ">
+            <div class="title background-color-active ">Inventors' Guild</div>
+            <div class="price ">9</div>
+            <div class="corporate-icon "></div>
+            <div class="tag tag1 tag-science "></div>
+            <div class="number ">006</div>
+            <div class="content ">
+                <span class="red-arrow "></span> <span style="font-size:12px; ">ACTION: LOOK AT THE TOP CARD AND EITHER BUY IT OR DISCARD IT</span>
 
             </div>
         </li>
 
         <!--7-->
-        <li class="filterDiv active builderTag standard">
-            <div class="title background-color-active">Martian Rails</div>
-            <div class="price">13</div>
-            <div class="tag tag1 tag-builder"></div>
-            <div class="number">007</div>
-            <div class="content">
-                <div class="points points-big">1</div>
-                <span class="energy resource"></span> <span class="red-arrow"></span>
-                <span class=" money resource">1</span> / <span class="city-tile tile red-outline"></span>
-                <div class="description">
+        <li class="filterDiv active builderTag standard ">
+            <div class="title background-color-active ">Martian Rails</div>
+            <div class="price ">13</div>
+            <div class="tag tag1 tag-builder "></div>
+            <div class="number ">007</div>
+            <div class="content ">
+                <div class="points points-big ">1</div>
+                <span class="energy resource "></span> <span class="red-arrow "></span>
+                <span class=" money resource ">1</span> / <span class="city-tile tile red-outline "></span>
+                <div class="description ">
                     (Action: Spend 1 Energy to gain 1 M$ for each City tile ON MARS.)
                 </div>
             </div>
         </li>
 
         <!--8-->
-        <li class="filterDiv automated cityTag builderTag standard">
-            <div class="title background-color-automated">Capital</div>
-            <div class="price">26</div>
-            <div class="tag tag1 tag-builder"></div>
-            <div class="tag tag2 tag-city"></div>
-            <div class="number">008</div>
-            <div class="content">
-                <div class="points">1/<span class="resource ocean-resource"></span></div>
-                <div class="requirements">4 Oceans</div>
-                <div class="production-box production-box-size2a">
-                    <div class="production-prefix">&#x2796&#xFE0E</div><div class="energy production"></div><div class="energy production"></div><br>
-                    <div class="production-prefix">&#x2795&#xFE0E</div><div class="money production">5</div>
+        <li class="filterDiv automated cityTag builderTag standard ">
+            <div class="title background-color-automated ">Capital</div>
+            <div class="price ">26</div>
+            <div class="tag tag1 tag-builder "></div>
+            <div class="tag tag2 tag-city "></div>
+            <div class="number ">008</div>
+            <div class="content ">
+                <div class="points ">1/<span class="resource ocean-resource "></span></div>
+                <div class="requirements ">4 Oceans</div>
+                <div class="production-box production-box-size2a ">
+                    <div class="production-prefix ">&#x2796&#xFE0E</div><div class="energy production "></div><div class="energy production "></div><br>
+                    <div class="production-prefix ">&#x2795&#xFE0E</div><div class="money production ">5</div>
                 </div>
-                <div class="special-tile tile capitol">&#x2302&#xFE0E</div>
-                <div class="description">
+                <div class="special-tile tile capitol ">&#x2302&#xFE0E</div>
+                <div class="description ">
                     (Requires 4 ocean tiles. Place this tile. Decrease your Energy production 2 steps and increase your M$ production 5 steps.<br>
-                    <div style="font-size:9px;line-height:12px;margin-top:10px">
+                    <div style="font-size:9px;line-height:12px;margin-top:10px ">
                         1 ADDITIONAL VP FOR EACH <br>OCEAN TILE ADJACENT <br> TO THIS CITY TILE.
                     </div>
                 </div>
             </div>
         </li>
         <!--9-->
-        <li class="filterDiv events spaceTag eventTag standard">
-            <div class="title background-color-events">Asteroid</div>
-            <div class="price">14</div>
-            <div class="tag tag1 tag-event"></div>
-            <div class="tag tag2 tag-space"></div>
-            <div class="number">009</div>
-            <div class="content">
-                <div class="tile temperature-tile"></div><br>
-                <div class=" titanium resource"></div><div class=" titanium resource"></div>
-                <div class="resource plant red-outline"></div><div class="plant resource red-outline"></div><div class="plant resource red-outline"></div>
-                <div class="description">
+        <li class="filterDiv events spaceTag eventTag standard ">
+            <div class="title background-color-events ">Asteroid</div>
+            <div class="price ">14</div>
+            <div class="tag tag1 tag-event "></div>
+            <div class="tag tag2 tag-space "></div>
+            <div class="number ">009</div>
+            <div class="content ">
+                <div class="tile temperature-tile "></div><br>
+                <div class=" titanium resource "></div><div class=" titanium resource "></div>
+                <div class="resource plant red-outline "></div><div class="plant resource red-outline "></div><div class="plant resource red-outline "></div>
+                <div class="description ">
                     (Raise temperature 1 step and gain 2 titanium. Remove up to 3 Plants from any player.)
                 </div>
             </div>
         </li>
 
         <!--10-->
-        <li class="filterDiv events spaceTag eventTag standard">
-            <div class="title background-color-events">Comet</div>
-            <div class="price">21</div>
-            <div class="tag tag1 tag-event"></div>
-            <div class="tag tag2 tag-space"></div>
-            <div class="number">010</div>
-            <div class="content">
-                <div class="tile temperature-tile"></div><div class="tile ocean-tile"></div>
+        <li class="filterDiv events spaceTag eventTag standard ">
+            <div class="title background-color-events ">Comet</div>
+            <div class="price ">21</div>
+            <div class="tag tag1 tag-event "></div>
+            <div class="tag tag2 tag-space "></div>
+            <div class="number ">010</div>
+            <div class="content ">
+                <div class="tile temperature-tile "></div><div class="tile ocean-tile "></div>
                 <br>
-                <div class="plant resource red-outline"></div><div class="plant resource red-outline"></div><div class="plant resource red-outline"></div>
-                <div class="description">
+                <div class="plant resource red-outline "></div><div class="plant resource red-outline "></div><div class="plant resource red-outline "></div>
+                <div class="description ">
                     (Raise temperature 1 step and place an ocean tile. Remove up to 3 Plants from any player.)
                 </div>
             </div>
         </li>
 
         <!--11-->
-        <li class="filterDiv events spaceTag eventTag standard">
-            <div class="title background-color-events">Big Asteroid</div>
-            <div class="price">27</div>
-            <div class="tag tag1 tag-event"></div>
-            <div class="tag tag2 tag-space"></div>
-            <div class="number">011</div>
-            <div class="content">
-                <div class="tile temperature-tile"></div>
-                <div class="tile temperature-tile"></div><br>
-                <div class="titanium resource"></div><div class="titanium resource"></div><div class="titanium resource"></div><div class="titanium resource"></div> <br>
-                <div class="plant resource red-outline"></div><div class="plant resource red-outline"></div><div class="plant resource red-outline"></div><div class="plant resource red-outline"></div>
-                <div class="description">
+        <li class="filterDiv events spaceTag eventTag standard ">
+            <div class="title background-color-events ">Big Asteroid</div>
+            <div class="price ">27</div>
+            <div class="tag tag1 tag-event "></div>
+            <div class="tag tag2 tag-space "></div>
+            <div class="number ">011</div>
+            <div class="content ">
+                <div class="tile temperature-tile "></div>
+                <div class="tile temperature-tile "></div><br>
+                <div class="titanium resource "></div><div class="titanium resource "></div><div class="titanium resource "></div><div class="titanium resource "></div> <br>
+                <div class="plant resource red-outline "></div><div class="plant resource red-outline "></div><div class="plant resource red-outline "></div><div class="plant resource red-outline "></div>
+                <div class="description ">
                     (Raise temperature 2 steps and gain 4 titanium. Remove up to 4 Plants from any player.)
                 </div>
             </div>
         </li>
 
         <!--12-->
-        <li class="filterDiv active spaceTag jovianTag standard">
-            <div class="title background-color-active">Water Import from Europa</div>
-            <div class="price">25</div>
-            <div class="tag tag1 tag-jovian"></div>
-            <div class="tag tag2 tag-space"></div>
-            <div class="number">012</div>
-            <div class="content">
-                <div class="points">1/<span class="jovian"></span></div>
-                <div class=" money resource">12</div> (<span class="titanium" style="margin:0px;padding:1px;padding-top:3px;border-radius:5px;"></span>)
-                <span class="red-arrow"></span> <div class="ocean-tile tile"></div>
-                <div class="description">
+        <li class="filterDiv active spaceTag jovianTag standard ">
+            <div class="title background-color-active ">Water Import from Europa</div>
+            <div class="price ">25</div>
+            <div class="tag tag1 tag-jovian "></div>
+            <div class="tag tag2 tag-space "></div>
+            <div class="number ">012</div>
+            <div class="content ">
+                <div class="points ">1/<span class="jovian "></span></div>
+                <div class=" money resource ">12</div> (<span class="titanium " style="margin:0px;padding:1px;padding-top:3px;border-radius:5px; "></span>)
+                <span class="red-arrow "></span> <div class="ocean-tile tile "></div>
+                <div class="description ">
                     (Action: Pay 12 M$ to place an ocean tile. TITANIUM MAY BE USED as if playing a Space card.)<br><br>
                     (1 VP for each Jovian tag you have.)
                 </div>
@@ -558,77 +572,77 @@
         </li>
 
         <!--13-->
-        <li class="filterDiv active spaceTag builderTag corporate">
-            <div class="title background-color-active">Space Elevator</div>
-            <div class="price">27</div>
-            <div class="tag tag1 tag-space"></div>
-            <div class="tag tag2 tag-builder"></div>
-            <div class="number">013</div>
-            <div class="corporate-icon"></div>
-            <div class="content">
-                <div class="points points-big">2</div>
-                <span class=" steel resource"></span> <span class="red-arrow"></span> <span class="money resource">5</span>
-                <div class="description">
+        <li class="filterDiv active spaceTag builderTag corporate ">
+            <div class="title background-color-active ">Space Elevator</div>
+            <div class="price ">27</div>
+            <div class="tag tag1 tag-space "></div>
+            <div class="tag tag2 tag-builder "></div>
+            <div class="number ">013</div>
+            <div class="corporate-icon "></div>
+            <div class="content ">
+                <div class="points points-big ">2</div>
+                <span class=" steel resource "></span> <span class="red-arrow "></span> <span class="money resource ">5</span>
+                <div class="description ">
                     (Action: Spend 1 steel to gain 5 M$.)
                 </div><br>
-                <div class="production-box"><div class="titanium production"></div></div>
-                <div class="description">
+                <div class="production-box "><div class="titanium production "></div></div>
+                <div class="description ">
                     (Increase your titanium production 1 step.)
                 </div>
             </div>
         </li>
 
         <!--14-->
-        <li class="filterDiv active scienceTag builderTag corporate">
-            <div class="title background-color-active">Development Center</div>
-            <div class="price">11</div>
-            <div class="tag tag1 tag-builder"></div>
-            <div class="tag tag2 tag-science"></div>
-            <div class="number">014</div>
-            <div class="corporate-icon"></div>
-            <div class="content">
-                <span class="energy resource"></span> <span class="red-arrow"></span> <span class="card resource"></span>
-                <div class="description">
+        <li class="filterDiv active scienceTag builderTag corporate ">
+            <div class="title background-color-active ">Development Center</div>
+            <div class="price ">11</div>
+            <div class="tag tag1 tag-builder "></div>
+            <div class="tag tag2 tag-science "></div>
+            <div class="number ">014</div>
+            <div class="corporate-icon "></div>
+            <div class="content ">
+                <span class="energy resource "></span> <span class="red-arrow "></span> <span class="card resource "></span>
+                <div class="description ">
                     (Action: Spend 1 Energy to draw a card.)
                 </div>
             </div>
         </li>
 
         <!--15-->
-        <li class="filterDiv active scienceTag builderTag standard">
-            <div class="title background-color-active">Equatorial Magnetizer</div>
-            <div class="price">24</div>
-            <div class="tag tag1 tag-builder"></div>
-            <div class="number">015</div>
-            <div class="content">
-                <div class="production-box production-box-size1a">
-                    <div class="production-prefix">&#x2796&#xFE0E</div><div class="energy production"></div>
+        <li class="filterDiv active scienceTag builderTag standard ">
+            <div class="title background-color-active ">Equatorial Magnetizer</div>
+            <div class="price ">24</div>
+            <div class="tag tag1 tag-builder "></div>
+            <div class="number ">015</div>
+            <div class="content ">
+                <div class="production-box production-box-size1a ">
+                    <div class="production-prefix ">&#x2796&#xFE0E</div><div class="energy production "></div>
                 </div>
-                <span class="red-arrow" style="margin-left:5px;"></span>
-                <div class="rating tile"></div>
-                <div class="description">
+                <span class="red-arrow " style="margin-left:5px; "></span>
+                <div class="rating tile "></div>
+                <div class="description ">
                     (Action: Decrease your Energy production 1 step to increase your terraform rating 1 step.)
                 </div>
             </div>
         </li>
 
         <!--16-->
-        <li class="filterDiv automated cityTag builderTag standard">
-            <div class="title background-color-automated">Domed Crater</div>
-            <div class="price">24</div>
-            <div class="tag tag1 tag-builder"></div>
-            <div class="tag tag2 tag-city"></div>
-            <div class="number">016</div>
-            <div class="content">
-                <div class="points points-big">1</div>
-                <div class="requirements requirements-max">max 7% O2</div>
-                <div class="production-box production-box-size1a">
-                    <div class="production-prefix">&#x2796&#xFE0E</div><div class="energy production"></div>
-                    <div class="production-prefix">&#x2795&#xFE0E</div><div class="money production">3</div>
+        <li class="filterDiv automated cityTag builderTag standard ">
+            <div class="title background-color-automated ">Domed Crater</div>
+            <div class="price ">24</div>
+            <div class="tag tag1 tag-builder "></div>
+            <div class="tag tag2 tag-city "></div>
+            <div class="number ">016</div>
+            <div class="content ">
+                <div class="points points-big ">1</div>
+                <div class="requirements requirements-max ">max 7% O2</div>
+                <div class="production-box production-box-size1a ">
+                    <div class="production-prefix ">&#x2796&#xFE0E</div><div class="energy production "></div>
+                    <div class="production-prefix ">&#x2795&#xFE0E</div><div class="money production ">3</div>
                 </div>
-                <div class="tile city-tile" style="margin-left:20px"></div><br>
-                <div class="plant resource"></div><div class="plant resource "></div><div class="plant resource"></div>
-                <div class="description" style="margin-top:-5px;font-size:10px;">
+                <div class="tile city-tile " style="margin-left:20px "></div><br>
+                <div class="plant resource "></div><div class="plant resource "></div><div class="plant resource "></div>
+                <div class="description " style="margin-top:-5px;font-size:10px; ">
                     (Oxygen must be 7% or less. Gain 3 Plants and place a City tile.
                     Decrease<br>your Energy production 1 <br>step and increase your <br>M$ production 3 steps.)
                 </div>
@@ -636,20 +650,20 @@
         </li>
 
         <!--17-->
-        <li class="filterDiv automated cityTag builderTag standard">
-            <div class="title background-color-automated">Noctis City</div>
-            <div class="price">18</div>
-            <div class="tag tag1 tag-builder"></div>
-            <div class="tag tag2 tag-city"></div>
-            <div class="number">017</div>
-            <div class="content">
-                <div class="production-box production-box-size1a">
-                    <div class="production-prefix">&#x2796&#xFE0E</div><div class="energy production"></div>
-                    <div class="production-prefix">&#x2795&#xFE0E</div><div class="money production">3</div>
+        <li class="filterDiv automated cityTag builderTag standard ">
+            <div class="title background-color-automated ">Noctis City</div>
+            <div class="price ">18</div>
+            <div class="tag tag1 tag-builder "></div>
+            <div class="tag tag2 tag-city "></div>
+            <div class="number ">017</div>
+            <div class="content ">
+                <div class="production-box production-box-size1a ">
+                    <div class="production-prefix ">&#x2796&#xFE0E</div><div class="energy production "></div>
+                    <div class="production-prefix ">&#x2795&#xFE0E</div><div class="money production ">3</div>
                 </div>
-                <div class="tile city-tile" style="margin-left:20px"></div><br>
-                <div class="plant resource"></div><div class="plant resource"></div><div class="plant resource"></div>
-                <div class="description">
+                <div class="tile city-tile " style="margin-left:20px "></div><br>
+                <div class="plant resource "></div><div class="plant resource "></div><div class="plant resource "></div>
+                <div class="description ">
                     (Decrease your Energy production 1 step and increase your M$ production 3 steps.
                     Place a City ON THE RESERVED AREA, disregarding normal placement restrictions.)
 
@@ -658,76 +672,76 @@
         </li>
 
         <!--18-->
-        <li class="filterDiv automated spaceTag jovianTag standard">
-            <div class="title background-color-automated">Methane from Titan</div>
-            <div class="price">28</div>
-            <div class="tag tag1 tag-space"></div>
-            <div class="tag tag2 tag-jovian"></div>
-            <div class="number">018</div>
-            <div class="content">
-                <div class="points points-big">2</div>
-                <div class="requirements">2% O2</div>
-                <div class="production-box production-box-size2">
-                    <div class="production heat"></div><div class="production heat"></div>
-                    <div class="production plant"></div><div class="production plant"></div>
+        <li class="filterDiv automated spaceTag jovianTag standard ">
+            <div class="title background-color-automated ">Methane from Titan</div>
+            <div class="price ">28</div>
+            <div class="tag tag1 tag-space "></div>
+            <div class="tag tag2 tag-jovian "></div>
+            <div class="number ">018</div>
+            <div class="content ">
+                <div class="points points-big ">2</div>
+                <div class="requirements ">2% O2</div>
+                <div class="production-box production-box-size2 ">
+                    <div class="production heat "></div><div class="production heat "></div>
+                    <div class="production plant "></div><div class="production plant "></div>
 
                 </div>
-                <div class="description">
+                <div class="description ">
                     (Requires 2% oxygen. Increase your heat production 2 steps and your Plant production 2 steps.)
                 </div>
             </div>
         </li>
 
         <!--19-->
-        <li class="filterDiv events earthTag spaceTag eventTag standard">
-            <div class="title background-color-events">Imported Hydrogen</div>
-            <div class="price">16</div>
-            <div class="tag tag1 tag-event"></div>
-            <div class="tag tag2 tag-space"></div>
-            <div class="tag tag3 tag-earth"></div>
-            <div class="number">019</div>
-            <div class="content">
-                <span>3</span><div class="resource plant"></div> OR <span>3</span><div class="resource microbe"></div>* OR <span>2</span><div class="resource animal"></div>*
-                <br><div class="tile ocean-tile"></div>
-                <div class="description">
+        <li class="filterDiv events earthTag spaceTag eventTag standard ">
+            <div class="title background-color-events ">Imported Hydrogen</div>
+            <div class="price ">16</div>
+            <div class="tag tag1 tag-event "></div>
+            <div class="tag tag2 tag-space "></div>
+            <div class="tag tag3 tag-earth "></div>
+            <div class="number ">019</div>
+            <div class="content ">
+                <span>3</span><div class="resource plant "></div> OR <span>3</span><div class="resource microbe "></div>* OR <span>2</span><div class="resource animal "></div>*
+                <br><div class="tile ocean-tile "></div>
+                <div class="description ">
                     (Gain 3 Plants, or add 3 Microbes or 2 Animals to ANOTHER card. Place an ocean tile.)
                 </div>
             </div>
         </li>
 
         <!--20-->
-        <li class="filterDiv active cityTag builderTag scienceTag">
-            <div class="title background-color-active">Research Outpost</div>
-            <div class="price">18</div>
-            <div class="tag tag1 tag-builder"></div>
-            <div class="tag tag2 tag-city"></div>
-            <div class="tag tag3 tag-science"></div>
-            <div class="number">020</div>
-            <div class="content">
-                <div class="points points-big">1</div>
-                : <span class="money resource">-1</span>
-                <div class="description">
+        <li class="filterDiv active cityTag builderTag scienceTag ">
+            <div class="title background-color-active ">Research Outpost</div>
+            <div class="price ">18</div>
+            <div class="tag tag1 tag-builder "></div>
+            <div class="tag tag2 tag-city "></div>
+            <div class="tag tag3 tag-science "></div>
+            <div class="number ">020</div>
+            <div class="content ">
+                <div class="points points-big ">1</div>
+                : <span class="money resource ">-1</span>
+                <div class="description ">
                     (Effect: When you play a card, you pay 1 M$ less for it.)
                 </div>
-                <div class="tile city-tile"></div>
-                <div class="description">
+                <div class="tile city-tile "></div>
+                <div class="description ">
                     (Place a ciy tile NEXT TO NO OTHER TILE.)
                 </div>
             </div>
         </li>
 
         <!--21-->
-        <li class="filterDiv automated spaceTag cityTag standard">
-            <div class="title background-color-automated">Phobos Space Haven</div>
-            <div class="price">25</div>
-            <div class="tag tag1 tag-space"></div>
-            <div class="tag tag2 tag-city"></div>
-            <div class="number">021</div>
-            <div class="content">
-                <div class="points points-big">3</div>
-                <div class="production-box"><div class="titanium production"></div></div>
-                <div class="tile city-tile" style="margin-left:20px"></div>
-                <div class="description">
+        <li class="filterDiv automated spaceTag cityTag standard ">
+            <div class="title background-color-automated ">Phobos Space Haven</div>
+            <div class="price ">25</div>
+            <div class="tag tag1 tag-space "></div>
+            <div class="tag tag2 tag-city "></div>
+            <div class="number ">021</div>
+            <div class="content ">
+                <div class="points points-big ">3</div>
+                <div class="production-box "><div class="titanium production "></div></div>
+                <div class="tile city-tile " style="margin-left:20px "></div>
+                <div class="description ">
                     (Increase your titanium production 1 step and place a City tile ON THE RESERVED AREA.)
                 </div>
             </div>
@@ -735,19 +749,19 @@
         </li>
 
         <!--22-->
-        <li class="filterDiv automated standard">
-            <div class="title background-color-automated">Black Polar Dust</div>
-            <div class="price">15</div>
-            <div class="number">022</div>
-            <div class="content">
+        <li class="filterDiv automated standard ">
+            <div class="title background-color-automated ">Black Polar Dust</div>
+            <div class="price ">15</div>
+            <div class="number ">022</div>
+            <div class="content ">
 
-                <div class="production-box production-box-size3a">
-                    <div class="production-prefix">&#x2796&#xFE0E</div><div class="money production">2</div><br>
-                    <div class="production-prefix">&#x2795&#xFE0E</div><div class="heat production"></div><div class="heat production"></div><div class="heat production"></div>
+                <div class="production-box production-box-size3a ">
+                    <div class="production-prefix ">&#x2796&#xFE0E</div><div class="money production ">2</div><br>
+                    <div class="production-prefix ">&#x2795&#xFE0E</div><div class="heat production "></div><div class="heat production "></div><div class="heat production "></div>
                 </div>
-                <div class="tile ocean-tile"></div>
+                <div class="tile ocean-tile "></div>
 
-                <div class="description">
+                <div class="description ">
                     (Place an ocean tile. Decrease your M$ production 2 steps and increase your heat production 3 steps.)
                 </div>
             </div>
@@ -755,108 +769,108 @@
 
 
         <!--23-->
-        <li class="filterDiv active plantTag standard">
-            <div class="title background-color-active">Artic Algae</div>
-            <div class="price">12</div>
-            <div class="tag tag1 tag-plant"></div>
-            <div class="number">023</div>
-            <div class="content">
-                <div class="requirements requirements-max">max -12 C </div>
-                <div class="tile ocean-tile red-outline"></div> : <div class="resource plant"></div><div class="resource plant"></div><br>
-                <div class="description">
+        <li class="filterDiv active plantTag standard ">
+            <div class="title background-color-active ">Artic Algae</div>
+            <div class="price ">12</div>
+            <div class="tag tag1 tag-plant "></div>
+            <div class="number ">023</div>
+            <div class="content ">
+                <div class="requirements requirements-max ">max -12 C </div>
+                <div class="tile ocean-tile red-outline "></div> : <div class="resource plant "></div><div class="resource plant "></div><br>
+                <div class="description ">
                     (Effect: When anyone places an ocean tile, gain 2 Plants.)
                 </div>
-                <div class="resource plant"></div>
-                <div class="description">
+                <div class="resource plant "></div>
+                <div class="description ">
                     (It must be -12 C or colder to play. Gain 1 Plant.)
                 </div>
             </div>
         </li>
 
         <!--24-->
-        <li class="filterDiv active animalTag standard">
-            <div class="title background-color-active">Predators</div>
-            <div class="price">14</div>
-            <div class="tag tag1 tag-animal"></div>
-            <div class="number">024</div>
-            <div class="content">
-                <div class="points">1/<div class="animal resource"></div></div>
-                <div class="requirements requirements-max">max 11% O2</div>
-                <div class="resource animal red-outline"></div> <span class="red-arrow"></span> <div class="animal resource"></div>
-                <div class="description">
+        <li class="filterDiv active animalTag standard ">
+            <div class="title background-color-active ">Predators</div>
+            <div class="price ">14</div>
+            <div class="tag tag1 tag-animal "></div>
+            <div class="number ">024</div>
+            <div class="content ">
+                <div class="points ">1/<div class="animal resource "></div></div>
+                <div class="requirements requirements-max ">max 11% O2</div>
+                <div class="resource animal red-outline "></div> <span class="red-arrow "></span> <div class="animal resource "></div>
+                <div class="description ">
                     (Action: Remove 1 Animal from any card and add it to this card.)
                 </div>
-                <div class="description">
+                <div class="description ">
                     (Requires 11% oxygen. 1 VP per Animal on this card.)
                 </div>
             </div>
         </li>
 
         <!--25-->
-        <li class="filterDiv active spaceTag corporate">
-            <div class="title background-color-active">Space Station</div>
-            <div class="price">10</div>
-            <div class="tag tag1 tag-space"></div>
-            <div class="number">025</div>
-            <div class="corporate-icon"></div>
-            <div class="content">
-                <div class="points points-big">1</div>
-                <div class="resource space-resource"></div> : <div class="money resource">- 2</div>
-                <div class="description">
+        <li class="filterDiv active spaceTag corporate ">
+            <div class="title background-color-active ">Space Station</div>
+            <div class="price ">10</div>
+            <div class="tag tag1 tag-space "></div>
+            <div class="number ">025</div>
+            <div class="corporate-icon "></div>
+            <div class="content ">
+                <div class="points points-big ">1</div>
+                <div class="resource space-resource "></div> : <div class="money resource ">- 2</div>
+                <div class="description ">
                     (When you play a Space card, you pay 2 M$ less for it.)
                 </div>
             </div>
         </li>
 
         <!--26-->
-        <li class="filterDiv plantTag builderTag automated standard">
-            <div class="title background-color-automated">Eos Chasma National Park</div>
-            <div class="price">16</div>
-            <div class="tag tag1 tag-builder"></div>
-            <div class="tag tag2 tag-plant"></div>
-            <div class="number">026</div>
-            <div class="content">
-                <div class="points points-big">1</div>
-                <div class="resource animal"></div>*<div class="resource plant" style="margin-left:15px"></div><div class="resource plant"></div><div class="resource plant"></div><br>
-                <div class="production-box production-box">
-                    <div class="money production">2</div>
+        <li class="filterDiv plantTag builderTag automated standard ">
+            <div class="title background-color-automated ">Eos Chasma National Park</div>
+            <div class="price ">16</div>
+            <div class="tag tag1 tag-builder "></div>
+            <div class="tag tag2 tag-plant "></div>
+            <div class="number ">026</div>
+            <div class="content ">
+                <div class="points points-big ">1</div>
+                <div class="resource animal "></div>*<div class="resource plant " style="margin-left:15px "></div><div class="resource plant "></div><div class="resource plant "></div><br>
+                <div class="production-box production-box ">
+                    <div class="money production ">2</div>
                 </div>
-                <div class="description">
+                <div class="description ">
                     (Requires -12 C or warmer. Add 1 Animal TO ANY ANIMAL CARD. Gain 3 Plants. Increase your M$ production 2 steps.)
                 </div>
             </div>
         </li>
 
         <!--27-->
-        <li class="filterDiv eventTag earthTag spaceTag corporate events">
-            <div class="title background-color-events">Interstellar Colony Ship</div>
-            <div class="price">24</div>
-            <div class="tag tag1 tag-event"></div>
-            <div class="tag tag2 tag-space"></div>
-            <div class="tag tag3 tag-earth"></div>
-            <div class="number">027</div>
-            <div class="corporate-icon"></div>
-            <div class="content">
-                <div class="points points-big">4</div>
-                <div class="requirements">5 Science</div>
+        <li class="filterDiv eventTag earthTag spaceTag corporate events ">
+            <div class="title background-color-events ">Interstellar Colony Ship</div>
+            <div class="price ">24</div>
+            <div class="tag tag1 tag-event "></div>
+            <div class="tag tag2 tag-space "></div>
+            <div class="tag tag3 tag-earth "></div>
+            <div class="number ">027</div>
+            <div class="corporate-icon "></div>
+            <div class="content ">
+                <div class="points points-big ">4</div>
+                <div class="requirements ">5 Science</div>
             </div>
             </div>
         </li>
 
         <!--28-->
-        <li class="filterDiv spaceTag corporate active">
-            <div class="title background-color-active">Security Fleet</div>
-            <div class="price">12</div>
-            <div class="tag tag1 tag-space"></div>
-            <div class="number">028</div>
-            <div class="corporate-icon"></div>
-            <div class="content">
-                <div class="points">1/<div class="resource" style="padding-bottom:2px;padding-top:2px;font-size:22px;background-color:rgb(230,230,230);font-weight:normal">&#x1F680&#xFE0E</div></div>
-                <div class="resource titanium"> </div><span class="red-arrow"></span><div class="resource" style="padding-bottom:2px;padding-top:2px;font-size:22px;background-color:rgb(230,230,230);font-weight:normal">&#x1F680&#xFE0E</div>
-                <div class="description">
+        <li class="filterDiv spaceTag corporate active ">
+            <div class="title background-color-active ">Security Fleet</div>
+            <div class="price ">12</div>
+            <div class="tag tag1 tag-space "></div>
+            <div class="number ">028</div>
+            <div class="corporate-icon "></div>
+            <div class="content ">
+                <div class="points ">1/<div class="resource " style="padding-bottom:2px;padding-top:2px;font-size:22px;background-color:rgb(230,230,230);font-weight:normal ">&#x1F680&#xFE0E</div></div>
+                <div class="resource titanium "> </div><span class="red-arrow "></span><div class="resource " style="padding-bottom:2px;padding-top:2px;font-size:22px;background-color:rgb(230,230,230);font-weight:normal ">&#x1F680&#xFE0E</div>
+                <div class="description ">
                     (Action: Spend 1 titanium to add 1 fighter resource to this card.)
                 </div>
-                <div class="description">
+                <div class="description ">
                     (1 VP for each fighter resource on this card.)
                 </div>
             </div>
@@ -864,72 +878,72 @@
 
 
         <!--29-->
-        <li class="filterDiv automated cityTag builderTag standard">
+        <li class="filterDiv automated cityTag builderTag standard ">
             <div class="title background-color-automated ">Cupola City</div>
-            <div class="price">16</div>
-            <div class="tag tag1 tag-builder"></div>
-            <div class="tag tag2 tag-city"></div>
-            <div class="number">029</div>
-            <div class="content">
-                <div class="requirements requirements-max">max 9% 02</div>
-                <div class="production-box production-box-size1a">
-                    <div class="production-prefix">&#x2796&#xFE0E</div><div class="energy production"></div>
-                    <div class="production-prefix">&#x2795&#xFE0E</div><div class="money production">3</div>
+            <div class="price ">16</div>
+            <div class="tag tag1 tag-builder "></div>
+            <div class="tag tag2 tag-city "></div>
+            <div class="number ">029</div>
+            <div class="content ">
+                <div class="requirements requirements-max ">max 9% 02</div>
+                <div class="production-box production-box-size1a ">
+                    <div class="production-prefix ">&#x2796&#xFE0E</div><div class="energy production "></div>
+                    <div class="production-prefix ">&#x2795&#xFE0E</div><div class="money production ">3</div>
                 </div>
-                <div class="tile city-tile" style="margin-left:20px"></div>
-                <div class="description">
+                <div class="tile city-tile " style="margin-left:20px "></div>
+                <div class="description ">
                     (Oxygen must be 9% or less. Place a City tile. Decrease your Energy production 1 step and increase your M$ production 3 steps.)
                 </div>
             </div>
         </li>
 
         <!--30-->
-        <li class="filterDiv automated earthTag energyTag standard">
-            <div class="title background-color-automated">Lunar Beam</div>
-            <div class="price">13</div>
-            <div class="tag tag1 tag-energy"></div>
-            <div class="tag tag2 tag-earth"></div>
-            <div class="number">030</div>
-            <div class="content">
-                <div class="production-box production-box-size2a">
-                    <div class="production-prefix">&#x2796&#xFE0E</div><div class="money production">2</div><br>
-                    <div class="production-prefix">&#x2795&#xFE0E</div><div class="heat production"></div><div class="heat production"></div><br>
-                    <div class="production-prefix">&#x2795&#xFE0E</div><div class="energy production"></div><div class="energy production"></div>
+        <li class="filterDiv automated earthTag energyTag standard ">
+            <div class="title background-color-automated ">Lunar Beam</div>
+            <div class="price ">13</div>
+            <div class="tag tag1 tag-energy "></div>
+            <div class="tag tag2 tag-earth "></div>
+            <div class="number ">030</div>
+            <div class="content ">
+                <div class="production-box production-box-size2a ">
+                    <div class="production-prefix ">&#x2796&#xFE0E</div><div class="money production ">2</div><br>
+                    <div class="production-prefix ">&#x2795&#xFE0E</div><div class="heat production "></div><div class="heat production "></div><br>
+                    <div class="production-prefix ">&#x2795&#xFE0E</div><div class="energy production "></div><div class="energy production "></div>
                 </div>
-                <div class="description">
+                <div class="description ">
                     (Decrease your M$ production 2 steps and increase your heat production and Energy production 2 steps each.)
                 </div>
             </div>
         </li>
 
         <!--31-->
-        <li class="filterDiv active spaceTag">
-            <div class="title background-color-active">Optimal Aerobraking</div>
-            <div class="price">7</div>
-            <div class="tag tag1 tag-space"></div>
-            <div class="number">031</div>
-            <div class="content">
-                <div class="resource space-resource"></div><div class="resource event-resource"></div> : <div class="resource money">3</div><div class="resource heat"></div><div class="resource heat"></div><div class="resource heat"></div>
-                <div class="description">
+        <li class="filterDiv active spaceTag ">
+            <div class="title background-color-active ">Optimal Aerobraking</div>
+            <div class="price ">7</div>
+            <div class="tag tag1 tag-space "></div>
+            <div class="number ">031</div>
+            <div class="content ">
+                <div class="resource space-resource "></div><div class="resource event-resource "></div> : <div class="resource money ">3</div><div class="resource heat "></div><div class="resource heat "></div><div class="resource heat "></div>
+                <div class="description ">
                     (Effect: When you play a Space Event, you gain 3 M$ and 3 heat.)
                 </div>
             </div>
         </li>
 
         <!--32-->
-        <li class="filterDiv cityTag builderTag standard automated">
-            <div class="title background-color-automated">Underground city</div>
-            <div class="price">18</div>
-            <div class="tag tag1 tag-builder"></div>
-            <div class="tag tag2 tag-city"></div>
-            <div class="number">032</div>
-            <div class="content">
-                <div class="production-box production-box-size2a">
-                    <div class="production-prefix">&#x2796&#xFE0E</div><div class="energy production"></div><div class="energy production"></div>
-                    <div class="production-prefix">&#x2795&#xFE0E</div><div class="steel production"></div><div class="steel production"></div>
+        <li class="filterDiv cityTag builderTag standard automated ">
+            <div class="title background-color-automated ">Underground city</div>
+            <div class="price ">18</div>
+            <div class="tag tag1 tag-builder "></div>
+            <div class="tag tag2 tag-city "></div>
+            <div class="number ">032</div>
+            <div class="content ">
+                <div class="production-box production-box-size2a ">
+                    <div class="production-prefix ">&#x2796&#xFE0E</div><div class="energy production "></div><div class="energy production "></div>
+                    <div class="production-prefix ">&#x2795&#xFE0E</div><div class="steel production "></div><div class="steel production "></div>
                 </div>
-                <div class="tile city-tile" style="margin-left:20px"></div>
-                <div class="description">
+                <div class="tile city-tile " style="margin-left:20px "></div>
+                <div class="description ">
                     (Place a City tile. Decrease your Energy production 2 steps and increase your steel production 2 steps.)
                 </div>
             </div>
@@ -937,15 +951,15 @@
 
         <!--33-->
         <li class="filterDiv standard active scienceTag microbeTag ">
-            <div class="title background-color-active">Regolith Eaters</div>
-            <div class="price">13</div>
-            <div class="tag tag1 tag-microbe"></div>
-            <div class="tag tag2 tag-science"></div>
-            <div class="number">033</div>
-            <div class="content">
-                <div class="red-arrow"></div> <div class="microbe resource"></div><br>
-                OR <div class="microbe resource"></div><div class="microbe resource"></div> <div class="red-arrow"></div> <div class="tile oxygen-tile"></div>
-                <div class="description">
+            <div class="title background-color-active ">Regolith Eaters</div>
+            <div class="price ">13</div>
+            <div class="tag tag1 tag-microbe "></div>
+            <div class="tag tag2 tag-science "></div>
+            <div class="number ">033</div>
+            <div class="content ">
+                <div class="red-arrow "></div> <div class="microbe resource "></div><br>
+                OR <div class="microbe resource "></div><div class="microbe resource "></div> <div class="red-arrow "></div> <div class="tile oxygen-tile "></div>
+                <div class="description ">
                     (Action: Add 1 Microbe to this card, or remove 2 Microbes from this card to raise oxygen level 1 step.)
                 </div>
             </div>
@@ -953,16 +967,16 @@
 
         <!--34-->
         <li class="filterDiv standard active scienceTag microbeTag ">
-            <div class="title background-color-active">GHG Producing Bacteria</div>
-            <div class="price">8</div>
-            <div class="tag tag1 tag-microbe"></div>
-            <div class="tag tag2 tag-science"></div>
-            <div class="number">034</div>
-            <div class="content">
-                <div class="requirements">4% O2</div>
-                <div class="red-arrow"></div> <div class="microbe resource"></div><br>
-                OR <div class="microbe resource"></div><div class="microbe resource"></div> <div class="red-arrow"></div> <div class="tile temperature-tile"></div>
-                <div class="description">
+            <div class="title background-color-active ">GHG Producing Bacteria</div>
+            <div class="price ">8</div>
+            <div class="tag tag1 tag-microbe "></div>
+            <div class="tag tag2 tag-science "></div>
+            <div class="number ">034</div>
+            <div class="content ">
+                <div class="requirements ">4% O2</div>
+                <div class="red-arrow "></div> <div class="microbe resource "></div><br>
+                OR <div class="microbe resource "></div><div class="microbe resource "></div> <div class="red-arrow "></div> <div class="tile temperature-tile "></div>
+                <div class="description ">
                     (Action: Add 1 Microbe to this card, or remove 2 Microbes to raise temperature 1 step.)<br><br>
                     (Requires 4% oxygen.)
                 </div>
@@ -971,15 +985,15 @@
 
         <!--35-->
         <li class="filterDiv standard active microbeTag ">
-            <div class="title background-color-active">Ants</div>
-            <div class="price">9</div>
-            <div class="tag tag1 tag-microbe"></div>
-            <div class="number">035</div>
-            <div class="content">
-                <div class="points">1/2<div class="resource microbe"></div></div>
-                <div class="requirements">4% O2</div>
-                <div class="microbe resource red-outline"></div> <div class="red-arrow"></div> <div class="microbe resource"></div>
-                <div class="description">
+            <div class="title background-color-active ">Ants</div>
+            <div class="price ">9</div>
+            <div class="tag tag1 tag-microbe "></div>
+            <div class="number ">035</div>
+            <div class="content ">
+                <div class="points ">1/2<div class="resource microbe "></div></div>
+                <div class="requirements ">4% O2</div>
+                <div class="microbe resource red-outline "></div> <div class="red-arrow "></div> <div class="microbe resource "></div>
+                <div class="description ">
                     (Action: Remove 1 Microbe from any card to add 1 to this card.)
                     <br><br>
                     (Requires 4% oxygen. 1 VP per 2 Microbes on this card.)
@@ -989,493 +1003,524 @@
         </li>
 
         <!--36-->
-        <li class="filterDiv events eventTag standard">
-            <div class="title background-color-events">Release of Inert Gases</div>
-            <div class="price">14</div>
-            <div class="tag tag1 tag-event"></div>
-            <div class="number">036</div>
-            <div class="content">
-                <div class="tile rating"></div>  <div class="tile rating"></div>
+        <li class="filterDiv events eventTag standard ">
+            <div class="title background-color-events ">Release of Inert Gases</div>
+            <div class="price ">14</div>
+            <div class="tag tag1 tag-event "></div>
+            <div class="number ">036</div>
+            <div class="content ">
+                <div class="tile rating "></div>  <div class="tile rating "></div>
 
-                <div class="description">
+                <div class="description ">
                     (Raise your terraform rating 2 steps.)
                 </div>
             </div>
         </li>
 
         <!--37-->
-        <li class="filterDiv events spaceTag eventTag standard">
-            <div class="title background-color-events">Nitrogen-Rich Asteroid</div>
-            <div class="price">31</div>
-            <div class="tag tag1 tag-event"></div>
-            <div class="tag tag2 tag-space"></div>
-            <div class="number">037</div>
-            <div class="content">
-                <div class="production-box production-box-size3" ">
-                    <div class="plant production" style="margin-left:25px"></div> OR <br>
-                    3<div class="plant production" style="border-radius:50%;padding-top:2px;"></div> : 4<div class="plant production"></div>
-                </div><br>
-                <div class="tile rating"></div>  <div class="tile rating"></div>
-                <div class="tile temperature-tile"></div><br>
-                <div class="description">
-                    (Raise your terraforming rating 2 steps and temperature 1 step. Increase your Plant production 1 step, or 4 steps if you have 3 Plant tags.)
-                </div>
-            </div>
-        </li>
+        <li class="filterDiv events spaceTag eventTag standard ">
+            <div class="title background-color-events ">Nitrogen-Rich Asteroid</div>
+            <div class="price ">31</div>
+            <div class="tag tag1 tag-event "></div>
+            <div class="tag tag2 tag-space "></div>
+            <div class="number ">037</div>
+            <div class="content ">
+                <div class="production-box production-box-size3 " ">
+          <div class="plant production" style="margin-left:25px"></div> OR <br> 3
+          <div class="plant production" style="border-radius:50%;padding-top:2px;"></div> : 4
+          <div class="plant production"></div>
+        </div><br>
+        <div class="tile rating"></div>
+        <div class="tile rating"></div>
+        <div class="tile temperature-tile"></div><br>
+        <div class="description">
+          (Raise your terraforming rating 2 steps and temperature 1 step. Increase your Plant production 1 step, or 4 steps if you have 3 Plant tags.)
+        </div>
+        </div>
+      </li>
 
-        <!--38-->
-        <li class="filterDiv active scienceTag builderTag standard">
-            <div class="title background-color-active">Rover Construction</div>
-            <div class="price">8</div>
-            <div class="tag tag1 tag-builder"></div>
-            <div class="number">038</div>
-            <div class="content">
-                <div class="points points-big">1</div>
-                <div class="tile city-tile red-outline"></div> : <div class="money resource">2</div>
+      <!--38-->
+      <li class="filterDiv active scienceTag builderTag standard">
+        <div class="title background-color-active">Rover Construction</div>
+        <div class="price">8</div>
+        <div class="tag tag1 tag-builder"></div>
+        <div class="number">038</div>
+        <div class="content">
+          <div class="points points-big">1</div>
+          <div class="tile city-tile red-outline"></div> :
+          <div class="money resource">2</div>
 
-                <div class="description">
-                    (Effect: When any City tile is placed, gain 2 M$.)
-                </div>
-            </div>
-        </li>
+          <div class="description">
+            (Effect: When any City tile is placed, gain 2 M$.)
+          </div>
+        </div>
+      </li>
 
-        <li class="filterDiv events spaceTag eventTag standard">
-            <div class="title background-color-events">Deimos Down</div>
-            <div class="price">31</div>
-            <div class="tag tag1 tag-event"></div>
-            <div class="tag tag2 tag-space"></div>
-            <div class="number">039</div>
-            <div class="content">
-                <div class="tile temperature-tile"></div> <div class="tile temperature-tile"></div> <div class="tile temperature-tile"></div><br>
-                <div class=" steel resource"></div><div class=" steel resource"></div><div class=" steel resource"></div><div class=" steel resource"></div><br>
-                <span style="font-size:20px">-8</span><div class="resource plant red-outline"></div>
-                <div class="description">
-                    (Raise temperature 3 steps and gain 4 steel. Remove up to 8 Plants from any player.)
-                </div>
-            </div>
-        </li>
+      <li class="filterDiv events spaceTag eventTag standard">
+        <div class="title background-color-events">Deimos Down</div>
+        <div class="price">31</div>
+        <div class="tag tag1 tag-event"></div>
+        <div class="tag tag2 tag-space"></div>
+        <div class="number">039</div>
+        <div class="content">
+          <div class="tile temperature-tile"></div>
+          <div class="tile temperature-tile"></div>
+          <div class="tile temperature-tile"></div><br>
+          <div class=" steel resource"></div>
+          <div class=" steel resource"></div>
+          <div class=" steel resource"></div>
+          <div class=" steel resource"></div><br>
+          <span style="font-size:20px">-8</span>
+          <div class="resource plant red-outline"></div>
+          <div class="description">
+            (Raise temperature 3 steps and gain 4 steel. Remove up to 8 Plants from any player.)
+          </div>
+        </div>
+      </li>
 
-        <!--40-->
-        <li class="filterDiv automated spaceTag jovianTag standard">
-            <div class="title background-color-automated">Asteroid Mining</div>
-            <div class="price">30</div>
-            <div class="tag tag1 tag-space"></div>
-            <div class="tag tag2 tag-jovian"></div>
-            <div class="number">040</div>
-            <div class="content">
-                <div class="points points-big">2</div>
-                <div class="production-box production-box-size2">
-                    <div class="production titanium"></div><div class="production titanium"></div>
-                </div>
-                <div class="description">
-                    (Increase your titanium production 2 steps.)
-                </div>
-            </div>
-        </li>
+      <!--40-->
+      <li class="filterDiv automated spaceTag jovianTag standard">
+        <div class="title background-color-automated">Asteroid Mining</div>
+        <div class="price">30</div>
+        <div class="tag tag1 tag-space"></div>
+        <div class="tag tag2 tag-jovian"></div>
+        <div class="number">040</div>
+        <div class="content">
+          <div class="points points-big">2</div>
+          <div class="production-box production-box-size2">
+            <div class="production titanium"></div>
+            <div class="production titanium"></div>
+          </div>
+          <div class="description">
+            (Increase your titanium production 2 steps.)
+          </div>
+        </div>
+      </li>
 
-        <!--41-->
-        <li class="filterDiv automated builderTag standard">
-            <div class="title background-color-automated">Food Factory</div>
-            <div class="price">12</div>
-            <div class="tag tag1 tag-builder"></div>
-            <div class="number">041</div>
-            <div class="content">
-                <div class="points points-big">1</div>
-                <div class="production-box production-box-size1a">
-                    <div class="production-prefix">&#x2796&#xFE0E</div><div class="plant production"></div>
-                    <div class="production-prefix">&#x2795&#xFE0E</div><div class="money production">4</div>
-                </div>
-                <div class="description">
-                    (Decrease your Plant production 1 step and increase your M$ production 4 steps.)
-                </div>
-            </div>
-        </li>
+      <!--41-->
+      <li class="filterDiv automated builderTag standard">
+        <div class="title background-color-automated">Food Factory</div>
+        <div class="price">12</div>
+        <div class="tag tag1 tag-builder"></div>
+        <div class="number">041</div>
+        <div class="content">
+          <div class="points points-big">1</div>
+          <div class="production-box production-box-size1a">
+            <div class="production-prefix">&#x2796&#xFE0E</div>
+            <div class="plant production"></div>
+            <div class="production-prefix">&#x2795&#xFE0E</div>
+            <div class="money production">4</div>
+          </div>
+          <div class="description">
+            (Decrease your Plant production 1 step and increase your M$ production 4 steps.)
+          </div>
+        </div>
+      </li>
 
-        <!--42-->
-        <li class="filterDiv automated builderTag standard">
-            <div class="title background-color-automated">Archaebacteria</div>
-            <div class="price">6</div>
-            <div class="tag tag1 tag-microbe"></div>
-            <div class="number">042</div>
-            <div class="content">
-                <div class="requirements requirements-max">max 4% O2</div>
-                <div class="production-box">
-                    <div class="plant production"></div>
-                </div>
-                <div class="description">
-                    (It must be -18 C or colder. Increase your Plant production 1 step.)
-                </div>
-            </div>
-        </li>
+      <!--42-->
+      <li class="filterDiv automated builderTag standard">
+        <div class="title background-color-automated">Archaebacteria</div>
+        <div class="price">6</div>
+        <div class="tag tag1 tag-microbe"></div>
+        <div class="number">042</div>
+        <div class="content">
+          <div class="requirements requirements-max">max 4% O2</div>
+          <div class="production-box">
+            <div class="plant production"></div>
+          </div>
+          <div class="description">
+            (It must be -18 C or colder. Increase your Plant production 1 step.)
+          </div>
+        </div>
+      </li>
 
-        <!--43-->
-        <li class="filterDiv automated builderTag standard">
-            <div class="title background-color-automated">Carbonate Processing</div>
-            <div class="price">6</div>
-            <div class="tag tag1 tag-builder"></div>
-            <div class="number">043</div>
-            <div class="content">
-                <div class="production-box production-box-size3a">
-                    <div class="production-prefix">&#x2796&#xFE0E</div><div class="energy production"></div><br>
-                    <div class="production-prefix">&#x2795&#xFE0E</div><div class="heat production"></div><div class="heat production"></div><div class="heat production"></div>
-                </div>
-                <div class="description">
-                    (Decrease your Energy production 1 step and increase your heat production 3 steps.)
-                </div>
-            </div>
-        </li>
+      <!--43-->
+      <li class="filterDiv automated builderTag standard">
+        <div class="title background-color-automated">Carbonate Processing</div>
+        <div class="price">6</div>
+        <div class="tag tag1 tag-builder"></div>
+        <div class="number">043</div>
+        <div class="content">
+          <div class="production-box production-box-size3a">
+            <div class="production-prefix">&#x2796&#xFE0E</div>
+            <div class="energy production"></div><br>
+            <div class="production-prefix">&#x2795&#xFE0E</div>
+            <div class="heat production"></div>
+            <div class="heat production"></div>
+            <div class="heat production"></div>
+          </div>
+          <div class="description">
+            (Decrease your Energy production 1 step and increase your heat production 3 steps.)
+          </div>
+        </div>
+      </li>
 
-        <!--44-->
-        <li class="filterDiv automated builderTag scienceTag standard">
-            <div class="title background-color-automated">Natural Preserve</div>
-            <div class="price">9</div>
-            <div class="tag tag1 tag-builder"></div>
-            <div class="tag tag2 tag-science"></div>
-            <div class="number">044</div>
-            <div class="content">
-                <div class="points points-big">1</div>
-                <div class="requirements requirements-max">max 4% O2</div>
-                <div class="production-box">
-                    <div class="money production">1</div>
-                </div>
-                <div class="tile special-tile" style="font-size:30px;margin-left:20px;">&#x2642</div> *
-                <div class="description">
-                    (Oxygen must be 4% or less. Place this tile NEXT TO NO OTHER TILE. Increase your M$ production 1 step.)
-                </div>
-            </div>
-        </li>
+      <!--44-->
+      <li class="filterDiv automated builderTag scienceTag standard">
+        <div class="title background-color-automated">Natural Preserve</div>
+        <div class="price">9</div>
+        <div class="tag tag1 tag-builder"></div>
+        <div class="tag tag2 tag-science"></div>
+        <div class="number">044</div>
+        <div class="content">
+          <div class="points points-big">1</div>
+          <div class="requirements requirements-max">max 4% O2</div>
+          <div class="production-box">
+            <div class="money production">1</div>
+          </div>
+          <div class="tile special-tile" style="font-size:30px;margin-left:20px;">&#x2642</div> *
+          <div class="description">
+            (Oxygen must be 4% or less. Place this tile NEXT TO NO OTHER TILE. Increase your M$ production 1 step.)
+          </div>
+        </div>
+      </li>
 
-        <!--45-->
-        <li class="filterDiv automated builderTag energyTag standard">
-            <div class="title background-color-automated">Nuclear Power</div>
-            <div class="price">10</div>
-            <div class="tag tag1 tag-builder"></div>
-            <div class="tag tag2 tag-energy"></div>
-            <div class="number">045</div>
-            <div class="content">
-                <div class="production-box production-box-size3a">
-                    <div class="production-prefix">&#x2796&#xFE0E</div><div class="money production">2</div><br>
-                    <div class="production-prefix">&#x2795&#xFE0E</div><div class="energy production"></div><div class="energy production"></div><div class="energy production"></div>
-                </div>
-                <div class="description">
-                    (Decrease your M$ production 2 steps and increase your Energy production 3 steps.)
-                </div>
-            </div>
-        </li>
+      <!--45-->
+      <li class="filterDiv automated builderTag energyTag standard">
+        <div class="title background-color-automated">Nuclear Power</div>
+        <div class="price">10</div>
+        <div class="tag tag1 tag-builder"></div>
+        <div class="tag tag2 tag-energy"></div>
+        <div class="number">045</div>
+        <div class="content">
+          <div class="production-box production-box-size3a">
+            <div class="production-prefix">&#x2796&#xFE0E</div>
+            <div class="money production">2</div><br>
+            <div class="production-prefix">&#x2795&#xFE0E</div>
+            <div class="energy production"></div>
+            <div class="energy production"></div>
+            <div class="energy production"></div>
+          </div>
+          <div class="description">
+            (Decrease your M$ production 2 steps and increase your Energy production 3 steps.)
+          </div>
+        </div>
+      </li>
 
-        <!--46-->
-        <li class="filterDiv automated energyTag corporate">
-            <div class="title background-color-automated">Lightening Harvest</div>
-            <div class="price">8</div>
-            <div class="tag tag1 tag-energy"></div>
-            <div class="number">046</div>
-            <div class="corporate-icon"></div>
-            <div class="content">
-                <div class="points points-big">1</div>
-                <div class="requirements">3 Science</div>
-                <div class="production-box production-box-size2">
-                    <div class="energy production"></div><div class="money production">1</div>
-                </div>
-                <div class="description">
-                    (Requires 3 Science tags. Increase your Energy production and your M$ production up one step each.)
-                </div>
-            </div>
-        </li>
-
-
-        <!--47-->
-        <li class="filterDiv automated plantTag standard">
-            <div class="title background-color-automated">Algae</div>
-            <div class="price">10</div>
-            <div class="tag tag1 tag-plant"></div>
-            <div class="number">047</div>
-            <div class="content">
-                <div class="requirements">5 Oceans</div>
-                <div class="production-box production-box-size2">
-                    <div class="plant production"></div><div class="plant production"></div>
-                </div><div class="plant resource" style="margin-left:20px"></div>
-                <div class="description">
-                    (Requires 5 ocean tiles. Gain 1 Plant and increase your Plant production 2 steps.)
-                </div>
-            </div>
-        </li>
-
-        <!--48-->
-        <li class="filterDiv automated plantTag standard">
-            <div class="title background-color-automated">Adapted Lichen</div>
-            <div class="price">9</div>
-            <div class="tag tag1 tag-plant"></div>
-            <div class="number">048</div>
-            <div class="content">
-                <div class="production-box">
-                    <div class="plant production"></div>
-                </div>
-                <div class="description">
-                    (Increase your Plant production 1 step.)
-                </div>
-            </div>
+      <!--46-->
+      <li class="filterDiv automated energyTag corporate">
+        <div class="title background-color-automated">Lightening Harvest</div>
+        <div class="price">8</div>
+        <div class="tag tag1 tag-energy"></div>
+        <div class="number">046</div>
+        <div class="corporate-icon"></div>
+        <div class="content">
+          <div class="points points-big">1</div>
+          <div class="requirements">3 Science</div>
+          <div class="production-box production-box-size2">
+            <div class="energy production"></div>
+            <div class="money production">1</div>
+          </div>
+          <div class="description">
+            (Requires 3 Science tags. Increase your Energy production and your M$ production up one step each.)
+          </div>
+        </div>
+      </li>
 
 
-            <!--49-->
+      <!--47-->
+      <li class="filterDiv automated plantTag standard">
+        <div class="title background-color-automated">Algae</div>
+        <div class="price">10</div>
+        <div class="tag tag1 tag-plant"></div>
+        <div class="number">047</div>
+        <div class="content">
+          <div class="requirements">5 Oceans</div>
+          <div class="production-box production-box-size2">
+            <div class="plant production"></div>
+            <div class="plant production"></div>
+          </div>
+          <div class="plant resource" style="margin-left:20px"></div>
+          <div class="description">
+            (Requires 5 ocean tiles. Gain 1 Plant and increase your Plant production 2 steps.)
+          </div>
+        </div>
+      </li>
+
+      <!--48-->
+      <li class="filterDiv automated plantTag standard">
+        <div class="title background-color-automated">Adapted Lichen</div>
+        <div class="price">9</div>
+        <div class="tag tag1 tag-plant"></div>
+        <div class="number">048</div>
+        <div class="content">
+          <div class="production-box">
+            <div class="plant production"></div>
+          </div>
+          <div class="description">
+            (Increase your Plant production 1 step.)
+          </div>
+        </div>
+
+
+        <!--49-->
         <li class="filterDiv corporate active microbeTag ">
-            <div class="title background-color-active">Tardigrades</div>
-            <div class="price">4</div>
-            <div class="tag tag1 tag-microbe"></div>
-            <div class="number">049</div>
-            <div class="corporate-icon"></div>
-            <div class="content">
-                <div class="points">1/4<div class="resource microbe"></div></div>
-
-                <div class="red-arrow"></div> <div class="microbe resource"></div><br>
-                <div class="description">
-                    (Action: Add 1 Microbe to this card.)
-                    <br><br>
-                    (1 VP per 4 Microbes on this card.)
-                    VP: 1/4 Microbe Resource)
-                </div>
+          <div class="title background-color-active">Tardigrades</div>
+          <div class="price">4</div>
+          <div class="tag tag1 tag-microbe"></div>
+          <div class="number">049</div>
+          <div class="corporate-icon"></div>
+          <div class="content">
+            <div class="points">1/4
+              <div class="resource microbe"></div>
             </div>
+
+            <div class="red-arrow"></div>
+            <div class="microbe resource"></div><br>
+            <div class="description">
+              (Action: Add 1 Microbe to this card.)
+              <br><br> (1 VP per 4 Microbes on this card.) VP: 1/4 Microbe Resource)
+            </div>
+          </div>
         </li>
 
 
         <!--50-->
         <li class="filterDiv events microbeTag eventTag corporate">
-            <div class="title background-color-events">Virus</div>
-            <div class="price">1</div>
-            <div class="tag tag1 tag-event"></div>
-            <div class="tag tag2 tag-microbe"></div>
-            <div class="number">050</div>
-            <div class="corporate-icon"></div>
-            <div class="content">
-                <span style="font-size:20px">-2</span><div class="resource animal red-outline"></div> OR  <span style="font-size:20px">-5</span><div class="resource plant red-outline"></div>                    <div class="description">
-                    (Remove up to 2 Animals or 5 Plants from any player.)
-                </div>
+          <div class="title background-color-events">Virus</div>
+          <div class="price">1</div>
+          <div class="tag tag1 tag-event"></div>
+          <div class="tag tag2 tag-microbe"></div>
+          <div class="number">050</div>
+          <div class="corporate-icon"></div>
+          <div class="content">
+            <span style="font-size:20px">-2</span>
+            <div class="resource animal red-outline"></div> OR <span style="font-size:20px">-5</span>
+            <div class="resource plant red-outline"></div>
+            <div class="description">
+              (Remove up to 2 Animals or 5 Plants from any player.)
             </div>
+          </div>
         </li>
 
         <!--51-->
         <li class="filterDiv automated spaceTag jovianTag standard">
-            <div class="title background-color-automated">Miranda Resort</div>
-            <div class="price">12</div>
-            <div class="tag tag1 tag-space"></div>
-            <div class="tag tag2 tag-jovian"></div>
-            <div class="number">051</div>
-            <div class="corporate-icon"></div>
-            <div class="content">
-                <div class="points points-big">2</div>
-                <div class="production-box production-box-size2a">
-                    <div class="production money">1</div> / <div class="production earth-resource"></div>
-                </div>
-                <div class="description">
-                    (Increase your M$ production 1 step for each Earth tag you have.)
-                </div>
+          <div class="title background-color-automated">Miranda Resort</div>
+          <div class="price">12</div>
+          <div class="tag tag1 tag-space"></div>
+          <div class="tag tag2 tag-jovian"></div>
+          <div class="number">051</div>
+          <div class="corporate-icon"></div>
+          <div class="content">
+            <div class="points points-big">2</div>
+            <div class="production-box production-box-size2a">
+              <div class="production money">1</div> /
+              <div class="production earth-resource"></div>
             </div>
+            <div class="description">
+              (Increase your M$ production 1 step for each Earth tag you have.)
+            </div>
+          </div>
         </li>
 
         <!--52-->
         <li class="filterDiv active animalTag standard">
-            <div class="title background-color-active">Fish</div>
-            <div class="price">9</div>
-            <div class="tag tag1 tag-animal"></div>
-            <div class="number">052</div>
-            <div class="content">
-                <div class="points">1/<div class="animal resource"></div></div>
-                <div class="requirements">+2 C</div>
-                <span class="red-arrow"></span> <div class="animal resource"></div>
-                <div class="description">
-                    (Action: Add 1 Animal to this card.)
-                </div><br>
-                <div class="description">
-                    (Requires +2 C or warmer. Decrease any Plant production 1 step. 1 VP for each Animal on this card.)
-
-                </div>
+          <div class="title background-color-active">Fish</div>
+          <div class="price">9</div>
+          <div class="tag tag1 tag-animal"></div>
+          <div class="number">052</div>
+          <div class="content">
+            <div class="points">1/
+              <div class="animal resource"></div>
             </div>
+            <div class="requirements">+2 C</div>
+            <span class="red-arrow"></span>
+            <div class="animal resource"></div>
+            <div class="description">
+              (Action: Add 1 Animal to this card.)
+            </div><br>
+            <div class="description">
+              (Requires +2 C or warmer. Decrease any Plant production 1 step. 1 VP for each Animal on this card.)
+
+            </div>
+          </div>
         </li>
 
         <!--53-->
         <li class="filterDiv automated standard">
-            <div class="title background-color-automated">Lake Marineris</div>
-            <div class="price">18</div>
-            <div class="number">053</div>
-            <div class="content">
-                <div class="points points-big">2</div>
-                <div class="requirements">0 C</div>
-                <div class="tile ocean-tile"></div> <div class="tile ocean-tile"></div><br>
-                <div class="description">
-                    (Requires 0 C or warmer. Place 2 ocean tiles.)
-                </div>
+          <div class="title background-color-automated">Lake Marineris</div>
+          <div class="price">18</div>
+          <div class="number">053</div>
+          <div class="content">
+            <div class="points points-big">2</div>
+            <div class="requirements">0 C</div>
+            <div class="tile ocean-tile"></div>
+            <div class="tile ocean-tile"></div><br>
+            <div class="description">
+              (Requires 0 C or warmer. Place 2 ocean tiles.)
             </div>
+          </div>
         </li>
 
         <!--54-->
         <li class="filterDiv active animalTag standard">
-            <div class="title background-color-active">Small Animals</div>
-            <div class="price">6</div>
-            <div class="tag tag1 tag-animal"></div>
-            <div class="number">054</div>
-            <div class="content">
-                <div class="points">1/2<div class="animal resource"></div></div>
-                <div class="requirements">6% O2</div>
-                <span class="red-arrow"></span> <div class="animal resource"></div>
-                <div class="description" style="margin-bottom:5px;">
-                    (Action: Add 1 Animal to this card.)
-                </div>
-                <div class="production-box production-box-size1a">
-                    <div class="production-prefix">&#x2796&#xFE0E</div><div class="plant production red-outline"></div>
-                </div>
-                <div class="description" style="margin-top: 0px;">
-                    (Requires 6% oxygen. Decrease any Plant production 1 step. 1 VP<br>  per 2 Animals on this<br> card.)
-                </div>
+          <div class="title background-color-active">Small Animals</div>
+          <div class="price">6</div>
+          <div class="tag tag1 tag-animal"></div>
+          <div class="number">054</div>
+          <div class="content">
+            <div class="points">1/2
+              <div class="animal resource"></div>
             </div>
+            <div class="requirements">6% O2</div>
+            <span class="red-arrow"></span>
+            <div class="animal resource"></div>
+            <div class="description" style="margin-bottom:5px;">
+              (Action: Add 1 Animal to this card.)
+            </div>
+            <div class="production-box production-box-size1a">
+              <div class="production-prefix">&#x2796&#xFE0E</div>
+              <div class="plant production red-outline"></div>
+            </div>
+            <div class="description" style="margin-top: 0px;">
+              (Requires 6% oxygen. Decrease any Plant production 1 step. 1 VP<br> per 2 Animals on this<br> card.)
+            </div>
+          </div>
         </li>
 
         <!--55-->
         <li class="filterDiv automated plantTag standard">
-            <div class="title background-color-automated">Kelp Farming</div>
-            <div class="price">17</div>
-            <div class="tag tag1 tag-plant"></div>
-            <div class="number">055</div>
-            <div class="content">
-                <div class="points points-big">1</div>
-                <div class="requirements">6 Oceans</div>
-                <div class="production-box production-box-size3">
-                    <div class="money production">2</div><br>
-                    <div class="plant production"></div><div class="plant production"></div><div class="plant production"></div>
-                </div><div class="plant resource" style="margin-left:20px"></div><div class="plant resource"></div>
-                <div class="description">
-                    (Requires 6 ocean tiles. Increase your M$ production 2 steps and your Plant production 3 steps. Gain 2 Plants.)
-                </div>
+          <div class="title background-color-automated">Kelp Farming</div>
+          <div class="price">17</div>
+          <div class="tag tag1 tag-plant"></div>
+          <div class="number">055</div>
+          <div class="content">
+            <div class="points points-big">1</div>
+            <div class="requirements">6 Oceans</div>
+            <div class="production-box production-box-size3">
+              <div class="money production">2</div><br>
+              <div class="plant production"></div>
+              <div class="plant production"></div>
+              <div class="plant production"></div>
             </div>
+            <div class="plant resource" style="margin-left:20px"></div>
+            <div class="plant resource"></div>
+            <div class="description">
+              (Requires 6 ocean tiles. Increase your M$ production 2 steps and your Plant production 3 steps. Gain 2 Plants.)
+            </div>
+          </div>
         </li>
 
         <!--56-->
         <li class="filterDiv automated builderTag corporate">
-            <div class="title background-color-automated">Mine</div>
-            <div class="price">4</div>
-            <div class="tag tag1 tag-builder"></div>
-            <div class="number">056</div>
-            <div class="corporate-icon"></div>
-            <div class="content">
-                <div class="production-box">
-                    <div class="steel production"></div>
-                </div>
-                <div class="description">
-                    (Increase your steel production 1 step.)
-                </div>
+          <div class="title background-color-automated">Mine</div>
+          <div class="price">4</div>
+          <div class="tag tag1 tag-builder"></div>
+          <div class="number">056</div>
+          <div class="corporate-icon"></div>
+          <div class="content">
+            <div class="production-box">
+              <div class="steel production"></div>
             </div>
+            <div class="description">
+              (Increase your steel production 1 step.)
+            </div>
+          </div>
         </li>
 
         <!--57-->
         <li class="filterDiv automated spaceTag jovianTag corporate">
-            <div class="title background-color-automated">Vesta Shipyard</div>
-            <div class="price">15</div>
-            <div class="tag tag1 tag-space"></div>
-            <div class="tag tag2 tag-jovian"></div>
-            <div class="number">057</div>
-            <div class="content">
-                <div class="points points-big">1</div>
-                <div class="production-box">
-                    <div class="production titanium"></div>
-                </div>
-                <div class="description">
-                    (Increase your titanium production 1 step.)
-                </div>
+          <div class="title background-color-automated">Vesta Shipyard</div>
+          <div class="price">15</div>
+          <div class="tag tag1 tag-space"></div>
+          <div class="tag tag2 tag-jovian"></div>
+          <div class="number">057</div>
+          <div class="content">
+            <div class="points points-big">1</div>
+            <div class="production-box">
+              <div class="production titanium"></div>
             </div>
+            <div class="description">
+              (Increase your titanium production 1 step.)
+            </div>
+          </div>
         </li>
 
         <!--58-->
         <li class="filterDiv automated spaceTag jovianTag energyTag standard">
-            <div class="title background-color-automated">Beam from a Thorium Asteroid</div>
-            <div class="price">32</div>
-            <div class="tag tag1 tag-energy"></div>
-            <div class="tag tag2 tag-space"></div>
-            <div class="tag tag3 tag-jovian"></div>
-            <div class="number">058</div>
-            <div class="content">
-                <div class="points points-big">1</div>
-                <div class="requirements">Jovian</div>
+          <div class="title background-color-automated">Beam from a Thorium Asteroid</div>
+          <div class="price">32</div>
+          <div class="tag tag1 tag-energy"></div>
+          <div class="tag tag2 tag-space"></div>
+          <div class="tag tag3 tag-jovian"></div>
+          <div class="number">058</div>
+          <div class="content">
+            <div class="points points-big">1</div>
+            <div class="requirements">Jovian</div>
 
-                <div class="production-box production-box-size3">
-                    <div class="production heat"></div><div class="production heat"></div><div class="production heat"></div><br>
-                    <div class="production energy"></div><div class="production energy"></div><div class="production energy"></div>
-                </div>
-                <div class="description">
-                    (Requires a Jovian tag. Increase your heat production and Energy production 3 steps each.)
-                </div>
+            <div class="production-box production-box-size3">
+              <div class="production heat"></div>
+              <div class="production heat"></div>
+              <div class="production heat"></div><br>
+              <div class="production energy"></div>
+              <div class="production energy"></div>
+              <div class="production energy"></div>
             </div>
+            <div class="description">
+              (Requires a Jovian tag. Increase your heat production and Energy production 3 steps each.)
+            </div>
+          </div>
         </li>
 
         <!--59-->
         <li class="filterDiv automated plantTag standard">
-            <div class="title background-color-automated">Mangrove</div>
-            <div class="price">17</div>
-            <div class="tag tag1 tag-plant"></div>
-            <div class="number">059</div>
-            <div class="content">
-                <div class="points points-big">1</div>
-                <div class="requirements">+4 C</div>
-                <div class="tile forest-tile"></div>
+          <div class="title background-color-automated">Mangrove</div>
+          <div class="price">17</div>
+          <div class="tag tag1 tag-plant"></div>
+          <div class="number">059</div>
+          <div class="content">
+            <div class="points points-big">1</div>
+            <div class="requirements">+4 C</div>
+            <div class="tile forest-tile"></div>
 
-                <div class="description">
-                    (Requires +4 C or warmer. Place a greenery tile ON AN AREA RESERVED FOR OCEAN and raise oxygen 1 step. Disregard normal placement restrictions for this.)
-                </div>
+            <div class="description">
+              (Requires +4 C or warmer. Place a greenery tile ON AN AREA RESERVED FOR OCEAN and raise oxygen 1 step. Disregard normal placement restrictions for this.)
             </div>
+          </div>
         </li>
 
         <!--60-->
         <li class="filterDiv automated plantTag standard">
-            <div class="title background-color-automated">Trees</div>
-            <div class="price">13</div>
-            <div class="tag tag1 tag-plant"></div>
-            <div class="number">060</div>
-            <div class="content">
-                <div class="points points-big">1</div>
-                <div class="requirements">-4 C</div>
-                <div class="production-box production-box-size3">
-                    <div class="plant production"></div><div class="plant production"></div><div class="plant production"></div>
-                </div>
-
-                <div class="plant resource" style="margin-left:20px"></div>
-                <div class="description">
-                    (Requires 6 ocean tiles. Increase your M$ production 2 steps and your Plant production 3 steps. Gain 2 Plants.)
-                </div>
+          <div class="title background-color-automated">Trees</div>
+          <div class="price">13</div>
+          <div class="tag tag1 tag-plant"></div>
+          <div class="number">060</div>
+          <div class="content">
+            <div class="points points-big">1</div>
+            <div class="requirements">-4 C</div>
+            <div class="production-box production-box-size3">
+              <div class="plant production"></div>
+              <div class="plant production"></div>
+              <div class="plant production"></div>
             </div>
+
+            <div class="plant resource" style="margin-left:20px"></div>
+            <div class="description">
+              (Requires 6 ocean tiles. Increase your M$ production 2 steps and your Plant production 3 steps. Gain 2 Plants.)
+            </div>
+          </div>
         </li>
 
         <!--61-->
         <li class="filterDiv automated corporate">
-            <div class="title background-color-automated">Great Escarpment Consortium</div>
-            <div class="price">13</div>
-            <div class="number">061</div>
-            <div class="corporate-icon"></div>
-            <div class="content">
-                <div class="points points-big">1</div>
-                <div class="requirements">Steel production</div>
-                <div class="production-box production-box-size1a">
-                    <div class="production-prefix">&#x2796&#xFE0E</div><div class="production steel red-outline"></div><br>
-                    <div class="production-prefix">&#x2795&#xFE0E</div><div class="production steel"></div>
-                </div>
-                <div class="description">
-                    (Requires that you have steel production. Decrease any steel production 1 step and increase your own 1 step.)
-                </div>
+          <div class="title background-color-automated">Great Escarpment Consortium</div>
+          <div class="price">13</div>
+          <div class="number">061</div>
+          <div class="corporate-icon"></div>
+          <div class="content">
+            <div class="points points-big">1</div>
+            <div class="requirements">Steel production</div>
+            <div class="production-box production-box-size1a">
+              <div class="production-prefix">&#x2796&#xFE0E</div>
+              <div class="production steel red-outline"></div><br>
+              <div class="production-prefix">&#x2795&#xFE0E</div>
+              <div class="production steel"></div>
             </div>
+            <div class="description">
+              (Requires that you have steel production. Decrease any steel production 1 step and increase your own 1 step.)
+            </div>
+          </div>
         </li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1511,8 +1556,9 @@
 
 
 
-    </ul>
+  </ul>
 
-    <script src="myscripts.js"></script>
+  <script src="myscripts.js"></script>
 </body>
+
 </html>
