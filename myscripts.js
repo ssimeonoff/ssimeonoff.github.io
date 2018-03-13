@@ -26,11 +26,12 @@ function filterSelection(id) {
   if (y.length > 0) {
     for (i = 0; i < x.length; i++) {
       w3RemoveClass(x[i], "show");
+      show = true;
       for (j = 0; j < y.length; j++) {
         if (x[i].className.indexOf(y[j].id) > -1) {
-          w3AddClass(x[i], "show");
+            } else {show = false;}
         }
-      }
+        if (show == true) {w3AddClass(x[i], "show");}
     }
   } else {
     showAll();
