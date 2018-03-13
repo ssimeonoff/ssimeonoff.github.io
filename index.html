@@ -10,18 +10,21 @@
     <div id="titleContainer">
       TERRAFORMING MARS
     </div>
-    <div id="cardsContainer">
+    <div class="cardsContainer">
       <div class="totalCardsCount">261</div>
       <div class="resource card" style="display:inline-block;transform: rotate(-8deg);"></div>
       <div class="resource card" style="display:inline-block;transform: rotate(-4deg);margin-left:-25px;"></div>
       <div class="resource card" style="display:inline-block;transform: rotate(0deg);margin-left:-25px;"></div>
       <div class="resource card" style="display:inline-block;transform: rotate(4deg);margin-left:-25px;"></div>
-      <div class="resource card" style="display:inline-block;transform: rotate(8deg);margin-left:-25px;"></div>&nbsp&nbsp
-      <div class="totalCardsCount">9</div>
+      <div class="resource card" style="display:inline-block;transform: rotate(8deg);margin-left:-25px;"></div>
+    </div>
+    <div class="cardsContainer" style="width:92px;">
+      <div class="totalCardsCount">19</div>
       <div class="resource card-corporation" style="display:inline-block;transform: rotate(-5deg)">C</div>
       <div class="resource card-corporation" style="display:inline-block;transform: rotate(5deg);margin-left:-30px;">C</div>
     </div>
     <div id="myBtnContainer1" style="line-height:55px;margin-bottom:10px;">
+      <button id="corporation" class="btn1" style="width:191px" onclick="filterSelection(id)"><span class="buttonCorporations">CORPORATIONS</span></button>
       <button id="automated" class="btn1 background-color-automated" onclick="filterSelection(id)"> AUTOMATED</button>
       <button id="active" class="btn1 background-color-active" onclick="filterSelection(id)"> ACTIVE</button>
       <button id="events" class="btn1 background-color-events" onclick="filterSelection(id)"> EVENTS</button>
@@ -43,13 +46,12 @@
       <button id="venusTag" class="btn2 tag-venus" onclick="filterSelection(id)"></button>
     </div>
 
-    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by name or key words..." title="Type in a name">
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by text ..." title="Type in a name">
     <div id="myBtnContainer3" style="display:inline-block">
       <button id="standard" class="btn3" onclick="filterSelection(id)"><div class="base-icon">I</div></button>
       <button id="corporate" class="btn3 corporateButton" onclick="filterSelection(id)"><span class="corporate-icon2">&#x25b2</span></button>
       <button id="venusNext" class="btn3 venusNext" onclick="filterSelection(id)"><span class="venus-icon2">V</span></button>
-      <button id="corporation" class="btn3" style="width:191px" onclick="filterSelection(id)"><span class="buttonCorporations">CORPORATIONS</span></button>
-
+      <button id="reset" class="btn4" onclick="showAll()">&#x21bb</button>
     </div>
   </div>
   <!-------------------CARDS LIST----------------------->

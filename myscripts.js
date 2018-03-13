@@ -9,6 +9,10 @@ function showAll() {
       w3AddClass(x[i], "show");
     }
   }
+  y = document.querySelectorAll('button.active');
+  for (i = 0; i < y.length; i++) {
+    y[i].classList.remove("active");
+  }
 }
 
 function filterSelection(id) {

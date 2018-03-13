@@ -345,13 +345,14 @@
 /************** Style the buttons ************/
 .btn1 {
     outline: none;
-    height: 40px;
-    width: 260px;
+    height: 45px;
+    width: 191px;
     cursor: pointer;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-right: 12px;
     margin-bottom: 10px;
+    margin-top: 15px;
     box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
 }
 
@@ -379,6 +380,20 @@
     box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
 }
 
+.btn4 {
+    outline: none;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 155px;
+    font-size:30px;
+    font-family: Times;
+    background-color: white;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
+}
 
 .btn1:hover {
     border: 2px solid rgb(137,137,137);
@@ -823,12 +838,10 @@
   background-color: rgb(44,44,44);
   background: linear-gradient(to right, black, rgb(60,60,60), rgb(150,150,150), rgb(60,60,60), rgb(60,60,60),black);
   color: white;
-  //text-shadow: -1px 0 orange, 0 1px orange, 1px 0 orange, 0 -1px orange;
-
   font-family: Arial, Verdana;
   font-size:20px;
   padding-top: 8px;
-  padding-bottom: 8px;
+  padding-bottom: 9px;
   padding-left: 3px;
   padding-right: 3px;
   border-radius: 2px;
@@ -992,7 +1005,7 @@
 .totalCardsCount {
     font-family: Arial, Helvetica, sans-serif;
     display: inline-block;
-    font-size: 40px;
+    font-size: 30px;
     vertical-align: middle;
     font-weight: bold;
     text-shadow: 0 0 5px darkorange;
@@ -1083,13 +1096,12 @@
     border-style: outset;
     border-radius: 20px;
     margin-left: 40px;
-    padding-left: 15px;
+    padding-left: 30px;
     padding-top: 15px;
     padding-bottom: 17px;
-    width: 850px;
+    width: 845px;
     margin-top: 40px;
     margin-bottom: 30px;
-    text-align: center;
     box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3),0px 5px 15px 5px grey;
 }
 
@@ -1105,8 +1117,8 @@
     padding-bottom: 8px;
     border-style: inset;
     background: #eeeeee;
-    border-radius: 15px;
-    width: 535px;
+    border-radius: 10px;
+    width: 500px;
     margin-right: 8px;
     margin-bottom: 5px;
     background: linear-gradient(to right, rgb(128, 87, 0), rgb(205,162, 130), rgb(205,162, 130), rgb(128, 87, 0));
@@ -1114,14 +1126,14 @@
     text-align: center;
 }
 
-#cardsContainer {
-    text-align: center;
+.cardsContainer {
+    text-align: right;
     display: inline-block;
     border-style: inset;
-    border-radius: 15px;
+    border-radius: 10px;
     padding-top: 11px;
-    padding-right: 5px;
-    width: 254px;
+    padding-right: 10px;
+    width: 160px;
     margin-right:10px;
     background: linear-gradient(to right, rgb(128, 87, 0), rgb(205,162, 130), rgb(205,162, 130), rgb(128, 87, 0));
 }
