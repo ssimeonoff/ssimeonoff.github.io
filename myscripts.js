@@ -2,40 +2,35 @@
 showAll();
 
 function showAll() {
-    var x, i,id;
+    var x, i;
     x = document.querySelectorAll('.filterDiv');
-    id = "";
     for (i = 0; i < x.length; i++) {
         w3RemoveClass(x[i], "show");
-        if (x[i].className.indexOf(id) > -1) {
+        if (x[i].className.indexOf("") > -1) {
             w3AddClass(x[i], "show");
         }
     }
 }
 
 function filterSelection(id) {
-    var x, i, clickedElement,currentActive;
+    var x, i;
 
     clickedElementID = document.getElementById(id);
-    currentActive = document.getElementsByClassName("active");
-
-    if (currentActive[0].id == clickedElementID.id) {
-      clickedElementID.classList.toggle("active");
-      id = "";
-    }
-    else {
-      currentActive[0].classList.remove("active");
-      clickedElementID.classList.toggle("active");
-    }
+    clickedElementID.classList.toggle("active");
 
     x = document.querySelectorAll('.filterDiv');
-    if (id == "all") id = "";
-    for (i = 0; i < x.length; i++) {
+    y = document.querySelectorAll('button.active');
+    if (y.length > 0) {
+      for (i = 0; i < x.length; i++) {
         w3RemoveClass(x[i], "show");
-        if (x[i].className.indexOf(id) > -1) {
-            w3AddClass(x[i], "show");
+        for (j = 0; j < y.length; j++) {
+          if (x[i].className.indexOf(y[j].id) > -1) {
+              w3AddClass(x[i], "show");
+            }
         }
     }
+  }
+  else {showAll();}
 }
 
 function myFunction(id) {
