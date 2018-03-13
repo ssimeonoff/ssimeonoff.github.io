@@ -399,8 +399,9 @@
 }
 
 .btn2.active {
-  border: 4px solid black;
-  box-shadow: 0 0 0 1px rgba(0,0,0,0.8), 0 0 0 2px rgba(0,0,0,0.6), 0 0 0 3px rgba(0,0,0,0.4),0 0 0 4px rgba(0,0,0,0.2);
+  border: 4px solid white;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.8), 0 0 0 2px rgba(255,255,255,0.6), 0 0 0 3px rgba(255,255,255,0.4),0 0 0 4px rgba(255,255,255,0.2);
+  font-size:10px;
 }
 
 .btn3.active {
@@ -1088,6 +1089,7 @@
 
 #buttonsContainer {
     background: #cccccc;
+    background-image: url("mars.jpg");
     border-style: outset;
     border-radius: 20px;
     margin-left: 40px;
