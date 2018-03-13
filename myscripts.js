@@ -3,7 +3,6 @@ showAll();
 
 function showAll() {
     var x, i,id;
-
     x = document.querySelectorAll('.filterDiv');
     id = "";
     for (i = 0; i < x.length; i++) {
@@ -12,7 +11,6 @@ function showAll() {
             w3AddClass(x[i], "show");
         }
     }
-
 }
 
 function filterSelection(id) {

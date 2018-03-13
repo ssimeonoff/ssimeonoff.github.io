@@ -665,6 +665,17 @@
     }
 
 
+.venus-tile {
+  background-color: rgb(255,204,100);
+  background: linear-gradient(to right, #e28c22, rgb(255,204,100),rgb(255,204,100), #e28c22);
+  color:white;
+  padding:3px;
+
+  font-size:20px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+}
+
 .capitol {
     background: white;
     margin-left: 20px;
@@ -798,17 +809,42 @@
     background-color: rgb(44,44,44);
     background: linear-gradient(to right, black, rgb(60,60,60), rgb(150,150,150), rgb(60,60,60), rgb(60,60,60),black);
     color: white;
+    font-weight: bold;
     padding-top: 8px;
     padding-bottom: 8px;
     padding-left: 3px;
     padding-right: 3px;
     border-radius: 2px;
 }
+.card:after {
+    content: "\1F30F\FE0E";
+    font-size: 20px;
+}
 
-    .card:after {
-        content: "\1F30F\FE0E";
-        font-size: 20px;
-    }
+.card-corporation {
+    background-color: white;
+    color: Black;
+    padding-top: 3px;
+    padding-bottom: 4px;
+    padding-left: 3px;
+    padding-right: 3px;
+    border-radius: 3px;
+    font-family: "Arial";
+    font-size: 8px;
+    vertical-align: middle;
+    margin-top: 5px;
+    margin-left:10px;
+}
+
+.card-corporation-inner {
+  border-radius: 3px;
+  background: #cccccc;
+  padding-left:5px;
+  padding-right:5px;
+  padding-top:7px;
+  padding-bottom:7px;
+  border:1px solid grey;
+}
 
 .space-resource {
     background-color: black;
@@ -1077,7 +1113,7 @@
     padding-bottom: 8px;
     border-style: inset;
     background: #eeeeee;
-    border-radius: 10px;
+    border-radius: 15px;
     width: 535px;
     margin-right: 8px;
     margin-bottom: 5px;
@@ -1090,7 +1126,7 @@
     text-align: center;
     display: inline-block;
     border-style: inset;
-    border-radius: 10px;
+    border-radius: 15px;
     padding-top: 11px;
     padding-right: 5px;
     width: 254px;
