@@ -1056,7 +1056,6 @@
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
-    background: linear-gradient(to bottom right, #dddddd,#a1a1a1, #dddddd,#bbbbbb,#dddddd, #a1a1a1,#dddddd);
     background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
 }
 
@@ -1093,6 +1092,7 @@
 
 #buttonsContainer {
     background: #cccccc;
+    background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
     border-style: outset;
     border-radius: 20px;
     margin-left: 40px;
