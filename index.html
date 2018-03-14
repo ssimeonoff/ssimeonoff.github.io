@@ -33,14 +33,15 @@
       <button id="builderTag" class="btn2 tag-builder" style="line-height:40px" onclick="filterSelection(id)"></button>
       <button id="spaceTag" class="btn2 tag-space" onclick="filterSelection(id)"></button>
       <button id="scienceTag" class="btn2 tag-science" onclick="filterSelection(id)"></button>
-      <button id="energyTag" class="btn2 tag-energy" onclick="filterSelection(id)"></button>
 
       <button id="plantTag" class="btn2 tag-plant" onclick="filterSelection(id)"></button>
       <button id="microbeTag" class="btn2 tag-microbe" onclick="filterSelection(id)"></button>
       <button id="animalTag" class="btn2 tag-animal" onclick="filterSelection(id)"></button>
-      <button id="jovianTag" class="btn2 tag-jovian" onclick="filterSelection(id)"></button>
 
+      <button id="energyTag" class="btn2 tag-energy" onclick="filterSelection(id)"></button>
+      <button id="jovianTag" class="btn2 tag-jovian" onclick="filterSelection(id)"></button>
       <button id="earthTag" class="btn2 tag-earth" style="font-size:38px;padding-top:3px;padding-left:1px;padding-right:1px;" onclick="filterSelection(id)"></button>
+
       <button id="cityTag" class="btn2 tag-city" style="font-size:22px;line-height:40px" onclick="filterSelection(id)"></button>
       <button id="eventTag" class="btn2 tag-event" style="line-height:40px;vertical-align:bottom;" onclick="filterSelection(id)"></button>
       <button id="venusTag" class="btn2 tag-venus" onclick="filterSelection(id)"></button>
@@ -149,7 +150,7 @@
         <span style="font-size:30px;
                         color: #e63900;
                         text-shadow:  6px 3px 5px  grey;">
-                    MANUTECH
+                    <span style="color:white;background:#e63900;text-shadow:none;">MA</span>NUTECH
                 </span><br>
         <div class="production-box" style="margin-top:15px;margin-left:50px;">
           <div class="production steel"></div>
@@ -341,12 +342,12 @@
                         (Effect: After you pay for a card or standard project with a basic cost of 20M$ or more, you gain 4M$.)
                     </div>
                 </div>
-                <span style="font-size:40px; color: white; font-family: 'Times New Roman'; font-weight:normal; font-weight:normal; border:2px solid purple; padding-left:5px; padding-bottom:5px; margin-left:10px; box-shadow: 6px 6px 10px grey; text-shadow:
+                <span style="font-size:40px; color: white; font-family: 'Times New Roman'; font-weight:normal;line-height:60px; border:2px solid purple; padding-left:5px; padding-bottom:5px; margin-left:10px; box-shadow: 6px 6px 10px grey; text-shadow:
             -1px 0 purple, 0 1px purple, 1px 0 purple, 0 -1px purple, 6px 6px 10px grey; ">
                     credicor
                 </span><br><br>
                 <div class="description " style="text-align:center ">
-                <div class="resource money ">57</div><br>
+                <div class="resource money" style="margin-top:-10px;">57</div><br>
                     (You start with 57 M$.)
                 </div>
             </div>
@@ -370,16 +371,40 @@
                 padding-left:5px;
                 padding-bottom:5px;
                 ;">
-                  THARSIS<br> REPUBLIC
+                  <span style="border: 1px solid red;background-color:#ff5f00;padding-left:4px;padding-right:4px">&#x25b2</span>THARSIS<br>&nbsp; REPUBLIC
                 </span>
                 <div class="description " style="text-align:center ">
-                <div class="resource money " style="margin-left:20px;">40</div> <div class="tile city-tile" style="margin-left:40px;margin-top:-20px;"> </div><br>
+                <div class="resource money " style="margin-left:60px;">40</div> <div class="tile city-tile" style="margin-left:40px;margin-top:-20px;"> </div><br>
                     (You start with 40 M$. As your first action in the game,place a city tile.)
                 </div>
             </div>
         </li>
 
-
+        <!--corp11-->
+        <li class="filterDiv corporation scienceTag ">
+          <div class="tag tag1 tag-science"></div>
+            <div class="corporationLabel ">CORPORATION</div>
+            <div class="contentCorporation ">
+                <div class="corporationEffectBox ">
+                    <div class="corporationEffectBoxLabel ">EFFECT</div>
+                      <div class="tile venus-tile" style="width:100px;text-shadow:none;color:black;font-size:11px">Temp / O2 / Ocean</div>: +/- 2
+                    <div class="description " style="text-align:center;margin-top:-5px; ">
+                        (Effect: Your temperature, oxygen and ocean requirements are +2 or -2 steps, your choice in each case.)
+                    </div>
+                </div>
+                <span style="font-size:24px;
+                padding-left:5px;
+                padding-bottom:5px;
+                text-shadow: 6px 6px 5px grey;
+                ;">
+                  <span style="background-color:#6bb5c7;padding-left:4px;padding-right:4px;font-size:26px;box-shadow: 6px 6px 10px grey;">X</span> INVENTRIX
+                </span>
+                <div class="description " style="text-align:center ">
+                <div class="resource money " style="margin-left:20px;">45</div> <div class="resource card" style="margin-left:20px"></div><div class="resource card"></div><div class="resource card"></div><br>
+                    (As you first action in the game, draw 2 cards. Start with 45M$.)
+                </div>
+            </div>
+        </li>
 
 
         <!--1-->
@@ -1432,7 +1457,7 @@
 
         <!--58-->
         <li class="filterDiv automated spaceTag jovianTag energyTag standard">
-          <div class="title background-color-automated">Beam from a Thorium Asteroid</div>
+          <div class="title background-color-automated" style="font-size:13px">Beam from a Thorium Asteroid</div>
           <div class="price">32</div>
           <div class="tag tag1 tag-energy"></div>
           <div class="tag tag2 tag-space"></div>
@@ -1491,7 +1516,7 @@
 
         <!--61-->
         <li class="filterDiv automated corporate">
-          <div class="title background-color-automated">Great Escarpment Consortium</div>
+          <div class="title background-color-automated" style="font-size:13px;">Great Escarpment Consortium</div>
           <div class="price">13</div>
           <div class="number">061</div>
           <div class="corporate-icon"></div>

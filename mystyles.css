@@ -5,7 +5,7 @@
     width: 240px;
     height: 310px;
     display: none;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family:  Arial,Helvetica,sans-serif;
     margin: 15px;
     margin-right: 25px;
     border-style: outset;
@@ -147,7 +147,6 @@
 
 
 .title {
-    font-family:'Arial Narrow', Arial, sans-serif;
     text-transform: uppercase;
     float: left;
     margin-top: 36px;
@@ -157,7 +156,7 @@
     border-radius: 4px;
     line-height: 30px;
     text-align: center;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: bold;
     text-align: center;
 }
@@ -349,7 +348,8 @@
     width: 191px;
     cursor: pointer;
     font-weight: bold;
-    border-radius: 10px;
+    font-size: 18px;
+    border-radius: 8px;
     margin-right: 12px;
     margin-bottom: 10px;
     margin-top: 15px;
@@ -371,11 +371,11 @@
 
 .btn3 {
     outline: none;
-    height: 50px;
-    width: 55px;
+    height: 40px;
+    width: 56px;
     cursor: pointer;
     font-weight: bold;
-    border-radius: 10px;
+    border-radius: 8px;
     margin-right: 10px;
     box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
 }
@@ -388,11 +388,14 @@
     border-radius: 50%;
     text-align: center;
     vertical-align: middle;
-    margin-left: 155px;
-    font-size:30px;
+    margin-left: 150px;
+    font-size:22px;
     font-weight: bold;
+    color:white;
     font-family: Arial,Verdana;
-    background-color: rgb(246,241,175);
+    background-color: #cc3333;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
     box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
 }
 
@@ -984,8 +987,8 @@
     background-position: 10px 12px;
     background-repeat: no-repeat;
     width: 373px;
-    height:47px;
-    font-size: 22px;
+    height:38px;
+    font-size: 18px;
     padding: 0px 2px 0px 20px;
     border: 2px solid #ddd;
     margin-top: 20px;
@@ -1036,10 +1039,10 @@
     background: linear-gradient(to right, #e28c22, rgb(255,204,100),rgb(255,204,100), #e28c22);
     box-shadow: 0 0 0 1px rgba(0,0,0,0.6);
     border: 1px solid black;
-    border-radius: 5px;
+    border-radius: 3px;
     padding: 3px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .corporation {
@@ -1074,7 +1077,7 @@
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
-    background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
+    background: linear-gradient(to bottom right, #cccccc,#919191, #dddddd,#cccccc,#aaaaaa,#cacaca, #919191,#cccccc);
 }
 
 .corporationEffectBoxLabel {
@@ -1132,7 +1135,7 @@
     line-height: 38px;
     vertical-align: middle;
     padding-top: 14px;
-    padding-bottom: 8px;
+    padding-bottom: 9px;
     border-style: inset;
     background: #eeeeee;
     border-radius: 10px;
