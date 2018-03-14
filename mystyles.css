@@ -390,8 +390,9 @@
     vertical-align: middle;
     margin-left: 155px;
     font-size:30px;
-    font-family: Times;
-    background-color: white;
+    font-weight: bold;
+    font-family: Arial,Verdana;
+    background-color: rgb(246,241,175);
     box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
 }
 

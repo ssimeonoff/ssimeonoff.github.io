@@ -32,6 +32,24 @@ function filterSelection(id) {
   clickedElementID = document.getElementById(id);
   clickedElementID.classList.toggle("active");
 
+  activeButtons1 = document.querySelectorAll('.btn1');
+  if (clickedElementID.classList.contains("btn1")) {
+    for (i = 0; i < activeButtons1.length; i++) {
+      if (activeButtons1[i].id != clickedElementID.id) {
+        activeButtons1[i].classList.remove("active");
+      }
+    }
+  }
+
+  activeButtons3 = document.querySelectorAll('.btn3');
+  if (clickedElementID.classList.contains("btn3")) {
+    for (i = 0; i < activeButtons3.length; i++) {
+      if (activeButtons3[i].id != clickedElementID.id) {
+        activeButtons3[i].classList.remove("active");
+      }
+    }
+  }
+
   x = document.querySelectorAll('.filterDiv');
   y = document.querySelectorAll('button.active');
   if (y.length > 0) {
