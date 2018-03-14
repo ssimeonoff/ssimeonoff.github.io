@@ -588,7 +588,7 @@
     border-radius: 5px;
     padding: 5px;
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 12px;
     box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
 }
 
@@ -644,7 +644,6 @@
     font-weight: normal;
 }
     .city-tile:before {
-        padding-top: 2px;
         content: "\1f3d9\FE0E";
         font-size: 26px;
         display: inline-block;
