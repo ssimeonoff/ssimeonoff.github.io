@@ -643,7 +643,6 @@
     color: rgb(50,50,50);
     font-weight: normal;
 }
-
     .city-tile:before {
         padding-top: 2px;
         content: "\1f3d9\FE0E";
@@ -655,6 +654,25 @@
         -o-transform: scale(1.6,1); /* Opera */
         transform: scale(1.6,1); /* W3C */
     }
+
+    .city-tile-small {
+        background-color: rgb(190,190,190);
+        color: rgb(50,50,50);
+        font-weight: normal;
+        width:20px;
+        padding:5px;
+    }
+        .city-tile-small:before {
+            content: "\1f3d9\FE0E";
+            font-size: 16px;
+            display: inline-block;
+            -webkit-transform: scale(1.6,1); /* Safari and Chrome */
+            -moz-transform: scale(1.6,1); /* Firefox */
+            -ms-transform: scale(1.6,1); /* IE 9 */
+            -o-transform: scale(1.6,1); /* Opera */
+            transform: scale(1.6,1); /* W3C */
+        }
+
 
 .special-tile {
     background: rgb(205,162, 130);
