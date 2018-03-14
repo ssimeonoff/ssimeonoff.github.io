@@ -2,16 +2,27 @@ showAll();
 
 function showAll() {
   var x, i;
+  displayedProjects = 61;
+  displayedCorporations = 10;
+  document.getElementById("totalProjects").innerHTML = displayedProjects;
+  document.getElementById("totalCorporations").innerHTML = displayedCorporations;
+
+
   x = document.querySelectorAll('.filterDiv');
+  y = document.querySelectorAll('button.active');
+  if (y.length > 0) {
+    y = document.querySelectorAll('button.active');
+    if (y.length > 0) {
+      for (i = 0; i < y.length; i++) {
+          y[i].classList.toggle("active");
+      }
+    }
+  }
   for (i = 0; i < x.length; i++) {
     w3RemoveClass(x[i], "show");
     if (x[i].className.indexOf("") > -1) {
       w3AddClass(x[i], "show");
     }
-  }
-  y = document.querySelectorAll('button.active');
-  for (i = 0; i < y.length; i++) {
-    y[i].classList.remove("active");
   }
 }
 
@@ -24,6 +35,8 @@ function filterSelection(id) {
   x = document.querySelectorAll('.filterDiv');
   y = document.querySelectorAll('button.active');
   if (y.length > 0) {
+    displayedCorporations = 0;
+    displayedCards = 0;
     for (i = 0; i < x.length; i++) {
       w3RemoveClass(x[i], "show");
       show = true;
@@ -31,7 +44,15 @@ function filterSelection(id) {
         if (x[i].className.indexOf(y[j].id) > -1) {
             } else {show = false;}
         }
-        if (show == true) {w3AddClass(x[i], "show");}
+        if (show == true) {
+          w3AddClass(x[i], "show");
+          if (x[i].classList.contains("corporation")) {
+            displayedCorporations++;
+          }
+          displayedCards++;
+        }
+        document.getElementById("totalProjects").innerHTML = displayedCards - displayedCorporations;
+        document.getElementById("totalCorporations").innerHTML = displayedCorporations;
     }
   } else {
     showAll();
