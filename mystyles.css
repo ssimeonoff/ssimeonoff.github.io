@@ -47,6 +47,22 @@
     border-style: outset;
 }
 
+.prelude-label {
+    float: left;
+    width: 80px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    margin-top: -64px;
+    margin-left: 50px;
+    font-size: 11px;
+    font-weight: bold;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
+    background-color: rgb(235,118,171);
+    border-radius: 2px;
+    border-style: outset;
+}
+
 .corporate-icon:after {
         position: absolute;
         border: 1px solid black;
@@ -63,7 +79,24 @@
         border-radius: 7px;
         box-shadow: 0 0 0 1px rgba(0,0,0,0.4);
         content: "\25b2";
+  }
+
+  .prelude-icon{
+          position: absolute;
+          border: 1px solid black;
+          background-color: rgb(235,118,171);;
+          padding-right: 4px;
+          padding-left: 3px;
+          font-size: 12px;
+          margin-left: -5px;
+          margin-top: 285px;
+          margin-left: 10px;
+          vertical-align: top;
+          color: white;
+          border-radius: 2px;
+          box-shadow: 0 0 0 1px rgba(0,0,0,0.4);
     }
+
 
 .corporation-corporateEra-icon:after {
     position: absolute;
@@ -74,8 +107,8 @@
     padding-top: 2px;
     padding-bottom: 3px;
     font-size: 8px;
-    margin-left: 133px;
-    margin-top: -11px;
+    margin-left: 217px;
+    margin-top: 48px;
     vertical-align: top;
     color: white;
     border-radius: 8px;
@@ -85,7 +118,7 @@
 
 .base-icon {
     display: inline-block;
-    padding: 1px;
+    padding-bottom: 1px;
     padding-left: 6px;
     padding-right: 6px;
     border: 1px solid black;
@@ -112,7 +145,7 @@
 .venus-icon2 {
     border: 1px solid black;
     color: white;
-    padding:2px;
+    padding:1px;
     padding-left: 5px;
     padding-right: 5px;
     background: rgb(84,150,201);
@@ -123,10 +156,10 @@
 .prelude-icon2 {
     border: 1px solid black;
     color: white;
-    padding:2px;
+    padding:1px;
     padding-left: 5px;
     padding-right: 5px;
-    background: purple;
+    background-color: rgb(235,118,171);
     border-radius: 3px;
     box-shadow: 0 0 0 1px rgba(0,0,0,0.6);
 }
@@ -180,18 +213,15 @@
     overflow: hidden;
 }
 /*********** Background colors************/
+.background-color-corporation { background-color: rgb(255,204,100);}
 
-.background-color-automated {
-    background: #09aa09;
-}
+.background-color-automated { background: #09aa09;}
 
-.background-color-active {
-    background: #3b9ae3;
-}
+.background-color-active { background: #3b9ae3;}
 
-.background-color-events {
-    background:#ee792b;
-}
+.background-color-events {background:#ee792b;}
+
+.background-color-prelude { background-color: rgb(235,118,171);}
 
 /*********** Style the tags ************/
 .tag-builder {
@@ -399,7 +429,7 @@
     text-align: center;
     vertical-align: middle;
     margin-left: 80px;
-    font-size:30px;
+    font-size:25px;
     font-weight: bold;
     color:white;
     font-family: Arial,Verdana;
@@ -1029,10 +1059,6 @@
             background-color: #eee;
         }
 
-.key-words {
-    display: inline-block;
-}
-
 .totalCardsCount {
     font-family: Arial, Helvetica, sans-serif;
     display: inline-block;
@@ -1040,23 +1066,6 @@
     vertical-align: middle;
     font-weight: bold;
     text-shadow: 0 0 5px darkorange;
-}
-
-
-
-.buttonCorporations {
-    background-color: rgb(255,204,100);
-    background: linear-gradient(to right, #e28c22, rgb(255,204,100),rgb(255,204,100), #e28c22);
-    box-shadow: 0 0 0 1px rgba(0,0,0,0.6);
-    border: 1px solid black;
-    border-radius: 3px;
-    padding: 3px;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-.corporation {
-  background: white;
 }
 
 .corporationLabel {
@@ -1110,8 +1119,8 @@
     position: absolute;
     color: white;
     font-size:10px;
-    margin-top: -10px;
-    margin-left:135px;
+    margin-left: 217px;
+    margin-top: 48px;
     padding-top:2px;
     padding-bottom:1px;
     padding-left: 4px;

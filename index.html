@@ -24,14 +24,15 @@
       <div class="resource card-corporation" style="display:inline-block;transform: rotate(-5deg)">C</div>
       <div class="resource card-corporation" style="display:inline-block;transform: rotate(5deg);margin-left:-30px;">C</div>
     </div>
+
     <div id="myBtnContainer1" style="line-height:55px;margin-bottom:10px;">
-      <button id="corporation" class="btn1"  onclick="filterSelection(id)"><span class="buttonCorporations">CORPORATIONS</span></button>
+      <button id="corporation" class="btn1 background-color-corporation" onclick="filterSelection(id)">CORPORATIONS</button>
       <button id="automated" class="btn1 background-color-automated" onclick="filterSelection(id)"> AUTOMATED</button>
       <button id="active" class="btn1 background-color-active" onclick="filterSelection(id)"> ACTIVE</button>
       <button id="events" class="btn1 background-color-events" onclick="filterSelection(id)"> EVENTS</button>
-      <button id="preludeCards" class="btn1" onclick="filterSelection(id)"><span class="buttonCorporations">PRELUDES</span></button>
-
+      <button id="preludeCards" class="btn1 background-color-prelude" onclick="filterSelection(id)">PRELUDES</button>
     </div>
+
     <div id="myBtnContainer2" style="line-height:55px;">
       <button id="builderTag" class="btn2 tag-builder" style="line-height:40px" onclick="filterSelection(id)"></button>
       <button id="spaceTag" class="btn2 tag-space" onclick="filterSelection(id)"></button>
@@ -56,7 +57,7 @@
       <button id="corporate" class="btn3 corporateButton" onclick="filterSelection(id)"><span class="corporate-icon2">&#x25b2</span></button>
       <button id="venusNext" class="btn3 venusNext" onclick="filterSelection(id)"><span class="venus-icon2">V</span></button>
       <button id="prelude" class="btn3 preludeButton" onclick="filterSelection(id)"><span class="prelude-icon2" style="font-size:14px"><</span></button>
-      <button id="reset" class="btn4" onclick="showAll()">x</button>
+      <button id="reset" class="btn4" onclick="showAll()">X</button>
     </div>
   </div>
   <!-------------------CARDS LIST----------------------->
@@ -272,7 +273,7 @@
       <div class="contentCorporation">
         <div class="corporationEffectBox">
           <div class="corporationEffectBoxLabel">EFFECT</div>
-          <span class="jovian" style="border: 1px solid red;"></span>&nbsp;:
+          <span class="jovian" style="border: 1px solid red;"></span>&nbsp;;:
           <div class="production-box">
             <div class="production money">1</div>
           </div>
@@ -364,7 +365,7 @@
             <div class="contentCorporation ">
                 <div class="corporationEffectBox ">
                     <div class="corporationEffectBoxLabel ">EFFECT</div>
-                    <div class="tile city-tile-small red-outline"></div>*: <div class="production-box"><div class="production money">1</div></div>&nbsp&nbsp
+                    <div class="tile city-tile-small red-outline"></div>*: <div class="production-box"><div class="production money">1</div></div>&nbsp;&nbsp;
                       <div class="tile city-tile-small"></div>:<div class="production money">3</div>
 
                     <div class="description " style="text-align:center;margin-top:-5px; ">
@@ -373,7 +374,7 @@
                 </div>
                 <div style="font-size:24px;text-shadow:6px 6px 6px grey;">
                   <div style="text-shadow:none;box-shadow:6px 6px 6px grey;margin-right:2px;border: 1px solid red;display:inline-block;background-color:#ff5f00;">&#x25b2<span style="font-size:14px;padding:0px;border:none;margin-left:-5px;">&#x25b2</span>
-                  </div>THARSIS<br>&nbsp; REPUBLIC</div>
+                  </div>THARSIS<br>&nbsp;; REPUBLIC</div>
                 <div class="description " style="text-align:center ">
                 <div class="resource money " style="margin-left:60px;">40</div> <div class="tile city-tile" style="margin-left:40px;margin-top:-20px;"> </div><br>
                     (You start with 40 M$. As your first action in the game,place a city tile.)
@@ -435,8 +436,8 @@
                 <div class="points points-big ">1</div>
                 <div class="requirements ">Titanium production</div>
                 <div class="production-box production-box-size1a ">
-                    <div class="production-prefix ">&#x2796&#xFE0E</div><div class="titanium production red-outline "></div><br>
-                    <div class="production-prefix ">&#x2795&#xFE0E</div><div class="titanium production "></div>
+                    <div class="production-prefix ">&#x2796;&#xFE0E;</div><div class="titanium production red-outline "></div><br>
+                    <div class="production-prefix ">&#x2795;&#xFE0E;</div><div class="titanium production "></div>
                 </div>
                 <div class="description ">
                     (Requires that you have titanium production. Decrease any titanium production 1 step and increase your own 1 step.)
@@ -472,8 +473,8 @@
             <div class="content ">
                 <div class="requirements ">3 Oceans</div>
                 <div class="production-box production-box-size2a ">
-                    <div class="production-prefix ">&#x2796&#xFE0E</div><div class="money production ">1</div><div class="heat production red-outline "></div><br>
-                    <div class="production-prefix ">&#x2795&#xFE0E</div><div class="plant production "></div><div class="plant production "></div>
+                    <div class="production-prefix ">&#x2796;&#xFE0E;</div><div class="money production ">1</div><div class="heat production red-outline "></div><br>
+                    <div class="production-prefix ">&#x2795;&#xFE0E;</div><div class="plant production "></div><div class="plant production "></div>
                 </div>
                 <div class="description ">
                     (Requires 3 ocean tiles. Decrease your M$ production 1 step and any heat production 1 step. Increase your Plant production 2 steps.)
@@ -538,10 +539,10 @@
                 <div class="points ">1/<span class="resource ocean-resource "></span></div>
                 <div class="requirements ">4 Oceans</div>
                 <div class="production-box production-box-size2a ">
-                    <div class="production-prefix ">&#x2796&#xFE0E</div><div class="energy production "></div><div class="energy production "></div><br>
-                    <div class="production-prefix ">&#x2795&#xFE0E</div><div class="money production ">5</div>
+                    <div class="production-prefix ">&#x2796;&#xFE0E;</div><div class="energy production "></div><div class="energy production "></div><br>
+                    <div class="production-prefix ">&#x2795;&#xFE0E;</div><div class="money production ">5</div>
                 </div>
-                <div class="special-tile tile capitol ">&#x2302&#xFE0E</div>
+                <div class="special-tile tile capitol ">&#x2302&#xFE0E;</div>
                 <div class="description ">
                     (Requires 4 ocean tiles. Place this tile. Decrease your Energy production 2 steps and increase your M$ production 5 steps.<br>
                     <div style="font-size:9px;line-height:12px;margin-top:10px ">
@@ -665,7 +666,7 @@
             <div class="number ">015</div>
             <div class="content ">
                 <div class="production-box production-box-size1a ">
-                    <div class="production-prefix ">&#x2796&#xFE0E</div><div class="energy production "></div>
+                    <div class="production-prefix ">&#x2796;&#xFE0E;</div><div class="energy production "></div>
                 </div>
                 <span class="red-arrow " style="margin-left:5px; "></span>
                 <div class="rating tile "></div>
@@ -686,8 +687,8 @@
                 <div class="points points-big ">1</div>
                 <div class="requirements requirements-max ">max 7% O2</div>
                 <div class="production-box production-box-size1a ">
-                    <div class="production-prefix ">&#x2796&#xFE0E</div><div class="energy production "></div>
-                    <div class="production-prefix ">&#x2795&#xFE0E</div><div class="money production ">3</div>
+                    <div class="production-prefix ">&#x2796;&#xFE0E;</div><div class="energy production "></div>
+                    <div class="production-prefix ">&#x2795;&#xFE0E;</div><div class="money production ">3</div>
                 </div>
                 <div class="tile city-tile " style="margin-left:20px "></div><br>
                 <div class="plant resource "></div><div class="plant resource "></div><div class="plant resource "></div>
@@ -707,8 +708,8 @@
             <div class="number ">017</div>
             <div class="content ">
                 <div class="production-box production-box-size1a ">
-                    <div class="production-prefix ">&#x2796&#xFE0E</div><div class="energy production "></div>
-                    <div class="production-prefix ">&#x2795&#xFE0E</div><div class="money production ">3</div>
+                    <div class="production-prefix ">&#x2796;&#xFE0E;</div><div class="energy production "></div>
+                    <div class="production-prefix ">&#x2795;&#xFE0E;</div><div class="money production ">3</div>
                 </div>
                 <div class="tile city-tile " style="margin-left:20px "></div><br>
                 <div class="plant resource "></div><div class="plant resource "></div><div class="plant resource "></div>
@@ -805,8 +806,8 @@
             <div class="content ">
 
                 <div class="production-box production-box-size3a ">
-                    <div class="production-prefix ">&#x2796&#xFE0E</div><div class="money production ">2</div><br>
-                    <div class="production-prefix ">&#x2795&#xFE0E</div><div class="heat production "></div><div class="heat production "></div><div class="heat production "></div>
+                    <div class="production-prefix ">&#x2796;&#xFE0E;</div><div class="money production ">2</div><br>
+                    <div class="production-prefix ">&#x2795;&#xFE0E;</div><div class="heat production "></div><div class="heat production "></div><div class="heat production "></div>
                 </div>
                 <div class="tile ocean-tile "></div>
 
@@ -914,8 +915,8 @@
             <div class="number ">028</div>
             <div class="corporate-icon "></div>
             <div class="content ">
-                <div class="points ">1/<div class="resource " style="padding-bottom:2px;padding-top:2px;font-size:22px;background-color:rgb(230,230,230);font-weight:normal ">&#x1F680&#xFE0E</div></div>
-                <div class="resource titanium "></div> <span class="red-arrow "></span> <div class="resource " style="padding-bottom:2px;padding-top:2px;font-size:22px;background-color:rgb(230,230,230);font-weight:normal ">&#x1F680&#xFE0E</div>
+                <div class="points ">1/<div class="resource " style="padding-bottom:2px;padding-top:2px;font-size:22px;background-color:rgb(230,230,230);font-weight:normal ">&#x1F680&#xFE0E;</div></div>
+                <div class="resource titanium "></div> <span class="red-arrow "></span> <div class="resource " style="padding-bottom:2px;padding-top:2px;font-size:22px;background-color:rgb(230,230,230);font-weight:normal ">&#x1F680&#xFE0E;</div>
                 <div class="description ">
                     (Action: Spend 1 titanium to add 1 fighter resource to this card.)
                 </div>
@@ -936,8 +937,8 @@
             <div class="content ">
                 <div class="requirements requirements-max ">max 9% 02</div>
                 <div class="production-box production-box-size1a ">
-                    <div class="production-prefix ">&#x2796&#xFE0E</div><div class="energy production "></div>
-                    <div class="production-prefix ">&#x2795&#xFE0E</div><div class="money production ">3</div>
+                    <div class="production-prefix ">&#x2796;&#xFE0E;</div><div class="energy production "></div>
+                    <div class="production-prefix ">&#x2795;&#xFE0E;</div><div class="money production ">3</div>
                 </div>
                 <div class="tile city-tile " style="margin-left:20px "></div>
                 <div class="description ">
@@ -955,9 +956,9 @@
             <div class="number ">030</div>
             <div class="content ">
                 <div class="production-box production-box-size2a ">
-                    <div class="production-prefix ">&#x2796&#xFE0E</div><div class="money production ">2</div><br>
-                    <div class="production-prefix ">&#x2795&#xFE0E</div><div class="heat production "></div><div class="heat production "></div><br>
-                    <div class="production-prefix ">&#x2795&#xFE0E</div><div class="energy production "></div><div class="energy production "></div>
+                    <div class="production-prefix ">&#x2796;&#xFE0E;</div><div class="money production ">2</div><br>
+                    <div class="production-prefix ">&#x2795;&#xFE0E;</div><div class="heat production "></div><div class="heat production "></div><br>
+                    <div class="production-prefix ">&#x2795;&#xFE0E;</div><div class="energy production "></div><div class="energy production "></div>
                 </div>
                 <div class="description ">
                     (Decrease your M$ production 2 steps and increase your heat production and Energy production 2 steps each.)
@@ -988,8 +989,8 @@
             <div class="number ">032</div>
             <div class="content ">
                 <div class="production-box production-box-size2a ">
-                    <div class="production-prefix ">&#x2796&#xFE0E</div><div class="energy production "></div><div class="energy production "></div>
-                    <div class="production-prefix ">&#x2795&#xFE0E</div><div class="steel production "></div><div class="steel production "></div>
+                    <div class="production-prefix ">&#x2796;&#xFE0E;</div><div class="energy production "></div><div class="energy production "></div>
+                    <div class="production-prefix ">&#x2795;&#xFE0E;</div><div class="steel production "></div><div class="steel production "></div>
                 </div>
                 <div class="tile city-tile " style="margin-left:20px "></div>
                 <div class="description ">
@@ -1148,8 +1149,8 @@
         <div class="content">
           <div class="points points-big">1</div>
           <div class="production-box production-box-size1a">
-            <div class="production-prefix">&#x2796&#xFE0E</div><div class="plant production"></div>
-            <div class="production-prefix">&#x2795&#xFE0E</div><div class="money production">4</div>
+            <div class="production-prefix">&#x2796;&#xFE0E;</div><div class="plant production"></div>
+            <div class="production-prefix">&#x2795;&#xFE0E;</div><div class="money production">4</div>
           </div>
           <div class="description">
             (Decrease your Plant production 1 step and increase your M$ production 4 steps.)
@@ -1182,8 +1183,8 @@
         <div class="number">043</div>
         <div class="content">
           <div class="production-box production-box-size3a">
-            <div class="production-prefix">&#x2796&#xFE0E</div><div class="energy production"></div><br>
-            <div class="production-prefix">&#x2795&#xFE0E</div><div class="heat production"></div><div class="heat production"></div><div class="heat production"></div>
+            <div class="production-prefix">&#x2796;&#xFE0E;</div><div class="energy production"></div><br>
+            <div class="production-prefix">&#x2795;&#xFE0E;</div><div class="heat production"></div><div class="heat production"></div><div class="heat production"></div>
           </div>
           <div class="description">
             (Decrease your Energy production 1 step and increase your heat production 3 steps.)
@@ -1220,8 +1221,8 @@
         <div class="number">045</div>
         <div class="content">
           <div class="production-box production-box-size3a">
-            <div class="production-prefix">&#x2796&#xFE0E</div><div class="money production">2</div><br>
-            <div class="production-prefix">&#x2795&#xFE0E</div><div class="energy production"></div><div class="energy production"></div><div class="energy production"></div>
+            <div class="production-prefix">&#x2796;&#xFE0E;</div><div class="money production">2</div><br>
+            <div class="production-prefix">&#x2795;&#xFE0E;</div><div class="energy production"></div><div class="energy production"></div><div class="energy production"></div>
           </div>
           <div class="description">
             (Decrease your M$ production 2 steps and increase your Energy production 3 steps.)
@@ -1392,7 +1393,7 @@
               (Action: Add 1 Animal to this card.)
             </div>
             <div class="production-box production-box-size1a">
-              <div class="production-prefix">&#x2796&#xFE0E</div><div class="plant production red-outline"></div>
+              <div class="production-prefix">&#x2796;&#xFE0E;</div><div class="plant production red-outline"></div>
             </div>
             <div class="description" style="margin-top: 0px;">
               (Requires 6% oxygen. Decrease any Plant production 1 step. 1 VP<br> per 2 Animals on this<br> card.)
@@ -1525,8 +1526,8 @@
             <div class="points points-big">1</div>
             <div class="requirements">Steel production</div>
             <div class="production-box production-box-size1a">
-              <div class="production-prefix">&#x2796&#xFE0E</div><div class="production steel red-outline"></div><br>
-              <div class="production-prefix">&#x2795&#xFE0E</div><div class="production steel"></div>
+              <div class="production-prefix">&#x2796;&#xFE0E;</div><div class="production steel red-outline"></div><br>
+              <div class="production-prefix">&#x2795;&#xFE0E;</div><div class="production steel"></div>
             </div>
             <div class="description">
               (Requires that you have steel production. Decrease any steel production 1 step and increase your own 1 step.)
@@ -1543,20 +1544,107 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!----------------------PRELUDES------------------------------------------->
+
+        <!--prelude1-->
+        <li class="filterDiv preludeCards">
+          <div class="title background-color-prelude">Orbital Construction</div>
+          <div class="prelude-label">PRELUDE</div>
+          <div class="prelude-icon"><</div>
+          <div class="content">
+            <div class="production-box"><div class="production titanium"></div></div></br>
+            <div class="resource titanium"></div><div class="resource titanium"></div><div class="resource titanium"></div><div class="resource titanium"></div>
+            <div class="description">
+              (Increase your titanium production 1 step. Gain 4 titanium.)
+            </div>
+          </div>
+        </li>
+
+        <!--prelude2-->
+        <li class="filterDiv preludeCards builderTag">
+          <div class="title background-color-prelude">Smelting Plant</div>
+          <div class="tag tag1 tag-builder"></div>
+          <div class="prelude-label">PRELUDE</div>
+          <div class="prelude-icon"><</div>
+          <div class="content">
+          <div class="tile oxygen-tile"></div><div class="tile oxygen-tile"></div><br>
+          <div class="resource steel"></div><div class="resource steel"></div><div class="resource steel"></div><div class="resource steel"></div><div class="resource steel"></div>
+          <div class="description">
+            (Raise oxygen 2 steps. Gain 5 steel.)
+          </div>
+          </div>
+        </li>
+
+        <!--prelude3-->
+        <li class="filterDiv preludeCards energyTag">
+          <div class="title background-color-prelude">Supplier</div>
+          <div class="tag tag1 tag-energy"></div>
+          <div class="prelude-label">PRELUDE</div>
+          <div class="prelude-icon"><</div>
+          <div class="content">
+            <div class="production-box production-box-size2">
+              <div class="production energy"></div><div class="production energy"></div>
+            </div><br>
+            <div class="resource steel"></div><div class="resource steel"></div><div class="resource steel"></div><div class="resource steel"></div>
+            <div class="description">
+              (Increase your energy production 2 steps. Gain 4 steel.)
+            </div>
+          </div>
+        </li>
+
+        <!--prelude4-->
+        <li class="filterDiv preludeCards" style="background:white;">
+          <div class="title background-color-prelude">Never Gonna Give You Up</div>
+          <div class="tag tag1" style="background-image:url(trollface.jpg);"></div>
+          <div class="prelude-label">RICKROLLED</div>
+          <div class="prelude-icon"><</div>
+          <div class="content"style="background-image:url(rickrolled.png);height:160px;background-position: center;background-repeat:no-repeat;margin-top:-10px">
+            <div class="description" style="margin-top:150px;margin-left:22px;">
+            Never gonna give you up<br>
+            Never gonna let you down<br>
+            Never gonna run around and desert you<br>
+            Never gonna make you cry<br>
+            Never gonna say goodbye <br>
+            Never gonna...
+            </div>
+          </div>
+        </li>
+
+
+
+
         <!--
             <li class="filterDiv standard  ">
                 <div class="title "></div>
                 <div class="price"></div>
                 <div class="tag tag1 "></div>
                 <div class="tag tag2 "></div>
-                <div class="number"></div>
+                <div class="prelude-label"></div>
                 <div class="corporate-icon"></div>
                 <div class="content">
                     <div class="points points-big">1</div>
                     <div class="requirements"></div>
                     <div class="production-box production-box-size1a">
-                        <div class="production-prefix">&#x2796&#xFE0E</div><div class=" production"></div>
-                        <div class="production-prefix">&#x2795&#xFE0E</div><div class=" production"></div>
+                        <div class="production-prefix">&#x2796;&#xFE0E;</div><div class=" production"></div>
+                        <div class="production-prefix">&#x2795;;&#xFE0E;</div><div class=" production"></div>
                     </div>
 
                     <div class="description">
