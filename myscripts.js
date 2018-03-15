@@ -5,11 +5,11 @@ function showAll() {
   displayedProjects = 61;
   displayedCorporations = 11;
   displayedPreludes = 4;
+  clearInput();
+  myFunction("");
   document.getElementById("totalProjects").innerHTML = displayedProjects;
   document.getElementById("totalCorporations").innerHTML = displayedCorporations;
   document.getElementById("totalPreludes").innerHTML = displayedPreludes;
-
-
   x = document.querySelectorAll('.filterDiv');
   y = document.querySelectorAll('button.active');
   if (y.length > 0) {

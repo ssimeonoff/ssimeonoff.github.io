@@ -108,7 +108,7 @@
     padding-bottom: 3px;
     font-size: 8px;
     margin-left: 217px;
-    margin-top: 48px;
+    margin-top: 47px;
     vertical-align: top;
     color: white;
     border-radius: 8px;
@@ -898,7 +898,8 @@
 .card-corporation {
   background-color: rgb(44,44,44);
   background: linear-gradient(to right, black, rgb(60,60,60), rgb(150,150,150), rgb(60,60,60), rgb(60,60,60),black);
-  color: white;
+  color: black;
+  font-weight: bold;
   font-family: Arial, Verdana;
   font-size:20px;
   padding-top: 8px;
@@ -1127,6 +1128,22 @@
     padding-left: 4px;
     padding-right: 4px;
     background: rgb(44,132,196);
+    border-radius: 3px;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.6),0 0 0 2px rgba(0,0,0,0.3);
+}
+
+.corporation-prelude-icon {
+    display: inline-block;
+    position: absolute;
+    color: white;
+    font-size:10px;
+    margin-left: 217px;
+    margin-top: 48px;
+    padding-top:2px;
+    padding-bottom:1px;
+    padding-left: 4px;
+    padding-right: 4px;
+    background: rgb(235,118,171);
     border-radius: 3px;
     box-shadow: 0 0 0 1px rgba(0,0,0,0.6),0 0 0 2px rgba(0,0,0,0.3);
 }
