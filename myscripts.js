@@ -4,8 +4,10 @@ function showAll() {
   var x, i;
   displayedProjects = 61;
   displayedCorporations = 11;
+  displayedPreludes = 4;
   document.getElementById("totalProjects").innerHTML = displayedProjects;
   document.getElementById("totalCorporations").innerHTML = displayedCorporations;
+  document.getElementById("totalPreludes").innerHTML = displayedPreludes;
 
 
   x = document.querySelectorAll('.filterDiv');
@@ -55,6 +57,7 @@ function filterSelection(id) {
   if (y.length > 0) {
     displayedCorporations = 0;
     displayedCards = 0;
+    displayedPreludes=0;
     for (i = 0; i < x.length; i++) {
       w3RemoveClass(x[i], "show");
       show = true;
@@ -67,10 +70,15 @@ function filterSelection(id) {
           if (x[i].classList.contains("corporation")) {
             displayedCorporations++;
           }
+          if (x[i].classList.contains("preludeCards")) {
+            displayedPreludes++;
+          }
           displayedCards++;
         }
-        document.getElementById("totalProjects").innerHTML = displayedCards - displayedCorporations;
+        document.getElementById("totalProjects").innerHTML = displayedCards - displayedCorporations - displayedPreludes;
         document.getElementById("totalCorporations").innerHTML = displayedCorporations;
+        document.getElementById("totalPreludes").innerHTML = displayedPreludes;
+
     }
   } else {
     showAll();

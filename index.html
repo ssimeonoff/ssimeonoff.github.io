@@ -12,19 +12,25 @@
       TERRAFORMING MARS
     </div>
     <div class="cardsContainer">
+      <div style="display:inline-block;width:154px;">
       <div id="totalProjects" class="totalCardsCount"></div>
       <div class="resource card" style="display:inline-block;transform: rotate(-8deg);"></div>
       <div class="resource card" style="display:inline-block;transform: rotate(-4deg);margin-left:-25px;"></div>
       <div class="resource card" style="display:inline-block;transform: rotate(0deg);margin-left:-25px;"></div>
       <div class="resource card" style="display:inline-block;transform: rotate(4deg);margin-left:-25px;"></div>
       <div class="resource card" style="display:inline-block;transform: rotate(8deg);margin-left:-25px;"></div>
-    </div>
-    <div class="cardsContainer" style="width:92px;">
+      </div>
+      <div style="display:inline-block; width:100px;">
       <div id="totalCorporations" class="totalCardsCount"></div>
       <div class="resource card-corporation" style="display:inline-block;transform: rotate(-5deg)">C</div>
       <div class="resource card-corporation" style="display:inline-block;transform: rotate(5deg);margin-left:-30px;">C</div>
+      </div>
+      <div style="display:inline-block;width:100px;">
+      <div id="totalPreludes" class="totalCardsCount"></div>
+      <div class="resource card-corporation" style="display:inline-block;transform: rotate(-5deg)">P</div>
+      <div class="resource card-corporation" style="display:inline-block;transform: rotate(5deg);margin-left:-30px;">P</div>
+      </div>
     </div>
-
     <div id="myBtnContainer1" style="line-height:55px;margin-bottom:10px;">
       <button id="corporation" class="btn1 background-color-corporation" onclick="filterSelection(id)">CORPORATIONS</button>
       <button id="automated" class="btn1 background-color-automated" onclick="filterSelection(id)"> AUTOMATED</button>
@@ -1565,7 +1571,7 @@
     <!----------------------PRELUDES------------------------------------------->
 
         <!--prelude1-->
-        <li class="filterDiv preludeCards">
+        <li class="filterDiv prelude preludeCards">
           <div class="title background-color-prelude">Orbital Construction</div>
           <div class="prelude-label">PRELUDE</div>
           <div class="prelude-icon"><</div>
@@ -1579,7 +1585,7 @@
         </li>
 
         <!--prelude2-->
-        <li class="filterDiv preludeCards builderTag">
+        <li class="filterDiv prelude preludeCards builderTag">
           <div class="title background-color-prelude">Smelting Plant</div>
           <div class="tag tag1 tag-builder"></div>
           <div class="prelude-label">PRELUDE</div>
