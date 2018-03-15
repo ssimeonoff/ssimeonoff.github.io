@@ -120,6 +120,17 @@
     box-shadow: 0 0 0 1px rgba(0,0,0,0.6);
 }
 
+.prelude-icon2 {
+    border: 1px solid black;
+    color: white;
+    padding:2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background: purple;
+    border-radius: 3px;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.6);
+}
+
 .tag {
     box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
     position: absolute;
@@ -343,11 +354,11 @@
 /************** Style the buttons ************/
 .btn1 {
     outline: none;
-    height: 45px;
-    width: 191px;
+    height: 40px;
+    width: 150px;
     cursor: pointer;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 14px;
     border-radius: 8px;
     margin-right: 12px;
     margin-bottom: 10px;
@@ -387,8 +398,8 @@
     border-radius: 50%;
     text-align: center;
     vertical-align: middle;
-    margin-left: 150px;
-    font-size:22px;
+    margin-left: 80px;
+    font-size:30px;
     font-weight: bold;
     color:white;
     font-family: Arial,Verdana;
@@ -1040,8 +1051,8 @@
     border: 1px solid black;
     border-radius: 3px;
     padding: 3px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .corporation {

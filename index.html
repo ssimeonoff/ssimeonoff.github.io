@@ -25,10 +25,12 @@
       <div class="resource card-corporation" style="display:inline-block;transform: rotate(5deg);margin-left:-30px;">C</div>
     </div>
     <div id="myBtnContainer1" style="line-height:55px;margin-bottom:10px;">
-      <button id="corporation" class="btn1" style="width:191px" onclick="filterSelection(id)"><span class="buttonCorporations">CORPORATIONS</span></button>
+      <button id="corporation" class="btn1"  onclick="filterSelection(id)"><span class="buttonCorporations">CORPORATIONS</span></button>
       <button id="automated" class="btn1 background-color-automated" onclick="filterSelection(id)"> AUTOMATED</button>
       <button id="active" class="btn1 background-color-active" onclick="filterSelection(id)"> ACTIVE</button>
       <button id="events" class="btn1 background-color-events" onclick="filterSelection(id)"> EVENTS</button>
+      <button id="preludeCards" class="btn1" onclick="filterSelection(id)"><span class="buttonCorporations">PRELUDES</span></button>
+
     </div>
     <div id="myBtnContainer2" style="line-height:55px;">
       <button id="builderTag" class="btn2 tag-builder" style="line-height:40px" onclick="filterSelection(id)"></button>
@@ -53,6 +55,7 @@
       <button id="standard" class="btn3" onclick="filterSelection(id)"><div class="base-icon">I</div></button>
       <button id="corporate" class="btn3 corporateButton" onclick="filterSelection(id)"><span class="corporate-icon2">&#x25b2</span></button>
       <button id="venusNext" class="btn3 venusNext" onclick="filterSelection(id)"><span class="venus-icon2">V</span></button>
+      <button id="prelude" class="btn3 preludeButton" onclick="filterSelection(id)"><span class="prelude-icon2" style="font-size:14px"><</span></button>
       <button id="reset" class="btn4" onclick="showAll()">x</button>
     </div>
   </div>
@@ -148,7 +151,7 @@
             (Effect: For each step you increase the production of a resource, including this, you also gain that resource.)
           </div>
         </div>
-        <span style="font-size:30px;
+        <span class="manutech" style="font-size:30px;
                         color: #e63900;
                         text-shadow:  6px 3px 5px  grey;">
                     <span style="color:white;background:#e63900;text-shadow:none;">MA</span>NUTECH
