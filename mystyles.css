@@ -67,90 +67,53 @@
         position: absolute;
         border: 1px solid black;
         background-color: red;
-        font-size: 8px;
-        line-height: 16px;
+        font-size: 12px;
+        line-height: 14px;
         width: 16px;
         height:16px;
-        margin-left: -230px;
-        margin-top: 255px;
+        margin-left: -232px;
+        margin-top: 284px;
         text-align: center;
         color: white;
         border-radius: 50%;
         box-shadow: 0 0 0 1px rgba(0,0,0,0.4);
         content: "\25b2";
   }
-
-  .prelude-icon{
+  .prelude-icon:after {
           position: absolute;
           border: 1px solid black;
           background-color: rgb(235,118,171);;
-          padding-right: 4px;
-          padding-left: 3px;
-          font-size: 12px;
-          margin-left: -5px;
-          margin-top: 285px;
-          margin-left: 10px;
-          vertical-align: top;
+          font-size: 16px;
+          font-weight: bold;
+          line-height: 16px;
+          width: 16px;
+          height:16px;
+          margin-left: -232px;
+          margin-top: 284px;
+          text-align: center;
           color: white;
-          border-radius: 2px;
+          border-radius: 50%;
           box-shadow: 0 0 0 1px rgba(0,0,0,0.4);
+          content: "\25c0";
     }
+    .venus-icon:after {
+            position: absolute;
+            border: 1px solid black;
+            background: rgb(84,150,201);
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 16px;
+            width: 16px;
+            height:16px;
+            margin-left: -232px;
+            margin-top: 284px;
+            text-align: center;
+            color: white;
+            border-radius: 50%;
+            box-shadow: 0 0 0 1px rgba(0,0,0,0.4);
+            content: "\25bc";
+      }
 
-
-.corporation-corporateEra-icon:after {
-    position: absolute;
-    border: 1px solid black;
-    background-color: red;
-    padding-right: 3px;
-    padding-left: 3px;
-    padding-top: 2px;
-    padding-bottom: 3px;
-    font-size: 8px;
-    margin-left: 217px;
-    margin-top: 47px;
-    vertical-align: top;
-    color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 0 1px rgba(0,0,0,0.4);
-    content: "\25b2";
-}
-
-.base-icon {
-    display: inline-block;
-    padding-bottom: 1px;
-    padding-left: 6px;
-    padding-right: 6px;
-    border: 1px solid black;
-    border-radius: 3px;
-    background-color: rgb(221,221,221);
-    color: rgb(221,221,221);
-    box-shadow: 0 0 0 1px rgba(0,0,0,0.6),0 0 0 2px rgba(0,0,0,0.3);
-}
-
-.corporate-icon2 {
-    border: 1px solid black;
-    background-color: red;
-    padding-top: 2px;
-    padding-bottom: 4px;
-    padding-right: 4px;
-    padding-left: 4px;
-    font-size: 12px;
-    color: white;
-    border-radius: 10px;
-    vertical-align: top;
-    box-shadow: 0 0 0 1px rgba(0,0,0,0.6);
-}
-
-.venus-icon2 {
-    border: 1px solid black;
-    color: white;
-    padding:1px;
-    padding-left: 5px;
-    padding-right: 5px;
-    background: rgb(84,150,201);
-    border-radius: 3px;
-    box-shadow: 0 0 0 1px rgba(0,0,0,0.6);
-}
 
 .prelude-icon2 {
     border: 1px solid black;
@@ -162,7 +125,10 @@
     border-radius: 3px;
     box-shadow: 0 0 0 1px rgba(0,0,0,0.6);
 }
-
+.corporation-icon:after {
+      margin-top: 47px;
+      margin-left: 214px;
+}
 .tag {
     box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
     position: absolute;
@@ -411,11 +377,15 @@
 .btn3 {
     outline: none;
     height: 40px;
-    width: 56px;
+    width: 40px;
     cursor: pointer;
     font-weight: bold;
-    border-radius: 8px;
+    border-radius: 50%;
     margin-right: 10px;
+    color:white;
+    font-size: 16px;
+    line-height: 30px;
+    vertical-align: bottom;
     box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
 }
 
@@ -427,7 +397,7 @@
     border-radius: 50%;
     text-align: center;
     vertical-align: middle;
-    margin-left: 80px;
+    margin-left: 113px;
     font-size:25px;
     font-weight: bold;
     color:white;
@@ -1032,7 +1002,7 @@
     padding: 0px 2px 0px 20px;
     border: 2px solid #ddd;
     margin-top: 20px;
-    margin-right: 10px;
+    margin-right: 42px;
     border-radius: 10px;
     border-style: inset;
     vertical-align:bottom;

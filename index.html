@@ -59,10 +59,10 @@
 
     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by text ..." title="Type in a name">
     <div id="myBtnContainer3" style="display:inline-block">
-      <button id="standard" class="btn3" onclick="filterSelection(id)"><div class="base-icon">I</div></button>
-      <button id="corporate" class="btn3 corporateButton" onclick="filterSelection(id)"><span class="corporate-icon2">&#x25b2</span></button>
-      <button id="venusNext" class="btn3 venusNext" onclick="filterSelection(id)"><span class="venus-icon2">V</span></button>
-      <button id="prelude" class="btn3 preludeButton" onclick="filterSelection(id)"><span class="prelude-icon2" style="font-size:14px"><</span></button>
+      <button id="standard" class="btn3" onclick="filterSelection(id)" style="background:##dddddd;font-size:26px"></button>
+      <button id="corporate" class="btn3 corporateButton" onclick="filterSelection(id)" style="background:red;">&#x25b2;</button>
+      <button id="venusNext" class="btn3 venusNext " onclick="filterSelection(id)" style="background: rgb(84,150,201);">&#x25bc;</button>
+      <button id="prelude" class="btn3 preludeButton background-color-prelude" onclick="filterSelection(id)" style="font-size:24px;line-height: 37px;"> &#x25C0;</button>
       <button id="reset" class="btn4" onclick="showAll()">X</button>
     </div>
   </div>
@@ -146,7 +146,7 @@
     <li class="filterDiv corporation builderTag venusNext">
       <div class="tag tag1 tag-builder"></div>
       <div class="corporationLabel">CORPORATION</div>
-      <div class="corporation-venusNext-icon">V</div>
+      <div class="venus-icon corporation-icon"></div>
       <div class="contentCorporation">
         <div class="corporationEffectBox">
           <div class="corporationEffectBoxLabel">EFFECT</div>
@@ -178,7 +178,7 @@
     <li class="filterDiv corporation earthTag corporate">
       <div class="tag tag1 tag-earth"></div>
       <div class="corporationLabel">CORPORATION</div>
-      <div class="corporation-corporateEra-icon"></div>
+      <div class="corporate-icon corporation-icon"></div>
       <div class="contentCorporation">
         <div class="corporationEffectBox">
           <div class="corporationEffectBoxLabel">EFFECT</div>
@@ -275,7 +275,7 @@
     <li class="filterDiv corporation jovianTag corporate">
       <div class="tag tag1 tag-jovian"></div>
       <div class="corporationLabel">CORPORATION</div>
-      <div class="corporation-corporateEra-icon"></div>
+      <div class="corporate-icon corporation-icon"></div>
       <div class="contentCorporation">
         <div class="corporationEffectBox">
           <div class="corporationEffectBoxLabel">EFFECT</div>
@@ -316,7 +316,7 @@
         <div class="tag tag1 tag-plant"></div>
         <div class="tag tag2 tag-venus"></div>
         <div class="corporationLabel">CORPORATION</div>
-        <div class="corporation-venusNext-icon">V</div>
+        <div class="venus-icon corporation-icon"></div>
         <div class="contentCorporation">
           <div class="corporationEffectBox">
             <div class="corporationEffectBoxLabel">EFFECT</div>
@@ -419,7 +419,7 @@
           <div class="tag tag1 tag-space"></div>
           <div class="tag tag2 tag-earth"></div>
             <div class="corporationLabel ">CORPORATION</div>
-            <div class="corporation-prelude-icon"><</div>
+            <div class="prelude-icon corporation-icon"></div>
             <div class="contentCorporation ">
                 <div class="corporationEffectBox ">
                     <div class="corporationEffectBoxLabel ">EFFECT</div>
@@ -1619,13 +1619,27 @@
 
 
 
-    <!----------------------PRELUDES------------------------------------------->
+    <!--PRELUDES------------------------------------------->
+
+    <!--rick-->
+    <li class="filterDiv preludeCards">
+      <div class="title background-color-prelude">Never Gonna Give You Up</div>
+      <div class="tag tag1" style="background-image:url(trollface.jpg);"></div>
+      <div class="prelude-label">RICKROLLED</div>
+      <div class="prelude-icon"></div>
+      <div class="content"style="background-image:url(rickrolled.gif);height:160px;background-position: center;background-repeat:no-repeat;margin-top:0px;">
+        <div class="description" style="margin-top:180px;margin-left:22px;font-size:16px;line-height:16px;">
+        Never gonna give you up<br>
+        Never gonna let you down<br>
+        </div>
+      </div>
+    </li>
 
         <!--prelude1-->
         <li class="filterDiv prelude preludeCards">
           <div class="title background-color-prelude">Orbital Construction</div>
           <div class="prelude-label">PRELUDE</div>
-          <div class="prelude-icon"><</div>
+          <div class="prelude-icon"></div>
           <div class="content">
             <div class="production-box"><div class="production titanium"></div></div></br>
             <div class="resource titanium"></div><div class="resource titanium"></div><div class="resource titanium"></div><div class="resource titanium"></div>
@@ -1640,7 +1654,7 @@
           <div class="title background-color-prelude">Smelting Plant</div>
           <div class="tag tag1 tag-builder"></div>
           <div class="prelude-label">PRELUDE</div>
-          <div class="prelude-icon"><</div>
+          <div class="prelude-icon"></div>
           <div class="content">
           <div class="tile oxygen-tile"></div><div class="tile oxygen-tile"></div><br>
           <div class="resource steel"></div><div class="resource steel"></div><div class="resource steel"></div><div class="resource steel"></div><div class="resource steel"></div>
@@ -1655,7 +1669,7 @@
           <div class="title background-color-prelude">Supplier</div>
           <div class="tag tag1 tag-energy"></div>
           <div class="prelude-label">PRELUDE</div>
-          <div class="prelude-icon"><</div>
+          <div class="prelude-icon"></div>
           <div class="content">
             <div class="production-box production-box-size2">
               <div class="production energy"></div><div class="production energy"></div>
@@ -1666,22 +1680,6 @@
             </div>
           </div>
         </li>
-
-        <!--prelude4-->
-        <li class="filterDiv preludeCards" style="background:white;">
-          <div class="title background-color-prelude">Never Gonna Give You Up</div>
-          <div class="tag tag1" style="background-image:url(trollface.jpg);"></div>
-          <div class="prelude-label">RICKROLLED</div>
-          <div class="prelude-icon"><</div>
-          <div class="content"style="background-image:url(rickrolled.gif);height:160px;background-position: center;background-repeat:no-repeat;margin-top:0px;">
-            <div class="description" style="margin-top:180px;margin-left:22px;font-size:16px;line-height:16px;">
-            Never gonna give you up<br>
-            Never gonna let you down<br>
-            </div>
-          </div>
-        </li>
-
-
 
 
         <!--
