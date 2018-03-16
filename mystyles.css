@@ -68,14 +68,14 @@
         border: 1px solid black;
         background-color: red;
         font-size: 8px;
-        line-height: 12px;
-        width: 12px;
-        height:12px;
+        line-height: 16px;
+        width: 16px;
+        height:16px;
         margin-left: -230px;
         margin-top: 285px;
         text-align: center;
         color: white;
-        border-radius: 7px;
+        border-radius: 50%;
         box-shadow: 0 0 0 1px rgba(0,0,0,0.4);
         content: "\25b2";
   }
