@@ -63,22 +63,20 @@
     border-style: outset;
 }
 
-.corporate-icon:after {
+.corporate-icon {
         position: absolute;
         border: 1px solid black;
         background-color: red;
-        padding-right: 2px;
-        padding-left: 2px;
-        padding-top: 1px;
-        padding-bottom: 2px;
+        width: 15px;
+        height:15px;
+        line-height: 15px;
+        text-align: center;
         font-size: 8px;
-        margin-left: -230px;
+        margin-left: 10px;
         margin-top: 285px;
-        vertical-align: top;
         color: white;
-        border-radius: 7px;
+        border-radius: 50%;
         box-shadow: 0 0 0 1px rgba(0,0,0,0.4);
-        content: "\25b2";
   }
 
   .prelude-icon{
