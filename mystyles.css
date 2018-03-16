@@ -12,6 +12,10 @@
     border-radius: 20px;
 }
 
+li:hover {
+    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    transition: transform .5s;
+}
 .price {
     float: left;
     font-family: Arial Narrow, Helvetica, sans-serif;
@@ -381,7 +385,7 @@
     cursor: pointer;
     font-weight: bold;
     border-radius: 20px;
-    margin-right: 10px;
+    margin-right: 25px;
     color:white;
     font-size: 16px;
     line-height: 30px;
@@ -397,7 +401,6 @@
     border-radius: 50%;
     text-align: center;
     vertical-align: middle;
-    margin-left: 113px;
     font-size:25px;
     font-weight: bold;
     color:white;
@@ -866,16 +869,16 @@
 
 .card-corporation {
   background-color: rgb(44,44,44);
-  background: linear-gradient(to right, black, rgb(60,60,60), rgb(150,150,150), rgb(60,60,60), rgb(60,60,60),black);
+  background: linear-gradient(to right bottom, black, rgb(60,60,60), rgb(150,150,150), rgb(60,60,60), rgb(60,60,60),black);
   color: black;
   font-weight: bold;
   font-family: Arial, Verdana;
-  font-size:20px;
-  padding-top: 8px;
-  padding-bottom: 9px;
-  padding-left: 3px;
-  padding-right: 3px;
-  border-radius: 2px;
+  font-size:10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 7px;
+  padding-right: 7px;
+  border-radius: 3px;
 }
 
 .space-resource {
@@ -1002,7 +1005,7 @@
     padding: 0px 2px 0px 20px;
     border: 2px solid #ddd;
     margin-top: 20px;
-    margin-right: 42px;
+    margin-right: 19px;
     border-radius: 10px;
     border-style: inset;
     vertical-align:bottom;
@@ -1144,7 +1147,7 @@
     border-style: inset;
     background: #eeeeee;
     border-radius: 10px;
-    width: 420px;
+    width: 400px;
     margin-right: 8px;
     margin-bottom: 5px;
     background: linear-gradient(to right, rgb(128, 87, 0), rgb(205,162, 130), rgb(205,162, 130), rgb(128, 87, 0));
@@ -1161,4 +1164,46 @@
     padding-right: 10px;
     margin-right:10px;
     background: linear-gradient(to right, rgb(128, 87, 0), rgb(205,162, 130), rgb(205,162, 130), rgb(128, 87, 0));
+}
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    font-family: Arial,Verdana;
+    line-height: 20px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }

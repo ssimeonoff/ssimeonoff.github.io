@@ -20,22 +20,23 @@
       <div class="resource card" style="display:inline-block;transform: rotate(4deg);margin-left:-25px;"></div>
       <div class="resource card" style="display:inline-block;transform: rotate(8deg);margin-left:-25px;"></div>
       </div>
-      <div style="display:inline-block; width:100px;">
+      <div style="display:inline-block; width:120px;">
       <div id="totalCorporations" class="totalCardsCount"></div>
-      <div class="resource card-corporation" style="display:inline-block;transform: rotate(-5deg)"><span style="background:linear-gradient(to right, rgb(255,204,100), #e28c22);padding-left:4px;padding-right:4px;border-radius:10px;">C</span></div>
-      <div class="resource card-corporation" style="display:inline-block;transform: rotate(15deg);margin-left:-25px;"><span style="background:linear-gradient(to right, rgb(255,204,100), #e28c22);padding-left:4px;padding-right:4px;border-radius:10px;">C</span></div>
+      <div class="resource card-corporation" style="display:inline-block;transform: rotate(-10deg)"><span style="background:linear-gradient(to right, rgb(255,204,100), #e28c22);padding-left:4px;padding-right:4px;border-radius:2px;">CORP</span></div>
+      <div class="resource card-corporation" style="display:inline-block;transform: rotate(10deg);margin-left:-52px"><span style="background:linear-gradient(to right, rgb(255,204,100), #e28c22);padding-left:4px;padding-right:4px;border-radius:2px;">CORP</span></div>
       </div>
       <div style="display:inline-block;width:100px;">
       <div id="totalPreludes" class="totalCardsCount"></div>
-      <div class="resource card-corporation" style="display:inline-block;transform: rotate(-5deg)"><span style="background:linear-gradient(to right, rgb(235,118,171), #e64d91);padding-left:4px;padding-right:4px;border-radius:10px;">P</span></div>
-      <div class="resource card-corporation" style="display:inline-block;transform: rotate(5deg);margin-left:-25px;"><span style="background:linear-gradient(to right, rgb(235,118,171), #e64d91);padding-left:4px;padding-right:4px;border-radius:10px;">P</span></div>
+      <div class="resource card-corporation" style="display:inline-block;transform: rotate(-10deg)"><span style="background:linear-gradient(to right, rgb(235,118,171), #e64d91);padding-left:4px;padding-right:4px;border-radius:2px;">PREL</span></div>
+      <div class="resource card-corporation" style="display:inline-block;transform: rotate(10deg);margin-left:-52px"><span style="background:linear-gradient(to right, rgb(235,118,171), #e64d91);padding-left:4px;padding-right:4px;border-radius:2px;">PREL</span></div>
+
       </div>
     </div>
     <div id="myBtnContainer1" style="line-height:55px;margin-bottom:10px;">
-      <button id="corporation" class="btn1 background-color-corporation" onclick="filterSelection(id)">CORPORATIONS</button>
       <button id="automated" class="btn1 background-color-automated" onclick="filterSelection(id)"> AUTOMATED</button>
       <button id="active" class="btn1 background-color-active" onclick="filterSelection(id)"> ACTIVE</button>
       <button id="events" class="btn1 background-color-events" onclick="filterSelection(id)"> EVENTS</button>
+      <button id="corporation" class="btn1 background-color-corporation" onclick="filterSelection(id)">CORPORATIONS</button>
       <button id="preludeCards" class="btn1 background-color-prelude" onclick="filterSelection(id)">PRELUDES</button>
     </div>
 
@@ -59,13 +60,39 @@
 
     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by text ..." title="Type in a name">
     <div id="myBtnContainer3" style="display:inline-block">
-      <button id="standard" class="btn3" onclick="filterSelection(id)" style="background:#dddddd; font-size:26px"></button>
+      <button id="standard" class="btn3" onclick="filterSelection(id)" style="background:#dddddd;color:black; font-size:26px">b</button>
       <button id="corporate" class="btn3 corporateButton" onclick="filterSelection(id)" style="background:red;">&#x25b2;</button>
       <button id="venusNext" class="btn3 venusNext " onclick="filterSelection(id)" style="background: rgb(84,150,201);">&#x25bc;</button>
       <button id="prelude" class="btn3 preludeButton background-color-prelude" onclick="filterSelection(id)" > &#x25C0;</button>
+      <button id="myBtn" class="btn3" style="background:rgb(66, 134, 244);">I</button>
       <button id="reset" class="btn4" onclick="showAll()">X</button>
     </div>
   </div>
+
+  <div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+      <b>All buttons have ON/OFF states (except the Reset and Info buttons)<br>
+      Clicked button applies "AND" filtering logic.</b><br><br>
+      <b>1. Displayed Card Numbers</b><br>
+      Shows how many Projects/Corporations/Preludes are currentlydisplayed below. <br>
+      Applying filters respectively changes those numbers.<br><br>
+      <b>2. Card Type buttons</b><br>
+      ONLY ONE can be active at a time -filters by Automated/Active/Event/Prelude types.<br><br>
+      <b>3. Tag Type Buttons</b><br>
+      Multiple tag filters can be applied simultaneously -filters by the specific tag.<br><br>
+      <b>4. Deck Type Buttons</b><br>
+      ONLY ONE can be active at a time - filters by Base/Corporate/Venus/Prelude decks.<br><br>
+      <b>5. Text Field</b><br>
+      Applies text search ONLY on the curretly displayed cards(does not change Displayed Card Numbers)<br><br>
+      <b>6. Info Button</b><br>
+      Opens the info box.<br><br>
+      <b>7. Reset Button</b><br>
+      Resets all clicked buttons and clears the Text Field.
+  </div>
+</div>
+
   <!-------------------CARDS LIST----------------------->
   <ul id="myUL">
 
