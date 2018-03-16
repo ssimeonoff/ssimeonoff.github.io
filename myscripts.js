@@ -134,7 +134,7 @@ function w3RemoveClass(element, name) {
 var modal = document.getElementById('myModal');
 
 // Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+var btn = document.getElementById("info");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];

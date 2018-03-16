@@ -12,10 +12,6 @@
     border-radius: 20px;
 }
 
-li:hover {
-    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-    transition: transform .5s;
-}
 .price {
     float: left;
     font-family: Arial Narrow, Helvetica, sans-serif;
@@ -1191,6 +1187,7 @@ li:hover {
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    transition-duration: 2s;
 }
 
 /* The Close Button */
