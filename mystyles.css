@@ -54,12 +54,12 @@
     line-height: 20px;
     text-align: center;
     margin-top: -64px;
-    margin-left: 50px;
+    margin-left: 5px;
     font-size: 11px;
     font-weight: bold;
     box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
     background-color: rgb(235,118,171);
-    border-radius: 2px;
+    border-radius: 15px;
     border-style: outset;
 }
 
@@ -1073,7 +1073,7 @@
 .corporationLabel {
     float: left;
     position:absolute;
-    width: 100px;
+    width: 115px;
     height: 14px;
     line-height: 15px;
     text-align: center;
