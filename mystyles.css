@@ -849,6 +849,7 @@
     }
 
 .card {
+  position: relative;
     background-color: rgb(44,44,44);
     background: linear-gradient(to right, black, rgb(60,60,60), rgb(150,150,150), rgb(60,60,60), rgb(60,60,60),black);
     color: white;
@@ -863,6 +864,39 @@
     content: "\1F30F\FE0E";
     font-size: 20px;
 }
+
+.card-icon {
+  position: absolute;
+  margin-left: 14px;
+  margin-top: -14px;
+  width: 20px;
+  height: 20px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.4), 0 0 0 2px rgba(0,0,0,0.2);
+}
+
+.card-icon-venus {
+  background: rgb(84,150,201);
+  border-radius: 50%;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.card-icon-floater {
+  background: rgb(255,204,100);
+  color:white;
+  font-size: 12px;
+  border-radius: 1px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.floater{
+    background: rgb(255,204,100);
+    color:white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  }
+.floater:after {
+    content: "\2601";
+  }
+
 
 .card-corporation {
   background-color: rgb(44,44,44);
