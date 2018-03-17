@@ -381,7 +381,7 @@
     cursor: pointer;
     font-weight: bold;
     border-radius: 20px;
-    margin-right: 25px;
+    margin-right: 10px;
     color:white;
     font-size: 16px;
     line-height: 30px;
@@ -1030,13 +1030,14 @@
     outline: none;
     background-position: 10px 12px;
     background-repeat: no-repeat;
-    width: 357px;
+    width: 285px;
     height:38px;
     font-size: 18px;
     padding: 0px 2px 0px 20px;
     border: 2px solid #ddd;
     margin-top: 20px;
-    margin-right: 27px;
+    margin-left: 25px;
+    margin-right: 155px;
     border-radius: 10px;
     border-style: inset;
     vertical-align:bottom;
