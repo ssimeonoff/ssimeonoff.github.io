@@ -59,12 +59,12 @@
     </div>
 
     <div id="myBtnContainer3" style="display:inline-block">
-      <button id="standard" class="btn3" onclick="filterSelection(id)" style="margin-left:8px;font-weight: normal;background:#dddddd;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; font-size:20px">B</button>
+      <button id="standard" class="btn3" onclick="filterSelection(id)" style="margin-left:8px;font-weight: normal;background:#bbbbbb;text-shadow: -1px 0 #444444, 0 1px #444444, 1px 0 #444444, 0 -1px #444444; font-size:20px">b</button>
       <button id="corporate" class="btn3 corporateButton" onclick="filterSelection(id)" style="background:red;">&#x25b2;</button>
       <button id="venusNext" class="btn3 venusNext " onclick="filterSelection(id)" style="background: rgb(84,150,201);">&#x25bc;</button>
       <button id="prelude" class="btn3 preludeButton background-color-prelude" onclick="filterSelection(id)" > &#x25C0;</button>
       <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by text ..." title="Type in a name">
-      <button id="info" class="btn3" style="background:#2d2dd2;">I</button>
+      <button id="info" class="btn3" style="background:#bbbbbb;text-shadow: -1px 0 #444444, 0 1px #444444, 1px 0 #444444, 0 -1px #444444;font-size:20px;">I</button>
       <button id="reset" class="btn4" onclick="showAll()">X</button>
     </div>
   </div>
@@ -95,6 +95,56 @@
 
   <!-------------------CARDS LIST----------------------->
   <ul id="myUL">
+
+    <li class="filterDiv corporation prelude earthTag">
+      <div class="tag tag1 tag-earth"></div>
+        <div class="corporationLabel ">CORPORATION</div>
+        <div class="prelude-icon corporation-icon"></div>
+        <div class="contentCorporation ">
+            <div class="corporationEffectBox ">
+                <div class="corporationEffectBoxLabel ">EFFECT</div>
+                <div class="resource points-big"
+                style="background: linear-gradient(#cc8b00, rgb(128, 87, 0),rgb(128, 87, 0));
+                width: 50px;
+                height: 40px;
+                line-height: 40px;
+                font-size: 28px;
+                text-align: center;
+                border-radius: 12px;
+                border-style: outset;
+                background-color: rgb(205,162, 130);
+                background: linear-gradient(#cc8b00, rgb(128, 87, 0),rgb(128, 87, 0));
+                box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
+                "
+                >?</div> : <div class="resource money">3</div>
+                <div class="description " style="text-align:center;margin-top:0px; ">
+                    (Effect: When you play a card with a NON-NEGATIVE VP icon, including this, gain 3M$.)
+                </div>
+            </div>
+            <div class="vitor" style="font-size:24px;
+            margin-top:10px;
+            margin-left:50px;
+            margin-bottom:35px;
+            display:inline-block;
+            box-shadow:6px 6px 6px grey;
+            -webkit-transform:scale(2,1); /* Safari and Chrome */
+            -moz-transform:scale(2,1); /* Firefox */
+            -ms-transform:scale(2,1); /* IE 9 */
+            -o-transform:scale(2,1); /* Opera */
+            transform:scale(2,1); /* W3C */
+            ;">
+            <span style="color:white;background:orangered;padding-left:3px;">VIT</span>
+            <span style="background:linear-gradient(to right, orangered,white);margin-left:-8px;">O</span>
+            <span style="margin-left:-7px;background:white;padding-right:3px;">R</span>
+            </div>
+            <div class="description " style="text-align:center;margin-top:-5px ">
+            <div class="resource money">45</div><span
+            style="background:orange;padding:3px;padding-left:15px;padding-right:15px;
+            font-size:16px;margin-left:20px;border-radius:5px;box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);">AWARDS</span> <br>
+              (You start with 45 M$. As your first action, fund an award for free.)
+            </div>
+        </div>
+    </li>
 
     <!--corp1-->
     <li class="filterDiv corporation plantTag">
@@ -306,7 +356,7 @@
       <div class="contentCorporation">
         <div class="corporationEffectBox">
           <div class="corporationEffectBoxLabel">EFFECT</div>
-          <span class="jovian" style="border: 1px solid red;"></span>&nbsp;;:
+          <span class="jovian" style="border: 1px solid red;"></span>&nbsp;:
           <div class="production-box">
             <div class="production money">1</div>
           </div>
@@ -492,57 +542,6 @@
             </div>
         </li>
 
-        <!--corp13-->
-        <li class="filterDiv corporation prelude earthTag">
-          <div class="tag tag1 tag-earth"></div>
-            <div class="corporationLabel ">CORPORATION</div>
-            <div class="prelude-icon corporation-icon"></div>
-            <div class="contentCorporation ">
-                <div class="corporationEffectBox ">
-                    <div class="corporationEffectBoxLabel ">EFFECT</div>
-                    <div class="resource points-big"
-                    style="background: linear-gradient(#cc8b00, rgb(128, 87, 0),rgb(128, 87, 0));
-                    width: 50px;
-                    height: 40px;
-                    line-height: 40px;
-                    font-size: 28px;
-                    text-align: center;
-                    border-radius: 12px;
-                    border-style: outset;
-                    background-color: rgb(205,162, 130);
-                    background: linear-gradient(#cc8b00, rgb(128, 87, 0),rgb(128, 87, 0));
-                    box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
-                    "
-                    >?</div> : <div class="resource money">3</div>
-                    <div class="description " style="text-align:center;margin-top:0px; ">
-                        (Effect: When you play a card with a NON-NEGATIVE VP icon, including this, gain 3M$.)
-                    </div>
-                </div>
-                <div class="vitor" style="font-size:24px;
-                margin-top:10px;
-                margin-left:50px;
-                margin-bottom:35px;
-                display:inline-block;
-                box-shadow:6px 6px 6px grey;
-                -webkit-transform:scale(2,1); /* Safari and Chrome */
-                -moz-transform:scale(2,1); /* Firefox */
-                -ms-transform:scale(2,1); /* IE 9 */
-                -o-transform:scale(2,1); /* Opera */
-                transform:scale(2,1); /* W3C */
-                ;">
-                <span style="color:white;background:orangered;padding-left:3px;">VIT</span>
-                <span style="background:linear-gradient(to right, orangered,white);margin-left:-7px;">O</span>
-                <span style="margin-left:-7px;background:white;padding-right:3px;">R</span>
-                </div>
-                <div class="description " style="text-align:center;margin-top:-5px ">
-                <div class="resource money">45</div><span
-                style="background:orange;padding:3px;padding-left:15px;padding-right:15px;
-                font-size:16px;margin-left:20px;border-radius:5px;box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);">AWARDS</span> <br>
-                  (You start with 45 M$. As your first action, fund an award for free.)
-                </div>
-            </div>
-        </li>
-
         <!--corp14-->
         <li class="filterDiv corporation builderTag ">
           <div class="tag tag1 tag-builder"></div>
@@ -558,11 +557,18 @@
                 <div class="INTERPLANETARY CINEMATICS" style="font-size:17px">
                   INTERPLANETARY
                 </div>
-                <div style="height:20px;width:153px;background:#cc3333;box-shadow:3px 3px 6px grey;">
-                  <span style="color:yellow";margin-left:2px;>&nbsp;---------------------------</span>
+                <div style="height:5px;margin-top:-2px;width:143px;background:linear-gradient(to right, yellow,black,yellow,black,yellow);border:5px solid #cc3333;box-shadow:3px 3px 6px grey;">
                 </div>
-                <div class="INTERPLANETARY CINEMATICS" style="font-size:24px;margin-left:3px;margin-bottom:15px;">CINEMATICS
-                </div>
+                <div class="INTERPLANETARY CINEMATICS" style="font-size:24px;margin-left:3px;margin-top:-5px;
+                display:inline-block;
+                -webkit-transform:scale(0.5,1); /* Safari and Chrome */
+                -moz-transform:scale(0.5,1); /* Firefox */
+                -ms-transform:scale(0.5,1); /* IE 9 */
+                -o-transform:scale(0.5,1); /* Opera */
+                transform:scale(1,0.5); /* W3C */
+                ;
+                margin-bottom:15px;">CINEMATICS
+              </div><br>
                 <div class="resource money " style="margin-left:40px;">30</div>&nbsp;&nbsp;&nbsp;&nbsp; 20<div class="resource steel"></div>
                 <div class="description " style="text-align:center ">
                     (You start with 20 steel and 30 M$.)
@@ -578,7 +584,7 @@
             <div class="corporationEffectBox">
               <div class="corporationEffectBoxLabel">ACTION</div>
               <div class="resource money">3</div> <span class="red-arrow"></span>
-              <div class="tile rating"></div> *
+              <div class="tile rating"></div>*
               <div class="description" style="text-align:center;margin-top:0px;">
                 (Action:If your Terraform Rating was raised this generation, you may pay 3 M$ to raise it 1 step more.)
               </div>
@@ -618,12 +624,13 @@
               </div>
             </div>
             <div style="font-size:34px;
-                            width:150px;
+                            width:140px;
                             text-align: center;
                             margin-top:5px;
                             border:2px solid black;
-                            margin-left:15px;
+                            margin-left:8px;
                             background: yellow;
+                            box-shadow: 6px 6px 6px grey;
                             border-radius:2px;">
                         helion</div><br>
             <div class="production-box production-box-size3" style="margin-left:20px;margin-top:-50px;">
@@ -635,6 +642,16 @@
             </div>
           </div>
         </li>
+
+
+
+
+
+
+
+
+
+
 
         <!--Project cards------------------------------------------------------>
         <!--1-->
