@@ -403,6 +403,7 @@
     color:white;
     font-family: Arial,Verdana;
     background-color: #cc3333;
+    vertical-align: bottom;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 
     box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
@@ -1030,17 +1031,15 @@
     outline: none;
     background-position: 10px 12px;
     background-repeat: no-repeat;
-    width: 240px;
-    height:38px;
+    width: 220px;
+    height: 38px;
     font-size: 18px;
-    padding: 0px 2px 0px 20px;
+    padding: 2px 2px 0px 20px;
     border: 2px solid #ddd;
     margin-top: 20px;
-    margin-left: 53px;
-    margin-right: 180px;
+    margin-right: 10px;
     border-radius: 10px;
     border-style: inset;
-    vertical-align:bottom;
 }
 
 #myUL {
