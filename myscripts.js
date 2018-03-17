@@ -5,7 +5,6 @@ function showAll() {
   displayedProjects = 61;
   displayedCorporations = 19;
   displayedPreludes = 4;
-  clearInput();
   myFunction("");
   document.getElementById("totalProjects").innerHTML = displayedProjects;
   document.getElementById("totalCorporations").innerHTML = displayedCorporations;
@@ -27,6 +26,7 @@ function showAll() {
     }
   }
 }
+
 
 function filterSelection(id) {
   var x, i;
