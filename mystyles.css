@@ -904,8 +904,8 @@
 .card-icon-floater {
   background: rgb(255,204,100);
   color:white;
-  font-size: 12px;
-  border-radius: 1px;
+  font-size: 14px;
+  border-radius: 2px;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
