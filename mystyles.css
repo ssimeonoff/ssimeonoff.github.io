@@ -11,7 +11,12 @@
     border-style: outset;
     border-radius: 20px;
 }
-
+.filterDiv:hover {
+      -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      transform: scale(1.1);
+      transition-duration: 0.2s;
+}
 .price {
     float: left;
     font-family: Arial Narrow, Helvetica, sans-serif;
@@ -686,11 +691,13 @@
 
 .special-tile {
     background:linear-gradient(#c5936d,#a46c41);
-    padding-top: 9px;
-    padding-bottom: 19px;
+    color: rgb(73,54,40);
+    padding-top:15px;
+    padding-bottom: 15px;
     width: 40px;
-    font-size: 22px;
+    font-size: 30px;
     font-weight: bold;
+    color:
 }
 
 .oxygen-tile {
@@ -752,7 +759,7 @@
 }
 
 .steel {
-    background: linear-gradient(#c19671,rgb(162,113,71));
+    background: linear-gradient(rgb(162,113,71),#593e27);
     color: rgb(73,54,40);
 }
 
@@ -765,7 +772,6 @@
     background: linear-gradient(#555555,black);
     color: yellow;
 }
-
     .titanium:after {
         content: "\2606\FE0E";
         font-weight: normal;
@@ -1167,7 +1173,7 @@
     display: inline-block;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    font-size: 34px;
+    font-size: 32px;
     line-height: 38px;
     vertical-align: middle;
     padding-top: 14px;
