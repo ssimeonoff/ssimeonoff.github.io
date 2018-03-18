@@ -11,12 +11,7 @@
     border-style: outset;
     border-radius: 20px;
 }
-.filterDiv:hover {
-      -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-      transform: scale(1.1);
-      transition-duration: 0.2s;
-}
+
 .price {
     float: left;
     font-family: Arial Narrow, Helvetica, sans-serif;
@@ -198,6 +193,7 @@
 }
 
     .tag-builder:after {
+       border-radius: 50%;
         color: rgb(73,54,40);
         content: "\2617";
         line-height: 35px;
@@ -210,6 +206,25 @@
         -o-transform: scale(2.7,1); /* Opera */
         transform: scale(2.7,1); /* W3C */
     }
+
+    div.tag-builder-resource {
+        background-color: rgb(128,87,0);
+        border-radius: 50%;
+    }
+
+        .tag-builder-resource:after {
+            color: rgb(73,54,40);
+            content: "\2617";
+            line-height: 24px;
+            vertical-align: top;
+            font-size: 13px;
+            display: inline-block;
+            -webkit-transform: scale(2.7,1); /* Safari and Chrome */
+            -moz-transform: scale(2.7,1); /* Firefox */
+            -ms-transform: scale(2.7,1); /* IE 9 */
+            -o-transform: scale(2.7,1); /* Opera */
+            transform: scale(2.7,1); /* W3C */
+        }
 
 .tag-space {
     background-color: black;
@@ -554,7 +569,6 @@
     text-align: center;
     font-size: 16px;
     border-radius: 2px;
-    box-shadow: 0 0 0 1px rgba(0,0,0,0.2);
     box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
 }
 
@@ -739,7 +753,8 @@
     position: relative;
     display: inline-block;
     text-align: center;
-    line-height: 24px;
+    line-height: 25px;
+    margin-top: 5px;
     margin-left: 3px;
     margin-right: 3px;
     margin-bottom: 10px;
@@ -837,15 +852,15 @@
     display: inline-block;
     background-color: white;
     border: 1px solid black;
-    padding-left: 6px;
-    padding-right: 6px;
+    padding-left: 3px;
+    padding-right: 3px;
     font-size: 26px;
     font-weight: normal;
-    border-radius: 50px;
+    border-radius: 50%;
     box-shadow: 0 0 0 1px rgba(0,0,0,0.4), 0 0 0 2px rgba(0,0,0,0.2);
-    line-height: 32px;
+    line-height: 27px;
     margin-left: 2px;
-    margin-top: 4px;
+
 }
 
     .science:after {
@@ -882,6 +897,8 @@
   background: rgb(84,150,201);
   border-radius: 50%;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-size:14px;
+  line-height: 22px;
 }
 
 .card-icon-floater {
@@ -979,7 +996,7 @@
 .earth-resource {
     background:rgb(15,96,151);
     color: white;
-    font-size: 20px;
+    font-size: 24px;
     padding-top: 3px;
     padding-left:2px;
     padding-right:2px;
