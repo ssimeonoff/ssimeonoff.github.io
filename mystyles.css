@@ -690,6 +690,7 @@
         font-weight: normal;
         width:20px;
         padding:5px;
+        padding-top: 3px;
     }
         .city-tile-small:before {
             content: "\1f3d9\FE0E";
