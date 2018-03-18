@@ -42,7 +42,6 @@
     font-weight: bold;
     box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
     background: #cccccc;
-    background: linear-gradient(to right, #aaaaaa, #eeeeee, #eeeeee, #aaaaaa);
     border-radius: 2px;
     border-style: outset;
 }
@@ -501,9 +500,7 @@
 
 
 .description {
-    margin-top: 5px;
     font-size: 11px;
-    text-align: left;
     line-height: 14px;
     font-weight:normal;
 }
@@ -607,7 +604,7 @@
 }
 
 .temperature-tile {
-    background:#ff751a;
+    background:linear-gradient(#ff751a,#ff531a);
     font-size: 26px;
     line-height: 26px;
     font-weight: normal;
@@ -621,7 +618,7 @@
     }
 
 .forest-tile {
-    background: rgb(0,180,0);
+    background: linear-gradient(#0bda0b,#09aa09,#09aa09);
     color: darkgreen;
     line-height:24px;
     vertical-align:middle;
@@ -633,7 +630,7 @@
 }
 
 .ocean-tile {
-    background: #3b9ae3;
+    background: linear-gradient(#3b9ae3,#1970b3);
     padding-top: 14px;
     padding-bottom: 14px;
     color: rgb(46,87,143);
@@ -644,7 +641,7 @@
     }
 
 .ocean-resource {
-    background: #3b9ae3;
+    background: linear-gradient(#3b9ae3,#1970b3);
     color: rgb(46,87,143);
     padding: 2px;
 }
@@ -688,7 +685,7 @@
 
 
 .special-tile {
-    background: rgb(205,162, 130);
+    background:linear-gradient(#c5936d,#a46c41);
     padding-top: 9px;
     padding-bottom: 19px;
     width: 40px;
@@ -755,7 +752,7 @@
 }
 
 .steel {
-    background-color: rgb(162,113,71);
+    background: linear-gradient(#c19671,rgb(162,113,71));
     color: rgb(73,54,40);
 }
 
@@ -765,7 +762,7 @@
     }
 
 .titanium {
-    background-color: black;
+    background: linear-gradient(#555555,black);
     color: yellow;
 }
 
@@ -776,7 +773,7 @@
     }
 
 .plant {
-    background: #09aa09;
+    background: linear-gradient(#0bda0b,#09aa09);
     color: rgb(63,112,58);
     font-weight: normal;
 }
@@ -787,7 +784,7 @@
     }
 
 .energy {
-    background-color: rgb(174,0,255);
+    background: linear-gradient(#cf66ff,rgb(174,0,255));
     color: white;
     font-weight: bold;
     font-size: 18px;
@@ -798,7 +795,7 @@
     }
 
 .heat {
-    background-color: rgb(240,70,47);
+    background:linear-gradient(#f36a58, #ee2a11);
 }
 
     .heat:after {
@@ -809,7 +806,7 @@
 
 
 .microbe {
-    background-color: #bce444;
+    background: linear-gradient(#bce444, #8cb319);
     color: rgb(63,112,58);
     font-weight: normal;
 }
@@ -820,7 +817,7 @@
     }
 
 .animal {
-    background-color: #266020;
+    background: linear-gradient(#36862d,#1f4d19);
     font-weight: normal;
     color: darkseagreen;
 }
