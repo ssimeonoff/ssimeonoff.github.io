@@ -623,7 +623,7 @@
 }
 
 .temperature-tile {
-    background:linear-gradient(#ff751a,#ff531a);
+    background:linear-gradient(#ff4d4d,#ff4d4d,#2d56d2);
     font-size: 26px;
     line-height: 26px;
     font-weight: normal;
