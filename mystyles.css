@@ -1079,7 +1079,7 @@
 /************** Extras ************/
 .red-arrow {
     display: inline-block;
-    font-size: 16px;
+    font-size: 16px
     width:20px;
 }
 
@@ -1229,15 +1229,12 @@
 }
 
 #titleContainer {
-    height: 40px;
+    height: 60px;
+    line-height: 60px;
     display: inline-block;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 32px;
-    line-height: 38px;
-    vertical-align: middle;
-    padding-top: 14px;
-    padding-bottom: 9px;
     border-style: inset;
     background: #eeeeee;
     border-radius: 10px;
@@ -1250,11 +1247,13 @@
 }
 
 .cardsContainer {
+  vertical-align: top;
     text-align: right;
     display: inline-block;
     border-style: inset;
     border-radius: 10px;
-    padding-top: 11px;
+    padding-top: 3px;
+    height:57px;
     padding-right: 10px;
     margin-right:10px;
     background: linear-gradient(to right, rgb(128, 87, 0), rgb(205,162, 130), rgb(205,162, 130), rgb(128, 87, 0));
