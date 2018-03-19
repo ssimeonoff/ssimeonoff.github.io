@@ -805,7 +805,7 @@
     box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
 }
 
-div.resource-tag {
+.resource-tag {
     position: relative;
     display: inline-block;
     text-align: center;
