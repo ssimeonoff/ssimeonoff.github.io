@@ -60,6 +60,7 @@ function filterSelection(id) {
     displayedPreludes=0;
     for (i = 0; i < x.length; i++) {
       w3RemoveClass(x[i], "show");
+      $(x[i]).fadeOut();
       show = true;
       for (j = 0; j < y.length; j++) {
         if (x[i].className.indexOf(y[j].id) > -1) {
@@ -67,6 +68,7 @@ function filterSelection(id) {
         }
         if (show == true) {
           w3AddClass(x[i], "show");
+          $(x[i]).fadeIn();
           if (x[i].classList.contains("corporation")) {
             displayedCorporations++;
           }
