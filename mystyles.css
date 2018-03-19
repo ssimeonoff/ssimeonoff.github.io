@@ -98,8 +98,6 @@
           line-height: 18px;
           width: 16px;
           height:16px;
-          margin-left: -232px;
-          margin-top: 284px;
           text-align: center;
           color: white;
           border-radius: 50%;
@@ -115,14 +113,28 @@
             line-height: 18px;
             width: 16px;
             height:16px;
-            margin-left: -232px;
-            margin-top: 284px;
             text-align: center;
             color: white;
             border-radius: 50%;
             box-shadow: 0 0 0 1px rgba(0,0,0,0.4);
             content: "\25bc";
       }
+
+      .promo-icon:after {
+              position: absolute;
+              border: 1px solid black;
+              background: #444444;
+              font-weight: bold;
+              font-size: 24px;
+              line-height: 18px;
+              width: 16px;
+              height:16px;
+              text-align: center;
+              color: white;
+              border-radius: 50%;
+              box-shadow: 0 0 0 1px rgba(0,0,0,0.4);
+              content: "\2022";
+        }
 
 .project-icon:after {
   margin-left: -232px;
