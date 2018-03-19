@@ -86,6 +86,7 @@
         text-align: center;
         color: white;
         border-radius: 50%;
+        text-shadow: -1px 0 #444444, 0 1px #444444, 1px 0 #444444, 0 -1px #444444;
         box-shadow: 0 0 0 1px rgba(0,0,0,0.4);
         content: "\25b2";
   }
@@ -101,8 +102,9 @@
           text-align: center;
           color: white;
           border-radius: 50%;
+          text-shadow: -1px 0 #444444, 0 1px #444444, 1px 0 #444444, 0 -1px #444444;
           box-shadow: 0 0 0 1px rgba(0,0,0,0.4);
-          content: "\25c0";
+          content: "\25c0\00a0";
     }
     .venus-icon:after {
             position: absolute;
@@ -116,6 +118,7 @@
             text-align: center;
             color: white;
             border-radius: 50%;
+            text-shadow: -1px 0 #444444, 0 1px #444444, 1px 0 #444444, 0 -1px #444444;
             box-shadow: 0 0 0 1px rgba(0,0,0,0.4);
             content: "\25bc";
       }
@@ -132,6 +135,7 @@
               text-align: center;
               color: white;
               border-radius: 50%;
+              text-shadow: -1px 0 #444444, 0 1px #444444, 1px 0 #444444, 0 -1px #444444;
               box-shadow: 0 0 0 1px rgba(0,0,0,0.4);
               content: "\2022";
         }
