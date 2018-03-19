@@ -670,7 +670,7 @@
     font-weight: normal;
     padding-top: 7px;
     padding-bottom:11px;
-    width: 40px;
+    width: 26px;
     text-align: center;
 }
     .temperature-tile:after {
@@ -1027,8 +1027,8 @@
     font-weight: normal;
     padding-top: 1px;
     padding-bottom: 1px;
-    padding-right: 16px;
-    padding-left: 16px;
+    padding-right: 15px;
+    padding-left: 15px;
     border-radius: 16px;
     box-shadow: 0 0 0 1px rgba(0,0,0,0.4), 0 0 0 2px rgba(0,0,0,0.2);
     margin-left: 2px;
