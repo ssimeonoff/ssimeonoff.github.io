@@ -3,7 +3,7 @@ showAll();
 function showAll() {
   var x, i;
   displayedProjects = 100;
-  displayedCorporations = 19;
+  displayedCorporations = 21;
   displayedPreludes = 4;
   myFunction("");
   document.getElementById("totalProjects").innerHTML = displayedProjects;
