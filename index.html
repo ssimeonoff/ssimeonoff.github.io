@@ -85,26 +85,24 @@
       <b>3. Tag Type Buttons</b><br>
       Multiple tag filters can be applied simultaneously -filters by the specific tag.<br><br>
       <b>4. Deck Type Buttons</b><br>
-      ONLY ONE can be active at a time - filters by Base/Corporate/Venus/Prelude decks.<br><br>
+      ONLY ONE can be active at a time - filters by Base/Corporate/Venus/Prelude/Promo decks.<br><br>
       <b>5. Text Field</b><br>
       Applies text search ONLY on the curretly displayed cards(does not change Displayed Card Numbers)<br><br>
-      <b>6. Info Button</b><br>
-      Opens the info box.<br><br>
-      <b>7. Reset Button</b><br>
+      <b>6. Reset Button</b><br>
       Resets all clicked buttons and clears the Text Field.
+
   </div>
 </div>
 
   <!-------------------CARDS LIST----------------------->
   <ul id="myUL">
 
-    <li class="filterDiv corporation  promo">
+    <li class="filterDiv corporation promo">
       <div class="corporationLabel">CORPORATION</div>
       <div class="promo-icon corporation-icon"></div>
       <div class="contentCorporation">
         <div class="corporationEffectBox">
           <div class="corporationEffectBoxLabel">ACTION</div>
-
           <div style="font-size:10px;line-height:12px;margin-top:-5px;margin-bottom:10px;"><span class="red-arrow"></span>ACTION: PLACE A COMMUNITY (PLAYER MARKER) ON A NON-RESERVED AREA ADJACENT TO ONE OF YOUR TILES OR MARKED AREAS</div>
           <div class="corporationEffectBoxLabel">EFFECT</div>
             <div style="font-size:10px;line-height:12px;margin-top:-5px;">EFFECT: MARKED AREAS ARE RESERVED FOR YOU. WHEN YOU PLACE A TILE THERE, GAIN 3 M$</div>
@@ -116,6 +114,28 @@
                 10<div class="resource steel" style="margin-right:20px;"></div>
                 <div class="resource" style="background: linear-gradient(orange, orangered);">&nbsp;</div>*
         <div class="description" style="margin-top:-5px;text-align:center;">(You start with 40 M$ and 10 steel. AS YOUR FIRST ACTION, PLACE A COMMUNITY (PLAYER MARKER) ON A NON-RESERVED AREA.)</div>
+      </div>
+    </li>
+
+    <li class="filterDiv corporation microbeTag  promo">
+      <div class="tag tag1 tag-microbe"></div>
+      <div class="corporationLabel">CORPORATION</div>
+      <div class="promo-icon corporation-icon"></div>
+      <div class="contentCorporation">
+        <div class="corporationEffectBox">
+          <div class="corporationEffectBoxLabel" style="margin-bottom:2px">EFFECT</div>
+          <div class="resource-tag microbe red-outline"></div> : <div class="resource money red-outline">2</div> * OR <div class="resource microbe red-outline"></div> *<br>
+          <div class="resource-tag microbe red-outline" style="margin-top:-4px;"></div> : <div class="resource money" style="margin-right:90px;margin-top:-4px;">2</div> <br>
+          <div class="description" style="margin-top:-3px;text-align:center;">(Effect: when a microbe tag is played, incl. this, THAT PLAYER gains 2 M$, or adds a microbe to THAT card, and you gain 2 M$.)
+        </div>
+        </div>
+        <div style="font-size:29px;font-weight:bold; width:109px;background:#eeeeee;box-shadow: 0 0 0 1px rgba(0,0,0,0.2), 3px 3px 3px grey;margin-left:19px;"><div style="margin-left:2px"> SPLI<span style="color:red">C</span>E</div>
+                    <div STYLE="height:3px;background:red;margin-top:-3px;"></div>
+                    <div STYLE="font-size:10px">TACTICAL GENOMICS</div>
+                </div>
+                <div class="resource money" style="margin-left:60px;margin-right:25px;">44</div>
+                <div class="resource card" style="margin-left:20px;"></div>
+        <div class="description" style="margin-top:0px;text-align:center;">(You start with 44 M$. As your first action, reveal cards until you have revealed a microbe tag. Take that card into hand, and discard the rest.)</div>
       </div>
     </li>
 
@@ -281,7 +301,7 @@
       <div class="contentCorporation">
         <div class="corporationEffectBox">
           <div class="corporationEffectBoxLabel">EFFECT</div>
-          <div class="production earth-resource"></div> :
+          <div class="resource-tag earth-resource"></div> :
           <div class="resource money">-3</div>
           <div class="description" style="text-align:center;margin-top:0px;">
             (Effect: When playing an EArth card, you pay 3 M$ less for it.)
@@ -347,7 +367,7 @@
       <div class="contentCorporation">
         <div class="corporationEffectBox">
           <div class="corporationEffectBoxLabel">EFFECT</div>
-          <div class="resource energy-resource"></div>* :
+          <div class="resource-tag energy"></div>* :
           <div class="resource money">-3</div>
           <div class="description" style="text-align:center;margin-top:0px;">
             (Effect: When playing a power card OR THE STANDARD PROJECT POWER PLANT, you pay 3 M$ less for it.)
@@ -378,7 +398,7 @@
       <div class="contentCorporation">
         <div class="corporationEffectBox">
           <div class="corporationEffectBoxLabel">EFFECT</div>
-          <span class="jovian" style="border: 1px solid red;"></span>&nbsp;:
+          <span class="resource-tag jovian" style="border: 1px solid red;"></span>&nbsp;:
           <div class="production-box">
             <div class="production money">1</div>
           </div>
@@ -522,7 +542,7 @@
             <div class="contentCorporation ">
                 <div class="corporationEffectBox ">
                     <div class="corporationEffectBoxLabel ">EFFECT</div>
-                    <div class="resource earth-resource"></div> : <div class="resource card"></div>
+                    <div class="resource-tag earth-resource"></div> : <div class="resource card"></div>
                     <div class="description " style="text-align:center;margin-top:0px; ">
                         (Effect: When you play an Earth tag, including this, draw a card.)
                     </div>
@@ -571,7 +591,7 @@
             <div class="contentCorporation ">
                 <div class="corporationEffectBox ">
                     <div class="corporationEffectBoxLabel ">EFFECT</div>
-                    <div class="production event-resource"></div> : <div class="production money">2</div>
+                    <div class="resource-tag event-resource"></div> : <div class="production money">2</div>
                     <div class="description " style="text-align:center;margin-top:0px; ">
                         (Effect: Each time you play an event, you gain 3 M$.)
                     </div>
@@ -834,9 +854,9 @@
             <div class="tag tag1 tag-science "></div>
             <div class="number ">005</div>
             <div class="content ">
-                <div class="points ">3/<div class="science "></div></div>
+                <div class="points points-big">3/<div class="resource-tag science"></div></div>
                 <div class="requirements requirements-max ">max 6% O2</div>
-                <div class=" "><span class=" money resource ">1</span> <span class="red-arrow "></span> <span class="microbe resource "></span>*  :  <div class="science "></div> </div>
+                <div class=" "><span class=" money resource ">1</span> <span class="red-arrow "></span> <span class="microbe resource "></span>*  :  <div class="resource-tag science "></div> </div>
                 <div class="description ">
                     (Action: Spend 1 M$ to reveal the top card of the draw deck. If that card has a Microbe tag, add a Science resource here.)<br>
                     (3 VPs if you have one or more Science resources here.)
@@ -954,7 +974,7 @@
             <div class="tag tag2 tag-jovian "></div>
             <div class="number ">012</div>
             <div class="content ">
-                <div class="points ">1/<span class="jovian "></span></div>
+                <div class="points points-big">1/<span class="jovian resource-tag "></span></div>
                 <div class=" money resource ">12</div> (<span class="titanium " style="margin:0px;padding:1px;padding-top:3px;border-radius:5px; "></span>)
                 <span class="red-arrow "></span> <div class="ocean-tile tile "></div>
                 <div class="description ">
@@ -1207,7 +1227,7 @@
             <div class="corporate-icon project-icon"></div>
             <div class="content ">
                 <div class="points points-big ">1</div>
-                <div class="production space-resource"></div> : <div class="money resource ">- 2</div>
+                <div class="resource-tag space-resource"></div> : <div class="money resource ">- 2</div>
                 <div class="description ">
                     (Effect: When you play a Space card, you pay 2 M$ less for it.)
                 </div>
@@ -1315,7 +1335,7 @@
             <div class="tag tag1 tag-space "></div>
             <div class="number ">031</div>
             <div class="content ">
-                <div class="production space-resource "></div><div class="production event-resource "></div> : <div class="resource money ">3</div><div class="resource heat "></div><div class="resource heat "></div><div class="resource heat "></div>
+                <div class="resource-tag space-resource "></div> <div class="resource-tag event-resource "></div> : <div class="resource money ">3</div><div class="resource heat "></div><div class="resource heat "></div><div class="resource heat "></div>
                 <div class="description ">
                     (Effect: When you play a Space Event, you gain 3 M$ and 3 heat.)
                 </div>
@@ -1418,7 +1438,7 @@
             <div class="number ">037</div>
             <div class="content ">
                 <div class="production-box production-box-size3">
-          <div class="plant production" style="margin-left:25px"></div> OR <br> 3<div class="plant production" style="border-radius:50%;padding-top:2px;"></div> : 4<div class="plant production"></div>
+          <div class="production plant" style="margin-left:25px"></div> OR <br> 3 <div class="plant resource-tag"></div> : 4<div class="plant production"></div>
         </div><br>
         <div class="tile rating"></div>
         <div class="tile rating"></div>
@@ -1673,7 +1693,7 @@
           <div class="content">
             <div class="points points-big">1</div>
             <div class="production-box production-box-size2a">
-              <div class="production money">1</div> / <div class="production earth-resource"></div>
+              <div class="production money">1</div> / <div class="resource-tag earth-resource"></div>
             </div>
             <div class="description">
               (Increase your M$ production 1 step for each Earth tag you have.)
@@ -2077,7 +2097,7 @@
             <div class="corporate-icon project-icon"></div>
             <div class="content ">
               <div class="points points-big">1</div>
-                <div class="science"></div> : - <span class="card resource "></span> + <span class="card resource "></span>
+                <div class="resource-tag science"></div> : - <span class="card resource "></span> + <span class="card resource "></span>
                 <div class="description ">
                     (Effect: When you play a Science tag, including this, you may discard a card from hand to draw a card.)
                 </div>
@@ -2093,7 +2113,7 @@
             <div class="number ">074</div>
             <div class="corporate-icon project-icon"></div>
             <div class="content ">
-                <div class="plant resource" style="border-radius:50%;"></div> / <div class="microbe resource" style="border-radius:50%;"></div> / <div class="animal resource" style="border-radius:50%;"></div>: <br>
+                <div class="resource-tag plant"></div> / <div class="resource-tag microbe"></div> / <div class="resource-tag animal"></div> : <br><br>
                 <div class="plant resource"></div> / <div class="microbe resource"></div>* / <div class="animal resource"></div>*
                 <div class="description ">
                     (Effect: When you play a  plant, microbe, or an animal tag, including this, gain 1 plant or add 1 resource to THAT CARD.)
@@ -2181,7 +2201,7 @@
             <div class="corporate-icon project-icon"></div>
             <div class="content ">
               <div class="requirements">4 Science</div>
-                <div class="production space-resource "></div> : <div class="money resource ">- 2</div>
+                <div class="resource-tag space-resource"></div> : <div class="money resource ">- 2</div>
                 <div class="description ">
                     (Effect: When you play a Space card, you pay 2 M$ less for it.)
                 </div>
@@ -2221,7 +2241,7 @@
             <div class="tag tag3 tag-jovian "></div>
             <div class="number ">081</div>
             <div class="content ">
-                <div class="points ">1/<span class="jovian "></span></div>
+                <div class="points points-big ">1/<span class="resource-tag jovian"></span></div>
                 <div class="tile city-tile"></div>*
                 <div class="description ">
                     (Place a city tile ON THE RESERVED AREA. 1 VP per Jovian tag you have.)
@@ -2283,7 +2303,7 @@
             <div class="number ">085</div>
             <div class="corporate-icon project-icon"></div>
             <div class="content ">
-              <div class="points">1/<div class="tile city-tile-small" "></div></div>
+              <div class="points">1/<div class="tile city-tile-small"></div></div>
               <div class="production-box production-box-size1a">
                   <div class="production-prefix">&#x2796;&#xFE0E;</div><div class="energy production"></div>
                   <div class="production-prefix">&#x2795;&#xFE0E;</div><div class="money production">4</div>
@@ -2307,7 +2327,7 @@
             <div class="number ">086</div>
             <div class="corporate-icon project-icon"></div>
             <div class="content ">
-              COPY A &nbsp; <div class="production-box"><div  class="production tag-builder-resource"></div></div>
+              COPY A &nbsp; <div class="production-box"><div  class="resource-tag builder-resource"></div></div>
               <div class="description">
               (Duplicate only the production box of one of the your building cards.)
               </div>
@@ -2412,7 +2432,7 @@
             <div class="number ">092</div>
             <div class="corporate-icon project-icon"></div>
             <div class="content ">
-                <div class="points ">1/<span class="jovian "></span></div>
+                <div class="points points-big">1/<span class="jovian resource-tag "></span></div>
                 <div class="production-box production-box-size3">
                 <div class="production titanium"></div><div class="production titanium"></div><div class="production money">2</div>
                 </div>
@@ -2450,7 +2470,7 @@
             <div class="corporate-icon project-icon"></div>
             <div class="content ">
               <div class="requirements">5 Science</div>
-                <div class="production space-resource"></div> : <div class="money resource ">- 2</div>
+                <div class="resource-tag space-resource"></div> : <div class="money resource ">- 2</div>
                 <div class="description ">
                     (Effect: When you play a Space card, you pay 2 M$ less for it.)
                 </div>
@@ -2472,8 +2492,8 @@
             <div class="number ">095</div>
             <div class="corporate-icon project-icon"></div>
             <div class="content ">
-              <div class="points">2/<div class="science" style="border-radius:2px;"></div></div>
-                6 <div class="energy resource "></div> <div class="red-arrow "></div> <div class="science" style="border-radius:2px;"></div>
+              <div class="points points-big">2/<div class="science resource"></div></div>
+                6 <div class="energy resource "></div> <div class="red-arrow "></div> <div class="resource science"></div>
                 <div class="description ">
                     (Action: Spend 6 Energy to add a science resource to this card.)
                 </div><br><br><br>
@@ -2542,7 +2562,7 @@
           <div class="corporate-icon project-icon"></div>
           <div class="content">
             <div class="production-box production-box-size2a">
-              <div class="production money">1</div> / <div class="production space-resource red-outline"></div>
+              <div class="production money">1</div> / <div class="resource-tag space-resource red-outline"></div>
             </div>
             <div class="description">
               (Increase your M$ production 1 step for each space tag your OPPONENTS have.)

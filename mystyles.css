@@ -248,17 +248,16 @@
         transform: scale(2.7,1); /* W3C */
     }
 
-    div.tag-builder-resource {
+    .builder-resource {
         background-color: rgb(128,87,0);
         border-radius: 50%;
     }
-
-        .tag-builder-resource:after {
+        .builder-resource:after {
+            vertical-align: top;
             color: rgb(73,54,40);
             content: "\2617";
-            line-height: 24px;
-            vertical-align: top;
             font-size: 13px;
+            line-height: 24px;
             display: inline-block;
             -webkit-transform: scale(2.7,1); /* Safari and Chrome */
             -moz-transform: scale(2.7,1); /* Firefox */
@@ -806,6 +805,16 @@
     box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
 }
 
+.resource-tag {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+      box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
+}
 
 .money {
     background-color: rgb(255,228,4);
@@ -893,20 +902,16 @@
 .science {
     display: inline-block;
     background-color: white;
-    border: 1px solid black;
-    padding-left: 3px;
-    padding-right: 3px;
     font-size: 26px;
     font-weight: normal;
-    border-radius: 50%;
-    box-shadow: 0 0 0 1px rgba(0,0,0,0.4), 0 0 0 2px rgba(0,0,0,0.2);
-    line-height: 27px;
-    margin-left: 2px;
+    vertical-align: middle;
+
 
 }
 
     .science:after {
         content: "\269b";
+        text-shadow: none;
     }
 
 .card {
@@ -979,16 +984,9 @@
     background-color: black;
     background: linear-gradient(rgb(100,100,100),black,black);
     color: yellow;
-    border-radius: 50%;
     font-weight: normal;
-    font-size: 22px;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    padding-left: 1px;
-    padding-right: 1px;
-    box-shadow: 0 0 0 1px rgba(0,0,0,0.4), 0 0 0 2px rgba(0,0,0,0.2);
+    font-size: 20px;
 }
-
     .space-resource:after {
         content: "\2734";
     }
@@ -996,19 +994,9 @@
 
 .event-resource {
     background-color: rgb(255,230,35);
-    border-radius: 50%;
-    font-weight: normal;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    padding-left: 1px;
-    padding-right: 1px;
-    font-size: 22px;
-    box-shadow: 0 0 0 1px rgba(0,0,0,0.4), 0 0 0 2px rgba(0,0,0,0.2);
+    font-size: 18px;
 }
-
     .event-resource:after {
-        padding-left: 3px;
-        padding-right: 3px;
         content: "\2B07\FE0E";
         vertical-align: bottom;
         display: inline-block;
@@ -1022,47 +1010,20 @@
 .jovian {
     background-color: rgb(235,200,148);
     background: linear-gradient(rgb(235,200,148),beige,rgb(235,200,148),beige,rosybrown,rgb(235,200,148),beige,beige,rgb(235,200,148),rosybrown,rgb(235,200,148),beige,rgb(235,200,148),rgb(235,200,148), rgb(235,200,148));
-    border: 1px solid black;
-    font-size: 24px;
-    font-weight: normal;
-    padding-top: 1px;
-    padding-bottom: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
-    border-radius: 16px;
-    box-shadow: 0 0 0 1px rgba(0,0,0,0.4), 0 0 0 2px rgba(0,0,0,0.2);
-    margin-left: 2px;
-    line-height: 42px;
+}
+.jovian:after {
+  content: "\00a0";
 }
 
 .earth-resource {
     background:rgb(15,96,151);
     color: white;
-    font-size: 24px;
-    padding-top: 3px;
-    padding-left:2px;
-    padding-right:2px;
-    padding-bottom: 3px;
-    border-radius: 50%;
-}
-
+    font-size: 20px;
+    }
     .earth-resource:after {
         content: "\1f30f\FE0E";
     }
 
-.energy-resource {
-    background-color: rgb(174,0,255);
-    background: linear-gradient(#d780ff,rgb(174,0,255),rgb(174,0,255));
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    border-radius: 50%;
-    padding:2px;
-}
-
-    .energy-resource:after {
-        content: "\00a0\26A1\FE0E\00a0";
-    }
 .rating {
     background-color: rgb(240,100,00);
     background: linear-gradient(orange, orangered);
@@ -1071,7 +1032,6 @@
     padding-left: 6px;
     vertical-align: bottom;
 }
-
     .rating:after {
         content: "\1F30F\FE0E";
     }
