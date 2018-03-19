@@ -70,8 +70,6 @@
         line-height: 16px;
         width: 16px;
         height:16px;
-        //margin-left: -232px;
-        //margin-top: 284px;
         text-align: center;
         color: white;
         border-radius: 50%;
@@ -124,6 +122,12 @@
     border-radius: 3px;
     box-shadow: 0 0 0 1px rgba(0,0,0,0.6);
 }
+
+.project-icon:after {
+  margin-left: -232px;
+  margin-top: 284px;
+}
+
 .corporation-icon:after {
       margin-top: 47px;
       margin-left: 214px;
@@ -133,6 +137,7 @@
       margin-top: -9px;
       margin-left: -9px;
 }
+
 .tag {
     box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
     position: absolute;
