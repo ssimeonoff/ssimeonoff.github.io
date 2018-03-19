@@ -1254,8 +1254,7 @@
     border-radius: 10px;
     padding-top: 3px;
     height:57px;
-    padding-right: 10px;
-    margin-right:10px;
+    padding-right: 12px;
     background: linear-gradient(to right, rgb(128, 87, 0), rgb(205,162, 130), rgb(205,162, 130), rgb(128, 87, 0));
 }
 
