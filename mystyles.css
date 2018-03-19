@@ -84,7 +84,7 @@
           background-color: rgb(235,118,171);;
           font-size: 10px;
           font-weight: bold;
-          line-height: 17px;
+          line-height: 18px;
           width: 16px;
           height:16px;
           margin-left: -232px;
@@ -127,6 +127,11 @@
 .corporation-icon:after {
       margin-top: 47px;
       margin-left: 214px;
+}
+
+.button-icon:after {
+      margin-top: -9px;
+      margin-left: -9px;
 }
 .tag {
     box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
