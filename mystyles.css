@@ -947,6 +947,14 @@
   font-size:14px;
   line-height: 22px;
 }
+.card-icon-microbe {
+  background: linear-gradient(#bce444, #8cb319);
+  color: rgb(63,112,58);
+  border-radius: 50%;
+  font-size:14px;
+  line-height: 20px;
+  font-weight: normal;
+}
 
 .card-icon-floater {
   background: rgb(255,204,100);
