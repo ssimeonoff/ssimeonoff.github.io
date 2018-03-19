@@ -62,6 +62,19 @@
     border-style: outset;
 }
 
+.power-icon:after {
+  content: "\23FB";
+  position: absolute;
+  border: 1px solid black;
+  line-height: 16px;
+  width: 16px;
+  height:16px;
+  text-align: center;
+  color: white;
+  border-radius: 50%;
+}
+
+
 .standard-icon:after {
   content: "\00a0";
   position: absolute;
