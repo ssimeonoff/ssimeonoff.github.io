@@ -62,10 +62,11 @@
     border-style: outset;
 }
 
-.power-icon:after {
-  content: "\23FB";
+.reset-icon:after {
+  content: "X";
+  font-size: 20px;
   position: absolute;
-  border: 1px solid black;
+  border: 1px solid #cc3333;
   line-height: 16px;
   width: 16px;
   height:16px;
