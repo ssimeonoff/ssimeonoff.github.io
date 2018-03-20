@@ -599,6 +599,10 @@
     width: 130px;
 }
 
+.production-box-size4 {
+    width: 150px;
+}
+
 .production {
     display: inline-block;
     position: relative;

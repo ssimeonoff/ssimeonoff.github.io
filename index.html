@@ -57,7 +57,7 @@
       <button id="venusTag" class="btn2 tag-venus" onclick="filterSelection(id)"></button>
     </div>
 
-    <div id="myBtnContainer3" style="display:inline-block">
+    <div id="myBtnContainer3" style="display:inline-block;">
       <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by text ..." title="Type in a name">
       <button id="reset" class="btn4 reset-icon button-icon" onclick="clearInput();showAll();" style="margin-right: 114px;"></button>
       <button id="standard" class="btn3 standard-icon button-icon" onclick="filterSelection(id)"></button>
@@ -66,8 +66,6 @@
       <button id="prelude" class="btn3 prelude-icon button-icon" onclick="filterSelection(id)" ></button>
       <button id="promo" class="btn3 promo-icon button-icon" onclick="filterSelection(id)"></button>
       <button id="info" class="btn3" style="background:#444444;margin-left: 100px;width: 25px;height: 25px;line-height: 20px;">i</button>
-
-
     </div>
   </div>
 
@@ -77,14 +75,14 @@
     <span class="close">&times;</span>
       <b>All buttons have ON/OFF states (except the Reset and Info buttons)<br>
       Clicked button applies "AND" filtering logic.</b><br><br>
-      <b>1. Displayed Card Numbers</b><br>
-      Shows how many Projects/Corporations/Preludes are currentlydisplayed below. <br>
+      <b>1. Displayed Card Numbers</b> (top right corner)<br>
+      Shows how many Projects/Corporations/Preludes are currently displayed below. <br>
       Applying filters respectively changes those numbers.<br><br>
-      <b>2. Card Type buttons</b><br>
+      <b>2. Card Type buttons</b><br> (rectangles buttons)
       ONLY ONE can be active at a time -filters by Automated/Active/Event/Prelude types.<br><br>
-      <b>3. Tag Type Buttons</b><br>
+      <b>3. Tag Type Buttons</b><br> (big circle buttons)
       Multiple tag filters can be applied simultaneously -filters by the specific tag.<br><br>
-      <b>4. Deck Type Buttons</b><br>
+      <b>4. Deck Type Buttons</b><br> (5 small circled buttons)
       ONLY ONE can be active at a time - filters by Base/Corporate/Venus/Prelude/Promo decks.<br><br>
       <b>5. Text Field</b><br>
       Applies text search ONLY on the curretly displayed cards(does not change Displayed Card Numbers)<br><br>
@@ -125,7 +123,7 @@
         <div class="corporationEffectBox">
           <div class="corporationEffectBoxLabel" style="margin-bottom:2px">EFFECT</div>
           <div class="resource-tag microbe red-outline"></div> : <div class="resource money red-outline">2</div> * OR <div class="resource microbe red-outline"></div> *<br>
-          <div class="resource-tag microbe red-outline" style="margin-top:-4px;"></div> : <div class="resource money" style="margin-right:92px;margin-top:-4px;">2</div> <br>
+          <div class="resource-tag microbe red-outline" style="margin-top:-4px;"></div> : <div class="resource money" style="margin-right:91px;margin-left:5px;margin-top:-4px;">2</div> <br>
           <div class="description" style="margin-top:-3px;text-align:center;">(Effect: when a microbe tag is played, incl. this, THAT PLAYER gains 2 M$, or adds a microbe to THAT card, and you gain 2 M$.)
         </div>
         </div>
@@ -1070,14 +1068,14 @@
             <div class="content ">
                 <div class="points points-big ">1</div>
                 <div class="requirements requirements-max ">max 7% O2</div>
-                <div class="production-box production-box-size1a ">
+                <div class="production-box production-box-size1a " style="margin-bottom:5px;">
                     <div class="production-prefix ">&#x2796;&#xFE0E;</div><div class="energy production "></div>
                     <div class="production-prefix ">&#x2795;&#xFE0E;</div><div class="money production ">3</div>
                 </div>
-                <div class="tile city-tile " style="margin-left:20px "></div><br>
+                <div class="tile city-tile " style="margin-left:20px;margin-bottom:5px;"></div><br>
                 <div class="plant resource "></div><div class="plant resource "></div><div class="plant resource "></div>
-                <div class="description " style="margin-top:-5px;font-size:10px;text-align: left">
-                    (Oxygen must be 7% or less. Gain 3 Plants and place a City tile.
+                <div class="description " style="margin-top:-5px;font-size:11px;text-align: left">
+                    (Oxygen must be 7% or less. Gain 3 plants. Place a City tile.
                     Decrease<br>your Energy production 1 <br>step and increase your <br>M$ production 3 steps.)
                 </div>
             </div>
@@ -1155,7 +1153,7 @@
                 : <span class="money resource ">-1</span>
                 <div class="description ">
                     (Effect: When you play a card, you pay 1 M$ less for it.)
-                </div>
+                </div><br><br>
                 <div class="tile city-tile "></div>
                 <div class="description ">
                     (Place a ciy tile NEXT TO NO OTHER TILE.)
@@ -2180,7 +2178,7 @@
 
         <!--77-->
         <li class="filterDiv automated scienceTag energyTag spaceTag standard ">
-            <div class="title background-color-active ">Solar Wind Power</div>
+            <div class="title background-color-automated ">Solar Wind Power</div>
             <div class="price ">11</div>
             <div class="tag tag1 tag-energy "></div>
             <div class="tag tag2 tag-space "></div>
@@ -2303,7 +2301,7 @@
         </li>
 
         <!--84-->
-        <li class="filterDiv automated spaceTag sciencTag corporate ">
+        <li class="filterDiv automated spaceTag scienceTag corporate ">
             <div class="title background-color-automated ">Trans-Neptune Probe</div>
             <div class="price ">6</div>
             <div class="tag tag1 tag-space "></div>
@@ -2608,6 +2606,269 @@
             </div>
           </div>
         </li>
+
+        <!--101-->
+        <li class="filterDiv active builderTag standard ">
+            <div class="title background-color-active ">Ironworks</div>
+            <div class="price ">11</div>
+            <div class="tag tag1 tag-builder "></div>
+            <div class="number ">101</div>
+            <div class="content ">
+                4 <span class="energy resource "></span> <span class="red-arrow "></span>
+                <div class="steel resource "></div><div class="tile oxygen-tile"></div>
+                <div class="description ">
+                    (Action: Spend 4 energy to gain 1 steel and increase oxygen 1 step.)
+                </div>
+            </div>
+        </li>
+
+        <!--102-->
+        <li class="filterDiv automated energyTag standard">
+          <div class="title background-color-automated">Power Grid</div>
+          <div class="price">18</div>
+          <div class="tag tag1 tag-energy"></div>
+          <div class="number">102</div>
+          <div class="content">
+            <div class="production-box production-box-size2a">
+              <div class="energy production"></div> / <div class="energy resource-tag"></div>
+            </div>
+            <div class="description">
+              (Increase your Energy production step for each Power tag you have, including this.)
+            </div>
+          </div>
+        </li>
+
+        <!--103-->
+        <li class="filterDiv active builderTag standard ">
+            <div class="title background-color-active ">Steelworks</div>
+            <div class="price ">15</div>
+            <div class="tag tag1 tag-builder "></div>
+            <div class="number ">103</div>
+            <div class="content ">
+                4 <span class="energy resource "></span> <span class="red-arrow "></span>
+                <div class="steel resource "></div><div class="tile oxygen-tile"></div> <div class="tile oxygen-tile" style="margin-left:0px;"></div>
+                <div class="description ">
+                    (Action: Spend 4 energy to gain 2 steel and increase oxygen 1 step.)
+                </div>
+            </div>
+        </li>
+
+        <!--104-->
+        <li class="filterDiv active builderTag standard ">
+            <div class="title background-color-active ">Ore Processor</div>
+            <div class="price ">13</div>
+            <div class="tag tag1 tag-builder "></div>
+            <div class="number ">104</div>
+            <div class="content ">
+                4 <span class="energy resource "></span> <span class="red-arrow "></span>
+                <div class="titanium resource "></div><div class="tile oxygen-tile"></div>
+                <div class="description ">
+                    (Action: Spend 4 energy to gain 1 titanium and increase oxygen 1 step.)
+                </div>
+            </div>
+        </li>
+
+        <!--105-->
+        <li class="filterDiv active earthTag corporate ">
+            <div class="title background-color-active ">Earth Office</div>
+            <div class="price ">1</div>
+            <div class="tag tag1 tag-earth "></div>
+            <div class="number ">105</div>
+            <div class="corporate-icon project-icon"></div>
+            <div class="content ">
+                <div class="resource-tag earth-resource"></div> : <div class="money resource ">- 3</div>
+                <div class="description ">
+                    (Effect: When you play an Earth card, you pay 3 M$ less for it.)
+                </div>
+            </div>
+        </li>
+
+        <!--106-->
+        <li class="filterDiv automated earthTag corporate">
+          <div class="title background-color-automated">Acquired Company</div>
+          <div class="price">10</div>
+          <div class="tag tag1 tag-earth"></div>
+          <div class="number">106</div>
+          <div class="corporate-icon project-icon"></div>
+          <div class="content">
+            <div class="production-box">
+              <div class="money production">3</div>
+            </div>
+            <div class="description">
+              (Increase your M$ production 3 steps.)
+            </div>
+          </div>
+        </li>
+
+        <!--106-->
+        <li class="filterDiv automated earthTag corporate">
+          <div class="title background-color-automated">Media Archives</div>
+          <div class="price">8</div>
+          <div class="tag tag1 tag-earth"></div>
+          <div class="number">107</div>
+          <div class="corporate-icon project-icon"></div>
+          <div class="content">
+              <div class="money resource">1</div> / <div class="resource-tag event-resource red-outline"></div>
+            <div class="description">
+              (Gain 1 M$ for each event EVER PLAYED by all players.)
+            </div>
+          </div>
+        </li>
+
+        <!--108-->
+        <li class="filterDiv automated cityTag builderTag standard ">
+            <div class="title background-color-automated ">Open City</div>
+            <div class="price ">23</div>
+            <div class="tag tag1 tag-builder "></div>
+            <div class="tag tag2 tag-city "></div>
+            <div class="number ">108</div>
+            <div class="content ">
+                <div class="points points-big ">1</div>
+                <div class="requirements">12% O2</div>
+                <div class="production-box production-box-size1a " style="margin-bottom:5px;">
+                    <div class="production-prefix ">&#x2796;&#xFE0E;</div><div class="energy production "></div>
+                    <div class="production-prefix ">&#x2795;&#xFE0E;</div><div class="money production ">4</div>
+                </div>
+                <div class="tile city-tile " style="margin-left:20px;margin-bottom:5px; "></div><br>
+                <div class="plant resource "></div><div class="plant resource "></div>
+                <div class="description " style="margin-top:-5px;font-size:11px;text-align: left">
+                    (Requires 12% oxygen. Gain 2 plants. Place a City tile.
+                    Decrease<br>your Energy production 1 <br>step and increase your <br>M$ production 4 steps.)
+                </div>
+            </div>
+        </li>
+
+        <!--109-->
+        <li class="filterDiv active earthTag corporate ">
+            <div class="title background-color-active ">Media Gorup</div>
+            <div class="price ">6</div>
+            <div class="tag tag1 tag-earth "></div>
+            <div class="number ">109</div>
+            <div class="corporate-icon project-icon"></div>
+            <div class="content ">
+                <div class="resource-tag event-resource"></div> : <div class="money resource ">3</div>
+                <div class="description ">
+                    (Effect: After you play an event card, you gain 3M$.)
+                </div>
+            </div>
+        </li>
+
+        <!--110-->
+        <li class="filterDiv active earthTag corporate ">
+            <div class="title background-color-active ">Business Network</div>
+            <div class="price ">4</div>
+            <div class="corporate-icon project-icon"></div>
+            <div class="tag tag1 tag-earth "></div>
+            <div class="number ">006</div>
+            <div class="content ">
+                <span class="red-arrow "></span> <span style="font-size:12px; ">ACTION: LOOK AT THE TOP CARD AND EITHER BUY IT OR DISCARD IT</span>
+                <br><br>
+                <div class="production-box"><div class="production money">-1</div></div>
+                <div class="description " >
+                    (Decrease your M$ production 1 step.)
+                </div>
+            </div>
+        </li>
+
+
+        <!--111-->
+        <li class="filterDiv events earthTag eventTag corporate ">
+            <div class="title background-color-events ">Bribed Committee</div>
+            <div class="price ">7</div>
+            <div class="corporate-icon project-icon"></div>
+            <div class="tag tag1 tag-event "></div>
+            <div class="tag tag2 tag-earth "></div>
+            <div class="number ">111</div>
+            <div class="content ">
+              <div class="content ">
+                <span style="font-size:12px; ">LOOK AT THE TOP 4 CARDS FROM THE DECK. TAKE 2 OF THEM INTO HAND AND DISCARD THE OTHER 2</span>
+              </div>
+            </div>
+        </li>
+
+        <!--112-->
+        <li class="filterDiv events earthTag eventTag corporate ">
+            <div class="title background-color-events ">Business Contacts</div>
+            <div class="price ">7</div>
+            <div class="corporate-icon project-icon"></div>
+            <div class="tag tag1 tag-event "></div>
+            <div class="tag tag2 tag-earth "></div>
+            <div class="number ">112</div>
+            <div class="content ">
+              <div class="points points-big">-2</div>
+              <div class="tile rating"></div> <div class="tile rating"></div>
+            </div>
+
+        </li>
+
+        <!--113-->
+        <li class="filterDiv automated builderTag energyTag standard ">
+            <div class="title background-color-automated ">Solar Power</div>
+            <div class="price ">11</div>
+            <div class="tag tag1 tag-builder "></div>
+            <div class="tag tag2 tag-energy "></div>
+            <div class="number ">113</div>
+            <div class="content ">
+              <div class="points points-big">1</div>
+                <div class="production-box ">
+                    <div class="energy production "></div>
+                </div>
+                <div class="description ">
+                    (Increase your Energy production 1 step.)
+                </div>
+            </div>
+        </li>
+
+        <!--114-->
+        <li class="filterDiv automated scienceTag standard">
+            <div class="title background-color-automated ">Breathing Filters</div>
+            <div class="price ">11</div>
+            <div class="tag tag1 tag-science "></div>
+            <div class="number ">114</div>
+            <div class="content ">
+                <div class="points points-big ">2</div>
+                <div class="requirements">7% O2</div>
+                <div class="description ">
+                    (Requires 7% oxygen.)
+                </div>
+            </div>
+        </li>
+
+        <!--115-->
+        <li class="filterDiv automated scienceTag standard">
+            <div class="title background-color-automated ">Artificial Photosynthesis</div>
+            <div class="price ">12</div>
+            <div class="tag tag1 tag-science "></div>
+            <div class="number ">115</div>
+            <div class="content ">
+              <div class="production-box production-box-size4">
+                <div class="production plant"></div> OR <div class="production energy"></div><div class="production energy"></div>
+              </div>
+                <div class="description ">
+                    (Increase your plant production 1 step or your energy production 2 steps.)
+                </div>
+            </div>
+        </li>
+
+        <!--116-->
+        <li class="filterDiv automated builderTag standard">
+          <div class="title background-color-automated">Artificial Lake</div>
+          <div class="price">15</div>
+          <div class="tag tag1 tag-builder "></div>
+          <div class="number">116</div>
+          <div class="content">
+            <div class="points points-big">1</div>
+            <div class="requirements">-6 C</div>
+            <div class="tile ocean-tile"></div>*
+            <div class="description">
+              (Requires -6 C or warmer. Place 1 ocean tile ON AN AREA NOT RESERVED FOR OCEAN.)
+            </div>
+          </div>
+        </li>
+
+
+
+
                 <!--ended
                     <li class="filterDiv standard  ">
                         <div class="title "></div>
