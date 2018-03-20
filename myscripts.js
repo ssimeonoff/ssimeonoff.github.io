@@ -96,8 +96,10 @@ function myFunction(id) {
   for (i = 0; i < li.length; i++) {
     a = li[i];
     if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[i].fadeIn;
       li[i].style.display = "";
     } else {
+      li[i].fadeOut;
       li[i].style.display = "none";
     }
   }
