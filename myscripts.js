@@ -2,7 +2,7 @@ showAll();
 
 function showAll() {
   var x, i;
-  displayedProjects = 128;
+  displayedProjects = 151;
   displayedCorporations = 22;
   displayedPreludes = 4;
   myFunction("");
