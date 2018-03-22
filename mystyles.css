@@ -1042,7 +1042,7 @@
     font-size: 24px;
     padding-bottom: 8px;
     padding-left: 6px;
-    vertical-align: bottom;
+    vertical-align: middle;
 }
     .rating:after {
         content: "\1F30F\FE0E";
