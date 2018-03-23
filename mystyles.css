@@ -732,6 +732,7 @@
         background-color: rgb(190,190,190);
         color: rgb(50,50,50);
         font-weight: normal;
+        vertical-align: middle;
         width:20px;
         padding:5px;
         padding-top: 3px;
@@ -825,7 +826,7 @@
     background: linear-gradient(rgb(255,208,4),rgb(255,255,104),rgb(255,208,4),rgb(255,208,4));
     font-weight: bold;
     border-radius: 5px;
-    padding-top:1px;
+    padding-top:2px;
 }
 
 .steel {
