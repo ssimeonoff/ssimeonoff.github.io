@@ -673,7 +673,7 @@
     font-weight: normal;
     padding-top: 7px;
     padding-bottom:11px;
-    width: 26px;
+    width: 30px;
     text-align: center;
 }
     .temperature-tile:after {
@@ -942,7 +942,8 @@
   margin-top: -14px;
   width: 20px;
   height: 20px;
-  box-shadow: 0 0 0 1px rgba(0,0,0,0.4), 0 0 0 2px rgba(0,0,0,0.2);
+  line-height: 20px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.6);
 }
 
 .card-icon-venus {
@@ -966,6 +967,22 @@
   color:white;
   font-size: 14px;
   border-radius: 2px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.card-icon-space {
+  background: black;
+  color:yellow;
+  font-size: 12px;
+  border-radius: 50%;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.card-icon-builder {
+  background: linear-gradient(rgb(162,113,71),#593e27);
+  color: rgb(73,54,40);
+  font-size: 12px;
+  border-radius: 50%;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
