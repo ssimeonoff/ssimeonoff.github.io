@@ -779,7 +779,8 @@
   color:white;
   padding:3px;
   line-height: 24px;
-  font-size:20px;
+  font-size:30px;
+  vertical-align: middle;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 
 }
@@ -1053,6 +1054,19 @@
     .earth-resource:after {
         content: "\1f30f\FE0E";
     }
+
+    .venus-resource {
+        background: rgb(84,150,201);
+    }
+
+        .venus-resource:after {
+            content: "V";
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        }
+
 
 .rating {
     background-color: rgb(240,100,00);
