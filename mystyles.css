@@ -1298,9 +1298,57 @@
     font-weight: bold;
 }
 
-.close:hover,
+.close:hover {}
+
 .close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+
+/*Tooltips*/
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #555;
+    color: #fff;
+    line-height: 16px;
+    font-size: 14px;
+    font-weight: normal;
+    text-shadow: none;
+    text-align: center;
+    border-radius: 6px;
+    border:1px solid #555;
+    padding: 4px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    transition-delay: 1s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
 }

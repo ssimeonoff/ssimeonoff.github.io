@@ -42,40 +42,45 @@
       </div>
     </div>
     <div id="myBtnContainer1" style="line-height:55px;margin-bottom:10px;">
-      <button id="automated" class="btn1 background-color-automated" onclick="filterSelection(id)"> AUTOMATED</button>
-      <button id="active" class="btn1 background-color-active" onclick="filterSelection(id)"> ACTIVE</button>
-      <button id="events" class="btn1 background-color-events" onclick="filterSelection(id)"> EVENTS</button>
-      <button id="corporation" class="btn1 background-color-corporation" onclick="filterSelection(id)">CORPORATIONS</button>
-      <button id="preludeCards" class="btn1 background-color-prelude" onclick="filterSelection(id)">PRELUDES</button>
+      <button id="automated" class="btn1 background-color-automated tooltip" onclick="filterSelection(id)"> AUTOMATED
+        <span class="tooltiptext">filter Automated Project Cards</span></button>
+      <button id="active" class="btn1 background-color-active tooltip" onclick="filterSelection(id)"> ACTIVE
+      <span class="tooltiptext">filter Active Project Cards</span></button>
+      <button id="events" class="btn1 background-color-events tooltip" onclick="filterSelection(id)"> EVENTS
+        <span class="tooltiptext">filter Events Project Cards</span></button>
+      <button id="corporation" class="btn1 background-color-corporation tooltip" onclick="filterSelection(id)">CORPORATIONS
+        <span class="tooltiptext">filter Corporations Cards</span></button>
+      <button id="preludeCards" class="btn1 background-color-prelude tooltip" onclick="filterSelection(id)">PRELUDES
+        <span class="tooltiptext">filter Preludes Cards</span></button>
     </div>
 
     <div id="myBtnContainer2" style="line-height:55px;">
-      <button id="builderTag" class="btn2 tag-builder" style="line-height:40px" onclick="filterSelection(id)"></button>
-      <button id="spaceTag" class="btn2 tag-space" onclick="filterSelection(id)"></button>
-      <button id="scienceTag" class="btn2 tag-science" onclick="filterSelection(id)"></button>
+      <button id="builderTag" class="btn2 tag-builder tooltip" style="line-height:40px" onclick="filterSelection(id)"><span class="tooltiptext">filter by Builder tag</span></button>
+      <button id="spaceTag" class="btn2 tag-space tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter by Space tag</span></button>
+      <button id="scienceTag" class="btn2 tag-science tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter by Science tag</span></button>
 
-      <button id="plantTag" class="btn2 tag-plant" onclick="filterSelection(id)"></button>
-      <button id="microbeTag" class="btn2 tag-microbe" onclick="filterSelection(id)"></button>
-      <button id="animalTag" class="btn2 tag-animal" onclick="filterSelection(id)"></button>
+      <button id="plantTag" class="btn2 tag-plant tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter by Plant tag</span></button>
+      <button id="microbeTag" class="btn2 tag-microbe tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter by Microbe tag</span></button>
+      <button id="animalTag" class="btn2 tag-animal tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter by Animal tag</span></button>
 
-      <button id="energyTag" class="btn2 tag-energy" onclick="filterSelection(id)"></button>
-      <button id="jovianTag" class="btn2 tag-jovian" onclick="filterSelection(id)"></button>
-      <button id="earthTag" class="btn2 tag-earth" style="font-size:38px;padding-top:3px;padding-left:1px;padding-right:1px;" onclick="filterSelection(id)"></button>
+      <button id="energyTag" class="btn2 tag-energy tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter by Energy tag</span></button>
+      <button id="jovianTag" class="btn2 tag-jovian tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter by Jovian tag</span></button>
+      <button id="earthTag" class="btn2 tag-earth tooltip" style="font-size:38px;padding-top:3px;padding-left:1px;padding-right:1px;" onclick="filterSelection(id)"><span class="tooltiptext">filter by Earth tag</span></button>
 
-      <button id="cityTag" class="btn2 tag-city" style="font-size:22px;line-height:40px" onclick="filterSelection(id)"></button>
-      <button id="eventTag" class="btn2 tag-event" style="line-height:40px;vertical-align:bottom;" onclick="filterSelection(id)"></button>
-      <button id="venusTag" class="btn2 tag-venus" onclick="filterSelection(id)"></button>
+      <button id="cityTag" class="btn2 tag-city tooltip" style="font-size:22px;line-height:40px" onclick="filterSelection(id)"><span class="tooltiptext">filter by City tag</span></button>
+      <button id="eventTag" class="btn2 tag-event tooltip" style="line-height:40px;vertical-align:bottom;" onclick="filterSelection(id)"><span class="tooltiptext">filter by Event tag</span></button>
+      <button id="venusTag" class="btn2 tag-venus tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter by Venus tag</span></button>
     </div>
 
     <div id="myBtnContainer3" style="display:inline-block;">
-      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by text ..." title="Type in a name">
-      <button id="reset" class="btn4 reset-icon button-icon" onclick="clearInput();showAll();" style="margin-right: 114px;"></button>
-      <button id="standard" class="btn3 standard-icon button-icon" onclick="filterSelection(id)"></button>
-      <button id="corporate" class="btn3 corporate-icon button-icon" onclick="filterSelection(id)"></button>
-      <button id="venusNext" class="btn3 venus-icon button-icon " onclick="filterSelection(id)"></button>
-      <button id="prelude" class="btn3 prelude-icon button-icon" onclick="filterSelection(id)" ></button>
-      <button id="promo" class="btn3 promo-icon button-icon" onclick="filterSelection(id)"></button>
-      <button id="info" class="btn3" style="background:#444444;margin-left: 100px;width: 25px;height: 25px;line-height: 20px;">i</button>
+      <input class="tooltip" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by text ..." title="Type in a name">
+      <button id="reset" class="btn4 reset-icon button-icon tooltip" onclick="clearInput();showAll();" style="margin-right: 114px;"><span class="tooltiptext">Reset button</span></button>
+      <button id="standard" class="btn3 standard-icon button-icon tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter Base game cards</span></button>
+      <button id="corporate" class="btn3 corporate-icon button-icon tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter Corporate Era cards</span></button>
+      <button id="venusNext" class="btn3 venus-icon button-icon tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter Venus Next cards</span></button>
+      <button id="prelude" class="btn3 prelude-icon button-icon tooltip" onclick="filterSelection(id)" ><span class="tooltiptext">filter Promo cards</span></button>
+      <button id="promo" class="btn3 promo-icon button-icon tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter Prelude cards</span></button>
+      <button id="info" class="btn3 tooltip" style="background:#444444;margin-left: 100px;width: 25px;height: 25px;line-height: 20px;">i<span class="tooltiptext">Info button</span></button>
     </div>
   </div>
 
@@ -545,7 +550,7 @@
             <div class="contentCorporation ">
                 <div class="corporationEffectBox ">
                     <div class="corporationEffectBoxLabel ">EFFECT</div>
-                      <div class="tile venus-tile" style="width:100px;text-shadow:none;color:black;font-size:11px">Temp / O2 / Ocean</div>: +/- 2
+                      <div class="tile background-color-corporation" style="width:100px;text-shadow:none;color:black;font-size:11px;padding-top:5px;padding-bottom:5px;">Temp / O2 / Ocean</div>: +/- 2
                     <div class="description " style="text-align:center;margin-top:0px; ">
                         (Effect: Your temperature, oxygen and ocean requirements are +2 or -2 steps, your choice in each case.)
                     </div>
@@ -844,7 +849,7 @@
 
         <!--3-->
         <li class="filterDiv automated builderTag energyTag standard ">
-            <div class="title background-color-automated ">Deep Weel Heating</div>
+            <div class="title background-color-automated ">Deep Well Heating</div>
             <div class="price ">13</div>
             <div class="tag tag1 tag-builder "></div>
             <div class="tag tag2 tag-energy "></div>
@@ -1211,7 +1216,7 @@
 
         <!--23-->
         <li class="filterDiv active plantTag standard ">
-            <div class="title background-color-active ">Artic Algae</div>
+            <div class="title background-color-active ">Arctic Algae</div>
             <div class="price ">12</div>
             <div class="tag tag1 tag-plant "></div>
             <div class="number ">023</div>
@@ -1622,7 +1627,7 @@
 
       <!--46-->
       <li class="filterDiv automated energyTag corporate">
-        <div class="title background-color-automated">Lightening Harvest</div>
+        <div class="title background-color-automated">Lightning Harvest</div>
         <div class="price">8</div>
         <div class="tag tag1 tag-energy"></div>
         <div class="number">046</div>
@@ -2168,7 +2173,7 @@
 
         <!--76-->
         <li class="filterDiv active energyTag spaceTag standard ">
-            <div class="title background-color-active ">Space Mirros</div>
+            <div class="title background-color-active ">Space Mirrors</div>
             <div class="price ">3</div>
             <div class="tag tag1 tag-space "></div>
             <div class="tag tag2 tag-energy "></div>
@@ -2748,7 +2753,7 @@
 
         <!--109-->
         <li class="filterDiv active earthTag corporate ">
-            <div class="title background-color-active ">Media Gorup</div>
+            <div class="title background-color-active ">Media Group</div>
             <div class="price ">6</div>
             <div class="tag tag1 tag-earth "></div>
             <div class="number ">109</div>
@@ -3200,7 +3205,7 @@
           <div class="number">135</div>
           <div class="content">
             <div class="points points-big">3</div>
-            <div class="requirements">Plant/Microbe/Animal</div>
+            <div class="requirements" style="font-size: 12px;">Plant Microbe Animal</div>
             <div class="description">
               (Requires a Plant tag, a Microbe tag, and an Animal tag.)
             </div>
@@ -3514,7 +3519,7 @@
           <div class="number">153</div>
           <div class="content">
             <div class="points points-big">1</div>
-            <div class="tile venus-tile" style="width:100px;text-shadow:none;color:black;font-size:11px">Temp / O2 / Ocean</div>: +/- 2
+            <div class="tile background-color-corporation" style="width:100px;text-shadow:none;color:black;font-size:11px;padding-top:5px;padding-bottom:5px;">Temp / O2 / Ocean</div>: +/- 2
             <div class="description">
               (Effect: Your global requirements are +2 or -2 steps, your choice in each case.)
             </div>
@@ -3547,7 +3552,7 @@
             <div class="tag tag2 tag-science"></div>
             <div class="number ">155</div>
             <div class="content ">
-                <div class="requirements requirements-max">max -14% O2</div>
+                <div class="requirements requirements-max">max -14 C</div>
                 <div class="production-box production-box-size2 ">
                     <div class="plant production "></div><div class="plant production "></div>
                 </div>
@@ -4117,7 +4122,7 @@
 
           <!--187-->
           <li class="filterDiv active builderTag standard ">
-              <div class="title background-color-active ">Acquired Pumping</div>
+              <div class="title background-color-active ">Aquifer Pumping</div>
               <div class="price ">18</div>
               <div class="tag tag1 tag-builder "></div>
               <div class="number ">187</div>
@@ -4191,9 +4196,9 @@
               </div>
           </li>
 
-          <!--191-->
+          <!--192-->
           <li class="filterDiv events eventTag scienceTag corporate ">
-              <div class="title background-color-events ">Invention Content</div>
+              <div class="title background-color-events ">Invention Contest</div>
               <div class="price ">2</div>
               <div class="tag tag1 tag-event "></div>
               <div class="tag tag2 tag-science "></div>
@@ -4205,7 +4210,7 @@
               </div>
           </li>
 
-          <!--192-->
+          <!--193-->
           <li class="filterDiv automated plantTag standard">
             <div class="title background-color-automated">Plantation</div>
             <div class="price">15</div>
@@ -4437,7 +4442,7 @@
             <div class="tag tag2 tag-science"></div>
             <div class="number">206</div>
             <div class="content">
-              <div class="tile venus-tile" style="width:100px;text-shadow:none;color:black;font-size:11px">Temp / O2 / Ocean</div>: +/- 2
+              <div class="tile background-color-corporation" style="width:100px;text-shadow:none;color:black;font-size:11px;padding-top:5px;padding-bottom:5px;">Temp / O2 / Ocean</div>: +/- 2
               <div class="description">
                 (The next card you play this generation is +2 or -2 steps in global requirements, your choice.)
               </div>
@@ -4598,7 +4603,7 @@
 
             <!--215-->
             <li class="filterDiv eventTag venusNext venusTag events ">
-                <div class="title background-color-events ">Air-Scrapping Ex</div>
+                <div class="title background-color-events ">Air-Scrapping Expedition</div>
                 <div class="price ">13</div>
                 <div class="tag tag1 tag-event "></div>
                 <div class="tag tag2 tag-venus "></div>
@@ -4635,7 +4640,7 @@
 
             <!--217-->
             <li class="filterDiv automated jovianTag spaceTag venusNext ">
-                <div class="title background-color-automated ">Atalanta Planitia Lab</div>
+                <div class="title background-color-automated ">Atmoscoop</div>
                 <div class="price ">12</div>
                 <div class="tag tag1 tag-space "></div>
                 <div class="tag tag2 tag-jovian "></div>
@@ -4656,7 +4661,6 @@
                   </div>
                 </div>
             </li>
-
 
             <!--218-->
             <li class="filterDiv eventTag venusNext spaceTag events ">
@@ -4928,7 +4932,153 @@
                 </div>
             </li>
 
+            <!--232-->
+            <li class="filterDiv automated jovianTag scienceTag venusNext ">
+                <div class="title background-color-automated ">IO Sulphur Research</div>
+                <div class="price ">17</div>
+                <div class="tag tag1 tag-jovian "></div>
+                <div class="tag tag2 tag-science "></div>
+                <div class="number ">232</div>
+                <div class="venus-icon project-icon"></div>
+                <div class="content ">
+                  <div class="points points-big">2</div>
+                  <div class="resource card"></div> OR <br>
+                  <div class="resource-tag venus-resource"></div>
+                  <div class="resource-tag venus-resource" style="margin-left:-15px;"></div>
+                  <div class="resource-tag venus-resource" style="margin-left:-15px;"></div> :
+                  <div class="resource card"></div><div class="resource card" style="margin-left:-15px;"></div><div class="resource card" style="margin-left:-15px;"></div>
+                   <div class="description">
+                     (Draw 1 card, or draw 3 if you have at least 3 Venus tags).
+                </div>
+            </li>
 
+            <!--233-->
+            <li class="filterDiv automated venusTag venusNext ">
+                <div class="title background-color-automated ">Ishtar Mining</div>
+                <div class="price ">5</div>
+                <div class="tag tag1 tag-venus "></div>
+                <div class="number ">233</div>
+                <div class="venus-icon project-icon"></div>
+                <div class="content ">
+                  <div class="requirements">8% Venus</div>
+                    <div class="production-box ">
+                        <div class="titanium production"></div>
+                    </div>
+                   <div class="description">
+                     (Requires Venus 8%. Increase your titanium production 1 step).
+                </div>
+            </li>
+
+            <!--234-->
+            <li class="filterDiv active  venusTag venusNext ">
+                <div class="title background-color-active ">Jet Stream Microscrappers</div>
+                <div class="price ">12</div>
+                <div class="tag tag1 tag-venus "></div>
+                <div class="number ">234</div>
+                <div class="venus-icon project-icon"></div>
+                <div class="content ">
+                    <div class="titanium resource "></div> <div class="red-arrow "></div> <div class="floater resource "></div><div class="floater resource "></div><br>
+                  OR <div class="floater resource "></div><div class="floater resource "></div> <div class="red-arrow "></div> <div class="tile venus-tile ">V</div>
+                    <div class="description ">
+                      (Action: Spend 1 titanium to add 2 Floaters here, OR spend 2 Floaters here to raise Venus 1 step).
+                    </div>
+                </div>
+            </li>
+
+            <!--235-->
+            <li class="filterDiv active  venusTag venusNext ">
+                <div class="title background-color-active ">Local Shading</div>
+                <div class="price ">4</div>
+                <div class="tag tag1 tag-venus "></div>
+                <div class="number ">235</div>
+                <div class="venus-icon project-icon"></div>
+                <div class="content ">
+                    <div class="red-arrow "></div> <div class="floater resource "></div> <br>
+                  OR <div class="floater resource "></div> <div class="red-arrow "></div>
+                  <div class="production-box">
+                      <div class="money production">1</div>
+                  </div>
+                    <div class="description ">
+                      (Action: add 1 Floater to this card, or spend 1 Floater here to raise your M$ production 1 step).
+                    </div>
+                </div>
+            </li>
+
+            <!--236-->
+            <li class="filterDiv automated earthTag spaceTag cityTag venusNext ">
+                <div class="title background-color-automated ">Luna Metropolis</div>
+                <div class="price ">21</div>
+                <div class="tag tag1 tag-city "></div>
+                <div class="tag tag2 tag-earth "></div>
+                <div class="tag tag3 tag-space "></div>
+                <div class="number ">236</div>
+                <div class="venus-icon project-icon"></div>
+                <div class="content ">
+                  <div class="points points-big">2</div>
+                    <div class="production-box production-box-size2a">
+                        <div class="money production">1</div> / <div class="resource-tag earth-resource"></div>
+                    </div>
+                    <div class="tile city-tile" style="margin-left:20px"></div>*
+                   <div class="description">
+                     (Increase your M$ production 1 step for each Earth tag you have, including this. Place a City tile on the RESERVED AREA).
+                </div>
+              </div>
+            </li>
+
+            <!--237-->
+            <li class="filterDiv automated  venusNext ">
+                <div class="title background-color-automated ">Luna Metropolis</div>
+                <div class="price ">8</div>
+                <div class="number ">237</div>
+                <div class="venus-icon project-icon"></div>
+                <div class="content ">
+                  <div class="points points-big">2</div>
+                  <div class="requirements"> Venus Earth Jovian</div>
+                </div>
+            </li>
+
+            <!--238-->
+            <li class="filterDiv active cityTag venusTag venusNext ">
+                <div class="title background-color-active ">Maxwell Base</div>
+                <div class="price ">18</div>
+                <div class="tag tag1 tag-city "></div>
+                <div class="tag tag2 tag-venus "></div>
+                <div class="number ">238</div>
+                <div class="venus-icon project-icon"></div>
+                <div class="content ">
+                  <div class="points points-big">3</div>
+                  <div class="requirements">12% Venus</div>
+                    <div class="red-arrow "></div> <div class="resource " style="background:white;">?<div class="card-icon card-icon-venus" style="color: white;margin-top: -36px;margin-left: 17px;font-weight:bold;">V</div></div>
+                    <div class="description " style="margin-top:-5px">
+                      (Action: Add 1 resource to ANOTHER VENUS CARD).
+                    </div>
+                  <div class="production-box production-box-size1a">
+                        <div class="production-prefix">&#x2796;&#xFE0E;</div><div class="energy production"></div>
+                  </div>
+                  <div class="tile city-tile" style="margin-left:20px"></div>*
+                    <div class="description " style="text-align:left;margin-top:-5px">
+                      (Requires Venus 12%. Decrease your energy production 1 step. <br> Place a City tile ON THE <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RESERVED AREA.)
+                    </div>
+                </div>
+            </li>
+
+            <!--239-->
+            <li class="filterDiv automated builderTag venusNext ">
+                <div class="title background-color-automated ">Mining Quota</div>
+                <div class="price ">5</div>
+                <div class="tag tag1 tag-builder"></div>
+                <div class="number ">239</div>
+                <div class="venus-icon project-icon"></div>
+                <div class="content ">
+                  <div class="requirements"> Venus Earth Jovian</div>
+                  <div class="production-box production-box-size2">
+                      <div class="steel production"></div><div class="steel production"></div>
+                  </div>
+                  <div class="description">
+                  (Requires Venus, Earth and Jovian tags. Increase your steel production 2 steps).
+                  </div>
+                </div>
+            </li>
 
 
 
@@ -4973,20 +5123,6 @@
 
 
     <!--PRELUDES------------------------------------------->
-
-    <!--rick-->
-    <li class="filterDiv preludeCards">
-      <div class="title background-color-prelude">Never Gonna Give You Up</div>
-      <div class="tag tag1" style="background-image:url(trollface.jpg);"></div>
-      <div class="prelude-label" style="width:183px">RICKROLLED</div>
-      <div class="prelude-icon project-icon"></div>
-      <div class="content"style="background-image:url(rickrolled.gif);height:160px;background-position: center;background-repeat:no-repeat;margin-top:0px;">
-        <div class="description" style="margin-top:180px;margin-left:22px;font-size:16px;line-height:16px;">
-        Never gonna give you up<br>
-        Never gonna let you down<br>
-        </div>
-      </div>
-    </li>
 
         <!--prelude1-->
         <li class="filterDiv prelude preludeCards">
