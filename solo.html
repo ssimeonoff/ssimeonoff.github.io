@@ -25,9 +25,12 @@
     ]);
 
     var options = {
-      title: 'Scores distribution --------------------- Wins: 10 --- Losses: 2',
+      title: 'SCORES DISTRIBUTION',
+      titleTextStyle: {fontSize:20, color:'#888888'},
       legend: { position: 'none' },
+      backgroundColor: "transparent",
       vAxis: {ticks: [0,5], textPosition: 'none' },
+      chartArea:{left:0,top:40,width:550},
       histogram: {bucketSize: 5}
     };
 
@@ -39,13 +42,10 @@
 
 <html>
 <body background="mars.jpg" style="background-color:black;background-repeat:no-repeat; background-size:100%">
-  <div id="buttonsContainer">
-    <div id="chart_div" style="width: 800px; height: 300px;"></div>
-  </div>
 
-</div>
+  <div id="chart_div"></div>
 
-  <ul id="myUL">
+  <ul>
 
     <li class="filterDiv2">
       <div class="contentCorporation">
@@ -59,25 +59,10 @@
       </div>
     </li>
 
-    <!--corp2-->
-    <li class="filterDiv corporation builderTag standard">
-      <div class="tag tag1 tag-builder"></div>
-      <div class="tag tag2 tag-builder"></div>
-      <div class="corporationLabel">CORPORATION</div>
+    <li class="filterDiv2">
       <div class="contentCorporation">
-        <div class="corporationEffectBox">
-          <div class="corporationEffectBoxLabel">EFFECT</div>
-          <div class="resource steel"></div> /
-          <div class="resource titanium"></div> :
-          <div class="production-box">
-            <div class="production steel"></div>
-          </div>
-          <div class="description" style="text-align:center;margin-top:0px;">
-            (Effect: Each time you get any steel or titanium as a placement bonus on the map, increase your steel production 1 step.)
-          </div>
-        </div>
-        <span class=" mining guild" style="font-size:24px;
-                margin-left:20px;
+        <div class=" mining guild" style="font-size:24px;
+                margin-left:45px;
                         color:#c9380e;
                         text-shadow: -1px 0 #333333, 0 1px #333333, 1px 0 #333333, 0 -1px #333333, 2px 2px 2px  black;
                         display:inline-block;
@@ -86,95 +71,53 @@
                         -ms-transform:scale(1.5,1); /* IE 9 */
                         -o-transform:scale(1.5,1); /* Opera */
                         transform:scale(1.5,1); /* W3C */
-                        ">
-                    MINING<br>GUILD
-                </span><br>
-        <div class="resource money" style="margin-left:35px;">30</div>&nbsp;&nbsp;
-        5<div class="production steel"></div>
-        <div class="production-box" style="margin-top:5px;margin-left:20px;">
-          <div class="production steel"></div>
-        </div>
-        <div class="description" style="margin-top:-5px;text-align:center;">
-          (You start with 30 M$, 5 steel, and 1 steel production)
+                        ">MINING<br>GUILD
         </div>
       </div>
     </li>
 
-    <!--corp3-->
-    <li class="filterDiv corporation builderTag venusNext">
-      <div class="tag tag1 tag-builder"></div>
-      <div class="corporationLabel">CORPORATION</div>
-      <div class="venus-icon corporation-icon"></div>
+    <li class="filterDiv2">
+      <div class="played-games">
+        <div class="scores background-bronze">72</div>
+        <div class="scores background-bronze">79</div>
+      </div>
       <div class="contentCorporation">
-        <div class="corporationEffectBox">
-          <div class="corporationEffectBoxLabel">EFFECT</div>
-          <div class="production-box">
-            <div class="production" style="background:white;">?</div>
-          </div> :
-          <div class="resource" style="background:white;">?</div>
-          <div class="description" style="text-align:center;margin-top:0px;">
-            (Effect: For each step you increase the production of a resource, including this, you also gain that resource.)
-          </div>
-        </div>
-        <span class="manutech" style="font-size:30px;
+        <div class="manutech" style="font-size:30px;
                         color: #e63900;
+                        margin-top:10px;
                         text-shadow:  6px 3px 5px  grey;">
-                    <span style="color:white;background:#e63900;text-shadow:none;">MA</span>NUTECH
-                </span><br>
-        <div class="production-box" style="margin-top:15px;margin-left:50px;">
-          <div class="production steel"></div>
+                    <span style="color:white;background:#e63900;text-shadow:none;padding-left:2px;">MA</span>NUTECH
+                </div>
         </div>
-        <div class="resource money" style="margin-left:20px;">35</div>
-
-        <div class="description" style="text-align:center;">
-          (You start with 1 steel production, and 35 M$)
-        </div>
-      </div>
+    </div>
     </li>
 
-    <!--corp4-->
-    <li class="filterDiv corporation earthTag corporate">
-      <div class="tag tag1 tag-earth"></div>
-      <div class="corporationLabel">CORPORATION</div>
-      <div class="corporate-icon corporation-icon"></div>
+    <li class="filterDiv2">
+      <div class="played-games">
+        <div class="scores">90</div>
+      </div>
       <div class="contentCorporation">
-        <div class="corporationEffectBox">
-          <div class="corporationEffectBoxLabel">EFFECT</div>
-          <div class="resource-tag earth-resource"></div> :
-          <div class="resource money">-3</div>
-          <div class="description" style="text-align:center;margin-top:0px;">
-            (Effect: When playing an Earth card, you pay 3 M$ less for it.)
-          </div>
-        </div>
-        <span style="font-size:34px;
+        <div style="font-size:34px;
+                        margin-top:5px;
                         color: orangered;
                         font-family: 'Times New Roman';
                         font-weight:normal;
                         text-shadow: -1px 0 #333333, 0 1px #333333, 1px 0 #333333,0px -1px #333333, 6px 3px 5px  grey;">
                     TERACTOR
-                </span><br><br>
-        <div class="description" style="text-align:center;">
-          <div class="resource money">60</div><br> (You start with 60 M$.)
         </div>
       </div>
     </li>
 
 
     <!--corp5-->
-    <li class="filterDiv corporation spaceTag standard">
-      <div class="tag tag1 tag-space"></div>
-      <div class="corporationLabel">CORPORATION</div>
+    <li class="filterDiv2">
+      <div class="played-games">
+        <div class="scores background-gold">116</div>
+      </div>
       <div class="contentCorporation">
-        <div class="corporationEffectBox">
-          <div class="corporationEffectBoxLabel">EFFECT</div>
-          <div class="resource titanium"></div> : +
-          <div class="resource money">1</div>
-          <div class="description" style="text-align:center;margin-top:0px;">
-            (Effect: Your titanium resources are each worth 1 M$ extra.)
-          </div>
-        </div>
-        <span style="font-size:24px;
+        <div style="font-size:24px;
                         margin-left:15px;
+                        margin-top:5px;
                         color:white;
                         line-height:40px;
                         background: #32004d;
@@ -190,67 +133,36 @@
                         transform:scale(1.2,1); /* W3C */
                         box-shadow:  6px 6px 5px  grey;">
                     PHOBOLOG
-                </span><br><br>
-        <div class="resource money" style="margin-left:45px;">23</div>
-        10<div class="resource titanium"></div>
-        <div class="description" style="text-align:center;">
-          (You start with 10 titanium and 23 M$.)
-        </div>
+                </div>
       </div>
     </li>
 
-    <!--corp6-->
-    <li class="filterDiv corporation energyTag standard">
-      <div class="tag tag1 tag-energy"></div>
-      <div class="corporationLabel">CORPORATION</div>
+    <li class="filterDiv2">
+      <div class="played-games">
+        <div class="scores">99</div>
+        <div class="scores background-failed">X</div>
+
+      </div>
       <div class="contentCorporation">
-        <div class="corporationEffectBox">
-          <div class="corporationEffectBoxLabel">EFFECT</div>
-          <div class="resource-tag energy"></div> * :
-          <div class="resource money">-3</div>
-          <div class="description" style="text-align:center;margin-top:0px;">
-            (Effect: When playing a power card OR THE STANDARD PROJECT POWER PLANT, you pay 3 M$ less for it.)
-          </div>
-        </div>
-        <span style="font-size:32px;
+        <div style="font-size:34px;
+                        margin-top:5px;
+                        margin-left:10px;
                         font-family: 'Arial Narrow','Verdana';
                         font-weight:normal;
                          text-shadow: 6px 3px 5px  grey;">
                     THORGATE
-                </span><br><br>
-        <div class="production-box" style="margin-left:45px;margin-top:-10px;">
-          <div class="production energy"></div>
-        </div>
-        <div class="resource money" style="margin-left:20px;">48</div>
-
-        <div class="description" style="text-align:center;">
-          (You start with 1 energy production and 48 M$.)
-        </div>
+                </div>
       </div>
     </li>
 
-    <!--corp7-->
-    <li class="filterDiv corporation jovianTag corporate">
-      <div class="tag tag1 tag-jovian"></div>
-      <div class="corporationLabel">CORPORATION</div>
-      <div class="corporate-icon corporation-icon"></div>
+    <li class="filterDiv2">
       <div class="contentCorporation">
-        <div class="corporationEffectBox">
-          <div class="corporationEffectBoxLabel">EFFECT</div>
-          <span class="resource-tag jovian" style="border: 1px solid red;"></span>&nbsp;:
-          <div class="production-box">
-            <div class="production money">1</div>
-          </div>
-          <div class="description" style="text-align:center;margin-top:0px;">
-            (Effect: Each time any Jovian tag is put into play, including this, increase your M$ production 1 step.)
-          </div>
-        </div>
-        <span style="font-size:14px;
+        <div style="font-size:13px;
                         color:white;
                         line-height:40px;
                         background: #32004d;
-                        padding-top:8px;
-                        padding-bottom:8px;
+                        padding-top:2px;
+                        padding-bottom:2px;
                         padding-left:20px;
                         padding-right:20px;
                         border-radius:50%;
@@ -258,189 +170,75 @@
                         border:2px solid white;
                         box-shadow:  6px 6px 5px  grey;">
                     SATURN <span style="font-size:20px;display:inline-block;">&#x25CF</span> SYSTEMS
-        </span><br><br>
-
-        <div class="production-box" style="margin-left:45px;margin-top:-10px;">
-          <div class="production titanium"></div>
-        </div>
-        <div class="resource money" style="margin-left:20px;">42</div>
-        <div class="description" style="text-align:center;margin-top:0px;">
-          (You start with 1 titanium production and 42 M$.)
         </div>
       </div>
+    </li>
 
-      <!--corp8-->
-      <li class="filterDiv corporation venusTag plantTag venusNext">
-        <div class="tag tag1 tag-plant"></div>
-        <div class="tag tag2 tag-venus"></div>
-        <div class="corporationLabel">CORPORATION</div>
-        <div class="venus-icon corporation-icon"></div>
+      <li class="filterDiv2">
+        <div class="played-games">
+          <div class="scores">81</div>
+        </div>
         <div class="contentCorporation">
-          <div class="corporationEffectBox">
-            <div class="corporationEffectBoxLabel">EFFECT</div>
-            <div class="tile venus-tile">V</div> : +/-2
-            <div class="description" style="text-align:center;margin-top:0px;">
-              (Effect: Whenever Venus is terraformed 1 step, you gain 2M$.)
-            </div>
-          </div>
-          <span style="font-size:23px;
+          <div style="font-size:26px;
                         color: orange;
+                        margin-left:10px;
                         font-weight:bold;
+                        margin-top:10px;
                         text-shadow:  6px 6px 6px  grey;
                         text-shadow: -1px 0 #333333, 0 1px #333333, 1px 0 #333333,0px -1px #333333, 6px 3px 5px  grey;" ">
                     APHRODITE
-                </span><br><div class="production-box " style="margin-top:15px;margin-left:50px; ">
-                    <div class="production plant "></div>
-                </div>
-                <div class="resource money " style="margin-left:20px; ">47</div>
-
-                <div class="description " style="text-align:center; ">
-                    (You start with 1 plant production and 47 M$)
                 </div>
             </div>
+
         </li>
 
-        <!--corp9-->
-        <li class="filterDiv corporation standard">
-            <div class="corporationLabel ">CORPORATION</div>
+        <li class="filterDiv2">
+          <div class="played-games">
+            <div class="scores background-failed">X</div>
+            <div class="scores background-bronze">77</div>
+            <div class="scores">97</div>
+          </div>
             <div class="contentCorporation ">
-                <div class="corporationEffectBox ">
-                    <div class="corporationEffectBoxLabel ">EFFECT</div>
-                    -<div class="resource money ">20</div> : <div class="resource money ">4</div>
-                    <div class="description " style="text-align:center;margin-top:0px; ">
-                        (Effect: After you pay for a card or standard project with a basic cost of 20M$ or more, you gain 4M$.)
-                    </div>
-                </div>
-                <span style="font-size:40px; color: white; font-family: 'Times New Roman'; font-weight:normal;line-height:60px; border:2px solid purple; padding-left:5px; padding-bottom:5px; margin-left:10px; box-shadow: 6px 6px 10px grey; text-shadow:
-            -1px 0 purple, 0 1px purple, 1px 0 purple, 0 -1px purple, 6px 6px 10px grey; ">
+                <div style="font-size:40px; color: white; font-family: 'Times New Roman'; font-weight:normal;line-height:40px; border:2px solid purple; padding-left:5px; padding-bottom:5px;padding-right:5px; margin-left:15px; box-shadow: 6px 6px 10px grey; text-shadow:
+            -1px 0 purple, 0 1px purple, 1px 0 purple, 0 -1px purple, 6px 6px 10px grey;margin-top:5px; ">
                     credicor
-                </span><br><br>
-                <div class="description " style="text-align:center ">
-                <div class="resource money" style="margin-top:-10px;">57</div><br>
-                    (You start with 57 M$.)
                 </div>
             </div>
         </li>
 
-        <!--corp10-->
-        <li class="filterDiv corporation builderTag standard">
-          <div class="tag tag1 tag-builder"></div>
-            <div class="corporationLabel ">CORPORATION</div>
+        <li class="filterDiv2">
             <div class="contentCorporation ">
-                <div class="corporationEffectBox ">
-                    <div class="corporationEffectBoxLabel ">EFFECT</div>
-                    <div class="tile city-tile-small red-outline"></div>*: <div class="production-box"><div class="production money">1</div></div>&nbsp;&nbsp;
-                      <div class="tile city-tile-small"></div>:<div class="production money">3</div>
-
-                    <div class="description " style="text-align:center;margin-top:0px; ">
-                        (Effect: When any city tile is placed ON MARS, increase your M$ production 1 step. When you place a city tile, gain 3 M$.)
-                    </div>
-                </div>
                 <div style="font-size:24px;text-shadow:6px 6px 6px grey;">
-                  <div style="text-shadow:none;box-shadow:3px 3px 6px grey;margin-right:2px;border: 1px solid red;display:inline-block;background-color:#ff5f00;">&#x25b2<span style="font-size:14px;padding:0px;border:none;margin-left:-5px;">&#x25b2</span>
-                  </div>THARSIS<br>&nbsp; REPUBLIC</div>
-                <div class="description " style="text-align:center ">
-                <div class="resource money " style="margin-left:60px;">40</div> <div class="tile city-tile" style="margin-left:40px;margin-top:-20px;"> </div><br>
-                    (You start with 40 M$. As your first action in the game,place a city tile.)
-                </div>
+                  <div style="margin-left:15px;text-shadow:none;box-shadow:3px 3px 6px grey;margin-right:2px;border: 1px solid red;display:inline-block;background-color:#ff5f00;">&#x25b2<span style="font-size:14px;padding:0px;border:none;margin-left:-5px;">&#x25b2</span>
+                  </div>THARSIS<br>&nbsp;&nbsp;  REPUBLIC</div>
+
             </div>
         </li>
 
-        <!--corp11-->
-        <li class="filterDiv corporation scienceTag standard">
-          <div class="tag tag1 tag-science"></div>
-            <div class="corporationLabel ">CORPORATION</div>
+        <li class="filterDiv2">
             <div class="contentCorporation ">
-                <div class="corporationEffectBox ">
-                    <div class="corporationEffectBoxLabel ">EFFECT</div>
-                      <div class="tile background-color-corporation" style="width:100px;text-shadow:none;color:black;font-size:11px;padding-top:5px;padding-bottom:5px;">Temp / O2 / Ocean</div>: +/- 2
-                    <div class="description " style="text-align:center;margin-top:0px; ">
-                        (Effect: Your temperature, oxygen and ocean requirements are +2 or -2 steps, your choice in each case.)
-                    </div>
-                </div>
-                <span style="font-size:24px;
+                <div style="font-size:24px;
                 padding-left:5px;
+                margin-top:10px;
                 padding-bottom:5px;
                 text-shadow: 6px 6px 5px grey;
                 ;">
                   <span style="background-color:#6bb5c7;padding-left:4px;padding-right:4px;font-size:26px;box-shadow: 6px 6px 10px grey;">X</span> INVENTRIX
-                </span>
-                <div class="description " style="text-align:center ">
-                  <div class="resource money " style="margin-left:20px;">45</div> <div class="resource card" style="margin-left:20px"></div><div class="resource card"></div><div class="resource card"></div><br>
-                    (As you first action in the game, draw 3 cards. Start with 45M$.)
                 </div>
             </div>
         </li>
 
-        <!--corp12-->
-        <li class="filterDiv corporation prelude earthTag spaceTag">
-          <div class="tag tag1 tag-space"></div>
-          <div class="tag tag2 tag-earth"></div>
-            <div class="corporationLabel ">CORPORATION</div>
-            <div class="prelude-icon corporation-icon"></div>
+        <li class="filterDiv2">
+          <div class="played-games">
+            <div class="scores background-gold">102</div>
+          </div>
             <div class="contentCorporation ">
-                <div class="corporationEffectBox ">
-                    <div class="corporationEffectBoxLabel ">EFFECT</div>
-                    <div class="resource-tag earth-resource"></div> : <div class="resource card"></div>
-                    <div class="description " style="text-align:center;margin-top:0px; ">
-                        (Effect: When you play an Earth tag, including this, draw a card.)
-                    </div>
-                </div>
-                <div class="point luna" style="font-size:14px;
-                padding-left:5px;
-                padding-bottom:5px;
-                margin-top:35px;
-                margin-left:15px;
-                display:inline-block;
-                text-decoration: underline;
-                -webkit-transform:scale(2,1); /* Safari and Chrome */
-                -moz-transform:scale(2,1); /* Firefox */
-                -ms-transform:scale(2,1); /* IE 9 */
-                -o-transform:scale(2,1); /* Opera */
-                transform:scale(2,1); /* W3C */
-                ;">POINT</div>
-                <span class="resource" style="margin-left:23px;padding-bottom:1px;padding-left:1px;padding-right:1px;font-size:20px;
-                background:linear-gradient(to bottom right, white,black,white);color:white;font-weight:normal;">&#x1F680&#xFE0E;</span>
-                </div>
-                <div class="point luna" style="font-size:14px;
-                font-weight:bold;
-                padding-left:5px;
-                padding-bottom:5px;
-                margin-top:30px;
-                margin-left:-2px;
-                display:inline-block;
-                text-decoration: underline;
-                -webkit-transform:scale(2,1); /* Safari and Chrome */
-                -moz-transform:scale(2,1); /* Firefox */
-                -ms-transform:scale(2,1); /* IE 9 */
-                -o-transform:scale(2,1); /* Opera */
-                transform:scale(2,1); /* W3C */
-                ;">LUNA</div>
-                <div class="description " style="text-align:center;margin-top:-5px ">
-                <div class="production-box" style="margin-left:-30px;margin-top:-10px;"><div class="production titanium"></div></div> <div class="resource money" style="margin-left:60px">38</div><br>
-                  (You start with 1 titanium production<br> and 38 M$.)
-                </div>
-            </div>
-        </li>
-
-        <!--corp14-->
-        <li class="filterDiv corporation builderTag standard">
-          <div class="tag tag1 tag-builder"></div>
-            <div class="corporationLabel ">CORPORATION</div>
-            <div class="contentCorporation ">
-                <div class="corporationEffectBox ">
-                    <div class="corporationEffectBoxLabel ">EFFECT</div>
-                    <div class="resource-tag event-resource"></div> : <div class="production money">2</div>
-                    <div class="description " style="text-align:center;margin-top:0px; ">
-                        (Effect: Each time you play an event, you gain 3 M$.)
-                    </div>
-                </div>
-                <div class="INTERPLANETARY CINEMATICS" style="font-size:17px">
+                <div class="INTERPLANETARY CINEMATICS" style="font-size:17px;margin-left:10px;">
                   INTERPLANETARY
                 </div>
-                <div style="height:5px;margin-top:-2px;width:143px;background:linear-gradient(to right, yellow,black,yellow,black,yellow);border:5px solid #cc3333;box-shadow:3px 3px 6px grey;">
+                <div style="margin-left:10px;height:5px;margin-top:-2px;width:143px;background:linear-gradient(to right, yellow,black,yellow,black,yellow);border:5px solid #cc3333;box-shadow:3px 3px 6px grey;">
                 </div>
-                <div class="INTERPLANETARY CINEMATICS" style="font-size:24px;margin-left:3px;margin-top:-5px;
+                <div class="INTERPLANETARY CINEMATICS" style="font-size:24px;margin-left:13px;margin-top:-5px;
                 display:inline-block;
                 -webkit-transform:scale(0.5,1); /* Safari and Chrome */
                 -moz-transform:scale(0.5,1); /* Firefox */
@@ -449,31 +247,16 @@
                 transform:scale(1,0.5); /* W3C */
                 ;
                 margin-bottom:15px;">CINEMATICS
-              </div><br>
-                <div class="resource money " style="margin-left:40px;">30</div>&nbsp;&nbsp;&nbsp;&nbsp; 20<div class="resource steel"></div>
-                <div class="description " style="text-align:center ">
-                    (You start with 20 steel and 30 M$.)
-                </div>
+              </div>
             </div>
         </li>
 
-        <!--corp15-->
-        <li class="filterDiv corporation earthTag standard">
-          <div class="tag tag1 tag-earth"></div>
-          <div class="corporationLabel">CORPORATION</div>
+        <li class="filterDiv2">
           <div class="contentCorporation">
-            <div class="corporationEffectBox">
-              <div class="corporationEffectBoxLabel">ACTION</div>
-              <div class="resource money">3</div> <span class="red-arrow"></span>
-              <div class="tile rating"></div>*
-              <div class="description" style="text-align:center;margin-top:0px;">
-                (Action:If your Terraform Rating was raised this generation, you may pay 3 M$ to raise it 1 step more.)
-              </div>
-            </div>
             <div class="background-color-active" style="font-size:16px;
-                            width:100px;
+                            width:150px;
                             color: white;
-                            margin-left:19px;
+                            margin-left:10px;
                             margin-bottom:10px;
                             padding:5px;
                             padding-top:10px;
@@ -484,128 +267,55 @@
                             ">
                         UNITED NATIONS MARS INITIATIVE
                     </div>
-            <div class="description" style="text-align:center;margin-left:50px;">
-              <div class="resource money">40</div> &nbsp;&nbsp;&nbsp;(You start with 40 M$.)
-            </div>
           </div>
         </li>
 
-
-        <!--corp16-->
-        <li class="filterDiv corporation spaceTag standard">
-          <div class="tag tag1 tag-space"></div>
-          <div class="corporationLabel">CORPORATION</div>
+        <li class="filterDiv2">
           <div class="contentCorporation">
-            <div class="corporationEffectBox">
-              <div class="corporationEffectBoxLabel">EFFECT</div>
-              X<div class="resource heat"></div> :
-              <div class="resource money">X</div>
-              <div class="description" style="text-align:center;margin-top:0px;">
-                (Effect: Your may use heat as M$. You may not use M$ as heat.)
-              </div>
-            </div>
             <div style="font-size:34px;
                             width:140px;
                             text-align: center;
                             margin-top:5px;
                             border:2px solid black;
-                            margin-left:8px;
+                            margin-left:18px;
                             background: yellow;
                             box-shadow: 6px 6px 6px grey;
                             border-radius:2px;">
-                        helion</div><br>
-            <div class="production-box production-box-size3" style="margin-left:20px;margin-top:-50px;">
-              <div class="production heat"></div><div class="production heat"></div><div class="production heat"></div>
-            </div>
-              <div class="resource money" style="margin-left:20px;">42</div>
-            <div class="description" style="text-align:center;">
-              (You start with 3 heat production and 42 M$.)
-            </div>
+                        helion</div>
           </div>
         </li>
 
-        <!--corp17-->
-        <li class="filterDiv corporation microbeTag venusNext">
-          <div class="tag tag1 tag-microbe"></div>
-          <div class="corporationLabel">CORPORATION</div>
-          <div class="venus-icon corporation-icon"></div>
+        <li class="filterDiv2">
+          <div class="played-games">
+            <div class="scores background-gold">105</div>
+          </div>
           <div class="contentCorporation">
-            <div class="corporationEffectBox">
-              <div class="corporationEffectBoxLabel">ACTION</div>
-              <div class="red-arrow" style="font-size:30px;"></div>
-              <div class="description" style="text-align:center;margin-top:0px;">
-                (Action: Use a blue card action that has already been used this generation.)
-              </div>
-            </div>
-            <div  style="font-size:50px;
+            <div  style="font-size:46px; margin-left:15px;
             text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white, 6px 3px 5px  grey;
                             ">
                         VIRON
-                    </div><br>
-            <div class="resource money" style="margin-left:65px;">48</div>
-            <div class="description" style="text-align:center;">
-              (You start with 48 M$.)
-            </div>
+                    </div>
           </div>
         </li>
 
-        <!--corp18-->
-        <li class="filterDiv corporation venusTag venusNext">
-          <div class="tag tag1 tag-venus"></div>
-          <div class="corporationLabel">CORPORATION</div>
-          <div class="venus-icon corporation-icon"></div>
+        <li class="filterDiv2">
           <div class="contentCorporation">
-            <div class="corporationEffectBox">
-              <div class="corporationEffectBoxLabel">EFFECT</div>
-              <div class="tile venus-tile">V</div> : +/- 2
-              <div class="description" style="text-align:center;margin-top:0px;">
-                (Effect: Your Venus requirements are +/- 2 steps, your choice in each case.)
-              </div>
-            </div>
-            <div  style="font-size:18px; color:white;margin-top:5px;margin-bottom:-10px;
+
+            <div  style="font-size:20px; color:white;margin-bottom:-10px;margin-left:35px;
             text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, 6px 3px 5px  grey;
                             ">
-                        MORNING STAR INC.
-                    </div><br>
-            <div class="resource money" style="margin-left:10px;">50</div>
-            <div class="resource card" style="margin-left:15px;"><div class="card-icon card-icon-venus">V</div></div>
-            <div class="resource card"><div class="card-icon card-icon-venus">V</div></div>
-            <div class="resource card"><div class="card-icon card-icon-venus">V</div></div>
-            <div class="description" style="text-align:center;margin-top:-5px;">
-              (You start with 50 M$. As your first action, reveal cards from the deck until you have revealed 3 Venus-tag cards. Take those into hand and discard the rest.)
-            </div>
+                        MORNING <br> STAR INC.
+                    </div>
           </div>
         </li>
 
-        <!--corp19-->
-        <li class="filterDiv corporation venusTag venusNext">
-          <div class="tag tag1 tag-venus"></div>
-          <div class="corporationLabel">CORPORATION</div>
-          <div class="venus-icon corporation-icon"></div>
+        <li class="filterDiv2">
           <div class="contentCorporation">
-            <div class="points" style="z-index:1;margin-top:231px;margin-left:124px;">1/3<div class="resource floater"></div></div>
-            <div class="corporationEffectBox">
-              <div class="corporationEffectBoxLabel">ACTION</div>
-              <div class="red-arrow"></div> <div class="resource floater"></div>*
-              <div class="description" style="text-align:center;margin-top:0px;">
-                (Action: Add a floater to ANY card.) <br>
-              </div>
-              <div class="description" style="margin-top:17px;margin-left:17px;text-align:left;">
-              (1 VP per 3 floaters <br>
-              on this card.)
-              </div>
-            </div>
-            <div  class= celestic" style="font-size:18px;margin-top:5px;margin-bottom:-10px;box-shadow:6px 6px 6px grey;width:100px;
+            <div  class= celestic" style="font-size:26px;margin-top:5px;box-shadow:6px 6px 6px grey; margin-left:17px;
                             ">
                         <span style="background:linear-gradient(to right, rgb(251,192,137),rgb(251,192,137),rgb(23,185,236));padding-left:5px;">CEL</span><span
-                        style="background:linear-gradient(to right,rgb(23,185,236),#cccccc)">ES</span><span style="background:#cccccc;padding-right:5px;">TIC</span>
-                    </div><br>
-            <div class="resource money" style="margin-left:30px;">42</div>
-            <div class="resource card" style="margin-left:15px;"><div class="card-icon card-icon-floater">&#x2601</div></div>
-            <div class="resource card"><div class="card-icon card-icon-floater">&#x2601</div></div>
-            <div class="description" style="text-align:center;margin-top:-5px;font-size:10px;">
-              (You start with 42 M$. As your first action, reveal cards from the deck until you have revealed 2 cards with a floater icon on it. Take those 2 cards into hand and descard the rest.)
-            </div>
+                        style="background:linear-gradient(to right,rgb(23,185,236),rgb(251,192,137))">ES</span><span style="background:rgb(251,192,137);padding-right:5px;">TIC</span>
+                    </div>
           </div>
         </li>
 
