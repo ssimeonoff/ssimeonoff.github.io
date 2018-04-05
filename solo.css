@@ -1,0 +1,17 @@
+.filterDiv2 {
+    float: left;
+    background: #eeeeee;
+    background: linear-gradient(to bottom right, #ffffff, #aaaaaa, #eeeeee, #cecece, #dddddd, #eeeeee, #cccccc);
+    width: 845px;
+    height: 70px;
+    font-family:  Arial,Helvetica,sans-serif;
+    margin: 15px;
+    margin-right: 25px;
+    border-style: outset;
+    border-radius: 10px;
+}
+
+.corporation-title {
+  width: 200px;
+  text-align: center;
+}
