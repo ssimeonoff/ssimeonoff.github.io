@@ -11,6 +11,27 @@
     border-style: outset;
     border-radius: 20px;
 }
+.grid-container {
+  position: absolute;
+  display: inline-block;
+  margin-left: 10px;
+  margin-top: 77px;
+  width:154px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 5px;
+}
+.grid-container > div {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  width: 50px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 10px;
+  border-style: inset;
+  box-shadow:0 0 0 1px rgba(0,0,0,0.3);
+}
 
 #chart_div {
   background: #eeeeee;
@@ -26,44 +47,180 @@
   border-style: outset;
 }
 
-.played-games {
-  position: absolute;
-  display: inline-block;
-  margin-left: 7px;
-  margin-top: 85px;
-  background: #cccccc;
-  width: 180px;
-  padding-top: 5px;
-  height: 117px;
-  border-radius: 15px;
-  border-style: inset;
-}
-
-.scores {
-  display: inline-block;
-    box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
-    width: 40px;
-    height: 25px;
-    line-height: 25px;
-    font-weight: bold;
-    text-align: center;
-    border-radius: 10px;;
-    border: outset;
-    background-color: white;
-    margin-left: 8px;
-    margin-bottom: 6px;
-    margin-top: 2px;
-    background-color: #E6E8FA;
-}
-
 .background-failed {
     background-color: #cc3333;
+    border-style:outset !important;
 }
 
 .background-gold {
-  background-color: #CFB53B;
+  background-color: #ffff00;
+  border-style:outset !important;
+}
+
+.background-silver {
+  background-color: #f2f2f2;
+  border-style: outset !important;
 }
 
 .background-bronze {
-  background-color: #8C7853;
+  background-color: #996633;
+  border-style: outset !important;
+}
+
+.ecoline {
+  font-weight:bold;
+  padding: 8px;
+  font-size:40px;
+  font-weight:normal;
+  color:rgb(0,180,0);
+  text-shadow: -1px 0 #404040, 0 1px #404040, 1px 0 #404040, 0 -1px #404040, 5px 5px 5px grey;
+}
+
+.mining-guild {
+  font-weight:bold;
+  padding: 8px;
+  font-size:28px;
+  line-height: 26px;
+  letter-spacing: 3px;
+  margin-left:35px;
+  color:#c9380e;
+  text-shadow: -1px 0 #333333, 0 1px #333333, 1px 0 #333333, 0 -1px #333333, 2px 2px 2px  black;
+}
+
+.manutech {
+  font-weight:bold;
+  padding: 8px;
+  font-size:30px;
+  color: #e63900;
+  margin-top:10px;
+  text-shadow:  6px 3px 5px  grey;
+}
+
+.teractor {
+  padding: 8px;
+  margin-top:5px;
+  color: orangered;
+  font-size:34px;
+  font-family: 'Times New Roman';
+  font-weight:normal;
+  text-shadow: -1px 0 #333333, 0 1px #333333, 1px 0 #333333,0px -1px #333333, 6px 3px 5px  grey;
+}
+
+.phobolog {
+  padding: 8px;
+  width: 130px;
+  font-size:24px;
+  margin-left:25px;
+  margin-top:10px;
+  color:white;
+  line-height:35px;
+  background: #32004d;
+  border-radius:10px;
+  font-family: 'Times New Roman';
+  -webkit-transform:scale(1.2,1); /* Safari and Chrome */
+  -moz-transform:scale(1.2,1); /* Firefox */
+  -ms-transform:scale(1.2,1); /* IE 9 */
+  -o-transform:scale(1.2,1); /* Opera */
+  transform:scale(1.2,1); /* W3C */
+  box-shadow:  6px 6px 5px  grey;
+}
+
+.thorgate {
+  font-size:30px;
+  padding: 8px;
+  margin-top:10px;
+  margin-left:7px;
+  font-family: 'Arial Narrow','Verdana';
+  font-weight:normal;
+  text-shadow: 6px 3px 5px  grey;
+}
+
+.saturn-systems {
+  font-size:13px;
+  color:white;
+  line-height:40px;
+  background: #32004d;
+  padding-top:2px;
+  padding-bottom:2px;
+  width:170px;
+  text-align: center;
+  border-radius:50%;
+  font-weight:normal;
+  border:2px solid white;
+  box-shadow:  6px 6px 5px grey;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.credicor {
+  text-align: center;
+  width: 150px;
+  font-size:40px;
+  color: white;
+  font-family: 'Times New Roman';
+  font-weight:normal;
+  line-height:40px;
+  border:2px solid purple;
+  padding-left:5px;
+  padding-bottom:5px;
+  padding-right:5px;
+  margin-left:15px;
+  box-shadow: 6px 6px 10px grey;
+  text-shadow:-1px 0 purple, 0 1px purple, 1px 0 purple, 0 -1px purple, 6px 6px 10px grey;
+  margin-top:10px;
+}
+
+.aphrodite {
+  font-size:26px;
+  color: orange;
+  margin-left:10px;
+  font-weight:bold;
+  margin-top:10px;
+  text-shadow:  6px 6px 6px  grey;
+  text-shadow: -1px 0 #333333, 0 1px #333333, 1px 0 #333333,0px -1px #333333, 6px 3px 5px  grey;
+}
+
+.tharsis {
+  font-size:24px;
+  text-shadow:6px 6px 6px grey;
+  margin-top:10px;
+  margin-left:10px;
+  font-weight:bold;
+}
+
+.inventrix {
+  font-size:24px;
+  padding-left:5px;
+  margin-top:10px;
+  padding-bottom:5px;
+  text-shadow: 6px 6px 5px grey;
+  margin-top:20px;
+  margin-left:10px;
+  font-weight:bold;
+}
+
+.united-nations {
+  font-size:16px;
+  width:150px;
+  color: white;
+  margin-left:17px;
+  margin-top:10px;
+  padding:5px;
+  padding-top:10px;
+  padding-bottom:10px;
+  text-align:center;
+  font-weight:normal;
+  box-shadow:3px 3px 6px grey;
+}
+
+.helion {
+  font-size:34px;
+  width:140px;
+  text-align: center;
+  margin-top:10px;
+  border:2px solid black;
+  margin-left:18px;
+  background: yellow;
+  box-shadow: 6px 6px 6px grey;
+  border-radius:2px;
 }
