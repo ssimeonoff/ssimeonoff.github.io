@@ -22,15 +22,17 @@
       ['Mining Guild', 79],
       ['Viron', 105],
       ['Thorgate', 96],
+      ['Aphrodite', 110],
     ]);
 
     var options = {
-      title: 'SCORES DISTRIBUTION',
-      titleTextStyle: {fontSize:20, color:'#888888'},
+      title: 'WINS SCORES DISTRIBUTION',
+      titleTextStyle: {fontSize:20, color:"#444444"},
       legend: { position: 'none' },
       backgroundColor: "transparent",
-      vAxis: {ticks: [0,5], textPosition: 'none' },
-      chartArea:{left:0,top:40,width:550},
+      vAxis: {ticks: [0,5], textPosition: 'none'},
+      chartArea:{left:0,bottom:20,top:40,width:550},
+      colors: ['#444444'],
       histogram: {bucketSize: 5}
     };
 
@@ -41,9 +43,19 @@
 </head>
 
 <html>
-<body background="mars.jpg" style="background-color:black;background-repeat:no-repeat; background-size:100%">
-
-  <div id="chart_div"></div>
+<body style="background-color:black;background-repeat:no-repeat; background-size:100%">
+<!-- background="mars.jpg" style="background-color:black;background-repeat:no-repeat; background-size:100%" -->
+  <div>
+    <div id="chart_div"></div>
+    <div class="grid-container2">
+      <div class="title1">WINS</div>
+      <div class="wins" style="border-style:outset;background:rgb(68, 68, 68);color:white;">11</div>
+      <div class="title2">FAILS</div>
+      <div class="fails background-failed">2</div>
+      <div class="title3" style="font-size:14px;line-height:16px;margin-top:53px;">AVERAGE <br> WIN SCORE</div>
+      <div class="average background-silver" style="margin-top:53px;">90</div>
+    </div>
+  </div>
 
   <ul>
 
@@ -157,7 +169,7 @@
       <li class="filterDiv2">
         <div class="grid-container">
           <div class="background-bronze">81</div>
-          <div></div>
+          <div class="background-gold">110</div>
           <div></div>
           <div></div>
           <div></div>
@@ -235,12 +247,7 @@
                 <div class="INTERPLANETARY CINEMATICS" style="font-size:17px;">INTERPLANETARY</div>
                 <div style="height:5px;margin-top:-2px;width:143px;background:linear-gradient(to right, yellow,black,yellow,black,yellow);border:5px solid #cc3333;box-shadow:3px 3px 6px grey;">
                 </div>
-                <div class="INTERPLANETARY CINEMATICS" style="font-size:24px;margin-left:3px;margin-top:-5px;
-                -webkit-transform:scale(0.5,1); /* Safari and Chrome */
-                -moz-transform:scale(0.5,1); /* Firefox */
-                -ms-transform:scale(0.5,1); /* IE 9 */
-                -o-transform:scale(0.5,1); /* Opera */
-                transform:scale(1,0.5); /* W3C */ ">CINEMATICS
+                <div class="INTERPLANETARY CINEMATICS" style="font-size:19px;margin-left:3px;letter-spacing: 3px;">CINEMATICS
               </div></div>
         </li>
 
@@ -260,42 +267,67 @@
         </li>
 
         <li class="filterDiv2">
-          <div class="contentCorporation">
-            <div class="helion">helion</div>
+          <div class="grid-container">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
           </div>
+          <div class="helion">helion</div>
         </li>
 
         <li class="filterDiv2">
-          <div class="played-games">
-            <div class="scores background-gold">105</div>
+          <div class="grid-container">
+            <div class="background-gold">105</div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
           </div>
-          <div class="contentCorporation">
-            <div  style="font-size:46px; margin-left:15px;
-            text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white, 6px 3px 5px  grey;
-                            ">
-                        VIRON
-                    </div>
-          </div>
+          <div class="viron">VIRON</div>
         </li>
 
         <li class="filterDiv2">
-          <div class="contentCorporation">
-
-            <div  style="font-size:20px; color:white;margin-bottom:-10px;margin-left:35px;
-            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, 6px 3px 5px  grey;
-                            ">
-                        MORNING <br> STAR INC.
-                    </div>
+          <div class="grid-container">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
           </div>
+            <div class="morning-star">
+              <span style="background:darkblue;border:4px solid white;padding:5px;padding-top:10px;padding-bottom:10px;border-radius:50%;vertical-align:bottom;line-height:5px;  box-shadow:3px 3px 6px grey;">MSI</span>
+              MORNING <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; STAR INC.</div>
         </li>
 
         <li class="filterDiv2">
-          <div class="contentCorporation">
-            <div  class= celestic" style="font-size:26px;margin-top:5px;box-shadow:6px 6px 6px grey; margin-left:17px;
-                            ">
-                        <span style="background:linear-gradient(to right, rgb(251,192,137),rgb(251,192,137),rgb(23,185,236));padding-left:5px;">CEL</span><span
-                        style="background:linear-gradient(to right,rgb(23,185,236),rgb(251,192,137))">ES</span><span style="background:rgb(251,192,137);padding-right:5px;">TIC</span>
-                    </div>
+          <div class="grid-container">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+            <div class="celestic">
+              <span style="background:linear-gradient(to right, rgb(251,192,137),rgb(251,192,137),rgb(23,185,236));padding-left:5px;">CEL</span><span
+                    style="background:linear-gradient(to right,rgb(23,185,236),rgb(251,192,137))">ES</span><span style="background:rgb(251,192,137);padding-right:5px;">TIC</span>
           </div>
         </li>
 

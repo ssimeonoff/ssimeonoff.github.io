@@ -778,6 +778,7 @@
   background: linear-gradient(to right, #b36b00,#e28c22,rgb(255,204,100),yellow,yellow,#cccc33, #80cc33,#598f24);
   color:white;
   padding:3px;
+  padding-top:4px;
   line-height: 24px;
   font-size:30px;
   vertical-align: middle;

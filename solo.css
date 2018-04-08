@@ -12,6 +12,7 @@
     border-radius: 20px;
 }
 .grid-container {
+  font-family: Arial;
   position: absolute;
   display: inline-block;
   margin-left: 10px;
@@ -33,6 +34,39 @@
   box-shadow:0 0 0 1px rgba(0,0,0,0.3);
 }
 
+.grid-container2 {
+  position: absolute;
+  font-family: Arial;
+  display: inline-block;
+  margin-left: 681px;
+  margin-top: -250px;
+  width:220px;
+  display: grid;
+  grid-template-areas:
+    'title1 title1 wins'
+    'title2 title2 fails'
+    'title3 title3 average';
+  grid-gap: 5px;
+}
+
+.title1 { grid-area: title1; }
+.title2 { grid-area: title2; }
+.title3 { grid-area: title3; }
+.wins { grid-area: wins; }
+.fails { grid-area: fails; }
+.average { grid-area: average; }
+
+.grid-container2 > div {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 10px;
+  border-style: outset;
+  box-shadow:0 0 0 1px rgba(0,0,0,0.3);
+}
+
 #chart_div {
   background: #eeeeee;
   background: linear-gradient(to bottom right, #ffffff, #aaaaaa, #eeeeee, #cecece, #dddddd, #eeeeee, #cccccc);
@@ -50,15 +84,17 @@
 .background-failed {
     background-color: #cc3333;
     border-style:outset !important;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color:white;
 }
 
 .background-gold {
-  background-color: #ffff00;
+  background-color: #cccc00;
   border-style:outset !important;
 }
 
 .background-silver {
-  background-color: #f2f2f2;
+  background-color: #bbb;
   border-style: outset !important;
 }
 
@@ -115,13 +151,8 @@
   color:white;
   line-height:35px;
   background: #32004d;
-  border-radius:10px;
+  border-radius:20px;
   font-family: 'Times New Roman';
-  -webkit-transform:scale(1.2,1); /* Safari and Chrome */
-  -moz-transform:scale(1.2,1); /* Firefox */
-  -ms-transform:scale(1.2,1); /* IE 9 */
-  -o-transform:scale(1.2,1); /* Opera */
-  transform:scale(1.2,1); /* W3C */
   box-shadow:  6px 6px 5px  grey;
 }
 
@@ -129,7 +160,7 @@
   font-size:30px;
   padding: 8px;
   margin-top:10px;
-  margin-left:7px;
+  margin-left:20px;
   font-family: 'Arial Narrow','Verdana';
   font-weight:normal;
   text-shadow: 6px 3px 5px  grey;
@@ -173,9 +204,9 @@
 .aphrodite {
   font-size:26px;
   color: orange;
-  margin-left:10px;
+  margin-left:20px;
   font-weight:bold;
-  margin-top:10px;
+  margin-top:20px;
   text-shadow:  6px 6px 6px  grey;
   text-shadow: -1px 0 #333333, 0 1px #333333, 1px 0 #333333,0px -1px #333333, 6px 3px 5px  grey;
 }
@@ -215,12 +246,41 @@
 
 .helion {
   font-size:34px;
+  font-weight: bold;
   width:140px;
   text-align: center;
   margin-top:10px;
   border:2px solid black;
-  margin-left:18px;
+  margin-left:28px;
+  margin-top: 12px;
   background: yellow;
   box-shadow: 6px 6px 6px grey;
   border-radius:2px;
+}
+
+.viron {
+  font-size:46px;
+  font-weight: bold;
+  margin-left:25px;
+  margin-top: 7px;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white, 6px 3px 5px  grey;
+}
+
+.morning-star {
+  font-size:20px;
+  font-weight: bold;
+  color:white;
+  margin-left:15px;
+  margin-top: 20px;
+  line-height: 15px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, 6px 3px 5px  grey;
+}
+
+.celestic {
+  font-size:26px;
+  font-weight: bold;
+  margin-top:15px;
+  box-shadow:6px 6px 6px grey;
+  margin-left:25px;
+  width:138px;
 }
