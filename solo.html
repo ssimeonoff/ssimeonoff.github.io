@@ -26,14 +26,15 @@
     ]);
 
     var options = {
+      animation: {"startup": true},
       title: 'WINS SCORES DISTRIBUTION',
-      titleTextStyle: {fontSize:20, color:"#444444"},
+      titleTextStyle: {fontSize:20, color:"#444444", },
       legend: { position: 'none' },
       backgroundColor: "transparent",
       vAxis: {ticks: [0,5], textPosition: 'none'},
       chartArea:{left:0,bottom:20,top:40,width:550},
       colors: ['#444444'],
-      histogram: {bucketSize: 5}
+      histogram: {bucketSize: 5, minValue: 65, maxValue: 130},
     };
 
     var chart = new google.visualization.Histogram(document.getElementById('chart_div'));
