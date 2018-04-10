@@ -27,13 +27,12 @@
 
     var sum = 0;
     for( var i = 1; i < games.length; i++ ){
-    sum += parseInt(games[i][1]); //don't forget to add the base
+      sum += parseInt(games[i][1]); //don't forget to add the base
     }
     var avg = Math.round(parseFloat(sum/games.length));
+
+    document.getElementById("wins").innerHTML = games.length -1;
     document.getElementById("average").innerHTML = avg;
-
-
-
 
     var data = google.visualization.arrayToDataTable(games);
 
@@ -62,7 +61,7 @@
     <div id="chart_div"></div>
     <div class="grid-container2">
       <div class="title1">WINS</div>
-      <div class="wins" style="border-style:outset;background:rgb(68, 68, 68);color:white;">11</div>
+      <div id="wins" class="wins" style="border-style:outset;background:rgb(68, 68, 68);color:white;"></div>
       <div class="title2">FAILS</div>
       <div class="fails background-failed">2</div>
       <div class="title3" style="font-size:14px;line-height:16px;margin-top:53px;">AVERAGE <br> WIN SCORE</div>
