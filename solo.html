@@ -10,7 +10,7 @@
   google.charts.load("current", {packages:["corechart"]});
   google.charts.setOnLoadCallback(drawChart);
   function drawChart() {
-    var data = google.visualization.arrayToDataTable([
+  var games = [
       ['Corporation', 'Score'],
       ['Aphrodite', 81],
       ['Interplanetery', 102],
@@ -23,7 +23,9 @@
       ['Viron', 105],
       ['Thorgate', 96],
       ['Aphrodite', 110],
-    ]);
+    ];
+
+    var data = google.visualization.arrayToDataTable(games);
 
     var options = {
       animation: {"startup": true},
@@ -339,8 +341,6 @@
 
   </ul>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="myscripts.js"></script>
-
 </body>
 
 </html>
