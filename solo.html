@@ -25,6 +25,16 @@
       ['Aphrodite', 110],
     ];
 
+    var sum = 0;
+    for( var i = 1; i < games.length; i++ ){
+    sum += parseInt(games[i][1]); //don't forget to add the base
+    }
+    var avg = Math.round(parseFloat(sum/games.length));
+    document.getElementById("average").innerHTML = avg;
+
+
+
+
     var data = google.visualization.arrayToDataTable(games);
 
     var options = {
@@ -56,7 +66,7 @@
       <div class="title2">FAILS</div>
       <div class="fails background-failed">2</div>
       <div class="title3" style="font-size:14px;line-height:16px;margin-top:53px;">AVERAGE <br> WIN SCORE</div>
-      <div class="average background-silver" style="margin-top:53px;">90</div>
+      <div id="average" class="average background-silver" style="margin-top:53px;"></div>
     </div>
   </div>
 
@@ -333,11 +343,6 @@
                     style="background:linear-gradient(to right,rgb(23,185,236),rgb(251,192,137))">ES</span><span style="background:rgb(251,192,137);padding-right:5px;">TIC</span>
           </div>
         </li>
-
-
-
-
-
 
   </ul>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
