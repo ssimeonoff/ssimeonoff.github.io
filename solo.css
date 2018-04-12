@@ -30,7 +30,6 @@
   line-height: 35px;
   border-radius: 10px;
   border-style: inset;
-  box-shadow:0 0 0 1px rgba(0,0,0,0.3);
 }
 
 .grid-container2 {
@@ -66,7 +65,7 @@
   line-height: 35px;
   border-radius: 10px;
   border-style: outset;
-  box-shadow:0 0 0 1px rgba(0,0,0,0.3);
+  box-shadow:0 0 0 1px rgba(0,0,0,0.6),0 0 0 2px rgba(0,0,0,0.3);
 }
 
 #chart_div {
@@ -88,21 +87,26 @@
     border-style:outset !important;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     color:white;
+    box-shadow:0 0 0 1px rgba(0,0,0,0.6),0 0 0 2px rgba(0,0,0,0.3);
 }
 
 .background-gold {
   background-color: #cccc00;
   border-style:outset !important;
+  box-shadow:0 0 0 1px rgba(0,0,0,0.6),0 0 0 2px rgba(0,0,0,0.3);
 }
 
 .background-silver {
   background-color: #bbb;
   border-style: outset !important;
+  box-shadow:0 0 0 1px rgba(0,0,0,0.6),0 0 0 2px rgba(0,0,0,0.3);
+
 }
 
 .background-bronze {
   background-color: #996633;
   border-style: outset !important;
+  box-shadow:0 0 0 1px rgba(0,0,0,0.6),0 0 0 2px rgba(0,0,0,0.3);
 }
 
 .ecoline {
@@ -148,11 +152,13 @@
 }
 
 .phobolog {
-  padding: 8px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
   width: 130px;
   font-size:24px;
-  margin-left:25px;
-  margin-top:6px;
+  margin-left:20px;
+  margin-top:9px;
   color:white;
   line-height:35px;
   background: #32004d;
@@ -256,7 +262,7 @@
   text-align: center;
   margin-top:10px;
   border:2px solid black;
-  margin-left:28px;
+  margin-left:25px;
   margin-top: 10px;
   background: yellow;
   box-shadow: 6px 6px 6px grey;

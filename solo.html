@@ -33,6 +33,8 @@
 
     document.getElementById("wins").innerHTML = games.length -1;
     document.getElementById("average").innerHTML = avg;
+    document.getElementById("fails").innerHTML = document.getElementsByClassName("background-failed").length - 1;
+
 
     var data = google.visualization.arrayToDataTable(games);
 
@@ -63,7 +65,7 @@
       <div class="title1" style="width:115px;">WINS</div>
       <div id="wins" class="wins" style="border-style:outset;background:rgb(68, 68, 68);color:white;"></div>
       <div class="title2" style="width:115px;">FAILS</div>
-      <div class="fails background-failed">2</div>
+      <div id="fails" class="fails background-failed"></div>
       <div class="title3" style="width:115px;font-size:14px;">WIN RATE %</div>
       <div class="winrate">80</div>
       <div class="title4" style="font-size:14px;line-height:16px;width:115px;">AVERAGE <br> WIN SCORE</div>
