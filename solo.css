@@ -111,13 +111,14 @@
   font-size:50px;
   letter-spacing:2px;
   font-weight:normal;
+  margin-top: -2px;
   color:rgb(0,180,0);
   text-shadow: -1px 0 #404040, 0 1px #404040, 1px 0 #404040, 0 -1px #404040, 5px 5px 5px grey;
 }
 
 .mining-guild {
   font-weight:bold;
-  padding: 8px;
+  padding: 7px;
   font-size:28px;
   line-height: 26px;
   letter-spacing: 3px;
@@ -131,7 +132,8 @@
   padding: 8px;
   font-size:30px;
   color: #e63900;
-  margin-top:10px;
+  margin-top:7px;
+  margin-left: 5px;
   text-shadow:  6px 3px 5px  grey;
 }
 
@@ -150,7 +152,7 @@
   width: 130px;
   font-size:24px;
   margin-left:25px;
-  margin-top:10px;
+  margin-top:6px;
   color:white;
   line-height:35px;
   background: #32004d;
@@ -162,7 +164,7 @@
 .thorgate {
   font-size:30px;
   padding: 8px;
-  margin-top:10px;
+  margin-top:7px;
   margin-left:10px;
   font-family: 'Arial Narrow','Verdana';
   font-weight:normal;
@@ -182,7 +184,7 @@
   font-weight:normal;
   border:2px solid white;
   box-shadow:  6px 6px 5px grey;
-  margin-top: 10px;
+  margin-top: 5px;
   margin-left: 10px;
 }
 
@@ -201,7 +203,7 @@
   margin-left:15px;
   box-shadow: 6px 6px 10px grey;
   text-shadow:-1px 0 purple, 0 1px purple, 1px 0 purple, 0 -1px purple, 6px 6px 10px grey;
-  margin-top:10px;
+  margin-top:7px;
 }
 
 .aphrodite {
@@ -209,7 +211,7 @@
   color: orange;
   margin-left:20px;
   font-weight:bold;
-  margin-top:20px;
+  margin-top:17px;
   text-shadow:  6px 6px 6px  grey;
   text-shadow: -1px 0 #333333, 0 1px #333333, 1px 0 #333333,0px -1px #333333, 6px 3px 5px  grey;
 }
@@ -217,7 +219,7 @@
 .tharsis {
   font-size:24px;
   text-shadow:6px 6px 6px grey;
-  margin-top:10px;
+  margin-top:4px;
   margin-left:10px;
   font-weight:bold;
 }
@@ -228,7 +230,7 @@
   margin-top:10px;
   padding-bottom:5px;
   text-shadow: 6px 6px 5px grey;
-  margin-top:20px;
+  margin-top:16px;
   margin-left:10px;
   font-weight:bold;
 }
@@ -238,7 +240,7 @@
   width:150px;
   color: white;
   margin-left:17px;
-  margin-top:10px;
+  margin-top:3px;
   padding:5px;
   padding-top:10px;
   padding-bottom:10px;
@@ -255,7 +257,7 @@
   margin-top:10px;
   border:2px solid black;
   margin-left:28px;
-  margin-top: 12px;
+  margin-top: 10px;
   background: yellow;
   box-shadow: 6px 6px 6px grey;
   border-radius:2px;
@@ -274,7 +276,7 @@
   font-weight: bold;
   color:white;
   margin-left:15px;
-  margin-top: 20px;
+  margin-top: 15px;
   line-height: 15px;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, 6px 3px 5px  grey;
 }
