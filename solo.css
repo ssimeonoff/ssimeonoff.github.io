@@ -9,7 +9,7 @@
     margin-right: 19px;
     margin-bottom: 15px;
     border-style: outset;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 .grid-container {
   font-family: Arial;
@@ -28,7 +28,7 @@
   width: 50px;
   height: 35px;
   line-height: 35px;
-  border-radius: 10px;
+  border-radius: 5px;
   border-style: inset;
 }
 
@@ -37,7 +37,7 @@
   font-family: Arial;
   display: inline-block;
   margin-left: 709px;
-  margin-top: -232px;
+  margin-top: -229px;
   display: grid;
   grid-template-areas:
     'title1 wins'
@@ -63,15 +63,15 @@
   width: 50px;
   height: 35px;
   line-height: 35px;
-  border-radius: 10px;
+  border-radius: 5px;
   border-style: outset;
-  box-shadow:0 0 0 1px rgba(0,0,0,0.6),0 0 0 2px rgba(0,0,0,0.3);
+  box-shadow:0 0 0 1px rgba(0,0,0,0.2);
 }
 
 #chart_div {
   background: #eeeeee;
   background: linear-gradient(to bottom right, #ffffff, #aaaaaa, #eeeeee, #cecece, #dddddd, #eeeeee, #cccccc);
-  border-radius: 15px;
+  border-radius: 10px;
   margin-left: 40px;
   padding-left: 20px;
   padding-top: 15px;
@@ -79,7 +79,16 @@
   width: 855px;
   margin-top: 30px;
   margin-bottom: 15px;
-  border-style: outset;
+}
+
+.chart-title {
+  position: absolute;
+  margin-top: -230px;
+  margin-left: 216px;
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 22px;
+  color: rgb(68, 68, 68);
 }
 
 .background-failed {
