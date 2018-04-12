@@ -4,10 +4,10 @@
     background: #eeeeee;
     background: linear-gradient(to bottom right, #ffffff, #aaaaaa, #eeeeee, #cecece, #dddddd, #eeeeee, #cccccc);
     width: 875px;
-    height: 70px;
+    height: 65px;
     font-family:  Arial,Helvetica,sans-serif;
     margin-right: 19px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     border-style: outset;
     border-radius: 15px;
 }
@@ -15,8 +15,8 @@
   font-family: Arial;
   position: absolute;
   display: inline-block;
-  margin-left: 200px;
-  margin-top: 17px;
+  margin-left: 203px;
+  margin-top: 12px;
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
   grid-gap: 10px;
@@ -37,8 +37,8 @@
   position: absolute;
   font-family: Arial;
   display: inline-block;
-  margin-left: 681px;
-  margin-top: -250px;
+  margin-left: 709px;
+  margin-top: -232px;
   display: grid;
   grid-template-areas:
     'title1 wins'
@@ -78,8 +78,8 @@
   padding-top: 15px;
   padding-bottom: 17px;
   width: 845px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-bottom: 15px;
   border-style: outset;
 }
 
