@@ -3,24 +3,23 @@
     float: left;
     background: #eeeeee;
     background: linear-gradient(to bottom right, #ffffff, #aaaaaa, #eeeeee, #cecece, #dddddd, #eeeeee, #cccccc);
-    width: 200px;
-    height: 220px;
+    width: 875px;
+    height: 70px;
     font-family:  Arial,Helvetica,sans-serif;
     margin-right: 19px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border-style: outset;
-    border-radius: 20px;
+    border-radius: 15px;
 }
 .grid-container {
   font-family: Arial;
   position: absolute;
   display: inline-block;
-  margin-left: 10px;
-  margin-top: 77px;
-  width:154px;
+  margin-left: 200px;
+  margin-top: 17px;
   display: grid;
-  grid-template-columns: auto auto auto;
-  grid-gap: 5px;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+  grid-gap: 10px;
 }
 .grid-container > div {
   text-align: center;
@@ -40,26 +39,29 @@
   display: inline-block;
   margin-left: 681px;
   margin-top: -250px;
-  width:220px;
   display: grid;
   grid-template-areas:
-    'title1 title1 wins'
-    'title2 title2 fails'
-    'title3 title3 average';
-  grid-gap: 5px;
+    'title1 wins'
+    'title2 fails'
+    'title3 winrate'
+    'title4 average';
+  grid-gap: 10px;
 }
 
 .title1 { grid-area: title1; }
 .title2 { grid-area: title2; }
 .title3 { grid-area: title3; }
+.title4 { grid-area: title4; }
 .wins { grid-area: wins; }
 .fails { grid-area: fails; }
+.winrate { grid-area: winrate; }
 .average { grid-area: average; }
 
 .grid-container2 > div {
   text-align: center;
   font-size: 22px;
   font-weight: bold;
+  width: 50px;
   height: 35px;
   line-height: 35px;
   border-radius: 10px;
@@ -76,8 +78,8 @@
   padding-top: 15px;
   padding-bottom: 17px;
   width: 845px;
-  margin-top: 40px;
-  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   border-style: outset;
 }
 
@@ -105,8 +107,9 @@
 
 .ecoline {
   font-weight:bold;
-  padding: 8px;
-  font-size:40px;
+  margin-left: 10px;
+  font-size:50px;
+  letter-spacing:2px;
   font-weight:normal;
   color:rgb(0,180,0);
   text-shadow: -1px 0 #404040, 0 1px #404040, 1px 0 #404040, 0 -1px #404040, 5px 5px 5px grey;
