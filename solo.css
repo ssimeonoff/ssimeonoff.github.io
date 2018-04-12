@@ -57,6 +57,7 @@
 .average { grid-area: average; }
 
 .grid-container2 > div {
+  color: rgb(68, 68, 68);
   text-align: center;
   font-size: 22px;
   font-weight: bold;
