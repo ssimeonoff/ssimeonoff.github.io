@@ -29,23 +29,27 @@
     for( var i = 1; i < games.length; i++ ){
       sum += parseInt(games[i][1]); //don't forget to add the base
     }
-    var avg = Math.round(parseFloat(sum/games.length));
+    var avg = Math.round(parseFloat(sum/(games.length-1)));
+    var fails = document.getElementsByClassName("background-failed").length - 1;
+    var winrate = Math.round(parseFloat(100*(games.length-1)/(games.length-1+fails)));
+
 
     document.getElementById("wins").innerHTML = games.length -1;
     document.getElementById("average").innerHTML = avg;
-    document.getElementById("fails").innerHTML = document.getElementsByClassName("background-failed").length - 1;
+    document.getElementById("fails").innerHTML = fails;
+    document.getElementById("winrate").innerHTML = winrate;
 
 
     var data = google.visualization.arrayToDataTable(games);
 
     var options = {
       animation: {"startup": true},
-      title: 'WINS SCORES DISTRIBUTION',
+      title: '',
       titleTextStyle: {fontSize:20, color:"#444444", },
       legend: { position: 'none' },
       backgroundColor: "transparent",
       vAxis: {ticks: [0,5], textPosition: 'none'},
-      chartArea:{left:0,bottom:20,top:40,width:550},
+      chartArea:{left:0,bottom:20,top:40,width:620},
       colors: ['#444444'],
       histogram: {bucketSize: 5, minValue: 65, maxValue: 130},
     };
@@ -67,7 +71,7 @@
       <div class="title2" style="width:115px;">FAILS</div>
       <div id="fails" class="fails background-failed"></div>
       <div class="title3" style="width:115px;font-size:14px;">WIN RATE %</div>
-      <div class="winrate">80</div>
+      <div id="winrate" class="winrate">80</div>
       <div class="title4" style="font-size:14px;line-height:16px;width:115px;">AVERAGE <br> WIN SCORE</div>
       <div id="average"></div>
     </div>
