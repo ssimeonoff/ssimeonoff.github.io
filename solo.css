@@ -80,6 +80,7 @@
   width: 855px;
   margin-top: 30px;
   margin-bottom: 15px;
+  border-style: outset;
 }
 
 .chart-title {
