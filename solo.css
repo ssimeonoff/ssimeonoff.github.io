@@ -4,12 +4,11 @@
     width: 875px;
     height: 65px;
     font-family:  Arial,Helvetica,sans-serif;
-    margin-right: 19px;
 }
 
 .corps-list {
   margin-left: 40px;
-  background: #ddd;
+  background: #ccc;
   width: 875px;
   height: 1105px;
   border-radius: 10px;
@@ -69,6 +68,7 @@
   width: 50px;
   height: 35px;
   color: rgb(68, 68, 68);
+  background: #eee;
   line-height: 35px;
   border-radius: 5px;
   border-style: outset;
@@ -76,7 +76,7 @@
 }
 
 #chart_div {
-  background: #ddd;
+  background: #ccc;
   border-radius: 10px;
   margin-left: 40px;
   padding-left: 20px;
@@ -85,6 +85,7 @@
   width: 855px;
   margin-top: 30px;
   margin-bottom: 15px;
+  border-style: outset;
 }
 
 .chart-title {
@@ -101,23 +102,23 @@
   position: absolute;
   font-family: Arial;
   display: inline-block;
-  margin-top: -234px;
+  margin-top: -235px;
   margin-left: 54px;
 }
 
 .button {
   outline: none;
-  background-color: #fff;
+  background-color: #f2f2f2;
   border-radius: 5px;
   border-style: outset;
   width:180px;
-  height:40px;
+  height:41px;
   box-shadow:0 0 0 1px rgba(0,0,0,0.3);
   color: rgb(68, 68, 68);
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: 13px;
 
 }
 
