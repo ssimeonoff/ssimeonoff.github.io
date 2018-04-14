@@ -42,7 +42,7 @@
   font-family: Arial;
   display: inline-block;
   margin-left: 714px;
-  margin-top: -233px;
+  margin-top: -235px;
   display: grid;
   grid-template-areas:
     'title1 wins'
@@ -50,6 +50,7 @@
     'title3 winrate'
     'title4 average';
   grid-gap: 10px;
+  grid-row-gap:13px;
 }
 
 .title1 { grid-area: title1; }
@@ -68,7 +69,6 @@
   width: 50px;
   height: 35px;
   color: rgb(68, 68, 68);
-
   line-height: 35px;
   border-radius: 5px;
   border-style: outset;
@@ -89,27 +89,36 @@
 
 .chart-title {
   position: absolute;
-  margin-top: -230px;
-  margin-left: 325px;
+  margin-top: -225px;
+  margin-left: 360px;
   font-family: Arial;
   font-weight: bold;
   font-size: 18px;
   color: rgb(68, 68, 68);
 }
 
-.button {
+.buttons-div {
   position: absolute;
+  font-family: Arial;
+  display: inline-block;
+  margin-top: -234px;
+  margin-left: 54px;
+}
+
+.button {
   outline: none;
-  margin-left: -660px;
+  background-color: #fff;
   border-radius: 5px;
   border-style: outset;
   width:180px;
   height:40px;
-  box-shadow:0 0 0 1px rgba(0,0,0,0.6),0 0 0 2px rgba(0,0,0,0.3);
+  box-shadow:0 0 0 1px rgba(0,0,0,0.3);
   color: rgb(68, 68, 68);
   text-align: center;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: bold;
+  margin-bottom: 15px;
+
 }
 
 .button:hover {
