@@ -54,7 +54,7 @@
       legend: { position: 'none' },
       backgroundColor: "transparent",
       vAxis: {ticks: [0,5], textPosition: 'none'},
-      chartArea:{left:120,bottom:20,top:40,width:500},
+      chartArea:{left:200,bottom:20,top:40,width:430},
       colors: ['#444444'],
       histogram: {bucketSize: 5, minValue: 65, maxValue: 125},
     };
@@ -66,9 +66,8 @@
 </head>
 
 <html>
-<body background="mars.jpg" style="background-color:black;background-repeat:no-repeat; background-size:100%">
+<body style="background-color:black;background-repeat:no-repeat; background-size:100%">
 <!-- background="mars.jpg" style="background-color:black;background-repeat:no-repeat; background-size:100%" -->
-  <div>
     <div id="chart_div"></div>
     <div class="chart-title">WINS SCORE DISTRIBUTION</div>
     <div class="grid-container2">
@@ -80,12 +79,14 @@
       <div id="winrate" class="winrate" style="background:white;">80</div>
       <div class="title4" style="font-size:14px;line-height:16px;width:115px;">AVERAGE <br> WIN SCORE</div>
       <div id="average" style="background:#bbb"></div>
+      <button class="button">Back to list</button>
+      <button class="button" style="margin-top:100px">The Setup</button>
+      <button class="button" style="margin-top:155px">The Hypothesis</button>
+
     </div>
-  </div>
 
-  <ul>
-
-    <li class="filterDiv2">
+  <div class="corps-list">
+    <div class="filterDiv2">
       <div class="grid-container">
         <div class="background-gold">104</div>
         <div class="background-gold">102</div>
@@ -99,9 +100,9 @@
         <div></div>
       </div>
         <div class="ecoline">ecoline</div>
-    </li>
+    </div>
 
-    <li class="filterDiv2">
+    <div class="filterDiv2">
       <div class="grid-container">
         <div class="background-bronze">79</div>
         <div></div>
@@ -115,9 +116,9 @@
         <div></div>
       </div>
       <div class="mining-guild">MINING<br><span style="margin-left:6px;">GUILD</span></div>
-    </li>
+    </div>
 
-    <li class="filterDiv2">
+    <div class="filterDiv2">
       <div class="grid-container">
         <div class="background-bronze">72</div>
         <div></div>
@@ -133,9 +134,9 @@
         <div class="manutech">
           <span style="color:white;background:#e63900;text-shadow:none;padding-left:2px;">MA</span>NUTECH
         </div>
-    </li>
+    </div>
 
-    <li class="filterDiv2">
+    <div class="filterDiv2">
       <div class="grid-container">
         <div class="background-silver">90</div>
         <div></div>
@@ -149,9 +150,9 @@
         <div></div>
       </div>
       <div class="teractor">TERACTOR</div>
-    </li>
+    </div>
 
-    <li class="filterDiv2">
+    <div class="filterDiv2">
       <div class="grid-container">
         <div class="background-gold">116</div>
         <div class="background-silver">89</div>
@@ -165,9 +166,9 @@
         <div></div>
       </div>
       <div class="phobolog">PHOBOLOG</div>
-    </li>
+    </div>
 
-    <li class="filterDiv2">
+    <div class="filterDiv2">
       <div class="grid-container">
         <div class="background-silver">99</div>
         <div class="background-failed">X</div>
@@ -181,9 +182,9 @@
         <div></div>
       </div>
       <div class="thorgate">THORGATE</div>
-    </li>
+    </div>
 
-    <li class="filterDiv2">
+    <div class="filterDiv2">
       <div class="grid-container">
         <div class="background-failed">X</div>
         <div></div>
@@ -197,9 +198,9 @@
         <div></div>
       </div>
       <div class="saturn-systems">SATURN <span style="font-size:20px;display:inline-block;">&#x25CF;</span> SYSTEMS</div>
-    </li>
+    </div>
 
-      <li class="filterDiv2">
+      <div class="filterDiv2">
         <div class="grid-container">
           <div class="background-silver">81</div>
           <div class="background-gold">110</div>
@@ -213,9 +214,9 @@
           <div></div>
         </div>
         <div class="aphrodite">APHRODITE</div>
-      </li>
+      </div>
 
-        <li class="filterDiv2">
+        <div class="filterDiv2">
           <div class="grid-container">
             <div class="background-failed">X</div>
             <div class="background-bronze">79</div>
@@ -229,9 +230,9 @@
             <div></div>
           </div>
           <div class="credicor">credicor</div>
-        </li>
+        </div>
 
-        <li class="filterDiv2">
+        <div class="filterDiv2">
           <div class="grid-container">
             <div></div>
             <div></div>
@@ -248,9 +249,9 @@
             <div style="margin-left:15px;text-shadow:none;box-shadow:3px 3px 6px grey;margin-right:2px;border: 1px solid red;display:inline-block;background-color:#ff5f00;">&#x25b2;
             <span style="font-size:14px;padding:0px;border:none;margin-left:-12px;padding-right:2px;">&#x25b2;</span>
           </div>THARSIS<br>&nbsp;&nbsp;&nbsp;&nbsp;REPUBLIC</div>
-        </li>
+        </div>
 
-        <li class="filterDiv2">
+        <div class="filterDiv2">
           <div class="grid-container">
             <div></div>
             <div></div>
@@ -266,9 +267,9 @@
             <div class="inventrix">
               <span style="background-color:#6bb5c7;padding-left:4px;padding-right:4px;font-size:26px;box-shadow: 6px 6px 10px grey;">X</span> INVENTRIX
             </div>
-        </li>
+        </div>
 
-        <li class="filterDiv2">
+        <div class="filterDiv2">
           <div class="grid-container">
             <div class="background-gold">102</div>
             <div></div>
@@ -287,9 +288,9 @@
                 </div>
                 <div class="INTERPLANETARY CINEMATICS" style="font-size:19px;margin-left:3px;letter-spacing: 3px;">CINEMATICS
               </div></div>
-        </li>
+        </div>
 
-        <li class="filterDiv2">
+        <div class="filterDiv2">
           <div class="grid-container">
             <div></div>
             <div></div>
@@ -303,9 +304,9 @@
             <div></div>
           </div>
             <div class="background-color-active united-nations"> UNITED NATIONS MARS INITIATIVE</div>
-        </li>
+        </div>
 
-        <li class="filterDiv2">
+        <div class="filterDiv2">
           <div class="grid-container">
             <div class="background-silver">82</div>
             <div></div>
@@ -319,9 +320,9 @@
             <div></div>
           </div>
           <div class="helion">helion</div>
-        </li>
+        </div>
 
-        <li class="filterDiv2">
+        <div class="filterDiv2">
           <div class="grid-container">
             <div class="background-gold">105</div>
             <div></div>
@@ -335,9 +336,9 @@
             <div></div>
           </div>
           <div class="viron">VIRON</div>
-        </li>
+        </div>
 
-        <li class="filterDiv2">
+        <div class="filterDiv2">
           <div class="grid-container">
             <div></div>
             <div></div>
@@ -353,9 +354,9 @@
             <div class="morning-star">
               <span style="background:darkblue;border:4px solid white;padding:5px;padding-top:10px;padding-bottom:10px;border-radius:50%;vertical-align:bottom;line-height:5px;  box-shadow:3px 3px 6px grey;">MSI</span>
               MORNING <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; STAR INC.</div>
-        </li>
+        </div>
 
-        <li class="filterDiv2">
+        <div class="filterDiv2">
           <div class="grid-container">
             <div></div>
             <div></div>
@@ -372,9 +373,10 @@
               <span style="background:linear-gradient(to right, rgb(251,192,137),rgb(251,192,137),rgb(23,185,236));padding-left:5px;">CEL</span><span
                     style="background:linear-gradient(to right,rgb(23,185,236),rgb(251,192,137))">ES</span><span style="background:rgb(251,192,137);padding-right:5px;">TIC</span>
           </div>
-        </li>
+        </div>
+  </div>
 
-  </ul>
+
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </body>
 
