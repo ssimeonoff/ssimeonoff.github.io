@@ -1,3 +1,4 @@
+
 .filterDiv2 {
     position: relative;
     float: left;
@@ -9,7 +10,7 @@
 .corps-list {
   margin-left: 40px;
   background: #ccc;
-
+  background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
   width: 875px;
   height: 1105px;
   border-radius: 10px;
@@ -24,6 +25,7 @@
   margin-top: 12px;
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+
   grid-gap: 10px;
 }
 .grid-container > div {
@@ -34,7 +36,7 @@
   height: 35px;
   line-height: 35px;
   border-radius: 5px;
-  border-style: inset;
+
 }
 
 .grid-container2 {
