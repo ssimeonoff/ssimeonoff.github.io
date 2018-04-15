@@ -5,6 +5,8 @@
     width: 875px;
     height: 65px;
     font-family:  Arial,Helvetica,sans-serif;
+    border-bottom: 1px solid #ccc;
+
 }
 
 .corps-list {
@@ -12,7 +14,7 @@
   background: #ccc;
   background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
   width: 875px;
-  height: 1105px;
+  height: 1115px;
   border-radius: 10px;
   border-style: outset;
 }
@@ -182,7 +184,7 @@
   font-size:28px;
   line-height: 26px;
   letter-spacing: 3px;
-  margin-left:35px;
+  margin-left:30px;
   color:#c9380e;
   text-shadow: -1px 0 #333333, 0 1px #333333, 1px 0 #333333, 0 -1px #333333, 2px 2px 2px  black;
 }
@@ -338,8 +340,8 @@
   font-weight: bold;
   color:white;
   margin-left:15px;
-  margin-top: 15px;
-  line-height: 15px;
+  margin-top: 18px;
+  line-height: 17px;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, 6px 3px 5px  grey;
 }
 
