@@ -75,7 +75,7 @@
   line-height: 35px;
   border-radius: 5px;
   border-style: outset;
-  box-shadow:0 0 0 1px rgba(0,0,0,0.2);
+  box-shadow:0 0 0 1px rgba(0,0,0,0.4), 0 0 0 2px rgba(0,0,0,0.2);
 }
 
 #chart_div {
@@ -95,7 +95,7 @@
 .chart-title {
   position: absolute;
   margin-top: -225px;
-  margin-left: 360px;
+  margin-left: 350px;
   font-family: Arial;
   font-weight: bold;
   font-size: 18px;
@@ -117,7 +117,7 @@
   border-style: outset;
   width:180px;
   height:41px;
-  box-shadow:0 0 0 1px rgba(0,0,0,0.3);
+  box-shadow:0 0 0 1px rgba(0,0,0,0.4), 0 0 0 2px rgba(0,0,0,0.2);
   color: rgb(68, 68, 68);
   text-align: center;
   font-size: 16px;
