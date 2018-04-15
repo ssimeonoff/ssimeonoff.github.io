@@ -1284,11 +1284,13 @@
     background-color: #fefefe;
     font-family: Arial,Verdana;
     line-height: 20px;
-    margin: auto;
-    padding: 20px;
+    margin-left:58px;
+    margin-top: 250px;
+    padding: 30px;
     border: 1px solid #888;
-    width: 80%;
+    width: 800px;
     transition-duration: 2s;
+    border-radius: 20px;
 }
 
 /* The Close Button */
