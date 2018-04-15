@@ -9,6 +9,7 @@
 .corps-list {
   margin-left: 40px;
   background: #ccc;
+
   width: 875px;
   height: 1105px;
   border-radius: 10px;
@@ -77,6 +78,7 @@
 
 #chart_div {
   background: #ccc;
+  background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
   border-radius: 10px;
   margin-left: 40px;
   padding-left: 20px;
