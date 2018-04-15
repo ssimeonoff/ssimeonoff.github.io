@@ -89,14 +89,21 @@ function myFunction(id) {
   var input, filter, ul, li, a, i;
   input = document.getElementById("myInput");
   filter = input.value.toUpperCase();
+  filter = filter.split(" ");
+  
   ul = document.getElementById("myUL");
   li = ul.getElementsByTagName("li");
-  for (i = 0; i < li.length; i++) {
+
+  for (i = 0;  i < li.length; i++) {
     a = li[i];
-    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-      li[i].style.display = "";
-    } else {
-      li[i].style.display = "none";
+    for (j = 0;  j < filter.length; j++) {
+      if (a.innerHTML.toUpperCase().indexOf(filter[j]) > -1) {
+        li[i].style.display = "";
+      } else {
+        li[i].style.display = "none";
+        break
+      }
+
     }
   }
 }
