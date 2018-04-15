@@ -322,7 +322,7 @@
   border:2px solid black;
   margin-left:25px;
   margin-top: 10px;
-  background: yellow;
+  background: #e6e600;
   box-shadow: 6px 6px 6px grey;
   border-radius:2px;
 }
@@ -352,4 +352,19 @@
   box-shadow:6px 6px 6px grey;
   margin-left:25px;
   width:138px;
+}
+
+.modal-content1 {
+    background-color: #fefefe;
+    font-family: Arial,Verdana;
+    line-height: 28px;
+    margin-left:58px;
+    margin-top: 192px;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 800px;
+    transition-duration: 2s;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
 }

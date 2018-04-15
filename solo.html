@@ -79,17 +79,53 @@
       <div id="wins" class="wins" style="border-style:outset;background:rgb(68, 68, 68);color:white;"></div>
       <div class="title2" style="width:115px;background-color: #cc3333; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;color:white;">FAILS</div>
       <div id="fails" class="fails background-failed" style="background-color: #cc3333;color:white;"></div>
-      <div class="title3" style="width:115px;font-size:14px;">WIN RATE %</div>
+      <div class="title3" style="font-size:14px;line-height:17px;width:115px;">WIN RATE <br> PERCENTAGE</div>
       <div id="winrate" class="winrate">80</div>
-      <div class="title4" style="font-size:13px;line-height:17px;width:115px;">AVERAGE <br> WIN SCORE</div>
+      <div class="title4" style="font-size:14px;line-height:17px;width:115px;">AVERAGE <br> WIN SCORE</div>
       <div id="average"></div>
     </div>
     <div class="buttons-div">
       <button class="button" style= "background: rgb(68, 68, 68);"><a href="https://ssimeonoff.github.io/" style="text-decoration: none;color:white;">BACK TO LIST</a></button><br>
-      <button class="button">SETUP</button><br>
-      <button class="button">ASSUMPTIONS</button><br>
-      <button class="button">HYPOTHESIS</button>
+      <button class="button" data-modal="modalOne">SETUP</button><br>
+      <button class="button" data-modal="modalTwo">HYPOTHESIS</button><br>
+      <button class="button" data-modal="modalThree">ASSUMPTIONS</button>
     </div>
+
+    <div id="modalOne" class="modal">
+      <div class="modal-content1">
+        <span class="close">&times;</span>
+          SETUP <br><br>
+        - Standard Solo rules (no drafting, 2 starting corps) <br>
+        - Included Venus Next <br>
+        - Included Hellas/Elysium (rotating the 3 boards) <br>
+      </div>
+    </div>
+
+    <div id="modalTwo" class="modal">
+      <div class="modal-content1">
+        <span class="close">&times;</span>
+        HYPOTHESIS <br><br>
+        Winning Solo games is easier when playing with Venux Next.<br>
+        Playing with moderate risk, it can be achieved:<br>
+        > Win Rate Percentage over 80<br>
+        > Average Win Score over 90<br>
+
+    </div>
+  </div>
+
+  <div id="modalThree" class="modal">
+    <div class="modal-content1">
+      <span class="close">&times;</span>
+      ASSUMPTIONS <br><br>
+
+
+  </div>
+</div>
+
+
+
+
+
 
   <div class="corps-list">
     <div class="filterDiv2">
@@ -385,6 +421,8 @@
 
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="solo.js"></script>
+
 </body>
 
 </html>
