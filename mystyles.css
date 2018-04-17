@@ -444,7 +444,7 @@
     color:white;
     font-size: 16px;
     line-height: 30px;
-    vertical-align: bottom;
+    vertical-align: middle;
     text-shadow: -1px 0 #444444, 0 1px #444444, 1px 0 #444444, 0 -1px #444444;
     box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
 }
@@ -462,9 +462,24 @@
     color:white;
     font-family: Arial,Verdana;
     background-color: #cc3333;
-    vertical-align: bottom;
+    vertical-align: middle;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
+    margin-bottom: 5px;
+}
 
+.btn5 {
+    outline: none;
+    background-color: rgb(255,204,100);
+    background: linear-gradient(to right, #e28c22, rgb(255,204,100),rgb(255,204,100), #e28c22);
+    height: 40px;
+    width: 150px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 8px;
+    margin-right: 20px;
+    margin-top: 15px;
     box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
 }
 
@@ -477,6 +492,10 @@
 }
 
 .btn3:hover {
+    border: 2px solid rgb(137,137,137);
+}
+
+.btn5:hover {
     border: 2px solid rgb(137,137,137);
 }
 
@@ -495,6 +514,11 @@
     border: 4px solid black;
     box-shadow: 0 0 0 1px rgba(0,0,0,0.8), 0 0 0 2px rgba(0,0,0,0.6), 0 0 0 3px rgba(0,0,0,0.4),0 0 0 4px rgba(0,0,0,0.2);
 
+}
+
+.btn5.active {
+  border: 4px solid black;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.8), 0 0 0 2px rgba(0,0,0,0.6), 0 0 0 3px rgba(0,0,0,0.4),0 0 0 4px rgba(0,0,0,0.2);
 }
 
 
@@ -1100,9 +1124,10 @@
     background-position: 10px 12px;
     background-repeat: no-repeat;
     width: 220px;
-    height: 34px;
+    height: 40px;
+    line-height: 40px;
     font-size: 18px;
-    padding: 2px 2px 0px 20px;
+    padding: 0px 2px 0px 20px;
     border: 2px solid #ddd;
     margin-top: 20px;
     margin-right: 10px;
