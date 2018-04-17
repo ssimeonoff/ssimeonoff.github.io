@@ -11,6 +11,8 @@ function showAll() {
   document.getElementById("totalPreludes").innerHTML = displayedPreludes;
   x = document.querySelectorAll('.filterDiv');
   y = document.querySelectorAll('button.active');
+
+  //making all buttons inactive
   if (y.length > 0) {
     y = document.querySelectorAll('button.active');
     if (y.length > 0) {
@@ -19,6 +21,7 @@ function showAll() {
       }
     }
   }
+  //showing all cards
   for (i = 0; i < x.length; i++) {
     w3RemoveClass(x[i], "show");
     if (x[i].className.indexOf("") > -1) {
@@ -34,6 +37,7 @@ function filterSelection(id) {
   clickedElementID = document.getElementById(id);
   clickedElementID.classList.toggle("active");
 
+  //only one btn1 can be active at a time
   activeButtons1 = document.querySelectorAll('.btn1');
   if (clickedElementID.classList.contains("btn1")) {
     for (i = 0; i < activeButtons1.length; i++) {
@@ -43,6 +47,7 @@ function filterSelection(id) {
     }
   }
 
+  //only one btn3 can be active at a time
   activeButtons3 = document.querySelectorAll('.btn3');
   if (clickedElementID.classList.contains("btn3")) {
     for (i = 0; i < activeButtons3.length; i++) {
@@ -57,7 +62,7 @@ function filterSelection(id) {
   if (y.length > 0) {
     displayedCorporations = 0;
     displayedCards = 0;
-    displayedPreludes=0;
+    displayedPreludes = 0;
     for (i = 0; i < x.length; i++) {
       w3RemoveClass(x[i], "show");
       show = true;
@@ -90,9 +95,11 @@ function myFunction(id) {
   input = document.getElementById("myInput");
   filter = input.value.toUpperCase();
   filter = filter.split(" ");
-  
-  ul = document.getElementById("myUL");
-  li = ul.getElementsByTagName("li");
+
+  li = document.querySelectorAll('li.show');
+  displayedCards2 = li.length;
+  displayedCorporations2 = document.querySelectorAll('li.show.corporation').length;
+  displayedPreludes2 = document.querySelectorAll('li.show.preludeCards').length;
 
   for (i = 0;  i < li.length; i++) {
     a = li[i];
@@ -101,9 +108,17 @@ function myFunction(id) {
         li[i].style.display = "";
       } else {
         li[i].style.display = "none";
-        break
+        if (li[i].classList.contains("corporation")) {
+          displayedCorporations2--;
+        }
+        if (li[i].classList.contains("preludeCards")) {
+          displayedPreludes2--;
+        }
+        displayedCards2--;
       }
-
+      document.getElementById("totalProjects").innerHTML = displayedCards2 - displayedCorporations2 - displayedPreludes2;
+      document.getElementById("totalCorporations").innerHTML = displayedCorporations2;
+      document.getElementById("totalPreludes").innerHTML = displayedPreludes2;
     }
   }
 }
