@@ -84,9 +84,27 @@
       <button id="info" class="btn3 tooltip" style="background:#444444;margin-left: 16px;width: 25px;height: 25px;line-height: 19px;">i<span class="tooltiptext">Info button</span></button>
     </div>
     <div id="subfilters">
-          Requirements subfilters will be added here.
-    </div>
 
+      <div class="slider1">
+        <div style="position:absolute;margin-top:-15px;margin-left:108px;">°C</div>
+        <output id="output1" for="slider1" style="position: absolute;margin-top:-15px;margin-left:65px;">-30</output> <!-- Just to display selected value -->
+        <input id="slider1" type="range" min="-30" max="4" value="-30" step="2" list="tickmarks" oninput="output1.value = slider1.value" class="track-background">
+
+        <div style="position:absolute;margin-top:-51px;margin-left:300px;">% O²</div>
+        <output id="output2" for="slider2" style="position: absolute;margin-top:-15px;margin-left:65px;">0</output> <!-- Just to display selected value -->
+        <input id="slider2" type="range" min="0" max="14" value="0" step="1" list="tickmarks" oninput="output2.value = slider2.value">
+
+        <div style="position:absolute;margin-top:-51px;margin-left:480px;">Oceans</div>
+        <output id="output3" for="slider3" style="position: absolute;margin-top:-15px;margin-left:50px;">0</output> <!-- Just to display selected value -->
+        <input id="slider3" type="range" min="0" max="9" value="-0" step="1" list="tickmarks" oninput="output3.value = slider3.value">
+
+        <div style="position:absolute;margin-top:-51px;margin-left:688px;">% V</div>
+        <output id="output4" for="slider4" style="position: absolute;margin-top:-15px;margin-left:60px;">0</output> <!-- Just to display selected value -->
+        <input id="slider4" type="range" min="0" max="28" value="0" step="2" list="tickmarks" oninput="output4.value = slider4.value">
+      </div>
+
+    </div>
+  </div>
   </div>
 
   <div id="myModal" class="modal">
