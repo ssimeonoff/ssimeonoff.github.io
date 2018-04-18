@@ -177,3 +177,14 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+//toggle subfilters div
+function toggleSubfiltersDiv() {
+    var x = document.getElementById("subfilters");
+    var btn = document.getElementById("reqs");
+    if (btn.classList.contains("active")) {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
