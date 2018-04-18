@@ -75,52 +75,52 @@ function filterSelection(id) {
   } else {
     showAll();
   }
-  displayedCards = document.querySelectorAll('li.show').length;
-  displayedCorporations = document.querySelectorAll('li.show.corporation').length;
-  displayedPreludes = document.querySelectorAll('li.show.preludeCards').length;
-
-  document.getElementById("totalProjects").innerHTML = displayedCards - displayedCorporations - displayedPreludes;
-  document.getElementById("totalCorporations").innerHTML = displayedCorporations;
-  document.getElementById("totalPreludes").innerHTML = displayedPreludes;
-
+  myFunction();
 }
 
 function myFunction() {
   var input, filter, ul, li, a, i;
+
+  //obtaining the list of displayed cards from buttons filters
+  x = document.querySelectorAll('.filterDiv');
+  y = document.querySelectorAll('button.active');
+  if (y.length > 0) {
+    for (i = 0; i < x.length; i++) {
+      w3RemoveClass(x[i], "show");
+      show = true;
+      for (j = 0; j < y.length; j++) {
+        if (x[i].className.indexOf(y[j].id) > -1) {
+            } else {show = false;}
+        }
+        if (show == true) {
+          w3AddClass(x[i], "show");
+        }
+
+    }
+  }
+  li = document.querySelectorAll('li.show');
+  
   input = document.getElementById("myInput");
   filter = input.value.toUpperCase();
   filter = filter.split(" ");
-
-  li = document.querySelectorAll('li.show');
-  displayedCards2 = li.length;
-  displayedCorporations2 = document.querySelectorAll('li.show.corporation').length;
-  displayedPreludes2 = document.querySelectorAll('li.show.preludeCards').length;
-
   for (i = 0;  i < li.length; i++) {
     display = true;
     for (j = 0;  j < filter.length; j++) {
       if (li[i].innerHTML.toUpperCase().indexOf(filter[j]) > -1) {}
-      else {
-        display = false;
-      }
-    }
+      else {display = false;}
+        }
     if (display) {
-        li[i].style.display = "";
-      } else {
-        li[i].style.display = "none";
-        if (li[i].classList.contains("corporation")) {
-          displayedCorporations2--;
-        }
-        if (li[i].classList.contains("preludeCards")) {
-          displayedPreludes2--;
-        }
-        displayedCards2--;
-      }
-    }
-    
-    document.getElementById("totalProjects").innerHTML = displayedCards2 - displayedCorporations2 - displayedPreludes2;
-    document.getElementById("totalCorporations").innerHTML = displayedCorporations2;
-    document.getElementById("totalPreludes").innerHTML = displayedPreludes2;
+        li[i].classList.add("show");
+      } else { li[i].classList.remove("show");}
+  }
+
+  //Displayed Cards Numbers
+  displayedCards = document.querySelectorAll('li.show').length;
+  displayedCorporations = document.querySelectorAll('li.show.corporation').length;
+  displayedPreludes = document.querySelectorAll('li.show.preludeCards').length;
+  document.getElementById("totalProjects").innerHTML = displayedCards - displayedCorporations - displayedPreludes;
+  document.getElementById("totalCorporations").innerHTML = displayedCorporations;
+  document.getElementById("totalPreludes").innerHTML = displayedPreludes;
 }
 
 
