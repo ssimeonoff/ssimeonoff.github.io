@@ -83,14 +83,13 @@ function filterSelection(id) {
         document.getElementById("totalProjects").innerHTML = displayedCards - displayedCorporations - displayedPreludes;
         document.getElementById("totalCorporations").innerHTML = displayedCorporations;
         document.getElementById("totalPreludes").innerHTML = displayedPreludes;
-
     }
   } else {
     showAll();
   }
 }
 
-function myFunction(id) {
+function myFunction() {
   var input, filter, ul, li, a, i;
   input = document.getElementById("myInput");
   filter = input.value.toUpperCase();
@@ -102,9 +101,14 @@ function myFunction(id) {
   displayedPreludes2 = document.querySelectorAll('li.show.preludeCards').length;
 
   for (i = 0;  i < li.length; i++) {
-    a = li[i];
+    display = true;
     for (j = 0;  j < filter.length; j++) {
-      if (a.innerHTML.toUpperCase().indexOf(filter[j]) > -1) {
+      if (li[i].innerHTML.toUpperCase().indexOf(filter[j]) > -1) {}
+      else {
+        display = false;
+      }
+    }
+    if (display) {
         li[i].style.display = "";
       } else {
         li[i].style.display = "none";
@@ -116,11 +120,12 @@ function myFunction(id) {
         }
         displayedCards2--;
       }
-      document.getElementById("totalProjects").innerHTML = displayedCards2 - displayedCorporations2 - displayedPreludes2;
-      document.getElementById("totalCorporations").innerHTML = displayedCorporations2;
-      document.getElementById("totalPreludes").innerHTML = displayedPreludes2;
+
     }
-  }
+    document.getElementById("totalProjects").innerHTML = displayedCards2 - displayedCorporations2 - displayedPreludes2;
+    document.getElementById("totalCorporations").innerHTML = displayedCorporations2;
+    document.getElementById("totalPreludes").innerHTML = displayedPreludes2;
+
 }
 
 
