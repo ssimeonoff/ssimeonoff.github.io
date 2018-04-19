@@ -84,24 +84,18 @@
       <button id="info" class="btn3 tooltip" style="background:#444444;margin-left: 16px;width: 25px;height: 25px;line-height: 19px;">i<span class="tooltiptext">Info button</span></button>
     </div>
     <div id="subfilters">
-
       <div class="slider1">
-        <div style="position:absolute;margin-top:-15px;margin-left:108px;">°C</div>
-        <output id="output1" for="slider1" style="position: absolute;margin-top:-15px;margin-left:65px;">-30</output> <!-- Just to display selected value -->
-        <input id="slider1" type="range" min="-30" max="8" value="-30" step="2" list="tickmarks" oninput="output1.value = slider1.value; myFunction();" class="track-temp-background">
+        <output id="output1" for="slider1" class="output-label" style="color:#f25540;margin-left: 258px;">-30</output> <!-- Just to display selected value -->
+        <input id="slider1" type="range" min="-30" max="8" value="-30" step="2" list="tickmarks" oninput="output1.value = slider1.value; myFunction();" class="track-temp-background track-temp-thumb" style="width:250px;">
 
-        <div style="position:absolute;margin-top:-51px;margin-left:300px;">% O²</div>
-        <output id="output2" for="slider2" style="position: absolute;margin-top:-15px;margin-left:65px;">0</output> <!-- Just to display selected value -->
-        <input id="slider2" type="range" min="0" max="14" value="0" step="1" list="tickmarks" oninput="output2.value = slider2.value; myFunction();" class="track-oxygen-background">
+        <output id="output3" for="slider3" class="output-label" style="margin-left: 160px;">0</output> <!-- Just to display selected value -->
+        <input id="slider3" type="range" min="0" max="9" value="-0" step="1" list="tickmarks" oninput="output3.value = slider3.value; myFunction();" class=" track-oceans-thumb" style="width:150px;"><br>
 
-        <div style="position:absolute;margin-top:-51px;margin-left:480px;">Oceans</div>
-        <output id="output3" for="slider3" style="position: absolute;margin-top:-15px;margin-left:50px;">0</output> <!-- Just to display selected value -->
-        <input id="slider3" type="range" min="0" max="9" value="-0" step="1" list="tickmarks" oninput="output3.value = slider3.value; myFunction();">
+        <output id="output2" for="slider2" class="output-label" style="color:rgb(246,241,175);">0</output> <!-- Just to display selected value -->
+        <input id="slider2" type="range" min="0" max="14" value="0" step="1" list="tickmarks" oninput="output2.value = slider2.value; myFunction();" class="track-oxygen-background track-oxygen-thumb">
 
-        <div style="position:absolute;margin-top:-51px;margin-left:688px;">% V</div>
-        <output id="output4" for="slider4" style="position: absolute;margin-top:-15px;margin-left:60px;">0</output> <!-- Just to display selected value -->
-        <input id="slider4" type="range" min="0" max="30" value="0" step="2" list="tickmarks" oninput="output4.value = slider4.value; myFunction();" class="track-venus-background">
-        <p>SLIDERS DO NOT WORK YET</p>
+        <output id="output4" for="slider4" class="output-label" style="color: #8bb8da">0</output> <!-- Just to display selected value -->
+        <input id="slider4" type="range" min="0" max="30" value="0" step="2" list="tickmarks" oninput="output4.value = slider4.value; myFunction();" class="track-venus-background track-venus-thumb">
       </div>
 
     </div>
@@ -837,7 +831,7 @@
 
         <!--Project cards------------------------------------------------------>
         <!--1-->
-        <li class="filterDiv automated builderTag jovianTag standard reqs">
+        <li class="filterDiv automated builderTag jovianTag standard reqs" data-oxygen="105">
             <div class="title background-color-automated ">Colonizer Training Camp</div>
             <div class="price ">8</div>
             <div class="tag tag1 tag-builder "></div>
@@ -908,7 +902,7 @@
         </li>
 
         <!--5-->
-        <li class="filterDiv active scienceTag standard reqs">
+        <li class="filterDiv active scienceTag standard reqs" data-oxygen="106">
             <div class="title background-color-active ">Search for Life</div>
             <div class="price ">3</div>
             <div class="tag tag1 tag-science "></div>
@@ -952,7 +946,7 @@
         </li>
 
         <!--8-->
-        <li class="filterDiv automated cityTag builderTag standard reqs">
+        <li class="filterDiv automated cityTag builderTag standard reqs" data-oceans="4">
             <div class="title background-color-automated ">Capital</div>
             <div class="price ">26</div>
             <div class="tag tag1 tag-builder "></div>
@@ -1100,7 +1094,7 @@
         </li>
 
         <!--16-->
-        <li class="filterDiv automated cityTag builderTag standard reqs">
+        <li class="filterDiv automated cityTag builderTag standard reqs" data-oxygen="107">
             <div class="title background-color-automated ">Domed Crater</div>
             <div class="price ">24</div>
             <div class="tag tag1 tag-builder "></div>
@@ -1144,7 +1138,7 @@
         </li>
 
         <!--18-->
-        <li class="filterDiv automated spaceTag jovianTag standard reqs">
+        <li class="filterDiv automated spaceTag jovianTag standard reqs" data-oxygen="2">
             <div class="title background-color-automated ">Methane from Titan</div>
             <div class="price ">28</div>
             <div class="tag tag1 tag-space "></div>
@@ -1240,7 +1234,7 @@
 
 
         <!--23-->
-        <li class="filterDiv active plantTag standard reqs">
+        <li class="filterDiv active plantTag standard reqs" data-temperature="120">
             <div class="title background-color-active ">Arctic Algae</div>
             <div class="price ">12</div>
             <div class="tag tag1 tag-plant "></div>
@@ -1259,7 +1253,7 @@
         </li>
 
         <!--24-->
-        <li class="filterDiv active animalTag standard reqs">
+        <li class="filterDiv active animalTag standard reqs" data-oxygen="11">
             <div class="title background-color-active ">Predators</div>
             <div class="price ">14</div>
             <div class="tag tag1 tag-animal "></div>
@@ -1294,7 +1288,7 @@
         </li>
 
         <!--26-->
-        <li class="filterDiv plantTag builderTag automated standard reqs">
+        <li class="filterDiv plantTag builderTag automated standard reqs" data-temperature ="-12">
             <div class="title background-color-automated ">Eos Chasma National Park</div>
             <div class="price ">16</div>
             <div class="tag tag1 tag-builder "></div>

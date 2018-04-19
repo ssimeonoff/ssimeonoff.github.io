@@ -523,16 +523,15 @@
 
 #subfilters {
     display: none;
-    background: white;
     width: 815px;
     padding: 20px 0;
     text-align: center;
     border-radius: 10px;
-    margin-top: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
     margin-right: 10px;
     font-family: Arial, Verdana;
     font-size: 18px;
-    box-shadow: 0 0 0 1px rgba(0,0,0,0.3), 0 0 0 2px rgba(0,0,0,0.1);
 }
 
 
@@ -1401,9 +1400,10 @@
 input[type=range] {
   height: 13px;
   -webkit-appearance: none;
-  margin-right: 10px;
+  margin-right: 70px;
   margin-top: 18px;
-  width: 180px;
+  width: 200px;
+  margin-bottom: 25px;
 }
 
 input[type=range]:focus {
@@ -1425,6 +1425,50 @@ input[type=range]::-webkit-slider-runnable-track {
   background: #f25540 !important;
 }
 
+.track-temp-thumb::-webkit-slider-thumb {
+  background: url("thumb1.png") !important;
+  height: 48px !important;
+  margin-top: -15px !important;
+}
+.track-temp-thumb::-moz-range-thumb {
+  background: url("thumb1.png") !important;
+  height: 48px !important;
+  margin-top: -15px !important;
+}
+
+.track-oxygen-thumb::-webkit-slider-thumb {
+  background: url("thumb2.png") !important;
+  width: 48px !important;
+
+}
+.track-oxygen-thumb::-moz-range-thumb {
+  background: url("thumb2.png") !important;
+  width: 48px !important;
+
+}
+
+.track-oceans-thumb::-webkit-slider-thumb {
+  background: url("thumb3.png") !important;
+  height: 48px !important;
+  width: 52px !important;
+  margin-top: -15px !important;
+}
+.track-oceans-thumb::-moz-range-thumb {
+  background: url("thumb3.png") !important;
+  height: 48px !important;
+  width: 52px !important;
+  margin-top: -15px !important;
+}
+
+.track-venus-thumb::-webkit-slider-thumb {
+  background: url("thumb4.png") !important;
+  width: 48px !important;
+}
+.track-venus-thumb::-moz-range-thumb {
+  background: url("thumb4.png") !important;
+  width: 48px !important;
+}
+
 .track-temp-background::-moz-range-track {
     background: #f25540 !important;
 }
@@ -1438,11 +1482,11 @@ input[type=range]::-webkit-slider-runnable-track {
 }
 
 .track-venus-background::-webkit-slider-runnable-track {
-  background-color: rgb(84,150,201) !important;
+  background-color: #8bb8da !important;
 }
 
 .track-venus-background::-moz-range-track {
-  background-color: rgb(84,150,201) !important;
+  background-color: #8bb8da !important;
 }
 
 
@@ -1454,7 +1498,7 @@ input[type=range]::-webkit-slider-thumb {
   height: 40px;
   width: 40px;
   border-radius: 5px;
-  background: #FFFFFF;
+  background: white;
   cursor: pointer;
   -webkit-appearance: none;
   margin-top: -11px;
@@ -1518,4 +1562,13 @@ input[type=range]:focus::-ms-fill-lower {
 }
 input[type=range]:focus::-ms-fill-upper {
   background: #3071A9;
+}
+
+.output-label {
+  position: absolute;
+  margin-top: 9px;
+  margin-left: 210px;
+  font-size: 30px;
+  text-shadow: -1px 0 #444444, 0 1px #444444, 1px 0 #444444, 0 -1px #444444;
+  color: #3071A9;
 }

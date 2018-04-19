@@ -5,14 +5,13 @@ function showAll() {
   displayedProjects = 261;
   displayedCorporations = 22;
   displayedPreludes = 3;
-  myFunction("");
   document.getElementById("totalProjects").innerHTML = displayedProjects;
   document.getElementById("totalCorporations").innerHTML = displayedCorporations;
   document.getElementById("totalPreludes").innerHTML = displayedPreludes;
-  x = document.querySelectorAll('.filterDiv');
-  y = document.querySelectorAll('button.active');
+
 
   //making all buttons inactive
+  y = document.querySelectorAll('button.active');
   if (y.length > 0) {
     y = document.querySelectorAll('button.active');
     if (y.length > 0) {
@@ -22,6 +21,7 @@ function showAll() {
     }
   }
   //showing all cards
+  x = document.querySelectorAll('.filterDiv');
   for (i = 0; i < x.length; i++) {w3AddClass(x[i], "show");}
 
 }
@@ -75,7 +75,7 @@ function filterSelection(id) {
   }
   myFunction();
 }
-
+////////////////////// INPUTS FUCTION ///////////////////////////////
 function myFunction() {
   var input, filter, ul, li, a, i;
 
@@ -85,7 +85,8 @@ function myFunction() {
 
   //shows all cards
   for (i = 0; i < x.length; i++) {w3AddClass(x[i], "show");}
-  //checks if there clicked filter buttons and remove cards accordingly
+
+  //checks if there are clicked filter buttons and filter cards accordingly
   if (y.length > 0) {
     for (i = 0; i < x.length; i++) {
       w3RemoveClass(x[i], "show");
@@ -100,9 +101,9 @@ function myFunction() {
 
     }
   }
-  li = document.querySelectorAll('li.show');
-  console.log(li.length); //if not buttons are pressed, it should return all
 
+  //return the list of only visible cards
+  li = document.querySelectorAll('li.show');
   //Requirements input filtering
   temperatureValue = document.getElementById("slider1").value;
   oxygenValue = document.getElementById("slider2").value;
@@ -121,16 +122,12 @@ function myFunction() {
       //the check is done by removing that 100 and making the data and value NEGATIVE
       // and thus keeping the ">=" check
 
-      if (temperatureData > 50) {
-        temperatureData = temperatureData - 100;
-        temperatureData = -Math.abs(temperatureData);
-        temperatureValue = -Math.abs(temperatureValue);
-      }
+
 
       if (oxygenData > 50) {
         oxygenData = oxygenData - 100;
         oxygenData = -Math.abs(oxygenData);
-        oxygenData = -Math.abs(oxygenValue);
+        oxygenValue = -Math.abs(oxygenValue);
       }
 
       if (oceansData > 50) {
@@ -145,16 +142,28 @@ function myFunction() {
         venusValue = -Math.abs(venusValue);
       }
 
+      //the check
+      show = false;
+      if (temperatureValue !== -32) {
+        if ( temperatureValue >= temperatureData ) { show=true;}
+      }
+      if (oxygenValue !== 0) {
+        if ( oxygenValue >= oxygenData ) { show=true }
+      }
+      if (oceansValue !== 0) {
+        if ( oceansValue >= oceansData ) { show=true }
+      }
+      if (venusValue !== 0) {
+        if ( venusValue >= venusData ) { show=true }
+      }
 
-      //the normal check
-      if (temperatureValue >= li[i].dataset.temperature ||
-          oxygenValue >= li[i].dataset.oxygen ||
-          oceansValue >= oceansData ||
-          venusValue >= li[i].dataset.venus ) { //keep the card show
-          } else {w3RemoveClass(li[i], "show");}
+      //the check
+      if (!show) {w3RemoveClass(li[i], "show");}
     }
   }
 
+  //obtaining the new visible list after the subfilters check
+  li = document.querySelectorAll('li.show');
 
   //Text input filtering
   input = document.getElementById("myInput");
@@ -170,8 +179,6 @@ function myFunction() {
         li[i].classList.add("show");
       } else { li[i].classList.remove("show");}
   }
-
-
 
   //Displayed Cards Numbers
   displayedCards = document.querySelectorAll('li.show').length;
