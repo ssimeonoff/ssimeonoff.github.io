@@ -22,12 +22,8 @@ function showAll() {
     }
   }
   //showing all cards
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf("") > -1) {
-      w3AddClass(x[i], "show");
-    }
-  }
+  for (i = 0; i < x.length; i++) {w3AddClass(x[i], "show");}
+
 }
 
 
@@ -59,6 +55,8 @@ function filterSelection(id) {
 
   x = document.querySelectorAll('.filterDiv');
   y = document.querySelectorAll('button.active');
+
+
   if (y.length > 0) {
     for (i = 0; i < x.length; i++) {
       w3RemoveClass(x[i], "show");
@@ -84,6 +82,10 @@ function myFunction() {
   //obtaining the list of displayed cards from buttons filters
   x = document.querySelectorAll('.filterDiv');
   y = document.querySelectorAll('button.active');
+
+  //shows all cards
+  for (i = 0; i < x.length; i++) {w3AddClass(x[i], "show");}
+  //checks if there clicked filter buttons and remove cards accordingly
   if (y.length > 0) {
     for (i = 0; i < x.length; i++) {
       w3RemoveClass(x[i], "show");
@@ -99,7 +101,62 @@ function myFunction() {
     }
   }
   li = document.querySelectorAll('li.show');
+  console.log(li.length); //if not buttons are pressed, it should return all
 
+  //Requirements input filtering
+  temperatureValue = document.getElementById("slider1").value;
+  oxygenValue = document.getElementById("slider2").value;
+  oceansValue = document.getElementById("slider3").value;
+  venusValue = document.getElementById("slider4").value;
+  if ( temperatureValue > -30 || oxygenValue > 0 || oceansValue > 0 || venusValue > 0 ) {
+    for (i = 0; i < li.length; i++) {
+      //obtaining the data without writing over it
+      temperatureData = li[i].dataset.temperature;
+      oxygenData = li[i].dataset.oxygen;
+      oceansData = li[i].dataset.oceans;
+      venusData = li[i].dataset.venus;
+
+      //check for max requirements
+      //max requirements are marked by adding "100" to its value
+      //the check is done by removing that 100 and making the data and value NEGATIVE
+      // and thus keeping the ">=" check
+
+      if (temperatureData > 50) {
+        temperatureData = temperatureData - 100;
+        temperatureData = -Math.abs(temperatureData);
+        temperatureValue = -Math.abs(temperatureValue);
+      }
+
+      if (oxygenData > 50) {
+        oxygenData = oxygenData - 100;
+        oxygenData = -Math.abs(oxygenData);
+        oxygenData = -Math.abs(oxygenValue);
+      }
+
+      if (oceansData > 50) {
+        oceansData = oceansData - 100;
+        oceansData = -Math.abs(oceansData);
+        oceansValue = -Math.abs(oceansValue);
+      }
+
+      if (venusData > 50) {
+        venusData = venusData - 100;
+        venusData = -Math.abs(venusData);
+        venusValue = -Math.abs(venusValue);
+      }
+
+
+      //the normal check
+      if (temperatureValue >= li[i].dataset.temperature ||
+          oxygenValue >= li[i].dataset.oxygen ||
+          oceansValue >= oceansData ||
+          venusValue >= li[i].dataset.venus ) { //keep the card show
+          } else {w3RemoveClass(li[i], "show");}
+    }
+  }
+
+
+  //Text input filtering
   input = document.getElementById("myInput");
   filter = input.value.toUpperCase();
   filter = filter.split(" ");
@@ -113,6 +170,8 @@ function myFunction() {
         li[i].classList.add("show");
       } else { li[i].classList.remove("show");}
   }
+
+
 
   //Displayed Cards Numbers
   displayedCards = document.querySelectorAll('li.show').length;
@@ -130,6 +189,12 @@ function clearInput() {
   //resets the range inputs
   document.getElementById("slider1").value = -30;
   document.getElementById("output1").innerHTML = -30;
+  document.getElementById("slider2").value = 0;
+  document.getElementById("output2").innerHTML = 0;
+  document.getElementById("slider3").value = 0;
+  document.getElementById("output3").innerHTML = 0;
+  document.getElementById("slider4").value = 0;
+  document.getElementById("output4").innerHTML = 0;
 
 }
 

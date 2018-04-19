@@ -1140,8 +1140,9 @@
     width: 220px;
     height: 40px;
     line-height: 40px;
-    font-size: 18px;
-    padding: 0px 2px 0px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0px 2px 0px 15px;
     border: 2px solid #ddd;
     margin-top: 20px;
     margin-right: 10px;
