@@ -99,7 +99,7 @@ function myFunction() {
     }
   }
   li = document.querySelectorAll('li.show');
-  
+
   input = document.getElementById("myInput");
   filter = input.value.toUpperCase();
   filter = filter.split(" ");
@@ -125,7 +125,12 @@ function myFunction() {
 
 
 function clearInput() {
-  document.getElementById("myInput").value = "";
+  document.getElementById("myInput").value = ""; //resets the text input
+  document.getElementById("subfilters").style.display = "none"; //hides the range inputs div
+  //resets the range inputs
+  document.getElementById("slider1").value = -30;
+  document.getElementById("output1").innerHTML = -30;
+
 }
 
 function w3AddClass(element, name) {
