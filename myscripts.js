@@ -112,49 +112,28 @@ function myFunction() {
   if ( temperatureValue > -30 || oxygenValue > 0 || oceansValue > 0 || venusValue > 0 ) {
     for (i = 0; i < li.length; i++) {
       //obtaining the data without writing over it
-      temperatureData = li[i].dataset.temperature;
-      oxygenData = li[i].dataset.oxygen;
-      oceansData = li[i].dataset.oceans;
-      venusData = li[i].dataset.venus;
+      temperatureData = parseInt(li[i].dataset.temperature);
+      oxygenData = parseInt(li[i].dataset.oxygen);
+      oceansData = parseInt(li[i].dataset.oceans);
+      venusData = parseInt(li[i].dataset.venus);
 
       //check for max requirements
       //max requirements are marked by adding "100" to its value
       //the check is done by removing that 100 and making the data and value NEGATIVE
       // and thus keeping the ">=" check
-
-
-
-      if (oxygenData > 50) {
-        oxygenData = oxygenData - 100;
-        oxygenData = -Math.abs(oxygenData);
-        oxygenValue = -Math.abs(oxygenValue);
-      }
-
-      if (oceansData > 50) {
-        oceansData = oceansData - 100;
-        oceansData = -Math.abs(oceansData);
-        oceansValue = -Math.abs(oceansValue);
-      }
-
-      if (venusData > 50) {
-        venusData = venusData - 100;
-        venusData = -Math.abs(venusData);
-        venusValue = -Math.abs(venusValue);
-      }
-
       //the check
       show = false;
-      if (temperatureValue !== -32) {
-        if ( temperatureValue >= temperatureData ) { show=true;}
+      if (temperatureValue > -30) {
+        if ( temperatureValue <= temperatureData ) { show = true;}
       }
-      if (oxygenValue !== 0) {
-        if ( oxygenValue >= oxygenData ) { show=true }
+      if (oxygenValue > 0 && oxygenData > 0) {
+        if ( oxygenValue <= oxygenData ) { show = true; console.log(oxygenValue + "+" + oxygenData);  }
       }
-      if (oceansValue !== 0) {
-        if ( oceansValue >= oceansData ) { show=true }
+      if (oceansValue > 0) {
+        if ( oceansValue <= oceansData ) { show = true }
       }
-      if (venusValue !== 0) {
-        if ( venusValue >= venusData ) { show=true }
+      if (venusValue > 0 ) {
+        if ( venusValue <= venusData ) { show = true }
       }
 
       //the check
@@ -258,10 +237,11 @@ window.onclick = function(event) {
 //toggle subfilters div
 function toggleSubfiltersDiv() {
   if (document.getElementById("reqs").classList.contains("active")) {
+    document.getElementById("buttonsContainer").style.height = "340px";
     $("#subfilters").fadeIn(1200);
-    document.getElementById("buttonsContainer").style.height = "400px";
+
   }
-  else {  $("#subfilters").fadeOut(0);
+  else {  document.getElementById("subfilters").style.display = "none";
           document.getElementById("buttonsContainer").style.height = "266px";
         }
 

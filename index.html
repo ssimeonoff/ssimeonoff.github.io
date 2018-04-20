@@ -85,17 +85,17 @@
     </div>
     <div id="subfilters">
       <div class="slider1">
-        <output id="output1" for="slider1" class="output-label" style="color:#f25540;margin-left: 258px;">-30</output> <!-- Just to display selected value -->
-        <input id="slider1" type="range" min="-30" max="8" value="-30" step="2" list="tickmarks" oninput="output1.value = slider1.value; myFunction();" class="track-temp-background track-temp-thumb" style="width:250px;">
+        <output id="output1" for="slider1" class="output-label" style="color:#f25540;margin-left: 220px;">-30</output> <!-- Just to display selected value -->
+        <input id="slider1" type="range" min="-30" max="8" value="-30" step="2" list="tickmarks" oninput="output1.value = slider1.value; myFunction();" class="track-temp-background track-temp-thumb" style="width:210px;margin-right:55px;">
 
-        <output id="output3" for="slider3" class="output-label" style="margin-left: 160px;">0</output> <!-- Just to display selected value -->
-        <input id="slider3" type="range" min="0" max="9" value="-0" step="1" list="tickmarks" oninput="output3.value = slider3.value; myFunction();" class=" track-oceans-thumb" style="width:150px;"><br>
+        <output id="output3" for="slider3" class="output-label" style="margin-left: 110px;">0</output> <!-- Just to display selected value -->
+        <input id="slider3" type="range" min="0" max="9" value="-0" step="1" list="tickmarks" oninput="output3.value = slider3.value; myFunction();" class=" track-oceans-thumb" style="width:100px;">
 
         <output id="output2" for="slider2" class="output-label" style="color:rgb(246,241,175);">0</output> <!-- Just to display selected value -->
         <input id="slider2" type="range" min="0" max="14" value="0" step="1" list="tickmarks" oninput="output2.value = slider2.value; myFunction();" class="track-oxygen-background track-oxygen-thumb">
 
         <output id="output4" for="slider4" class="output-label" style="color: #8bb8da">0</output> <!-- Just to display selected value -->
-        <input id="slider4" type="range" min="0" max="30" value="0" step="2" list="tickmarks" oninput="output4.value = slider4.value; myFunction();" class="track-venus-background track-venus-thumb">
+        <input id="slider4" type="range" min="0" max="30" value="0" step="2" list="tickmarks" oninput="output4.value = slider4.value; myFunction();" class="track-venus-background track-venus-thumb" style="margin-right:0px;">
       </div>
 
     </div>
@@ -831,7 +831,7 @@
 
         <!--Project cards------------------------------------------------------>
         <!--1-->
-        <li class="filterDiv automated builderTag jovianTag standard reqs" data-oxygen="105">
+        <li class="filterDiv automated builderTag jovianTag standard reqs" data-oxygen="5">
             <div class="title background-color-automated ">Colonizer Training Camp</div>
             <div class="price ">8</div>
             <div class="tag tag1 tag-builder "></div>
@@ -902,7 +902,7 @@
         </li>
 
         <!--5-->
-        <li class="filterDiv active scienceTag standard reqs" data-oxygen="106">
+        <li class="filterDiv active scienceTag standard reqs" data-oxygen="6">
             <div class="title background-color-active ">Search for Life</div>
             <div class="price ">3</div>
             <div class="tag tag1 tag-science "></div>
@@ -1094,7 +1094,7 @@
         </li>
 
         <!--16-->
-        <li class="filterDiv automated cityTag builderTag standard reqs" data-oxygen="107">
+        <li class="filterDiv automated cityTag builderTag standard reqs" data-oxygen="7">
             <div class="title background-color-automated ">Domed Crater</div>
             <div class="price ">24</div>
             <div class="tag tag1 tag-builder "></div>
@@ -1234,7 +1234,7 @@
 
 
         <!--23-->
-        <li class="filterDiv active plantTag standard reqs" data-temperature="120">
+        <li class="filterDiv active plantTag standard reqs" data-temperature="-12">
             <div class="title background-color-active ">Arctic Algae</div>
             <div class="price ">12</div>
             <div class="tag tag1 tag-plant "></div>
@@ -1344,14 +1344,14 @@
 
 
         <!--29-->
-        <li class="filterDiv automated cityTag builderTag standard reqs">
+        <li class="filterDiv automated cityTag builderTag standard reqs" data-oxygen ="9">
             <div class="title background-color-automated ">Cupola City</div>
             <div class="price ">16</div>
             <div class="tag tag1 tag-builder "></div>
             <div class="tag tag2 tag-city "></div>
             <div class="number ">029</div>
             <div class="content ">
-                <div class="requirements requirements-max ">max 9% 02</div>
+                <div class="requirements requirements-max ">max 9% O2</div>
                 <div class="production-box production-box-size1a ">
                     <div class="production-prefix ">&#x2796;&#xFE0E;</div><div class="energy production "></div>
                     <div class="production-prefix ">&#x2795;&#xFE0E;</div><div class="money production ">3</div>
@@ -1432,7 +1432,7 @@
         </li>
 
         <!--34-->
-        <li class="filterDiv standard active scienceTag microbeTag reqs">
+        <li class="filterDiv standard active scienceTag microbeTag reqs" data-oxygen ="4">
             <div class="title background-color-active ">GHG Producing Bacteria</div>
             <div class="price ">8</div>
             <div class="tag tag1 tag-microbe "></div>
@@ -1450,7 +1450,7 @@
         </li>
 
         <!--35-->
-        <li class="filterDiv standard active microbeTag reqs">
+        <li class="filterDiv standard active microbeTag reqs" data-oxygen ="4">
             <div class="title background-color-active ">Ants</div>
             <div class="price ">9</div>
             <div class="tag tag1 tag-microbe "></div>
@@ -1574,7 +1574,7 @@
       </li>
 
       <!--42-->
-      <li class="filterDiv automated builderTag standard reqs">
+      <li class="filterDiv automated builderTag standard reqs" data-temperature ="-18">
         <div class="title background-color-automated">Archaebacteria</div>
         <div class="price">6</div>
         <div class="tag tag1 tag-microbe"></div>
@@ -1608,7 +1608,7 @@
       </li>
 
       <!--44-->
-      <li class="filterDiv automated builderTag scienceTag standard reqs">
+      <li class="filterDiv automated builderTag scienceTag standard reqs" data-oxygen ="4">
         <div class="title background-color-automated">Natural Preserve</div>
         <div class="price">9</div>
         <div class="tag tag1 tag-builder"></div>
@@ -1666,7 +1666,7 @@
 
 
       <!--47-->
-      <li class="filterDiv automated plantTag standard reqs">
+      <li class="filterDiv automated plantTag standard reqs" data-oceans ="5">
         <div class="title background-color-automated">Algae</div>
         <div class="price">10</div>
         <div class="tag tag1 tag-plant"></div>
@@ -1755,7 +1755,7 @@
         </li>
 
         <!--52-->
-        <li class="filterDiv active animalTag standard reqs">
+        <li class="filterDiv active animalTag standard reqs" data-temperature ="2">
           <div class="title background-color-active">Fish</div>
           <div class="price">9</div>
           <div class="tag tag1 tag-animal"></div>
@@ -1777,7 +1777,7 @@
         </li>
 
         <!--53-->
-        <li class="filterDiv automated standard reqs">
+        <li class="filterDiv automated standard reqs" data-temperature ="0">
           <div class="title background-color-automated">Lake Marineris</div>
           <div class="price">18</div>
           <div class="number">053</div>
@@ -1793,7 +1793,7 @@
         </li>
 
         <!--54-->
-        <li class="filterDiv active animalTag standard reqs">
+        <li class="filterDiv active animalTag standard reqs" data-oxygen ="6">
           <div class="title background-color-active">Small Animals</div>
           <div class="price">6</div>
           <div class="tag tag1 tag-animal"></div>
@@ -1817,7 +1817,7 @@
         </li>
 
         <!--55-->
-        <li class="filterDiv automated plantTag standard reqs">
+        <li class="filterDiv automated plantTag standard reqs" data-oceans ="6">
           <div class="title background-color-automated">Kelp Farming</div>
           <div class="price">17</div>
           <div class="tag tag1 tag-plant"></div>
@@ -1895,7 +1895,7 @@
         </li>
 
         <!--59-->
-        <li class="filterDiv automated plantTag standard reqs">
+        <li class="filterDiv automated plantTag standard reqs" data-temperature ="4">
           <div class="title background-color-automated">Mangrove</div>
           <div class="price">17</div>
           <div class="tag tag1 tag-plant"></div>
@@ -1912,7 +1912,7 @@
         </li>
 
         <!--60-->
-        <li class="filterDiv automated plantTag standard reqs">
+        <li class="filterDiv automated plantTag standard reqs" data-temperature ="-4">
           <div class="title background-color-automated">Trees</div>
           <div class="price">13</div>
           <div class="tag tag1 tag-plant"></div>
@@ -2064,7 +2064,7 @@
         </li>
 
         <!--69-->
-        <li class="filterDiv active builderTag corporate reqs">
+        <li class="filterDiv active builderTag corporate reqs" data-oxygen ="8">
           <div class="title background-color-active">Electro Catapult</div>
           <div class="price">17</div>
           <div class="tag tag1 tag-builder"></div>
@@ -2119,7 +2119,7 @@
         </li>
 
         <!--72-->
-        <li class="filterDiv active animalTag standard reqs">
+        <li class="filterDiv active animalTag standard reqs" data-oxygen ="13">
             <div class="title background-color-active ">Birds</div>
             <div class="price ">10</div>
             <div class="tag tag1 tag-animal "></div>
@@ -2387,7 +2387,7 @@
         </li>
 
         <!--87-->
-        <li class="filterDiv automated plantTag standard reqs">
+        <li class="filterDiv automated plantTag standard reqs" data-temperature ="-16">
           <div class="title background-color-automated">Grass</div>
           <div class="price">11</div>
           <div class="tag tag1 tag-plant"></div>
@@ -2405,7 +2405,7 @@
         </li>
 
         <!--88-->
-        <li class="filterDiv automated plantTag standard reqs">
+        <li class="filterDiv automated plantTag standard reqs" data-temperature ="-14">
           <div class="title background-color-automated">Heather</div>
           <div class="price">6</div>
           <div class="tag tag1 tag-plant"></div>
@@ -2495,7 +2495,7 @@
         </li>
 
         <!--93-->
-        <li class="filterDiv automated plantTag standard reqs">
+        <li class="filterDiv automated plantTag standard reqs" data-temperature ="-10">
           <div class="title background-color-automated">Bushes</div>
           <div class="price">10</div>
           <div class="tag tag1 tag-plant"></div>
@@ -2749,7 +2749,7 @@
         </li>
 
         <!--108-->
-        <li class="filterDiv automated cityTag builderTag standard reqs">
+        <li class="filterDiv automated cityTag builderTag standard reqs" data-oxygen ="12">
             <div class="title background-color-automated ">Open City</div>
             <div class="price ">23</div>
             <div class="tag tag1 tag-builder "></div>
@@ -2851,7 +2851,7 @@
         </li>
 
         <!--114-->
-        <li class="filterDiv automated scienceTag standard reqs">
+        <li class="filterDiv automated scienceTag standard reqs" data-oxygen ="7">
             <div class="title background-color-automated ">Breathing Filters</div>
             <div class="price ">11</div>
             <div class="tag tag1 tag-science "></div>
@@ -2882,7 +2882,7 @@
         </li>
 
         <!--116-->
-        <li class="filterDiv automated builderTag standard reqs">
+        <li class="filterDiv automated builderTag standard reqs" data-temperature ="-6">
           <div class="title background-color-automated">Artificial Lake</div>
           <div class="price">15</div>
           <div class="tag tag1 tag-builder "></div>
@@ -2915,7 +2915,7 @@
         </li>
 
         <!--118-->
-        <li class="filterDiv automated plantTag standard reqs">
+        <li class="filterDiv automated plantTag standard reqs" data-temperature ="4">
           <div class="title background-color-automated">Farming</div>
           <div class="price">16</div>
           <div class="tag tag1 tag-plant"></div>
@@ -2936,7 +2936,7 @@
         </li>
 
         <!--119-->
-        <li class="filterDiv automated  standard reqs" data-oceans="103">
+        <li class="filterDiv automated  standard reqs" data-oceans="3">
             <div class="title background-color-automated ">Dust Seals</div>
             <div class="price ">2</div>
             <div class="number ">119</div>
@@ -2985,7 +2985,7 @@
         </li>
 
         <!--122-->
-        <li class="filterDiv automated plantTag standard reqs">
+        <li class="filterDiv automated plantTag standard reqs" data-oceans ="3">
           <div class="title background-color-automated">Moss</div>
           <div class="price">4</div>
           <div class="tag tag1 tag-plant"></div>
@@ -3107,7 +3107,7 @@
         </li>
 
         <!--129-->
-        <li class="filterDiv automated standard reqs">
+        <li class="filterDiv automated standard reqs" data-oxygen ="5">
             <div class="title background-color-automated ">Zeppelins</div>
             <div class="price ">13</div>
             <div class="number ">129</div>
@@ -3124,7 +3124,7 @@
         </li>
 
         <!--130-->
-        <li class="filterDiv automated standard microbeTag reqs">
+        <li class="filterDiv automated standard microbeTag reqs" data-oxygen ="4">
             <div class="title background-color-automated ">Worms</div>
             <div class="price ">8</div>
             <div class="tag tag1 tag-microbe"></div>
@@ -3141,14 +3141,14 @@
         </li>
 
         <!--131-->
-        <li class="filterDiv active microbeTag standard reqs">
+        <li class="filterDiv active microbeTag standard reqs" data-oxygen ="3">
           <div class="title background-color-active">Decomposers</div>
           <div class="price">5</div>
           <div class="tag tag1 tag-microbe"></div>
           <div class="number">131</div>
           <div class="content">
             <div class="points">1/3<div class="resource microbe"></div></div>
-            <div class="requirements">3%& 02</div>
+            <div class="requirements">3% O2</div>
             <div class="animal resource-tag"></div> / <div class="plant resource-tag"></div> / <div class="microbe resource-tag"></div> : <div class="microbe resource"></div>
             <div class="description">
               (Effect: When you play an Animal, Plant, or Microbe tag, including this, add a Microbe to this card.)
@@ -3179,7 +3179,7 @@
         </li>
 
         <!--133-->
-        <li class="filterDiv standard active microbeTag reqs">
+        <li class="filterDiv standard active microbeTag reqs" data-temperature ="-14">
             <div class="title background-color-active ">Symbiotic Fungus</div>
             <div class="price ">4</div>
             <div class="tag tag1 tag-microbe "></div>
@@ -3197,7 +3197,7 @@
         </li>
 
         <!--134-->
-        <li class="filterDiv standard active microbeTag reqs ">
+        <li class="filterDiv standard active microbeTag reqs " data-temperature ="-10">
             <div class="title background-color-active ">Extreme-Cold Fungus</div>
             <div class="price ">13</div>
             <div class="tag tag1 tag-microbe "></div>
@@ -3233,7 +3233,7 @@
         </li>
 
         <!--136-->
-        <li class="filterDiv automated builderTag energyTag standard reqs">
+        <li class="filterDiv automated builderTag energyTag standard reqs" data-oceans ="4">
           <div class="title background-color-automated">Great Dam</div>
           <div class="price">12</div>
           <div class="tag tag1 tag-builder"></div>
@@ -3287,7 +3287,7 @@
         </li>
 
         <!--139-->
-        <li class="filterDiv automated energyTag standard reqs">
+        <li class="filterDiv automated energyTag standard reqs" data-oceans ="3">
           <div class="title background-color-automated">Wave Power</div>
           <div class="price">8</div>
           <div class="tag tag1 tag-energy"></div>
@@ -3318,8 +3318,6 @@
                         </div>
                     </div>
                 </li>
-
-
 
         <!--141-->
         <li class="filterDiv automated builderTag energyTag standard">
@@ -3409,7 +3407,7 @@
         </li>
 
         <!--146-->
-        <li class="filterDiv automated plantTag standard reqs">
+        <li class="filterDiv automated plantTag standard reqs" data-oceans ="3">
           <div class="title background-color-automated"> Nitrophilic Moss</div>
           <div class="price">8</div>
           <div class="tag tag1 tag-plant"></div>
@@ -3428,7 +3426,7 @@
 
 
         <!--147-->
-        <li class="filterDiv active animalTag standard reqs">
+        <li class="filterDiv active animalTag standard reqs" data-oxygen ="8">
             <div class="title background-color-active ">Herbivores</div>
             <div class="price ">12</div>
             <div class="tag tag1 tag-animal "></div>
@@ -3451,7 +3449,7 @@
         </li>
 
         <!--148-->
-        <li class="filterDiv automated standard microbeTag reqs">
+        <li class="filterDiv automated standard microbeTag reqs" data-oxygen ="6">
             <div class="title background-color-automated ">Insects</div>
             <div class="price ">9</div>
             <div class="tag tag1 tag-microbe"></div>
@@ -3532,7 +3530,7 @@
         </li>
 
         <!--153-->
-        <li class="filterDiv active scienceTag standard reqs">
+        <li class="filterDiv active scienceTag standard">
           <div class="title background-color-active">Adaptation Technology</div>
           <div class="price">12</div>
           <div class="tag tag1 tag-science"></div>
@@ -3547,7 +3545,7 @@
         </li>
 
         <!--154-->
-        <li class="filterDiv active  corporate reqs">
+        <li class="filterDiv active  corporate reqs" data-temperature ="0">
             <div class="title background-color-active ">Caretaker Contract</div>
             <div class="price ">3</div>
             <div class="number ">154</div>
@@ -3565,7 +3563,7 @@
         </li>
 
         <!--155-->
-        <li class="filterDiv automated standard microbeTag scienceTag reqs">
+        <li class="filterDiv automated standard microbeTag scienceTag reqs" data-temperature ="-14">
             <div class="title background-color-automated ">Designed Microorganisms</div>
             <div class="price ">16</div>
             <div class="tag tag1 tag-microbe"></div>
@@ -3635,7 +3633,7 @@
         </li>
 
         <!--159-->
-        <li class="filterDiv automated plantTag standard reqs">
+        <li class="filterDiv automated plantTag standard reqs" data-temperature ="-24">
           <div class="title background-color-automated">Lichen</div>
           <div class="price">7</div>
           <div class="tag tag1 tag-plant"></div>
@@ -3752,7 +3750,7 @@
           </li>
 
           <!--166-->
-          <li class="filterDiv active spaceTag standard reqs">
+          <li class="filterDiv active spaceTag standard reqs" data-oxygen ="5">
               <div class="title background-color-active ">Shuttles</div>
               <div class="price ">10</div>
               <div class="tag tag1 tag-space "></div>
@@ -3793,7 +3791,7 @@
           </li>
 
           <!--168-->
-          <li class="filterDiv automated builderTag energyTag standard reqs">
+          <li class="filterDiv automated builderTag energyTag standard reqs" data-oxygen ="7">
               <div class="title background-color-automated ">Windmills</div>
               <div class="price ">6</div>
               <div class="tag tag1 tag-builder "></div>
@@ -3806,13 +3804,13 @@
                       <div class="energy production "></div>
                   </div>
                   <div class="description ">
-                      (Increase your energy production 1 step.)
+                    (Requires 7% oxygen. Increase your Energy production 1 step.)
                   </div>
               </div>
           </li>
 
           <!--169-->
-          <li class="filterDiv automated plantTag standard reqs">
+          <li class="filterDiv automated plantTag standard reqs" data-temperature ="-6">
             <div class="title background-color-automated">Tundra Farming</div>
             <div class="price">16</div>
             <div class="tag tag1 tag-plant"></div>
@@ -3937,7 +3935,7 @@
           </li>
 
           <!--176-->
-          <li class="filterDiv automated builderTag standard reqs">
+          <li class="filterDiv automated builderTag standard reqs" data-temperature ="-20">
             <div class="title background-color-automated">Noctis Farming</div>
             <div class="price">10</div>
             <div class="tag tag1 tag-builder"></div>
@@ -3955,7 +3953,7 @@
           </li>
 
           <!--177-->
-          <li class="filterDiv active builderTag standard reqs">
+          <li class="filterDiv active builderTag standard reqs" data-oceans ="2">
               <div class="title background-color-active ">Water Splitting Plant</div>
               <div class="price ">12</div>
               <div class="tag tag1 tag-builder "></div>
@@ -4027,7 +4025,7 @@
           </li>
 
           <!--181-->
-          <li class="filterDiv events eventTag standard reqs">
+          <li class="filterDiv events eventTag standard reqs" data-temperature ="2">
               <div class="title background-color-events ">Ice Cap Melting</div>
               <div class="price ">5</div>
               <div class="tag tag1 tag-event "></div>
@@ -4063,7 +4061,7 @@
           </li>
 
           <!--183-->
-          <li class="filterDiv automated builderTag energyTag standard reqs">
+          <li class="filterDiv automated builderTag energyTag standard reqs" data-oxygen ="6">
             <div class="title background-color-automated">Biomass Combustors</div>
             <div class="price">4</div>
             <div class="tag tag1 tag-builder"></div>
@@ -4083,7 +4081,7 @@
           </li>
 
           <!--184-->
-          <li class="filterDiv active animalTag standard reqs">
+          <li class="filterDiv active animalTag standard reqs" data-oxygen ="9">
             <div class="title background-color-active">Livestock</div>
             <div class="price">13</div>
             <div class="tag tag1 tag-animal"></div>
@@ -4203,7 +4201,7 @@
           </li>
 
           <!--191-->
-          <li class="filterDiv events eventTag standard reqs ">
+          <li class="filterDiv events eventTag standard reqs " data-temperature ="-8">
               <div class="title background-color-events ">Permafrost Extraction</div>
               <div class="price ">8</div>
               <div class="tag tag1 tag-event "></div>
@@ -4552,7 +4550,7 @@
           </li>
 
           <!--211-->
-          <li class="filterDiv automated plantTag promo reqs">
+          <li class="filterDiv automated plantTag promo reqs" data-oceans ="2">
             <div class="title background-color-automated">Snow Algae</div>
             <div class="price">12</div>
             <div class="tag tag1 tag-plant"></div>
@@ -4569,7 +4567,7 @@
             </div>
 
             <!--212-->
-            <li class="filterDiv active animalTag promo reqs">
+            <li class="filterDiv active animalTag promo reqs" data-oceans ="8">
                 <div class="title background-color-active ">Penguins</div>
                 <div class="price ">7</div>
                 <div class="tag tag1 tag-animal "></div>
@@ -4850,7 +4848,7 @@
             </li>
 
             <!--227-->
-            <li class="filterDiv automated venusTag plantTag venusNext reqs">
+            <li class="filterDiv automated venusTag plantTag venusNext reqs" data-venus ="10">
                 <div class="title background-color-automated ">Freyja Biodomes</div>
                 <div class="price ">14</div>
                 <div class="tag tag1 tag-plant "></div>
@@ -4974,7 +4972,7 @@
             </li>
 
             <!--233-->
-            <li class="filterDiv automated venusTag venusNext reqs">
+            <li class="filterDiv automated venusTag venusNext reqs" data-venus ="8">
                 <div class="title background-color-automated ">Ishtar Mining</div>
                 <div class="price ">5</div>
                 <div class="tag tag1 tag-venus "></div>
@@ -5059,7 +5057,7 @@
             </li>
 
             <!--238-->
-            <li class="filterDiv active cityTag venusTag venusNext reqs">
+            <li class="filterDiv active cityTag venusTag venusNext reqs" data-venus ="12">
                 <div class="title background-color-active ">Maxwell Base</div>
                 <div class="price ">18</div>
                 <div class="tag tag1 tag-city "></div>
@@ -5102,7 +5100,7 @@
             </li>
 
             <!--240-->
-            <li class="filterDiv automated venusTag venusNext reqs">
+            <li class="filterDiv automated venusTag venusNext reqs" data-venus ="10">
                 <div class="title background-color-automated ">Neutralizer Factory</div>
                 <div class="price ">7</div>
                 <div class="tag tag1 tag-venus"></div>
@@ -5153,7 +5151,7 @@
             </li>
 
             <!--243-->
-            <li class="filterDiv active spaceTag venusNext reqs">
+            <li class="filterDiv active spaceTag venusNext reqs" data-venus ="14">
                 <div class="title background-color-active ">Rotator Impacts</div>
                 <div class="price ">6</div>
                 <div class="tag tag1 tag-space "></div>
@@ -5207,7 +5205,7 @@
             </li>
 
             <!--246-->
-            <li class="filterDiv eventTag venusNext spaceTag events reqs">
+            <li class="filterDiv eventTag venusNext spaceTag events reqs" data-venus ="10">
                 <div class="title background-color-events ">Spin-Inducing Asteroid</div>
                 <div class="price ">16</div>
                 <div class="tag tag1 tag-event "></div>
@@ -5270,7 +5268,7 @@
             </li>
 
             <!--249-->
-            <li class="filterDiv active animalTag venusTag venusNext reqs">
+            <li class="filterDiv active animalTag venusTag venusNext reqs" data-venus ="12">
                 <div class="title background-color-active ">Stratospheric Birds</div>
                 <div class="price ">12</div>
                 <div class="tag tag1 tag-animal "></div>
@@ -5312,7 +5310,7 @@
             </li>
 
             <!--251-->
-            <li class="filterDiv active microbeTag venusTag venusNext reqs">
+            <li class="filterDiv active microbeTag venusTag venusNext reqs" data-venus ="6">
                 <div class="title background-color-active ">Suphur-eating Bacteria</div>
                 <div class="price ">6</div>
                 <div class="tag tag1 tag-microbe "></div>
@@ -5350,7 +5348,7 @@
             </li>
 
             <!--253-->
-            <li class="filterDiv active microbeTag venusTag venusNext reqs">
+            <li class="filterDiv active microbeTag venusTag venusNext reqs" data-venus ="6">
                 <div class="title background-color-active ">Thermophiles</div>
                 <div class="price ">9</div>
                 <div class="tag tag1 tag-microbe "></div>
@@ -5406,7 +5404,7 @@
             </li>
 
             <!--256-->
-            <li class="filterDiv active venusTag venusNext reqs">
+            <li class="filterDiv active venusTag venusNext reqs" data-venus ="10">
                 <div class="title background-color-active ">Equatorial Magnetizer</div>
                 <div class="price ">7</div>
                 <div class="tag tag1 tag-venus "></div>
@@ -5465,7 +5463,7 @@
             </li>
 
             <!--259-->
-            <li class="filterDiv active animalTag venusTag scienceTag venusNext reqs">
+            <li class="filterDiv active animalTag venusTag scienceTag venusNext reqs" data-venus ="18">
                 <div class="title background-color-active ">Space Station</div>
                 <div class="price ">15</div>
                 <div class="tag tag1 tag-animal "></div>
@@ -5484,7 +5482,7 @@
             </li>
 
             <!--260-->
-            <li class="filterDiv active  venusTag microbeTag venusNext reqs">
+            <li class="filterDiv active  venusTag microbeTag venusNext reqs" data-venus ="12">
                 <div class="title background-color-active ">Venusian Insects</div>
                 <div class="price ">5</div>
                 <div class="tag tag1 tag-microbe "></div>
@@ -5505,7 +5503,7 @@
             </li>
 
             <!--261-->
-            <li class="filterDiv automated venusTag plantTag venusNext reqs">
+            <li class="filterDiv automated venusTag plantTag venusNext reqs" data-venus ="16">
                 <div class="title background-color-automated ">Venuusian Plants</div>
                 <div class="price ">13</div>
                 <div class="tag tag1 tag-plant"></div>

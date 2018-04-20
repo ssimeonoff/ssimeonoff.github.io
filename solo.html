@@ -28,6 +28,7 @@
       ['Viron', 94],
       ['Tharsis Republic', 86],
       ['Thorgate', 96],
+      ['Thorgate', 85],
       ['Aphrodite', 110],
       ['Ecoline', 104],
       ['Ecoline', 106],
@@ -36,9 +37,10 @@
       ['Credicor', 108],
       ['Helion', 82],
       ['Helion', 87],
+      ['Helion', 123],
       ['Inventrix', 87],
       ['MSI', 93],
-
+      ['Saturn Systems', 108]
 
     ];
 
@@ -66,9 +68,9 @@
       legend: { position: 'none' },
       backgroundColor: "transparent",
       vAxis: {ticks: [0,5], textPosition: 'none'},
-      chartArea:{left:195,bottom:20,top:40,width:430},
+      chartArea:{left:190,bottom:20,top:40,width:440},
       colors: ['#444444'],
-      histogram: {bucketSize: 5, minValue: 65, maxValue: 125},
+      histogram: {bucketSize: 5, minValue: 70, maxValue: 125},
     };
 
     var chart = new google.visualization.Histogram(document.getElementById('chart_div'));
@@ -113,10 +115,10 @@
       <div class="modal-content1">
         <span class="close">&times;</span>
         <b>HYPOTHESIS</b> <br><br>
-        Winning Solo games is easier when playing with Venux Next.<br>
-        Playing with moderate risk, it can be achieved:<br>
-        > Win Rate Percentage over 80<br>
-        > Average Win Score over 90<br>
+        Winning Solo games is easier when playing with Venux Next compared to the standard game.<br>
+        Playing with moderate risk and but aiming for high score, the follows stats can be achieved:<br>
+        >> Win Rate Percentage over 80<br>
+        >> Average Win Score over 90<br>
 
     </div>
   </div>
@@ -125,8 +127,7 @@
     <div class="modal-content1">
       <span class="close">&times;</span>
       <b>ASSUMPTIONS</b> <br><br>
-
-
+      Corporations:<br>
   </div>
 </div>
 
@@ -223,7 +224,7 @@
         <div class="background-silver">99</div>
         <div class="background-failed">X</div>
         <div class="background-failed">X</div>
-        <div></div>
+        <div class="background-silver">85</div>
         <div></div>
         <div></div>
         <div></div>
@@ -237,7 +238,7 @@
     <div class="filterDiv2">
       <div class="grid-container">
         <div class="background-failed">X</div>
-        <div></div>
+        <div class="background-gold">108</div>
         <div></div>
         <div></div>
         <div></div>
@@ -286,7 +287,7 @@
           <div class="grid-container">
             <div class="background-silver">82</div>
             <div class="background-silver">87</div>
-            <div></div>
+            <div class="background-gold">123</div>
             <div></div>
             <div></div>
             <div></div>
