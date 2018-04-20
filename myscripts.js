@@ -257,11 +257,13 @@ window.onclick = function(event) {
 
 //toggle subfilters div
 function toggleSubfiltersDiv() {
-    var x = document.getElementById("subfilters");
-    var btn = document.getElementById("reqs");
-    if (btn.classList.contains("active")) {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
-    }
+  if (document.getElementById("reqs").classList.contains("active")) {
+    $("#subfilters").fadeIn(1200);
+    document.getElementById("buttonsContainer").style.height = "400px";
+  }
+  else {  $("#subfilters").fadeOut(0);
+          document.getElementById("buttonsContainer").style.height = "266px";
+        }
+
+
 }
