@@ -254,16 +254,10 @@ window.onclick = function(event) {
 function toggleSubfiltersDiv() {
   if (document.getElementById("reqs").classList.contains("active")) {
     document.getElementById("buttonsContainer").style.height = "340px";
-    document.getElementById("buttonsContainer").style.width = "1000px";
-
     $("#subfilters").fadeIn(1200);
-
   }
-  else {  document.getElementById("subfilters").style.display = "none";
-          document.getElementById("buttonsContainer").style.height = "266px";
-          document.getElementById("buttonsContainer").style.width = "850px";
-
-        }
-
-
+  else {
+    document.getElementById("subfilters").style.display = "none";
+    document.getElementById("buttonsContainer").style.height = "266px";
+  }
 }
