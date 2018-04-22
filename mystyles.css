@@ -1269,7 +1269,8 @@
     height:266px;
     margin-top: 40px;
     margin-bottom: 30px;
-    transition: height 0.5s;
+    transition: height 0.5s, width 0.5s;
+
 
 }
 
@@ -1439,12 +1440,12 @@ input[type=range]::-webkit-slider-runnable-track {
 
 .track-oxygen-thumb::-webkit-slider-thumb {
   background: url("thumb2.png") !important;
-  width: 48px !important;
+  width: 50px !important;
 
 }
 .track-oxygen-thumb::-moz-range-thumb {
   background: url("thumb2.png") !important;
-  width: 48px !important;
+  width: 50px !important;
 
 }
 
@@ -1463,11 +1464,11 @@ input[type=range]::-webkit-slider-runnable-track {
 
 .track-venus-thumb::-webkit-slider-thumb {
   background: url("thumb4.png") !important;
-  width: 48px !important;
+  width: 50px !important;
 }
 .track-venus-thumb::-moz-range-thumb {
   background: url("thumb4.png") !important;
-  width: 48px !important;
+  width: 50px !important;
 }
 
 .track-temp-background::-moz-range-track {

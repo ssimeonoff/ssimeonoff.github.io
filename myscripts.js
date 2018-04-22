@@ -102,44 +102,60 @@ function myFunction() {
     }
   }
 
-  //return the list of only visible cards
-  li = document.querySelectorAll('li.show');
-  //Requirements input filtering
-  temperatureValue = document.getElementById("slider1").value;
-  oxygenValue = document.getElementById("slider2").value;
-  oceansValue = document.getElementById("slider3").value;
-  venusValue = document.getElementById("slider4").value;
-  if ( temperatureValue > -30 || oxygenValue > 0 || oceansValue > 0 || venusValue > 0 ) {
-    for (i = 0; i < li.length; i++) {
-      //obtaining the data without writing over it
-      temperatureData = parseInt(li[i].dataset.temperature);
-      oxygenData = parseInt(li[i].dataset.oxygen);
-      oceansData = parseInt(li[i].dataset.oceans);
-      venusData = parseInt(li[i].dataset.venus);
+  //Filtering for the Requirements inputs
+  if (document.getElementById("reqs").classList.contains("active")) {
+    //return the list of only visible cards
+    li = document.querySelectorAll('li.show');
+    //Requirements input filtering
+    temperatureValue = document.getElementById("slider1").value;
+    oxygenValue = document.getElementById("slider2").value;
+    oceansValue = document.getElementById("slider3").value;
+    venusValue = document.getElementById("slider4").value;
+    if ( temperatureValue > -30 || oxygenValue > 0 || oceansValue > 0 || venusValue > 0 ) {
+      for (i = 0; i < li.length; i++) {
+        //obtaining the data without writing over it
+        temperatureData = parseInt(li[i].dataset.temperature);
+        oxygenData = parseInt(li[i].dataset.oxygen);
+        oceansData = parseInt(li[i].dataset.oceans);
+        venusData = parseInt(li[i].dataset.venus);
 
-      //check for max requirements
-      //max requirements are marked by adding "100" to its value
-      //the check is done by removing that 100 and making the data and value NEGATIVE
-      // and thus keeping the ">=" check
-      //the check
-      show = false;
-      if (temperatureValue > -30) {
-        if ( temperatureValue <= temperatureData ) { show = true;}
-      }
-      if (oxygenValue > 0 && oxygenData > 0) {
-        if ( oxygenValue <= oxygenData ) { show = true; console.log(oxygenValue + "+" + oxygenData);  }
-      }
-      if (oceansValue > 0) {
-        if ( oceansValue <= oceansData ) { show = true }
-      }
-      if (venusValue > 0 ) {
-        if ( venusValue <= venusData ) { show = true }
-      }
+        //check for max requirements
+        //max requirements are marked by adding "100" to its value
+        //the check is done by removing that 100 and making the data and value NEGATIVE
+        // and thus keeping the ">=" check
+        //the check
+        show = false;
+        if (temperatureValue > -30) {
+          if ( temperatureValue <= temperatureData ) { show = true;}
+        }
+        if (oxygenValue > 0 && oxygenData > 0) {
+          if ( oxygenValue <= oxygenData ) { show = true; console.log(oxygenValue + "+" + oxygenData);  }
+        }
+        if (oceansValue > 0) {
+          if ( oceansValue <= oceansData ) { show = true }
+        }
+        if (venusValue > 0 ) {
+          if ( venusValue <= venusData ) { show = true }
+        }
 
-      //the check
-      if (!show) {w3RemoveClass(li[i], "show");}
+        //the check
+        if (!show) {w3RemoveClass(li[i], "show");}
+      }
     }
+  } else {
+    //to clear the inputs when the Requirements button is canceled
+    document.getElementById("slider1").value = -30;
+    document.getElementById("output1").innerHTML = -30;
+    document.getElementById("slider2").value = 0;
+    document.getElementById("output2").innerHTML = 0;
+    document.getElementById("slider3").value = 0;
+    document.getElementById("output3").innerHTML = 0;
+    document.getElementById("slider4").value = 0;
+    document.getElementById("output4").innerHTML = 0;
   }
+
+
+
 
   //obtaining the new visible list after the subfilters check
   li = document.querySelectorAll('li.show');
@@ -238,11 +254,15 @@ window.onclick = function(event) {
 function toggleSubfiltersDiv() {
   if (document.getElementById("reqs").classList.contains("active")) {
     document.getElementById("buttonsContainer").style.height = "340px";
+    document.getElementById("buttonsContainer").style.width = "1000px";
+
     $("#subfilters").fadeIn(1200);
 
   }
   else {  document.getElementById("subfilters").style.display = "none";
           document.getElementById("buttonsContainer").style.height = "266px";
+          document.getElementById("buttonsContainer").style.width = "850px";
+
         }
 
 
