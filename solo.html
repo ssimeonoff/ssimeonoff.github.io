@@ -12,35 +12,56 @@
   function drawChart() {
   var games = [
       ['Corporation', 'Score'],
-      ['Aphrodite', 81],
-      ['Interplanetery', 102],
-      ['Phobolog', 116],
-      ['Credicor', 77],
-      ['Credicor', 112],
-      ['Credicor', 97],
-      ['Teractor', 90],
-      ['Teractor', 93],
-      ['Teractor', 73],
-      ['Manutech', 72],
-      ['Manutech', 104],
-      ['Mining Guild', 79],
-      ['Viron', 105],
-      ['Viron', 94],
-      ['Tharsis Republic', 86],
-      ['Thorgate', 96],
-      ['Thorgate', 85],
-      ['Aphrodite', 110],
+
       ['Ecoline', 104],
       ['Ecoline', 106],
-      ['Phobolog', 89],
-      ['Credicor', 94],
-      ['Credicor', 108],
+      ['Ecoline', 112],
+      ['Ecoline', 92],
+
       ['Helion', 82],
       ['Helion', 87],
       ['Helion', 123],
+
+      ['Aphrodite', 81],
+      ['Aphrodite', 93],
+
+      ['Credicor', 77],
+      ['Credicor', 112],
+      ['Credicor', 97],
+      ['Credicor', 94],
+      ['Credicor', 108],
+
+      ['Teractor', 90],
+      ['Teractor', 93],
+      ['Teractor', 73],
+      ['Teractor', 75],
+
+      ['Manutech', 72],
+      ['Manutech', 104],
+      ['Manutech', 98],
+
+      ['Mining Guild', 79],
+
+      ['Viron', 105],
+      ['Viron', 94],
+
+      ['Tharsis Republic', 86],
+
+      ['Thorgate', 96],
+      ['Thorgate', 85],
+
+      ['Phobolog', 89],
+      ['Phobolog', 116],
+
       ['Inventrix', 87],
+
       ['MSI', 93],
-      ['Saturn Systems', 108]
+
+      ['Celestic', 99],
+
+      ['Saturn Systems', 108],
+
+      ['Interplanetery', 102]
 
     ];
 
@@ -67,7 +88,9 @@
       titleTextStyle: {fontSize:20, color:"#444444", },
       legend: { position: 'none' },
       backgroundColor: "transparent",
-      vAxis: {ticks: [0,5], textPosition: 'none'},
+      vAxis: {ticks: 'none', textPosition: 'none'},
+      HAxis: {ticks: [95], textPosition: 'none'},
+
       chartArea:{left:190,bottom:20,top:40,width:440},
       colors: ['#444444'],
       histogram: {bucketSize: 5, minValue: 70, maxValue: 125},
@@ -141,8 +164,8 @@
       <div class="grid-container">
         <div class="background-gold">104</div>
         <div class="background-gold">102</div>
-        <div></div>
-        <div></div>
+        <div class="background-gold">112</div>
+        <div class="background-silver">92</div>
         <div></div>
         <div></div>
         <div></div>
@@ -157,7 +180,7 @@
       <div class="grid-container">
         <div class="background-bronze">72</div>
         <div class="background-gold">104</div>
-        <div></div>
+        <div class="background-silver">98</div>
         <div></div>
         <div></div>
         <div></div>
@@ -176,7 +199,7 @@
         <div class="background-silver">90</div>
         <div class="background-silver">83</div>
         <div class="background-bronze">73</div>
-        <div></div>
+        <div class="background-bronze">95</div>
         <div></div>
         <div></div>
         <div></div>
@@ -225,7 +248,7 @@
         <div class="background-failed">X</div>
         <div class="background-failed">X</div>
         <div class="background-silver">85</div>
-        <div></div>
+        <div class="background-failed">X</div>
         <div></div>
         <div></div>
         <div></div>
@@ -255,7 +278,7 @@
         <div class="grid-container">
           <div class="background-silver">81</div>
           <div class="background-gold">110</div>
-          <div></div>
+          <div class="background-silver">93</div>
           <div></div>
           <div></div>
           <div></div>
@@ -356,21 +379,7 @@
           </div>THARSIS<br>&nbsp;&nbsp;&nbsp;&nbsp;REPUBLIC</div>
         </div>
 
-        <div class="filterDiv2">
-          <div class="grid-container">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-            <div class="background-color-active united-nations"> UNITED NATIONS MARS INITIATIVE</div>
-        </div>
+
 
         <div class="filterDiv2">
           <div class="grid-container">
@@ -392,6 +401,22 @@
 
         <div class="filterDiv2">
           <div class="grid-container">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+            <div class="background-color-active united-nations"> UNITED NATIONS MARS INITIATIVE</div>
+        </div>
+
+        <div class="filterDiv2">
+          <div class="grid-container">
             <div class="background-silver">93</div>
             <div></div>
             <div></div>
@@ -408,9 +433,11 @@
               MORNING <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; STAR INC.</div>
         </div>
 
+
+
         <div class="filterDiv2" style="    border-bottom: none">
           <div class="grid-container">
-            <div></div>
+            <div class="background-silver">99</div>
             <div></div>
             <div></div>
             <div></div>
