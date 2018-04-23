@@ -501,22 +501,26 @@
 
 
 .btn1.active {
+  transform: scale(0.95);
   border: 4px solid black;
   box-shadow: 0 0 0 1px rgba(0,0,0,0.8), 0 0 0 2px rgba(0,0,0,0.6), 0 0 0 3px rgba(0,0,0,0.4),0 0 0 4px rgba(0,0,0,0.2);
 }
 
 .btn2.active {
   border: 4px solid black;
+  transform: scale(0.95);
   box-shadow: 0 0 0 1px rgba(0,0,0,0.8), 0 0 0 2px rgba(0,0,0,0.6), 0 0 0 3px rgba(0,0,0,0.4),0 0 0 4px rgba(0,0,0,0.2);
 }
 
 .btn3.active {
+    transform: scale(0.95);
     border: 4px solid black;
     box-shadow: 0 0 0 1px rgba(0,0,0,0.8), 0 0 0 2px rgba(0,0,0,0.6), 0 0 0 3px rgba(0,0,0,0.4),0 0 0 4px rgba(0,0,0,0.2);
 
 }
 
 .btn5.active {
+  transform: scale(0.95);
   border: 4px solid black;
   box-shadow: 0 0 0 1px rgba(0,0,0,0.8), 0 0 0 2px rgba(0,0,0,0.6), 0 0 0 3px rgba(0,0,0,0.4),0 0 0 4px rgba(0,0,0,0.2);
 }
