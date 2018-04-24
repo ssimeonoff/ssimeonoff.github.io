@@ -45,7 +45,7 @@
   position: absolute;
   font-family: Arial;
   display: inline-block;
-  margin-left: 714px;
+  margin-left: 720px;
   margin-top: -235px;
   display: grid;
   grid-template-areas:
@@ -87,7 +87,7 @@
   margin-left: 40px;
   padding-left: 20px;
   padding-top: 15px;
-  padding-bottom: 17px;
+  padding-bottom: 10px;
   width: 855px;
   margin-top: 30px;
   margin-bottom: 15px;
@@ -96,8 +96,8 @@
 
 .chart-title {
   position: absolute;
-  margin-top: -225px;
-  margin-left: 350px;
+  margin-top: -230px;
+  margin-left: 352px;
   font-family: Arial;
   font-weight: bold;
   font-size: 18px;
