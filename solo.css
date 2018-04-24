@@ -27,7 +27,6 @@
   margin-top: 12px;
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
-
   grid-gap: 10px;
 }
 .grid-container > div {
@@ -38,7 +37,7 @@
   height: 35px;
   line-height: 35px;
   border-radius: 5px;
-
+  letter-spacing: 1px;
 }
 
 .grid-container2 {
@@ -46,7 +45,7 @@
   font-family: Arial;
   display: inline-block;
   margin-left: 720px;
-  margin-top: -235px;
+  margin-top: -230px;
   display: grid;
   grid-template-areas:
     'title1 wins'
@@ -78,6 +77,8 @@
   border-radius: 5px;
   border-style: outset;
   box-shadow:0 0 0 1px rgba(0,0,0,0.4), 0 0 0 2px rgba(0,0,0,0.2);
+  letter-spacing: 1px;
+
 }
 
 #chart_div {
@@ -87,7 +88,7 @@
   margin-left: 40px;
   padding-left: 20px;
   padding-top: 15px;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   width: 855px;
   margin-top: 30px;
   margin-bottom: 15px;
@@ -97,18 +98,19 @@
 .chart-title {
   position: absolute;
   margin-top: -230px;
-  margin-left: 352px;
+  margin-left: 350px;
   font-family: Arial;
   font-weight: bold;
   font-size: 18px;
   color: rgb(68, 68, 68);
+  letter-spacing: 1px;
 }
 
 .buttons-div {
   position: absolute;
   font-family: Arial;
   display: inline-block;
-  margin-top: -235px;
+  margin-top: -230px;
   margin-left: 54px;
 }
 
@@ -117,15 +119,15 @@
   background-color: #f2f2f2;
   border-radius: 5px;
   border-style: outset;
-  width:180px;
-  height:41px;
+  width: 185px;
+  height: 41px;
   box-shadow:0 0 0 1px rgba(0,0,0,0.4), 0 0 0 2px rgba(0,0,0,0.2);
   color: rgb(68, 68, 68);
   text-align: center;
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 13px;
-
+  letter-spacing: 1px;
 }
 
 .button:hover {
