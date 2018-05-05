@@ -197,7 +197,8 @@ function clearInput() {
   document.getElementById("output3").innerHTML = 0;
   document.getElementById("slider4").value = 0;
   document.getElementById("output4").innerHTML = 0;
-
+  //shrinks any expanded AREAS
+  document.getElementById("buttonsContainer").style.height = "266px";
 }
 
 function w3AddClass(element, name) {
