@@ -73,37 +73,49 @@
     </div>
 
     <div id="myBtnContainer3" style="display:inline-block;">
-      <input class="tooltip" type="text" id="myInput" oninput="myFunction();" placeholder="Search by text ..." title="Type in a name">
-      <button id="reset" class="btn4 reset-icon button-icon tooltip" onclick="clearInput();showAll();" style="margin-right: 34px;"><span class="tooltiptext">Reset button</span></button>
       <button id="reqs" class="btn5  button-icon tooltip" onclick="filterSelection(id);toggleSubfiltersDiv();" >REQUIREMENTS<span class="tooltiptext">filter cards with requirements</span></button>
       <button id="standard" class="btn3 standard-icon button-icon tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter Base game cards</span></button>
       <button id="corporate" class="btn3 corporate-icon button-icon tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter Corporate Era cards</span></button>
       <button id="venusNext" class="btn3 venus-icon button-icon tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter Venus Next cards</span></button>
       <button id="prelude" class="btn3 prelude-icon button-icon tooltip" onclick="filterSelection(id)" ><span class="tooltiptext">filter Prelude cards</span></button>
       <button id="promo" class="btn3 promo-icon button-icon tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter Promo cards</span></button>
-      <button id="info" class="btn3 tooltip" style="background:#444444;margin-left: 16px;width: 25px;height: 25px;line-height: 19px;">i<span class="tooltiptext">Info button</span></button>
-    </div>
-    <div id="subfilters">
-      <div class="slider1">
-        <output id="output1" for="slider1" class="output-label" style="color:#f25540;margin-left: 220px;">-30</output> <!-- Just to display selected value -->
-        <input id="slider1" type="range" min="-30" max="8" value="-30" step="2" list="tickmarks" oninput="output1.value = slider1.value; myFunction();" class="track-temp-background track-temp-thumb" style="width:210px;margin-right:55px;">
+      <button id="info" class="btn4 tooltip" style="background:#444444;margin-left: 214px;height:30px; line-height: 19px;vertical-align:bottom;">info</button>
+      <div id="subfilters">
+        <div class="slider1">
+          <output id="output1" for="slider1" class="output-label" style="color:#f25540;margin-left: 220px;">-30</output> <!-- Just to display selected value -->
+          <input id="slider1" type="range" min="-30" max="8" value="-30" step="2" list="tickmarks" oninput="output1.value = slider1.value; myFunction();" class="track-temp-background track-temp-thumb" style="width:210px;margin-right:60px;">
 
-        <output id="output3" for="slider3" class="output-label" style="margin-left: 110px;">0</output> <!-- Just to display selected value -->
-        <input id="slider3" type="range" min="0" max="9" value="-0" step="1" list="tickmarks" oninput="output3.value = slider3.value; myFunction();" class=" track-oceans-thumb" style="width:100px;">
+          <output id="output3" for="slider3" class="output-label" style="margin-left: 110px;">0</output> <!-- Just to display selected value -->
+          <input id="slider3" type="range" min="0" max="9" value="-0" step="1" list="tickmarks" oninput="output3.value = slider3.value; myFunction();" class=" track-oceans-thumb" style="width:100px;">
 
-        <output id="output2" for="slider2" class="output-label" style="color:rgb(246,241,175);">0</output> <!-- Just to display selected value -->
-        <input id="slider2" type="range" min="0" max="14" value="0" step="1" list="tickmarks" oninput="output2.value = slider2.value; myFunction();" class="track-oxygen-background track-oxygen-thumb">
+          <output id="output2" for="slider2" class="output-label" style="color:rgb(246,241,175);">0</output> <!-- Just to display selected value -->
+          <input id="slider2" type="range" min="0" max="14" value="0" step="1" list="tickmarks" oninput="output2.value = slider2.value; myFunction();" class="track-oxygen-background track-oxygen-thumb">
 
-        <output id="output4" for="slider4" class="output-label" style="color: #8bb8da">0</output> <!-- Just to display selected value -->
-        <input id="slider4" type="range" min="0" max="30" value="0" step="2" list="tickmarks" oninput="output4.value = slider4.value; myFunction();" class="track-venus-background track-venus-thumb" style="margin-right:0px;">
+          <output id="output4" for="slider4" class="output-label" style="color: #8bb8da">0</output> <!-- Just to display selected value -->
+          <input id="slider4" type="range" min="0" max="30" value="0" step="2" list="tickmarks" oninput="output4.value = slider4.value; myFunction();" class="track-venus-background track-venus-thumb" style="margin-right:0px;">
+          <br>
+          <p></p>
+          <output id="output5" for="slider5" class="output-label" style="color: white; margin-left:219px;">0</output> <!-- Just to display selected value -->
+          <input id="slider5" type="range" min="0" max="7" value="0" step="1" list="tickmarks" oninput="output5.value = slider5.value; myFunction();" class="track-science-background track-science-thumb" style="margin-left:62px;">
+        </div>
       </div>
-
     </div>
-  </div>
+    <div id="myBtnContainer4" style="display:inline-block;">
+      <input class="tooltip" type="text" id="myInput" oninput="myFunction();" placeholder="Search by text ..." title="Type in a name">
+      <button id="reset" class="btn4 reset-icon button-icon tooltip" onclick="clearInput();showAll();" style="margin-right: 68px;">RESET</button>
+      <button id="about" onclick="toggleFooterDiv();" class="btn4 tooltip" style="background:#444444;margin-left: 16px;height:30px; line-height: 19px;">About</button>
+    </div>
+    <div id="footer">
+      <button class="footer-button" style="margin-left:85px"><a class="footer-links" href="https://boardgamegeek.com/boardgame/167791/terraforming-mars" target="_blank">THE GAME</a></button>
+      <button class="footer-button"><a class="footer-links" href="https://boardgamegeek.com/thread/1959389/terraforming-mars-complete-animated-cards-list" target="_blank">THE TOPIC</a></button>
+      <button class="footer-button"><a class="footer-links" href="http://www.fryxgames.se/category/games/terraforming-mars/" target="_blank">FRYX NEWS</a></button>
+      <button class="footer-button"><a class="footer-links" href="https://github.com/ssimeonoff/ssimeonoff.github.io" target="_blank">GitHub Repo</a></button>
+    </div>
   </div>
 
   <div id="myModal" class="modal">
   <!-- Modal content -->
+
   <div class="modal-content">
     <span class="close">&times;</span>
       <b>All buttons have ON/OFF states (except the Reset and Info buttons)<br>
@@ -1308,7 +1320,7 @@
         </li>
 
         <!--27-->
-        <li class="filterDiv eventTag earthTag spaceTag corporate events reqs">
+        <li class="filterDiv eventTag earthTag spaceTag corporate events reqs" data-science = "5">
             <div class="title background-color-events ">Interstellar Colony Ship</div>
             <div class="price ">24</div>
             <div class="tag tag1 tag-event "></div>
@@ -1646,7 +1658,7 @@
       </li>
 
       <!--46-->
-      <li class="filterDiv automated energyTag corporate reqs">
+      <li class="filterDiv automated energyTag corporate reqs" data-science = "3">
         <div class="title background-color-automated">Lightning Harvest</div>
         <div class="price">8</div>
         <div class="tag tag1 tag-energy"></div>
@@ -2245,7 +2257,7 @@
         </li>
 
         <!--79-->
-        <li class="filterDiv active energyTag scienceTag corporate reqs">
+        <li class="filterDiv active energyTag scienceTag corporate reqs" data-science = "4">
             <div class="title background-color-active ">Quantum Extractor</div>
             <div class="price ">13</div>
             <div class="tag tag1 tag-energy"></div>
@@ -2458,7 +2470,7 @@
         </li>
 
         <!--91-->
-        <li class="filterDiv automated scienceTag corporate reqs">
+        <li class="filterDiv automated scienceTag corporate reqs" data-science = "3">
             <div class="title background-color-automated ">Gene Repair</div>
             <div class="price ">12</div>
             <div class="tag tag1 tag-science "></div>
@@ -2513,7 +2525,7 @@
         </li>
 
         <!--94-->
-        <li class="filterDiv active scienceTag energyTag corporate reqs">
+        <li class="filterDiv active scienceTag energyTag corporate reqs" data-science = "5">
             <div class="title background-color-active ">Mass Converter</div>
             <div class="price ">8</div>
             <div class="tag tag1 tag-energy "></div>
@@ -3388,7 +3400,7 @@
         </li>
 
         <!--145-->
-        <li class="filterDiv automated builderTag energyTag standard reqs">
+        <li class="filterDiv automated builderTag energyTag standard reqs" data-science = "2">
           <div class="title background-color-automated">Tectonic Stress Power</div>
           <div class="price">18</div>
           <div class="tag tag1 tag-builder"></div>
@@ -3478,7 +3490,7 @@
         </li>
 
         <!--150-->
-        <li class="filterDiv active scienceTag corporate reqs">
+        <li class="filterDiv active scienceTag corporate reqs" data-science = "7">
             <div class="title background-color-active ">Anti-gravity Technology</div>
             <div class="price ">14</div>
             <div class="tag tag1 tag-science"></div>
@@ -3487,7 +3499,6 @@
             <div class="content ">
               <div class="points points-big">3</div>
               <div class="requirements">7 Science</div>
-
                 : <span class="money resource ">-2</span>
                 <div class="description ">
                     (Effect: When you play a card, you pay 2 M$ less for it.)
@@ -4230,7 +4241,7 @@
           </li>
 
           <!--193-->
-          <li class="filterDiv automated plantTag standard reqs">
+          <li class="filterDiv automated plantTag standard reqs" data-science = "2">
             <div class="title background-color-automated">Plantation</div>
             <div class="price">15</div>
             <div class="tag tag1 tag-plant"></div>
@@ -4488,7 +4499,7 @@
           </li>
 
           <!--208-->
-          <li class="filterDiv active scienceTag builderTag corporate reqs">
+          <li class="filterDiv active scienceTag builderTag corporate reqs" data-science = "3">
               <div class="title background-color-active ">AI Central</div>
               <div class="price ">21</div>
               <div class="tag tag1 tag-builder "></div>
@@ -4529,7 +4540,7 @@
           </li>
 
           <!--210-->
-          <li class="filterDiv active promo reqs">
+          <li class="filterDiv active promo reqs" data-science = "2">
               <div class="title background-color-active ">Self-replicating robots</div>
               <div class="price ">7</div>
               <div class="promo-icon project-icon"></div>
@@ -4640,7 +4651,7 @@
             </li>
 
             <!--216-->
-            <li class="filterDiv automated scienceTag venusTag venusNext reqs">
+            <li class="filterDiv automated scienceTag venusTag venusNext reqs" data-science = "3">
                 <div class="title background-color-automated ">Atalanta Planitia Lab</div>
                 <div class="price ">10</div>
                 <div class="tag tag1 tag-science "></div>
@@ -4658,7 +4669,7 @@
             </li>
 
             <!--217-->
-            <li class="filterDiv automated jovianTag spaceTag venusNext reqs">
+            <li class="filterDiv automated jovianTag spaceTag venusNext reqs" data-science = "3">
                 <div class="title background-color-automated ">Atmoscoop</div>
                 <div class="price ">12</div>
                 <div class="tag tag1 tag-space "></div>
@@ -4715,7 +4726,7 @@
             </li>
 
             <!--220-->
-            <li class="filterDiv automated spaceTag cityTag venusNext reqs">
+            <li class="filterDiv automated spaceTag cityTag venusNext reqs" data-science = "4">
                 <div class="title background-color-automated ">Dawn City</div>
                 <div class="price ">15</div>
                 <div class="tag tag1 tag-city "></div>
@@ -4791,7 +4802,7 @@
             </li>
 
             <!--224-->
-            <li class="filterDiv active  venusTag microbeTag venusNext reqs">
+            <li class="filterDiv active  venusTag microbeTag venusNext reqs" data-science = "2">
                 <div class="title background-color-active ">Extremophiles</div>
                 <div class="price ">3</div>
                 <div class="tag tag1 tag-microbe "></div>
@@ -4812,7 +4823,7 @@
             </li>
 
             <!--225-->
-            <li class="filterDiv active  venusTag  venusNext reqs">
+            <li class="filterDiv active  venusTag  venusNext reqs" data-science = "2">
                 <div class="title background-color-active ">Floating Habs</div>
                 <div class="price ">5</div>
                 <div class="tag tag1 tag-venus "></div>
@@ -5240,7 +5251,7 @@
             </li>
 
             <!--248-->
-            <li class="filterDiv active cityTag venusTag venusNext reqs">
+            <li class="filterDiv active cityTag venusTag venusNext reqs" data-science = "2">
                 <div class="title background-color-active ">Stratopolis</div>
                 <div class="price ">22</div>
                 <div class="tag tag1 tag-city "></div>
@@ -5249,7 +5260,7 @@
                 <div class="venus-icon project-icon"></div>
                 <div class="content ">
                   <div class="points">1/3<div class="resource floater"></div></div>
-                  <div class="requirements" style="margin-bottom:15px;">Science Science</div>
+                  <div class="requirements" style="margin-bottom:15px;">2 Science</div>
                     <div class="red-arrow "></div>
                     <div class="resource floater"><div class="card-icon card-icon-venus">V</div></div>
                     <div class="resource floater"><div class="card-icon card-icon-venus">V</div></div>

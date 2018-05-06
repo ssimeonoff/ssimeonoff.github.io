@@ -1,5 +1,8 @@
-showAll();
 
+CONTAINER = 330; //the default height of the buttons container
+var containerHeight = CONTAINER; //the current height of the buttons container
+
+showAll();
 function showAll() {
   var x, i;
   displayedProjects = 261;
@@ -111,13 +114,15 @@ function myFunction() {
     oxygenValue = document.getElementById("slider2").value;
     oceansValue = document.getElementById("slider3").value;
     venusValue = document.getElementById("slider4").value;
-    if ( temperatureValue > -30 || oxygenValue > 0 || oceansValue > 0 || venusValue > 0 ) {
+    scienceValue = document.getElementById("slider5").value;
+    if ( temperatureValue > -30 || oxygenValue > 0 || oceansValue > 0 || venusValue > 0 || scienceValue > 0) {
       for (i = 0; i < li.length; i++) {
         //obtaining the data without writing over it
         temperatureData = parseInt(li[i].dataset.temperature);
         oxygenData = parseInt(li[i].dataset.oxygen);
         oceansData = parseInt(li[i].dataset.oceans);
         venusData = parseInt(li[i].dataset.venus);
+        scienceData = parseInt(li[i].dataset.science);
 
         //check for max requirements
         //max requirements are marked by adding "100" to its value
@@ -129,13 +134,16 @@ function myFunction() {
           if ( temperatureValue <= temperatureData ) { show = true;}
         }
         if (oxygenValue > 0 && oxygenData > 0) {
-          if ( oxygenValue <= oxygenData ) { show = true; console.log(oxygenValue + "+" + oxygenData);  }
+          if ( oxygenValue <= oxygenData ) { show = true;}
         }
         if (oceansValue > 0) {
           if ( oceansValue <= oceansData ) { show = true }
         }
         if (venusValue > 0 ) {
           if ( venusValue <= venusData ) { show = true }
+        }
+        if (scienceValue > 0 ) {
+          if ( scienceValue <= scienceData ) { show = true }
         }
 
         //the check
@@ -188,6 +196,8 @@ function myFunction() {
 function clearInput() {
   document.getElementById("myInput").value = ""; //resets the text input
   document.getElementById("subfilters").style.display = "none"; //hides the range inputs div
+  document.getElementById("footer").style.display = "none"; //hide the footer
+
   //resets the range inputs
   document.getElementById("slider1").value = -30;
   document.getElementById("output1").innerHTML = -30;
@@ -197,8 +207,11 @@ function clearInput() {
   document.getElementById("output3").innerHTML = 0;
   document.getElementById("slider4").value = 0;
   document.getElementById("output4").innerHTML = 0;
+  document.getElementById("slider5").value = 0;
+  document.getElementById("output5").innerHTML = 0;
   //shrinks any expanded AREAS
-  document.getElementById("buttonsContainer").style.height = "266px";
+  document.getElementById("buttonsContainer").style.height = CONTAINER + "px";
+  containerHeight = CONTAINER;
 }
 
 function w3AddClass(element, name) {
@@ -254,11 +267,27 @@ window.onclick = function(event) {
 //toggle subfilters div
 function toggleSubfiltersDiv() {
   if (document.getElementById("reqs").classList.contains("active")) {
-    document.getElementById("buttonsContainer").style.height = "340px";
-    $("#subfilters").fadeIn(1200);
+    containerHeight = containerHeight + 120;
+    document.getElementById("buttonsContainer").style.height = containerHeight + "px";
+    $("#subfilters").fadeIn(200);
   }
   else {
-    document.getElementById("subfilters").style.display = "none";
-    document.getElementById("buttonsContainer").style.height = "266px";
+    containerHeight = containerHeight - 120;
+    document.getElementById("subfilters").style.display = "none"; //hides the range inputs div
+    document.getElementById("buttonsContainer").style.height = containerHeight + "px";
+  }
+}
+
+function toggleFooterDiv() {
+  if ($('#footer:visible').length == 0) {
+    console.log("hidden");
+    containerHeight = containerHeight + 40;
+    document.getElementById("buttonsContainer").style.height = containerHeight + "px";
+    $("#footer").fadeIn(100);
+  }
+  else {
+    containerHeight = containerHeight - 40;
+    document.getElementById("footer").style.display = "none";
+    document.getElementById("buttonsContainer").style.height = containerHeight + "px";
   }
 }
