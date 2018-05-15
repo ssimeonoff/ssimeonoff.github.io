@@ -106,10 +106,10 @@
       <button id="about" onclick="toggleFooterDiv();" class="btn4 tooltip" style="background:#444444;margin-left: 16px;height:30px; line-height: 19px;">About</button>
     </div>
     <div id="footer">
-      <button class="footer-button" style="margin-left:85px"><a class="footer-links" href="https://boardgamegeek.com/boardgame/167791/terraforming-mars" target="_blank">THE GAME</a></button>
-      <button class="footer-button"><a class="footer-links" href="https://boardgamegeek.com/thread/1959389/terraforming-mars-complete-animated-cards-list" target="_blank">THE TOPIC</a></button>
-      <button class="footer-button"><a class="footer-links" href="http://www.fryxgames.se/category/games/terraforming-mars/" target="_blank">FRYX NEWS</a></button>
-      <button class="footer-button"><a class="footer-links" href="https://github.com/ssimeonoff/ssimeonoff.github.io" target="_blank">GitHub Repo</a></button>
+      <a class="footer-links" style="margin-left:105px" href="https://boardgamegeek.com/boardgame/167791/terraforming-mars" target="_blank">THE GAME</a>
+      <a class="footer-links" href="https://boardgamegeek.com/thread/1959389/terraforming-mars-complete-animated-cards-list" target="_blank">THE TOPIC</a>
+      <a class="footer-links" href="http://www.fryxgames.se/category/games/terraforming-mars/" target="_blank">FRYX NEWS</a>
+      <a class="footer-links" href="https://github.com/ssimeonoff/ssimeonoff.github.io" target="_blank">GitHub Repo</a>
     </div>
   </div>
 
@@ -505,7 +505,7 @@
         <div class="contentCorporation">
           <div class="corporationEffectBox">
             <div class="corporationEffectBoxLabel">EFFECT</div>
-            <div class="tile venus-tile">V</div> : +/-2
+            <div class="tile venus-tile">V</div> : <div class="resource money">2</div>
             <div class="description" style="text-align:center;margin-top:0px;">
               (Effect: Whenever Venus is terraformed 1 step, you gain 2M$.)
             </div>
@@ -1781,8 +1781,11 @@
             <div class="description">
               (Action: Add 1 Animal to this card.)
             </div><br>
-            <div class="description">
-              (Requires +2 C or warmer. Decrease any Plant production 1 step. 1 VP for each Animal on this card.)
+            <div class="production-box production-box-size1a" style="margin-top:-10px;">
+              <div class="production-prefix">&#x2796;&#xFE0E;</div><div class="plant production red-outline"></div>
+            </div>
+            <div class="description" style="text-align:left;margin-top:-5px;">
+              (Requires +2 C or warmer. Decrease any Plant production 1 step.<br> 1 VP for each Animal <br> on this card.)
 
             </div>
           </div>
@@ -2099,10 +2102,10 @@
         </li>
 
         <!--70-->
-        <li class="filterDiv active scienceTag corporate">
+        <li class="filterDiv active earthTag corporate">
             <div class="title background-color-active ">Earth Catapult</div>
             <div class="price ">23</div>
-            <div class="tag tag1 tag-science"></div>
+            <div class="tag tag1 tag-earth"></div>
             <div class="number ">070</div>
             <div class="corporate-icon project-icon"></div>
             <div class="content ">
@@ -5481,7 +5484,7 @@
                 <div class="tag tag2 tag-science "></div>
                 <div class="tag tag3 tag-venus "></div>
                 <div class="number ">259</div>
-                <div class="corporate-icon project-icon"></div>
+                <div class="venus-icon project-icon"></div>
                 <div class="content ">
                     <div class="points">1/<div class="animal resource "></div></div>
                     <div class="requirements">18% Venus</div>

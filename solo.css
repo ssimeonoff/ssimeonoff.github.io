@@ -14,7 +14,7 @@
   background: #ccc;
   background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
   width: 875px;
-  height: 1117px;
+  height: 1160px;
   border-radius: 10px;
   border-style: outset;
 }
@@ -103,7 +103,6 @@
   font-weight: bold;
   font-size: 18px;
   color: rgb(68, 68, 68);
-  letter-spacing: 1px;
 }
 
 .buttons-div {
@@ -169,6 +168,19 @@
   box-shadow:0 0 0 1px rgba(0,0,0,0.4),0 0 0 2px rgba(0,0,0,0.2);
 
 }
+
+.legend-squares {
+  display:inline-block;
+  margin-left: 20px;
+  line-height: 14px;
+  width: 20px;
+  box-shadow:0 0 0 1px rgba(0,0,0,0.4);
+  border-radius: 2px;
+  text-align: center;
+}
+
+
+
 
 .ecoline {
   font-weight:bold;

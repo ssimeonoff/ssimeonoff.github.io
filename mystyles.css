@@ -549,12 +549,23 @@
   display: none;
 }
 
-.footer-buttons {
-  border-radius: 5px;
-}
+
 .footer-links {
   text-decoration: none;
-  color:black;
+  font-family: Arial, Verdana;
+  background: #ddd;
+  color: black;
+  outline: none;
+  height: 40px;
+  width: 150px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 2px;
+  margin-right: 20px;
+  padding: 5px 25px 5px 25px;
+  width: 200px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
 }
 
 
@@ -1166,6 +1177,7 @@
     padding: 0px 2px 0px 15px;
     border: 2px solid #ddd;
     margin-top: 10px;
+    margin-bottom: 25px;
     margin-right: 15px;
     border-radius: 20px;
     border-style: inset;
