@@ -108,7 +108,7 @@
       vAxis: {ticks: 'none', textPosition: 'none'},
       HAxis: {ticks: [95], textPosition: 'none'},
 
-      chartArea:{left:192,bottom:20,top:20,width:445},
+      chartArea:{left:220,bottom:20,top:20,width:390},
       colors: ['#444444'],
       histogram: {bucketSize: 5, minValue: 70, maxValue: 125},
     };
@@ -135,9 +135,9 @@
       <div id="average"></div>
     </div>
     <div class="buttons-div">
-      <button class="button" style= "background: rgb(68, 68, 68);"><a href="https://ssimeonoff.github.io/" style="text-decoration: none;color:white;">BACK TO LIST</a></button><br>
+      <button class="button" style= "background: rgb(68, 68, 68);" onClick=""><a href="https://ssimeonoff.github.io/" style="text-decoration: none;color:white;">BACK TO LIST</a></button><br>
+      <button class="button" data-modal="modalTwo" style="background-color: #cc3333; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;color:white;">THE EXPERIMENT <br><span style="font-size:10px;">(CLICK ME)<span></button><br>
       <button class="button" data-modal="modalOne">SETUP</button><br>
-      <button class="button" data-modal="modalTwo">HYPOTHESIS</button><br>
       <button class="button" data-modal="modalThree">ASSUMPTIONS</button>
     </div>
 
@@ -154,11 +154,13 @@
     <div id="modalTwo" class="modal">
       <div class="modal-content1">
         <span class="close">&times;</span>
-        <b>HYPOTHESIS</b> <br><br>
-        Winning Solo games is easier when playing with Venux Next compared to the standard game.<br>
-        Playing with moderate risk and but aiming for high score, the follows stats can be achieved:<br>
-        >> Win Rate Percentage over 80<br>
-        >> Average Win Score over 90<br>
+        <b>HYPOTHESIS</b> <br>
+        <span style="font-size:20px;font-weight:bold;background:#ccc;padding:2px 5px 2px 5px;border-radius:5px;">Winning Solo Games is easier when playing with Venux Next expansion.</span><br>(Before the expansion I was winning 2 of 3 games.)<br><br>
+
+        <b>EXPECTATIONS</b> <br>
+        Playing with moderate risk, but aiming for high score, the follows stats can be achieved:<br>
+        <span style="font-size:20px;font-weight:bold;background:#ccc;padding:2px 5px 2px 5px;border-radius:5px;">Win Rate Percentage over 80</span> &nbsp; and &nbsp;
+        <span style="font-size:20px;font-weight:bold;background:#ccc;padding:2px 5px 2px 5px;border-radius:5px;">Average Win Score over 90</span><br>
 
     </div>
   </div>
@@ -176,7 +178,7 @@
 
     <div class="filterDiv2" style="height:40px;display:inline-block">
       <div class="chart-title" style="margin-left:15px;margin-top:10px;">
-        <div style="margin-right:140px;display:inline-block">PLAYED GAMES PER CORPORATION</div>
+        <div style="margin-right:150px; display:inline-block">PLAYED GAMES PER CORPORATION</div>
         <div style="font-size:12px;display:inline-block;vertical-align:middle;">
         <div class="legend-squares" style="background:#cc3333;">&nbsp;</div>
         <span>Failed</span>
