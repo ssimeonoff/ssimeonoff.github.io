@@ -5,7 +5,7 @@
     width: 875px;
     height: 65px;
     font-family:  Arial,Helvetica,sans-serif;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 2px solid #ddd;
 
 }
 
@@ -14,9 +14,28 @@
   background: #ccc;
   background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
   width: 875px;
-  height: 1160px;
+  height: 1177px;
   border-radius: 10px;
   border-style: outset;
+}
+
+.header-title {
+  margin-left: 40px;
+  background: rgb(84,150,201);
+  color: white;
+  width: 875px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 10px;
+  border-style: outset;
+  margin-bottom: -15px;
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 26px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  letter-spacing: 1px;
+  margin-top: 15px;
 }
 
 .grid-container {
@@ -26,18 +45,17 @@
   margin-left: 203px;
   margin-top: 12px;
   display: grid;
-  grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
   grid-gap: 10px;
 }
 .grid-container > div {
   text-align: center;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: bold;
-  width: 50px;
+  width: 40px;
   height: 35px;
   line-height: 35px;
   border-radius: 5px;
-  letter-spacing: 1px;
 }
 
 .grid-container2 {
@@ -87,7 +105,7 @@
   border-radius: 10px;
   margin-left: 40px;
   padding-left: 20px;
-  padding-top: 15px;
+  padding-top: 59px;
   padding-bottom: 5px;
   width: 855px;
   margin-top: 30px;
@@ -97,12 +115,21 @@
 
 .chart-title {
   position: absolute;
-  margin-top: -230px;
-  margin-left: 350px;
+  margin-top: -272px;
+  margin-left: 55px;
+  width: 812px;
   font-family: Arial;
   font-weight: bold;
   font-size: 18px;
   color: rgb(68, 68, 68);
+  text-align: center;
+  background: rgb(84,150,201);
+  color:white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  padding: 5px 20px 5px 20px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.4), 0 0 0 2px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  line-height: 20px;
 }
 
 .buttons-div {
@@ -157,7 +184,7 @@
 }
 
 .background-silver {
-  background-color: #eee;
+  background-color: white;
   border-style: outset !important;
   box-shadow:0 0 0 1px rgba(0,0,0,0.4),0 0 0 2px rgba(0,0,0,0.2);
 
@@ -165,7 +192,7 @@
 }
 
 .background-bronze {
-  background-color: #996633;
+  background-color: #aaa;
   border-style: outset !important;
   box-shadow:0 0 0 1px rgba(0,0,0,0.4),0 0 0 2px rgba(0,0,0,0.2);
 
@@ -175,7 +202,7 @@
   display:inline-block;
   margin-left: 20px;
   line-height: 14px;
-  width: 17px;
+  width: 15px;
   box-shadow:0 0 0 1px rgba(0,0,0,0.4);
   border-radius: 2px;
   text-align: center;
