@@ -898,7 +898,7 @@
     background: linear-gradient(rgb(255,208,4),rgb(255,255,104),rgb(255,208,4),rgb(255,208,4));
     font-weight: bold;
     border-radius: 5px;
-    padding-top:2px;
+    padding: 1px;
 }
 
 .steel {
