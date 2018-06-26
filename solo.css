@@ -49,13 +49,14 @@
   grid-gap: 10px;
 }
 .grid-container > div {
+  color: rgb(68, 68, 68);
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
-  width: 40px;
+  width: 35px;
   height: 35px;
   line-height: 35px;
-  border-radius: 5px;
+  border-radius: 20px;
 }
 
 .grid-container2 {
@@ -171,7 +172,7 @@
     background-color: #cc3333;
     border-style:outset !important;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    color:white;
+    color:white !important;
     box-shadow:0 0 0 1px rgba(0,0,0,0.4),0 0 0 2px rgba(0,0,0,0.2);
 
 }
