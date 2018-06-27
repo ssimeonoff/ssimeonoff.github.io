@@ -42,7 +42,7 @@
   font-family: Arial;
   position: absolute;
   display: inline-block;
-  margin-left: 203px;
+  margin-left: 195px;
   margin-top: 12px;
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
@@ -121,7 +121,7 @@
   width: 812px;
   font-family: Arial;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 20px;
   color: rgb(68, 68, 68);
   text-align: center;
   background: rgb(84,150,201);
@@ -201,11 +201,11 @@
 
 .legend-squares {
   display:inline-block;
-  margin-left: 20px;
-  line-height: 14px;
-  width: 15px;
-  box-shadow:0 0 0 1px rgba(0,0,0,0.4);
-  border-radius: 2px;
+  margin-left: 16px;
+  line-height: 20px;
+  width: 20px;
+  box-shadow:0 0 0 1px rgba(0,0,0,0.6);
+  border-radius: 10px;
   text-align: center;
 }
 
