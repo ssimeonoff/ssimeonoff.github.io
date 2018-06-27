@@ -116,9 +116,9 @@
       backgroundColor: "transparent",
       vAxis: {ticks: 'none', textPosition: 'none'},
       HAxis: {ticks: [95], textPosition: 'none'},
-
+      bar: { gap: 5 },
       chartArea:{left:220,bottom:20,top:1,width:390},
-      colors: ['#444444'],
+      colors: ['#444444','#888888'],
       histogram: {bucketSize: 5, minValue: 70, maxValue: 125},
     };
 
@@ -154,22 +154,21 @@
       <div class="modal-content1">
         <span class="close">&times;</span>
           <b>SETUP</b> <br><br>
-        - Standard Solo rules (no drafting, 2 starting corps) <br>
-        - Included Venus Next <br>
-        - Included Hellas/Elysium (rotating the 3 boards) <br>
+        Included Venus Next expansion (Main goal of the experiment)<br>
+        Standard Solo rules (By the book - no Drafting, 2 starting corps) <br>
+        Included Hellas/Elysium (Rotating the 3 boards just for personal amusement) <br>
       </div>
     </div>
 
     <div id="modalTwo" class="modal">
       <div class="modal-content1">
         <span class="close">&times;</span>
-        <b>HYPOTHESIS</b> <br>
-        <span style="font-size:20px;font-weight:bold;background:#ccc;padding:2px 5px 2px 5px;border-radius:3px;">Winning Solo Games is easier when playing with Venux Next expansion.</span><br>(Before the expansion I was winning 2 of 3 games.)<br><br>
+        <b>HYPOTHESIS</b> <br><br>
+        <span style="font-size:20px;font-weight:bold;font-style: italic;">Winning Solo Games is easier when playing with Venux Next expansion.<br>(compared to the Standard Solo games)</span><br><br>
 
-        <b>EXPECTATIONS</b> <br>
+        <b>EXPECTATIONS</b> <br><br>
         Playing with moderate risk, but aiming for high score, the follows stats can be achieved:<br>
-        <span style="font-size:20px;font-weight:bold;background:#ccc;padding:2px 5px 2px 5px;border-radius:3px;">Win Rate Percentage over 80</span> &nbsp; and &nbsp;
-        <span style="font-size:20px;font-weight:bold;background:#ccc;padding:2px 5px 2px 5px;border-radius:3px;">Average Win Score over 90</span><br>
+        <span style="font-size:20px;font-weight:bold;font-style: italic;">Win Rate Percentage over 80<br> Average Win Score over 90</span><br>
 
     </div>
   </div>
@@ -178,7 +177,19 @@
     <div class="modal-content1">
       <span class="close">&times;</span>
       <b>ASSUMPTIONS</b> <br><br>
-      Corporations:<br>
+      Top 3 corporations are as follow:<br><br>
+      <b>1. Ecoline</b><br>
+      By far the best corporation for Solo - with or without Venus Next.
+      Corporation's starting bonus and ability secures one of the criterion (Oxygen), which makes winning almost certain. Extra placed forests corresponds to a higher average score.
+      <br><br>
+      <b>2. Helion</b><br>
+      Corporation's starting bonus and ability secures one of the criterion (Heat), which makes winning almost certain. Flexibility to use Heat as money can provide strong engine boost.
+      <br><br>
+      <b>3. Credicor</b><br>
+      High money start, plus buying forests for -4MC makes it easier to win.
+      <br><br>
+
+
   </div>
 </div>
 
@@ -195,7 +206,7 @@
         <span>Under 80</span>
         <div class="legend-squares" style="background:#eee;">&nbsp;</div>
         <span>Under 100</span>
-        <div class="legend-squares" style="background: #cccc00;">&nbsp;</div>
+        <div class="legend-squares" style="background: #e6e600;">&nbsp;</div>
         <span>Over 100</span>
 
       </div>

@@ -178,7 +178,7 @@
 }
 
 .background-gold {
-  background-color: #cccc00;
+  background-color: #e6e600;
   border-style:outset !important;
   box-shadow:0 0 0 1px rgba(0,0,0,0.4),0 0 0 2px rgba(0,0,0,0.2);
 
@@ -403,7 +403,7 @@
     font-family: Arial,Verdana;
     line-height: 28px;
     margin-left:58px;
-    margin-top: 192px;
+    margin-top: -60px;
     padding: 30px;
     border: 1px solid #888;
     width: 800px;
