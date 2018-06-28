@@ -12,6 +12,10 @@
     border-radius: 20px;
 }
 
+.prelude {
+  height: 240px;
+}
+
 .price {
     float: left;
     font-family: Arial Narrow, Helvetica, sans-serif;
@@ -146,6 +150,11 @@
 .project-icon:after {
   margin-left: -232px;
   margin-top: 284px;
+}
+
+.prelude-icon:after {
+  margin-left: -232px;
+  margin-top: 214px;
 }
 
 .corporation-icon:after {
@@ -1204,13 +1213,20 @@
     border-style: inset;
 }
 
-#myUL {
+.myUL {
     list-style-type: none;
     padding: 0;
     margin-left: 55px;
 }
 
-    #myUL li a {
+.ul-title {
+  color:#ccc;
+  font-family: Arial;
+  font-size: 14px;
+  border-bottom: 1px solid #ccc;
+  width: 855px;
+}
+    .myUL li a {
         border: 1px solid #ddd;
         margin-top: -1px; /* Prevent double borders */
         background-color: #f6f6f6;
@@ -1221,7 +1237,7 @@
         display: block;
     }
 
-        #myUL li a:hover:not(.header) {
+        .myUL li a:hover:not(.header) {
             background-color: #eee;
         }
 

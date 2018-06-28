@@ -142,68 +142,8 @@
 </div>
 
   <!-------------------CARDS LIST----------------------->
-  <ul id="myUL">
-
-    <!--C01-->
-    <li class="filterDiv automated spaceTag earthTag promo ">
-        <div class="title background-color-automated ">Lunar Exports</div>
-        <div class="price ">19</div>
-        <div class="tag tag1 tag-earth"></div>
-        <div class="tag tag2 tag-space"></div>
-        <div class="number ">C01</div>
-        <div class="promo-icon project-icon"></div>
-        <div class="content ">
-          <div class="production-box production-box-size4">
-            <div class="plant production"></div><div class="plant production"></div> OR <div class="money production">5</div>
-          </div>
-          <div class="description" style="margin-top:-5px">
-            (Increase your plant production 2 steps, or your M$ production 5 steps.)
-          </div>
-        </div>
-    </li>
-
-    <!--C02-->
-    <li class="filterDiv active promo ">
-        <div class="title background-color-active ">Atmo Collectors</div>
-        <div class="price ">15</div>
-        <div class="number ">C02</div>
-        <div class="promo-icon project-icon"></div>
-        <div class="content ">
-            <div class="red-arrow "></div> <div class="floater resource "></div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OR <br>
-            <div class="floater resource "></div> <div class="red-arrow "></div> 2<div class="titanium resource "></div> / 3<div class="energy resource "></div> / 4<div class="heat resource "></div>
-            <div class="description ">
-              (Action: Add 1 floater here, or spend 1 floater here to gain 2 titanium, or 3 energy, or 4 heat.)
-            </div>
-            <div class="resource floater"></div><div class="resource floater"></div>*
-            <br>
-            <div class="description ">
-              (Add 2 floaters to ANY card.)
-            </div>
-        </div>
-    </li>
-
-    <!--C03-->
-    <li class="filterDiv active promo reqs jovianTag spaceTag" data-jovian = "1">
-        <div class="title background-color-active ">Jovian Lanterns</div>
-        <div class="price ">21</div>
-        <div class="tag tag1 tag-space "></div>
-        <div class="tag tag2 tag-jovian "></div>
-        <div class="number ">C03</div>
-        <div class="promo-icon project-icon"></div>
-        <div class="content ">
-          <div class="points">1/2<div class="resource floater"></div></div>
-          <div class="requirements">Jovian</div>
-            <div class="resource titanium"></div> <div class="red-arrow "></div> <div class="resource floater"></div><div class="resource floater"></div>
-            <div class="description ">
-              (Action: Spend 1 titanium to add 2 floaters here.)
-            </div>
-            <div class="tile rating"></div> <div class="resource floater"></div><div class="resource floater"></div>*
-            <div class="description " style="margin-top:-5px;text-align:left;">
-              (Requires 1 Jovian tag. Increase your TR 1 step. Add 2 floaters to ANY <br> card. 1VP per 2 floaters.)
-            </div>
-        </div>
-    </li>
-
+  <ul class="myUL">
+    <div class="ul-title">CORPORATIONS</div>
 
     <li class="filterDiv corporation promo">
       <div class="corporationLabel">CORPORATION</div>
@@ -901,12 +841,76 @@
             </div>
           </div>
         </li>
+      </ul>
 
 
 
 
+      <ul class="myUL" style="clear:both;">
+      <div class="ul-title">PROJECT CARDS</div>
 
         <!--Project cards------------------------------------------------------>
+
+            <!--C01-->
+            <li class="filterDiv automated spaceTag earthTag promo ">
+                <div class="title background-color-automated ">Lunar Exports</div>
+                <div class="price ">19</div>
+                <div class="tag tag1 tag-earth"></div>
+                <div class="tag tag2 tag-space"></div>
+                <div class="number ">C01</div>
+                <div class="promo-icon project-icon"></div>
+                <div class="content ">
+                  <div class="production-box production-box-size4">
+                    <div class="plant production"></div><div class="plant production"></div> OR <div class="money production">5</div>
+                  </div>
+                  <div class="description" style="margin-top:-5px">
+                    (Increase your plant production 2 steps, or your M$ production 5 steps.)
+                  </div>
+                </div>
+            </li>
+
+            <!--C02-->
+            <li class="filterDiv active promo ">
+                <div class="title background-color-active ">Atmo Collectors</div>
+                <div class="price ">15</div>
+                <div class="number ">C02</div>
+                <div class="promo-icon project-icon"></div>
+                <div class="content ">
+                    <div class="red-arrow "></div> <div class="floater resource "></div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OR <br>
+                    <div class="floater resource "></div> <div class="red-arrow "></div> 2<div class="titanium resource "></div> / 3<div class="energy resource "></div> / 4<div class="heat resource "></div>
+                    <div class="description ">
+                      (Action: Add 1 floater here, or spend 1 floater here to gain 2 titanium, or 3 energy, or 4 heat.)
+                    </div>
+                    <div class="resource floater"></div><div class="resource floater"></div>*
+                    <br>
+                    <div class="description ">
+                      (Add 2 floaters to ANY card.)
+                    </div>
+                </div>
+            </li>
+
+            <!--C03-->
+            <li class="filterDiv active promo reqs jovianTag spaceTag" data-jovian = "1">
+                <div class="title background-color-active ">Jovian Lanterns</div>
+                <div class="price ">21</div>
+                <div class="tag tag1 tag-space "></div>
+                <div class="tag tag2 tag-jovian "></div>
+                <div class="number ">C03</div>
+                <div class="promo-icon project-icon"></div>
+                <div class="content ">
+                  <div class="points">1/2<div class="resource floater"></div></div>
+                  <div class="requirements">Jovian</div>
+                    <div class="resource titanium"></div> <div class="red-arrow "></div> <div class="resource floater"></div><div class="resource floater"></div>
+                    <div class="description ">
+                      (Action: Spend 1 titanium to add 2 floaters here.)
+                    </div>
+                    <div class="tile rating"></div> <div class="resource floater"></div><div class="resource floater"></div>*
+                    <div class="description " style="margin-top:-5px;text-align:left;">
+                      (Requires 1 Jovian tag. Increase your TR 1 step. Add 2 floaters to ANY <br> card. 1VP per 2 floaters.)
+                    </div>
+                </div>
+            </li>
+
         <!--1-->
         <li class="filterDiv automated builderTag jovianTag standard reqs" data-oxygen="5">
             <div class="title background-color-automated ">Colonizer Training Camp</div>
@@ -5601,14 +5605,19 @@
                   </div>
                 </div>
             </li>
+          </ul>
 
+
+
+
+    <ul class="myUL" style="clear:both;">
     <!--PRELUDES------------------------------------------->
-
+    <div class="ul-title">PRELUDES</div>
         <!--prelude1-->
         <li class="filterDiv prelude preludeCards">
           <div class="title background-color-prelude">Orbital Construction</div>
           <div class="prelude-label">PRELUDE</div>
-          <div class="prelude-icon project-icon"></div>
+          <div class="prelude-icon"></div>
           <div class="content">
             <div class="production-box"><div class="production titanium"></div></div></br>
             <div class="resource titanium"></div><div class="resource titanium"></div><div class="resource titanium"></div><div class="resource titanium"></div>
