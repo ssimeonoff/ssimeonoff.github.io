@@ -563,7 +563,7 @@
   font-size: 14px;
   border-radius: 2px;
   margin-right: 20px;
-  padding: 5px 25px 5px 25px;
+  padding: 5px 5px 5px 5px;
   width: 200px;
   box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
 }
@@ -899,7 +899,7 @@
     font-weight: bold;
     border-radius: 5px;
     padding: 1px;
-    
+
 }
 
 .steel {
