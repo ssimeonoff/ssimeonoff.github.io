@@ -551,23 +551,43 @@
 
 
 .footer-links {
+  display: inline-block;
   text-decoration: none;
+  text-align: center;
   font-family: Arial, Verdana;
   background: #ddd;
-  color: black;
+  color: #444444;
   outline: none;
-  height: 40px;
-  width: 150px;
   cursor: pointer;
   font-weight: bold;
   font-size: 14px;
-  border-radius: 2px;
-  margin-right: 20px;
-  padding: 5px 5px 5px 5px;
-  width: 200px;
+  line-height: 30px;
+  margin-top: -10px;
+  margin-left: -2px;
+  width: 123px;
+  margin-right: 10px;
+  border-radius: 15px;
   box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
 }
 
+.versus {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  font-family: Arial, Verdana;
+  background: #ddd;
+  color: #444444;
+  outline: none;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 24px;
+  border-radius: 15px;
+  margin-left: -161px;
+  margin-top: -10px;
+  width: 34px;
+  border:1px solid #444444;
+
+}
 
 /************** Style the Content ************/
 .content {
