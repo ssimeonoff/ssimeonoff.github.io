@@ -42,44 +42,47 @@
       </div>
     </div>
     <div id="myBtnContainer1" style="line-height:55px;margin-bottom:10px;">
-      <button id="automated" class="btn1 background-color-automated tooltip" onclick="filterSelection(id)"> AUTOMATED
+      <button id="automated" class="button btn1 background-color-automated tooltip" onclick="filterSelection(id)"> AUTOMATED
         <span class="tooltiptext">filter Automated Project Cards</span></button>
-      <button id="active" class="btn1 background-color-active tooltip" onclick="filterSelection(id)"> ACTIVE
+      <button id="active" class="button btn1 background-color-active tooltip" onclick="filterSelection(id)"> ACTIVE
       <span class="tooltiptext">filter Active Project Cards</span></button>
-      <button id="events" class="btn1 background-color-events tooltip" onclick="filterSelection(id)"> EVENTS
+      <button id="events" class="button btn1 background-color-events tooltip" onclick="filterSelection(id)"> EVENTS
         <span class="tooltiptext">filter Events Project Cards</span></button>
-      <button id="corporation" class="btn1 background-color-corporation tooltip" onclick="filterSelection(id)">CORPORATIONS
+      <button id="corporation" class="button btn1 background-color-corporation tooltip" onclick="filterSelection(id)">CORPORATIONS
         <span class="tooltiptext">filter Corporations Cards</span></button>
-      <button id="preludeCards" class="btn1 background-color-prelude tooltip" onclick="filterSelection(id)">PRELUDES
+      <button id="preludeCards" class="button btn1 background-color-prelude tooltip" onclick="filterSelection(id)">PRELUDES
         <span class="tooltiptext">filter Preludes Cards</span></button>
+      <button id="colonyCards" class="button btn1 background-color-colony tooltip" onclick="filterSelection(id)">COLONIES
+        <span class="tooltiptext">filter Colonies cards</span></button>
     </div>
 
     <div id="myBtnContainer2" style="line-height:55px;">
-      <button id="builderTag" class="btn2 tag-builder tooltip" style="line-height:40px" onclick="filterSelection(id)"><span class="tooltiptext">filter by Builder tag</span></button>
-      <button id="spaceTag" class="btn2 tag-space tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter by Space tag</span></button>
-      <button id="scienceTag" class="btn2 tag-science tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter by Science tag</span></button>
+      <button id="builderTag" class="button btn2 tag-builder tooltip" style="line-height:40px" onclick="filterSelection(id)"><span class="tooltiptext">filter by Builder tag</span></button>
+      <button id="spaceTag" class="button btn2 tag-space tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter by Space tag</span></button>
+      <button id="scienceTag" class="button btn2 tag-science tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter by Science tag</span></button>
 
-      <button id="plantTag" class="btn2 tag-plant tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter by Plant tag</span></button>
-      <button id="microbeTag" class="btn2 tag-microbe tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter by Microbe tag</span></button>
-      <button id="animalTag" class="btn2 tag-animal tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter by Animal tag</span></button>
+      <button id="plantTag" class="button btn2 tag-plant tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter by Plant tag</span></button>
+      <button id="microbeTag" class="button btn2 tag-microbe tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter by Microbe tag</span></button>
+      <button id="animalTag" class="button btn2 tag-animal tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter by Animal tag</span></button>
 
-      <button id="energyTag" class="btn2 tag-energy tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter by Energy tag</span></button>
-      <button id="jovianTag" class="btn2 tag-jovian tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter by Jovian tag</span></button>
-      <button id="earthTag" class="btn2 tag-earth tooltip" style="font-size:38px;padding-top:3px;padding-left:1px;padding-right:1px;" onclick="filterSelection(id)"><span class="tooltiptext">filter by Earth tag</span></button>
+      <button id="energyTag" class="button btn2 tag-energy tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter by Energy tag</span></button>
+      <button id="jovianTag" class="button btn2 tag-jovian tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter by Jovian tag</span></button>
+      <button id="earthTag" class="button btn2 tag-earth tooltip" style="font-size:38px;padding-top:3px;padding-left:1px;padding-right:1px;" onclick="filterSelection(id)"><span class="tooltiptext">filter by Earth tag</span></button>
 
-      <button id="cityTag" class="btn2 tag-city tooltip" style="font-size:22px;line-height:40px" onclick="filterSelection(id)"><span class="tooltiptext">filter by City tag</span></button>
-      <button id="eventTag" class="btn2 tag-event tooltip" style="line-height:40px;vertical-align:bottom;" onclick="filterSelection(id)"><span class="tooltiptext">filter by Event tag</span></button>
-      <button id="venusTag" class="btn2 tag-venus tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter by Venus tag</span></button>
+      <button id="cityTag" class="button btn2 tag-city tooltip" style="font-size:22px;line-height:40px" onclick="filterSelection(id)"><span class="tooltiptext">filter by City tag</span></button>
+      <button id="eventTag" class="button btn2 tag-event tooltip" style="line-height:40px;vertical-align:bottom;" onclick="filterSelection(id)"><span class="tooltiptext">filter by Event tag</span></button>
+      <button id="venusTag" class="button btn2 tag-venus tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter by Venus tag</span></button>
     </div>
 
     <div id="myBtnContainer3" style="display:inline-block;">
-      <button id="reqs" class="btn5  button-icon tooltip" onclick="filterSelection(id);toggleSubfiltersDiv();" >REQUIREMENTS<span class="tooltiptext">filter cards with requirements</span></button>
-      <button id="standard" class="btn3 standard-icon button-icon tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter Base game cards</span></button>
-      <button id="corporate" class="btn3 corporate-icon button-icon tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter Corporate Era cards</span></button>
-      <button id="venusNext" class="btn3 venus-icon button-icon tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter Venus Next cards</span></button>
-      <button id="prelude" class="btn3 prelude-icon button-icon tooltip" onclick="filterSelection(id)" ><span class="tooltiptext">filter Prelude cards</span></button>
-      <button id="promo" class="btn3 promo-icon button-icon tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter Promo cards</span></button>
-      <button id="info" class="btn4 tooltip" style="background:#444444;margin-left: 214px;height:30px; line-height: 19px;vertical-align:bottom;">info</button>
+      <button id="reqs" class="button btn5  button-icon tooltip" onclick="filterSelection(id);toggleSubfiltersDiv();" >REQUIREMENTS<span class="tooltiptext">filter cards with requirements</span></button>
+      <button id="standard" class="button btn3 standard-icon button-icon tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter Base game cards</span></button>
+      <button id="corporate" class="button btn3 corporate-icon button-icon tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter Corporate Era cards</span></button>
+      <button id="venusNext" class="button btn3 venus-icon button-icon tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter Venus Next cards</span></button>
+      <button id="prelude" class="button btn3 prelude-icon button-icon tooltip" onclick="filterSelection(id)" ><span class="tooltiptext">filter Prelude cards</span></button>
+      <button id="promo" class="button btn3 promo-icon button-icon tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter Promo cards</span></button>
+      <button id="colonies" class="button btn3 colonies-icon button-icon tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter Colonies cards</span></button>
+      <button id="info" class="button btn4 tooltip" style="background:#444444;margin-left: 116px;height:30px; line-height: 19px;vertical-align:bottom;">info</button>
       <div id="subfilters">
         <div class="slider1">
           <output id="output1" for="slider1" class="output-label" style="color:#f25540;margin-left: 220px;">-30</output> <!-- Just to display selected value -->
@@ -102,8 +105,8 @@
     </div>
     <div id="myBtnContainer4" style="display:inline-block;">
       <input class="tooltip" type="text" id="myInput" oninput="myFunction();" placeholder="Search by text ..." title="Type in a name">
-      <button id="reset" class="btn4 reset-icon button-icon tooltip" onclick="clearInput();showAll();" style="margin-right: 68px;">RESET</button>
-      <button id="about" onclick="toggleFooterDiv();" class="btn4 tooltip" style="background:#444444;margin-left: 16px;height:30px; line-height: 19px;">About</button>
+      <button id="reset" class="button btn4 reset-icon button-icon tooltip" onclick="clearInput();showAll();" style="margin-right: 68px;">RESET</button>
+      <button id="about" onclick="toggleFooterDiv();" class="button btn4 tooltip" style="background:#444444;margin-left: 16px;height:30px; line-height: 19px;">About</button>
     </div>
     <div id="footer">
       <a class="footer-links" style="margin-left:3px" href="https://boardgamegeek.com/boardgame/167791/terraforming-mars" target="_blank">THE GAME</a>
