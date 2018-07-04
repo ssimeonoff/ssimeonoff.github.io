@@ -509,7 +509,7 @@
     border-radius: 5px;
     margin-right: 12px;
     margin-top: 15px;
-    box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
+    box-shadow: 0 0 4px 2px rgb(58,58,58);
 }
 
 .button {
@@ -1444,6 +1444,7 @@ input[type=range] {
   margin-right: 40px;
   margin-top: 14px;
   width: 150px;
+  box-shadow: 0 0 4px 2px rgb(58,58,58);
 }
 
 input[type=range]:focus {
