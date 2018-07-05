@@ -10,7 +10,7 @@
     margin-right: -130px;
     border-style: outset;
     border-radius: 20px;
-    transform:  perspective(3000px) rotateY(45deg);
+    transform:  perspective(2500px) rotateY(45deg);
     z-index:0;
     position: relative;
     box-shadow: 0 0 5px 1px black;
