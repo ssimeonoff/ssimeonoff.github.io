@@ -7,9 +7,20 @@
     display: none;
     font-family:  Arial,Helvetica,sans-serif;
     margin: 15px;
-    margin-right: 25px;
+    margin-right: -130px;
     border-style: outset;
     border-radius: 20px;
+    transform:  perspective(3000px) rotateY(45deg);
+    z-index:0;
+    position: relative;
+    box-shadow: 0 0 5px 1px black;
+}
+
+.filterDiv:hover {
+  transform:  translate3d(0px, 0px, 0px);
+  box-shadow: 0 0 30px 5px black;
+  transition: 0.5s;
+  z-index: 99;
 }
 
 .preludeCards {
@@ -1182,8 +1193,8 @@
 
 .myUL {
     list-style-type: none;
-    padding: 0;
-    margin-left: 55px;
+    width:85%;
+    margin-left: -25px;
 }
 
 .ul-title {
@@ -1191,23 +1202,10 @@
   font-family: Arial;
   font-size: 14px;
   border-bottom: 1px solid #ccc;
+  margin-left: 25px;
   width: 880px;
-  margin-left: -15px;
 }
-    .myUL li a {
-        border: 1px solid #ddd;
-        margin-top: -1px; /* Prevent double borders */
-        background-color: #f6f6f6;
-        padding: 12px;
-        text-decoration: none;
-        font-size: 18px;
-        color: black;
-        display: block;
-    }
 
-        .myUL li a:hover:not(.header) {
-            background-color: #eee;
-        }
 
 .totalCardsCount {
   display: inline-block;
