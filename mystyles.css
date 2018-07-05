@@ -10,15 +10,15 @@
     margin-right: -130px;
     border-style: outset;
     border-radius: 20px;
-    transform:  perspective(2500px) rotateY(45deg);
+    transform:  perspective(3500px) rotateY(45deg);
     z-index:0;
     position: relative;
-    box-shadow: 0 0 5px 1px black;
+    box-shadow: -10px 0px 20px 0px black;
 }
 
 .filterDiv:hover {
-  transform:  translate3d(0px, 0px, 0px);
-  box-shadow: 0 0 30px 5px black;
+  transform: scale3d(1.1,1.1,1.1);
+  box-shadow: 0 0 30px 10px black;
   transition: 0.3s;
   z-index: 99;
 }
