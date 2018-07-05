@@ -1198,10 +1198,14 @@
 }
 
 .ul-title {
-  color:#ccc;
+
   font-family: Arial;
   font-size: 14px;
-  border-bottom: 1px solid #ccc;
+  font-weight: bold;
+  font-style: italic;
+  padding-left: 5px;
+  border-radius: 10px;
+  background: linear-gradient(to right,#c19900, #bb511d88,#bb511d00);
   margin-left: 25px;
   width: 880px;
 }
