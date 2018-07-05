@@ -19,7 +19,7 @@
 .filterDiv:hover {
   transform:  translate3d(0px, 0px, 0px);
   box-shadow: 0 0 30px 5px black;
-  transition: 0.5s;
+  transition: 0.3s;
   z-index: 99;
 }
 
