@@ -82,7 +82,14 @@
       <button id="prelude" class="button btn3 prelude-icon button-icon tooltip" onclick="filterSelection(id)" ><span class="tooltiptext">filter Prelude cards</span></button>
       <button id="promo" class="button btn3 promo-icon button-icon tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter Promo cards</span></button>
       <button id="colonies" class="button btn3 colonies-icon button-icon tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter Colonies cards</span></button>
-      <button id="info" class="button btn4 tooltip" style="background:#444444;margin-left: 116px;height:30px; line-height: 19px;vertical-align:bottom;">info</button>
+    <div id ="switch" class="switch">
+      <input type="radio" class="switch-input" name="view" value="stacked" id="week" checked>
+      <label for="week" class="switch-label switch-label-off">STACKED</label>
+      <input type="radio" class="switch-input" name="view" value="casual" id="month">
+      <label for="month" class="switch-label switch-label-on">CASUAL</label>
+      <span class="switch-selection"></span>
+    </div>
+      <button id="info" class="button btn4 tooltip" style="background:#444444;margin-left: 40px;height:30px; line-height: 19px;vertical-align:bottom;">info</button>
       <div id="subfilters">
         <div class="slider1">
           <output id="output1" for="slider1" class="output-label" style="color:#f25540;margin-left: 220px;">-30</output> <!-- Just to display selected value -->
@@ -105,7 +112,7 @@
     </div>
     <div id="myBtnContainer4" style="display:inline-block;">
       <input class="tooltip" type="text" id="myInput" oninput="myFunction();" placeholder="Search by text ..." title="Type in a name">
-      <button id="reset" class="button btn4 reset-icon button-icon tooltip" onclick="clearInput();showAll();" style="margin-right: 68px;">RESET</button>
+      <button id="reset" class="button btn4 reset-icon button-icon tooltip" onclick="clearInput();showAll();" style="margin-right: 65px;">RESET</button>
       <button id="about" onclick="toggleFooterDiv();" class="button btn4 tooltip" style="background:#444444;margin-left: 16px;height:30px; line-height: 19px;">About</button>
     </div>
     <div id="footer">

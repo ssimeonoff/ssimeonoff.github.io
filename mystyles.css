@@ -1,5 +1,6 @@
 .filterDiv {
     float: left;
+    position: relative;
     background: #eeeeee;
     background: linear-gradient(to bottom right, #ffffff, #aaaaaa, #eeeeee, #cecece, #dddddd, #eeeeee, #cccccc);
     width: 240px;
@@ -11,14 +12,12 @@
     border-style: outset;
     border-radius: 20px;
     transform:  perspective(3500px) rotateY(45deg);
-    z-index:0;
-    position: relative;
     box-shadow: -10px 0px 20px 0px black;
 }
 
 .filterDiv:hover {
-  transform: scale3d(1.1,1.1,1.1);
-  box-shadow: 0 0 30px 10px black;
+  transform: none;
+  box-shadow: 0 0 30px 15px black;
   transition: 0.3s;
   z-index: 99;
 }
@@ -477,7 +476,7 @@
 .btn4 {
     outline: none;
     height: 40px;
-    width: 120px;
+    width: 123px;
     cursor: pointer;
     border-radius: 20px;
     text-align: center;
@@ -498,12 +497,12 @@
     background-color: rgb(255,204,100);
     background: linear-gradient(to right, #e28c22, rgb(255,204,100),rgb(255,204,100), #e28c22);
     height: 40px;
-    width: 150px;
+    width: 123px;
     cursor: pointer;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 13px;
     border-radius: 8px;
-    margin-right: 99px;
+    margin-right: 29px;
     margin-top: 20px;
     margin-bottom: 10px;
 }
@@ -1552,7 +1551,6 @@ input[type=range]::-webkit-slider-runnable-track {
 
 input[type=range]::-webkit-slider-thumb {
   box-shadow: 1px 1px 1px #000000;
-  /*border: 1px solid #000000;*/
   border-style: outset;
   box-shadow: 0 0 0 1px rgba(0,0,0,0.8), 0 0 0 2px rgba(0,0,0,0.4);
   height: 40px;
@@ -1630,4 +1628,86 @@ input[type=range]:focus::-ms-fill-upper {
   font-size: 30px;
   text-shadow: -1px 0 #444444, 0 1px #444444, 1px 0 #444444, 0 -1px #444444;
   color: #3071A9;
+}
+
+/*toggle button*/
+
+.switch {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: Arial;
+  position: relative;
+  height: 30px;
+  width: 123px;
+  margin-left:6px;
+  margin-right: 40px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  box-shadow:  inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.switch-label {
+  position: relative;
+  z-index: 2;
+  float: left;
+  width: 56px;
+  line-height: 30px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.35);
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45);
+  cursor: pointer;
+}
+.switch-label:active {
+
+}
+
+.switch-label-off {
+  padding-left: 3px;
+}
+
+.switch-label-on {
+  padding-left: 3px;
+}
+
+
+.switch-input {
+  display: none;
+}
+.switch-input:checked + .switch-label {
+  color:#444;
+
+  -webkit-transition: 0.15s ease-out;
+  -moz-transition: 0.15s ease-out;
+  -ms-transition: 0.15s ease-out;
+  -o-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: color, text-shadow;
+  -moz-transition-property: color, text-shadow;
+  -ms-transition-property: color, text-shadow;
+  -o-transition-property: color, text-shadow;
+  transition-property: color, text-shadow;
+}
+.switch-input:checked + .switch-label-on ~ .switch-selection {
+  left: 61px;
+  /* Note: left: 50%; doesn't transition in WebKit */
+}
+
+.switch-selection {
+  position: absolute;
+  z-index: 1;
+  top: 3px;
+  left: 3px;
+  display: block;
+  width: 58px;
+  height: 24px;
+  border-radius: 20px;
+  background-color: #bbb;
+  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), 0 0 2px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), 0 0 2px rgba(0, 0, 0, 0.2);
+  -webkit-transition: left 0.15s ease-out;
+  -moz-transition: left 0.15s ease-out;
+  -ms-transition: left 0.15s ease-out;
+  -o-transition: left 0.15s ease-out;
+  transition: left 0.15s ease-out;
 }
