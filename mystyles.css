@@ -8,11 +8,15 @@
     display: none;
     font-family:  Arial,Helvetica,sans-serif;
     margin: 15px;
-    margin-right: -130px;
     border-style: outset;
     border-radius: 20px;
-    transform:  perspective(3500px) rotateY(45deg);
-    box-shadow: -10px 0px 20px 0px black;
+}
+
+.filterDiv-stacked {
+  transform:  perspective(3500px) rotateY(45deg);
+  box-shadow: -10px 0px 20px 0px black;
+  margin-right: -130px;
+
 }
 
 .filterDiv:hover {
@@ -1186,18 +1190,18 @@
     margin-right: 15px;
     border-radius: 20px;
     border-style: outset;
-    box-shadow: 0 0 4px 2px rgb(58,58,58);
+    box-shadow: 0 0 4px 1px rgb(58,58,58);
 
 }
 
 .myUL {
     list-style-type: none;
     width:85%;
+    margin-top: 15px;
     margin-left: -25px;
 }
 
 .ul-title {
-
   font-family: Arial;
   font-size: 14px;
   font-weight: bold;

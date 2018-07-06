@@ -83,9 +83,9 @@
       <button id="promo" class="button btn3 promo-icon button-icon tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter Promo cards</span></button>
       <button id="colonies" class="button btn3 colonies-icon button-icon tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter Colonies cards</span></button>
     <div id ="switch" class="switch">
-      <input type="radio" class="switch-input" name="view" value="stacked" id="week" checked>
+      <input type="radio" class="switch-input" name="view" value="stacked" id="week" onclick="stackedCards();" checked>
       <label for="week" class="switch-label switch-label-off">STACKED</label>
-      <input type="radio" class="switch-input" name="view" value="casual" id="month">
+      <input type="radio" class="switch-input" name="view" value="casual" id="month" onclick="casualCards();">
       <label for="month" class="switch-label switch-label-on">CASUAL</label>
       <span class="switch-selection"></span>
     </div>
@@ -153,8 +153,7 @@
   <!---CARDS LIST----------------------->
   <ul class="myUL">
     <div class="ul-title">CORPORATIONS</div>
-
-    <li class="filterDiv corporation promo">
+    <li class="filterDiv filterDiv-stacked corporation promo">
       <div class="corporationLabel">CORPORATION</div>
       <div class="promo-icon corporation-icon"></div>
       <div class="contentCorporation">
@@ -174,7 +173,7 @@
       </div>
     </li>
 
-    <li class="filterDiv corporation microbeTag  promo">
+    <li class="filterDiv filterDiv-stacked corporation microbeTag  promo">
       <div class="tag tag1 tag-microbe"></div>
       <div class="corporationLabel">CORPORATION</div>
       <div class="promo-icon corporation-icon"></div>
@@ -196,7 +195,7 @@
       </div>
     </li>
 
-    <li class="filterDiv corporation builderTag microbeTag  promo">
+    <li class="filterDiv filterDiv-stacked corporation builderTag microbeTag  promo">
       <div class="tag tag1 tag-builder"></div>
       <div class="tag tag2 tag-microbe"></div>
       <div class="corporationLabel">CORPORATION</div>
@@ -218,7 +217,7 @@
       </div>
     </li>
 
-    <li class="filterDiv corporation prelude earthTag">
+    <li class="filterDiv filterDiv-stacked corporation prelude earthTag">
       <div class="tag tag1 tag-earth"></div>
         <div class="corporationLabel ">CORPORATION</div>
         <div class="prelude-icon corporation-icon"></div>
@@ -269,7 +268,7 @@
     </li>
 
     <!--corp1-->
-    <li class="filterDiv corporation plantTag standard">
+    <li class="filterDiv filterDiv-stacked corporation plantTag standard">
       <div class="tag tag1 tag-plant"></div>
       <div class="corporationLabel">CORPORATION</div>
       <div class="contentCorporation">
@@ -301,7 +300,7 @@
     </li>
 
     <!--corp2-->
-    <li class="filterDiv corporation builderTag standard">
+    <li class="filterDiv filterDiv-stacked corporation builderTag standard">
       <div class="tag tag1 tag-builder"></div>
       <div class="tag tag2 tag-builder"></div>
       <div class="corporationLabel">CORPORATION</div>
@@ -342,7 +341,7 @@
     </li>
 
     <!--corp3-->
-    <li class="filterDiv corporation builderTag venusNext">
+    <li class="filterDiv filterDiv-stacked corporation builderTag venusNext">
       <div class="tag tag1 tag-builder"></div>
       <div class="corporationLabel">CORPORATION</div>
       <div class="venus-icon corporation-icon"></div>
@@ -374,7 +373,7 @@
     </li>
 
     <!--corp4-->
-    <li class="filterDiv corporation earthTag corporate">
+    <li class="filterDiv filterDiv-stacked corporation earthTag corporate">
       <div class="tag tag1 tag-earth"></div>
       <div class="corporationLabel">CORPORATION</div>
       <div class="corporate-icon corporation-icon"></div>
@@ -402,7 +401,7 @@
 
 
     <!--corp5-->
-    <li class="filterDiv corporation spaceTag standard">
+    <li class="filterDiv filterDiv-stacked corporation spaceTag standard">
       <div class="tag tag1 tag-space"></div>
       <div class="corporationLabel">CORPORATION</div>
       <div class="contentCorporation">
@@ -441,7 +440,7 @@
     </li>
 
     <!--corp6-->
-    <li class="filterDiv corporation energyTag standard">
+    <li class="filterDiv filterDiv-stacked corporation energyTag standard">
       <div class="tag tag1 tag-energy"></div>
       <div class="corporationLabel">CORPORATION</div>
       <div class="contentCorporation">
@@ -471,7 +470,7 @@
     </li>
 
     <!--corp7-->
-    <li class="filterDiv corporation jovianTag corporate">
+    <li class="filterDiv filterDiv-stacked corporation jovianTag corporate">
       <div class="tag tag1 tag-jovian"></div>
       <div class="corporationLabel">CORPORATION</div>
       <div class="corporate-icon corporation-icon"></div>
@@ -511,7 +510,7 @@
       </div>
 
       <!--corp8-->
-      <li class="filterDiv corporation venusTag plantTag venusNext">
+      <li class="filterDiv filterDiv-stacked corporation venusTag plantTag venusNext">
         <div class="tag tag1 tag-plant"></div>
         <div class="tag tag2 tag-venus"></div>
         <div class="corporationLabel">CORPORATION</div>
@@ -542,7 +541,7 @@
         </li>
 
         <!--corp9-->
-        <li class="filterDiv corporation standard">
+        <li class="filterDiv filterDiv-stacked corporation standard">
             <div class="corporationLabel ">CORPORATION</div>
             <div class="contentCorporation ">
                 <div class="corporationEffectBox ">
@@ -564,7 +563,7 @@
         </li>
 
         <!--corp10-->
-        <li class="filterDiv corporation builderTag standard">
+        <li class="filterDiv filterDiv-stacked corporation builderTag standard">
           <div class="tag tag1 tag-builder"></div>
             <div class="corporationLabel ">CORPORATION</div>
             <div class="contentCorporation ">
@@ -588,7 +587,7 @@
         </li>
 
         <!--corp11-->
-        <li class="filterDiv corporation scienceTag standard">
+        <li class="filterDiv filterDiv-stacked corporation scienceTag standard">
           <div class="tag tag1 tag-science"></div>
             <div class="corporationLabel ">CORPORATION</div>
             <div class="contentCorporation ">
@@ -614,7 +613,7 @@
         </li>
 
         <!--corp12-->
-        <li class="filterDiv corporation prelude earthTag spaceTag">
+        <li class="filterDiv filterDiv-stacked corporation prelude earthTag spaceTag">
           <div class="tag tag1 tag-space"></div>
           <div class="tag tag2 tag-earth"></div>
             <div class="corporationLabel ">CORPORATION</div>
@@ -665,7 +664,7 @@
         </li>
 
         <!--corp14-->
-        <li class="filterDiv corporation builderTag standard">
+        <li class="filterDiv filterDiv-stacked corporation builderTag standard">
           <div class="tag tag1 tag-builder"></div>
             <div class="corporationLabel ">CORPORATION</div>
             <div class="contentCorporation ">
@@ -699,7 +698,7 @@
         </li>
 
         <!--corp15-->
-        <li class="filterDiv corporation earthTag standard">
+        <li class="filterDiv filterDiv-stacked corporation earthTag standard">
           <div class="tag tag1 tag-earth"></div>
           <div class="corporationLabel">CORPORATION</div>
           <div class="contentCorporation">
@@ -733,7 +732,7 @@
 
 
         <!--corp16-->
-        <li class="filterDiv corporation spaceTag standard">
+        <li class="filterDiv filterDiv-stacked corporation spaceTag standard">
           <div class="tag tag1 tag-space"></div>
           <div class="corporationLabel">CORPORATION</div>
           <div class="contentCorporation">
@@ -766,7 +765,7 @@
         </li>
 
         <!--corp17-->
-        <li class="filterDiv corporation microbeTag venusNext">
+        <li class="filterDiv filterDiv-stacked corporation microbeTag venusNext">
           <div class="tag tag1 tag-microbe"></div>
           <div class="corporationLabel">CORPORATION</div>
           <div class="venus-icon corporation-icon"></div>
@@ -791,7 +790,7 @@
         </li>
 
         <!--corp18-->
-        <li class="filterDiv corporation venusTag venusNext">
+        <li class="filterDiv filterDiv-stacked corporation venusTag venusNext">
           <div class="tag tag1 tag-venus"></div>
           <div class="corporationLabel">CORPORATION</div>
           <div class="venus-icon corporation-icon"></div>
@@ -819,7 +818,7 @@
         </li>
 
         <!--corp19-->
-        <li class="filterDiv corporation venusTag venusNext">
+        <li class="filterDiv filterDiv-stacked corporation venusTag venusNext">
           <div class="tag tag1 tag-venus"></div>
           <div class="corporationLabel">CORPORATION</div>
           <div class="venus-icon corporation-icon"></div>
@@ -861,7 +860,7 @@
         <!--Project cards------------------------------------------------------>
 
             <!--C01-->
-            <li class="filterDiv automated spaceTag earthTag promo ">
+            <li class="filterDiv filterDiv-stacked automated spaceTag earthTag promo ">
                 <div class="title background-color-automated ">Lunar Exports</div>
                 <div class="price ">19</div>
                 <div class="tag tag1 tag-earth"></div>
@@ -879,7 +878,7 @@
             </li>
 
             <!--C02-->
-            <li class="filterDiv active promo ">
+            <li class="filterDiv filterDiv-stacked active promo ">
                 <div class="title background-color-active ">Atmo Collectors</div>
                 <div class="price ">15</div>
                 <div class="number ">C02</div>
@@ -899,7 +898,7 @@
             </li>
 
             <!--C03-->
-            <li class="filterDiv active promo reqs jovianTag spaceTag" data-jovian = "1">
+            <li class="filterDiv filterDiv-stacked active promo reqs jovianTag spaceTag" data-jovian = "1">
                 <div class="title background-color-active ">Jovian Lanterns</div>
                 <div class="price ">21</div>
                 <div class="tag tag1 tag-space "></div>
@@ -921,7 +920,7 @@
             </li>
 
         <!--1-->
-        <li class="filterDiv automated builderTag jovianTag standard reqs" data-oxygen="5">
+        <li class="filterDiv filterDiv-stacked automated builderTag jovianTag standard reqs" data-oxygen="5">
             <div class="title background-color-automated ">Colonizer Training Camp</div>
             <div class="price ">8</div>
             <div class="tag tag1 tag-builder "></div>
@@ -937,7 +936,7 @@
         </li>
 
         <!--2-->
-        <li class="filterDiv automated jovianTag corporate reqs">
+        <li class="filterDiv filterDiv-stacked automated jovianTag corporate reqs">
             <div class="title background-color-automated ">Asteroid Mining Consortium</div>
             <div class="price ">13</div>
             <div class="tag tag1 tag-jovian "></div>
@@ -957,7 +956,7 @@
         </li>
 
         <!--3-->
-        <li class="filterDiv automated builderTag energyTag standard ">
+        <li class="filterDiv filterDiv-stacked automated builderTag energyTag standard ">
             <div class="title background-color-automated ">Deep Well Heating</div>
             <div class="price ">13</div>
             <div class="tag tag1 tag-builder "></div>
@@ -975,7 +974,7 @@
         </li>
 
         <!--4-->
-        <li class="filterDiv automated standard reqs" data-oceans="3">
+        <li class="filterDiv filterDiv-stacked automated standard reqs" data-oceans="3">
             <div class="title background-color-automated ">Cloud Seeding</div>
             <div class="price ">11</div>
             <div class="number ">004</div>
@@ -992,7 +991,7 @@
         </li>
 
         <!--5-->
-        <li class="filterDiv active scienceTag standard reqs" data-oxygen="6">
+        <li class="filterDiv filterDiv-stacked active scienceTag standard reqs" data-oxygen="6">
             <div class="title background-color-active ">Search for Life</div>
             <div class="price ">3</div>
             <div class="tag tag1 tag-science "></div>
@@ -1009,7 +1008,7 @@
         </li>
 
         <!--6-->
-        <li class="filterDiv active scienceTag corporate ">
+        <li class="filterDiv filterDiv-stacked active scienceTag corporate ">
             <div class="title background-color-active ">Inventors' Guild</div>
             <div class="price ">9</div>
             <div class="corporate-icon project-icon"></div>
@@ -1021,7 +1020,7 @@
         </li>
 
         <!--7-->
-        <li class="filterDiv active builderTag standard ">
+        <li class="filterDiv filterDiv-stacked active builderTag standard ">
             <div class="title background-color-active ">Martian Rails</div>
             <div class="price ">13</div>
             <div class="tag tag1 tag-builder "></div>
@@ -1036,7 +1035,7 @@
         </li>
 
         <!--8-->
-        <li class="filterDiv automated cityTag builderTag standard reqs" data-oceans="4">
+        <li class="filterDiv filterDiv-stacked automated cityTag builderTag standard reqs" data-oceans="4">
             <div class="title background-color-automated ">Capital</div>
             <div class="price ">26</div>
             <div class="tag tag1 tag-builder "></div>
@@ -1059,7 +1058,7 @@
             </div>
         </li>
         <!--9-->
-        <li class="filterDiv events spaceTag eventTag standard ">
+        <li class="filterDiv filterDiv-stacked events spaceTag eventTag standard ">
             <div class="title background-color-events ">Asteroid</div>
             <div class="price ">14</div>
             <div class="tag tag1 tag-event "></div>
@@ -1076,7 +1075,7 @@
         </li>
 
         <!--10-->
-        <li class="filterDiv events spaceTag eventTag standard ">
+        <li class="filterDiv filterDiv-stacked events spaceTag eventTag standard ">
             <div class="title background-color-events ">Comet</div>
             <div class="price ">21</div>
             <div class="tag tag1 tag-event "></div>
@@ -1093,7 +1092,7 @@
         </li>
 
         <!--11-->
-        <li class="filterDiv events spaceTag eventTag standard ">
+        <li class="filterDiv filterDiv-stacked events spaceTag eventTag standard ">
             <div class="title background-color-events ">Big Asteroid</div>
             <div class="price ">27</div>
             <div class="tag tag1 tag-event "></div>
@@ -1111,7 +1110,7 @@
         </li>
 
         <!--12-->
-        <li class="filterDiv active spaceTag jovianTag standard ">
+        <li class="filterDiv filterDiv-stacked active spaceTag jovianTag standard ">
             <div class="title background-color-active ">Water Import from Europa</div>
             <div class="price ">25</div>
             <div class="tag tag1 tag-space "></div>
@@ -1129,7 +1128,7 @@
         </li>
 
         <!--13-->
-        <li class="filterDiv active spaceTag builderTag corporate ">
+        <li class="filterDiv filterDiv-stacked active spaceTag builderTag corporate ">
             <div class="title background-color-active ">Space Elevator</div>
             <div class="price ">27</div>
             <div class="tag tag1 tag-space "></div>
@@ -1150,7 +1149,7 @@
         </li>
 
         <!--14-->
-        <li class="filterDiv active scienceTag builderTag corporate ">
+        <li class="filterDiv filterDiv-stacked active scienceTag builderTag corporate ">
             <div class="title background-color-active ">Development Center</div>
             <div class="price ">11</div>
             <div class="tag tag1 tag-builder "></div>
@@ -1166,7 +1165,7 @@
         </li>
 
         <!--15-->
-        <li class="filterDiv active builderTag standard ">
+        <li class="filterDiv filterDiv-stacked active builderTag standard ">
             <div class="title background-color-active ">Equatorial Magnetizer</div>
             <div class="price ">24</div>
             <div class="tag tag1 tag-builder "></div>
@@ -1184,7 +1183,7 @@
         </li>
 
         <!--16-->
-        <li class="filterDiv automated cityTag builderTag standard reqs" data-oxygen="7">
+        <li class="filterDiv filterDiv-stacked automated cityTag builderTag standard reqs" data-oxygen="7">
             <div class="title background-color-automated ">Domed Crater</div>
             <div class="price ">24</div>
             <div class="tag tag1 tag-builder "></div>
@@ -1207,7 +1206,7 @@
         </li>
 
         <!--17-->
-        <li class="filterDiv automated cityTag builderTag standard ">
+        <li class="filterDiv filterDiv-stacked automated cityTag builderTag standard ">
             <div class="title background-color-automated ">Noctis City</div>
             <div class="price ">18</div>
             <div class="tag tag1 tag-builder "></div>
@@ -1228,7 +1227,7 @@
         </li>
 
         <!--18-->
-        <li class="filterDiv automated spaceTag jovianTag standard reqs" data-oxygen="2">
+        <li class="filterDiv filterDiv-stacked automated spaceTag jovianTag standard reqs" data-oxygen="2">
             <div class="title background-color-automated ">Methane from Titan</div>
             <div class="price ">28</div>
             <div class="tag tag1 tag-space "></div>
@@ -1249,7 +1248,7 @@
         </li>
 
         <!--19-->
-        <li class="filterDiv events earthTag spaceTag eventTag standard ">
+        <li class="filterDiv filterDiv-stacked events earthTag spaceTag eventTag standard ">
             <div class="title background-color-events ">Imported Hydrogen</div>
             <div class="price ">16</div>
             <div class="tag tag1 tag-event "></div>
@@ -1266,7 +1265,7 @@
         </li>
 
         <!--20-->
-        <li class="filterDiv active cityTag builderTag scienceTag standard ">
+        <li class="filterDiv filterDiv-stacked active cityTag builderTag scienceTag standard ">
             <div class="title background-color-active ">Research Outpost</div>
             <div class="price ">18</div>
             <div class="tag tag1 tag-builder "></div>
@@ -1286,7 +1285,7 @@
         </li>
 
         <!--21-->
-        <li class="filterDiv automated spaceTag cityTag standard ">
+        <li class="filterDiv filterDiv-stacked automated spaceTag cityTag standard ">
             <div class="title background-color-automated ">Phobos Space Haven</div>
             <div class="price ">25</div>
             <div class="tag tag1 tag-space "></div>
@@ -1304,7 +1303,7 @@
         </li>
 
         <!--22-->
-        <li class="filterDiv automated standard ">
+        <li class="filterDiv filterDiv-stacked automated standard ">
             <div class="title background-color-automated ">Black Polar Dust</div>
             <div class="price ">15</div>
             <div class="number ">022</div>
@@ -1324,7 +1323,7 @@
 
 
         <!--23-->
-        <li class="filterDiv active plantTag standard reqs" data-temperature="-12">
+        <li class="filterDiv filterDiv-stacked active plantTag standard reqs" data-temperature="-12">
             <div class="title background-color-active ">Arctic Algae</div>
             <div class="price ">12</div>
             <div class="tag tag1 tag-plant "></div>
@@ -1343,7 +1342,7 @@
         </li>
 
         <!--24-->
-        <li class="filterDiv active animalTag standard reqs" data-oxygen="11">
+        <li class="filterDiv filterDiv-stacked active animalTag standard reqs" data-oxygen="11">
             <div class="title background-color-active ">Predators</div>
             <div class="price ">14</div>
             <div class="tag tag1 tag-animal "></div>
@@ -1362,7 +1361,7 @@
         </li>
 
         <!--25-->
-        <li class="filterDiv active spaceTag corporate ">
+        <li class="filterDiv filterDiv-stacked active spaceTag corporate ">
             <div class="title background-color-active ">Space Station</div>
             <div class="price ">10</div>
             <div class="tag tag1 tag-space "></div>
@@ -1378,7 +1377,7 @@
         </li>
 
         <!--26-->
-        <li class="filterDiv plantTag builderTag automated standard reqs" data-temperature ="-12">
+        <li class="filterDiv filterDiv-stacked plantTag builderTag automated standard reqs" data-temperature ="-12">
             <div class="title background-color-automated ">Eos Chasma National Park</div>
             <div class="price ">16</div>
             <div class="tag tag1 tag-builder "></div>
@@ -1398,7 +1397,7 @@
         </li>
 
         <!--27-->
-        <li class="filterDiv eventTag earthTag spaceTag corporate events reqs" data-science = "5">
+        <li class="filterDiv filterDiv-stacked eventTag earthTag spaceTag corporate events reqs" data-science = "5">
             <div class="title background-color-events ">Interstellar Colony Ship</div>
             <div class="price ">24</div>
             <div class="tag tag1 tag-event "></div>
@@ -1414,7 +1413,7 @@
         </li>
 
         <!--28-->
-        <li class="filterDiv spaceTag corporate active ">
+        <li class="filterDiv filterDiv-stacked spaceTag corporate active ">
             <div class="title background-color-active ">Security Fleet</div>
             <div class="price ">12</div>
             <div class="tag tag1 tag-space "></div>
@@ -1434,7 +1433,7 @@
 
 
         <!--29-->
-        <li class="filterDiv automated cityTag builderTag standard reqs" data-oxygen ="9">
+        <li class="filterDiv filterDiv-stacked automated cityTag builderTag standard reqs" data-oxygen ="9">
             <div class="title background-color-automated ">Cupola City</div>
             <div class="price ">16</div>
             <div class="tag tag1 tag-builder "></div>
@@ -1454,7 +1453,7 @@
         </li>
 
         <!--30-->
-        <li class="filterDiv automated earthTag energyTag standard ">
+        <li class="filterDiv filterDiv-stacked automated earthTag energyTag standard ">
             <div class="title background-color-automated ">Lunar Beam</div>
             <div class="price ">13</div>
             <div class="tag tag1 tag-energy "></div>
@@ -1473,7 +1472,7 @@
         </li>
 
         <!--31-->
-        <li class="filterDiv active spaceTag ">
+        <li class="filterDiv filterDiv-stacked active spaceTag ">
             <div class="title background-color-active ">Optimal Aerobraking</div>
             <div class="price ">7</div>
             <div class="tag tag1 tag-space "></div>
@@ -1487,7 +1486,7 @@
         </li>
 
         <!--32-->
-        <li class="filterDiv cityTag builderTag standard automated ">
+        <li class="filterDiv filterDiv-stacked cityTag builderTag standard automated ">
             <div class="title background-color-automated ">Underground city</div>
             <div class="price ">18</div>
             <div class="tag tag1 tag-builder "></div>
@@ -1506,7 +1505,7 @@
         </li>
 
         <!--33-->
-        <li class="filterDiv standard active scienceTag microbeTag ">
+        <li class="filterDiv filterDiv-stacked standard active scienceTag microbeTag ">
             <div class="title background-color-active ">Regolith Eaters</div>
             <div class="price ">13</div>
             <div class="tag tag1 tag-microbe "></div>
@@ -1522,7 +1521,7 @@
         </li>
 
         <!--34-->
-        <li class="filterDiv standard active scienceTag microbeTag reqs" data-oxygen ="4">
+        <li class="filterDiv filterDiv-stacked standard active scienceTag microbeTag reqs" data-oxygen ="4">
             <div class="title background-color-active ">GHG Producing Bacteria</div>
             <div class="price ">8</div>
             <div class="tag tag1 tag-microbe "></div>
@@ -1540,7 +1539,7 @@
         </li>
 
         <!--35-->
-        <li class="filterDiv standard active microbeTag reqs" data-oxygen ="4">
+        <li class="filterDiv filterDiv-stacked standard active microbeTag reqs" data-oxygen ="4">
             <div class="title background-color-active ">Ants</div>
             <div class="price ">9</div>
             <div class="tag tag1 tag-microbe "></div>
@@ -1559,7 +1558,7 @@
         </li>
 
         <!--36-->
-        <li class="filterDiv events eventTag standard ">
+        <li class="filterDiv filterDiv-stacked events eventTag standard ">
             <div class="title background-color-events ">Release of Inert Gases</div>
             <div class="price ">14</div>
             <div class="tag tag1 tag-event "></div>
@@ -1574,7 +1573,7 @@
         </li>
 
         <!--37-->
-        <li class="filterDiv events spaceTag eventTag standard ">
+        <li class="filterDiv filterDiv-stacked events spaceTag eventTag standard ">
             <div class="title background-color-events ">Nitrogen-Rich Asteroid</div>
             <div class="price ">31</div>
             <div class="tag tag1 tag-event "></div>
@@ -1594,7 +1593,7 @@
       </li>
 
       <!--38-->
-      <li class="filterDiv active builderTag standard">
+      <li class="filterDiv filterDiv-stacked active builderTag standard">
         <div class="title background-color-active">Rover Construction</div>
         <div class="price">8</div>
         <div class="tag tag1 tag-builder"></div>
@@ -1609,7 +1608,7 @@
         </div>
       </li>
 
-      <li class="filterDiv events spaceTag eventTag standard">
+      <li class="filterDiv filterDiv-stacked events spaceTag eventTag standard">
         <div class="title background-color-events">Deimos Down</div>
         <div class="price">31</div>
         <div class="tag tag1 tag-event"></div>
@@ -1628,7 +1627,7 @@
       </li>
 
       <!--40-->
-      <li class="filterDiv automated spaceTag jovianTag standard">
+      <li class="filterDiv filterDiv-stacked automated spaceTag jovianTag standard">
         <div class="title background-color-automated">Asteroid Mining</div>
         <div class="price">30</div>
         <div class="tag tag1 tag-space"></div>
@@ -1646,7 +1645,7 @@
       </li>
 
       <!--41-->
-      <li class="filterDiv automated builderTag standard">
+      <li class="filterDiv filterDiv-stacked automated builderTag standard">
         <div class="title background-color-automated">Food Factory</div>
         <div class="price">12</div>
         <div class="tag tag1 tag-builder"></div>
@@ -1664,7 +1663,7 @@
       </li>
 
       <!--42-->
-      <li class="filterDiv automated microbeTag standard reqs" data-temperature ="-18">
+      <li class="filterDiv filterDiv-stacked automated microbeTag standard reqs" data-temperature ="-18">
         <div class="title background-color-automated">Archaebacteria</div>
         <div class="price">6</div>
         <div class="tag tag1 tag-microbe"></div>
@@ -1681,7 +1680,7 @@
       </li>
 
       <!--43-->
-      <li class="filterDiv automated builderTag standard">
+      <li class="filterDiv filterDiv-stacked automated builderTag standard">
         <div class="title background-color-automated">Carbonate Processing</div>
         <div class="price">6</div>
         <div class="tag tag1 tag-builder"></div>
@@ -1698,7 +1697,7 @@
       </li>
 
       <!--44-->
-      <li class="filterDiv automated builderTag scienceTag standard reqs" data-oxygen ="4">
+      <li class="filterDiv filterDiv-stacked automated builderTag scienceTag standard reqs" data-oxygen ="4">
         <div class="title background-color-automated">Natural Preserve</div>
         <div class="price">9</div>
         <div class="tag tag1 tag-builder"></div>
@@ -1718,7 +1717,7 @@
       </li>
 
       <!--45-->
-      <li class="filterDiv automated builderTag energyTag standard">
+      <li class="filterDiv filterDiv-stacked automated builderTag energyTag standard">
         <div class="title background-color-automated">Nuclear Power</div>
         <div class="price">10</div>
         <div class="tag tag1 tag-builder"></div>
@@ -1736,7 +1735,7 @@
       </li>
 
       <!--46-->
-      <li class="filterDiv automated energyTag corporate reqs" data-science = "3">
+      <li class="filterDiv filterDiv-stacked automated energyTag corporate reqs" data-science = "3">
         <div class="title background-color-automated">Lightning Harvest</div>
         <div class="price">8</div>
         <div class="tag tag1 tag-energy"></div>
@@ -1756,7 +1755,7 @@
 
 
       <!--47-->
-      <li class="filterDiv automated plantTag standard reqs" data-oceans ="5">
+      <li class="filterDiv filterDiv-stacked automated plantTag standard reqs" data-oceans ="5">
         <div class="title background-color-automated">Algae</div>
         <div class="price">10</div>
         <div class="tag tag1 tag-plant"></div>
@@ -1774,7 +1773,7 @@
       </li>
 
       <!--48-->
-      <li class="filterDiv automated plantTag standard">
+      <li class="filterDiv filterDiv-stacked automated plantTag standard">
         <div class="title background-color-automated">Adapted Lichen</div>
         <div class="price">9</div>
         <div class="tag tag1 tag-plant"></div>
@@ -1790,7 +1789,7 @@
 
 
         <!--49-->
-        <li class="filterDiv corporate active microbeTag ">
+        <li class="filterDiv filterDiv-stacked corporate active microbeTag ">
           <div class="title background-color-active">Tardigrades</div>
           <div class="price">4</div>
           <div class="tag tag1 tag-microbe"></div>
@@ -1810,7 +1809,7 @@
 
 
         <!--50-->
-        <li class="filterDiv events microbeTag eventTag corporate">
+        <li class="filterDiv filterDiv-stacked events microbeTag eventTag corporate">
           <div class="title background-color-events">Virus</div>
           <div class="price">1</div>
           <div class="tag tag1 tag-event"></div>
@@ -1826,7 +1825,7 @@
         </li>
 
         <!--51-->
-        <li class="filterDiv automated spaceTag jovianTag corporate">
+        <li class="filterDiv filterDiv-stacked automated spaceTag jovianTag corporate">
           <div class="title background-color-automated">Miranda Resort</div>
           <div class="price">12</div>
           <div class="tag tag1 tag-space"></div>
@@ -1845,7 +1844,7 @@
         </li>
 
         <!--52-->
-        <li class="filterDiv active animalTag standard reqs" data-temperature ="2">
+        <li class="filterDiv filterDiv-stacked active animalTag standard reqs" data-temperature ="2">
           <div class="title background-color-active">Fish</div>
           <div class="price">9</div>
           <div class="tag tag1 tag-animal"></div>
@@ -1870,7 +1869,7 @@
         </li>
 
         <!--53-->
-        <li class="filterDiv automated standard reqs" data-temperature ="0">
+        <li class="filterDiv filterDiv-stacked automated standard reqs" data-temperature ="0">
           <div class="title background-color-automated">Lake Marineris</div>
           <div class="price">18</div>
           <div class="number">053</div>
@@ -1886,7 +1885,7 @@
         </li>
 
         <!--54-->
-        <li class="filterDiv active animalTag standard reqs" data-oxygen ="6">
+        <li class="filterDiv filterDiv-stacked active animalTag standard reqs" data-oxygen ="6">
           <div class="title background-color-active">Small Animals</div>
           <div class="price">6</div>
           <div class="tag tag1 tag-animal"></div>
@@ -1910,7 +1909,7 @@
         </li>
 
         <!--55-->
-        <li class="filterDiv automated plantTag standard reqs" data-oceans ="6">
+        <li class="filterDiv filterDiv-stacked automated plantTag standard reqs" data-oceans ="6">
           <div class="title background-color-automated">Kelp Farming</div>
           <div class="price">17</div>
           <div class="tag tag1 tag-plant"></div>
@@ -1931,7 +1930,7 @@
         </li>
 
         <!--56-->
-        <li class="filterDiv automated builderTag corporate">
+        <li class="filterDiv filterDiv-stacked automated builderTag corporate">
           <div class="title background-color-automated">Mine</div>
           <div class="price">4</div>
           <div class="tag tag1 tag-builder"></div>
@@ -1948,7 +1947,7 @@
         </li>
 
         <!--57-->
-        <li class="filterDiv automated spaceTag jovianTag corporate">
+        <li class="filterDiv filterDiv-stacked automated spaceTag jovianTag corporate">
           <div class="title background-color-automated">Vesta Shipyard</div>
           <div class="price">15</div>
           <div class="tag tag1 tag-space"></div>
@@ -1967,7 +1966,7 @@
         </li>
 
         <!--58-->
-        <li class="filterDiv automated spaceTag jovianTag energyTag standard reqs">
+        <li class="filterDiv filterDiv-stacked automated spaceTag jovianTag energyTag standard reqs">
           <div class="title background-color-automated" style="font-size:13px">Beam from a Thorium Asteroid</div>
           <div class="price">32</div>
           <div class="tag tag1 tag-energy"></div>
@@ -1989,7 +1988,7 @@
         </li>
 
         <!--59-->
-        <li class="filterDiv automated plantTag standard reqs" data-temperature ="4">
+        <li class="filterDiv filterDiv-stacked automated plantTag standard reqs" data-temperature ="4">
           <div class="title background-color-automated">Mangrove</div>
           <div class="price">12</div>
           <div class="tag tag1 tag-plant"></div>
@@ -2006,7 +2005,7 @@
         </li>
 
         <!--60-->
-        <li class="filterDiv automated plantTag standard reqs" data-temperature ="-4">
+        <li class="filterDiv filterDiv-stacked automated plantTag standard reqs" data-temperature ="-4">
           <div class="title background-color-automated">Trees</div>
           <div class="price">13</div>
           <div class="tag tag1 tag-plant"></div>
@@ -2026,7 +2025,7 @@
         </li>
 
         <!--61-->
-        <li class="filterDiv automated corporate reqs">
+        <li class="filterDiv filterDiv-stacked automated corporate reqs">
           <div class="title background-color-automated" style="font-size:13px;">Great Escarpment Consortium</div>
           <div class="price">13</div>
           <div class="number">061</div>
@@ -2044,7 +2043,7 @@
         </li>
 
         <!--62-->
-        <li class="filterDiv events eventTag corporate ">
+        <li class="filterDiv filterDiv-stacked events eventTag corporate ">
             <div class="title background-color-events ">Mineral Deposit</div>
             <div class="price ">5</div>
             <div class="tag tag1 tag-event "></div>
@@ -2059,7 +2058,7 @@
         </li>
 
         <!--63-->
-        <li class="filterDiv events eventTag standard ">
+        <li class="filterDiv filterDiv-stacked events eventTag standard ">
             <div class="title background-color-events ">Mining Expedition</div>
             <div class="price ">12</div>
             <div class="tag tag1 tag-event "></div>
@@ -2075,7 +2074,7 @@
         </li>
 
         <!--64-->
-        <li class="filterDiv automated builderTag corporate">
+        <li class="filterDiv filterDiv-stacked automated builderTag corporate">
           <div class="title background-color-automated">Mining Area</div>
           <div class="price">4</div>
           <div class="tag tag1 tag-builder"></div>
@@ -2093,7 +2092,7 @@
         </li>
 
         <!--65-->
-        <li class="filterDiv automated builderTag corporate">
+        <li class="filterDiv filterDiv-stacked automated builderTag corporate">
           <div class="title background-color-automated">Building Industries</div>
           <div class="price">6</div>
           <div class="tag tag1 tag-builder"></div>
@@ -2111,7 +2110,7 @@
         </li>
 
         <!--66-->
-        <li class="filterDiv events eventTag corporate ">
+        <li class="filterDiv filterDiv-stacked events eventTag corporate ">
             <div class="title background-color-events ">Land Claim</div>
             <div class="price ">1</div>
             <div class="tag tag1 tag-event"></div>
@@ -2124,7 +2123,7 @@
 
 
         <!--67-->
-        <li class="filterDiv automated builderTag standard">
+        <li class="filterDiv filterDiv-stacked automated builderTag standard">
           <div class="title background-color-automated">Mining Rights</div>
           <div class="price">9</div>
           <div class="tag tag1 tag-builder"></div>
@@ -2141,7 +2140,7 @@
         </li>
 
         <!--68-->
-        <li class="filterDiv automated earthTag corporate">
+        <li class="filterDiv filterDiv-stacked automated earthTag corporate">
           <div class="title background-color-automated">Sponsors</div>
           <div class="price">6</div>
           <div class="tag tag1 tag-earth"></div>
@@ -2158,7 +2157,7 @@
         </li>
 
         <!--69-->
-        <li class="filterDiv active builderTag corporate reqs" data-oxygen ="8">
+        <li class="filterDiv filterDiv-stacked active builderTag corporate reqs" data-oxygen ="8">
           <div class="title background-color-active">Electro Catapult</div>
           <div class="price">17</div>
           <div class="tag tag1 tag-builder"></div>
@@ -2181,7 +2180,7 @@
         </li>
 
         <!--70-->
-        <li class="filterDiv active earthTag corporate">
+        <li class="filterDiv filterDiv-stacked active earthTag corporate">
             <div class="title background-color-active ">Earth Catapult</div>
             <div class="price ">23</div>
             <div class="tag tag1 tag-earth"></div>
@@ -2197,7 +2196,7 @@
         </li>
 
         <!--71-->
-        <li class="filterDiv active scienceTag corporate ">
+        <li class="filterDiv filterDiv-stacked active scienceTag corporate ">
             <div class="title background-color-active ">Advanced Alloys</div>
             <div class="price ">9</div>
             <div class="corporate-icon project-icon"></div>
@@ -2213,7 +2212,7 @@
         </li>
 
         <!--72-->
-        <li class="filterDiv active animalTag standard reqs" data-oxygen ="13">
+        <li class="filterDiv filterDiv-stacked active animalTag standard reqs" data-oxygen ="13">
             <div class="title background-color-active ">Birds</div>
             <div class="price ">10</div>
             <div class="tag tag1 tag-animal "></div>
@@ -2235,7 +2234,7 @@
         </li>
 
         <!--73-->
-        <li class="filterDiv active scienceTag builderTag corporate ">
+        <li class="filterDiv filterDiv-stacked active scienceTag builderTag corporate ">
             <div class="title background-color-active ">Mars University</div>
             <div class="price ">8</div>
             <div class="tag tag1 tag-builder "></div>
@@ -2252,7 +2251,7 @@
         </li>
 
         <!--74-->
-        <li class="filterDiv active scienceTag microbeTag corporate">
+        <li class="filterDiv filterDiv-stacked active scienceTag microbeTag corporate">
             <div class="title background-color-active ">Viral Enhancers</div>
             <div class="price ">9</div>
             <div class="tag tag1 tag-microbe"></div>
@@ -2269,7 +2268,7 @@
         </li>
 
         <!--75-->
-        <li class="filterDiv events spaceTag eventTag standard ">
+        <li class="filterDiv filterDiv-stacked events spaceTag eventTag standard ">
             <div class="title background-color-events ">Towing a Comet</div>
             <div class="price ">23</div>
             <div class="tag tag1 tag-event "></div>
@@ -2286,7 +2285,7 @@
         </li>
 
         <!--76-->
-        <li class="filterDiv active energyTag spaceTag standard ">
+        <li class="filterDiv filterDiv-stacked active energyTag spaceTag standard ">
             <div class="title background-color-active ">Space Mirrors</div>
             <div class="price ">3</div>
             <div class="tag tag1 tag-space "></div>
@@ -2305,7 +2304,7 @@
         </li>
 
         <!--77-->
-        <li class="filterDiv automated scienceTag energyTag spaceTag standard ">
+        <li class="filterDiv filterDiv-stacked automated scienceTag energyTag spaceTag standard ">
             <div class="title background-color-automated ">Solar Wind Power</div>
             <div class="price ">11</div>
             <div class="tag tag1 tag-energy "></div>
@@ -2324,7 +2323,7 @@
         </li>
 
         <!--78-->
-        <li class="filterDiv events spaceTag eventTag standard ">
+        <li class="filterDiv filterDiv-stacked events spaceTag eventTag standard ">
             <div class="title background-color-events ">Ice Asteroid</div>
             <div class="price ">23</div>
             <div class="tag tag1 tag-event "></div>
@@ -2339,7 +2338,7 @@
         </li>
 
         <!--79-->
-        <li class="filterDiv active energyTag scienceTag corporate reqs" data-science = "4">
+        <li class="filterDiv filterDiv-stacked active energyTag scienceTag corporate reqs" data-science = "4">
             <div class="title background-color-active ">Quantum Extractor</div>
             <div class="price ">13</div>
             <div class="tag tag1 tag-energy"></div>
@@ -2362,7 +2361,7 @@
         </li>
 
         <!--80-->
-        <li class="filterDiv events spaceTag eventTag standard ">
+        <li class="filterDiv filterDiv-stacked events spaceTag eventTag standard ">
             <div class="title background-color-events ">Giant Ice Asteroid</div>
             <div class="price ">36</div>
             <div class="tag tag1 tag-event "></div>
@@ -2380,7 +2379,7 @@
         </li>
 
         <!--81-->
-        <li class="filterDiv automated spaceTag jovianTag cityTag standard ">
+        <li class="filterDiv filterDiv-stacked automated spaceTag jovianTag cityTag standard ">
             <div class="title background-color-automated ">Ganymede Colony</div>
             <div class="price ">20</div>
             <div class="tag tag1 tag-city"></div>
@@ -2397,7 +2396,7 @@
         </li>
 
         <!--82-->
-        <li class="filterDiv automated spaceTag jovianTag corporate ">
+        <li class="filterDiv filterDiv-stacked automated spaceTag jovianTag corporate ">
             <div class="title background-color-automated ">Callisto Penal Mines</div>
             <div class="price ">24</div>
             <div class="tag tag1 tag-space "></div>
@@ -2414,7 +2413,7 @@
         </li>
 
         <!--83-->
-        <li class="filterDiv automated spaceTag energyTag standard ">
+        <li class="filterDiv filterDiv-stacked automated spaceTag energyTag standard ">
             <div class="title background-color-automated ">Giant Space Mirror</div>
             <div class="price ">17</div>
             <div class="tag tag1 tag-space "></div>
@@ -2429,7 +2428,7 @@
         </li>
 
         <!--84-->
-        <li class="filterDiv automated spaceTag scienceTag corporate ">
+        <li class="filterDiv filterDiv-stacked automated spaceTag scienceTag corporate ">
             <div class="title background-color-automated ">Trans-Neptune Probe</div>
             <div class="price ">6</div>
             <div class="tag tag1 tag-space "></div>
@@ -2443,7 +2442,7 @@
         </li>
 
         <!--85-->
-        <li class="filterDiv automated builderTag corporate ">
+        <li class="filterDiv filterDiv-stacked automated builderTag corporate ">
             <div class="title background-color-automated ">Commercial District</div>
             <div class="price ">16</div>
             <div class="tag tag1 tag-builder "></div>
@@ -2466,7 +2465,7 @@
         </li>
 
         <!--86-->
-        <li class="filterDiv automated scienceTag corporate ">
+        <li class="filterDiv filterDiv-stacked automated scienceTag corporate ">
             <div class="title background-color-automated ">Robotic Workforce</div>
             <div class="price ">9</div>
             <div class="tag tag1 tag-science "></div>
@@ -2481,7 +2480,7 @@
         </li>
 
         <!--87-->
-        <li class="filterDiv automated plantTag standard reqs" data-temperature ="-16">
+        <li class="filterDiv filterDiv-stacked automated plantTag standard reqs" data-temperature ="-16">
           <div class="title background-color-automated">Grass</div>
           <div class="price">11</div>
           <div class="tag tag1 tag-plant"></div>
@@ -2499,7 +2498,7 @@
         </li>
 
         <!--88-->
-        <li class="filterDiv automated plantTag standard reqs" data-temperature ="-14">
+        <li class="filterDiv filterDiv-stacked automated plantTag standard reqs" data-temperature ="-14">
           <div class="title background-color-automated">Heather</div>
           <div class="price">6</div>
           <div class="tag tag1 tag-plant"></div>
@@ -2517,7 +2516,7 @@
         </li>
 
         <!--89-->
-        <li class="filterDiv automated builderTag energyTag standard">
+        <li class="filterDiv filterDiv-stacked automated builderTag energyTag standard">
           <div class="title background-color-automated">Peroxide Power</div>
           <div class="price">7</div>
           <div class="tag tag1 tag-builder"></div>
@@ -2535,7 +2534,7 @@
         </li>
 
         <!--90-->
-        <li class="filterDiv automated scienceTag corporate ">
+        <li class="filterDiv filterDiv-stacked automated scienceTag corporate ">
             <div class="title background-color-automated ">Research</div>
             <div class="price ">11</div>
             <div class="tag tag1 tag-science "></div>
@@ -2552,7 +2551,7 @@
         </li>
 
         <!--91-->
-        <li class="filterDiv automated scienceTag corporate reqs" data-science = "3">
+        <li class="filterDiv filterDiv-stacked automated scienceTag corporate reqs" data-science = "3">
             <div class="title background-color-automated ">Gene Repair</div>
             <div class="price ">12</div>
             <div class="tag tag1 tag-science "></div>
@@ -2570,7 +2569,7 @@
         </li>
 
         <!--92-->
-        <li class="filterDiv automated spaceTag jovianTag corporate ">
+        <li class="filterDiv filterDiv-stacked automated spaceTag jovianTag corporate ">
             <div class="title background-color-automated ">IO Mining Industries </div>
             <div class="price ">41</div>
             <div class="tag tag1 tag-space "></div>
@@ -2589,7 +2588,7 @@
         </li>
 
         <!--93-->
-        <li class="filterDiv automated plantTag standard reqs" data-temperature ="-10">
+        <li class="filterDiv filterDiv-stacked automated plantTag standard reqs" data-temperature ="-10">
           <div class="title background-color-automated">Bushes</div>
           <div class="price">10</div>
           <div class="tag tag1 tag-plant"></div>
@@ -2607,7 +2606,7 @@
         </li>
 
         <!--94-->
-        <li class="filterDiv active scienceTag energyTag corporate reqs" data-science = "5">
+        <li class="filterDiv filterDiv-stacked active scienceTag energyTag corporate reqs" data-science = "5">
             <div class="title background-color-active ">Mass Converter</div>
             <div class="price ">8</div>
             <div class="tag tag1 tag-energy "></div>
@@ -2630,7 +2629,7 @@
         </li>
 
         <!--95-->
-        <li class="filterDiv active scienceTag builderTag corporate ">
+        <li class="filterDiv filterDiv-stacked active scienceTag builderTag corporate ">
             <div class="title background-color-active ">Physics Complex</div>
             <div class="price ">12</div>
             <div class="tag tag1 tag-builder "></div>
@@ -2650,7 +2649,7 @@
         </li>
 
         <!--96-->
-        <li class="filterDiv plantTag builderTag automated standard ">
+        <li class="filterDiv filterDiv-stacked plantTag builderTag automated standard ">
             <div class="title background-color-automated ">Greenhouses</div>
             <div class="price ">6</div>
             <div class="tag tag1 tag-builder "></div>
@@ -2665,7 +2664,7 @@
         </li>
 
         <!--97-->
-        <li class="filterDiv automated earthTag standard">
+        <li class="filterDiv filterDiv-stacked automated earthTag standard">
           <div class="title background-color-automated">Nuclear Zone</div>
           <div class="price">10</div>
           <div class="tag tag1 tag-earth"></div>
@@ -2681,7 +2680,7 @@
         </li>
 
         <!--98-->
-        <li class="filterDiv automated builderTag corporate">
+        <li class="filterDiv filterDiv-stacked automated builderTag corporate">
           <div class="title background-color-automated">Tropical Resort</div>
           <div class="price">13</div>
           <div class="tag tag1 tag-builder"></div>
@@ -2700,7 +2699,7 @@
         </li>
 
         <!--99-->
-        <li class="filterDiv automated spaceTag corporate">
+        <li class="filterDiv filterDiv-stacked automated spaceTag corporate">
           <div class="title background-color-automated">Toll Station</div>
           <div class="price">12</div>
           <div class="tag tag1 tag-space"></div>
@@ -2717,7 +2716,7 @@
         </li>
 
         <!--100-->
-        <li class="filterDiv automated builderTag energyTag standard">
+        <li class="filterDiv filterDiv-stacked automated builderTag energyTag standard">
           <div class="title background-color-automated">Fueled Generators</div>
           <div class="price">1</div>
           <div class="tag tag1 tag-builder"></div>
@@ -2735,7 +2734,7 @@
         </li>
 
         <!--101-->
-        <li class="filterDiv active builderTag standard ">
+        <li class="filterDiv filterDiv-stacked active builderTag standard ">
             <div class="title background-color-active ">Ironworks</div>
             <div class="price ">11</div>
             <div class="tag tag1 tag-builder "></div>
@@ -2750,7 +2749,7 @@
         </li>
 
         <!--102-->
-        <li class="filterDiv automated energyTag standard">
+        <li class="filterDiv filterDiv-stacked automated energyTag standard">
           <div class="title background-color-automated">Power Grid</div>
           <div class="price">18</div>
           <div class="tag tag1 tag-energy"></div>
@@ -2766,7 +2765,7 @@
         </li>
 
         <!--103-->
-        <li class="filterDiv active builderTag standard ">
+        <li class="filterDiv filterDiv-stacked active builderTag standard ">
             <div class="title background-color-active ">Steelworks</div>
             <div class="price ">15</div>
             <div class="tag tag1 tag-builder "></div>
@@ -2781,7 +2780,7 @@
         </li>
 
         <!--104-->
-        <li class="filterDiv active builderTag standard ">
+        <li class="filterDiv filterDiv-stacked active builderTag standard ">
             <div class="title background-color-active ">Ore Processor</div>
             <div class="price ">13</div>
             <div class="tag tag1 tag-builder "></div>
@@ -2796,7 +2795,7 @@
         </li>
 
         <!--105-->
-        <li class="filterDiv active earthTag corporate ">
+        <li class="filterDiv filterDiv-stacked active earthTag corporate ">
             <div class="title background-color-active ">Earth Office</div>
             <div class="price ">1</div>
             <div class="tag tag1 tag-earth "></div>
@@ -2811,7 +2810,7 @@
         </li>
 
         <!--106-->
-        <li class="filterDiv automated earthTag corporate">
+        <li class="filterDiv filterDiv-stacked automated earthTag corporate">
           <div class="title background-color-automated">Acquired Company</div>
           <div class="price">10</div>
           <div class="tag tag1 tag-earth"></div>
@@ -2828,7 +2827,7 @@
         </li>
 
         <!--107-->
-        <li class="filterDiv automated earthTag corporate">
+        <li class="filterDiv filterDiv-stacked automated earthTag corporate">
           <div class="title background-color-automated">Media Archives</div>
           <div class="price">8</div>
           <div class="tag tag1 tag-earth"></div>
@@ -2843,7 +2842,7 @@
         </li>
 
         <!--108-->
-        <li class="filterDiv automated cityTag builderTag standard reqs" data-oxygen ="12">
+        <li class="filterDiv filterDiv-stacked automated cityTag builderTag standard reqs" data-oxygen ="12">
             <div class="title background-color-automated ">Open City</div>
             <div class="price ">23</div>
             <div class="tag tag1 tag-builder "></div>
@@ -2866,7 +2865,7 @@
         </li>
 
         <!--109-->
-        <li class="filterDiv active earthTag corporate ">
+        <li class="filterDiv filterDiv-stacked active earthTag corporate ">
             <div class="title background-color-active ">Media Group</div>
             <div class="price ">6</div>
             <div class="tag tag1 tag-earth "></div>
@@ -2881,7 +2880,7 @@
         </li>
 
         <!--110-->
-        <li class="filterDiv active earthTag corporate ">
+        <li class="filterDiv filterDiv-stacked active earthTag corporate ">
             <div class="title background-color-active ">Business Network</div>
             <div class="price ">4</div>
             <div class="corporate-icon project-icon"></div>
@@ -2899,7 +2898,7 @@
 
 
         <!--111-->
-        <li class="filterDiv events earthTag eventTag corporate ">
+        <li class="filterDiv filterDiv-stacked events earthTag eventTag corporate ">
             <div class="title background-color-events ">Business Contacts</div>
             <div class="price ">7</div>
             <div class="corporate-icon project-icon"></div>
@@ -2912,7 +2911,7 @@
         </li>
 
         <!--112-->
-        <li class="filterDiv events earthTag eventTag corporate ">
+        <li class="filterDiv filterDiv-stacked events earthTag eventTag corporate ">
             <div class="title background-color-events ">Bribed Committee</div>
             <div class="price ">7</div>
             <div class="corporate-icon project-icon"></div>
@@ -2927,7 +2926,7 @@
         </li>
 
         <!--113-->
-        <li class="filterDiv automated builderTag energyTag standard ">
+        <li class="filterDiv filterDiv-stacked automated builderTag energyTag standard ">
             <div class="title background-color-automated ">Solar Power</div>
             <div class="price ">11</div>
             <div class="tag tag1 tag-builder "></div>
@@ -2945,7 +2944,7 @@
         </li>
 
         <!--114-->
-        <li class="filterDiv automated scienceTag standard reqs" data-oxygen ="7">
+        <li class="filterDiv filterDiv-stacked automated scienceTag standard reqs" data-oxygen ="7">
             <div class="title background-color-automated ">Breathing Filters</div>
             <div class="price ">11</div>
             <div class="tag tag1 tag-science "></div>
@@ -2960,7 +2959,7 @@
         </li>
 
         <!--115-->
-        <li class="filterDiv automated scienceTag standard">
+        <li class="filterDiv filterDiv-stacked automated scienceTag standard">
             <div class="title background-color-automated ">Artificial Photosynthesis</div>
             <div class="price ">12</div>
             <div class="tag tag1 tag-science "></div>
@@ -2976,7 +2975,7 @@
         </li>
 
         <!--116-->
-        <li class="filterDiv automated builderTag standard reqs" data-temperature ="-6">
+        <li class="filterDiv filterDiv-stacked automated builderTag standard reqs" data-temperature ="-6">
           <div class="title background-color-automated">Artificial Lake</div>
           <div class="price">15</div>
           <div class="tag tag1 tag-builder "></div>
@@ -2992,7 +2991,7 @@
         </li>
 
         <!--117-->
-        <li class="filterDiv automated builderTag energyTag standard ">
+        <li class="filterDiv filterDiv-stacked automated builderTag energyTag standard ">
             <div class="title background-color-automated ">Geothermal Power</div>
             <div class="price ">11</div>
             <div class="tag tag1 tag-builder "></div>
@@ -3009,7 +3008,7 @@
         </li>
 
         <!--118-->
-        <li class="filterDiv automated plantTag standard reqs" data-temperature ="4">
+        <li class="filterDiv filterDiv-stacked automated plantTag standard reqs" data-temperature ="4">
           <div class="title background-color-automated">Farming</div>
           <div class="price">16</div>
           <div class="tag tag1 tag-plant"></div>
@@ -3030,7 +3029,7 @@
         </li>
 
         <!--119-->
-        <li class="filterDiv automated  standard reqs" data-oceans="3">
+        <li class="filterDiv filterDiv-stacked automated  standard reqs" data-oceans="3">
             <div class="title background-color-automated ">Dust Seals</div>
             <div class="price ">2</div>
             <div class="number ">119</div>
@@ -3044,7 +3043,7 @@
         </li>
 
         <!--120-->
-        <li class="filterDiv automated cityTag builderTag standard ">
+        <li class="filterDiv filterDiv-stacked automated cityTag builderTag standard ">
             <div class="title background-color-automated ">Urbanized Area</div>
             <div class="price ">10</div>
             <div class="tag tag1 tag-builder "></div>
@@ -3064,7 +3063,7 @@
         </li>
 
         <!--121-->
-        <li class="filterDiv events  eventTag corporate">
+        <li class="filterDiv filterDiv-stacked events  eventTag corporate">
           <div class="title background-color-events">Sabotage</div>
           <div class="price">1</div>
           <div class="tag tag1 tag-event"></div>
@@ -3079,7 +3078,7 @@
         </li>
 
         <!--122-->
-        <li class="filterDiv automated plantTag standard reqs" data-oceans ="3">
+        <li class="filterDiv filterDiv-stacked automated plantTag standard reqs" data-oceans ="3">
           <div class="title background-color-automated">Moss</div>
           <div class="price">4</div>
           <div class="tag tag1 tag-plant"></div>
@@ -3097,7 +3096,7 @@
         </li>
 
         <!--123-->
-        <li class="filterDiv active builderTag corporate ">
+        <li class="filterDiv filterDiv-stacked active builderTag corporate ">
             <div class="title background-color-active ">Industrial Center</div>
             <div class="price ">4</div>
             <div class="tag tag1 tag-builder "></div>
@@ -3116,7 +3115,7 @@
         </li>
 
         <!--124-->
-        <li class="filterDiv events eventTag corporate">
+        <li class="filterDiv filterDiv-stacked events eventTag corporate">
           <div class="title background-color-events">Hired Raiders</div>
           <div class="price">1</div>
           <div class="tag tag1 tag-event"></div>
@@ -3131,7 +3130,7 @@
         </li>
 
         <!--125-->
-        <li class="filterDiv automated corporate ">
+        <li class="filterDiv filterDiv-stacked automated corporate ">
             <div class="title background-color-automated ">Hackers</div>
             <div class="price ">3</div>
             <div class="corporate-icon project-icon"></div>
@@ -3149,7 +3148,7 @@
         </li>
 
         <!--126-->
-        <li class="filterDiv automated builderTag standard">
+        <li class="filterDiv filterDiv-stacked automated builderTag standard">
           <div class="title background-color-automated">GHG Factories</div>
           <div class="price">11</div>
           <div class="tag tag1 tag-builder"></div>
@@ -3166,7 +3165,7 @@
         </li>
 
         <!--127-->
-        <li class="filterDiv events eventTag standard ">
+        <li class="filterDiv filterDiv-stacked events eventTag standard ">
             <div class="title background-color-events ">Subterranean Reservoir</div>
             <div class="price ">11</div>
             <div class="tag tag1 tag-event "></div>
@@ -3180,7 +3179,7 @@
         </li>
 
         <!--128-->
-        <li class="filterDiv active plantTag animalTag standard reqs">
+        <li class="filterDiv filterDiv-stacked active plantTag animalTag standard reqs">
           <div class="title background-color-active">Ecological Zone</div>
           <div class="price">12</div>
           <div class="tag tag1 tag-plant"></div>
@@ -3201,7 +3200,7 @@
         </li>
 
         <!--129-->
-        <li class="filterDiv automated standard reqs" data-oxygen ="5">
+        <li class="filterDiv filterDiv-stacked automated standard reqs" data-oxygen ="5">
             <div class="title background-color-automated ">Zeppelins</div>
             <div class="price ">13</div>
             <div class="number ">129</div>
@@ -3218,7 +3217,7 @@
         </li>
 
         <!--130-->
-        <li class="filterDiv automated standard microbeTag reqs" data-oxygen ="4">
+        <li class="filterDiv filterDiv-stacked automated standard microbeTag reqs" data-oxygen ="4">
             <div class="title background-color-automated ">Worms</div>
             <div class="price ">8</div>
             <div class="tag tag1 tag-microbe"></div>
@@ -3235,7 +3234,7 @@
         </li>
 
         <!--131-->
-        <li class="filterDiv active microbeTag standard reqs" data-oxygen ="3">
+        <li class="filterDiv filterDiv-stacked active microbeTag standard reqs" data-oxygen ="3">
           <div class="title background-color-active">Decomposers</div>
           <div class="price">5</div>
           <div class="tag tag1 tag-microbe"></div>
@@ -3254,7 +3253,7 @@
         </li>
 
         <!--132-->
-        <li class="filterDiv automated builderTag energyTag scienceTag standard reqs">
+        <li class="filterDiv filterDiv-stacked automated builderTag energyTag scienceTag standard reqs">
           <div class="title background-color-automated">Fusion Power</div>
           <div class="price">14</div>
           <div class="tag tag1 tag-builder"></div>
@@ -3273,7 +3272,7 @@
         </li>
 
         <!--133-->
-        <li class="filterDiv standard active microbeTag reqs" data-temperature ="-14">
+        <li class="filterDiv filterDiv-stacked standard active microbeTag reqs" data-temperature ="-14">
             <div class="title background-color-active ">Symbiotic Fungus</div>
             <div class="price ">4</div>
             <div class="tag tag1 tag-microbe "></div>
@@ -3291,7 +3290,7 @@
         </li>
 
         <!--134-->
-        <li class="filterDiv standard active microbeTag reqs " data-temperature ="-10">
+        <li class="filterDiv filterDiv-stacked standard active microbeTag reqs " data-temperature ="-10">
             <div class="title background-color-active ">Extreme-Cold Fungus</div>
             <div class="price ">13</div>
             <div class="tag tag1 tag-microbe "></div>
@@ -3310,7 +3309,7 @@
         </li>
 
         <!--135-->
-        <li class="filterDiv automated plantTag animalTag microbeTag standard reqs">
+        <li class="filterDiv filterDiv-stacked automated plantTag animalTag microbeTag standard reqs">
           <div class="title background-color-automated">Advanced Ecosystems</div>
           <div class="price">11</div>
           <div class="tag tag1 tag-animal"></div>
@@ -3327,7 +3326,7 @@
         </li>
 
         <!--136-->
-        <li class="filterDiv automated builderTag energyTag standard reqs" data-oceans ="4">
+        <li class="filterDiv filterDiv-stacked automated builderTag energyTag standard reqs" data-oceans ="4">
           <div class="title background-color-automated">Great Dam</div>
           <div class="price">12</div>
           <div class="tag tag1 tag-builder"></div>
@@ -3346,7 +3345,7 @@
         </li>
 
         <!--137-->
-        <li class="filterDiv automated earthTag corporate">
+        <li class="filterDiv filterDiv-stacked automated earthTag corporate">
           <div class="title background-color-automated">Cartel</div>
           <div class="price">8</div>
           <div class="tag tag1 tag-earth"></div>
@@ -3363,7 +3362,7 @@
         </li>
 
         <!--138-->
-        <li class="filterDiv  builderTag standard automated ">
+        <li class="filterDiv filterDiv-stacked  builderTag standard automated ">
             <div class="title background-color-automated ">Strip Mine</div>
             <div class="price ">25</div>
             <div class="tag tag1 tag-builder "></div>
@@ -3381,7 +3380,7 @@
         </li>
 
         <!--139-->
-        <li class="filterDiv automated energyTag standard reqs" data-oceans ="3">
+        <li class="filterDiv filterDiv-stacked automated energyTag standard reqs" data-oceans ="3">
           <div class="title background-color-automated">Wave Power</div>
           <div class="price">8</div>
           <div class="tag tag1 tag-energy"></div>
@@ -3399,7 +3398,7 @@
         </li>
 
                 <!--140-->
-                <li class="filterDiv events eventTag standard ">
+                <li class="filterDiv filterDiv-stacked events eventTag standard ">
                     <div class="title background-color-events ">Lava Flows</div>
                     <div class="price ">18</div>
                     <div class="tag tag1 tag-event "></div>
@@ -3414,7 +3413,7 @@
                 </li>
 
         <!--141-->
-        <li class="filterDiv automated builderTag energyTag standard">
+        <li class="filterDiv filterDiv-stacked automated builderTag energyTag standard">
           <div class="title background-color-automated">Power Plant</div>
           <div class="price">4</div>
           <div class="tag tag1 tag-builder"></div>
@@ -3430,7 +3429,7 @@
         </li>
 
         <!--142-->
-        <li class="filterDiv automated builderTag standard">
+        <li class="filterDiv filterDiv-stacked automated builderTag standard">
           <div class="title background-color-automated">Mohole Area</div>
           <div class="price">20</div>
           <div class="tag tag1 tag-builder"></div>
@@ -3447,7 +3446,7 @@
         </li>
 
         <!--143-->
-        <li class="filterDiv events earthTag spaceTag eventTag standard ">
+        <li class="filterDiv filterDiv-stacked events earthTag spaceTag eventTag standard ">
             <div class="title background-color-events ">Large Convoy</div>
             <div class="price ">36</div>
             <div class="tag tag1 tag-event "></div>
@@ -3465,7 +3464,7 @@
         </li>
 
         <!--144-->
-        <li class="filterDiv automated builderTag corporate">
+        <li class="filterDiv filterDiv-stacked automated builderTag corporate">
           <div class="title background-color-automated">Titanium Mine</div>
           <div class="price">7</div>
           <div class="tag tag1 tag-builder"></div>
@@ -3482,7 +3481,7 @@
         </li>
 
         <!--145-->
-        <li class="filterDiv automated builderTag energyTag standard reqs" data-science = "2">
+        <li class="filterDiv filterDiv-stacked automated builderTag energyTag standard reqs" data-science = "2">
           <div class="title background-color-automated">Tectonic Stress Power</div>
           <div class="price">18</div>
           <div class="tag tag1 tag-builder"></div>
@@ -3501,7 +3500,7 @@
         </li>
 
         <!--146-->
-        <li class="filterDiv automated plantTag standard reqs" data-oceans ="3">
+        <li class="filterDiv filterDiv-stacked automated plantTag standard reqs" data-oceans ="3">
           <div class="title background-color-automated"> Nitrophilic Moss</div>
           <div class="price">8</div>
           <div class="tag tag1 tag-plant"></div>
@@ -3520,7 +3519,7 @@
 
 
         <!--147-->
-        <li class="filterDiv active animalTag standard reqs" data-oxygen ="8">
+        <li class="filterDiv filterDiv-stacked active animalTag standard reqs" data-oxygen ="8">
             <div class="title background-color-active ">Herbivores</div>
             <div class="price ">12</div>
             <div class="tag tag1 tag-animal "></div>
@@ -3543,7 +3542,7 @@
         </li>
 
         <!--148-->
-        <li class="filterDiv automated standard microbeTag reqs" data-oxygen ="6">
+        <li class="filterDiv filterDiv-stacked automated standard microbeTag reqs" data-oxygen ="6">
             <div class="title background-color-automated ">Insects</div>
             <div class="price ">9</div>
             <div class="tag tag1 tag-microbe"></div>
@@ -3560,7 +3559,7 @@
         </li>
 
         <!--149-->
-        <li class="filterDiv events eventTag corporate ">
+        <li class="filterDiv filterDiv-stacked events eventTag corporate ">
             <div class="title background-color-events ">CEO's Favorite Project</div>
             <div class="price ">1</div>
             <div class="tag tag1 tag-event"></div>
@@ -3572,7 +3571,7 @@
         </li>
 
         <!--150-->
-        <li class="filterDiv active scienceTag corporate reqs" data-science = "7">
+        <li class="filterDiv filterDiv-stacked active scienceTag corporate reqs" data-science = "7">
             <div class="title background-color-active ">Anti-gravity Technology</div>
             <div class="price ">14</div>
             <div class="tag tag1 tag-science"></div>
@@ -3592,7 +3591,7 @@
         </li>
 
         <!--151-->
-        <li class="filterDiv events earthTag eventTag corporate ">
+        <li class="filterDiv filterDiv-stacked events earthTag eventTag corporate ">
             <div class="title background-color-events ">Investment Loan</div>
             <div class="price ">3</div>
             <div class="corporate-icon project-icon"></div>
@@ -3608,7 +3607,7 @@
         </li>
 
         <!--152-->
-        <li class="filterDiv automated standard ">
+        <li class="filterDiv filterDiv-stacked automated standard ">
             <div class="title background-color-automated ">Insulation</div>
             <div class="price ">2</div>
             <div class="number ">152</div>
@@ -3623,7 +3622,7 @@
         </li>
 
         <!--153-->
-        <li class="filterDiv active scienceTag standard">
+        <li class="filterDiv filterDiv-stacked active scienceTag standard">
           <div class="title background-color-active">Adaptation Technology</div>
           <div class="price">12</div>
           <div class="tag tag1 tag-science"></div>
@@ -3638,7 +3637,7 @@
         </li>
 
         <!--154-->
-        <li class="filterDiv active  corporate reqs" data-temperature ="0">
+        <li class="filterDiv filterDiv-stacked active  corporate reqs" data-temperature ="0">
             <div class="title background-color-active ">Caretaker Contract</div>
             <div class="price ">3</div>
             <div class="number ">154</div>
@@ -3656,7 +3655,7 @@
         </li>
 
         <!--155-->
-        <li class="filterDiv automated standard microbeTag scienceTag reqs" data-temperature ="-14">
+        <li class="filterDiv filterDiv-stacked automated standard microbeTag scienceTag reqs" data-temperature ="-14">
             <div class="title background-color-automated ">Designed Microorganisms</div>
             <div class="price ">16</div>
             <div class="tag tag1 tag-microbe"></div>
@@ -3674,7 +3673,7 @@
         </li>
 
         <!--156-->
-        <li class="filterDiv active scienceTag corporate">
+        <li class="filterDiv filterDiv-stacked active scienceTag corporate">
           <div class="title background-color-active">Standard Technology</div>
           <div class="price">6</div>
           <div class="tag tag1 tag-science"></div>
@@ -3689,7 +3688,7 @@
         </li>
 
         <!--157-->
-        <li class="filterDiv standard active microbeTag ">
+        <li class="filterDiv filterDiv-stacked standard active microbeTag ">
             <div class="title background-color-active ">Nitrite Reducing Bacteria</div>
             <div class="price ">11</div>
             <div class="tag tag1 tag-microbe "></div>
@@ -3708,7 +3707,7 @@
         </li>
 
         <!--158-->
-        <li class="filterDiv automated builderTag microbeTag standard">
+        <li class="filterDiv filterDiv-stacked automated builderTag microbeTag standard">
           <div class="title background-color-automated">Industrial Microbes</div>
           <div class="price">12</div>
           <div class="tag tag1 tag-builder"></div>
@@ -3726,7 +3725,7 @@
         </li>
 
         <!--159-->
-        <li class="filterDiv automated plantTag standard reqs" data-temperature ="-24">
+        <li class="filterDiv filterDiv-stacked automated plantTag standard reqs" data-temperature ="-24">
           <div class="title background-color-automated">Lichen</div>
           <div class="price">7</div>
           <div class="tag tag1 tag-plant"></div>
@@ -3742,7 +3741,7 @@
           </div>
 
           <!--160-->
-          <li class="filterDiv automated energyTag corporate reqs">
+          <li class="filterDiv filterDiv-stacked automated energyTag corporate reqs">
             <div class="title background-color-automated">Power Supply Consortium</div>
             <div class="price">5</div>
             <div class="tag tag1 tag-energy"></div>
@@ -3761,7 +3760,7 @@
           </li>
 
           <!--161-->
-          <li class="filterDiv events spaceTag eventTag standard ">
+          <li class="filterDiv filterDiv-stacked events spaceTag eventTag standard ">
               <div class="title background-color-events ">Convoy From Europa</div>
               <div class="price ">15</div>
               <div class="tag tag1 tag-event "></div>
@@ -3776,7 +3775,7 @@
           </li>
 
           <!--162-->
-          <li class="filterDiv events earthTag spaceTag eventTag standard ">
+          <li class="filterDiv filterDiv-stacked events earthTag spaceTag eventTag standard ">
               <div class="title background-color-events ">Imported GHG</div>
               <div class="price ">7</div>
               <div class="tag tag1 tag-event "></div>
@@ -3794,7 +3793,7 @@
           </li>
 
           <!--163-->
-          <li class="filterDiv events earthTag spaceTag eventTag standard ">
+          <li class="filterDiv filterDiv-stacked events earthTag spaceTag eventTag standard ">
               <div class="title background-color-events ">Imported Nitrogen</div>
               <div class="price ">23</div>
               <div class="tag tag1 tag-event "></div>
@@ -3810,7 +3809,7 @@
           </li>
 
           <!--164-->
-          <li class="filterDiv automated  standard">
+          <li class="filterDiv filterDiv-stacked automated  standard">
             <div class="title background-color-automated">Micro-Mills</div>
             <div class="price">3</div>
             <div class="number">164</div>
@@ -3825,7 +3824,7 @@
           </li>
 
           <!--165-->
-          <li class="filterDiv automated builderTag standard">
+          <li class="filterDiv filterDiv-stacked automated builderTag standard">
             <div class="title background-color-automated">Magnetic Field Generators</div>
             <div class="price">20</div>
             <div class="tag tag1 tag-builder"></div>
@@ -3843,7 +3842,7 @@
           </li>
 
           <!--166-->
-          <li class="filterDiv active spaceTag standard reqs" data-oxygen ="5">
+          <li class="filterDiv filterDiv-stacked active spaceTag standard reqs" data-oxygen ="5">
               <div class="title background-color-active ">Shuttles</div>
               <div class="price ">10</div>
               <div class="tag tag1 tag-space "></div>
@@ -3866,7 +3865,7 @@
           </li>
 
           <!--167-->
-          <li class="filterDiv events earthTag spaceTag eventTag standard ">
+          <li class="filterDiv filterDiv-stacked events earthTag spaceTag eventTag standard ">
               <div class="title background-color-events ">Import of Advanced GHG</div>
               <div class="price ">9</div>
               <div class="tag tag1 tag-event "></div>
@@ -3884,7 +3883,7 @@
           </li>
 
           <!--168-->
-          <li class="filterDiv automated builderTag energyTag standard reqs" data-oxygen ="7">
+          <li class="filterDiv filterDiv-stacked automated builderTag energyTag standard reqs" data-oxygen ="7">
               <div class="title background-color-automated ">Windmills</div>
               <div class="price ">6</div>
               <div class="tag tag1 tag-builder "></div>
@@ -3903,7 +3902,7 @@
           </li>
 
           <!--169-->
-          <li class="filterDiv automated plantTag standard reqs" data-temperature ="-6">
+          <li class="filterDiv filterDiv-stacked automated plantTag standard reqs" data-temperature ="-6">
             <div class="title background-color-automated">Tundra Farming</div>
             <div class="price">16</div>
             <div class="tag tag1 tag-plant"></div>
@@ -3922,7 +3921,7 @@
           </li>
 
           <!--170-->
-          <li class="filterDiv events spaceTag eventTag standard ">
+          <li class="filterDiv filterDiv-stacked events spaceTag eventTag standard ">
               <div class="title background-color-events " style="font-size:13px">Aerobraked Ammonia Asteroid</div>
               <div class="price ">26</div>
               <div class="tag tag1 tag-event "></div>
@@ -3941,7 +3940,7 @@
           </li>
 
           <!--171-->
-          <li class="filterDiv automated builderTag standard">
+          <li class="filterDiv filterDiv-stacked automated builderTag standard">
             <div class="title background-color-automated">Magnetic Field Dome</div>
             <div class="price">5</div>
             <div class="tag tag1 tag-builder"></div>
@@ -3959,7 +3958,7 @@
           </li>
 
           <!--172-->
-          <li class="filterDiv active earthTag animalTag standard">
+          <li class="filterDiv filterDiv-stacked active earthTag animalTag standard">
             <div class="title background-color-active">Pets</div>
             <div class="price">10</div>
             <div class="tag tag1 tag-animal"></div>
@@ -3981,7 +3980,7 @@
           </li>
 
           <!--173-->
-          <li class="filterDiv active corporate ">
+          <li class="filterDiv filterDiv-stacked active corporate ">
               <div class="title background-color-active ">Protected Habitats</div>
               <div class="price ">5</div>
               <div class="corporate-icon project-icon"></div>
@@ -3994,7 +3993,7 @@
           </li>
 
           <!--174-->
-          <li class="filterDiv plantTag builderTag automated standard ">
+          <li class="filterDiv filterDiv-stacked plantTag builderTag automated standard ">
               <div class="title background-color-automated ">Protected Valley</div>
               <div class="price ">23</div>
               <div class="tag tag1 tag-builder "></div>
@@ -4011,7 +4010,7 @@
           </li>
 
           <!--175-->
-          <li class="filterDiv automated spaceTag corporate">
+          <li class="filterDiv filterDiv-stacked automated spaceTag corporate">
             <div class="title background-color-automated">Satellites</div>
             <div class="price">10</div>
             <div class="tag tag1 tag-space"></div>
@@ -4028,7 +4027,7 @@
           </li>
 
           <!--176-->
-          <li class="filterDiv automated builderTag standard reqs" data-temperature ="-20">
+          <li class="filterDiv filterDiv-stacked automated builderTag standard reqs" data-temperature ="-20">
             <div class="title background-color-automated">Noctis Farming</div>
             <div class="price">10</div>
             <div class="tag tag1 tag-builder"></div>
@@ -4046,7 +4045,7 @@
           </li>
 
           <!--177-->
-          <li class="filterDiv active builderTag standard reqs" data-oceans ="2">
+          <li class="filterDiv filterDiv-stacked active builderTag standard reqs" data-oceans ="2">
               <div class="title background-color-active ">Water Splitting Plant</div>
               <div class="price ">12</div>
               <div class="tag tag1 tag-builder "></div>
@@ -4064,7 +4063,7 @@
           </li>
 
           <!--178-->
-          <li class="filterDiv automated builderTag energyTag standard ">
+          <li class="filterDiv filterDiv-stacked automated builderTag energyTag standard ">
               <div class="title background-color-automated ">Heat Trappers</div>
               <div class="price ">6</div>
               <div class="tag tag1 tag-builder "></div>
@@ -4083,7 +4082,7 @@
           </li>
 
           <!--179-->
-          <li class="filterDiv automated builderTag standard">
+          <li class="filterDiv filterDiv-stacked automated builderTag standard">
               <div class="title background-color-automated ">Soil Factory</div>
               <div class="price ">9</div>
               <div class="tag tag1 tag-builder "></div>
@@ -4100,7 +4099,7 @@
           </li>
 
           <!--180-->
-          <li class="filterDiv automated builderTag corporate ">
+          <li class="filterDiv filterDiv-stacked automated builderTag corporate ">
               <div class="title background-color-automated ">Fuel Factory</div>
               <div class="price ">6</div>
               <div class="tag tag1 tag-builder "></div>
@@ -4118,7 +4117,7 @@
           </li>
 
           <!--181-->
-          <li class="filterDiv events eventTag standard reqs" data-temperature ="2">
+          <li class="filterDiv filterDiv-stacked events eventTag standard reqs" data-temperature ="2">
               <div class="title background-color-events ">Ice Cap Melting</div>
               <div class="price ">5</div>
               <div class="tag tag1 tag-event "></div>
@@ -4133,7 +4132,7 @@
           </li>
 
           <!--182-->
-          <li class="filterDiv automated cityTag builderTag corporate ">
+          <li class="filterDiv filterDiv-stacked automated cityTag builderTag corporate ">
               <div class="title background-color-automated ">Corporate Stronghold</div>
               <div class="price ">11</div>
               <div class="tag tag1 tag-builder "></div>
@@ -4154,7 +4153,7 @@
           </li>
 
           <!--183-->
-          <li class="filterDiv automated builderTag energyTag standard reqs" data-oxygen ="6">
+          <li class="filterDiv filterDiv-stacked automated builderTag energyTag standard reqs" data-oxygen ="6">
             <div class="title background-color-automated">Biomass Combustors</div>
             <div class="price">4</div>
             <div class="tag tag1 tag-builder"></div>
@@ -4174,7 +4173,7 @@
           </li>
 
           <!--184-->
-          <li class="filterDiv active animalTag standard reqs" data-oxygen ="9">
+          <li class="filterDiv filterDiv-stacked active animalTag standard reqs" data-oxygen ="9">
             <div class="title background-color-active">Livestock</div>
             <div class="price">13</div>
             <div class="tag tag1 tag-animal"></div>
@@ -4199,7 +4198,7 @@
           </li>
 
           <!--185-->
-          <li class="filterDiv active scienceTag builderTag earthTag corporate ">
+          <li class="filterDiv filterDiv-stacked active scienceTag builderTag earthTag corporate ">
               <div class="title background-color-active ">Olympus Conference</div>
               <div class="price ">10</div>
               <div class="tag tag1 tag-builder "></div>
@@ -4217,7 +4216,7 @@
           </li>
 
           <!--186-->
-          <li class="filterDiv automated  corporate reqs">
+          <li class="filterDiv filterDiv-stacked automated  corporate reqs">
               <div class="title background-color-automated ">Rad-Suits</div>
               <div class="price ">6</div>
               <div class="number ">186</div>
@@ -4233,7 +4232,7 @@
           </li>
 
           <!--187-->
-          <li class="filterDiv active builderTag standard ">
+          <li class="filterDiv filterDiv-stacked active builderTag standard ">
               <div class="title background-color-active ">Aquifer Pumping</div>
               <div class="price ">18</div>
               <div class="tag tag1 tag-builder "></div>
@@ -4249,7 +4248,7 @@
           </li>
 
           <!--188-->
-          <li class="filterDiv events eventTag standard ">
+          <li class="filterDiv filterDiv-stacked events eventTag standard ">
               <div class="title background-color-events ">Flooding</div>
               <div class="price ">7</div>
               <div class="tag tag1 tag-event "></div>
@@ -4264,7 +4263,7 @@
           </li>
 
           <!--189-->
-          <li class="filterDiv automated energyTag standard">
+          <li class="filterDiv filterDiv-stacked automated energyTag standard">
             <div class="title background-color-automated">Energy Saving</div>
             <div class="price">15</div>
             <div class="tag tag1 tag-energy"></div>
@@ -4280,7 +4279,7 @@
           </li>
 
           <!--190-->
-          <li class="filterDiv events eventTag standard ">
+          <li class="filterDiv filterDiv-stacked events eventTag standard ">
               <div class="title background-color-events ">Local Heat Trapping</div>
               <div class="price ">1</div>
               <div class="tag tag1 tag-event "></div>
@@ -4294,7 +4293,7 @@
           </li>
 
           <!--191-->
-          <li class="filterDiv events eventTag standard reqs " data-temperature ="-8">
+          <li class="filterDiv filterDiv-stacked events eventTag standard reqs " data-temperature ="-8">
               <div class="title background-color-events ">Permafrost Extraction</div>
               <div class="price ">8</div>
               <div class="tag tag1 tag-event "></div>
@@ -4309,7 +4308,7 @@
           </li>
 
           <!--192-->
-          <li class="filterDiv events eventTag scienceTag corporate ">
+          <li class="filterDiv filterDiv-stacked events eventTag scienceTag corporate ">
               <div class="title background-color-events ">Invention Contest</div>
               <div class="price ">2</div>
               <div class="tag tag1 tag-event "></div>
@@ -4323,7 +4322,7 @@
           </li>
 
           <!--193-->
-          <li class="filterDiv automated plantTag standard reqs" data-science = "2">
+          <li class="filterDiv filterDiv-stacked automated plantTag standard reqs" data-science = "2">
             <div class="title background-color-automated">Plantation</div>
             <div class="price">15</div>
             <div class="tag tag1 tag-plant"></div>
@@ -4338,7 +4337,7 @@
           </li>
 
           <!--194-->
-          <li class="filterDiv active energyTag builderTag corporate ">
+          <li class="filterDiv filterDiv-stacked active energyTag builderTag corporate ">
               <div class="title background-color-active ">Power Infrastructure</div>
               <div class="price ">4</div>
               <div class="tag tag1 tag-builder "></div>
@@ -4354,7 +4353,7 @@
           </li>
 
           <!--195-->
-          <li class="filterDiv events eventTag corporate ">
+          <li class="filterDiv filterDiv-stacked events eventTag corporate ">
               <div class="title background-color-events ">Indentured Workers</div>
               <div class="price ">0</div>
               <div class="tag tag1 tag-event "></div>
@@ -4370,7 +4369,7 @@
           </li>
 
           <!--196-->
-          <li class="filterDiv automated spaceTag scienceTag corporate ">
+          <li class="filterDiv filterDiv-stacked automated spaceTag scienceTag corporate ">
               <div class="title background-color-automated ">Lagrange Observatory</div>
               <div class="price ">9</div>
               <div class="tag tag1 tag-space "></div>
@@ -4387,7 +4386,7 @@
           </li>
 
           <!--197-->
-          <li class="filterDiv automated spaceTag jovianTag corporate ">
+          <li class="filterDiv filterDiv-stacked automated spaceTag jovianTag corporate ">
               <div class="title background-color-automated ">Terraforming Ganymede</div>
               <div class="price ">33</div>
               <div class="tag tag1 tag-space "></div>
@@ -4404,7 +4403,7 @@
           </li>
 
           <!--198-->
-          <li class="filterDiv automated spaceTag earthTag standard ">
+          <li class="filterDiv filterDiv-stacked automated spaceTag earthTag standard ">
               <div class="title background-color-automated ">Immigration Shuttles</div>
               <div class="price ">31</div>
               <div class="tag tag1 tag-space"></div>
@@ -4422,7 +4421,7 @@
           </li>
 
           <!--199-->
-          <li class="filterDiv active scienceTag  corporate ">
+          <li class="filterDiv filterDiv-stacked active scienceTag  corporate ">
               <div class="title background-color-active ">Restricted Area</div>
               <div class="price ">11</div>
               <div class="tag tag1 tag-science "></div>
@@ -4441,7 +4440,7 @@
           </li>
 
           <!--200-->
-          <li class="filterDiv active cityTag builderTag  standard ">
+          <li class="filterDiv filterDiv-stacked active cityTag builderTag  standard ">
               <div class="title background-color-active ">Immigrant City</div>
               <div class="price ">13</div>
               <div class="tag tag1 tag-builder "></div>
@@ -4462,7 +4461,7 @@
           </li>
 
           <!--201-->
-          <li class="filterDiv automated energyTag corporate">
+          <li class="filterDiv filterDiv-stacked automated energyTag corporate">
             <div class="title background-color-automated">Energy Tapping</div>
             <div class="price">3</div>
             <div class="tag tag1 tag-energy"></div>
@@ -4481,7 +4480,7 @@
           </li>
 
           <!--202-->
-          <li class="filterDiv active builderTag standard ">
+          <li class="filterDiv filterDiv-stacked active builderTag standard ">
               <div class="title background-color-active ">Underground Detonations</div>
               <div class="price ">6</div>
               <div class="tag tag1 tag-builder "></div>
@@ -4498,7 +4497,7 @@
           </li>
 
           <!--203-->
-          <li class="filterDiv automated spaceTag standard ">
+          <li class="filterDiv filterDiv-stacked automated spaceTag standard ">
               <div class="title background-color-automated ">Soletta</div>
               <div class="price ">35</div>
               <div class="tag tag1 tag-space"></div>
@@ -4514,7 +4513,7 @@
           </li>
 
           <!--204-->
-          <li class="filterDiv eventTag scienceTag spaceTag corporate events ">
+          <li class="filterDiv filterDiv-stacked eventTag scienceTag spaceTag corporate events ">
               <div class="title background-color-events ">Technology Demonstration</div>
               <div class="price ">5</div>
               <div class="tag tag1 tag-event "></div>
@@ -4531,7 +4530,7 @@
           </li>
 
           <!--205-->
-          <li class="filterDiv automated builderTag standard">
+          <li class="filterDiv filterDiv-stacked automated builderTag standard">
             <div class="title background-color-automated">Rad-Chem Factory</div>
             <div class="price">8</div>
             <div class="tag tag1 tag-builder"></div>
@@ -4547,7 +4546,7 @@
           </li>
 
           <!--206-->
-          <li class="filterDiv events scienceTag eventTag standard ">
+          <li class="filterDiv filterDiv-stacked events scienceTag eventTag standard ">
             <div class="title background-color-events">Special Design</div>
             <div class="price">4</div>
             <div class="tag tag1 tag-event"></div>
@@ -4562,7 +4561,7 @@
           </li>
 
           <!--207-->
-          <li class="filterDiv automated builderTag scienceTag corporate">
+          <li class="filterDiv filterDiv-stacked automated builderTag scienceTag corporate">
             <div class="title background-color-automated">Medical Lab</div>
             <div class="price">13</div>
             <div class="tag tag1 tag-builder"></div>
@@ -4581,7 +4580,7 @@
           </li>
 
           <!--208-->
-          <li class="filterDiv active scienceTag builderTag corporate reqs" data-science = "3">
+          <li class="filterDiv filterDiv-stacked active scienceTag builderTag corporate reqs" data-science = "3">
               <div class="title background-color-active ">AI Central</div>
               <div class="price ">21</div>
               <div class="tag tag1 tag-builder "></div>
@@ -4605,7 +4604,7 @@
           </li>
 
           <!--209-->
-          <li class="filterDiv events spaceTag eventTag promo ">
+          <li class="filterDiv filterDiv-stacked events spaceTag eventTag promo ">
               <div class="title background-color-events ">Small Asteroid</div>
               <div class="price ">10</div>
               <div class="tag tag1 tag-event "></div>
@@ -4622,7 +4621,7 @@
           </li>
 
           <!--210-->
-          <li class="filterDiv active promo reqs" data-science = "2">
+          <li class="filterDiv filterDiv-stacked active promo reqs" data-science = "2">
               <div class="title background-color-active ">Self-replicating robots</div>
               <div class="price ">7</div>
               <div class="promo-icon project-icon"></div>
@@ -4643,7 +4642,7 @@
           </li>
 
           <!--211-->
-          <li class="filterDiv automated plantTag promo reqs" data-oceans ="2">
+          <li class="filterDiv filterDiv-stacked automated plantTag promo reqs" data-oceans ="2">
             <div class="title background-color-automated">Snow Algae</div>
             <div class="price">12</div>
             <div class="tag tag1 tag-plant"></div>
@@ -4660,7 +4659,7 @@
             </div>
 
             <!--212-->
-            <li class="filterDiv active animalTag promo reqs" data-oceans ="8">
+            <li class="filterDiv filterDiv-stacked active animalTag promo reqs" data-oceans ="8">
                 <div class="title background-color-active ">Penguins</div>
                 <div class="price ">7</div>
                 <div class="tag tag1 tag-animal "></div>
@@ -4680,7 +4679,7 @@
             </li>
 
             <!--213-->
-            <li class="filterDiv venusNext active venusTag ">
+            <li class="filterDiv filterDiv-stacked venusNext active venusTag ">
               <div class="title background-color-active">Aerial Mappers</div>
               <div class="price">11</div>
               <div class="tag tag1 tag-venus"></div>
@@ -4697,7 +4696,7 @@
             </li>
 
             <!--214-->
-            <li class="filterDiv eventTag venusNext events reqs">
+            <li class="filterDiv filterDiv-stacked eventTag venusNext events reqs">
                 <div class="title background-color-events ">Aerosport Tournament</div>
                 <div class="price ">7</div>
                 <div class="tag tag1 tag-event "></div>
@@ -4714,7 +4713,7 @@
             </li>
 
             <!--215-->
-            <li class="filterDiv eventTag venusNext venusTag events ">
+            <li class="filterDiv filterDiv-stacked eventTag venusNext venusTag events ">
                 <div class="title background-color-events ">Air-Scrapping Expedition</div>
                 <div class="price ">13</div>
                 <div class="tag tag1 tag-event "></div>
@@ -4733,7 +4732,7 @@
             </li>
 
             <!--216-->
-            <li class="filterDiv automated scienceTag venusTag venusNext reqs" data-science = "3">
+            <li class="filterDiv filterDiv-stacked automated scienceTag venusTag venusNext reqs" data-science = "3">
                 <div class="title background-color-automated ">Atalanta Planitia Lab</div>
                 <div class="price ">10</div>
                 <div class="tag tag1 tag-science "></div>
@@ -4751,7 +4750,7 @@
             </li>
 
             <!--217-->
-            <li class="filterDiv automated jovianTag spaceTag venusNext reqs" data-science = "3">
+            <li class="filterDiv filterDiv-stacked automated jovianTag spaceTag venusNext reqs" data-science = "3">
                 <div class="title background-color-automated ">Atmoscoop</div>
                 <div class="price ">21</div>
                 <div class="tag tag1 tag-space "></div>
@@ -4775,7 +4774,7 @@
             </li>
 
             <!--218-->
-            <li class="filterDiv eventTag venusNext spaceTag events ">
+            <li class="filterDiv filterDiv-stacked eventTag venusNext spaceTag events ">
                 <div class="title background-color-events ">Comet for Venus</div>
                 <div class="price ">11</div>
                 <div class="tag tag1 tag-event "></div>
@@ -4792,7 +4791,7 @@
             </li>
 
             <!--219-->
-            <li class="filterDiv automated venusTag venusNext ">
+            <li class="filterDiv filterDiv-stacked automated venusTag venusNext ">
                 <div class="title background-color-automated ">Corroder Suits</div>
                 <div class="price ">8</div>
                 <div class="tag tag1 tag-venus "></div>
@@ -4808,7 +4807,7 @@
             </li>
 
             <!--220-->
-            <li class="filterDiv automated spaceTag cityTag venusNext reqs" data-science = "4">
+            <li class="filterDiv filterDiv-stacked automated spaceTag cityTag venusNext reqs" data-science = "4">
                 <div class="title background-color-automated ">Dawn City</div>
                 <div class="price ">15</div>
                 <div class="tag tag1 tag-city "></div>
@@ -4829,7 +4828,7 @@
             </li>
 
             <!--221-->
-            <li class="filterDiv active spaceTag energyTag venusTag venusNext ">
+            <li class="filterDiv filterDiv-stacked active spaceTag energyTag venusTag venusNext ">
                 <div class="title background-color-active ">Deuterium Export</div>
                 <div class="price ">11</div>
                 <div class="tag tag1 tag-space "></div>
@@ -4847,7 +4846,7 @@
             </li>
 
             <!--222-->
-            <li class="filterDiv active  venusTag venusNext ">
+            <li class="filterDiv filterDiv-stacked active  venusTag venusNext ">
                 <div class="title background-color-active ">Dirigibles</div>
                 <div class="price ">11</div>
                 <div class="tag tag1 tag-venus "></div>
@@ -4863,7 +4862,7 @@
             </li>
 
             <!--223-->
-            <li class="filterDiv active  venusTag venusNext ">
+            <li class="filterDiv filterDiv-stacked active  venusTag venusNext ">
                 <div class="title background-color-active ">Extractor Balloons</div>
                 <div class="price ">21</div>
                 <div class="tag tag1 tag-venus "></div>
@@ -4884,7 +4883,7 @@
             </li>
 
             <!--224-->
-            <li class="filterDiv active  venusTag microbeTag venusNext reqs" data-science = "2">
+            <li class="filterDiv filterDiv-stacked active  venusTag microbeTag venusNext reqs" data-science = "2">
                 <div class="title background-color-active ">Extremophiles</div>
                 <div class="price ">3</div>
                 <div class="tag tag1 tag-microbe "></div>
@@ -4905,7 +4904,7 @@
             </li>
 
             <!--225-->
-            <li class="filterDiv active  venusTag  venusNext reqs" data-science = "2">
+            <li class="filterDiv filterDiv-stacked active  venusTag  venusNext reqs" data-science = "2">
                 <div class="title background-color-active ">Floating Habs</div>
                 <div class="price ">5</div>
                 <div class="tag tag1 tag-venus "></div>
@@ -4925,7 +4924,7 @@
             </li>
 
             <!--226-->
-            <li class="filterDiv active  venusTag venusNext ">
+            <li class="filterDiv filterDiv-stacked active  venusTag venusNext ">
                 <div class="title background-color-active ">Forced Precipitation</div>
                 <div class="price ">8</div>
                 <div class="tag tag1 tag-venus "></div>
@@ -4941,7 +4940,7 @@
             </li>
 
             <!--227-->
-            <li class="filterDiv automated venusTag plantTag venusNext reqs" data-venus ="10">
+            <li class="filterDiv filterDiv-stacked automated venusTag plantTag venusNext reqs" data-venus ="10">
                 <div class="title background-color-automated ">Freyja Biodomes</div>
                 <div class="price ">14</div>
                 <div class="tag tag1 tag-plant "></div>
@@ -4973,7 +4972,7 @@
             </li>
 
             <!--228-->
-            <li class="filterDiv eventTag venusNext venusTag spaceTag events ">
+            <li class="filterDiv filterDiv-stacked eventTag venusNext venusTag spaceTag events ">
                 <div class="title background-color-events ">GHG Import From Venus</div>
                 <div class="price ">23</div>
                 <div class="tag tag1 tag-event "></div>
@@ -4993,7 +4992,7 @@
             </li>
 
             <!--229-->
-            <li class="filterDiv automated venusTag spaceTag venusNext ">
+            <li class="filterDiv filterDiv-stacked automated venusTag spaceTag venusNext ">
                 <div class="title background-color-automated ">Giant Solar Shade</div>
                 <div class="price ">27</div>
                 <div class="tag tag1 tag-space "></div>
@@ -5008,7 +5007,7 @@
             </li>
 
             <!--230-->
-            <li class="filterDiv automated cityTag builderTag venusNext ">
+            <li class="filterDiv filterDiv-stacked automated cityTag builderTag venusNext ">
                 <div class="title background-color-automated ">Gyropolis</div>
                 <div class="price ">20</div>
                 <div class="tag tag1 tag-builder "></div>
@@ -5028,7 +5027,7 @@
             </li>
 
             <!--231-->
-            <li class="filterDiv eventTag venusNext  spaceTag events ">
+            <li class="filterDiv filterDiv-stacked eventTag venusNext  spaceTag events ">
                 <div class="title background-color-events ">Hydrogen to Venus</div>
                 <div class="price ">11</div>
                 <div class="tag tag1 tag-event "></div>
@@ -5045,7 +5044,7 @@
             </li>
 
             <!--232-->
-            <li class="filterDiv automated jovianTag scienceTag venusNext ">
+            <li class="filterDiv filterDiv-stacked automated jovianTag scienceTag venusNext ">
                 <div class="title background-color-automated ">IO Sulphur Research</div>
                 <div class="price ">17</div>
                 <div class="tag tag1 tag-jovian "></div>
@@ -5065,7 +5064,7 @@
             </li>
 
             <!--233-->
-            <li class="filterDiv automated venusTag venusNext reqs" data-venus ="8">
+            <li class="filterDiv filterDiv-stacked automated venusTag venusNext reqs" data-venus ="8">
                 <div class="title background-color-automated ">Ishtar Mining</div>
                 <div class="price ">5</div>
                 <div class="tag tag1 tag-venus "></div>
@@ -5082,7 +5081,7 @@
             </li>
 
             <!--234-->
-            <li class="filterDiv active  venusTag venusNext ">
+            <li class="filterDiv filterDiv-stacked active  venusTag venusNext ">
                 <div class="title background-color-active ">Jet Stream Microscrappers</div>
                 <div class="price ">12</div>
                 <div class="tag tag1 tag-venus "></div>
@@ -5098,7 +5097,7 @@
             </li>
 
             <!--235-->
-            <li class="filterDiv active  venusTag venusNext ">
+            <li class="filterDiv filterDiv-stacked active  venusTag venusNext ">
                 <div class="title background-color-active ">Local Shading</div>
                 <div class="price ">4</div>
                 <div class="tag tag1 tag-venus "></div>
@@ -5117,7 +5116,7 @@
             </li>
 
             <!--236-->
-            <li class="filterDiv automated earthTag spaceTag cityTag venusNext ">
+            <li class="filterDiv filterDiv-stacked automated earthTag spaceTag cityTag venusNext ">
                 <div class="title background-color-automated ">Luna Metropolis</div>
                 <div class="price ">21</div>
                 <div class="tag tag1 tag-city "></div>
@@ -5138,7 +5137,7 @@
             </li>
 
             <!--237-->
-            <li class="filterDiv automated  venusNext reqs">
+            <li class="filterDiv filterDiv-stacked automated  venusNext reqs">
                 <div class="title background-color-automated ">Luxury Foods</div>
                 <div class="price ">8</div>
                 <div class="number ">237</div>
@@ -5150,7 +5149,7 @@
             </li>
 
             <!--238-->
-            <li class="filterDiv active cityTag venusTag venusNext reqs" data-venus ="12">
+            <li class="filterDiv filterDiv-stacked active cityTag venusTag venusNext reqs" data-venus ="12">
                 <div class="title background-color-active ">Maxwell Base</div>
                 <div class="price ">18</div>
                 <div class="tag tag1 tag-city "></div>
@@ -5175,7 +5174,7 @@
             </li>
 
             <!--239-->
-            <li class="filterDiv automated builderTag venusNext reqs">
+            <li class="filterDiv filterDiv-stacked automated builderTag venusNext reqs">
                 <div class="title background-color-automated ">Mining Quota</div>
                 <div class="price ">5</div>
                 <div class="tag tag1 tag-builder"></div>
@@ -5193,7 +5192,7 @@
             </li>
 
             <!--240-->
-            <li class="filterDiv automated venusTag venusNext reqs" data-venus ="10">
+            <li class="filterDiv filterDiv-stacked automated venusTag venusNext reqs" data-venus ="10">
                 <div class="title background-color-automated ">Neutralizer Factory</div>
                 <div class="price ">7</div>
                 <div class="tag tag1 tag-venus"></div>
@@ -5209,7 +5208,7 @@
             </li>
 
             <!--241-->
-            <li class="filterDiv automated builderTag venusNext reqs">
+            <li class="filterDiv filterDiv-stacked automated builderTag venusNext reqs">
                 <div class="title background-color-automated ">Omnicourt</div>
                 <div class="price ">11</div>
                 <div class="tag tag1 tag-builder"></div>
@@ -5225,7 +5224,7 @@
             </li>
 
             <!--242-->
-            <li class="filterDiv automated venusTag spaceTag venusNext ">
+            <li class="filterDiv filterDiv-stacked automated venusTag spaceTag venusNext ">
                 <div class="title background-color-automated ">Orbital Reflectors</div>
                 <div class="price ">26</div>
                 <div class="tag tag1 tag-space"></div>
@@ -5244,7 +5243,7 @@
             </li>
 
             <!--243-->
-            <li class="filterDiv active spaceTag venusNext reqs" data-venus ="14">
+            <li class="filterDiv filterDiv-stacked active spaceTag venusNext reqs" data-venus ="14">
                 <div class="title background-color-active ">Rotator Impacts</div>
                 <div class="price ">6</div>
                 <div class="tag tag1 tag-space "></div>
@@ -5263,7 +5262,7 @@
             </li>
 
             <!--244-->
-            <li class="filterDiv automated venusTag earthTag venusNext reqs">
+            <li class="filterDiv filterDiv-stacked automated venusTag earthTag venusNext reqs">
                 <div class="title background-color-automated ">Sister Planet Support</div>
                 <div class="price ">7</div>
                 <div class="tag tag1 tag-earth"></div>
@@ -5282,7 +5281,7 @@
             </li>
 
             <!--245-->
-            <li class="filterDiv automated  venusNext reqs">
+            <li class="filterDiv filterDiv-stacked automated  venusNext reqs">
                 <div class="title background-color-automated ">Solarnet</div>
                 <div class="price ">7</div>
                 <div class="number ">245</div>
@@ -5298,7 +5297,7 @@
             </li>
 
             <!--246-->
-            <li class="filterDiv eventTag venusNext spaceTag events reqs" data-venus ="10">
+            <li class="filterDiv filterDiv-stacked eventTag venusNext spaceTag events reqs" data-venus ="10">
                 <div class="title background-color-events ">Spin-Inducing Asteroid</div>
                 <div class="price ">16</div>
                 <div class="tag tag1 tag-event "></div>
@@ -5315,7 +5314,7 @@
             </li>
 
             <!--247-->
-            <li class="filterDiv automated scienceTag earthTag venusNext ">
+            <li class="filterDiv filterDiv-stacked automated scienceTag earthTag venusNext ">
                 <div class="title background-color-automated ">Sponsored Academies</div>
                 <div class="price ">9</div>
                 <div class="tag tag1 tag-earth"></div>
@@ -5333,7 +5332,7 @@
             </li>
 
             <!--248-->
-            <li class="filterDiv active cityTag venusTag venusNext reqs" data-science = "2">
+            <li class="filterDiv filterDiv-stacked active cityTag venusTag venusNext reqs" data-science = "2">
                 <div class="title background-color-active ">Stratopolis</div>
                 <div class="price ">22</div>
                 <div class="tag tag1 tag-city "></div>
@@ -5361,7 +5360,7 @@
             </li>
 
             <!--249-->
-            <li class="filterDiv active animalTag venusTag venusNext reqs" data-venus ="12">
+            <li class="filterDiv filterDiv-stacked active animalTag venusTag venusNext reqs" data-venus ="12">
                 <div class="title background-color-active ">Stratospheric Birds</div>
                 <div class="price ">12</div>
                 <div class="tag tag1 tag-animal "></div>
@@ -5384,7 +5383,7 @@
             </li>
 
             <!--250-->
-            <li class="filterDiv automated venusTag spaceTag  venusNext ">
+            <li class="filterDiv filterDiv-stacked automated venusTag spaceTag  venusNext ">
                 <div class="title background-color-automated ">Sulphur Exports</div>
                 <div class="price ">21</div>
                 <div class="tag tag1 tag-space "></div>
@@ -5403,7 +5402,7 @@
             </li>
 
             <!--251-->
-            <li class="filterDiv active microbeTag venusTag venusNext reqs" data-venus ="6">
+            <li class="filterDiv filterDiv-stacked active microbeTag venusTag venusNext reqs" data-venus ="6">
                 <div class="title background-color-active ">Sulphur-eating Bacteria</div>
                 <div class="price ">6</div>
                 <div class="tag tag1 tag-microbe "></div>
@@ -5423,7 +5422,7 @@
             </li>
 
             <!--252-->
-            <li class="filterDiv automated  earthTag venusNext reqs">
+            <li class="filterDiv filterDiv-stacked automated  earthTag venusNext reqs">
                 <div class="title background-color-automated ">Terraforming Contract</div>
                 <div class="price ">8</div>
                 <div class="tag tag1 tag-earth"></div>
@@ -5441,7 +5440,7 @@
             </li>
 
             <!--253-->
-            <li class="filterDiv active microbeTag venusTag venusNext reqs" data-venus ="6">
+            <li class="filterDiv filterDiv-stacked active microbeTag venusTag venusNext reqs" data-venus ="6">
                 <div class="title background-color-active ">Thermophiles</div>
                 <div class="price ">9</div>
                 <div class="tag tag1 tag-microbe "></div>
@@ -5462,7 +5461,7 @@
             </li>
 
             <!--254-->
-            <li class="filterDiv eventTag venusNext spaceTag events ">
+            <li class="filterDiv filterDiv-stacked eventTag venusNext spaceTag events ">
                 <div class="title background-color-events ">Water to Venus</div>
                 <div class="price ">9</div>
                 <div class="tag tag1 tag-event "></div>
@@ -5478,7 +5477,7 @@
             </li>
 
             <!--255-->
-            <li class="filterDiv automated venusTag venusNext reqs">
+            <li class="filterDiv filterDiv-stacked automated venusTag venusNext reqs">
                 <div class="title background-color-automated ">Venus Governer</div>
                 <div class="price ">4</div>
                 <div class="tag tag1 tag-venus"></div>
@@ -5497,7 +5496,7 @@
             </li>
 
             <!--256-->
-            <li class="filterDiv active venusTag venusNext reqs" data-venus ="10">
+            <li class="filterDiv filterDiv-stacked active venusTag venusNext reqs" data-venus ="10">
                 <div class="title background-color-active ">Venus Magnetizer</div>
                 <div class="price ">7</div>
                 <div class="tag tag1 tag-venus "></div>
@@ -5519,7 +5518,7 @@
             </li>
 
             <!--257-->
-            <li class="filterDiv automated venusTag plantTag venusNext ">
+            <li class="filterDiv filterDiv-stacked automated venusTag plantTag venusNext ">
                 <div class="title background-color-automated ">Venus Soils</div>
                 <div class="price ">20</div>
                 <div class="tag tag1 tag-plant"></div>
@@ -5539,7 +5538,7 @@
             </li>
 
             <!--258-->
-            <li class="filterDiv active spaceTag venusTag venusNext ">
+            <li class="filterDiv filterDiv-stacked active spaceTag venusTag venusNext ">
                 <div class="title background-color-active ">Venus Station</div>
                 <div class="price ">9</div>
                 <div class="tag tag1 tag-space "></div>
@@ -5556,7 +5555,7 @@
             </li>
 
             <!--259-->
-            <li class="filterDiv active animalTag venusTag scienceTag venusNext reqs" data-venus ="18">
+            <li class="filterDiv filterDiv-stacked active animalTag venusTag scienceTag venusNext reqs" data-venus ="18">
                 <div class="title background-color-active ">Venusian Animals</div>
                 <div class="price ">15</div>
                 <div class="tag tag1 tag-animal "></div>
@@ -5575,7 +5574,7 @@
             </li>
 
             <!--260-->
-            <li class="filterDiv active  venusTag microbeTag venusNext reqs" data-venus ="12">
+            <li class="filterDiv filterDiv-stacked active  venusTag microbeTag venusNext reqs" data-venus ="12">
                 <div class="title background-color-active ">Venusian Insects</div>
                 <div class="price ">5</div>
                 <div class="tag tag1 tag-microbe "></div>
@@ -5596,7 +5595,7 @@
             </li>
 
             <!--261-->
-            <li class="filterDiv automated venusTag plantTag venusNext reqs" data-venus ="16">
+            <li class="filterDiv filterDiv-stacked automated venusTag plantTag venusNext reqs" data-venus ="16">
                 <div class="title background-color-automated ">Venusian Plants</div>
                 <div class="price ">13</div>
                 <div class="tag tag1 tag-plant"></div>
@@ -5623,7 +5622,7 @@
     <!--PRELUDES------------------------------------------->
     <div class="ul-title">PRELUDES</div>
         <!--prelude1-->
-        <li class="filterDiv prelude preludeCards">
+        <li class="filterDiv filterDiv-stacked prelude preludeCards">
           <div class="title background-color-prelude">Orbital Construction</div>
           <div class="prelude-label">PRELUDE</div>
           <div class="prelude-icon"></div>
@@ -5637,7 +5636,7 @@
         </li>
 
         <!--prelude2-->
-        <li class="filterDiv prelude preludeCards builderTag">
+        <li class="filterDiv filterDiv-stacked prelude preludeCards builderTag">
           <div class="title background-color-prelude">Smelting Plant</div>
           <div class="tag tag1 tag-builder"></div>
           <div class="prelude-label">PRELUDE</div>
@@ -5652,7 +5651,7 @@
         </li>
 
         <!--prelude3-->
-        <li class="filterDiv prelude preludeCards energyTag">
+        <li class="filterDiv filterDiv-stacked prelude preludeCards energyTag">
           <div class="title background-color-prelude">Supplier</div>
           <div class="tag tag1 tag-energy"></div>
           <div class="prelude-label">PRELUDE</div>
@@ -5669,7 +5668,7 @@
         </li>
 
         <!--prelude4-->
-        <li class="filterDiv prelude preludeCards ">
+        <li class="filterDiv filterDiv-stacked prelude preludeCards ">
           <div class="title background-color-prelude">Allied Banks</div>
           <div class="prelude-label">PRELUDE</div>
           <div class="prelude-icon project-icon"></div>
@@ -5685,7 +5684,7 @@
         </li>
 
         <!--prelude5-->
-        <li class="filterDiv prelude preludeCards energyTag">
+        <li class="filterDiv filterDiv-stacked prelude preludeCards energyTag">
           <div class="title background-color-prelude">Aquifier Turbines</div>
           <div class="tag tag1 tag-energy"></div>
           <div class="prelude-label">PRELUDE</div>
@@ -5703,7 +5702,7 @@
         </li>
 
         <!--prelude6-->
-        <li class="filterDiv prelude preludeCards microbeTag">
+        <li class="filterDiv filterDiv-stacked prelude preludeCards microbeTag">
           <div class="title background-color-prelude">Biofuels</div>
           <div class="tag tag1 tag-microbe"></div>
           <div class="prelude-label">PRELUDE</div>
@@ -5720,7 +5719,7 @@
         </li>
 
         <!--prelude7-->
-        <li class="filterDiv prelude preludeCards scienceTag">
+        <li class="filterDiv filterDiv-stacked prelude preludeCards scienceTag">
           <div class="title background-color-prelude">Biolab</div>
           <div class="tag tag1 tag-science"></div>
           <div class="prelude-label">PRELUDE</div>
@@ -5737,7 +5736,7 @@
         </li>
 
         <!--prelude8-->
-        <li class="filterDiv prelude preludeCards plantTag">
+        <li class="filterDiv filterDiv-stacked prelude preludeCards plantTag">
           <div class="title background-color-prelude">Biosphere Support</div>
           <div class="tag tag1 tag-plant"></div>
           <div class="prelude-label">PRELUDE</div>
@@ -5754,7 +5753,7 @@
         </li>
 
         <!--prelude9-->
-        <li class="filterDiv prelude preludeCards ">
+        <li class="filterDiv filterDiv-stacked prelude preludeCards ">
           <div class="title background-color-prelude">Class M Planetoid</div>
           <div class="prelude-label">PRELUDE</div>
           <div class="prelude-icon project-icon"></div>
@@ -5769,7 +5768,7 @@
         </li>
 
         <!--prelude10-->
-        <li class="filterDiv prelude preludeCards builderTag plantTag">
+        <li class="filterDiv filterDiv-stacked prelude preludeCards builderTag plantTag">
           <div class="title background-color-prelude">Dome Farming</div>
           <div class="prelude-label">PRELUDE</div>
           <div class="tag tag1 tag-plant"></div>

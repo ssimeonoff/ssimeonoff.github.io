@@ -280,7 +280,6 @@ function toggleSubfiltersDiv() {
 
 function toggleFooterDiv() {
   if ($('#footer:visible').length == 0) {
-    console.log("hidden");
     containerHeight = containerHeight + 40;
     document.getElementById("buttonsContainer").style.height = containerHeight + "px";
     $("#footer").fadeIn(100);
@@ -290,4 +289,36 @@ function toggleFooterDiv() {
     document.getElementById("footer").style.display = "none";
     document.getElementById("buttonsContainer").style.height = containerHeight + "px";
   }
+}
+
+function casualCards() {
+    cards = document.querySelectorAll('.filterDiv');
+    for (i = 0; i < cards.length; i++) {
+        cards[i].classList.remove("filterDiv-stacked");
+    }
+    tables = document.querySelectorAll('.myUL');
+    for (i = 0; i < tables.length; i++) {
+        tables[i].style.width = "auto";
+        tables[i].style.margin = "15px 0px 0px 25px";
+    }
+    tableTitles = document.querySelectorAll('.ul-title');
+    for (i = 0; i < tableTitles.length; i++) {
+        tableTitles[i].style.margin = "0px 0px 0px -25px";
+    }
+}
+
+function stackedCards() {
+    cards = document.querySelectorAll('.filterDiv');
+    for (i = 0; i < cards.length; i++) {
+        cards[i].classList.add("filterDiv-stacked");
+    }
+    tables = document.querySelectorAll('.myUL');
+    for (i = 0; i < tables.length; i++) {
+      tables[i].style.width = "85%";
+      tables[i].style.margin = "15px 0px 0px -25px";
+    }
+    tableTitles = document.querySelectorAll('.ul-title');
+    for (i = 0; i < tableTitles.length; i++) {
+        tableTitles[i].style.margin = "15px 0px 0px 25px";
+    }
 }
