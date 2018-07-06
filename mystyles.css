@@ -21,7 +21,7 @@
 
 .filterDiv:hover {
   transform: none;
-  transform: translate(-5px, -10px);
+  transform: translate(0px, -10px);
   box-shadow: 0 0 30px 15px black;
   transition: 0.3s;
   z-index: 99;
