@@ -187,7 +187,8 @@ function myFunction() {
   displayedCards = document.querySelectorAll('li.show').length;
   displayedCorporations = document.querySelectorAll('li.show.corporation').length;
   displayedPreludes = document.querySelectorAll('li.show.preludeCards').length;
-  document.getElementById("totalProjects").innerHTML = displayedCards - displayedCorporations - displayedPreludes;
+  displayedColonies = document.querySelectorAll('li.show.colonyCards').length;
+  document.getElementById("totalProjects").innerHTML = displayedCards - displayedCorporations - displayedPreludes - displayedColonies;
   document.getElementById("totalCorporations").innerHTML = displayedCorporations;
   document.getElementById("totalPreludes").innerHTML = displayedPreludes;
 }
