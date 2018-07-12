@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+
+<head>
+  <link rel="shortcut icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" type="text/css" href="mystyles.css">
+  <link rel="stylesheet" type="text/css" href="solo.css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116626580-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-116626580-2');
+</script>
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+  google.charts.load("current", {packages:["corechart"]});
+  google.charts.setOnLoadCallback(drawChart);
+  function drawChart() {
+  var games = [
+      ['Corporation', 'Score'],
+
+      ['Ecoline', 88],
+      ['Ecoline', 91],
+      ['Ecoline', 99],
+      ['Ecoline', 104],
+      ['Ecoline', 108],
+      ['Ecoline', 107],
+      ['Ecoline', 77],
+      ['Ecoline', 101],
+      ['Ecoline', 106],
+      ['Ecoline', 102],
+      ['Ecoline', 94],
+      ['Ecoline', 81],
+
+      ['Helion', 97],
+      ['Helion', 101],
+      ['Helion', 94],
+      ['Helion', 81],
+      ['Helion', 91],
+      ['Helion', 104],
+      ['Helion', 98],
+      ['Helion', 92],
+      ['Helion', 96],
+      ['Helion', 95],
+      ['Helion', 96],
+
+      ['Credicor', 108],
+      ['Credicor', 94],
+      ['Credicor', 87],
+      ['Credicor', 89],
+      ['Credicor', 95],
+      ['Credicor', 82],
+      ['Credicor', 89],
+      ['Credicor', 107],
+      ['Credicor', 106],
+      ['Credicor', 106],
+
+      ['Teractor', 96],
+      ['Teractor', 77],
+      ['Teractor', 102],
+
+      ['Mining Guild', 84],
+      ['Mining Guild', 92],
+      ['Mining Guild', 85],
+      ['Mining Guild', 80],
+
+      ['Tharsis Republic', 108],
+
+      ['Thorgate', 101],
+      ['Thorgate', 91],
+      ['Thorgate', 102],
+      ['Thorgate', 104],
+
+      ['Phobolog', 104],
+      ['Phobolog', 106],
+      ['Phobolog', 70],
+      ['Phobolog', 78],
+      ['Phobolog', 80],
+
+      ['Inventrix', 95],
+      ['Inventrix', 87],
+      ['Inventrix', 77],
+      ['Inventrix', 75],
+      ['Inventrix', 89],
+
+      ['Saturn Systems', 79],
+      ['Saturn Systems', 94],
+      ['Saturn Systems', 91],
+      ['Saturn Systems', 89],
+      ['Saturn Systems', 132],
+      ['Saturn Systems', 99],
+
+      ['Interplanetery', 102],
+      ['Interplanetery', 99]
+
+    ];
+
+    var sum = 0;
+    for( var i = 1; i < games.length; i++ ){
+      sum += parseInt(games[i][1]); //don't forget to add the base
+    }
+    var avg = Math.round(parseFloat(sum/(games.length-1)));
+    var fails = document.getElementsByClassName("background-failed").length - 1;
+    var winrate = Math.round(parseFloat(100*(games.length-1)/(games.length-1+fails)));
+
+
+    document.getElementById("wins").innerHTML = games.length -1;
+    document.getElementById("average").innerHTML = avg;
+    document.getElementById("fails").innerHTML = fails;
+    document.getElementById("winrate").innerHTML = winrate;
+
+
+    var data = google.visualization.arrayToDataTable(games);
+
+    var options = {
+      animation: {"startup": true},
+      title: '',
+      titleTextStyle: {fontSize:20, color:"#444444", },
+      legend: { position: 'none' },
+      fontSize: 12,
+      backgroundColor: "transparent",
+      vAxis: {ticks: 'none', textPosition: 'none'},
+      HAxis: {textStyle : {fontSize: 7}},
+      bar: {gap: 1},
+      chartArea:{left:180,bottom:20,top:1,width:456},
+      colors: ['#444444','#888888'],
+      histogram: {bucketSize: 5, minValue: 65, maxValue: 135},
+    };
+
+    var chart = new google.visualization.Histogram(document.getElementById('chart_div'));
+    chart.draw(data, options);
+  }
+</script>
+</head>
+
+<html>
+<body background="mars.jpg" style="background-color:black;background-repeat:no-repeat; background-size:100%">
+<!-- background="mars.jpg" style="background-color:black;background-repeat:no-repeat; background-size:100%" -->
+  <div id="chart_div"></div>
+    <div class="chart-title" style="background:#cc3333">WIN SCORES DISTRIBUTION - CORPORATE ERA</div>
+    <div class="grid-container2">
+      <div class="title1" style="width:115px;background:rgb(68, 68, 68);color:white;">WINS</div>
+      <div id="wins" class="wins" style="border-style:outset;background:rgb(68, 68, 68);color:white;"></div>
+      <div class="title2" style="width:115px;background-color: #cc3333; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;color:white;">FAILS</div>
+      <div id="fails" class="fails background-failed" style="background-color: #cc3333;color:white;"></div>
+      <div class="title3" style="font-size:14px;line-height:17px;width:115px;">WIN RATE <br> PERCENTAGE</div>
+      <div id="winrate" class="winrate">80</div>
+      <div class="title4" style="font-size:14px;line-height:17px;width:115px;">AVERAGE <br> WIN SCORE</div>
+      <div id="average"></div>
+    </div>
+    <div class="buttons-div">
+      <button class="button" style= "background: rgb(68, 68, 68);" onClick=""><a href="https://ssimeonoff.github.io/" style="text-decoration: none;color:white;">BACK TO LIST</a></button><br>
+      <button class="button" data-modal="modalTwo" style="background-color: #cc3333; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;color:white;">THE EXPERIMENT <br><span style="font-size:10px;">(CLICK ME)<span></button><br>
+      <button class="button" data-modal="modalOne">SETUP</button><br>
+      <button class="button" data-modal="modalThree">ASSUMPTIONS</button>
+    </div>
+
+    <div id="modalOne" class="modal">
+      <div class="modal-content1">
+        <span class="close">&times;</span>
+          <b><u>Setup</u></b> <br>
+        Included Venus Next expansion (Main goal of the experiment)<br>
+        Standard Solo rules (By the book - no Drafting, 2 starting corps) <br>
+        Included Hellas/Elysium (Rotating the 3 boards just for personal amusement) <br>
+      </div>
+    </div>
+
+    <div id="modalTwo" class="modal">
+      <div class="modal-content1">
+        <span class="close">&times;</span>
+        <b><u>Experiment</b></u> <br>
+        <span style="font-size:20px;font-weight:bold;font-style: italic;">Complete 100 Solo games with Venus Next.<br></span><br>
+
+        <b><u>Hypothesis</u></b> <br>
+        <span style="font-size:20px;font-weight:bold;font-style: italic;">Winning Solo Games is easier when playing with Venux Next expansion.<br>(compared to the Standard Solo games)</span><br><br>
+
+        <b><u>Expectations</u></b> <br>
+        Playing with moderate risk, but aiming for high score, the follows stats can be achieved:<br>
+        <span style="font-size:20px;font-weight:bold;font-style: italic;">Win Rate Percentage over 80<br> Average Win Score over 90</span><br>
+
+    </div>
+  </div>
+
+  <div id="modalThree" class="modal">
+    <div class="modal-content1">
+      <span class="close">&times;</span>
+      <b><u>Assumptions</u></b> <br>
+      Top 3 corporations are as follow:<br><br>
+      <b>1. Ecoline</b><br>
+      By far the best corporation for Solo - with or without Venus Next.
+      Corporation's starting bonus and ability helps one of the win criteria (Oxygen), which makes winning almost certain. Extra placed forests corresponds to a higher average score.
+      <br><br>
+      <b>2. Helion</b><br>
+      Corporation's starting bonus and ability helps one of the win criteria (Heat), which makes winning almost certain. Flexibility to use Heat as money can provide strong engine boost.
+      <br><br>
+      <b>3. Credicor</b><br>
+      High money start, plus buying forests for -4MC makes it easier to win.
+
+
+  </div>
+</div>
+
+
+  <div class="corps-list" style="height:845px">
+
+    <div class="filterDiv2" style="height:40px;display:inline-block;font-weight:bold;color:rgb(68, 68, 68);">
+      <div style="margin-left:15px;margin-top:10px;">
+        <div style="margin-right:75px; display:inline-block;font-size:20px;">PLAYED GAMES PER CORPORATION</div>
+        <div style="font-size:14px;display:inline-block;vertical-align:top;">
+        <div class="legend-squares" style="background:#cc3333;">&nbsp;</div>
+        <span>FAILED</span>
+        <div class="legend-squares" style="background:#aaa;">&nbsp;</div>
+        <span>Under 80</span>
+        <div class="legend-squares" style="background:#eee;">&nbsp;</div>
+        <span>Under 100</span>
+        <div class="legend-squares" style="background: #e6e600;">&nbsp;</div>
+        <span>Over 100</span>
+      </div>
+      </div>
+    </div>
+
+<!--Corporations-->
+
+<div class="filterDiv2">
+  <div class="grid-container">
+    <div class="background-gold">108</div>
+    <div class="background-silver">94</div>
+    <div class="background-silver">87</div>
+    <div class="background-silver">89</div>
+    <div class="background-failed">X</div>
+    <div class="background-silver">95</div>
+    <div class="background-silver">82</div>
+    <div class="background-silver">89</div>
+    <div class="background-gold">107</div>
+    <div class="background-gold">106</div>
+    <div class="background-gold">106</div>
+  </div>
+  <div class="credicor">credicor</div>
+</div>
+
+<div class="filterDiv2">
+  <div class="grid-container">
+    <div class="background-silver">97</div>
+    <div class="background-gold">101</div>
+    <div class="background-silver">94</div>
+    <div class="background-silver">81</div>
+    <div class="background-silver">91</div>
+    <div class="background-gold">104</div>
+    <div class="background-silver">98</div>
+    <div class="background-silver">92</div>
+    <div class="background-silver">96</div>
+    <div class="background-silver">95</div>
+    <div class="background-silver">96</div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="helion">helion</div>
+</div>
+
+    <div class="filterDiv2">
+      <div class="grid-container">
+        <div class="background-silver">88</div>
+        <div class="background-silver">91</div>
+        <div class="background-silver">99</div>
+        <div class="background-gold">104</div>
+        <div class="background-gold">108</div>
+        <div class="background-gold">107</div>
+        <div class="background-bronze">77</div>
+        <div class="background-gold">101</div>
+        <div class="background-gold">106</div>
+        <div class="background-gold">102</div>
+        <div class="background-silver">94</div>
+        <div class="background-silver">81</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+        <div class="ecoline">ecoline</div>
+    </div>
+
+    <div class="filterDiv2">
+      <div class="grid-container">
+        <div class="background-silver">90</div>
+        <div class="background-silver">83</div>
+        <div class="background-bronze">73</div>
+        <div class="background-silver">95</div>
+        <div class="background-silver">86</div>
+        <div class="background-silver">90</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="teractor">TERACTOR</div>
+    </div>
+
+    <div class="filterDiv2">
+      <div class="grid-container">
+        <div class="background-gold">104</div>
+        <div class="background-gold">106</div>
+        <div class="background-failed">X</div>
+        <div class="background-bronze">70</div>
+        <div class="background-failed">X</div>
+        <div class="background-bronze">70</div>
+        <div class="background-silver">80</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="phobolog">PHOBOLOG</div>
+    </div>
+
+    <div class="filterDiv2">
+      <div class="grid-container">
+        <div class="background-gold">101</div>
+        <div class="background-silver">91</div>
+        <div class="background-gold">102</div>
+        <div class="background-gold">104</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="thorgate">THORGATE</div>
+    </div>
+
+    <div class="filterDiv2">
+      <div class="grid-container">
+        <div class="background-failed">X</div>
+        <div class="background-failed">X</div>
+        <div class="background-bronze">79</div>
+        <div class="background-silver">94</div>
+        <div class="background-silver">91</div>
+        <div class="background-silver">89</div>
+        <div class="background-gold record">132</div>
+        <div class="background-silver">99</div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="saturn-systems">SATURN <span style="font-size:20px;display:inline-block;">&#x25CF;</span> SYSTEMS</div>
+    </div>
+
+
+        <div class="filterDiv2">
+          <div class="grid-container">
+            <div class="background-gold">108</div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="tharsis">
+            <div style="margin-left:15px;text-shadow:none;box-shadow:3px 3px 6px grey;margin-right:2px;border: 1px solid red;display:inline-block;background-color:#ff5f00;">&#x25b2;
+            <span style="font-size:14px;padding:0px;border:none;margin-left:-12px;padding-right:2px;">&#x25b2;</span>
+          </div>THARSIS<br>&nbsp;&nbsp;&nbsp;&nbsp;REPUBLIC</div>
+        </div>
+
+        <div class="filterDiv2">
+          <div class="grid-container">
+            <div class="background-silver">95</div>
+            <div class="background-silver">87</div>
+            <div class="background-bronze">77</div>
+            <div class="background-bronze">75</div>
+            <div class="background-silver">89</div>
+            <div class="background-failed">X</div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+            <div class="inventrix">
+              <span style="background-color:#6bb5c7;padding-left:4px;padding-right:4px;font-size:26px;box-shadow: 6px 6px 10px grey;">X</span> INVENTRIX
+            </div>
+        </div>
+        <div class="filterDiv2">
+          <div class="grid-container">
+            <div class="background-silver">84</div>
+            <div class="background-silver">92</div>
+            <div class="background-failed">X</div>
+            <div class="background-silver">85</div>
+            <div class="background-silver">80</div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="mining-guild">MINING<br><span style="margin-left:6px;">GUILD</span></div>
+        </div>
+
+        <div class="filterDiv2">
+          <div class="grid-container">
+            <div class="background-gold">102</div>
+            <div class="background-silver">99</div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div style="margin-left:20px;margin-top:7px;font-weight:bold;">
+                <div class="INTERPLANETARY CINEMATICS" style="font-size:17px;">INTERPLANETARY</div>
+                <div style="height:5px;margin-top:-2px;width:143px;background:linear-gradient(to right, yellow,black,yellow,black,yellow);border:5px solid #cc3333;box-shadow:3px 3px 6px grey;">
+                </div>
+                <div class="INTERPLANETARY CINEMATICS" style="font-size:19px;margin-left:3px;letter-spacing: 3px;">CINEMATICS
+              </div></div>
+        </div>
+
+        <div class="filterDiv2" style="border-bottom: none">
+          <div class="grid-container">
+          </div>
+            <div class="background-color-active united-nations"> UNITED NATIONS MARS INITIATIVE</div>
+        </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="solo.js"></script>
+
+</body>
+
+</html>
