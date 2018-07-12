@@ -14,7 +14,7 @@
   background: #ccc;
   background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
   width: 875px;
-  height: 1177px;
+  height: 1180px;
   border-radius: 10px;
   border-style: outset;
 }
@@ -347,7 +347,7 @@
   width:150px;
   color: white;
   margin-left:17px;
-  margin-top:3px;
+  margin-top:5px;
   padding:5px;
   padding-top:10px;
   padding-bottom:10px;
