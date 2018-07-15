@@ -265,11 +265,11 @@
 .background-color-colony { background-color: rgb(158,145,128);}
 
 /*********** Style the tags ************/
-.tag-builder {
+.tag-building {
     background-color: rgb(128,87,0);
 }
 
-    .tag-builder:after {
+    .tag-building:after {
        border-radius: 50%;
         color: rgb(73,54,40);
         content: "\2617";
@@ -284,11 +284,11 @@
         transform: scale(2.7,1); /* W3C */
     }
 
-    .builder-resource {
+    .building-resource {
         background-color: rgb(128,87,0);
         border-radius: 50%;
     }
-        .builder-resource:after {
+        .building-resource:after {
             vertical-align: top;
             color: rgb(73,54,40);
             content: "\2617";
@@ -1067,7 +1067,7 @@
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-.card-icon-builder {
+.card-icon-building {
   background: linear-gradient(rgb(162,113,71),#593e27);
   color: rgb(73,54,40);
   font-size: 12px;

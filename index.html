@@ -57,7 +57,7 @@
     </div>
 
     <div id="myBtnContainer2" style="line-height:55px;">
-      <button id="builderTag" class="button btn2 tag-builder tooltip" style="line-height:40px" onclick="filterSelection(id)"><span class="tooltiptext">filter by Builder tag</span></button>
+      <button id="buildingTag" class="button btn2 tag-building tooltip" style="line-height:40px" onclick="filterSelection(id)"><span class="tooltiptext">filter by building tag</span></button>
       <button id="spaceTag" class="button btn2 tag-space tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter by Space tag</span></button>
       <button id="scienceTag" class="button btn2 tag-science tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter by Science tag</span></button>
 
@@ -65,7 +65,7 @@
       <button id="microbeTag" class="button btn2 tag-microbe tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter by Microbe tag</span></button>
       <button id="animalTag" class="button btn2 tag-animal tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter by Animal tag</span></button>
 
-      <button id="powerTag" class="button btn2 tag-power tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter by Energy tag</span></button>
+      <button id="powerTag" class="button btn2 tag-power tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter by Power tag</span></button>
       <button id="jovianTag" class="button btn2 tag-jovian tooltip" onclick="filterSelection(id)"><span class="tooltiptext">filter by Jovian tag</span></button>
       <button id="earthTag" class="button btn2 tag-earth tooltip" style="font-size:38px;padding-top:3px;padding-left:1px;padding-right:1px;" onclick="filterSelection(id)"><span class="tooltiptext">filter by Earth tag</span></button>
 
@@ -195,15 +195,15 @@
       </div>
     </li>
 
-    <li class="filterDiv filterDiv-stacked corporation builderTag microbeTag  promo">
-      <div class="tag tag1 tag-builder"></div>
+    <li class="filterDiv filterDiv-stacked corporation buildingTag microbeTag  promo">
+      <div class="tag tag1 tag-building"></div>
       <div class="tag tag2 tag-microbe"></div>
       <div class="corporationLabel">CORPORATION</div>
       <div class="promo-icon corporation-icon"></div>
       <div class="contentCorporation">
         <div class="corporationEffectBox">
           <div class="corporationEffectBoxLabel" style="margin-bottom:10px">EFFECT</div>
-          <div class="resource-tag builder-resource"></div> :<div class="resource microbe"></div> OR
+          <div class="resource-tag building-resource"></div> :<div class="resource microbe"></div> OR
           2 <div class="resource microbe"></div>:<div class="production-box" style="margin-left:5px;"><div class="production plant"></div></div><br>
           <div class="description" style="margin-top:-3px;text-align:center;">(Effect: When you play a building tag, including this, gain 1 microbe to this card, or remove 2 microbes here and raise your plant production 1 step.)
         </div>
@@ -300,9 +300,9 @@
     </li>
 
     <!--corp2-->
-    <li class="filterDiv filterDiv-stacked corporation builderTag standard">
-      <div class="tag tag1 tag-builder"></div>
-      <div class="tag tag2 tag-builder"></div>
+    <li class="filterDiv filterDiv-stacked corporation buildingTag standard">
+      <div class="tag tag1 tag-building"></div>
+      <div class="tag tag2 tag-building"></div>
       <div class="corporationLabel">CORPORATION</div>
       <div class="contentCorporation">
         <div class="corporationEffectBox">
@@ -341,8 +341,8 @@
     </li>
 
     <!--corp3-->
-    <li class="filterDiv filterDiv-stacked corporation builderTag venusNext">
-      <div class="tag tag1 tag-builder"></div>
+    <li class="filterDiv filterDiv-stacked corporation buildingTag venusNext">
+      <div class="tag tag1 tag-building"></div>
       <div class="corporationLabel">CORPORATION</div>
       <div class="venus-icon corporation-icon"></div>
       <div class="contentCorporation">
@@ -563,8 +563,8 @@
         </li>
 
         <!--corp10-->
-        <li class="filterDiv filterDiv-stacked corporation builderTag standard">
-          <div class="tag tag1 tag-builder"></div>
+        <li class="filterDiv filterDiv-stacked corporation buildingTag standard">
+          <div class="tag tag1 tag-building"></div>
             <div class="corporationLabel ">CORPORATION</div>
             <div class="contentCorporation ">
                 <div class="corporationEffectBox ">
@@ -664,8 +664,8 @@
         </li>
 
         <!--corp14-->
-        <li class="filterDiv filterDiv-stacked corporation builderTag standard">
-          <div class="tag tag1 tag-builder"></div>
+        <li class="filterDiv filterDiv-stacked corporation buildingTag standard">
+          <div class="tag tag1 tag-building"></div>
             <div class="corporationLabel ">CORPORATION</div>
             <div class="contentCorporation ">
                 <div class="corporationEffectBox ">
@@ -920,10 +920,10 @@
             </li>
 
         <!--1-->
-        <li class="filterDiv filterDiv-stacked automated builderTag jovianTag standard reqs" data-oxygen="5">
+        <li class="filterDiv filterDiv-stacked automated buildingTag jovianTag standard reqs" data-oxygen="5">
             <div class="title background-color-automated ">Colonizer Training Camp</div>
             <div class="price ">8</div>
-            <div class="tag tag1 tag-builder "></div>
+            <div class="tag tag1 tag-building "></div>
             <div class="tag tag2 tag-jovian "></div>
             <div class="number ">001</div>
             <div class="content ">
@@ -956,10 +956,10 @@
         </li>
 
         <!--3-->
-        <li class="filterDiv filterDiv-stacked automated builderTag powerTag standard ">
+        <li class="filterDiv filterDiv-stacked automated buildingTag powerTag standard ">
             <div class="title background-color-automated ">Deep Well Heating</div>
             <div class="price ">13</div>
-            <div class="tag tag1 tag-builder "></div>
+            <div class="tag tag1 tag-building "></div>
             <div class="tag tag2 tag-power "></div>
             <div class="number ">003</div>
             <div class="content">
@@ -1020,10 +1020,10 @@
         </li>
 
         <!--7-->
-        <li class="filterDiv filterDiv-stacked active builderTag standard ">
+        <li class="filterDiv filterDiv-stacked active buildingTag standard ">
             <div class="title background-color-active ">Martian Rails</div>
             <div class="price ">13</div>
-            <div class="tag tag1 tag-builder "></div>
+            <div class="tag tag1 tag-building "></div>
             <div class="number ">007</div>
             <div class="content ">
                 <span class="energy resource "></span> <span class="red-arrow "></span>
@@ -1035,10 +1035,10 @@
         </li>
 
         <!--8-->
-        <li class="filterDiv filterDiv-stacked automated cityTag builderTag standard reqs" data-oceans="4">
+        <li class="filterDiv filterDiv-stacked automated cityTag buildingTag standard reqs" data-oceans="4">
             <div class="title background-color-automated ">Capital</div>
             <div class="price ">26</div>
-            <div class="tag tag1 tag-builder "></div>
+            <div class="tag tag1 tag-building "></div>
             <div class="tag tag2 tag-city "></div>
             <div class="number ">008</div>
             <div class="content ">
@@ -1128,11 +1128,11 @@
         </li>
 
         <!--13-->
-        <li class="filterDiv filterDiv-stacked active spaceTag builderTag corporate ">
+        <li class="filterDiv filterDiv-stacked active spaceTag buildingTag corporate ">
             <div class="title background-color-active ">Space Elevator</div>
             <div class="price ">27</div>
             <div class="tag tag1 tag-space "></div>
-            <div class="tag tag2 tag-builder "></div>
+            <div class="tag tag2 tag-building "></div>
             <div class="number ">013</div>
             <div class="corporate-icon project-icon"></div>
             <div class="content ">
@@ -1149,10 +1149,10 @@
         </li>
 
         <!--14-->
-        <li class="filterDiv filterDiv-stacked active scienceTag builderTag corporate ">
+        <li class="filterDiv filterDiv-stacked active scienceTag buildingTag corporate ">
             <div class="title background-color-active ">Development Center</div>
             <div class="price ">11</div>
-            <div class="tag tag1 tag-builder "></div>
+            <div class="tag tag1 tag-building "></div>
             <div class="tag tag2 tag-science "></div>
             <div class="number ">014</div>
             <div class="corporate-icon project-icon"></div>
@@ -1165,10 +1165,10 @@
         </li>
 
         <!--15-->
-        <li class="filterDiv filterDiv-stacked active builderTag standard ">
+        <li class="filterDiv filterDiv-stacked active buildingTag standard ">
             <div class="title background-color-active ">Equatorial Magnetizer</div>
             <div class="price ">24</div>
-            <div class="tag tag1 tag-builder "></div>
+            <div class="tag tag1 tag-building "></div>
             <div class="number ">015</div>
             <div class="content ">
                 <div class="production-box production-box-size1a ">
@@ -1183,10 +1183,10 @@
         </li>
 
         <!--16-->
-        <li class="filterDiv filterDiv-stacked automated cityTag builderTag standard reqs" data-oxygen="7">
+        <li class="filterDiv filterDiv-stacked automated cityTag buildingTag standard reqs" data-oxygen="7">
             <div class="title background-color-automated ">Domed Crater</div>
             <div class="price ">24</div>
-            <div class="tag tag1 tag-builder "></div>
+            <div class="tag tag1 tag-building "></div>
             <div class="tag tag2 tag-city "></div>
             <div class="number ">016</div>
             <div class="content ">
@@ -1206,10 +1206,10 @@
         </li>
 
         <!--17-->
-        <li class="filterDiv filterDiv-stacked automated cityTag builderTag standard ">
+        <li class="filterDiv filterDiv-stacked automated cityTag buildingTag standard ">
             <div class="title background-color-automated ">Noctis City</div>
             <div class="price ">18</div>
-            <div class="tag tag1 tag-builder "></div>
+            <div class="tag tag1 tag-building "></div>
             <div class="tag tag2 tag-city "></div>
             <div class="number ">017</div>
             <div class="content ">
@@ -1265,10 +1265,10 @@
         </li>
 
         <!--20-->
-        <li class="filterDiv filterDiv-stacked active cityTag builderTag scienceTag standard ">
+        <li class="filterDiv filterDiv-stacked active cityTag buildingTag scienceTag standard ">
             <div class="title background-color-active ">Research Outpost</div>
             <div class="price ">18</div>
-            <div class="tag tag1 tag-builder "></div>
+            <div class="tag tag1 tag-building "></div>
             <div class="tag tag2 tag-city "></div>
             <div class="tag tag3 tag-science "></div>
             <div class="number ">020</div>
@@ -1377,10 +1377,10 @@
         </li>
 
         <!--26-->
-        <li class="filterDiv filterDiv-stacked plantTag builderTag automated standard reqs" data-temperature ="-12">
+        <li class="filterDiv filterDiv-stacked plantTag buildingTag automated standard reqs" data-temperature ="-12">
             <div class="title background-color-automated ">Eos Chasma National Park</div>
             <div class="price ">16</div>
-            <div class="tag tag1 tag-builder "></div>
+            <div class="tag tag1 tag-building "></div>
             <div class="tag tag2 tag-plant "></div>
             <div class="number ">026</div>
             <div class="content ">
@@ -1433,10 +1433,10 @@
 
 
         <!--29-->
-        <li class="filterDiv filterDiv-stacked automated cityTag builderTag standard reqs" data-oxygen ="9">
+        <li class="filterDiv filterDiv-stacked automated cityTag buildingTag standard reqs" data-oxygen ="9">
             <div class="title background-color-automated ">Cupola City</div>
             <div class="price ">16</div>
-            <div class="tag tag1 tag-builder "></div>
+            <div class="tag tag1 tag-building "></div>
             <div class="tag tag2 tag-city "></div>
             <div class="number ">029</div>
             <div class="content ">
@@ -1486,10 +1486,10 @@
         </li>
 
         <!--32-->
-        <li class="filterDiv filterDiv-stacked cityTag builderTag standard automated ">
+        <li class="filterDiv filterDiv-stacked cityTag buildingTag standard automated ">
             <div class="title background-color-automated ">Underground city</div>
             <div class="price ">18</div>
-            <div class="tag tag1 tag-builder "></div>
+            <div class="tag tag1 tag-building "></div>
             <div class="tag tag2 tag-city "></div>
             <div class="number ">032</div>
             <div class="content ">
@@ -1593,10 +1593,10 @@
       </li>
 
       <!--38-->
-      <li class="filterDiv filterDiv-stacked active builderTag standard">
+      <li class="filterDiv filterDiv-stacked active buildingTag standard">
         <div class="title background-color-active">Rover Construction</div>
         <div class="price">8</div>
-        <div class="tag tag1 tag-builder"></div>
+        <div class="tag tag1 tag-building"></div>
         <div class="number">038</div>
         <div class="content">
           <div class="points points-big">1</div>
@@ -1645,10 +1645,10 @@
       </li>
 
       <!--41-->
-      <li class="filterDiv filterDiv-stacked automated builderTag standard">
+      <li class="filterDiv filterDiv-stacked automated buildingTag standard">
         <div class="title background-color-automated">Food Factory</div>
         <div class="price">12</div>
-        <div class="tag tag1 tag-builder"></div>
+        <div class="tag tag1 tag-building"></div>
         <div class="number">041</div>
         <div class="content">
           <div class="points points-big">1</div>
@@ -1680,10 +1680,10 @@
       </li>
 
       <!--43-->
-      <li class="filterDiv filterDiv-stacked automated builderTag standard">
+      <li class="filterDiv filterDiv-stacked automated buildingTag standard">
         <div class="title background-color-automated">Carbonate Processing</div>
         <div class="price">6</div>
-        <div class="tag tag1 tag-builder"></div>
+        <div class="tag tag1 tag-building"></div>
         <div class="number">043</div>
         <div class="content">
           <div class="production-box production-box-size3a">
@@ -1697,10 +1697,10 @@
       </li>
 
       <!--44-->
-      <li class="filterDiv filterDiv-stacked automated builderTag scienceTag standard reqs" data-oxygen ="4">
+      <li class="filterDiv filterDiv-stacked automated buildingTag scienceTag standard reqs" data-oxygen ="4">
         <div class="title background-color-automated">Natural Preserve</div>
         <div class="price">9</div>
-        <div class="tag tag1 tag-builder"></div>
+        <div class="tag tag1 tag-building"></div>
         <div class="tag tag2 tag-science"></div>
         <div class="number">044</div>
         <div class="content">
@@ -1717,10 +1717,10 @@
       </li>
 
       <!--45-->
-      <li class="filterDiv filterDiv-stacked automated builderTag powerTag standard">
+      <li class="filterDiv filterDiv-stacked automated buildingTag powerTag standard">
         <div class="title background-color-automated">Nuclear Power</div>
         <div class="price">10</div>
-        <div class="tag tag1 tag-builder"></div>
+        <div class="tag tag1 tag-building"></div>
         <div class="tag tag2 tag-power"></div>
         <div class="number">045</div>
         <div class="content">
@@ -1930,10 +1930,10 @@
         </li>
 
         <!--56-->
-        <li class="filterDiv filterDiv-stacked automated builderTag corporate">
+        <li class="filterDiv filterDiv-stacked automated buildingTag corporate">
           <div class="title background-color-automated">Mine</div>
           <div class="price">4</div>
-          <div class="tag tag1 tag-builder"></div>
+          <div class="tag tag1 tag-building"></div>
           <div class="number">056</div>
           <div class="corporate-icon project-icon"></div>
           <div class="content">
@@ -2074,10 +2074,10 @@
         </li>
 
         <!--64-->
-        <li class="filterDiv filterDiv-stacked automated builderTag corporate">
+        <li class="filterDiv filterDiv-stacked automated buildingTag corporate">
           <div class="title background-color-automated">Mining Area</div>
           <div class="price">4</div>
-          <div class="tag tag1 tag-builder"></div>
+          <div class="tag tag1 tag-building"></div>
           <div class="number">064</div>
           <div class="corporate-icon project-icon"></div>
           <div class="content">
@@ -2092,10 +2092,10 @@
         </li>
 
         <!--65-->
-        <li class="filterDiv filterDiv-stacked automated builderTag corporate">
+        <li class="filterDiv filterDiv-stacked automated buildingTag corporate">
           <div class="title background-color-automated">Building Industries</div>
           <div class="price">6</div>
-          <div class="tag tag1 tag-builder"></div>
+          <div class="tag tag1 tag-building"></div>
           <div class="number">065</div>
           <div class="corporate-icon project-icon"></div>
           <div class="content">
@@ -2123,10 +2123,10 @@
 
 
         <!--67-->
-        <li class="filterDiv filterDiv-stacked automated builderTag standard">
+        <li class="filterDiv filterDiv-stacked automated buildingTag standard">
           <div class="title background-color-automated">Mining Rights</div>
           <div class="price">9</div>
-          <div class="tag tag1 tag-builder"></div>
+          <div class="tag tag1 tag-building"></div>
           <div class="number">067</div>
           <div class="content">
             <div class="tile special-tile" style="font-size:40px;color: rgb(73,54,40);">&#x2692;</div>*<br>
@@ -2157,10 +2157,10 @@
         </li>
 
         <!--69-->
-        <li class="filterDiv filterDiv-stacked active builderTag corporate reqs" data-oxygen ="8">
+        <li class="filterDiv filterDiv-stacked active buildingTag corporate reqs" data-oxygen ="8">
           <div class="title background-color-active">Electro Catapult</div>
           <div class="price">17</div>
-          <div class="tag tag1 tag-builder"></div>
+          <div class="tag tag1 tag-building"></div>
           <div class="number">069</div>
           <div class="corporate-icon project-icon"></div>
           <div class="content">
@@ -2234,10 +2234,10 @@
         </li>
 
         <!--73-->
-        <li class="filterDiv filterDiv-stacked active scienceTag builderTag corporate ">
+        <li class="filterDiv filterDiv-stacked active scienceTag buildingTag corporate ">
             <div class="title background-color-active ">Mars University</div>
             <div class="price ">8</div>
-            <div class="tag tag1 tag-builder "></div>
+            <div class="tag tag1 tag-building "></div>
             <div class="tag tag2 tag-science "></div>
             <div class="number ">073</div>
             <div class="corporate-icon project-icon"></div>
@@ -2442,10 +2442,10 @@
         </li>
 
         <!--85-->
-        <li class="filterDiv filterDiv-stacked automated builderTag corporate ">
+        <li class="filterDiv filterDiv-stacked automated buildingTag corporate ">
             <div class="title background-color-automated ">Commercial District</div>
             <div class="price ">16</div>
-            <div class="tag tag1 tag-builder "></div>
+            <div class="tag tag1 tag-building "></div>
             <div class="number ">085</div>
             <div class="corporate-icon project-icon"></div>
             <div class="content ">
@@ -2472,7 +2472,7 @@
             <div class="number ">086</div>
             <div class="corporate-icon project-icon"></div>
             <div class="content ">
-              COPY A &nbsp; <div class="production-box"><div  class="resource-tag builder-resource"></div></div>
+              COPY A &nbsp; <div class="production-box"><div  class="resource-tag building-resource"></div></div>
               <div class="description">
               (Duplicate only the production box of one of your building cards.)
               </div>
@@ -2516,10 +2516,10 @@
         </li>
 
         <!--89-->
-        <li class="filterDiv filterDiv-stacked automated builderTag powerTag standard">
+        <li class="filterDiv filterDiv-stacked automated buildingTag powerTag standard">
           <div class="title background-color-automated">Peroxide Power</div>
           <div class="price">7</div>
-          <div class="tag tag1 tag-builder"></div>
+          <div class="tag tag1 tag-building"></div>
           <div class="tag tag2 tag-power"></div>
           <div class="number">089</div>
           <div class="content">
@@ -2629,10 +2629,10 @@
         </li>
 
         <!--95-->
-        <li class="filterDiv filterDiv-stacked active scienceTag builderTag corporate ">
+        <li class="filterDiv filterDiv-stacked active scienceTag buildingTag corporate ">
             <div class="title background-color-active ">Physics Complex</div>
             <div class="price ">12</div>
-            <div class="tag tag1 tag-builder "></div>
+            <div class="tag tag1 tag-building "></div>
             <div class="tag tag2 tag-science "></div>
             <div class="number ">095</div>
             <div class="corporate-icon project-icon"></div>
@@ -2649,10 +2649,10 @@
         </li>
 
         <!--96-->
-        <li class="filterDiv filterDiv-stacked plantTag builderTag automated standard ">
+        <li class="filterDiv filterDiv-stacked plantTag buildingTag automated standard ">
             <div class="title background-color-automated ">Greenhouses</div>
             <div class="price ">6</div>
-            <div class="tag tag1 tag-builder "></div>
+            <div class="tag tag1 tag-building "></div>
             <div class="tag tag2 tag-plant "></div>
             <div class="number ">096</div>
             <div class="content ">
@@ -2680,10 +2680,10 @@
         </li>
 
         <!--98-->
-        <li class="filterDiv filterDiv-stacked automated builderTag corporate">
+        <li class="filterDiv filterDiv-stacked automated buildingTag corporate">
           <div class="title background-color-automated">Tropical Resort</div>
           <div class="price">13</div>
-          <div class="tag tag1 tag-builder"></div>
+          <div class="tag tag1 tag-building"></div>
           <div class="number">098</div>
           <div class="corporate-icon project-icon"></div>
           <div class="content">
@@ -2716,10 +2716,10 @@
         </li>
 
         <!--100-->
-        <li class="filterDiv filterDiv-stacked automated builderTag powerTag standard">
+        <li class="filterDiv filterDiv-stacked automated buildingTag powerTag standard">
           <div class="title background-color-automated">Fueled Generators</div>
           <div class="price">1</div>
-          <div class="tag tag1 tag-builder"></div>
+          <div class="tag tag1 tag-building"></div>
           <div class="tag tag2 tag-power"></div>
           <div class="number">100</div>
           <div class="content">
@@ -2734,10 +2734,10 @@
         </li>
 
         <!--101-->
-        <li class="filterDiv filterDiv-stacked active builderTag standard ">
+        <li class="filterDiv filterDiv-stacked active buildingTag standard ">
             <div class="title background-color-active ">Ironworks</div>
             <div class="price ">11</div>
-            <div class="tag tag1 tag-builder "></div>
+            <div class="tag tag1 tag-building "></div>
             <div class="number ">101</div>
             <div class="content ">
                 4 <span class="energy resource "></span> <span class="red-arrow "></span>
@@ -2765,10 +2765,10 @@
         </li>
 
         <!--103-->
-        <li class="filterDiv filterDiv-stacked active builderTag standard ">
+        <li class="filterDiv filterDiv-stacked active buildingTag standard ">
             <div class="title background-color-active ">Steelworks</div>
             <div class="price ">15</div>
-            <div class="tag tag1 tag-builder "></div>
+            <div class="tag tag1 tag-building "></div>
             <div class="number ">103</div>
             <div class="content ">
                 4 <span class="energy resource "></span> <span class="red-arrow "></span>
@@ -2780,10 +2780,10 @@
         </li>
 
         <!--104-->
-        <li class="filterDiv filterDiv-stacked active builderTag standard ">
+        <li class="filterDiv filterDiv-stacked active buildingTag standard ">
             <div class="title background-color-active ">Ore Processor</div>
             <div class="price ">13</div>
-            <div class="tag tag1 tag-builder "></div>
+            <div class="tag tag1 tag-building "></div>
             <div class="number ">104</div>
             <div class="content ">
                 4 <span class="energy resource "></span> <span class="red-arrow "></span>
@@ -2842,10 +2842,10 @@
         </li>
 
         <!--108-->
-        <li class="filterDiv filterDiv-stacked automated cityTag builderTag standard reqs" data-oxygen ="12">
+        <li class="filterDiv filterDiv-stacked automated cityTag buildingTag standard reqs" data-oxygen ="12">
             <div class="title background-color-automated ">Open City</div>
             <div class="price ">23</div>
-            <div class="tag tag1 tag-builder "></div>
+            <div class="tag tag1 tag-building "></div>
             <div class="tag tag2 tag-city "></div>
             <div class="number ">108</div>
             <div class="content ">
@@ -2926,10 +2926,10 @@
         </li>
 
         <!--113-->
-        <li class="filterDiv filterDiv-stacked automated builderTag powerTag standard ">
+        <li class="filterDiv filterDiv-stacked automated buildingTag powerTag standard ">
             <div class="title background-color-automated ">Solar Power</div>
             <div class="price ">11</div>
-            <div class="tag tag1 tag-builder "></div>
+            <div class="tag tag1 tag-building "></div>
             <div class="tag tag2 tag-power "></div>
             <div class="number ">113</div>
             <div class="content ">
@@ -2975,10 +2975,10 @@
         </li>
 
         <!--116-->
-        <li class="filterDiv filterDiv-stacked automated builderTag standard reqs" data-temperature ="-6">
+        <li class="filterDiv filterDiv-stacked automated buildingTag standard reqs" data-temperature ="-6">
           <div class="title background-color-automated">Artificial Lake</div>
           <div class="price">15</div>
-          <div class="tag tag1 tag-builder "></div>
+          <div class="tag tag1 tag-building "></div>
           <div class="number">116</div>
           <div class="content">
             <div class="points points-big">1</div>
@@ -2991,10 +2991,10 @@
         </li>
 
         <!--117-->
-        <li class="filterDiv filterDiv-stacked automated builderTag powerTag standard ">
+        <li class="filterDiv filterDiv-stacked automated buildingTag powerTag standard ">
             <div class="title background-color-automated ">Geothermal Power</div>
             <div class="price ">11</div>
-            <div class="tag tag1 tag-builder "></div>
+            <div class="tag tag1 tag-building "></div>
             <div class="tag tag2 tag-power "></div>
             <div class="number ">117</div>
             <div class="content ">
@@ -3043,10 +3043,10 @@
         </li>
 
         <!--120-->
-        <li class="filterDiv filterDiv-stacked automated cityTag builderTag standard ">
+        <li class="filterDiv filterDiv-stacked automated cityTag buildingTag standard ">
             <div class="title background-color-automated ">Urbanized Area</div>
             <div class="price ">10</div>
-            <div class="tag tag1 tag-builder "></div>
+            <div class="tag tag1 tag-building "></div>
             <div class="tag tag2 tag-city "></div>
             <div class="number ">120</div>
             <div class="content ">
@@ -3096,10 +3096,10 @@
         </li>
 
         <!--123-->
-        <li class="filterDiv filterDiv-stacked active builderTag corporate ">
+        <li class="filterDiv filterDiv-stacked active buildingTag corporate ">
             <div class="title background-color-active ">Industrial Center</div>
             <div class="price ">4</div>
-            <div class="tag tag1 tag-builder "></div>
+            <div class="tag tag1 tag-building "></div>
             <div class="number ">123</div>
             <div class="corporate-icon project-icon"></div>
             <div class="content ">
@@ -3148,10 +3148,10 @@
         </li>
 
         <!--126-->
-        <li class="filterDiv filterDiv-stacked automated builderTag standard">
+        <li class="filterDiv filterDiv-stacked automated buildingTag standard">
           <div class="title background-color-automated">GHG Factories</div>
           <div class="price">11</div>
-          <div class="tag tag1 tag-builder"></div>
+          <div class="tag tag1 tag-building"></div>
           <div class="number">126</div>
           <div class="content">
             <div class="production-box production-box-size2">
@@ -3253,10 +3253,10 @@
         </li>
 
         <!--132-->
-        <li class="filterDiv filterDiv-stacked automated builderTag powerTag scienceTag standard reqs">
+        <li class="filterDiv filterDiv-stacked automated buildingTag powerTag scienceTag standard reqs">
           <div class="title background-color-automated">Fusion Power</div>
           <div class="price">14</div>
-          <div class="tag tag1 tag-builder"></div>
+          <div class="tag tag1 tag-building"></div>
           <div class="tag tag2 tag-power"></div>
           <div class="tag tag3 tag-science"></div>
           <div class="number">132</div>
@@ -3326,10 +3326,10 @@
         </li>
 
         <!--136-->
-        <li class="filterDiv filterDiv-stacked automated builderTag powerTag standard reqs" data-oceans ="4">
+        <li class="filterDiv filterDiv-stacked automated buildingTag powerTag standard reqs" data-oceans ="4">
           <div class="title background-color-automated">Great Dam</div>
           <div class="price">12</div>
-          <div class="tag tag1 tag-builder"></div>
+          <div class="tag tag1 tag-building"></div>
           <div class="tag tag2 tag-power"></div>
           <div class="number">136</div>
           <div class="content">
@@ -3362,10 +3362,10 @@
         </li>
 
         <!--138-->
-        <li class="filterDiv filterDiv-stacked  builderTag standard automated ">
+        <li class="filterDiv filterDiv-stacked  buildingTag standard automated ">
             <div class="title background-color-automated ">Strip Mine</div>
             <div class="price ">25</div>
-            <div class="tag tag1 tag-builder "></div>
+            <div class="tag tag1 tag-building "></div>
             <div class="number ">138</div>
             <div class="content ">
                 <div class="production-box production-box-size3a ">
@@ -3413,10 +3413,10 @@
                 </li>
 
         <!--141-->
-        <li class="filterDiv filterDiv-stacked automated builderTag powerTag standard">
+        <li class="filterDiv filterDiv-stacked automated buildingTag powerTag standard">
           <div class="title background-color-automated">Power Plant</div>
           <div class="price">4</div>
-          <div class="tag tag1 tag-builder"></div>
+          <div class="tag tag1 tag-building"></div>
           <div class="tag tag2 tag-power"></div>
           <div class="number">141</div>
           <div class="content">
@@ -3429,10 +3429,10 @@
         </li>
 
         <!--142-->
-        <li class="filterDiv filterDiv-stacked automated builderTag standard">
+        <li class="filterDiv filterDiv-stacked automated buildingTag standard">
           <div class="title background-color-automated">Mohole Area</div>
           <div class="price">20</div>
-          <div class="tag tag1 tag-builder"></div>
+          <div class="tag tag1 tag-building"></div>
           <div class="number">142</div>
           <div class="content">
             <div class="production-box production-box-size1a">
@@ -3464,10 +3464,10 @@
         </li>
 
         <!--144-->
-        <li class="filterDiv filterDiv-stacked automated builderTag corporate">
+        <li class="filterDiv filterDiv-stacked automated buildingTag corporate">
           <div class="title background-color-automated">Titanium Mine</div>
           <div class="price">7</div>
-          <div class="tag tag1 tag-builder"></div>
+          <div class="tag tag1 tag-building"></div>
           <div class="number">144</div>
           <div class="corporate-icon project-icon"></div>
           <div class="content">
@@ -3481,10 +3481,10 @@
         </li>
 
         <!--145-->
-        <li class="filterDiv filterDiv-stacked automated builderTag powerTag standard reqs" data-science = "2">
+        <li class="filterDiv filterDiv-stacked automated buildingTag powerTag standard reqs" data-science = "2">
           <div class="title background-color-automated">Tectonic Stress Power</div>
           <div class="price">18</div>
-          <div class="tag tag1 tag-builder"></div>
+          <div class="tag tag1 tag-building"></div>
           <div class="tag tag2 tag-power"></div>
           <div class="number">145</div>
           <div class="content">
@@ -3707,10 +3707,10 @@
         </li>
 
         <!--158-->
-        <li class="filterDiv filterDiv-stacked automated builderTag microbeTag standard">
+        <li class="filterDiv filterDiv-stacked automated buildingTag microbeTag standard">
           <div class="title background-color-automated">Industrial Microbes</div>
           <div class="price">12</div>
-          <div class="tag tag1 tag-builder"></div>
+          <div class="tag tag1 tag-building"></div>
           <div class="tag tag2 tag-microbe"></div>
           <div class="number">158</div>
           <div class="content">
@@ -3824,10 +3824,10 @@
           </li>
 
           <!--165-->
-          <li class="filterDiv filterDiv-stacked automated builderTag standard">
+          <li class="filterDiv filterDiv-stacked automated buildingTag standard">
             <div class="title background-color-automated">Magnetic Field Generators</div>
             <div class="price">20</div>
-            <div class="tag tag1 tag-builder"></div>
+            <div class="tag tag1 tag-building"></div>
             <div class="number">165</div>
             <div class="content">
               <div class="production-box production-box-size2a">
@@ -3883,10 +3883,10 @@
           </li>
 
           <!--168-->
-          <li class="filterDiv filterDiv-stacked automated builderTag powerTag standard reqs" data-oxygen ="7">
+          <li class="filterDiv filterDiv-stacked automated buildingTag powerTag standard reqs" data-oxygen ="7">
               <div class="title background-color-automated ">Windmills</div>
               <div class="price ">6</div>
-              <div class="tag tag1 tag-builder "></div>
+              <div class="tag tag1 tag-building "></div>
               <div class="tag tag2 tag-power "></div>
               <div class="number ">168</div>
               <div class="content ">
@@ -3940,10 +3940,10 @@
           </li>
 
           <!--171-->
-          <li class="filterDiv filterDiv-stacked automated builderTag standard">
+          <li class="filterDiv filterDiv-stacked automated buildingTag standard">
             <div class="title background-color-automated">Magnetic Field Dome</div>
             <div class="price">5</div>
-            <div class="tag tag1 tag-builder"></div>
+            <div class="tag tag1 tag-building"></div>
             <div class="number">171</div>
             <div class="content">
               <div class="production-box production-box-size2a">
@@ -3993,10 +3993,10 @@
           </li>
 
           <!--174-->
-          <li class="filterDiv filterDiv-stacked plantTag builderTag automated standard ">
+          <li class="filterDiv filterDiv-stacked plantTag buildingTag automated standard ">
               <div class="title background-color-automated ">Protected Valley</div>
               <div class="price ">23</div>
-              <div class="tag tag1 tag-builder "></div>
+              <div class="tag tag1 tag-building "></div>
               <div class="tag tag2 tag-plant "></div>
               <div class="number ">174</div>
               <div class="content ">
@@ -4027,10 +4027,10 @@
           </li>
 
           <!--176-->
-          <li class="filterDiv filterDiv-stacked automated builderTag standard reqs" data-temperature ="-20">
+          <li class="filterDiv filterDiv-stacked automated buildingTag standard reqs" data-temperature ="-20">
             <div class="title background-color-automated">Noctis Farming</div>
             <div class="price">10</div>
-            <div class="tag tag1 tag-builder"></div>
+            <div class="tag tag1 tag-building"></div>
             <div class="number">176</div>
             <div class="content">
               <div class="points points-big">1</div>
@@ -4045,10 +4045,10 @@
           </li>
 
           <!--177-->
-          <li class="filterDiv filterDiv-stacked active builderTag standard reqs" data-oceans ="2">
+          <li class="filterDiv filterDiv-stacked active buildingTag standard reqs" data-oceans ="2">
               <div class="title background-color-active ">Water Splitting Plant</div>
               <div class="price ">12</div>
-              <div class="tag tag1 tag-builder "></div>
+              <div class="tag tag1 tag-building "></div>
               <div class="number ">177</div>
               <div class="content ">
                 <div class="requirements">2 Oceans</div>
@@ -4063,10 +4063,10 @@
           </li>
 
           <!--178-->
-          <li class="filterDiv filterDiv-stacked automated builderTag powerTag standard ">
+          <li class="filterDiv filterDiv-stacked automated buildingTag powerTag standard ">
               <div class="title background-color-automated ">Heat Trappers</div>
               <div class="price ">6</div>
-              <div class="tag tag1 tag-builder "></div>
+              <div class="tag tag1 tag-building "></div>
               <div class="tag tag2 tag-power "></div>
               <div class="number ">178</div>
               <div class="content ">
@@ -4082,10 +4082,10 @@
           </li>
 
           <!--179-->
-          <li class="filterDiv filterDiv-stacked automated builderTag standard">
+          <li class="filterDiv filterDiv-stacked automated buildingTag standard">
               <div class="title background-color-automated ">Soil Factory</div>
               <div class="price ">9</div>
-              <div class="tag tag1 tag-builder "></div>
+              <div class="tag tag1 tag-building "></div>
               <div class="number ">179</div>
               <div class="content ">
                   <div class="production-box production-box-size1a">
@@ -4099,10 +4099,10 @@
           </li>
 
           <!--180-->
-          <li class="filterDiv filterDiv-stacked automated builderTag corporate ">
+          <li class="filterDiv filterDiv-stacked automated buildingTag corporate ">
               <div class="title background-color-automated ">Fuel Factory</div>
               <div class="price ">6</div>
-              <div class="tag tag1 tag-builder "></div>
+              <div class="tag tag1 tag-building "></div>
               <div class="corporate-icon project-icon"></div>
               <div class="number ">180</div>
               <div class="content ">
@@ -4132,10 +4132,10 @@
           </li>
 
           <!--182-->
-          <li class="filterDiv filterDiv-stacked automated cityTag builderTag corporate ">
+          <li class="filterDiv filterDiv-stacked automated cityTag buildingTag corporate ">
               <div class="title background-color-automated ">Corporate Stronghold</div>
               <div class="price ">11</div>
-              <div class="tag tag1 tag-builder "></div>
+              <div class="tag tag1 tag-building "></div>
               <div class="tag tag2 tag-city "></div>
               <div class="corporate-icon project-icon"></div>
               <div class="number ">182</div>
@@ -4153,10 +4153,10 @@
           </li>
 
           <!--183-->
-          <li class="filterDiv filterDiv-stacked automated builderTag powerTag standard reqs" data-oxygen ="6">
+          <li class="filterDiv filterDiv-stacked automated buildingTag powerTag standard reqs" data-oxygen ="6">
             <div class="title background-color-automated">Biomass Combustors</div>
             <div class="price">4</div>
-            <div class="tag tag1 tag-builder"></div>
+            <div class="tag tag1 tag-building"></div>
             <div class="tag tag2 tag-power"></div>
             <div class="number">183</div>
             <div class="content">
@@ -4198,10 +4198,10 @@
           </li>
 
           <!--185-->
-          <li class="filterDiv filterDiv-stacked active scienceTag builderTag earthTag corporate ">
+          <li class="filterDiv filterDiv-stacked active scienceTag buildingTag earthTag corporate ">
               <div class="title background-color-active ">Olympus Conference</div>
               <div class="price ">10</div>
-              <div class="tag tag1 tag-builder "></div>
+              <div class="tag tag1 tag-building "></div>
               <div class="tag tag2 tag-earth "></div>
               <div class="tag tag3 tag-science "></div>
               <div class="number ">185</div>
@@ -4232,10 +4232,10 @@
           </li>
 
           <!--187-->
-          <li class="filterDiv filterDiv-stacked active builderTag standard ">
+          <li class="filterDiv filterDiv-stacked active buildingTag standard ">
               <div class="title background-color-active ">Aquifer Pumping</div>
               <div class="price ">18</div>
-              <div class="tag tag1 tag-builder "></div>
+              <div class="tag tag1 tag-building "></div>
               <div class="number ">187</div>
               <div class="content ">
                   <div class=" money resource ">8</div> (<span class="steel " style="margin:0px;padding:2px;padding-top:3px;border-radius:5px; "></span>)
@@ -4337,10 +4337,10 @@
           </li>
 
           <!--194-->
-          <li class="filterDiv filterDiv-stacked active powerTag builderTag corporate ">
+          <li class="filterDiv filterDiv-stacked active powerTag buildingTag corporate ">
               <div class="title background-color-active ">Power Infrastructure</div>
               <div class="price ">4</div>
-              <div class="tag tag1 tag-builder "></div>
+              <div class="tag tag1 tag-building "></div>
               <div class="tag tag2 tag-power "></div>
               <div class="number ">194</div>
               <div class="corporate-icon project-icon"></div>
@@ -4440,10 +4440,10 @@
           </li>
 
           <!--200-->
-          <li class="filterDiv filterDiv-stacked active cityTag builderTag  standard ">
+          <li class="filterDiv filterDiv-stacked active cityTag buildingTag  standard ">
               <div class="title background-color-active ">Immigrant City</div>
               <div class="price ">13</div>
-              <div class="tag tag1 tag-builder "></div>
+              <div class="tag tag1 tag-building "></div>
               <div class="tag tag2 tag-city "></div>
               <div class="number ">200</div>
               <div class="content ">
@@ -4480,10 +4480,10 @@
           </li>
 
           <!--202-->
-          <li class="filterDiv filterDiv-stacked active builderTag standard ">
+          <li class="filterDiv filterDiv-stacked active buildingTag standard ">
               <div class="title background-color-active ">Underground Detonations</div>
               <div class="price ">6</div>
-              <div class="tag tag1 tag-builder "></div>
+              <div class="tag tag1 tag-building "></div>
               <div class="number ">202</div>
               <div class="content ">
                 <div class="money resource ">10</div><div class="red-arrow " style="margin-left:5px; "></div>&nbsp;
@@ -4530,10 +4530,10 @@
           </li>
 
           <!--205-->
-          <li class="filterDiv filterDiv-stacked automated builderTag standard">
+          <li class="filterDiv filterDiv-stacked automated buildingTag standard">
             <div class="title background-color-automated">Rad-Chem Factory</div>
             <div class="price">8</div>
-            <div class="tag tag1 tag-builder"></div>
+            <div class="tag tag1 tag-building"></div>
             <div class="number">205</div>
             <div class="content">
               <div class="production-box production-box-size1a">
@@ -4561,17 +4561,17 @@
           </li>
 
           <!--207-->
-          <li class="filterDiv filterDiv-stacked automated builderTag scienceTag corporate">
+          <li class="filterDiv filterDiv-stacked automated buildingTag scienceTag corporate">
             <div class="title background-color-automated">Medical Lab</div>
             <div class="price">13</div>
-            <div class="tag tag1 tag-builder"></div>
+            <div class="tag tag1 tag-building"></div>
             <div class="tag tag2 tag-science"></div>
             <div class="number">207</div>
             <div class="corporate-icon project-icon"></div>
             <div class="content">
               <div class="points points-big">1</div>
               <div class="production-box production-box-size3">
-                <div class="money production">1</div> / 2 <div class="resource-tag builder-resource"></div>
+                <div class="money production">1</div> / 2 <div class="resource-tag building-resource"></div>
               </div>
               <div class="description">
                 (Increase your M$ production 1 step for every 2 Building tags you have, including this.)
@@ -4580,10 +4580,10 @@
           </li>
 
           <!--208-->
-          <li class="filterDiv filterDiv-stacked active scienceTag builderTag corporate reqs" data-science = "3">
+          <li class="filterDiv filterDiv-stacked active scienceTag buildingTag corporate reqs" data-science = "3">
               <div class="title background-color-active ">AI Central</div>
               <div class="price ">21</div>
-              <div class="tag tag1 tag-builder "></div>
+              <div class="tag tag1 tag-building "></div>
               <div class="tag tag2 tag-science "></div>
               <div class="number ">208</div>
               <div class="corporate-icon project-icon"></div>
@@ -4629,7 +4629,7 @@
               <div class="content ">
                 <div class="requirements">2 Science</div>
                 <div class="red-arrow "></div>
-                <div class="resource card"><div class="production" style="position:absolute;background:white;color:black;margin-left:-4px;margin-top:7px;">2</div><div class="card-icon card-icon-space">&#x2734;</div><div class="card-icon card-icon-builder" style="margin-left:37px">&#x2617;</div></div>
+                <div class="resource card"><div class="production" style="position:absolute;background:white;color:black;margin-left:-4px;margin-top:7px;">2</div><div class="card-icon card-icon-space">&#x2734;</div><div class="card-icon card-icon-building" style="margin-left:37px">&#x2617;</div></div>
                 &nbsp;&nbsp;&nbsp;OR&nbsp;&nbsp;&nbsp;
                 <div class="red-arrow "></div>
                 <div class="production" style="background:white;color:black;vertical-align:middle">X</div> x2
@@ -5007,10 +5007,10 @@
             </li>
 
             <!--230-->
-            <li class="filterDiv filterDiv-stacked automated cityTag builderTag venusNext ">
+            <li class="filterDiv filterDiv-stacked automated cityTag buildingTag venusNext ">
                 <div class="title background-color-automated ">Gyropolis</div>
                 <div class="price ">20</div>
-                <div class="tag tag1 tag-builder "></div>
+                <div class="tag tag1 tag-building "></div>
                 <div class="tag tag2 tag-city "></div>
                 <div class="number ">230</div>
                 <div class="venus-icon project-icon"></div>
@@ -5174,10 +5174,10 @@
             </li>
 
             <!--239-->
-            <li class="filterDiv filterDiv-stacked automated builderTag venusNext reqs">
+            <li class="filterDiv filterDiv-stacked automated buildingTag venusNext reqs">
                 <div class="title background-color-automated ">Mining Quota</div>
                 <div class="price ">5</div>
-                <div class="tag tag1 tag-builder"></div>
+                <div class="tag tag1 tag-building"></div>
                 <div class="number ">239</div>
                 <div class="venus-icon project-icon"></div>
                 <div class="content ">
@@ -5208,10 +5208,10 @@
             </li>
 
             <!--241-->
-            <li class="filterDiv filterDiv-stacked automated builderTag venusNext reqs">
+            <li class="filterDiv filterDiv-stacked automated buildingTag venusNext reqs">
                 <div class="title background-color-automated ">Omnicourt</div>
                 <div class="price ">11</div>
-                <div class="tag tag1 tag-builder"></div>
+                <div class="tag tag1 tag-building"></div>
                 <div class="number ">241</div>
                 <div class="venus-icon project-icon"></div>
                 <div class="content ">
@@ -5636,9 +5636,9 @@
         </li>
 
         <!--prelude2-->
-        <li class="filterDiv filterDiv-stacked prelude preludeCards builderTag">
+        <li class="filterDiv filterDiv-stacked prelude preludeCards buildingTag">
           <div class="title background-color-prelude">Smelting Plant</div>
-          <div class="tag tag1 tag-builder"></div>
+          <div class="tag tag1 tag-building"></div>
           <div class="prelude-label">PRELUDE</div>
           <div class="prelude-icon project-icon"></div>
           <div class="content">
@@ -5768,11 +5768,11 @@
         </li>
 
         <!--prelude10-->
-        <li class="filterDiv filterDiv-stacked prelude preludeCards builderTag plantTag">
+        <li class="filterDiv filterDiv-stacked prelude preludeCards buildingTag plantTag">
           <div class="title background-color-prelude">Dome Farming</div>
           <div class="prelude-label">PRELUDE</div>
           <div class="tag tag1 tag-plant"></div>
-          <div class="tag tag2 tag-builder"></div>
+          <div class="tag tag2 tag-building"></div>
           <div class="prelude-icon project-icon"></div>
           <div class="content">
             <div class="production-box">
