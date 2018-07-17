@@ -30,84 +30,78 @@ function showAll() {
 }
 
 
-function filterSelection(id) {
-  var x, i;
+////////////////////// INPUTS FUCTION ///////////////////////////////
+function filterFunction(id) {
+  var input, filter, ul, li, a, i, x;
 
   clickedElementID = document.getElementById(id);
-  clickedElementID.classList.toggle("active");
-
-  //only one btn1 can be active at a time
-  activeButtons1 = document.querySelectorAll('.btn1');
-  if (clickedElementID.classList.contains("btn1")) {
-    for (i = 0; i < activeButtons1.length; i++) {
-      if (activeButtons1[i].id != clickedElementID.id) {
-        activeButtons1[i].classList.remove("active");
-      }
-    }
-  }
-
-  //only one btn3 can be active at a time
-  activeButtons3 = document.querySelectorAll('.btn3');
-  if (clickedElementID.classList.contains("btn3")) {
-    for (i = 0; i < activeButtons3.length; i++) {
-      if (activeButtons3[i].id != clickedElementID.id) {
-        activeButtons3[i].classList.remove("active");
-      }
-    }
-  }
+  if (clickedElementID != null) {clickedElementID.classList.toggle("active");}
 
   x = document.querySelectorAll('.filterDiv');
-  y = document.querySelectorAll('button.active');
-
-
-  if (y.length > 0) {
-    for (i = 0; i < x.length; i++) {
-      w3RemoveClass(x[i], "show");
-      show = true;
-      for (j = 0; j < y.length; j++) {
-        if (x[i].className.indexOf(y[j].id) > -1) {
-            } else {show = false;}
-        }
-        if (show == true) {
-          w3AddClass(x[i], "show");
-        }
-
-    }
-  } else {
-    showAll();
-  }
-  myFunction();
-}
-////////////////////// INPUTS FUCTION ///////////////////////////////
-function myFunction() {
-  var input, filter, ul, li, a, i;
-
-  //obtaining the list of displayed cards from buttons filters
-  x = document.querySelectorAll('.filterDiv');
-  y = document.querySelectorAll('button.active');
-
-  //shows all cards
   for (i = 0; i < x.length; i++) {w3AddClass(x[i], "show");}
 
-  //checks if there are clicked filter buttons and filter cards accordingly
-  if (y.length > 0) {
-    for (i = 0; i < x.length; i++) {
-      w3RemoveClass(x[i], "show");
-      show = true;
-      for (j = 0; j < y.length; j++) {
-        if (x[i].className.indexOf(y[j].id) > -1) {
-            } else {show = false;}
-        }
-        if (show == true) {
-          w3AddClass(x[i], "show");
-        }
+  //filtering by Type + Tag + Deck + Reqs
+  btn1 = document.querySelectorAll('button.active.btn1');
+  btn2 = document.querySelectorAll('button.active.btn2');
+  btn3 = document.querySelectorAll('button.active.btn3');
+  btn5 = document.querySelectorAll('button.active.btn5');
 
+  if (btn1.length > 0) {
+    for (i = 0; i < x.length; i++) {
+      show = false;
+      for (j = 0; j < btn1.length; j++) {
+        if (x[i].className.indexOf(btn1[j].id) > -1) {
+          show = true;
+        }
+        if (show == true) {w3AddClass(x[i], "show");}
+        else {w3RemoveClass(x[i], "show");}
+        }
     }
+    x = document.querySelectorAll('li.show');
+  }
+  if (btn2.length > 0) {
+    for (i = 0; i < x.length; i++) {
+      show = false;
+      for (j = 0; j < btn2.length; j++) {
+        if (x[i].className.indexOf(btn2[j].id) > -1) {
+          show = true;
+        }
+        if (show == true) {w3AddClass(x[i], "show");}
+        else {w3RemoveClass(x[i], "show");}
+        }
+    }
+    x = document.querySelectorAll('li.show');
+  }
+  if (btn3.length > 0) {
+    for (i = 0; i < x.length; i++) {
+      show = false;
+      for (j = 0; j < btn3.length; j++) {
+        if (x[i].className.indexOf(btn3[j].id) > -1) {
+          show = true;
+        }
+        if (show == true) {w3AddClass(x[i], "show");}
+        else {w3RemoveClass(x[i], "show");}
+        }
+    }
+    x = document.querySelectorAll('li.show');
+  }
+
+  if (btn5.length > 0) {
+    for (i = 0; i < x.length; i++) {
+      show = false;
+      for (j = 0; j < btn5.length; j++) {
+        if (x[i].className.indexOf(btn5[j].id) > -1) {
+          show = true;
+        }
+        if (show == true) {w3AddClass(x[i], "show");}
+        else {w3RemoveClass(x[i], "show");}
+        }
+    }
+    x = document.querySelectorAll('li.show');
   }
 
   //Filtering for the Requirements inputs
   if (document.getElementById("reqs").classList.contains("active")) {
-    //return the list of only visible cards
     li = document.querySelectorAll('li.show');
     //Requirements input filtering
     temperatureValue = document.getElementById("slider1").value;
@@ -115,8 +109,10 @@ function myFunction() {
     oceansValue = document.getElementById("slider3").value;
     venusValue = document.getElementById("slider4").value;
     scienceValue = document.getElementById("slider5").value;
+
     if ( temperatureValue > -30 || oxygenValue > 0 || oceansValue > 0 || venusValue > 0 || scienceValue > 0) {
-      for (i = 0; i < li.length; i++) {
+      for (i = 0; i < x.length; i++) {
+
         //obtaining the data without writing over it
         temperatureData = parseInt(li[i].dataset.temperature);
         oxygenData = parseInt(li[i].dataset.oxygen);
@@ -124,11 +120,6 @@ function myFunction() {
         venusData = parseInt(li[i].dataset.venus);
         scienceData = parseInt(li[i].dataset.science);
 
-        //check for max requirements
-        //max requirements are marked by adding "100" to its value
-        //the check is done by removing that 100 and making the data and value NEGATIVE
-        // and thus keeping the ">=" check
-        //the check
         show = false;
         if (temperatureValue > -30) {
           if ( temperatureValue <= temperatureData ) { show = true;}
@@ -147,7 +138,8 @@ function myFunction() {
         }
 
         //the check
-        if (!show) {w3RemoveClass(li[i], "show");}
+        if (show) {w3AddClass(li[i], "show");}
+        else {w3RemoveClass(li[i], "show");}
       }
     }
   } else {
@@ -164,11 +156,8 @@ function myFunction() {
 
 
 
-
-  //obtaining the new visible list after the subfilters check
-  li = document.querySelectorAll('li.show');
-
   //Text input filtering
+  li = document.querySelectorAll('li.show');   //obtaining the new visible list after the subfilters check
   input = document.getElementById("myInput");
   filter = input.value.toUpperCase();
   filter = filter.split(" ");
