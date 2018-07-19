@@ -20,8 +20,7 @@
 }
 
 .filterDiv:hover {
-  transform: none;
-  transform: scale(1.2);
+  transform: scale(1.1);
   box-shadow: 0 0 30px 15px black;
   transition: 0.2s;
   z-index: 99;
