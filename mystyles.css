@@ -23,7 +23,7 @@
   transform: none;
   transform: scale(1.1);
   box-shadow: 0 0 30px 15px black;
-  transition: 0.3s;
+  transition: 0.2s;
   z-index: 99;
 }
 
@@ -31,7 +31,7 @@
   transform: none;
   transform: scale(1.2);
   box-shadow: 0 0 30px 15px black;
-  transition: 0.3s;
+  transition: 0.2s;
   z-index: 99;
 }
 
