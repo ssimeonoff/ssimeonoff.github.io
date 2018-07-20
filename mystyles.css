@@ -19,8 +19,8 @@
 
 }
 
-.filterDiv:hover {
-  transform: none;
+.filterDiv-stacked:hover {
+  transform: translate(0,-10px);
   box-shadow: 0 0 30px 15px black;
   transition: 0.2s;
   z-index: 99;
