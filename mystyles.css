@@ -527,6 +527,23 @@
     margin-bottom: 20px;
 }
 
+.btn-vp {
+    outline: none;
+    background-color: rgb(255,204,100);
+    background: linear-gradient(#cc8b00, rgb(128, 87, 0),rgb(128, 87, 0));
+    height: 40px;
+    width: 80px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-right: 29px;
+    margin-bottom: 20px;
+    font-size: 26px;
+    text-shadow: 0 0 5px darkorange;
+    vertical-align: bottom;
+
+}
+
 .footer-button {
     outline: none;
     display: inline-block;
@@ -570,7 +587,7 @@
 
 .subfilterReqs-disabled {
   filter: grayscale(100%);
-  opacity: 0.5;
+  opacity: 0.2;
   }
 
 #footer {
