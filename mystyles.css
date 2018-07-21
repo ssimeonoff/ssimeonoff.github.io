@@ -451,7 +451,6 @@
     margin-right: 12px;
     margin-bottom: 10px;
     margin-top: 15px;
-
 }
 
 .btn2 {
@@ -501,7 +500,20 @@
     margin-bottom: 5px;
 }
 
-.btn5 {
+.btn-content {
+    outline: none;
+    height: 40px;
+    width: 123px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 13px;
+    border-radius: 8px;
+    margin-right: 28px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.btn-req {
     outline: none;
     background-color: rgb(255,204,100);
     background: linear-gradient(to right, #e28c22, rgb(255,204,100),rgb(255,204,100), #e28c22);
@@ -512,8 +524,7 @@
     font-size: 13px;
     border-radius: 8px;
     margin-right: 29px;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .footer-button {
@@ -543,20 +554,24 @@
     border: 2px solid rgb(137,137,137);
 }
 
-
-
-
-
-#subfilters {
+#contentFilters {
     display: none;
-    width: 815px;
-    padding: 20px 0;
+    width: 790px;
+    padding: 10px;
+    padding-bottom: 20px;
     border-radius: 10px;
-    margin-top: 0px;
-    margin-right: 10px;
+    margin-top: 8px;
+    margin-bottom: 5px;
     font-family: Arial, Verdana;
     font-size: 18px;
+    border-style: outset;
+    box-shadow: 0 0 4px 2px rgb(58,58,58);
 }
+
+.subfilterReqs-disabled {
+  filter: grayscale(100%);
+  opacity: 0.5;
+  }
 
 #footer {
   display: none;
@@ -1457,6 +1472,10 @@ input[type=range] {
   width: 150px;
   box-shadow: 0 0 4px 2px rgb(58,58,58);
 }
+
+input[type=range] :disabled {
+}
+
 
 input[type=range]:focus {
   outline: none;

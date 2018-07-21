@@ -12,23 +12,18 @@ function showAll() {
   document.getElementById("totalCorporations").innerHTML = displayedCorporations;
   document.getElementById("totalPreludes").innerHTML = displayedPreludes;
 
-
   //making all buttons inactive
   y = document.querySelectorAll('button.active');
   if (y.length > 0) {
-    y = document.querySelectorAll('button.active');
-    if (y.length > 0) {
       for (i = 0; i < y.length; i++) {
           y[i].classList.toggle("active");
       }
-    }
   }
   //showing all cards
   x = document.querySelectorAll('.filterDiv');
   for (i = 0; i < x.length; i++) {w3AddClass(x[i], "show");}
 
 }
-
 
 ////////////////////// INPUTS FUCTION ///////////////////////////////
 function filterFunction(id) {
@@ -41,16 +36,17 @@ function filterFunction(id) {
   for (i = 0; i < x.length; i++) {w3AddClass(x[i], "show");}
 
   //filtering by Type + Tag + Deck + Reqs
-  btn1 = document.querySelectorAll('button.active.btn1');
-  btn2 = document.querySelectorAll('button.active.btn2');
-  btn3 = document.querySelectorAll('button.active.btn3');
-  btn5 = document.querySelectorAll('button.active.btn5');
+  btnType = document.querySelectorAll('button.active.btn1');
+  btnTag = document.querySelectorAll('button.active.btn2');
+  btnDeck = document.querySelectorAll('button.active.btn3');
+  btnReq = document.querySelectorAll('button.active.btn-req');
 
-  if (btn1.length > 0) {
+
+  if (btnType.length > 0) {
     for (i = 0; i < x.length; i++) {
       show = false;
-      for (j = 0; j < btn1.length; j++) {
-        if (x[i].className.indexOf(btn1[j].id) > -1) {
+      for (j = 0; j < btnType.length; j++) {
+        if (x[i].className.indexOf(btnType[j].id) > -1) {
           show = true;
         }
         if (show == true) {w3AddClass(x[i], "show");}
@@ -59,11 +55,11 @@ function filterFunction(id) {
     }
     x = document.querySelectorAll('li.show');
   }
-  if (btn2.length > 0) {
+  if (btnTag.length > 0) {
     for (i = 0; i < x.length; i++) {
       show = false;
-      for (j = 0; j < btn2.length; j++) {
-        if (x[i].className.indexOf(btn2[j].id) > -1) {
+      for (j = 0; j < btnTag.length; j++) {
+        if (x[i].className.indexOf(btnTag[j].id) > -1) {
           show = true;
         }
         if (show == true) {w3AddClass(x[i], "show");}
@@ -72,11 +68,11 @@ function filterFunction(id) {
     }
     x = document.querySelectorAll('li.show');
   }
-  if (btn3.length > 0) {
+  if (btnDeck.length > 0) {
     for (i = 0; i < x.length; i++) {
       show = false;
-      for (j = 0; j < btn3.length; j++) {
-        if (x[i].className.indexOf(btn3[j].id) > -1) {
+      for (j = 0; j < btnDeck.length; j++) {
+        if (x[i].className.indexOf(btnDeck[j].id) > -1) {
           show = true;
         }
         if (show == true) {w3AddClass(x[i], "show");}
@@ -86,11 +82,11 @@ function filterFunction(id) {
     x = document.querySelectorAll('li.show');
   }
 
-  if (btn5.length > 0) {
+  if (btnReq.length > 0) {
     for (i = 0; i < x.length; i++) {
       show = false;
-      for (j = 0; j < btn5.length; j++) {
-        if (x[i].className.indexOf(btn5[j].id) > -1) {
+      for (j = 0; j < btnReq.length; j++) {
+        if (x[i].className.indexOf(btnReq[j].id) > -1) {
           show = true;
         }
         if (show == true) {w3AddClass(x[i], "show");}
@@ -98,10 +94,13 @@ function filterFunction(id) {
         }
     }
     x = document.querySelectorAll('li.show');
-  }
+  } else {document.getElementById("subfilterReqs").classList.add("subfilterReqs-disabled"); //to disble the subfilters
+}
+
 
   //Filtering for the Requirements inputs
   if (document.getElementById("reqs").classList.contains("active")) {
+    document.getElementById("subfilterReqs").classList.remove("subfilterReqs-disabled"); //enabling the subfilters
     li = document.querySelectorAll('li.show');
     //Requirements input filtering
     temperatureValue = document.getElementById("slider1").value;
@@ -185,7 +184,7 @@ function filterFunction(id) {
 
 function clearInput() {
   document.getElementById("myInput").value = ""; //resets the text input
-  document.getElementById("subfilters").style.display = "none"; //hides the range inputs div
+  document.getElementById("content").style.display = "none"; //hides the range inputs div
   document.getElementById("footer").style.display = "none"; //hide the footer
 
   //resets the range inputs
@@ -255,16 +254,20 @@ window.onclick = function(event) {
 }
 
 //toggle subfilters div
-function toggleSubfiltersDiv() {
-  if (document.getElementById("reqs").classList.contains("active")) {
-    containerHeight = containerHeight + 120;
+function toggleContentDiv() {
+  document.getElementById("content").classList.toggle("active");
+  if (document.getElementById("content").classList.contains("active")) {
+    containerHeight = containerHeight + 190;
     document.getElementById("buttonsContainer").style.height = containerHeight + "px";
-    $("#subfilters").fadeIn(200);
+    $("#contentFilters").fadeIn(200);
   }
   else {
-    containerHeight = containerHeight - 120;
-    document.getElementById("subfilters").style.display = "none"; //hides the range inputs div
+    containerHeight = containerHeight - 190;
+    document.getElementById("contentFilters").style.display = "none"; //hides the range inputs div
     document.getElementById("buttonsContainer").style.height = containerHeight + "px";
+    document.getElementById("reqs").classList.remove("active");
+    document.getElementById("subfilterReqs").classList.add("subfilterReqs-disabled");
+    filterFunction();
   }
 }
 

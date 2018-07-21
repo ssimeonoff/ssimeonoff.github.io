@@ -75,7 +75,7 @@
     </div>
 
     <div id="myBtnContainer3" style="display:inline-block;">
-      <button id="reqs" class="button btn5  button-icon tooltip" onclick="filterFunction(id);toggleSubfiltersDiv();" >REQUIREMENTS<span class="tooltiptext">filter cards with requirements</span></button>
+      <button id="content"  class="button btn-content tooltip" onclick="toggleContentDiv();" >CONTENT<span class="tooltiptext">filter cards by their content</span></button>
       <button id="standard" class="button btn3 standard-icon button-icon tooltip" onclick="filterFunction(id)"><span class="tooltiptext">filter Base game cards</span></button>
       <button id="corporate" class="button btn3 corporate-icon button-icon tooltip" onclick="filterFunction(id)"><span class="tooltiptext">filter Corporate Era cards</span></button>
       <button id="venusNext" class="button btn3 venus-icon button-icon tooltip" onclick="filterFunction(id)"><span class="tooltiptext">filter Venus Next cards</span></button>
@@ -90,8 +90,9 @@
       <span class="switch-selection"></span>
     </div>
       <button id="info" class="button btn4 tooltip" style="background:#444444;margin-left: 40px;height:30px; line-height: 19px;vertical-align:bottom;">info</button>
-      <div id="subfilters">
-        <div class="slider1">
+      <div id="contentFilters">
+        <button id="reqs" class="button btn-req tooltip" onclick="filterFunction(id)">REQUIREMENTS<span class="tooltiptext">filter cards with requirements</span></button>
+        <div id ="subfilterReqs" class="subfilterReqs-disabled">
           <output id="output1" for="slider1" class="output-label" style="color:#f25540;margin-left: 220px;">-30</output> <!-- Just to display selected value -->
           <input id="slider1" type="range" min="-30" max="8" value="-30" step="2" list="tickmarks" oninput="output1.value = slider1.value; filterFunction(id);" class="track-temp-background track-temp-thumb" style="width:210px;margin-right:60px;">
 
