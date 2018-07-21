@@ -39,7 +39,8 @@ function filterFunction(id) {
   btnType = document.querySelectorAll('button.active.btn1');
   btnTag = document.querySelectorAll('button.active.btn2');
   btnDeck = document.querySelectorAll('button.active.btn3');
-  btnReq = document.querySelectorAll('button.active.btn-req');
+  btnReq = document.getElementById('reqs');
+  btnVP = document.getElementById('vp');
 
 
   if (btnType.length > 0) {
@@ -55,6 +56,7 @@ function filterFunction(id) {
     }
     x = document.querySelectorAll('li.show');
   }
+
   if (btnTag.length > 0) {
     for (i = 0; i < x.length; i++) {
       show = false;
@@ -68,6 +70,7 @@ function filterFunction(id) {
     }
     x = document.querySelectorAll('li.show');
   }
+
   if (btnDeck.length > 0) {
     for (i = 0; i < x.length; i++) {
       show = false;
@@ -82,20 +85,23 @@ function filterFunction(id) {
     x = document.querySelectorAll('li.show');
   }
 
-  if (btnReq.length > 0) {
+  if (btnReq.classList.contains("active")) {
     for (i = 0; i < x.length; i++) {
-      show = false;
-      for (j = 0; j < btnReq.length; j++) {
-        if (x[i].className.indexOf(btnReq[j].id) > -1) {
-          show = true;
-        }
-        if (show == true) {w3AddClass(x[i], "show");}
+        if (x[i].className.indexOf(btnReq.id) > -1) {w3AddClass(x[i], "show");}
         else {w3RemoveClass(x[i], "show");}
         }
-    }
     x = document.querySelectorAll('li.show');
-  } else {document.getElementById("subfilterReqs").classList.add("subfilterReqs-disabled"); //to disble the subfilters
-}
+  } else {
+    document.getElementById("subfilterReqs").classList.add("subfilterReqs-disabled"); //to disble the subfilters
+  }
+
+  if (btnVP.classList.contains("active")) {
+    for (i = 0; i < x.length; i++) {
+        if (x[i].querySelectorAll(".points").length > 0) {w3AddClass(x[i], "show");}
+        else {w3RemoveClass(x[i], "show");}
+        }
+      x = document.querySelectorAll('li.show');
+    }
 
 
   //Filtering for the Requirements inputs

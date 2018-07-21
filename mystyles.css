@@ -502,11 +502,12 @@
 
 .btn-content {
     outline: none;
+    color: rgb(48,48,48);
+    font-weight: bold;
     height: 40px;
     width: 123px;
     cursor: pointer;
-    font-weight: bold;
-    font-size: 13px;
+    font-size: 16px;
     border-radius: 8px;
     margin-right: 28px;
     margin-bottom: 10px;
@@ -518,11 +519,10 @@
     background-color: rgb(255,204,100);
     background: linear-gradient(to right, #e28c22, rgb(255,204,100),rgb(255,204,100), #e28c22);
     height: 40px;
-    width: 123px;
+    width: 140px;
     cursor: pointer;
     font-weight: bold;
-    font-size: 13px;
-    border-radius: 8px;
+    font-size: 14px;
     margin-right: 29px;
     margin-bottom: 20px;
 }
