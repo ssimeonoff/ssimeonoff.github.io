@@ -190,6 +190,7 @@ function filterFunction(id) {
 
 function clearInput() {
   document.getElementById("myInput").value = ""; //resets the text input
+  document.getElementById("price").value = 0;
   document.getElementById("contentFilters").style.display = "none"; //hides the range inputs div
   document.getElementById("footer").style.display = "none"; //hide the footer
 

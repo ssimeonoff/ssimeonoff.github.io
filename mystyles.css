@@ -567,16 +567,21 @@
     border-radius: 5px;
     margin-right: 12px;
     margin-top: 15px;
-    box-shadow: 0 0 4px 2px rgb(58,58,58);
+    box-shadow: 0 0 4px 1px rgb(58,58,58);
 }
 
 .button {
-  box-shadow: 0 0 4px 2px rgb(58,58,58);
+  box-shadow: 0 0 4px 1px rgb(58,58,58);
+}
+
+.button2 {
+  box-shadow: 0 0 4px 1px rgb(58,58,58);
 }
 
 .button.active {
   border: 2px solid rgb(137,137,137);
-  box-shadow: inset 0 0 0 3px rgb(68,68,68), inset 0 0 0 5px rgba(0,0,0,0.3);
+  box-shadow: inset 0 0 0 3px rgb(68,68,68);
+  filter: brightness(120%);
 }
 
 .button:hover {
@@ -594,7 +599,7 @@
     font-family: Arial, Verdana;
     font-size: 18px;
     border-style: outset;
-    box-shadow: 0 0 4px 2px rgb(58,58,58);
+    box-shadow: 0 0 4px 1px rgb(58,58,58);
 }
 
 .subfilterReqs-disabled {
@@ -1235,14 +1240,26 @@
     font-size: 20px;
     font-weight: bold;
     padding: 0px 2px 0px 15px;
-    border: 2px solid #ddd;
     margin-top: 10px;
     margin-bottom: 25px;
     margin-right: 15px;
     border-radius: 20px;
     border-style: outset;
     box-shadow: 0 0 4px 1px rgb(58,58,58);
+}
 
+#price {
+    outline: none;
+    background-repeat: no-repeat;
+    text-align: center;
+    width: 44px;
+    height: 44px;
+    font-size: 26px;
+    font-weight: bold;
+    border-radius: 10px;
+    border-style: outset;
+    box-shadow: 0 0 4px 1px rgb(58,58,58);
+    background: linear-gradient(rgb(255,208,4),rgb(255,255,104),rgb(255,208,4),rgb(255,208,4));
 }
 
 .myUL {
@@ -1499,7 +1516,7 @@ input[type=range] {
   margin-right: 40px;
   margin-top: 14px;
   width: 150px;
-  box-shadow: 0 0 4px 2px rgb(58,58,58);
+  box-shadow: 0 0 4px 1px rgb(58,58,58);
 }
 
 input[type=range] :disabled {
@@ -1769,4 +1786,14 @@ input[type=range]:focus::-ms-fill-upper {
   -ms-transition: left 0.15s ease-out;
   -o-transition: left 0.15s ease-out;
   transition: left 0.15s ease-out;
+}
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+/* Webkit browsers like Safari and Chrome */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
