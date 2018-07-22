@@ -519,6 +519,7 @@
     background-color: rgb(255,204,100);
     background: linear-gradient(to right, #e28c22, rgb(255,204,100),rgb(255,204,100), #e28c22);
     height: 40px;
+    border-radius: 8px;
     width: 140px;
     cursor: pointer;
     font-weight: bold;
@@ -536,7 +537,7 @@
     cursor: pointer;
     font-weight: bold;
     border-radius: 8px;
-    margin-right: 29px;
+    margin-right: 10px;
     margin-bottom: 20px;
     font-size: 26px;
     text-shadow: 0 0 5px darkorange;

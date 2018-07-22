@@ -46,7 +46,7 @@
   margin-top: 12px;
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
-  grid-gap: 10px;
+  grid-gap: 5px;
 }
 .grid-container > div {
   color: rgb(68, 68, 68);
