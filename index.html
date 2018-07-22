@@ -92,8 +92,8 @@
       <button id="info" class="button2 btn4 tooltip" style="background:#444444;margin-left: 40px;height:30px; line-height: 19px;vertical-align:bottom;">info</button>
       <div id="contentFilters">
         <button class="button2 btn-price" style="" onclick="reduceOne()">-</button>
-        <input class="tooltip" type="number" id="price" oninput="filterFunction(id);" value="0" min="0" max="50">
-        <button class="button2 btn-price" style="margin-right:10px;" onclick="increaseOne()">+</button>
+        <input  type="number" id="price" oninput="filterFunction(id);" value="0" min="0" max="50">
+        <button class="button2 btn-price" style="margin-right:20px;" onclick="increaseOne()">+</button>
         <button id="vp" class="button btn-vp tooltip" onclick="filterFunction(id)">VP<span class="tooltiptext">filter cards with VP</span></button>
         <button id="reqs" class="button btn-req tooltip" onclick="filterFunction(id)">REQUIREMENTS<span class="tooltiptext">filter cards with requirements</span></button>
         <div id ="subfilterReqs" class="subfilterReqs-disabled">
@@ -116,7 +116,7 @@
       </div>
     </div>
     <div id="myBtnContainer4" style="display:inline-block;">
-      <input class="tooltip" type="text" id="myInput" oninput="filterFunction(id);" placeholder="Search by text ..." title="Type in a name">
+      <input type="text" id="myInput" oninput="filterFunction(id);" placeholder="Search by text ..." title="Type in a name">
       <button id="reset" class="button2 btn4 reset-icon button-icon tooltip" onclick="clearInput();showAll();" style="margin-right: 65px;">RESET</button>
       <button id="about2" onclick="toggleFooterDiv();" class="button2 btn4 tooltip" style="background:#444444;margin-left: 16px;height:30px; line-height: 19px;">About</button>
     </div>

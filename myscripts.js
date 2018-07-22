@@ -25,7 +25,7 @@ function showAll() {
 
 }
 
-////////////////////// INPUTS FUCTION ///////////////////////////////
+////////////////////// FILTER FUCTION ///////////////////////////////
 function filterFunction(id) {
   var input, filter, ul, li, a, i, x;
 
@@ -42,7 +42,7 @@ function filterFunction(id) {
   btnReq = document.getElementById('reqs');
   btnVP = document.getElementById('vp');
 
-
+  //filter by Card type
   if (btnType.length > 0) {
     for (i = 0; i < x.length; i++) {
       show = false;
@@ -57,6 +57,7 @@ function filterFunction(id) {
     x = document.querySelectorAll('li.show');
   }
 
+  //filter by Tag
   if (btnTag.length > 0) {
     for (i = 0; i < x.length; i++) {
       show = false;
@@ -71,6 +72,7 @@ function filterFunction(id) {
     x = document.querySelectorAll('li.show');
   }
 
+  //filter by Deck type
   if (btnDeck.length > 0) {
     for (i = 0; i < x.length; i++) {
       show = false;
@@ -85,6 +87,7 @@ function filterFunction(id) {
     x = document.querySelectorAll('li.show');
   }
 
+  //filter by Requirements
   if (btnReq.classList.contains("active")) {
     for (i = 0; i < x.length; i++) {
         if (x[i].className.indexOf(btnReq.id) > -1) {w3AddClass(x[i], "show");}
@@ -95,14 +98,28 @@ function filterFunction(id) {
     document.getElementById("subfilterReqs").classList.add("subfilterReqs-disabled"); //to disble the subfilters
   }
 
+  //filter by VP
   if (btnVP.classList.contains("active")) {
     for (i = 0; i < x.length; i++) {
         if (x[i].querySelectorAll(".points").length > 0) {w3AddClass(x[i], "show");}
         else {w3RemoveClass(x[i], "show");}
-        }
-      x = document.querySelectorAll('li.show');
-    }
+      }
+    x = document.querySelectorAll('li.show');
+  }
 
+  //filter by price
+  priceValue = document.getElementById("price").value;
+  if (priceValue < 0) {document.getElementById("price").value = 0;}
+  if (priceValue > 50) {document.getElementById("price").value = 50;}
+  if (priceValue > 0) {
+    for (i = 0; i < x.length; i++) {
+        if (x[i].querySelector(".price") == null) {cardValue = 0;}
+        else {cardValue = parseInt(x[i].querySelector(".price").textContent);}
+        if (cardValue > priceValue) {w3AddClass(x[i], "show");}
+        else {w3RemoveClass(x[i], "show");}
+      }
+    x = document.querySelectorAll('li.show');
+  }
 
   //Filtering for the Requirements inputs
   if (document.getElementById("reqs").classList.contains("active")) {
@@ -159,7 +176,7 @@ function filterFunction(id) {
     document.getElementById("output4").innerHTML = 0;
   }
 
-
+///////////////////////////////////////////////////////////////////////////////
 
   //Text input filtering
   li = document.querySelectorAll('li.show');   //obtaining the new visible list after the subfilters check
@@ -326,13 +343,19 @@ function stackedCards() {
 function reduceOne() {
   price = document.getElementById("price");
   priceValue = document.getElementById("price").value;
-  if (priceValue>0) {priceValue--;} 
-  price.value = priceValue;
+  if (priceValue>0) {
+    priceValue--;
+    price.value = priceValue;
+    filterFunction();
+  }
 }
 
 function increaseOne() {
   price = document.getElementById("price");
   priceValue = document.getElementById("price").value;
-  if (priceValue<50) {priceValue++;}
-  price.value = priceValue;
+  if (priceValue<50) {
+    priceValue++;
+    price.value = priceValue;
+    filterFunction();
+  }
 }

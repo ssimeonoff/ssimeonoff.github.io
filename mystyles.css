@@ -442,11 +442,12 @@
 /************** Style the buttons ************/
 .btn1 {
     outline: none;
+    font-family: Arial Narrow, Helvetica, sans-serif;
     height: 40px;
     width: 123px;
     cursor: pointer;
     font-weight: bold;
-    font-size: 13px;
+    font-size: 16px;
     border-radius: 8px;
     margin-right: 12px;
     margin-bottom: 10px;
@@ -502,6 +503,7 @@
 
 .btn-content {
     outline: none;
+    font-family: Arial Narrow, Helvetica, sans-serif;
     color: rgb(48,48,48);
     font-weight: bold;
     height: 40px;
@@ -537,7 +539,7 @@
     cursor: pointer;
     font-weight: bold;
     border-radius: 8px;
-    margin-right: 10px;
+    margin-right: 20px;
     margin-bottom: 20px;
     font-size: 24px;
     text-shadow: 0 0 5px darkorange;
