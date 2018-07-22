@@ -322,3 +322,17 @@ function stackedCards() {
         tableTitles[i].style.margin = "15px 0px 0px 25px";
     }
 }
+
+function reduceOne() {
+  price = document.getElementById("price");
+  priceValue = document.getElementById("price").value;
+  if (priceValue>0) {priceValue--;} 
+  price.value = priceValue;
+}
+
+function increaseOne() {
+  price = document.getElementById("price");
+  priceValue = document.getElementById("price").value;
+  if (priceValue<50) {priceValue++;}
+  price.value = priceValue;
+}
