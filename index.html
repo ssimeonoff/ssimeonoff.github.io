@@ -91,6 +91,9 @@
     </div>
       <button id="info" class="button btn4 tooltip" style="background:#444444;margin-left: 40px;height:30px; line-height: 19px;vertical-align:bottom;">info</button>
       <div id="contentFilters">
+        <button class="button btn-price">-</button>
+        <input class="tooltip" type="number" id="price" oninput="filterFunction(id);" value="0">
+        <button class="button btn-price" style="margin-right:10px;">+</button>
         <button id="vp" class="button btn-vp tooltip" onclick="filterFunction(id)">VP<span class="tooltiptext">filter cards with VP</span></button>
         <button id="reqs" class="button btn-req tooltip" onclick="filterFunction(id)">REQUIREMENTS<span class="tooltiptext">filter cards with requirements</span></button>
         <div id ="subfilterReqs" class="subfilterReqs-disabled">

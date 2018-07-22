@@ -542,7 +542,18 @@
     font-size: 26px;
     text-shadow: 0 0 5px darkorange;
     vertical-align: bottom;
+}
 
+.btn-price {
+    outline: none;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 26px;
+    vertical-align: bottom;
 }
 
 .footer-button {
