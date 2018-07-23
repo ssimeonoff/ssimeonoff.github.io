@@ -525,7 +525,7 @@
     border-radius: 8px;
     width: 140px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 15px;
     margin-right: 29px;
     margin-bottom: 20px;
 }
@@ -665,7 +665,7 @@
     line-height: 25px;
     text-align: center;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 15px;
     box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
 }
 
