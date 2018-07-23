@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Prototype;
+    src: url(fonts/Prototype.ttf);
+}
+
 .filterDiv {
     float: left;
     position: relative;
@@ -37,7 +42,7 @@
 
 .price {
     float: left;
-    font-family: Arial Narrow, Helvetica, sans-serif;
+    font-family: Prototype;
     font-size: 26px;
     border-style: outset;
     background: rgb(255,228,4);
@@ -49,20 +54,19 @@
     text-align: center;
     margin-top: -76px;
     margin-left: -7px;
-    font-weight: bold;
     box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
 }
 
 .number {
     float: left;
+    font-family: Prototype;
     width: 36px;
     height: 20px;
     line-height: 20px;
     text-align: center;
     margin-top: -64px;
     margin-left: 50px;
-    font-size: 11px;
-    font-weight: bold;
+    font-size: 12px;
     box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
     background: #cccccc;
     border-radius: 2px;
@@ -229,6 +233,7 @@
 
 .title {
     text-transform: uppercase;
+    font-family: Prototype;
     float: left;
     margin-top: 36px;
     margin-left: -1px;
@@ -237,8 +242,7 @@
     border-radius: 4px;
     line-height: 30px;
     text-align: center;
-    font-size: 14px;
-    font-weight: bold;
+    font-size: 16px;
     text-align: center;
 }
 
@@ -442,12 +446,11 @@
 /************** Style the buttons ************/
 .btn1 {
     outline: none;
-    font-family: Arial Narrow, Helvetica, sans-serif;
+    font-family: Prototype;
     height: 40px;
     width: 123px;
     cursor: pointer;
-    font-weight: bold;
-    font-size: 16px;
+    font-size: 14px;
     border-radius: 8px;
     margin-right: 12px;
     margin-bottom: 10px;
@@ -490,10 +493,9 @@
     border-radius: 20px;
     text-align: center;
     font-size:16px;
-    font-weight: bold;
     letter-spacing: 1px;
     color:white;
-    font-family: Arial,Verdana;
+    font-family: Prototype;
     background-color: #cc3333;
     vertical-align: middle;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
@@ -502,10 +504,9 @@
 }
 
 .btn-content {
+  font-family: Prototype;
     outline: none;
-    font-family: Arial Narrow, Helvetica, sans-serif;
     color: rgb(48,48,48);
-    font-weight: bold;
     height: 40px;
     width: 123px;
     cursor: pointer;
@@ -524,7 +525,6 @@
     border-radius: 8px;
     width: 140px;
     cursor: pointer;
-    font-weight: bold;
     font-size: 14px;
     margin-right: 29px;
     margin-bottom: 20px;
@@ -537,7 +537,6 @@
     height: 40px;
     width: 80px;
     cursor: pointer;
-    font-weight: bold;
     border-radius: 8px;
     margin-right: 20px;
     margin-bottom: 20px;
@@ -574,10 +573,13 @@
 
 .button {
   box-shadow: 0 0 4px 1px rgb(58,58,58);
+  font-family: Prototype;
+
 }
 
 .button2 {
   box-shadow: 0 0 4px 1px rgb(58,58,58);
+  font-family: Prototype;
 }
 
 .button.active {
@@ -616,14 +618,13 @@
 
 .footer-links {
   display: inline-block;
+  font-family: Prototype;
   text-decoration: none;
   text-align: center;
-  font-family: Arial, Verdana;
   background: #ddd;
   color: #444444;
   outline: none;
   cursor: pointer;
-  font-weight: bold;
   font-size: 14px;
   line-height: 30px;
   margin-top: -10px;
@@ -653,6 +654,7 @@
 }
 
 .requirements {
+  font-family: Prototype;
     background-color: rgb(255,204,100);
     background: linear-gradient(to right, #e28c22, rgb(255,204,100),rgb(255,204,100), #e28c22);
     border-style: outset;
@@ -662,8 +664,8 @@
     height: 25px;
     line-height: 25px;
     text-align: center;
-    font-weight: bold;
-    font-size: 13px;
+    font-weight: normal;
+    font-size: 14px;
     box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
 }
 
@@ -673,6 +675,8 @@
 
 .points {
     position: absolute;
+    font-family: Prototype;
+    font-weight: normal;
     margin-top: 177px;
     margin-left: 137px;
     width: 80px;
@@ -1233,6 +1237,7 @@
 
 /************** Style the Input field************/
 #myInput {
+    font-family: Prototype;
     outline: none;
     background-position: 10px 12px;
     background-repeat: no-repeat;
@@ -1240,7 +1245,6 @@
     height: 40px;
     line-height: 40px;
     font-size: 20px;
-    font-weight: bold;
     padding: 0px 2px 0px 15px;
     margin-top: 10px;
     margin-bottom: 25px;
@@ -1252,12 +1256,12 @@
 
 #price {
     outline: none;
+    font-family: Prototype;
     background-repeat: no-repeat;
     text-align: center;
     width: 44px;
     height: 44px;
     font-size: 26px;
-    font-weight: bold;
     border-radius: 10px;
     border-style: outset;
     box-shadow: 0 0 4px 1px rgb(58,58,58);
@@ -1285,12 +1289,9 @@
 
 
 .totalCardsCount {
-  display: inline-block;
-    font-family: Arial, Helvetica, sans-serif;
     display: inline-block;
     font-size: 30px;
     vertical-align: middle;
-    font-weight: bold;
     text-shadow: 0 0 5px darkorange;
 }
 
@@ -1391,9 +1392,8 @@
     height: 60px;
     line-height: 60px;
     display: inline-block;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 32px;
+    font-family: Prototype;
+    font-size: 34px;
     border-style: inset;
     background: #eeeeee;
     border-radius: 10px;
@@ -1406,7 +1406,8 @@
 }
 
 .cardsContainer {
-  vertical-align: top;
+  font-family: Prototype;
+    vertical-align: top;
     text-align: right;
     display: inline-block;
     border-style: inset;

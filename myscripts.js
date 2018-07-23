@@ -115,7 +115,7 @@ function filterFunction(id) {
     for (i = 0; i < x.length; i++) {
         if (x[i].querySelector(".price") == null) {cardValue = 0;}
         else {cardValue = parseInt(x[i].querySelector(".price").textContent);}
-        if (cardValue > priceValue) {w3AddClass(x[i], "show");}
+        if (cardValue >= priceValue) {w3AddClass(x[i], "show");}
         else {w3RemoveClass(x[i], "show");}
       }
     x = document.querySelectorAll('li.show');
