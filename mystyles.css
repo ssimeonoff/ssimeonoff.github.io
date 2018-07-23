@@ -540,7 +540,7 @@
     border-radius: 8px;
     margin-right: 20px;
     margin-bottom: 20px;
-    font-size: 24px;
+    font-size: 26px;
     text-shadow: 0 0 5px darkorange;
     vertical-align: bottom;
 }
@@ -665,7 +665,7 @@
     line-height: 25px;
     text-align: center;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 16px;
     box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
 }
 
@@ -1266,6 +1266,7 @@
     border-style: outset;
     box-shadow: 0 0 4px 1px rgb(58,58,58);
     background: linear-gradient(rgb(255,208,4),rgb(255,255,104),rgb(255,208,4),rgb(255,208,4));
+    padding: 0px;
 }
 
 .myUL {
