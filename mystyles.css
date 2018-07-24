@@ -19,14 +19,12 @@
 
 .filterDiv-stacked {
   transform:  perspective(3500px) rotateY(45deg);
-  box-shadow: -10px 0px 20px 0px black;
+  box-shadow: 0 0 30px 15px black;
   margin-right: -130px;
-
 }
 
 .filterDiv-stacked:hover {
   transform: translate(0,-10px);
-  box-shadow: 0 0 30px 15px black;
   transition: 0.2s;
   z-index: 99;
 }
@@ -38,7 +36,11 @@
 .colonyCards {
   height: 240px;
   width: 375px;
+  background-color: black;
+  background-repeat: no-repeat;
+
 }
+
 
 .price {
     float: left;
@@ -513,7 +515,6 @@
     font-size: 16px;
     border-radius: 8px;
     margin-right: 28px;
-    margin-bottom: 10px;
     margin-top: 20px;
 }
 
@@ -750,7 +751,6 @@
     line-height: 25px;
     margin: 3px;
     text-align: center;
-    font-size: 16px;
     border-radius: 2px;
     box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
 }
@@ -946,7 +946,7 @@
     margin-bottom: 10px;
     border-radius: 5px;
     font-size: 16px;
-    min-width: 26px;
+    min-width: 28px;
     box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
 }
 
@@ -965,6 +965,7 @@
     background-color: rgb(255,228,4);
     background: linear-gradient(rgb(255,208,4),rgb(255,255,104),rgb(255,208,4),rgb(255,208,4));
     font-weight: bold;
+    font-size: 18px;
     border-radius: 5px;
     padding: 1px;
 
@@ -1081,7 +1082,7 @@
 
 .card-icon {
   position: absolute;
-  margin-left: 14px;
+  margin-left: 15px;
   margin-top: -14px;
   width: 20px;
   height: 20px;
@@ -1095,6 +1096,7 @@
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   font-size:14px;
   line-height: 22px;
+  margin-top: -14px;
 }
 .card-icon-microbe {
   background: linear-gradient(#bce444, #8cb319);
@@ -1116,9 +1118,15 @@
 .card-icon-space {
   background: black;
   color:yellow;
-  font-size: 12px;
+  font-size: 14px;
   border-radius: 50%;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.card-icon-plant {
+  background: linear-gradient(#0bda0b,#09aa09);
+  color: rgb(63,112,58);
+  font-size: 14px;
+  border-radius: 50%;
 }
 
 .card-icon-building {
@@ -1415,7 +1423,7 @@
     border-radius: 10px;
     padding-top: 3px;
     height:57px;
-    padding-right: 18px;
+    padding-right: 10px;
     background: linear-gradient(to right, rgb(128, 87, 0), rgb(205,162, 130), rgb(205,162, 130), rgb(128, 87, 0));
 }
 

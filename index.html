@@ -16,13 +16,13 @@
 
 <html>
 
-<body background="mars.jpg" style="background-color:black;background-repeat:no-repeat; background-size:100%">
+<body background="images/mars.jpg" style="background-color:black;background-repeat:no-repeat; background-size:100%">
   <div id="buttonsContainer">
     <div id="titleContainer">
       TERRAFORMING MARS
   </div>
     <div class="cardsContainer">
-      <div style="display:inline-block;width:164px;">
+      <div style="display:inline-block;width:170px;">
       <div id="totalProjects" class="totalCardsCount"></div>
       <div class="resource card" style="display:inline-block;transform: rotate(-8deg);"></div>
       <div class="resource card" style="display:inline-block;transform: rotate(-4deg);margin-left:-25px;"></div>
@@ -30,12 +30,12 @@
       <div class="resource card" style="display:inline-block;transform: rotate(4deg);margin-left:-25px;"></div>
       <div class="resource card" style="display:inline-block;transform: rotate(8deg);margin-left:-25px;"></div>
       </div>
-      <div style="display:inline-block; width:110px;">
+      <div style="display:inline-block; width:108px;">
       <div id="totalCorporations" class="totalCardsCount"></div>
       <div class="resource card-corporation" style="display:inline-block;transform: rotate(-10deg)"><span style="background:linear-gradient(to right, rgb(255,204,100), #e28c22);padding-left:4px;padding-right:4px;border-radius:2px;">CORP</span></div>
       <div class="resource card-corporation" style="display:inline-block;transform: rotate(10deg);margin-left:-52px"><span style="background:linear-gradient(to right, rgb(255,204,100), #e28c22);padding-left:4px;padding-right:4px;border-radius:2px;">CORP</span></div>
       </div>
-      <div style="display:inline-block;width:95px;">
+      <div style="display:inline-block;width:105px;">
       <div id="totalPreludes" class="totalCardsCount"></div>
       <div class="resource card-corporation" style="display:inline-block;transform: rotate(-10deg)"><span style="background:linear-gradient(to right, rgb(235,118,171), #e64d91);padding-left:4px;padding-right:4px;border-radius:2px;">PREL</span></div>
       <div class="resource card-corporation" style="display:inline-block;transform: rotate(10deg);margin-left:-52px"><span style="background:linear-gradient(to right, rgb(235,118,171), #e64d91);padding-left:4px;padding-right:4px;border-radius:2px;">PREL</span></div>
@@ -74,7 +74,7 @@
       <button id="venusTag" class="button btn2 tag-venus tooltip" onclick="filterFunction(id)"><span class="tooltiptext">filter by Venus tag</span></button>
     </div>
 
-    <div id="myBtnContainer3" style="display:inline-block;">
+    <div id="myBtnContainer3" style="display:inline-block;line-height:30px;margin-bottom:10px;">
       <button id="content"  class="button btn-content tooltip" onclick="toggleContentDiv();" >CONTENT<span class="tooltiptext">filter cards by their content</span></button>
       <button id="standard" class="button btn3 standard-icon button-icon tooltip" onclick="filterFunction(id)"><span class="tooltiptext">filter Base game cards</span></button>
       <button id="corporate" class="button btn3 corporate-icon button-icon tooltip" onclick="filterFunction(id)"><span class="tooltiptext">filter Corporate Era cards</span></button>
@@ -323,10 +323,10 @@
                         ">
                     ecoline
                 </span><br>
-        <div class="production-box production-box-size2" style="margin-top:5px;">
+        <div class="production-box production-box-size2" style="margin-top:5px;margin-right:10px;">
           <div class="production plant"></div><div class="production plant"></div>
         </div>
-        <div class="resource money">36</div><div class="resource plant"></div><div class="resource plant"></div><div class="resource plant"></div>
+         <div class="resource money">36</div> 3<div class="resource plant"></div>
         <div class="description" style="margin-top:0px;text-align:center;">(You start with 2 plant production, 3 plants, and 36M$)</div>
 
       </div>
@@ -603,7 +603,7 @@
                 <div class="corporationEffectBox ">
                     <div class="corporationEffectBoxLabel ">EFFECT</div>
                     <div class="tile city-tile-small red-outline"></div>*: <div class="production-box"><div class="production money">1</div></div>&nbsp;&nbsp;
-                      <div class="tile city-tile-small"></div>:<div class="production money">3</div>
+                      <div class="tile city-tile-small"></div>:<div class="resource money">3</div>
 
                     <div class="description " style="text-align:center;margin-top:0px; ">
                         (Effect: When any city tile is placed ON MARS, increase your M$ production 1 step. When you place a city tile, gain 3 M$.)
@@ -890,67 +890,7 @@
       <ul class="myUL" style="clear:both;">
       <div class="ul-title">PROJECT CARDS</div>
 
-        <!--Project cards------------------------------------------------------>
-
-            <!--C01-->
-            <li class="filterDiv filterDiv-stacked automated spaceTag earthTag promo ">
-                <div class="title background-color-automated ">Lunar Exports</div>
-                <div class="price ">19</div>
-                <div class="tag tag1 tag-earth"></div>
-                <div class="tag tag2 tag-space"></div>
-                <div class="number ">C01</div>
-                <div class="promo-icon project-icon"></div>
-                <div class="content ">
-                  <div class="production-box production-box-size4">
-                    <div class="plant production"></div><div class="plant production"></div> OR <div class="money production">5</div>
-                  </div>
-                  <div class="description" style="margin-top:-5px">
-                    (Increase your plant production 2 steps, or your M$ production 5 steps.)
-                  </div>
-                </div>
-            </li>
-
-            <!--C02-->
-            <li class="filterDiv filterDiv-stacked active promo ">
-                <div class="title background-color-active ">Atmo Collectors</div>
-                <div class="price ">15</div>
-                <div class="number ">C02</div>
-                <div class="promo-icon project-icon"></div>
-                <div class="content ">
-                    <div class="red-arrow "></div> <div class="floater resource "></div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OR <br>
-                    <div class="floater resource "></div> <div class="red-arrow "></div> 2<div class="titanium resource "></div> / 3<div class="energy resource "></div> / 4<div class="heat resource "></div>
-                    <div class="description ">
-                      (Action: Add 1 floater here, or spend 1 floater here to gain 2 titanium, or 3 energy, or 4 heat.)
-                    </div>
-                    <div class="resource floater"></div><div class="resource floater"></div>*
-                    <br>
-                    <div class="description ">
-                      (Add 2 floaters to ANY card.)
-                    </div>
-                </div>
-            </li>
-
-            <!--C03-->
-            <li class="filterDiv filterDiv-stacked active promo reqs jovianTag spaceTag" data-jovian = "1">
-                <div class="title background-color-active ">Jovian Lanterns</div>
-                <div class="price ">21</div>
-                <div class="tag tag1 tag-space "></div>
-                <div class="tag tag2 tag-jovian "></div>
-                <div class="number ">C03</div>
-                <div class="promo-icon project-icon"></div>
-                <div class="content ">
-                  <div class="points">1/2<div class="resource floater"></div></div>
-                  <div class="requirements">Jovian</div>
-                    <div class="resource titanium"></div> <div class="red-arrow "></div> <div class="resource floater"></div><div class="resource floater"></div>
-                    <div class="description ">
-                      (Action: Spend 1 titanium to add 2 floaters here.)
-                    </div>
-                    <div class="tile rating"></div> <div class="resource floater"></div><div class="resource floater"></div>*
-                    <div class="description " style="margin-top:-5px;text-align:left;">
-                      (Requires 1 Jovian tag. Increase your TR 1 step. Add 2 floaters to ANY <br> card. 1VP per 2 floaters.)
-                    </div>
-                </div>
-            </li>
+      <!--Project cards------------------------------------------------------>
 
         <!--1-->
         <li class="filterDiv filterDiv-stacked automated buildingTag jovianTag standard reqs" data-oxygen="5">
@@ -4711,6 +4651,9 @@
                 </div>
             </li>
 
+
+            <!--Project Cards - VenusNext ---------------------------------------->
+
             <!--213-->
             <li class="filterDiv filterDiv-stacked venusNext active venusTag ">
               <div class="title background-color-active">Aerial Mappers</div>
@@ -4983,9 +4926,9 @@
                 <div class="content ">
                   <div class="points points-big">2</div>
                     <div class="requirements">10% Venus</div>
-                   <div class="resource microbe"><div class="card-icon card-icon-venus" style="color: white;margin-top: -36px;margin-left: 12px;font-weight:bold;">V</div></div> <div class="resource microbe"><div class="card-icon card-icon-venus" style="font-weight:bold;color: white;margin-top: -36px;margin-left: 12px;">V</div></div>
+                   <div class="resource microbe"><div class="card-icon card-icon-venus" style="color: white;margin-top: -36px;font-weight:bold;">V</div></div> <div class="resource microbe"><div class="card-icon card-icon-venus" style="font-weight:bold;color: white;margin-top: -36px;">V</div></div>
                   &nbsp;&nbsp;  OR &nbsp;&nbsp;
-                   <div class="resource animal"><div class="card-icon card-icon-venus" style="color: white;margin-top: -36px;margin-left: 12px;font-weight:bold;">V</div></div> <div class="resource animal"><div class="card-icon card-icon-venus" style="font-weight:bold;color: white;margin-top: -36px;margin-left: 12px;">V</div></div>
+                   <div class="resource animal"><div class="card-icon card-icon-venus" style="color: white;margin-top: -36px;font-weight:bold;">V</div></div> <div class="resource animal"><div class="card-icon card-icon-venus" style="font-weight:bold;color: white;margin-top: -36px;">V</div></div>
 
                    <div class="production-box production-box-size1a" style="margin-left:135px;">
                        <div class="production-prefix">&#x2796;&#xFE0E;</div><div class="energy production"></div>
@@ -5385,7 +5328,7 @@
                     <div class="money production">2</div>
                   </div>
                   &nbsp;<div class="tile city-tile"></div>*
-                    <div class="description " style="text-align:left;margin-top:-63px">
+                    <div class="description " style="text-align:left;margin-top:-54px">
                       (Requires 2 <br> science tags.<br> Increase your <br> M$ production <br>2 steps. Place a City tile ON <br>THE RESERVED AREA.<br>
                       1 VP for every 3rd Floater <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; on this card.)
                     </div>
@@ -5482,7 +5425,7 @@
                 <div class="venus-icon project-icon"></div>
                 <div class="content ">
                   <div class="requirements">6% Venus</div>
-                    <div class="red-arrow " style="margin-left:76px;"></div> <div class="resource microbe"><div class="card-icon card-icon-venus" style="color: white;margin-top: -36px;margin-left: 12px;font-weight:bold;">V</div></div>
+                    <div class="red-arrow " style="margin-left:76px;"></div> <div class="resource microbe"><div class="card-icon card-icon-venus" style="color: white;margin-top: -36px;font-weight:bold;">V</div></div>
                     <br>
                   OR <div class="microbe resource "></div><div class="microbe resource "></div> <div class="red-arrow "></div> <div class="tile venus-tile">V</div>
                     <div class="description ">
@@ -5639,8 +5582,8 @@
                   <div class="points points-big">1</div>
                   <div class="requirements">16% Venus</div>
                   <div class="tile venus-tile">V</div>
-                  <br><div class="microbe resource"><div class="card-icon card-icon-venus" style="color: white;margin-top: -36px;margin-left: 12px;font-weight:bold;">V</div></div> OR
-                  <div class="animal resource"><div class="card-icon card-icon-venus" style="color: white;margin-top: -36px;margin-left: 12px;font-weight:bold;">V</div></div>
+                  <br><div class="microbe resource"><div class="card-icon card-icon-venus" style="color: white;margin-top: -36px;font-weight:bold;">V</div></div> OR
+                  <div class="animal resource"><div class="card-icon card-icon-venus" style="color: white;margin-top: -36px;font-weight:bold;">V</div></div>
                   <div class="description">
                     (Requires Venus 16%. Raise Venus 1 step. Add 1 Microbe or 1 Animal to ANOTHER VENUS CARD).
                   </div>
@@ -5648,60 +5591,89 @@
             </li>
           </ul>
 
+          <!--Project Cards - Prelude ---------------------------------------->
+
+          <!--Project Cards - Colonies ---------------------------------------->
+
+          <!--C01-->
+          <li class="filterDiv filterDiv-stacked automated spaceTag earthTag promo ">
+            <div class="title background-color-automated ">Lunar Exports</div>
+            <div class="price ">19</div>
+            <div class="tag tag1 tag-earth"></div>
+            <div class="tag tag2 tag-space"></div>
+            <div class="number ">C01</div>
+            <div class="promo-icon project-icon"></div>
+            <div class="content ">
+              <div class="production-box production-box-size4">
+                <div class="plant production"></div><div class="plant production"></div> OR <div class="money production">5</div>
+              </div>
+              <div class="description" style="margin-top:-5px">
+                (Increase your plant production 2 steps, or your M$ production 5 steps.)
+              </div>
+            </div>
+          </li>
+
+          <!--C02-->
+          <li class="filterDiv filterDiv-stacked active promo ">
+            <div class="title background-color-active ">Atmo Collectors</div>
+            <div class="price ">15</div>
+            <div class="number ">C02</div>
+            <div class="promo-icon project-icon"></div>
+            <div class="content ">
+              <div class="red-arrow "></div> <div class="floater resource "></div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OR <br>
+              <div class="floater resource "></div> <div class="red-arrow "></div> 2<div class="titanium resource "></div> / 3<div class="energy resource "></div> / 4<div class="heat resource "></div>
+              <div class="description ">
+                (Action: Add 1 floater here, or spend 1 floater here to gain 2 titanium, or 3 energy, or 4 heat.)
+              </div>
+              <div class="resource floater"></div><div class="resource floater"></div>*
+              <br>
+              <div class="description ">
+                (Add 2 floaters to ANY card.)
+              </div>
+            </div>
+          </li>
+
+          <!--C03-->
+          <li class="filterDiv filterDiv-stacked active promo reqs jovianTag spaceTag" data-jovian = "1">
+            <div class="title background-color-active ">Jovian Lanterns</div>
+            <div class="price ">21</div>
+            <div class="tag tag1 tag-space "></div>
+            <div class="tag tag2 tag-jovian "></div>
+            <div class="number ">C03</div>
+            <div class="promo-icon project-icon"></div>
+              <div class="content ">
+                <div class="points">1/2<div class="resource floater"></div></div>
+                <div class="requirements">Jovian</div>
+                <div class="resource titanium"></div> <div class="red-arrow "></div> <div class="resource floater"></div><div class="resource floater"></div>
+                <div class="description ">
+                  (Action: Spend 1 titanium to add 2 floaters here.)
+                </div>
+                <div class="tile rating"></div> <div class="resource floater"></div><div class="resource floater"></div>*
+                <div class="description " style="margin-top:-5px;text-align:left;">
+                  (Requires 1 Jovian tag. Increase your TR 1 step. Add 2 floaters to ANY <br> card. 1VP per 2 floaters.)
+                </div>
+              </div>
+            </li>
 
 
 
     <ul class="myUL" style="clear:both;">
     <!--PRELUDES------------------------------------------->
     <div class="ul-title">PRELUDES</div>
-        <!--prelude1-->
+
         <li class="filterDiv filterDiv-stacked prelude preludeCards">
-          <div class="title background-color-prelude">Orbital Construction</div>
-          <div class="tag tag1"></div>
+          <div class="title background-color-prelude">Acquired Space Agency</div>
           <div class="prelude-label">PRELUDE</div>
           <div class="prelude-icon"></div>
           <div class="content">
-            <div class="production-box"><div class="production titanium"></div></div></br>
-            <div class="resource titanium"></div><div class="resource titanium"></div><div class="resource titanium"></div><div class="resource titanium"></div>
+            <div class="resource titanium"></div><div class="resource titanium"></div><div class="resource titanium"></div><div class="resource titanium"></div><div class="resource titanium"></div><div class="resource titanium"></div>
+            <div class="resource card"><div class="card-icon card-icon-space">&#x2734;</div></div> <div class="resource card"><div class="card-icon card-icon-space">&#x2734;</div></div>
             <div class="description">
-              (Increase your titanium production 1 step. Gain 4 titanium.)
+              (Gain 6 titanium. Reveal cards until you reveal two cards with Space Tags. Take them into your hand, discard the rest.)
             </div>
           </div>
         </li>
 
-        <!--prelude2-->
-        <li class="filterDiv filterDiv-stacked prelude preludeCards buildingTag">
-          <div class="title background-color-prelude">Smelting Plant</div>
-          <div class="tag tag1 tag-building"></div>
-          <div class="prelude-label">PRELUDE</div>
-          <div class="prelude-icon project-icon"></div>
-          <div class="content">
-          <div class="tile oxygen-tile"></div><div class="tile oxygen-tile"></div><br>
-          <div class="resource steel"></div><div class="resource steel"></div><div class="resource steel"></div><div class="resource steel"></div><div class="resource steel"></div>
-          <div class="description">
-            (Raise oxygen 2 steps. Gain 5 steel.)
-          </div>
-          </div>
-        </li>
-
-        <!--prelude3-->
-        <li class="filterDiv filterDiv-stacked prelude preludeCards powerTag">
-          <div class="title background-color-prelude">Supplier</div>
-          <div class="tag tag1 tag-power"></div>
-          <div class="prelude-label">PRELUDE</div>
-          <div class="prelude-icon project-icon"></div>
-          <div class="content">
-            <div class="production-box production-box-size2">
-              <div class="production energy"></div><div class="production energy"></div>
-            </div><br>
-            <div class="resource steel"></div><div class="resource steel"></div><div class="resource steel"></div><div class="resource steel"></div>
-            <div class="description">
-              (Increase your energy production 2 steps. Gain 4 steel.)
-            </div>
-          </div>
-        </li>
-
-        <!--prelude4-->
         <li class="filterDiv filterDiv-stacked prelude preludeCards ">
           <div class="title background-color-prelude">Allied Banks</div>
           <div class="prelude-label">PRELUDE</div>
@@ -5717,7 +5689,6 @@
           </div>
         </li>
 
-        <!--prelude5-->
         <li class="filterDiv filterDiv-stacked prelude preludeCards powerTag">
           <div class="title background-color-prelude">Aquifier Turbines</div>
           <div class="tag tag1 tag-power"></div>
@@ -5735,7 +5706,6 @@
           </div>
         </li>
 
-        <!--prelude6-->
         <li class="filterDiv filterDiv-stacked prelude preludeCards microbeTag">
           <div class="title background-color-prelude">Biofuels</div>
           <div class="tag tag1 tag-microbe"></div>
@@ -5752,7 +5722,6 @@
           </div>
         </li>
 
-        <!--prelude7-->
         <li class="filterDiv filterDiv-stacked prelude preludeCards scienceTag">
           <div class="title background-color-prelude">Biolab</div>
           <div class="tag tag1 tag-science"></div>
@@ -5769,7 +5738,6 @@
           </div>
         </li>
 
-        <!--prelude8-->
         <li class="filterDiv filterDiv-stacked prelude preludeCards plantTag">
           <div class="title background-color-prelude">Biosphere Support</div>
           <div class="tag tag1 tag-plant"></div>
@@ -5786,22 +5754,22 @@
           </div>
         </li>
 
-        <!--prelude9-->
-        <li class="filterDiv filterDiv-stacked prelude preludeCards ">
-          <div class="title background-color-prelude">Class M Planetoid</div>
+        <li class="filterDiv filterDiv-stacked prelude preludeCards earthTag">
+          <div class="title background-color-prelude">Business Empire</div>
+          <div class="tag tag1 tag-earth"></div>
           <div class="prelude-label">PRELUDE</div>
           <div class="prelude-icon project-icon"></div>
           <div class="content">
-            <div class="tile temperature-tile"></div>
-            <div class="resource titanium"></div><div class="resource titanium"></div><div class="resource titanium"></div><div class="resource titanium"></div>
-            <div class="resource steel"></div><div class="resource steel"></div><div class="resource steel"></div><div class="resource steel"></div>
+            <div class="production-box">
+              <div class="production money">6</div>
+            </div><br>
+            - <div class="resource money">6</div>
             <div class="description">
-              (Increase temperature 1 step. Gain 4 titanium and 4 steel.)
+              (Increase your M$ production 6 steps. Pay 6 M$.)
             </div>
           </div>
         </li>
 
-        <!--prelude10-->
         <li class="filterDiv filterDiv-stacked prelude preludeCards buildingTag plantTag">
           <div class="title background-color-prelude">Dome Farming</div>
           <div class="prelude-label">PRELUDE</div>
@@ -5818,7 +5786,18 @@
           </div>
         </li>
 
-        <!--prelude11-->
+        <li class="filterDiv filterDiv-stacked prelude preludeCards">
+          <div class="title background-color-prelude">Donation</div>
+          <div class="prelude-label">PRELUDE</div>
+          <div class="prelude-icon project-icon"></div>
+          <div class="content">
+            <div class="resource money">21</div>
+            <div class="description">
+              (Gain 21 M$.)
+            </div>
+          </div>
+        </li>
+
         <li class="filterDiv filterDiv-stacked prelude preludeCards buildingTag cityTag">
           <div class="title background-color-prelude">Early Settlement</div>
           <div class="prelude-label">PRELUDE</div>
@@ -5835,7 +5814,6 @@
           </div>
         </li>
 
-        <!--prelude12-->
         <li class="filterDiv filterDiv-stacked prelude preludeCards plantTag microbeTag">
           <div class="title background-color-prelude">Ecology Experts</div>
           <div class="prelude-label">PRELUDE</div>
@@ -5853,9 +5831,34 @@
           </div>
         </li>
 
-        <!--prelude13-->
+        <li class="filterDiv filterDiv-stacked prelude preludeCards ">
+          <div class="title background-color-prelude">Eccentric Sponsor</div>
+          <div class="prelude-label">PRELUDE</div>
+          <div class="prelude-icon project-icon"></div>
+          <div class="content">
+            <div class="resource card"></div> : <div class="resource money">-25</div>
+            <div class="description">
+              (Play 1 card from hand with a 25 M$ reduction.)
+            </div>
+          </div>
+        </li>
+
+        <li class="filterDiv filterDiv-stacked prelude preludeCards plantTag">
+          <div class="title background-color-prelude">Experiemental Forest</div>
+          <div class="prelude-label">PRELUDE</div>
+          <div class="tag tag1 tag-plant"></div>
+          <div class="prelude-icon"></div>
+          <div class="content">
+            <div class="tile forest-tile"></div>
+            <div class="resource card"><div class="card-icon card-icon-plant">&#x1F331&#xFE0E;</div></div> <div class="resource card"><div class="card-icon card-icon-plant">&#x1F331&#xFE0E;</div></div>
+            <div class="description">
+              ( Place 1 Greenery Tile. Reveal cards until you reveal two cards with plant tags on them. Take them into your hand and discard the rest.)
+            </div>
+          </div>
+        </li>
+
         <li class="filterDiv filterDiv-stacked prelude preludeCards jovianTag">
-          <div class="title background-color-prelude">Mining the Galilean Moons</div>
+          <div class="title background-color-prelude">Galilean Mining</div>
           <div class="prelude-label">PRELUDE</div>
           <div class="tag tag1 tag-jovian"></div>
           <div class="prelude-icon project-icon"></div>
@@ -5870,7 +5873,136 @@
           </div>
         </li>
 
-        <!--prelude14-->
+        <li class="filterDiv filterDiv-stacked prelude preludeCards">
+          <div class="title background-color-prelude">Great Aquifier</div>
+          <div class="prelude-label">PRELUDE</div>
+          <div class="prelude-icon project-icon"></div>
+          <div class="content">
+            <div class="tile ocean-tile"></div> <div class="tile ocean-tile"></div>
+            <div class="description">
+              (Place 2 Ocean tiles.)
+            </div>
+          </div>
+        </li>
+
+        <li class="filterDiv filterDiv-stacked prelude preludeCards">
+          <div class="title background-color-prelude">Huge Asteroid</div>
+          <div class="prelude-label">PRELUDE</div>
+          <div class="prelude-icon project-icon"></div>
+          <div class="content">
+            <div class="tile temperature-tile"></div> <div class="tile temperature-tile"></div> <div class="tile temperature-tile"></div> <br>
+            - <div class="resource money">5</div>
+            <div class="description">
+              (Increase emperature 3 steps. Pay 5 M$.)
+            </div>
+          </div>
+        </li>
+
+        <li class="filterDiv filterDiv-stacked prelude preludeCards jovianTag">
+          <div class="title background-color-prelude">IO Research Outpost</div>
+          <div class="prelude-label">PRELUDE</div>
+          <div class="tag tag1 tag-jovian"></div>
+          <div class="prelude-icon project-icon"></div>
+          <div class="content">
+            <div class="production-box"><div class="production titanium"></div></div></br>
+            <div class="resource card"></div>
+            <div class="description">
+              (Increase your titanium production 1 step. Draw a card.)
+            </div>
+          </div>
+        </li>
+
+        <li class="filterDiv filterDiv-stacked prelude preludeCards">
+          <div class="title background-color-prelude">Loan</div>
+          <div class="prelude-label">PRELUDE</div>
+          <div class="prelude-icon project-icon"></div>
+          <div class="content">
+            <div class="production-box production-box-size1a">
+              <div class="production-prefix">&#x2796;&#xFE0E;</div><div class="money production">2</div>
+            </div><br>
+            <div class="resource money">30</div>
+            <div class="description">
+              (Gain 30 M$. Decrease your M$ production 2 steps.)
+            </div>
+          </div>
+        </li>
+
+        <li class="filterDiv filterDiv-stacked prelude preludeCards buildingTag">
+          <div class="title background-color-prelude">Martian Industries</div>
+          <div class="tag tag1 tag-building"></div>
+          <div class="prelude-label">PRELUDE</div>
+          <div class="prelude-icon project-icon"></div>
+          <div class="content">
+            <div class="production-box production-box-size2" style="vertical-align: bottom;">
+              <div class="production energy"></div><div class="production steel"></div>
+            </div><br>
+            <div class="resource money">6</div>
+            <div class="description">
+              (Increase your energy and steel production 1 step. Gain 6 M$.)
+            </div>
+          </div>
+        </li>
+
+        <li class="filterDiv filterDiv-stacked prelude preludeCards">
+          <div class="title background-color-prelude">Metal-rich Asteroid</div>
+          <div class="prelude-label">PRELUDE</div>
+          <div class="prelude-icon project-icon"></div>
+          <div class="content">
+            <div class="tile temperature-tile"></div>
+            <div class="resource titanium"></div><div class="resource titanium"></div><div class="resource titanium"></div><div class="resource titanium"></div><br>
+            <div class="resource steel"></div><div class="resource steel"></div><div class="resource steel"></div><div class="resource steel"></div>
+            <div class="description">
+              (Increase temperature 1 step. Gain 4 titanium and 4 steel.)
+            </div>
+          </div>
+        </li>
+
+        <li class="filterDiv filterDiv-stacked prelude preludeCards">
+          <div class="title background-color-prelude">Metals Company</div>
+          <div class="prelude-label">PRELUDE</div>
+          <div class="prelude-icon project-icon"></div>
+          <div class="content">
+            <div class="production-box production-box-size3">
+              <div class="production money">1</div><div class="production steel"></div><div class="production titanium"></div>
+            </div><br>
+            <div class="description">
+              (Increase your M$, steel and titanium production 1 step.)
+            </div>
+          </div>
+        </li>
+
+        <li class="filterDiv filterDiv-stacked prelude preludeCards">
+          <div class="title background-color-prelude">Mining Operations</div>
+          <div class="tag tag1 tag-building"></div>
+          <div class="prelude-label">PRELUDE</div>
+          <div class="prelude-icon project-icon"></div>
+          <div class="content">
+            <div class="production-box production-box-size2">
+              <div class="production steel"></div><div class="production steel"></div>
+            </div><br>
+            <div class="resource steel"></div><div class="resource steel"></div><div class="resource steel"></div><div class="resource steel"></div>
+            <div class="description">
+              (Increase your steel production 2 steps. Gain 4 steel.)
+            </div>
+          </div>
+        </li>
+
+        <li class="filterDiv filterDiv-stacked prelude preludeCards buildingTag">
+          <div class="title background-color-prelude">Mohole</div>
+          <div class="prelude-label">PRELUDE</div>
+          <div class="tag tag1 tag-building"></div>
+          <div class="prelude-icon project-icon"></div>
+          <div class="content">
+            <div class="production-box production-box-size3">
+              <div class="production heat"></div><div class="production heat"></div><div class="production heat"></div>
+            </div><br>
+            <div class="resource heat"></div><div class="resource heat"></div><div class="resource heat"></div>
+            <div class="description">
+              (Increase your heat production 3 steps. Gain 3 heat.)
+            </div>
+          </div>
+        </li>
+
         <li class="filterDiv filterDiv-stacked prelude preludeCards buildingTag">
           <div class="title background-color-prelude">Mohole Excavation</div>
           <div class="prelude-label">PRELUDE</div>
@@ -5888,9 +6020,8 @@
           </div>
         </li>
 
-        <!--prelude15-->
         <li class="filterDiv filterDiv-stacked prelude preludeCards">
-          <div class="title background-color-prelude">Nitrogen Supply</div>
+          <div class="title background-color-prelude">Nitrogen Shipment</div>
           <div class="prelude-label">PRELUDE</div>
           <div class="prelude-icon project-icon"></div>
           <div class="content">
@@ -5904,7 +6035,35 @@
           </div>
         </li>
 
-        <!--prelude16-->
+        <li class="filterDiv filterDiv-stacked prelude preludeCards spaceTag">
+          <div class="title background-color-prelude">Orbital Construction Yard</div>
+          <div class="tag tag1 tag-space"></div>
+          <div class="prelude-label">PRELUDE</div>
+          <div class="prelude-icon"></div>
+          <div class="content">
+            <div class="production-box"><div class="production titanium"></div></div></br>
+            <div class="resource titanium"></div><div class="resource titanium"></div><div class="resource titanium"></div><div class="resource titanium"></div>
+            <div class="description">
+              (Increase your titanium production 1 step. Gain 4 titanium.)
+            </div>
+          </div>
+        </li>
+
+        <li class="filterDiv filterDiv-stacked prelude preludeCards buildingTag">
+          <div class="title background-color-prelude">Polar Industries</div>
+          <div class="prelude-label">PRELUDE</div>
+          <div class="tag tag1 tag-building"></div>
+          <div class="prelude-icon project-icon"></div>
+          <div class="content">
+            <div class="production-box production-box-size2">
+              <div class="production heat"></div><div class="production heat"></div>
+            </div> &nbsp; <div class="tile ocean-tile"></div><br>
+            <div class="description">
+              (Increase your heat production 2 steps. Place an Ocean tile.)
+            </div>
+          </div>
+        </li>
+
         <li class="filterDiv filterDiv-stacked prelude preludeCards powerTag">
           <div class="title background-color-prelude">Power Generation</div>
           <div class="prelude-label">PRELUDE</div>
@@ -5920,9 +6079,85 @@
           </div>
         </li>
 
-        <!--prelude17-->
+        <li class="filterDiv filterDiv-stacked prelude preludeCards buildingTag spaceTag scienceTag plantTag microbeTag animalTag powerTag jovianTag earthTag cityTag eventTag venusTag">
+          <div class="title background-color-prelude">Research Network</div>
+          <div class="prelude-label">PRELUDE</div>
+          <div class="tag tag1" style="line-height:40px">WILD</div>
+          <div class="prelude-icon project-icon"></div>
+          <div class="content">
+            <div class="production-box ">
+              <div class="production money">1</div>
+            </div><br>
+            <div class="resource card"></div><div class="resource card"></div><div class="resource card"></div>
+            <div class="description">
+              (Increase your money production 1 step. Draw 3 cards.)
+            </div>
+          </div>
+        </li>
+
+        <li class="filterDiv filterDiv-stacked prelude preludeCards cityTag buildingTag">
+          <div class="title background-color-prelude">Self-Sufficient Settlement</div>
+          <div class="prelude-label">PRELUDE</div>
+          <div class="tag tag1 tag-building"></div>
+          <div class="tag tag2 tag-city"></div>
+          <div class="prelude-icon project-icon"></div>
+          <div class="content">
+            <div class="production-box ">
+              <div class="production money">2</div>
+            </div><br>
+            <div class="tile city-tile"></div>
+            <div class="description">
+              (Increase your money production 2 step. Place a City tile.)
+            </div>
+          </div>
+        </li>
+
+        <li class="filterDiv filterDiv-stacked prelude preludeCards buildingTag">
+          <div class="title background-color-prelude">Smelting Plant</div>
+          <div class="tag tag1 tag-building"></div>
+          <div class="prelude-label">PRELUDE</div>
+          <div class="prelude-icon project-icon"></div>
+          <div class="content">
+            <div class="tile oxygen-tile"></div><div class="tile oxygen-tile"></div><br>
+            <div class="resource steel"></div><div class="resource steel"></div><div class="resource steel"></div><div class="resource steel"></div><div class="resource steel"></div>
+            <div class="description">
+              (Raise oxygen 2 steps. Gain 5 steel.)
+            </div>
+          </div>
+        </li>
+
+        <li class="filterDiv filterDiv-stacked prelude preludeCards">
+          <div class="title background-color-prelude">Socienty Support</div>
+          <div class="prelude-label">PRELUDE</div>
+          <div class="prelude-icon project-icon"></div>
+          <div class="content">
+            <div class="production-box production-box-size3">
+              <div class="production plant"></div><div class="production energy"></div><div class="production heat"></div>
+            </div>
+            <div class="description">
+              (Increase your plant, energy and heat production 1 step.)
+            </div>
+          </div>
+        </li>
+
+        <li class="filterDiv filterDiv-stacked prelude preludeCards powerTag">
+          <div class="title background-color-prelude">Supplier</div>
+          <div class="tag tag1 tag-power"></div>
+          <div class="prelude-label">PRELUDE</div>
+          <div class="prelude-icon project-icon"></div>
+          <div class="content">
+            <div class="production-box production-box-size2">
+              <div class="production energy"></div><div class="production energy"></div>
+            </div><br>
+            <div class="resource steel"></div><div class="resource steel"></div><div class="resource steel"></div><div class="resource steel"></div>
+            <div class="description">
+              (Increase your energy production 2 steps. Gain 4 steel.)
+            </div>
+          </div>
+        </li>
+
         <li class="filterDiv filterDiv-stacked prelude preludeCards ">
-          <div class="title background-color-prelude">Raw Material Delivery</div>
+          <div class="title background-color-prelude">Supply Drop</div>
           <div class="prelude-label">PRELUDE</div>
           <div class="prelude-icon project-icon"></div>
           <div class="content">
@@ -5933,18 +6168,22 @@
           </div>
         </li>
 
-        <!--prelude18-->
-        <li class="filterDiv filterDiv-stacked prelude preludeCards ">
-          <div class="title background-color-prelude">Eccentric Sponsor</div>
+        <li class="filterDiv filterDiv-stacked prelude preludeCards earthTag">
+          <div class="title background-color-prelude">UNMI Contractor</div>
+          <div class="tag tag1 tag-earth"></div>
           <div class="prelude-label">PRELUDE</div>
           <div class="prelude-icon project-icon"></div>
           <div class="content">
-            <div class="resource card"></div> : <div class="resource money">-25</div>
+            <div class="tile rating"></div><div class="tile rating"></div><div class="tile rating"></div> <div class="resource card"></div>
             <div class="description">
-              (Play 1 card from hand with a 25 M$ reduction.)
+              (Increase your TR 3 steps. Draw a card.)
             </div>
           </div>
         </li>
+
+
+
+
 
 
 
@@ -5954,13 +6193,37 @@
   <!--COLONIES------------------------------------------->
   <div class="ul-title">COLONIES</div>
 
-      <li class="filterDiv filterDiv-stacked colonyCards colonies">
+      <li class="filterDiv filterDiv-stacked colonyCards colonies" style="
+      background-image:url('images/callisto.png');
+      background-size: 300px 300px;
+      background-position: bottom 0px right -75px;
+      box-shadow: inset 0 0 10px 5px rgb(155,52,144);
+      ">
+        <div class="colonyBackground"></div>
       </li>
 
-      <li class="filterDiv filterDiv-stacked colonyCards colonies">
+      <li class="filterDiv filterDiv-stacked colonyCards colonies" style="
+      background-image:url('images/ceres.png');
+      background-size: 100px 100px;
+      background-position: bottom 90px right 30px;
+      box-shadow: inset 0 0 10px 5px rgb(124,157,200);
+      ">
       </li>
 
-      <li class="filterDiv filterDiv-stacked colonyCards colonies">
+      <li class="filterDiv filterDiv-stacked colonyCards colonies" style="
+      background-image:url('images/europa.png');
+      background-size: 220px 220px;
+      background-position: bottom 20px right -5px;
+      box-shadow: inset 0 0 10px 5px rgb(188,149,120);
+      ">
+      </li>
+
+      <li class="filterDiv filterDiv-stacked colonyCards colonies" style="
+      background-image:url('images/enceladus.png');
+      background-size: 150px 150px;
+      background-position: bottom 20px right -25px;
+      box-shadow: inset 0 0 10px 5px rgb(215,222,168);
+      ">
       </li>
   <br>
   <br>
