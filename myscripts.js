@@ -362,7 +362,7 @@ function increaseOne() {
 
 function sortByPrice() {
   // get array of elements
-    var myArray = document.querySelectorAll('.filterDiv');
+    var myArray = document.querySelectorAll('li.automated, li.events, li.active');
     var count = 0;
     // sort based on timestamp attribute
     myArray = [].slice.call(myArray);
@@ -372,6 +372,7 @@ function sortByPrice() {
     if (a == null) {a = 0}
     b = parseInt($(b).find(".price").text(), 10);
     if (b == null) {b = 0}
+    console.log(a+ " and " +b);
     count += 2;
     // compare
     if(a > b) {

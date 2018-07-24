@@ -518,6 +518,17 @@
     margin-top: 20px;
 }
 
+.btn-sort {
+  font-family: Prototype;
+    outline: none;
+    color: rgb(48,48,48);
+    height: 40px;
+    width: 85px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
 .btn-req {
     outline: none;
     background-color: rgb(255,204,100);
@@ -600,7 +611,7 @@
     padding-bottom: 20px;
     border-radius: 10px;
     margin-top: 8px;
-    margin-bottom: 5px;
+    margin-bottom: -5px;
     font-family: Arial, Verdana;
     font-size: 18px;
     border-style: outset;
