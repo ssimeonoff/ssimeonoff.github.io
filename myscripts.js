@@ -343,7 +343,7 @@ function stackedCards() {
 function reduceOne() {
   price = document.getElementById("price");
   priceValue = document.getElementById("price").value;
-  if (priceValue>0) {
+  if (priceValue > 0) {
     priceValue--;
     price.value = priceValue;
     filterFunction();
@@ -358,4 +358,30 @@ function increaseOne() {
     price.value = priceValue;
     filterFunction();
   }
+}
+
+function sortByPrice() {
+  // get array of elements
+    var myArray = document.querySelectorAll('.filterDiv');
+    var count = 0;
+    // sort based on timestamp attribute
+    myArray = [].slice.call(myArray);
+    myArray.sort(function (a, b) {
+    // convert to integers from strings
+    a = parseInt($(a).find(".price").text(), 10);
+    if (a == null) {a = 0}
+    b = parseInt($(b).find(".price").text(), 10);
+    if (b == null) {b = 0}
+    count += 2;
+    // compare
+    if(a > b) {
+        return 1;
+    } else if(a < b) {
+        return -1;
+    } else {
+        return 0;
+    }
+  });
+  // put sorted results back on page
+  $("#projectCards").append(myArray);
 }
