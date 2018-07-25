@@ -1820,3 +1820,15 @@ input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+
+.robinson {
+  font-family: Prototype;
+  margin-left:10px;
+  font-size: 20px;
+  line-height: 16px;
+  width: 150px;
+  padding-left:4px;
+  text-align: center;
+  background:white;
+  font-weight: normal;
+}
