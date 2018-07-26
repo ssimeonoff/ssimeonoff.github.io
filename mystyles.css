@@ -3,10 +3,6 @@
     font-family: Prototype;
     src: url(fonts/Prototype.ttf);
 }
-@font-face {
-    font-family: Nasa;
-    src: url(fonts/Nasa.ttf);
-}
 
 /*project card div*/
 .filterDiv {
