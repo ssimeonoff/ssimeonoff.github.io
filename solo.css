@@ -45,7 +45,7 @@
   margin-left: 195px;
   margin-top: 12px;
   display: grid;
-  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
   grid-gap: 5px;
 }
 .grid-container > div {
@@ -53,11 +53,11 @@
   text-align: center;
   font-size: 14px;
   font-weight: bold;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
+  width: 26px;
+  height: 26px;
+  line-height: 26px;
   border-radius: 20px;
-  margin-top: 2px;
+  margin-top: 5px;
 }
 
 .grid-container2 {
