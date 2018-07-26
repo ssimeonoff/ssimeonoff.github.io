@@ -3,6 +3,11 @@
     src: url(fonts/Prototype.ttf);
 }
 
+@font-face {
+    font-family: Nasa;
+    src: url(fonts/Nasa.ttf);
+}
+
 .filterDiv {
     float: left;
     position: relative;
