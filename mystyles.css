@@ -1444,6 +1444,20 @@
 }
 
 
+.colony-card-title-div {
+  margin-left: 0px;
+  margin-top: 20px;
+}
+
+.colony-card-title-span {
+  font-family: Prototype;
+  font-size: 40px;
+  padding-left: 10px;
+  padding-right: 25px;
+}
+
+
+
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
