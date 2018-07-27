@@ -17,6 +17,7 @@
     margin: 15px;
     border-style: outset;
     border-radius: 20px;
+    box-shadow: 0 0 30px 15px black;
 }
 
 .filterDiv-stacked {
@@ -1301,13 +1302,15 @@
 }
 
 .ul-title {
-  font-family: Arial;
-  font-size: 14px;
-  font-weight: bold;
+  position: relative;
+  z-index: 1;
+  font-family: Prototype;
+  font-size: 16px;
   font-style: italic;
+  letter-spacing: 1px;
   padding-left: 5px;
   border-radius: 10px;
-  background: linear-gradient(to right,#c19900, #bb511d88,#bb511d00);
+  background: linear-gradient(to right,#d8ab00, #c19900, #bb511d88,#bb511d00);
   margin-left: 25px;
   width: 880px;
 }
@@ -1323,19 +1326,19 @@
 .corporationLabel {
     float: left;
     position:absolute;
+    font-family: Prototype;
     width: 115px;
     height: 14px;
     line-height: 15px;
     text-align: center;
     margin-top: -10px;
     margin-left: 24px;
-    font-size: 10px;
-    font-weight: bold;
+    font-size: 13px;
     box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
     background: #cccccc;
     background-color: rgb(255,204,100);
     background: linear-gradient(to right, #e28c22, rgb(255,204,100),rgb(255,204,100), #e28c22);
-    border-radius: 2px;
+    border-radius: 7px 7px 2px 2px;
 }
 
 .corporationEffectBox {
@@ -1411,6 +1414,7 @@
     height: 330px;
     margin-top: 40px;
     transition: height 0.2s;
+    box-shadow: 0 0 30px 15px black;
 }
 
 #titleContainer {
@@ -1466,7 +1470,7 @@
 
 .colony-background-color {
   background: linear-gradient(to right, #ccc, rgba(0,0,0,0));
-  padding-left: 3px;
+  padding-left: 5px;
   padding-right: 20px;
   border-radius: 2px;
 }

@@ -39,7 +39,7 @@
 }
 
 .grid-container {
-  font-family: Arial;
+  font-family: Prototype;
   position: absolute;
   display: inline-block;
   margin-left: 195px;
@@ -49,20 +49,20 @@
   grid-gap: 5px;
 }
 .grid-container > div {
-  color: rgb(68, 68, 68);
-  text-align: center;
-  font-size: 14px;
-  font-weight: bold;
-  width: 26px;
-  height: 26px;
-  line-height: 26px;
-  border-radius: 20px;
-  margin-top: 5px;
+      color: rgb(68, 68, 68);
+      text-align: center;
+      font-size: 15px;
+      width: 28px;
+      height: 28px;
+      line-height: 28px;
+      border-radius: 20px;
+      margin-top: 3px;
 }
 
 .grid-container2 {
   position: absolute;
-  font-family: Arial;
+  font-family: Prototype;
+  font-weight: normal;
   display: inline-block;
   margin-left: 720px;
   margin-top: -230px;
@@ -88,12 +88,12 @@
 .grid-container2 > div {
   text-align: center;
   font-size: 22px;
-  font-weight: bold;
   width: 50px;
   height: 35px;
   color: rgb(68, 68, 68);
   background: #eee;
   line-height: 35px;
+  letter-spacing: 1px;
   border-radius: 5px;
   border-style: outset;
   box-shadow:0 0 0 1px rgba(0,0,0,0.4), 0 0 0 2px rgba(0,0,0,0.2);
@@ -117,10 +117,10 @@
 .chart-title {
   position: absolute;
   margin-top: -272px;
-  margin-left: 55px;
+  margin-left: 50px;
   width: 812px;
-  font-family: Arial;
-  font-weight: bold;
+  font-family: Prototype;
+  letter-spacing: 1px;
   font-size: 20px;
   color: rgb(68, 68, 68);
   text-align: center;
@@ -135,7 +135,6 @@
 
 .buttons-div {
   position: absolute;
-  font-family: Arial;
   display: inline-block;
   margin-top: -230px;
   margin-left: 54px;
@@ -143,6 +142,7 @@
 
 .button {
   outline: none;
+  font-family: Prototype;
   cursor: pointer;
   background-color: #f2f2f2;
   border-radius: 5px;
@@ -153,7 +153,6 @@
   color: rgb(68, 68, 68);
   text-align: center;
   font-size: 16px;
-  font-weight: bold;
   margin-bottom: 13px;
   letter-spacing: 1px;
   line-height: 12px;
