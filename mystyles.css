@@ -1464,7 +1464,7 @@
 }
 
 .colony-background-color {
-  background: linear-gradient(to right, #ccc,#ccc,#ccc, rgba(0,0,0,0));
+  background: linear-gradient(to right, #ccc, rgba(0,0,0,0));
   padding-left: 3px;
   padding-right: 20px;
   border-radius: 2px;
@@ -1473,7 +1473,6 @@
 .colony-grid-container {
   position: absolute;
   display: inline-block;
-  margin-top: 15px;
   margin-left: 3px;
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto;
@@ -1494,7 +1493,7 @@
 .colony-grid-container2 {
   position: absolute;
   display: inline-block;
-  margin-top: 73px;
+  margin-top: 58px;
   margin-left: 6px;
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto;
