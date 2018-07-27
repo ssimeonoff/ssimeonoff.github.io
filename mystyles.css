@@ -36,10 +36,11 @@
 }
 
 .colonyCards {
-  height: 240px;
-  width: 375px;
+  height: 275px;
+  width: 418px;
   background-color: black;
   background-repeat: no-repeat;
+  margin-right: -200px;
 
 }
 
@@ -975,9 +976,10 @@
 }
 
 .money {
+    font-family: Prototype;
     background-color: rgb(255,228,4);
     background: linear-gradient(rgb(255,208,4),rgb(255,255,104),rgb(255,208,4),rgb(255,208,4));
-    font-weight: bold;
+    font-weight: normal;
     font-size: 18px;
     border-radius: 5px;
     padding: 1px;
@@ -1444,6 +1446,7 @@
 .colony-card-title-div {
   margin-left: 0px;
   margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .colony-card-title-span {
@@ -1453,6 +1456,62 @@
   padding-right: 25px;
 }
 
+.colony-content {
+  font-family: Prototype;
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.colony-background-color {
+  background: linear-gradient(to right, #ccc,#ccc,#ccc, rgba(0,0,0,0));
+  padding-left: 3px;
+  padding-right: 20px;
+  border-radius: 2px;
+}
+
+.colony-grid-container {
+  position: absolute;
+  display: inline-block;
+  margin-top: 15px;
+  margin-left: 3px;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  vertical-align: middle;
+}
+.colony-grid-container > div {
+  background: linear-gradient(#4448,#8888);
+  color: rgb(68, 68, 68);
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  width: 50px;
+  height: 47px;
+  vertical-align: middle;
+  border-style: outset;
+}
+
+.colony-grid-container2 {
+  position: absolute;
+  display: inline-block;
+  margin-top: 73px;
+  margin-left: 6px;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  vertical-align: middle;
+  gap:6px;
+}
+.colony-grid-container2 > div {
+  background: linear-gradient(#4448,#8888);
+  color: rgb(68, 68, 68);
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  width: 50px;
+  height: 47px;
+  vertical-align: middle;
+
+}
 
 
 /* The Modal (background) */
