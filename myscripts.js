@@ -309,6 +309,9 @@ function toggleFooterDiv() {
 }
 
 function casualCards() {
+    $('.colonyCards').css("margin-right", 40);
+    $('.colonyCards').css("margin-left", -20);
+
     cards = document.querySelectorAll('.filterDiv');
     for (i = 0; i < cards.length; i++) {
         cards[i].classList.remove("filterDiv-stacked");
@@ -325,6 +328,9 @@ function casualCards() {
 }
 
 function stackedCards() {
+    $('.colonyCards').css("margin-right", -200);
+    $('.colonyCards').css("margin-left", 15);
+
     cards = document.querySelectorAll('.filterDiv');
     for (i = 0; i < cards.length; i++) {
         cards[i].classList.add("filterDiv-stacked");

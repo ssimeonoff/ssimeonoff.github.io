@@ -977,6 +977,7 @@
 
 .money {
     font-family: Prototype;
+    color:black;
     background-color: rgb(255,228,4);
     background: linear-gradient(rgb(255,208,4),rgb(255,255,104),rgb(255,208,4),rgb(255,208,4));
     font-weight: normal;
@@ -1501,15 +1502,40 @@
   gap:6px;
 }
 .colony-grid-container2 > div {
-  background: linear-gradient(#4448,#8888);
-  color: rgb(68, 68, 68);
+  color: white;
   text-align: center;
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 34px;
   width: 50px;
   height: 47px;
   vertical-align: middle;
+}
 
+.microbe-stacked {
+  min-width:20px;
+  line-height: 18px;
+}
+
+.ocean-tile-colony {
+  padding: 10px;
+  margin-top: 3px;
+  margin-left: 2px;
+  width: 20px;
+}
+
+.white-x {
+  display: inline-block;
+  position: relative;
+  vertical-align: bottom;
+  margin-bottom: 9px;
+  text-shadow: 1px 1px 2px black, -1px 0 #444444, 0 1px #444444, 1px 0 #444444, 0 -1px #444444;
+}
+.white-x::after {
+  z-index: 1;
+  color:white;
+  font-size:24px;
+  font-weight: bold;
+  margin-left: -38px;
+  content: "X";
 }
 
 
