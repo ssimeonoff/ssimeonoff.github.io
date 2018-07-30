@@ -42,61 +42,54 @@
       </div>
     </div>
     <div id="myBtnContainer1" style="line-height:55px;margin-bottom:10px;">
-      <button id="automated" class="button btn1 background-color-automated tooltip" onclick="filterFunction(id)"> AUTOMATED
-        <span class="tooltiptext">filter Automated Project Cards</span></button>
-      <button id="active" class="button btn1 background-color-active tooltip" onclick="filterFunction(id)"> ACTIVE
-      <span class="tooltiptext">filter Active Project Cards</span></button>
-      <button id="events" class="button btn1 background-color-events tooltip" onclick="filterFunction(id)"> EVENTS
-        <span class="tooltiptext">filter Events Project Cards</span></button>
-      <button id="corporation" class="button btn1 background-color-corporation tooltip" onclick="filterFunction(id)">CORPORATIONS
-        <span class="tooltiptext">filter Corporations Cards</span></button>
-      <button id="preludeCards" class="button btn1 background-color-prelude tooltip" onclick="filterFunction(id)">PRELUDES
-        <span class="tooltiptext">filter Preludes Cards</span></button>
-      <button id="colonyCards" class="button btn1 background-color-colony tooltip" onclick="filterFunction(id)" style="margin-right:0px;">COLONIES
-        <span class="tooltiptext">filter Colonies cards</span></button>
+      <button id="automated" class="button btn1 background-color-automated tooltip" onclick="filterFunction(id)" title="filter Automated Project Cards">AUTOMATED</button>
+      <button id="active" class="button btn1 background-color-active tooltip" onclick="filterFunction(id)" title="filter Active Project Cards">ACTIVE</button>
+      <button id="events" class="button btn1 background-color-events tooltip" onclick="filterFunction(id)" title="filter Events Project Cards">EVENTS</button>
+      <button id="corporation" class="button btn1 background-color-corporation tooltip" onclick="filterFunction(id)" title="filter Corporations Cards">CORPORATIONS</button>
+      <button id="preludeCards" class="button btn1 background-color-prelude tooltip" onclick="filterFunction(id)" title="filter Preludes Cards">PRELUDES</button>
+      <button id="colonyCards" class="button btn1 background-color-colony tooltip" onclick="filterFunction(id)" style="margin-right:0px;" title="filter Colonies cards">COLONIES</button>
     </div>
 
     <div id="myBtnContainer2" style="line-height:55px;">
-      <button id="buildingTag" class="button btn2 tag-building tooltip" style="line-height:40px" onclick="filterFunction(id)"><span class="tooltiptext">filter by building tag</span></button>
-      <button id="spaceTag" class="button btn2 tag-space tooltip" onclick="filterFunction(id)"><span class="tooltiptext">filter by Space tag</span></button>
-      <button id="scienceTag" class="button btn2 tag-science tooltip" onclick="filterFunction(id)"><span class="tooltiptext">filter by Science tag</span></button>
+      <button id="buildingTag" class="button btn2 tag-building tooltip" style="line-height:40px" onclick="filterFunction(id)" title="filter by Building tag"></button>
+      <button id="spaceTag" class="button btn2 tag-space tooltip" onclick="filterFunction(id)" title="filter by Space tag"></button>
+      <button id="scienceTag" class="button btn2 tag-science tooltip" onclick="filterFunction(id)" title="filter by Science tag"></button>
 
-      <button id="plantTag" class="button btn2 tag-plant tooltip" onclick="filterFunction(id)"><span class="tooltiptext">filter by Plant tag</span></button>
-      <button id="microbeTag" class="button btn2 tag-microbe tooltip" onclick="filterFunction(id)"><span class="tooltiptext">filter by Microbe tag</span></button>
-      <button id="animalTag" class="button btn2 tag-animal tooltip" onclick="filterFunction(id)"><span class="tooltiptext">filter by Animal tag</span></button>
+      <button id="plantTag" class="button btn2 tag-plant tooltip" onclick="filterFunction(id)" title="filter by Plant tag"></button>
+      <button id="microbeTag" class="button btn2 tag-microbe tooltip" onclick="filterFunction(id)" title="filter by Microbe tag"></button>
+      <button id="animalTag" class="button btn2 tag-animal tooltip" onclick="filterFunction(id)" title="filter by Animal tag"></button>
 
-      <button id="powerTag" class="button btn2 tag-power tooltip" onclick="filterFunction(id)"><span class="tooltiptext">filter by Power tag</span></button>
-      <button id="jovianTag" class="button btn2 tag-jovian tooltip" onclick="filterFunction(id)"><span class="tooltiptext">filter by Jovian tag</span></button>
-      <button id="earthTag" class="button btn2 tag-earth tooltip" style="font-size:44px;padding-top:3px;padding-left:1px;padding-right:1px;" onclick="filterFunction(id)"><span class="tooltiptext">filter by Earth tag</span></button>
+      <button id="powerTag" class="button btn2 tag-power tooltip" onclick="filterFunction(id)" title="filter by Power tag"></button>
+      <button id="jovianTag" class="button btn2 tag-jovian tooltip" onclick="filterFunction(id)" title="filter by Jovian tag"></button>
+      <button id="earthTag" class="button btn2 tag-earth tooltip" style="font-size:44px;padding-top:3px;padding-left:1px;padding-right:1px;" onclick="filterFunction(id)" title="title="filter by Earth tag""></button>
 
-      <button id="cityTag" class="button btn2 tag-city tooltip" style="font-size:22px;line-height:40px" onclick="filterFunction(id)"><span class="tooltiptext">filter by City tag</span></button>
-      <button id="eventTag" class="button btn2 tag-event tooltip" style="line-height:40px;vertical-align:bottom;" onclick="filterFunction(id)"><span class="tooltiptext">filter by Event tag</span></button>
-      <button id="venusTag" class="button btn2 tag-venus tooltip" onclick="filterFunction(id)"><span class="tooltiptext">filter by Venus tag</span></button>
+      <button id="cityTag" class="button btn2 tag-city tooltip" style="font-size:22px;line-height:40px" onclick="filterFunction(id)" title="filter by City tag"></button>
+      <button id="eventTag" class="button btn2 tag-event tooltip" style="line-height:40px;vertical-align:bottom;" onclick="filterFunction(id)" title="filter by Event tag"></button>
+      <button id="venusTag" class="button btn2 tag-venus tooltip" onclick="filterFunction(id)" title="filter by Venus tag"></button>
     </div>
 
     <div id="myBtnContainer3" style="display:inline-block;line-height:30px;margin-bottom:10px;">
-      <button id="content"  class="button btn-content tooltip" onclick="toggleContentDiv();" >CONTENT<span class="tooltiptext">filter cards by their content</span></button>
-      <button id="standard" class="button btn3 standard-icon button-icon tooltip" onclick="filterFunction(id)"><span class="tooltiptext">filter Base game cards</span></button>
-      <button id="corporate" class="button btn3 corporate-icon button-icon tooltip" onclick="filterFunction(id)"><span class="tooltiptext">filter Corporate Era cards</span></button>
-      <button id="venusNext" class="button btn3 venus-icon button-icon tooltip" onclick="filterFunction(id)"><span class="tooltiptext">filter Venus Next cards</span></button>
-      <button id="prelude" class="button btn3 prelude-icon button-icon tooltip" onclick="filterFunction(id)" ><span class="tooltiptext">filter Prelude cards</span></button>
-      <button id="promo" class="button btn3 promo-icon button-icon tooltip" onclick="filterFunction(id)"><span class="tooltiptext">filter Promo cards</span></button>
-      <button id="colonies" class="button btn3 colonies-icon button-icon tooltip" onclick="filterFunction(id)"><span class="tooltiptext">filter Colonies cards</span></button>
-    <div id ="switch" class="switch">
+      <button id="content"  class="button btn-content tooltip" onclick="toggleContentDiv();" title="reveal Card Content filters">CONTENT</button>
+      <button id="standard" class="button btn3 standard-icon button-icon tooltip" onclick="filterFunction(id)" title="filter Base game cards"></button>
+      <button id="corporate" class="button btn3 corporate-icon button-icon tooltip" onclick="filterFunction(id)" title="filter Corporate Era cards"></button>
+      <button id="promo" class="button btn3 promo-icon button-icon tooltip" onclick="filterFunction(id)" title="filter Promo cards"></button>
+      <button id="venusNext" class="button btn3 venus-icon button-icon tooltip" onclick="filterFunction(id)" title="filter Venus Next cards"></button>
+      <button id="prelude" class="button btn3 prelude-icon button-icon tooltip" onclick="filterFunction(id)" title="filter Prelude cards"></button>
+      <button id="colonies" class="button btn3 colonies-icon button-icon tooltip" onclick="filterFunction(id)" title="filter Colonies cards"></button>
+    <div id ="switch" class="switch" title="Switches between Stacked and Casual cards display">
       <input type="radio" class="switch-input" name="view" value="stacked" id="week" onclick="stackedCards();" checked>
       <label for="week" class="switch-label switch-label-off">STACKED</label>
       <input type="radio" class="switch-input" name="view" value="casual" id="month" onclick="casualCards();">
       <label for="month" class="switch-label switch-label-on">CASUAL</label>
       <span class="switch-selection"></span>
     </div>
-      <button id="info" class="button2 btn4 tooltip" style="background:#444444;margin-left: 40px;height:30px; line-height: 19px;vertical-align:bottom;">Info</button>
       <div id="contentFilters">
-        <button class="button2 btn-sort" onclick="sortByPrice();">PRICE &#x25b2;</button>
-        <button class="button2 btn-price" onclick="reduceOne()">-</button>
-        <input  type="number" id="price" oninput="filterFunction(id);" value="0" min="0" max="50">
-        <button class="button2 btn-price" style="margin-right:20px;" onclick="increaseOne()">+</button>
-        <button id="vp" class="button btn-vp tooltip" onclick="filterFunction(id)">VP<span class="tooltiptext">filter cards with VP</span></button>
-        <button id="reqs" class="button btn-req tooltip" onclick="filterFunction(id)">REQUIREMENTS<span class="tooltiptext">filter cards with requirements</span></button>
+        <button class="button2 tooltip btn-sort" onclick="sortByPrice();" style="margin-right:20px;" title="Sort Project Cards by Price Ascending">PRICE &#x25b2;</button>
+        <button title="decrease Price filter by 1" class="button2 tooltip btn-price" onclick="reduceOne()" title="decrease Price filter by 1">-</button>
+        <input  type="number" title="filter by Price" id="price" oninput="filterFunction(id);" value="0" min="0" max="50"></input>
+        <button class="button2 tooltip btn-price" style="margin-right:20px;" onclick="increaseOne()" title="increase Price filter by 1">+</button>
+        <button id="vp" class="button btn-vp tooltip" onclick="filterFunction(id)" title="filter cards with VP">VP</button>
+        <button id="reqs" class="button btn-req tooltip" onclick="filterFunction(id)" title="filter cards having Requirements">REQUIREMENTS</button>
         <div id ="subfilterReqs" class="subfilterReqs-disabled">
           <output id="output1" for="slider1" class="output-label" style="color:#f25540;margin-left: 220px;">-30</output> <!-- Just to display selected value -->
           <input id="slider1" type="range" min="-30" max="8" value="-30" step="2" list="tickmarks" oninput="output1.value = slider1.value; filterFunction(id);" class="track-temp-background track-temp-thumb" style="width:210px;margin-right:60px;">
@@ -117,9 +110,9 @@
       </div>
     </div>
     <div id="myBtnContainer4" style="display:inline-block;">
-      <input type="text" id="myInput" oninput="filterFunction(id);" placeholder="Search by text ..." title="Type in a name">
-      <button id="reset" class="button2 btn4 reset-icon button-icon tooltip" onclick="clearInput();showAll();" style="margin-right: 65px;">RESET</button>
-      <button id="about" onclick="toggleFooterDiv();" class="button2 btn4 tooltip" style="background:#444444;margin-left: 16px;height:30px; line-height: 19px;">About</button>
+      <input type="text" id="myInput" oninput="filterFunction(id);" placeholder="Search by text ..." title="Search by card's title, number or keywords">
+      <button id="reset" class="button2 btn4 reset-icon button-icon tooltip" onclick="clearInput();showAll();" style="margin-right: 65px;" title="Reset all selected filters">RESET</button>
+      <button id="about" onclick="toggleFooterDiv();" class="button2 btn4 tooltip" style="background:#444444;margin-left: 16px;height:30px; line-height: 19px;" title="shows ezternal links">About</button>
     </div>
     <div id="footer">
       <a class="footer-links" style="margin-left:3px" href="https://boardgamegeek.com/boardgame/167791/terraforming-mars" target="_blank">THE GAME</a>
@@ -326,6 +319,36 @@
 
 <ul class="myUL" style="clear:both;">
     <div class="ul-title">CORPORATIONS</div>
+
+    <li class="filterDiv filterDiv-stacked corporation buildingTag prelude">
+      <div class="tag tag1 tag-building"></div>
+      <div class="corporationLabel">CORPORATION</div>
+      <div class="contentCorporation">
+        <div class="corporationEffectBox">
+          <div class="corporationEffectBoxLabel">EFFECT</div>
+          <div class="resource-tag building-resource"></div> :
+          <div class="resource money">-2</div>
+          <div class="description" style="text-align:center;margin-top:0px;">
+            (Effect: When you play a building tag, you pay pay 2 M$ less for it.)
+          </div>
+        </div>
+        <div style="margin-top:20px;width:50px;display:inline-block;"><span style="color:red;border:4px solid red;border-radius:50%;padding:5px;font-size:30px;line-height:15px;box-shadow: 3px 3px 3px grey, inset 0 0 3px 3px grey;text-shadow: 3px 3px 3px grey;">㨐</span></div>
+        <div style="display: inline-block; width:140px; font-size:20px; line-height: 22px; vertical-align: middle; margin-bottom: 15px;
+                        font-family: 'Arial','Verdana';
+                        font-weight:normal;
+                        ">
+                    Cheung Shing 	&#x2b1b;&#x2b1b;MARS&#x2b1b;&#x2b1b;
+                </div>
+        <div class="production-box" style="margin-left:45px;margin-top:-10px;">
+          <div class="production money">3</div>
+        </div>
+        <div class="resource money" style="margin-left:20px;">44</div>
+
+        <div class="description" style="text-align:center;">
+          (You start with 1 energy production and 48 M$.)
+        </div>
+      </div>
+    </li>
 
     <li class="filterDiv filterDiv-stacked corporation prelude">
       <div class="corporationLabel">CORPORATION</div>
@@ -5832,19 +5855,6 @@
     <!--PRELUDES------------------------------------------->
     <div class="ul-title">PRELUDES</div>
 
-        <li class="filterDiv filterDiv-stacked prelude preludeCards">
-          <div class="title background-color-prelude">Acquired Space Agency</div>
-          <div class="prelude-label">PRE</div>
-          <div class="number ">P01</div>
-          <div class="prelude-icon"></div>
-          <div class="content">
-            <div class="resource titanium"></div><div class="resource titanium"></div><div class="resource titanium"></div><div class="resource titanium"></div><div class="resource titanium"></div><div class="resource titanium"></div>
-            <div class="resource card"><div class="card-icon card-icon-space">&#x2734;</div></div> <div class="resource card"><div class="card-icon card-icon-space">&#x2734;</div></div>
-            <div class="description">
-              (Gain 6 titanium. Reveal cards until you reveal two cards with Space Tags. Take them into your hand, discard the rest.)
-            </div>
-          </div>
-        </li>
 
         <li class="filterDiv filterDiv-stacked prelude preludeCards ">
           <div class="title background-color-prelude">Allied Banks</div>
@@ -5866,7 +5876,7 @@
           <div class="title background-color-prelude">Aquifier Turbines</div>
           <div class="tag tag1 tag-power"></div>
           <div class="prelude-label">PRE</div>
-          <div class="number ">P01</div>
+          <div class="number ">P02</div>
           <div class="prelude-icon project-icon"></div>
           <div class="content">
             <div class="tile ocean-tile"></div>
@@ -5884,7 +5894,7 @@
           <div class="title background-color-prelude">Biofuels</div>
           <div class="tag tag1 tag-microbe"></div>
           <div class="prelude-label">PRE</div>
-          <div class="number ">P01</div>
+          <div class="number ">P03</div>
           <div class="prelude-icon project-icon"></div>
           <div class="content">
             <div class="production-box production-box-size2">
@@ -5901,7 +5911,7 @@
           <div class="title background-color-prelude">Biolab</div>
           <div class="tag tag1 tag-science"></div>
           <div class="prelude-label">PRE</div>
-          <div class="number ">P01</div>
+          <div class="number ">P04</div>
           <div class="prelude-icon project-icon"></div>
           <div class="content">
             <div class="production-box ">
@@ -5918,7 +5928,7 @@
           <div class="title background-color-prelude">Biosphere Support</div>
           <div class="tag tag1 tag-plant"></div>
           <div class="prelude-label">PRE</div>
-          <div class="number ">P01</div>
+          <div class="number ">P05</div>
           <div class="prelude-icon project-icon"></div>
           <div class="content">
             <div class="production-box production-box-size2a">
@@ -5935,7 +5945,7 @@
           <div class="title background-color-prelude">Business Empire</div>
           <div class="tag tag1 tag-earth"></div>
           <div class="prelude-label">PRE</div>
-          <div class="number ">P01</div>
+          <div class="number ">P06</div>
           <div class="prelude-icon project-icon"></div>
           <div class="content">
             <div class="production-box">
@@ -5951,7 +5961,7 @@
         <li class="filterDiv filterDiv-stacked prelude preludeCards buildingTag plantTag">
           <div class="title background-color-prelude">Dome Farming</div>
           <div class="prelude-label">PRE</div>
-          <div class="number ">P01</div>
+          <div class="number ">P07</div>
           <div class="tag tag1 tag-plant"></div>
           <div class="tag tag2 tag-building"></div>
           <div class="prelude-icon project-icon"></div>
@@ -5968,7 +5978,7 @@
         <li class="filterDiv filterDiv-stacked prelude preludeCards">
           <div class="title background-color-prelude">Donation</div>
           <div class="prelude-label">PRE</div>
-          <div class="number ">P01</div>
+          <div class="number ">P08</div>
           <div class="prelude-icon project-icon"></div>
           <div class="content">
             <div class="resource money">21</div>
@@ -5981,7 +5991,7 @@
         <li class="filterDiv filterDiv-stacked prelude preludeCards buildingTag cityTag">
           <div class="title background-color-prelude">Early Settlement</div>
           <div class="prelude-label">PRE</div>
-          <div class="number ">P01</div>
+          <div class="number ">P09</div>
           <div class="tag tag1 tag-building"></div>
           <div class="tag tag2 tag-city"></div>
           <div class="prelude-icon project-icon"></div>
@@ -5998,7 +6008,7 @@
         <li class="filterDiv filterDiv-stacked prelude preludeCards plantTag microbeTag">
           <div class="title background-color-prelude">Ecology Experts</div>
           <div class="prelude-label">PRE</div>
-          <div class="number ">P01</div>
+          <div class="number ">P10</div>
           <div class="tag tag1 tag-microbe"></div>
           <div class="tag tag2 tag-plant"></div>
           <div class="prelude-icon project-icon"></div>
@@ -6016,7 +6026,7 @@
         <li class="filterDiv filterDiv-stacked prelude preludeCards ">
           <div class="title background-color-prelude">Eccentric Sponsor</div>
           <div class="prelude-label">PRE</div>
-          <div class="number ">P01</div>
+          <div class="number ">P11</div>
           <div class="prelude-icon project-icon"></div>
           <div class="content">
             <div class="resource card"></div> : <div class="resource money">-25</div>
@@ -6029,7 +6039,7 @@
         <li class="filterDiv filterDiv-stacked prelude preludeCards plantTag">
           <div class="title background-color-prelude">Experiemental Forest</div>
           <div class="prelude-label">PRE</div>
-          <div class="number ">P01</div>
+          <div class="number ">P12</div>
           <div class="tag tag1 tag-plant"></div>
           <div class="prelude-icon"></div>
           <div class="content">
@@ -6044,7 +6054,7 @@
         <li class="filterDiv filterDiv-stacked prelude preludeCards jovianTag">
           <div class="title background-color-prelude">Galilean Mining</div>
           <div class="prelude-label">PRE</div>
-          <div class="number ">P01</div>
+          <div class="number ">P13</div>
           <div class="tag tag1 tag-jovian"></div>
           <div class="prelude-icon project-icon"></div>
           <div class="content">
@@ -6061,7 +6071,7 @@
         <li class="filterDiv filterDiv-stacked prelude preludeCards">
           <div class="title background-color-prelude">Great Aquifier</div>
           <div class="prelude-label">PRE</div>
-          <div class="number ">P01</div>
+          <div class="number ">P14</div>
           <div class="prelude-icon project-icon"></div>
           <div class="content">
             <div class="tile ocean-tile"></div> <div class="tile ocean-tile"></div>
@@ -6074,7 +6084,7 @@
         <li class="filterDiv filterDiv-stacked prelude preludeCards">
           <div class="title background-color-prelude">Huge Asteroid</div>
           <div class="prelude-label">PRE</div>
-          <div class="number ">P01</div>
+          <div class="number ">P15</div>
           <div class="prelude-icon project-icon"></div>
           <div class="content">
             <div class="tile temperature-tile"></div> <div class="tile temperature-tile"></div> <div class="tile temperature-tile"></div> <br>
@@ -6088,7 +6098,7 @@
         <li class="filterDiv filterDiv-stacked prelude preludeCards jovianTag scienceTag">
           <div class="title background-color-prelude">IO Research Outpost</div>
           <div class="prelude-label">PRE</div>
-          <div class="number ">P01</div>
+          <div class="number ">P16</div>
           <div class="tag tag1 tag-jovian"></div>
           <div class="tag tag2 tag-science"></div>
           <div class="prelude-icon project-icon"></div>
@@ -6104,7 +6114,7 @@
         <li class="filterDiv filterDiv-stacked prelude preludeCards">
           <div class="title background-color-prelude">Loan</div>
           <div class="prelude-label">PRE</div>
-          <div class="number ">P01</div>
+          <div class="number ">P17</div>
           <div class="prelude-icon project-icon"></div>
           <div class="content">
             <div class="production-box production-box-size1a">
@@ -6121,7 +6131,7 @@
           <div class="title background-color-prelude">Martian Industries</div>
           <div class="tag tag1 tag-building"></div>
           <div class="prelude-label">PRE</div>
-          <div class="number ">P01</div>
+          <div class="number ">P18</div>
           <div class="prelude-icon project-icon"></div>
           <div class="content">
             <div class="production-box production-box-size2" style="vertical-align: bottom;">
@@ -6137,7 +6147,7 @@
         <li class="filterDiv filterDiv-stacked prelude preludeCards">
           <div class="title background-color-prelude">Metal-rich Asteroid</div>
           <div class="prelude-label">PRE</div>
-          <div class="number ">P01</div>
+          <div class="number ">P19</div>
           <div class="prelude-icon project-icon"></div>
           <div class="content">
             <div class="tile temperature-tile"></div>
@@ -6152,7 +6162,7 @@
         <li class="filterDiv filterDiv-stacked prelude preludeCards">
           <div class="title background-color-prelude">Metals Company</div>
           <div class="prelude-label">PRE</div>
-          <div class="number ">P01</div>
+          <div class="number ">P20</div>
           <div class="prelude-icon project-icon"></div>
           <div class="content">
             <div class="production-box production-box-size3">
@@ -6168,7 +6178,7 @@
           <div class="title background-color-prelude">Mining Operations</div>
           <div class="tag tag1 tag-building"></div>
           <div class="prelude-label">PRE</div>
-          <div class="number ">P01</div>
+          <div class="number ">P21</div>
           <div class="prelude-icon project-icon"></div>
           <div class="content">
             <div class="production-box production-box-size2">
@@ -6184,7 +6194,7 @@
         <li class="filterDiv filterDiv-stacked prelude preludeCards buildingTag">
           <div class="title background-color-prelude">Mohole</div>
           <div class="prelude-label">PRE</div>
-          <div class="number ">P01</div>
+          <div class="number ">P22</div>
           <div class="tag tag1 tag-building"></div>
           <div class="prelude-icon project-icon"></div>
           <div class="content">
@@ -6201,7 +6211,7 @@
         <li class="filterDiv filterDiv-stacked prelude preludeCards buildingTag">
           <div class="title background-color-prelude">Mohole Excavation</div>
           <div class="prelude-label">PRE</div>
-          <div class="number ">P01</div>
+          <div class="number ">P23</div>
           <div class="tag tag1 tag-building"></div>
           <div class="prelude-icon project-icon"></div>
           <div class="content">
@@ -6219,7 +6229,7 @@
         <li class="filterDiv filterDiv-stacked prelude preludeCards">
           <div class="title background-color-prelude">Nitrogen Shipment</div>
           <div class="prelude-label">PRE</div>
-          <div class="number ">P01</div>
+          <div class="number ">P24</div>
           <div class="prelude-icon project-icon"></div>
           <div class="content">
             <div class="production-box ">
@@ -6236,7 +6246,7 @@
           <div class="title background-color-prelude">Orbital Construction Yard</div>
           <div class="tag tag1 tag-space"></div>
           <div class="prelude-label">PRE</div>
-          <div class="number ">P01</div>
+          <div class="number ">P25</div>
           <div class="prelude-icon"></div>
           <div class="content">
             <div class="production-box"><div class="production titanium"></div></div></br>
@@ -6250,7 +6260,7 @@
         <li class="filterDiv filterDiv-stacked prelude preludeCards buildingTag">
           <div class="title background-color-prelude">Polar Industries</div>
           <div class="prelude-label">PRE</div>
-          <div class="number ">P01</div>
+          <div class="number ">P26</div>
           <div class="tag tag1 tag-building"></div>
           <div class="prelude-icon project-icon"></div>
           <div class="content">
@@ -6266,7 +6276,7 @@
         <li class="filterDiv filterDiv-stacked prelude preludeCards powerTag">
           <div class="title background-color-prelude">Power Generation</div>
           <div class="prelude-label">PRE</div>
-          <div class="number ">P01</div>
+          <div class="number ">P27</div>
           <div class="tag tag1 tag-power"></div>
           <div class="prelude-icon project-icon"></div>
           <div class="content">
@@ -6282,7 +6292,7 @@
         <li class="filterDiv filterDiv-stacked prelude preludeCards buildingTag spaceTag scienceTag plantTag microbeTag animalTag powerTag jovianTag earthTag cityTag eventTag venusTag">
           <div class="title background-color-prelude">Research Network</div>
           <div class="prelude-label">PRE</div>
-          <div class="number ">P01</div>
+          <div class="number ">P28</div>
           <div class="tag tag1" style="line-height:40px">WILD</div>
           <div class="prelude-icon project-icon"></div>
           <div class="content">
@@ -6299,7 +6309,7 @@
         <li class="filterDiv filterDiv-stacked prelude preludeCards cityTag buildingTag">
           <div class="title background-color-prelude">Self-Sufficient Settlement</div>
           <div class="prelude-label">PRE</div>
-          <div class="number ">P01</div>
+          <div class="number ">P29</div>
           <div class="tag tag1 tag-building"></div>
           <div class="tag tag2 tag-city"></div>
           <div class="prelude-icon project-icon"></div>
@@ -6318,7 +6328,7 @@
           <div class="title background-color-prelude">Smelting Plant</div>
           <div class="tag tag1 tag-building"></div>
           <div class="prelude-label">PRE</div>
-          <div class="number ">P01</div>
+          <div class="number ">P30</div>
           <div class="prelude-icon project-icon"></div>
           <div class="content">
             <div class="tile oxygen-tile"></div><div class="tile oxygen-tile"></div><br>
@@ -6332,7 +6342,7 @@
         <li class="filterDiv filterDiv-stacked prelude preludeCards">
           <div class="title background-color-prelude">Society Support</div>
           <div class="prelude-label">PRE</div>
-          <div class="number ">P01</div>
+          <div class="number ">P31</div>
           <div class="prelude-icon project-icon"></div>
           <div class="content">
             <div class="production-box production-box-size3">
@@ -6348,7 +6358,7 @@
           <div class="title background-color-prelude">Supplier</div>
           <div class="tag tag1 tag-power"></div>
           <div class="prelude-label">PRE</div>
-          <div class="number ">P01</div>
+          <div class="number ">P32</div>
           <div class="prelude-icon project-icon"></div>
           <div class="content">
             <div class="production-box production-box-size2">
@@ -6364,7 +6374,7 @@
         <li class="filterDiv filterDiv-stacked prelude preludeCards ">
           <div class="title background-color-prelude">Supply Drop</div>
           <div class="prelude-label">PRE</div>
-          <div class="number ">P01</div>
+          <div class="number ">P33</div>
           <div class="prelude-icon project-icon"></div>
           <div class="content">
             3<div class="resource titanium"></div> 8<div class="resource steel"></div> 3<div class="resource plant"></div>
@@ -6378,12 +6388,26 @@
           <div class="title background-color-prelude">UNMI Contractor</div>
           <div class="tag tag1 tag-earth"></div>
           <div class="prelude-label">PRE</div>
-          <div class="number ">P01</div>
+          <div class="number ">P34</div>
           <div class="prelude-icon project-icon"></div>
           <div class="content">
             <div class="tile rating"></div><div class="tile rating"></div><div class="tile rating"></div> <div class="resource card"></div>
             <div class="description">
               (Increase your TR 3 steps. Draw a card.)
+            </div>
+          </div>
+        </li>
+
+        <li class="filterDiv filterDiv-stacked prelude preludeCards">
+          <div class="title background-color-prelude">Acquired Space Agency</div>
+          <div class="prelude-label">PRE</div>
+          <div class="number ">P35</div>
+          <div class="prelude-icon"></div>
+          <div class="content">
+            <div class="resource titanium"></div><div class="resource titanium"></div><div class="resource titanium"></div><div class="resource titanium"></div><div class="resource titanium"></div><div class="resource titanium"></div>
+            <div class="resource card"><div class="card-icon card-icon-space">&#x2734;</div></div> <div class="resource card"><div class="card-icon card-icon-space">&#x2734;</div></div>
+            <div class="description">
+              (Gain 6 titanium. Reveal cards until you reveal two cards with Space Tags. Take them into your hand, discard the rest.)
             </div>
           </div>
         </li>
