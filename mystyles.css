@@ -835,7 +835,7 @@
         content: "\1f321\FE0E ";
     }
 
-.forest-tile {
+.greenery-tile {
     background: linear-gradient(#0bda0b,#09aa09,#09aa09);
     color: darkgreen;
     line-height:24px;
@@ -843,7 +843,7 @@
     font-size: 30px;
 }
 
-.forest-tile:after {
+.greenery-tile:after {
     content: "\1F333";
 }
 
