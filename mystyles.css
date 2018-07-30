@@ -357,8 +357,8 @@
 .tag-earth {
     background:rgb(15,96,151);
     color: white;
-    font-size: 32px;
-    line-height: 43px;
+    font-size: 35px;
+    line-height: 42px;
 }
 
     .tag-earth:after {
@@ -1216,7 +1216,7 @@
 .earth-resource {
     background:rgb(15,96,151);
     color: white;
-    font-size: 20px;
+    font-size: 21px;
     }
     .earth-resource:after {
         content: "\1f30f\FE0E";
