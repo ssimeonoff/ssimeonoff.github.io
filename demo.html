@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<head>
+  <link rel="shortcut icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" type="text/css" href="mystyles.css">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116626580-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-116626580-1');
+</script>
+</head>
+
+<html>
+
+<body background="images/mars.jpg" style="background-color:black;background-repeat:no-repeat; background-size:100%">
+  <div id="buttonsContainer">
+    <div id="titleContainer">
+      TERRAFORMING MARS
+  </div>
+    <div class="cardsContainer">
+      <div style="display:inline-block;width:170px;">
+      <div id="totalProjects" class="totalCardsCount"></div>
+      <div class="resource card" style="display:inline-block;transform: rotate(-8deg);"></div>
+      <div class="resource card" style="display:inline-block;transform: rotate(-4deg);margin-left:-25px;"></div>
+      <div class="resource card" style="display:inline-block;transform: rotate(0deg);margin-left:-25px;"></div>
+      <div class="resource card" style="display:inline-block;transform: rotate(4deg);margin-left:-25px;"></div>
+      <div class="resource card" style="display:inline-block;transform: rotate(8deg);margin-left:-25px;"></div>
+      </div>
+      <div style="display:inline-block; width:108px;">
+      <div id="totalCorporations" class="totalCardsCount"></div>
+      <div class="resource card-corporation" style="display:inline-block;transform: rotate(-10deg)"><span style="background:linear-gradient(to right, rgb(255,204,100), #e28c22);padding-left:4px;padding-right:4px;border-radius:2px;">CORP</span></div>
+      <div class="resource card-corporation" style="display:inline-block;transform: rotate(10deg);margin-left:-52px"><span style="background:linear-gradient(to right, rgb(255,204,100), #e28c22);padding-left:4px;padding-right:4px;border-radius:2px;">CORP</span></div>
+      </div>
+      <div style="display:inline-block;width:105px;">
+      <div id="totalPreludes" class="totalCardsCount"></div>
+      <div class="resource card-corporation" style="display:inline-block;transform: rotate(-10deg)"><span style="background:linear-gradient(to right, rgb(235,118,171), #e64d91);padding-left:4px;padding-right:4px;border-radius:2px;">PREL</span></div>
+      <div class="resource card-corporation" style="display:inline-block;transform: rotate(10deg);margin-left:-52px"><span style="background:linear-gradient(to right, rgb(235,118,171), #e64d91);padding-left:4px;padding-right:4px;border-radius:2px;">PREL</span></div>
+      </div>
+    </div>
+    <div id="myBtnContainer1" style="line-height:55px;margin-bottom:10px;">
+      <button id="automated" class="button btn1 background-color-automated tooltip" onclick="filterFunction(id)"> AUTOMATED
+        <span class="tooltiptext">filter Automated Project Cards</span></button>
+      <button id="active" class="button btn1 background-color-active tooltip" onclick="filterFunction(id)"> ACTIVE
+      <span class="tooltiptext">filter Active Project Cards</span></button>
+      <button id="events" class="button btn1 background-color-events tooltip" onclick="filterFunction(id)"> EVENTS
+        <span class="tooltiptext">filter Events Project Cards</span></button>
+      <button id="corporation" class="button btn1 background-color-corporation tooltip" onclick="filterFunction(id)">CORPORATIONS
+        <span class="tooltiptext">filter Corporations Cards</span></button>
+      <button id="preludeCards" class="button btn1 background-color-prelude tooltip" onclick="filterFunction(id)">PRELUDES
+        <span class="tooltiptext">filter Preludes Cards</span></button>
+      <button id="colonyCards" class="button btn1 background-color-colony tooltip" onclick="filterFunction(id)" style="margin-right:0px;">COLONIES
+        <span class="tooltiptext">filter Colonies cards</span></button>
+    </div>
+
+    <div id="myBtnContainer2" style="line-height:55px;">
+      <button id="buildingTag" class="button btn2 tag-building tooltip" style="line-height:40px" onclick="filterFunction(id)"><span class="tooltiptext">filter by building tag</span></button>
+      <button id="spaceTag" class="button btn2 tag-space tooltip" onclick="filterFunction(id)"><span class="tooltiptext">filter by Space tag</span></button>
+      <button id="scienceTag" class="button btn2 tag-science tooltip" onclick="filterFunction(id)"><span class="tooltiptext">filter by Science tag</span></button>
+
+      <button id="plantTag" class="button btn2 tag-plant tooltip" onclick="filterFunction(id)"><span class="tooltiptext">filter by Plant tag</span></button>
+      <button id="microbeTag" class="button btn2 tag-microbe tooltip" onclick="filterFunction(id)"><span class="tooltiptext">filter by Microbe tag</span></button>
+      <button id="animalTag" class="button btn2 tag-animal tooltip" onclick="filterFunction(id)"><span class="tooltiptext">filter by Animal tag</span></button>
+
+      <button id="powerTag" class="button btn2 tag-power tooltip" onclick="filterFunction(id)"><span class="tooltiptext">filter by Power tag</span></button>
+      <button id="jovianTag" class="button btn2 tag-jovian tooltip" onclick="filterFunction(id)"><span class="tooltiptext">filter by Jovian tag</span></button>
+      <button id="earthTag" class="button btn2 tag-earth tooltip" style="font-size:38px;padding-top:3px;padding-left:1px;padding-right:1px;" onclick="filterFunction(id)"><span class="tooltiptext">filter by Earth tag</span></button>
+
+      <button id="cityTag" class="button btn2 tag-city tooltip" style="font-size:22px;line-height:40px" onclick="filterFunction(id)"><span class="tooltiptext">filter by City tag</span></button>
+      <button id="eventTag" class="button btn2 tag-event tooltip" style="line-height:40px;vertical-align:bottom;" onclick="filterFunction(id)"><span class="tooltiptext">filter by Event tag</span></button>
+      <button id="venusTag" class="button btn2 tag-venus tooltip" onclick="filterFunction(id)"><span class="tooltiptext">filter by Venus tag</span></button>
+    </div>
+
+    <div id="myBtnContainer3" style="display:inline-block;line-height:30px;margin-bottom:10px;">
+      <button id="content"  class="button btn-content tooltip" onclick="toggleContentDiv();" >CONTENT<span class="tooltiptext">filter cards by their content</span></button>
+      <button id="standard" class="button btn3 standard-icon button-icon tooltip" onclick="filterFunction(id)"><span class="tooltiptext">filter Base game cards</span></button>
+      <button id="corporate" class="button btn3 corporate-icon button-icon tooltip" onclick="filterFunction(id)"><span class="tooltiptext">filter Corporate Era cards</span></button>
+      <button id="venusNext" class="button btn3 venus-icon button-icon tooltip" onclick="filterFunction(id)"><span class="tooltiptext">filter Venus Next cards</span></button>
+      <button id="prelude" class="button btn3 prelude-icon button-icon tooltip" onclick="filterFunction(id)" ><span class="tooltiptext">filter Prelude cards</span></button>
+      <button id="promo" class="button btn3 promo-icon button-icon tooltip" onclick="filterFunction(id)"><span class="tooltiptext">filter Promo cards</span></button>
+      <button id="colonies" class="button btn3 colonies-icon button-icon tooltip" onclick="filterFunction(id)"><span class="tooltiptext">filter Colonies cards</span></button>
+    <div id ="switch" class="switch">
+      <input type="radio" class="switch-input" name="view" value="stacked" id="week" onclick="stackedCards();" checked>
+      <label for="week" class="switch-label switch-label-off">STACKED</label>
+      <input type="radio" class="switch-input" name="view" value="casual" id="month" onclick="casualCards();">
+      <label for="month" class="switch-label switch-label-on">CASUAL</label>
+      <span class="switch-selection"></span>
+    </div>
+      <button id="info" class="button2 btn4 tooltip" style="background:#444444;margin-left: 40px;height:30px; line-height: 19px;vertical-align:bottom;">Info</button>
+      <div id="contentFilters">
+        <button class="button2 btn-sort" onclick="sortByPrice();">PRICE &#x25b2;</button>
+        <button class="button2 btn-price" onclick="reduceOne()">-</button>
+        <input  type="number" id="price" oninput="filterFunction(id);" value="0" min="0" max="50">
+        <button class="button2 btn-price" style="margin-right:20px;" onclick="increaseOne()">+</button>
+        <button id="vp" class="button btn-vp tooltip" onclick="filterFunction(id)">VP<span class="tooltiptext">filter cards with VP</span></button>
+        <button id="reqs" class="button btn-req tooltip" onclick="filterFunction(id)">REQUIREMENTS<span class="tooltiptext">filter cards with requirements</span></button>
+        <div id ="subfilterReqs" class="subfilterReqs-disabled">
+          <output id="output1" for="slider1" class="output-label" style="color:#f25540;margin-left: 220px;">-30</output> <!-- Just to display selected value -->
+          <input id="slider1" type="range" min="-30" max="8" value="-30" step="2" list="tickmarks" oninput="output1.value = slider1.value; filterFunction(id);" class="track-temp-background track-temp-thumb" style="width:210px;margin-right:60px;">
+
+          <output id="output3" for="slider3" class="output-label" style="margin-left: 110px;">0</output> <!-- Just to display selected value -->
+          <input id="slider3" type="range" min="0" max="9" value="-0" step="1" list="tickmarks" oninput="output3.value = slider3.value; filterFunction(id);" class=" track-oceans-thumb" style="width:100px;">
+
+          <output id="output2" for="slider2" class="output-label" style="color:rgb(246,241,175);">0</output> <!-- Just to display selected value -->
+          <input id="slider2" type="range" min="0" max="14" value="0" step="1" list="tickmarks" oninput="output2.value = slider2.value; filterFunction(id);" class="track-oxygen-background track-oxygen-thumb">
+
+          <output id="output4" for="slider4" class="output-label" style="color: #8bb8da">0</output> <!-- Just to display selected value -->
+          <input id="slider4" type="range" min="0" max="30" value="0" step="2" list="tickmarks" oninput="output4.value = slider4.value; filterFunction(id);" class="track-venus-background track-venus-thumb" style="margin-right:0px;">
+          <br>
+          <p></p>
+          <output id="output5" for="slider5" class="output-label" style="color: white; margin-left:219px;">0</output> <!-- Just to display selected value -->
+          <input id="slider5" type="range" min="0" max="7" value="0" step="1" list="tickmarks" oninput="output5.value = slider5.value; filterFunction(id);" class="track-science-background track-science-thumb" style="margin-left:62px;">
+        </div>
+      </div>
+    </div>
+    <div id="myBtnContainer4" style="display:inline-block;">
+      <input type="text" id="myInput" oninput="filterFunction(id);" placeholder="Search by text ..." title="Type in a name">
+      <button id="reset" class="button2 btn4 reset-icon button-icon tooltip" onclick="clearInput();showAll();" style="margin-right: 65px;">RESET</button>
+      <button id="about" onclick="toggleFooterDiv();" class="button2 btn4 tooltip" style="background:#444444;margin-left: 16px;height:30px; line-height: 19px;">About</button>
+    </div>
+    <div id="footer">
+      <a class="footer-links" style="margin-left:3px" href="https://boardgamegeek.com/boardgame/167791/terraforming-mars" target="_blank">THE GAME</a>
+      <a class="footer-links" href="https://boardgamegeek.com/thread/1959389/terraforming-mars-complete-animated-cards-list" target="_blank">THE TOPIC</a>
+      <a class="footer-links" href="http://www.fryxgames.se/category/games/terraforming-mars/" target="_blank">FRYX NEWS</a>
+      <a class="footer-links" href="https://github.com/ssimeonoff/ssimeonoff.github.io" target="_blank">GitHub Repo</a>
+      <a class="footer-links" href="https://ssimeonoff.github.io/solo-ce" style="background-color: #cc3333;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;color:white;" target="_blank">SOLO CE</a>
+      <a class="footer-links" href="https://ssimeonoff.github.io/solo-vn" style="background-color:rgb(84,150,201);text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;color:white;" target="_blank">SOLO VN</a>
+      <br>
+    </div>
+  </div>
+
+  <div id="myModal" class="modal">
+  <!-- Modal content -->
+
+  <div class="modal-content">
+    <span class="close">&times;</span>
+      <b>All buttons have ON/OFF states (except the Reset and Info buttons)<br>
+      Clicked button applies "AND" filtering logic.</b><br><br>
+      <img src="controller.png" style="margin-left:10px;" ><br><br>
+      <b>1. Displayed Card Numbers</b> <br>
+      Shows how many Projects/Corporations/Preludes are currently displayed below. <br>
+      Applying filters respectively changes those numbers.<br><br>
+      <b>2. Card Type buttons</b><br>
+      ONLY ONE can be active at a time - filters by Automated/Active/Events/Corporation/Preludes types.<br><br>
+      <b>3. Tag Type Buttons</b><br>
+      Multiple tag filters can be applied simultaneously -filters by the specific tag.<br><br>
+      <b>4. Deck Type Buttons</b><br>
+      ONLY ONE can be active at a time - filters by Base/Corporate/Venus/Prelude/Promo decks.<br><br>
+      <b>5. Text Field</b><br>
+      Applies text search ONLY on the curretly displayed cards.<br><br>
+      <b>6. Reset Button</b><br>
+      Resets all clicked buttons and clears the Text Field.
+  </div>
+</div>
+
+  <!---CARDS LIST----------------------->
+  <ul class="myUL" style="clear:both;">
+  <div class="ul-title">PROJECT CARDS</div>
+  <div id="projectCards">
+
+    <li class="filterDiv automated prelude buildingTag">
+        <div class="title background-color-automated ">House Printing</div>
+        <div class="price ">10</div>
+        <div class="tag tag1 tag-jovian "></div>
+        <div class="number ">P01</div>
+        <div class="prelude-icon project-icon"></div>
+        <div class="content ">
+            <div class="points points-big ">1</div>
+            <div class="production-box  ">
+                <div class="titanium production"></div><br>
+            </div>
+            <div class="description " style="margin-top:0px;">
+                (Increase your titanium production 1 step.)
+            </div>
+        </div>
+    </li>
+
+
+
+
+  </ul>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="myscripts.js"></script>
+</body>
+</html>
