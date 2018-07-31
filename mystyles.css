@@ -118,7 +118,7 @@
         position: absolute;
         border: 1px solid black;
         background-color: #cc3333;
-        font-size: 10px;
+        font-size: 11px;
         line-height: 16px;
         width: 16px;
         height:16px;
@@ -133,7 +133,7 @@
           position: absolute;
           border: 1px solid black;
           background-color: rgb(235,118,171);;
-          font-size: 10px;
+          font-size: 11px;
           font-weight: bold;
           line-height: 18px;
           width: 16px;
@@ -150,7 +150,7 @@
             border: 1px solid black;
             background: rgb(84,150,201);
             font-weight: bold;
-            font-size: 10px;
+            font-size: 11px;
             line-height: 18px;
             width: 16px;
             height:16px;
@@ -165,18 +165,19 @@
       .promo-icon:after {
               position: absolute;
               border: 1px solid black;
-              background: #444444;
+              background: white;
+              border: 5px solid #444444;
               font-weight: bold;
               font-size: 24px;
               line-height: 18px;
-              width: 16px;
-              height:16px;
+              width: 8px;
+              height:8px;
               text-align: center;
               color: white;
               border-radius: 50%;
               text-shadow: -1px 0 #444444, 0 1px #444444, 1px 0 #444444, 0 -1px #444444;
               box-shadow: 0 0 0 1px rgba(0,0,0,0.4);
-              content: "\2022";
+              content: "\0020";
         }
 
         .colonies-icon:after {
