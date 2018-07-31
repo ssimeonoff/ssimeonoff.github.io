@@ -18,18 +18,21 @@
     border-style: outset;
     border-radius: 20px;
     box-shadow: 0 0 30px 15px black;
+    transition: 0.2s;
+    transition: transform 200ms ease-in-out;
 }
 
 .filterDiv-stacked {
   transform:  perspective(3500px) rotateY(45deg);
   box-shadow: 0 0 30px 15px black;
-  margin-right: -130px;
   transition: 0.2s;
+  margin-right: -130px;
+  transition: transform 200ms ease-in-out;
 }
 
 .filterDiv-stacked:hover {
   transform: translate(0,-20px) scale(1.1);
-  transition: 0.2s;
+  transition: transform 200ms ease-in-out;
   z-index: 99;
 }
 
@@ -43,7 +46,6 @@
   background-color: black;
   background-repeat: no-repeat;
   margin-right: -200px;
-
 }
 
 
