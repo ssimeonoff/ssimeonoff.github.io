@@ -6,7 +6,7 @@ showAll();
 function showAll() {
   var x, i;
   displayedProjects = 264;
-  displayedCorporations = 24;
+  displayedCorporations = 25;
   displayedPreludes = 35;
   document.getElementById("totalProjects").innerHTML = displayedProjects;
   document.getElementById("totalCorporations").innerHTML = displayedCorporations;
@@ -251,42 +251,17 @@ function w3RemoveClass(element, name) {
 }
 
 
-// Get the modal
-var modal = document.getElementById('myModal');
-
-// Get the button that opens the modal
-var btn = document.getElementById("info");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal
-btn.onclick = function() {
-    modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-
 //toggle subfilters div
 function toggleContentDiv() {
   document.getElementById("content").classList.toggle("active");
   if (document.getElementById("content").classList.contains("active")) {
-    containerHeight = containerHeight + 190;
+    containerHeight = containerHeight + 200;
     document.getElementById("buttonsContainer").style.height = containerHeight + "px";
-    $("#contentFilters").fadeIn(200);
+    setTimeout(function(){$("#contentFilters").fadeIn(500);}, 100);
+
   }
   else {
-    containerHeight = containerHeight - 190;
+    containerHeight = containerHeight - 200;
     document.getElementById("contentFilters").style.display = "none"; //hides the range inputs div
     document.getElementById("buttonsContainer").style.height = containerHeight + "px";
     document.getElementById("reqs").classList.remove("active");
@@ -299,6 +274,7 @@ function toggleFooterDiv() {
   if ($('#footer:visible').length == 0) {
     containerHeight = containerHeight + 40;
     document.getElementById("buttonsContainer").style.height = containerHeight + "px";
+    setTimeout(function(){2000});
     $("#footer").fadeIn(100);
   }
   else {
