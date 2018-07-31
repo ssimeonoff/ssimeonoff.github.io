@@ -5,7 +5,7 @@ var containerHeight = CONTAINER; //the current height of the buttons container
 showAll();
 function showAll() {
   var x, i;
-  displayedProjects = 264;
+  displayedProjects = 271;
   displayedCorporations = 25;
   displayedPreludes = 35;
   document.getElementById("totalProjects").innerHTML = displayedProjects;
