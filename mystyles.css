@@ -82,16 +82,16 @@
 
 .prelude-label {
   float: left;
-  width: 34px;
+  width: 80px;
   height: 20px;
   line-height: 22px;
   text-align: center;
   margin-top: -64px;
-  margin-left: 3px;
+  margin-left: 4px;
   font-size: 12px;
   box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
   background-color: rgb(235,118,171);
-  border-radius: 13px 2px 2px 2px;
+  border-radius: 14px 2px 2px 2px;
   border-style: outset;
   font-family: Prototype;
 }
