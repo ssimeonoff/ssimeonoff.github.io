@@ -36,6 +36,13 @@
   z-index: 99;
 }
 
+.filterDiv-stacked:active {
+  transform: translate(0,-20px) scale(1.5);
+  transition: transform 200ms ease-in-out;
+  z-index: 99;
+}
+
+
 .preludeCards {
   height: 240px;
 }
