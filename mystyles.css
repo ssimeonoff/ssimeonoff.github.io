@@ -119,7 +119,7 @@
         border: 1px solid black;
         background-color: #cc3333;
         font-size: 11px;
-        line-height: 16px;
+        line-height: 15px;
         width: 16px;
         height:16px;
         text-align: center;
@@ -127,7 +127,11 @@
         border-radius: 50%;
         text-shadow: -1px 0 #444444, 0 1px #444444, 1px 0 #444444, 0 -1px #444444;
         box-shadow: 0 0 0 1px rgba(0,0,0,0.4);
-        content: "\25b2";
+        content: "";
+        background-image: url("images/triangle16.png");
+        background-size: 10px 10px;
+        background-position: bottom 4px right 3px;
+        background-repeat: no-repeat;
   }
   .prelude-icon:after {
           position: absolute;
@@ -135,7 +139,7 @@
           background-color: rgb(235,118,171);;
           font-size: 11px;
           font-weight: bold;
-          line-height: 17px;
+          line-height: 15px;
           width: 16px;
           height:16px;
           text-align: center;
@@ -143,7 +147,13 @@
           border-radius: 50%;
           text-shadow: -1px 0 #444444, 0 1px #444444, 1px 0 #444444, 0 -1px #444444;
           box-shadow: 0 0 0 1px rgba(0,0,0,0.4);
-          content: "\25c0\00a0";
+          content: "";
+          background-image: url("images/triangle16.png");
+          background-size: 10px 10px;
+          background-position: bottom 4px right 3px;
+          background-repeat: no-repeat;
+          transform: rotate(-90deg);
+
     }
     .venus-icon:after {
             position: absolute;
@@ -151,7 +161,7 @@
             background: rgb(84,150,201);
             font-weight: bold;
             font-size: 11px;
-            line-height: 18px;
+            line-height: 15px;
             width: 16px;
             height:16px;
             text-align: center;
@@ -159,7 +169,12 @@
             border-radius: 50%;
             text-shadow: -1px 0 #444444, 0 1px #444444, 1px 0 #444444, 0 -1px #444444;
             box-shadow: 0 0 0 1px rgba(0,0,0,0.4);
-            content: "\25bc";
+            content: "";
+            background-image: url("images/triangle16.png");
+            background-size: 10px 10px;
+            background-position: bottom 4px right 3px;
+            background-repeat: no-repeat;
+            transform: rotate(180deg);
       }
 
       .promo-icon:after {
