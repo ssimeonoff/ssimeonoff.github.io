@@ -257,7 +257,8 @@ function toggleContentDiv() {
   if (document.getElementById("content").classList.contains("active")) {
     containerHeight = containerHeight + 200;
     document.getElementById("buttonsContainer").style.height = containerHeight + "px";
-    setTimeout(function(){$("#contentFilters").fadeIn(500);}, 100);
+    setTimeout(function(){$("#contentFilters").fadeIn(200);}, 100);
+
 
   }
   else {
@@ -274,8 +275,8 @@ function toggleFooterDiv() {
   if ($('#footer:visible').length == 0) {
     containerHeight = containerHeight + 40;
     document.getElementById("buttonsContainer").style.height = containerHeight + "px";
-    setTimeout(function(){2000});
-    $("#footer").fadeIn(100);
+    setTimeout(function(){$("#footer").fadeIn(200);}, 100);
+
   }
   else {
     containerHeight = containerHeight - 40;
