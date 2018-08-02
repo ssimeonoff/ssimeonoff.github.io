@@ -285,7 +285,14 @@ function toggleFooterDiv() {
   }
 }
 
+var design = 1;
+function toggleCardsDesign() {
+  if (design == 1) {casualCards(); design = 2;}
+  else {stackedCards(); design = 1;}
+}
+
 function casualCards() {
+    document.getElementById("month").checked = true;
     $('.colonyCards').css("margin-right", 40);
     $('.colonyCards').css("margin-left", -20);
 
@@ -305,6 +312,7 @@ function casualCards() {
 }
 
 function stackedCards() {
+    document.getElementById("week").checked = true;
     $('.colonyCards').css("margin-right", -200);
     $('.colonyCards').css("margin-left", 15);
 
