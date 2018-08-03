@@ -1830,7 +1830,7 @@ input[type=range]:focus::-ms-fill-upper {
   font-family: Arial;
   position: relative;
   height: 40px;
-  width: 223px;
+  width: 123px;
   margin-left:6px;
   margin-right: 40px;
   background: rgba(0, 0, 0, 0.25);
