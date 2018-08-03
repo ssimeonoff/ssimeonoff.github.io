@@ -126,7 +126,7 @@
       legend: { position: 'none' },
       fontSize: 12,
       backgroundColor: "transparent",
-      vAxis: { gridlines: { count: 4} },
+      vAxis: { gridlines: { count: 5},maxValue:20 },
       HAxis: {textStyle : {fontSize: 7}},
       bar: {gap: 1},
       chartArea:{left:200,bottom:20,top:5,width:436},
@@ -210,20 +210,20 @@
 
   <div class="corps-list">
 
-    <div class="filterDiv2" style="height:40px;display:inline-block;font-weight:bold;color:rgb(68, 68, 68);">
+    <div class="filterDiv2" style="height:40px;display:inline-block;font-family: Prototype;color:rgb(68, 68, 68);">
       <div style="margin-left:15px;margin-top:10px;">
-        <div style="margin-right:15px; display:inline-block;font-size:18px;">PLAYED GAMES PER CORPORATION</div>
+        <div style="margin-right:35px; display:inline-block;font-size:18px;">PLAYED GAMES PER CORPORATION</div>
         <div style="font-size:14px;display:inline-block;vertical-align:top;">
         <div class="legend-squares" style="background:#cc3333;">&nbsp;</div>
         <span>FAILED</span>
         <div class="legend-squares" style="background:#aaa;">&nbsp;</div>
-        <span>Under 80</span>
+        <span>UNDER 80</span>
         <div class="legend-squares" style="background:#eee;">&nbsp;</div>
-        <span>Under 100</span>
+        <span>UNDER 100</span>
         <div class="legend-squares" style="background: #e6e600;">&nbsp;</div>
-        <span>Over 100</span>
+        <span>OVER 100</span>
         <div class="legend-squares" style="background: rgb(68, 68, 68);">&nbsp;</div>
-        <span>Record</span>
+        <span>RECORD</span>
       </div>
       </div>
     </div>
