@@ -1822,90 +1822,6 @@ input[type=range]:focus::-ms-fill-upper {
   color: #3071A9;
 }
 
-/*toggle button*/
-
-.switch {
-  display: inline-block;
-  vertical-align: middle;
-  font-family: Arial;
-  position: relative;
-  height: 34px;
-  width: 123px;
-  margin-left:6px;
-  margin-right: 40px;
-  background: rgba(0, 0, 0, 0.25);
-  border-radius: 20px;
-  border-style: inset;
-  box-shadow:  inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
-}
-
-.switch-label {
-  position: relative;
-  z-index: 2;
-  float: left;
-  width: 56px;
-  line-height: 32px;
-  font-size: 11px;
-  color: rgba(255, 255, 255, 0.35);
-  text-align: center;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45);
-  cursor: pointer;
-}
-.switch-label:active {
-
-}
-
-.switch-label-off {
-  padding-left: 3px;
-}
-
-.switch-label-on {
-  padding-left: 3px;
-}
-
-
-.switch-input {
-  display: none;
-}
-.switch-input:checked + .switch-label {
-  color:#444;
-
-  -webkit-transition: 0.15s ease-out;
-  -moz-transition: 0.15s ease-out;
-  -ms-transition: 0.15s ease-out;
-  -o-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
-  -webkit-transition-property: color, text-shadow;
-  -moz-transition-property: color, text-shadow;
-  -ms-transition-property: color, text-shadow;
-  -o-transition-property: color, text-shadow;
-  transition-property: color, text-shadow;
-}
-.switch-input:checked + .switch-label-on ~ .switch-selection {
-  left: 61px;
-  /* Note: left: 50%; doesn't transition in WebKit */
-}
-
-.switch-selection {
-  position: absolute;
-  z-index: 1;
-  top: 3px;
-  left: 3px;
-  display: block;
-  width: 53px;
-  height: 22px;
-  border-radius: 20px;
-  border-style: outset;
-  background-color: #bbb;
-  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), 0 0 2px rgba(0, 0, 0, 0.2);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), 0 0 2px rgba(0, 0, 0, 0.5);
-  -webkit-transition: left 0.15s ease-out;
-  -moz-transition: left 0.15s ease-out;
-  -ms-transition: left 0.15s ease-out;
-  -o-transition: left 0.15s ease-out;
-  transition: left 0.15s ease-out;
-}
-
 input[type='number'] {
     -moz-appearance:textfield;
 }
@@ -1926,4 +1842,73 @@ input[type=number]::-webkit-outer-spin-button {
   text-align: center;
   background:white;
   font-weight: normal;
+}
+
+/* TOGGLE SWTICH*/
+.onoffswitch {
+  display: inline-block;
+  margin-left:208px;
+  vertical-align: middle;
+  position: relative;
+  width: 123px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border-style: inset;
+    border-radius: 20px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "STACKED";
+    font-family: Prototype;
+    font-weight: normal;
+    line-height: 32px;
+    font-size: 16px;
+    padding-left: 10px;
+    background: #444;
+    color: white;
+
+}
+.onoffswitch-inner:after {
+    content: "CASUAL";
+    font-family: Prototype;
+    font-weight: normal;
+    padding-right: 10px;
+    text-align: center;
+    background: #ccc;
+    color: #444;
+    line-height: 32px;
+    font-size: 16px;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block;
+    width: 34px;
+    height: 34px;
+    margin: -5px;
+    border-style: outset;
+    border-radius: 30px;
+    background: #ddd;
+    position: absolute; top: 4px; bottom: 0;
+    right: 89px;
+    box-shadow: 0 0 4px 1px rgb(58,58,58);
+    transition: all 0.3s ease-in 0s;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px;
 }

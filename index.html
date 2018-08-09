@@ -79,13 +79,13 @@
       <button id="prelude" class="button btn3 prelude-icon button-icon tooltip" onclick="filterFunction(id)" title="filter Prelude cards"></button>
       <button id="colonies" class="button btn3 colonies-icon button-icon tooltip" onclick="filterFunction(id)" title="filter Colonies cards"></button>
       <button id="promo" class="button btn3 promo-icon button-icon tooltip" onclick="filterFunction(id)" title="filter Promo cards"></button>
-    <div id ="switch" class="switch" title="Switches between Stacked and Casual cards display">
-      <input type="radio" class="switch-input" name="view" value="stacked" id="week" onclick="toggleCardsDesign();" checked>
-      <label for="week" class="switch-label switch-label-off">STACKED</label>
-      <input type="radio" class="switch-input" name="view" value="casual" id="month" onclick="toggleCardsDesign();">
-      <label for="month" class="switch-label switch-label-on">CASUAL</label>
-      <span class="switch-selection"></span>
-    </div>
+      <div class="onoffswitch">
+        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" onclick="toggleCardsDesign();" checked>
+        <label class="onoffswitch-label" for="myonoffswitch">
+          <span class="onoffswitch-inner"></span>
+          <span class="onoffswitch-switch"></span>
+        </label>
+      </div>
       <div id="contentFilters">
         <button class="button2 tooltip btn-sort" onclick="sortByPrice();" style="margin-right:20px;" title="Sort Project Cards by Price Ascending">PRICE &#x25b2;</button>
         <button title="decrease Price filter by 1" class="button2 tooltip btn-price" onclick="reduceOne()" title="decrease Price filter by 1">-</button>
@@ -115,7 +115,7 @@
     <div id="myBtnContainer4" style="display:inline-block;">
       <input type="text" id="myInput" oninput="filterFunction(id);" placeholder="Search by text ..." title="Search by card's title, number or keywords">
       <button id="reset" class="button2 btn4 reset-icon button-icon tooltip" onclick="clearInput();showAll();" style="margin-right: 65px;" title="Reset all selected filters">RESET</button>
-      <button id="about" onclick="toggleFooterDiv();" class="button2 btn4 tooltip" style="background:#444444;margin-left: 16px;height:30px; line-height: 19px;" title="shows external links">About</button>
+      <button id="about" onclick="toggleFooterDiv();" class="button2 btn4 tooltip" style="background:#444444;margin-left: 13px;height:30px; line-height: 19px;" title="shows external links">About</button>
     </div>
     <div id="footer">
       <a class="footer-links" style="margin-left:1px" href="https://boardgamegeek.com/boardgame/167791/terraforming-mars" target="_blank">THE GAME</a>

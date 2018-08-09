@@ -292,7 +292,6 @@ function toggleCardsDesign() {
 }
 
 function casualCards() {
-    document.getElementById("month").checked = true;
     $('.colonyCards').css("margin-right", 40);
     $('.colonyCards').css("margin-left", -20);
 
@@ -312,7 +311,6 @@ function casualCards() {
 }
 
 function stackedCards() {
-    document.getElementById("week").checked = true;
     $('.colonyCards').css("margin-right", -200);
     $('.colonyCards').css("margin-left", 15);
 
