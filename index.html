@@ -91,8 +91,19 @@
         <button title="decrease Price filter by 1" class="button2 tooltip btn-price" onclick="reduceOne()" title="decrease Price filter by 1">-</button>
         <input  type="number" title="filter by Price" id="price" oninput="filterFunction(id);" value="0" min="0" max="50"></input>
         <button class="button2 tooltip btn-price" style="margin-right:20px;" onclick="increaseOne()" title="increase Price filter by 1">+</button>
-        <button id="vp" class="button btn-vp tooltip" onclick="filterFunction(id)" title="filter cards with VP">VP</button>
-        <button id="reqs" class="button btn-req tooltip" onclick="filterFunction(id)" title="filter cards having Requirements">REQUIREMENTS</button>
+        <button id="vp" class="button btn-vp" onclick="filterFunction(id)" title="filter cards with VP">VP</button>
+
+        <button id="productionMoney" class="button btn-production" onclick="filterFunction(id)" title="filter cards with money production"><div class="production money">M</div></button>
+        <button id="productionSteel" class="button btn-production" onclick="filterFunction(id)" title="filter cards with steel production"><div class="production steel"></div></button>
+        <button id="productionTitanium" class="button btn-production" onclick="filterFunction(id)" title="filter cards with titanium production"><div class="production titanium"></div></button>
+        <button id="productionPlant" class="button btn-production" onclick="filterFunction(id)" title="filter cards with plant production"><div class="production plant"></div></button>
+        <button id="productionEnergy" class="button btn-production" onclick="filterFunction(id)" title="filter cards with enery production"><div class="production energy"></div></button>
+        <button id="productionHeat" class="button btn-production" onclick="filterFunction(id)" title="filter cards with heat production"><div class="production heat"></div></button>
+
+        <br>
+        <button id="reqs" class="button btn-req " onclick="filterFunction(id)" title="filter cards having Requirements">REQUIREMENTS</button>
+
+
         <div id ="subfilterReqs" class="subfilterReqs-disabled">
           <output id="output1" for="slider1" class="output-label" style="color:#f25540;margin-left: 220px;">-30</output> <!-- Just to display selected value -->
           <input id="slider1" type="range" min="-30" max="8" value="-30" step="2" list="tickmarks" oninput="output1.value = slider1.value; filterFunction(id);" class="track-temp-background track-temp-thumb" style="width:210px;margin-right:60px;">

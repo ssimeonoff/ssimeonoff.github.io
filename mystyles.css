@@ -470,6 +470,27 @@
 
 
 /************** Style the buttons ************/
+.button {
+  box-shadow: 0 0 4px 1px rgb(58,58,58);
+  font-family: Prototype;
+
+}
+
+.button2 {
+  box-shadow: 0 0 4px 1px rgb(58,58,58);
+  font-family: Prototype;
+}
+
+.button.active {
+  border: 2px solid rgb(137,137,137);
+  box-shadow: inset 0 0 0 3px rgb(68,68,68);
+  filter: brightness(120%)  drop-shadow(0 0 10px white);
+}
+
+.button:hover {
+    border: 2px solid rgb(137,137,137);
+}
+
 .btn1 {
     outline: none;
     font-family: Prototype;
@@ -525,7 +546,7 @@
     background-color: #cc3333;
     vertical-align: middle;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    box-shadow: 0 0 10px 3px rgb(58,58,58);
+    box-shadow: 0 0 4px 1px rgb(58,58,58);
     margin-bottom: 5px;
 }
 
@@ -566,17 +587,30 @@
     margin-bottom: 20px;
 }
 
+.btn-production {
+    outline: none;
+    background-color: rgb(128, 87, 0);
+    background: linear-gradient(to bottom left,rgb(162,113,71),rgb(128, 87, 0), rgb(162,113,71), rgb(128, 87, 0), rgb(162,113,71), rgb(128, 87, 0), rgb(162,113,71), rgb(128, 87, 0), rgb(162,113,71), rgb(128, 87, 0), rgb(162,113,71), rgb(128, 87, 0), rgb(162,113,71), rgb(128, 87, 0), rgb(162,113,71));
+    height: 44px;
+    line-height: 40px;
+    width: 49px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-right: -3px;
+    margin-bottom: 20px;
+}
+
 .btn-vp {
     outline: none;
     background-color: rgb(255,204,100);
     background: linear-gradient(#cc8b00, rgb(128, 87, 0),rgb(128, 87, 0));
-    height: 40px;
+    height: 46px;
     width: 80px;
     cursor: pointer;
-    border-radius: 8px;
+    border-radius: 12px;
     margin-right: 20px;
     margin-bottom: 20px;
-    font-size: 26px;
+    font-size: 29px;
     text-shadow: 0 0 5px darkorange;
     vertical-align: bottom;
 }
@@ -607,27 +641,7 @@
     box-shadow: 0 0 4px 1px rgb(58,58,58);
 }
 
-.button {
-  box-shadow: 0 0 4px 1px rgb(58,58,58);
-  font-family: Prototype;
-
-}
-
-.button2 {
-  box-shadow: 0 0 4px 1px rgb(58,58,58);
-  font-family: Prototype;
-}
-
-.button.active {
-  border: 2px solid rgb(137,137,137);
-  box-shadow: inset 0 0 0 3px rgb(68,68,68), 0 0 10px 3px white;
-  filter: brightness(120%);
-}
-
-.button:hover {
-    border: 2px solid rgb(137,137,137);
-}
-
+/*-------------------------------*/
 #contentFilters {
     display: none;
     width: 790px;
@@ -1057,9 +1071,10 @@
 }
 
     .heat:after {
-        font-weight: normal;
+        font-family: Arial;
         content: "III";
         color: yellow;
+        font-size: 18px;
     }
 
 
@@ -1898,7 +1913,9 @@ input[type=number]::-webkit-outer-spin-button {
     border-radius: 30px;
     background: #ddd;
     background: radial-gradient( #ddd, #444);
-    position: absolute; top: 4px; bottom: 0;
+    position: absolute;
+    top: 3px;
+    bottom: 0;
     right: 89px;
     box-shadow: 0 0 4px 2px rgb(58,58,58);
     transition: all 0.2s ease-in-out 0s;

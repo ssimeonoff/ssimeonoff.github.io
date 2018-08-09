@@ -41,6 +41,7 @@ function filterFunction(id) {
   btnDeck = document.querySelectorAll('button.active.btn3');
   btnReq = document.getElementById('reqs');
   btnVP = document.getElementById('vp');
+  btnProduction = document.querySelectorAll('button.active.btn-production');
 
   //filter by Card type
   if (btnType.length > 0) {
@@ -106,6 +107,16 @@ function filterFunction(id) {
       }
     x = document.querySelectorAll('li.show');
   }
+
+  //Production filters
+  if (btnProduction.length > 0)  {
+    for (i = 0; i < x.length; i++) {
+        if (x[i].querySelectorAll(".production.money").length > 0) {w3AddClass(x[i], "show");}
+        else {w3RemoveClass(x[i], "show");}
+      }
+    x = document.querySelectorAll('li.show');
+  }
+
 
   //filter by price
   priceValue = document.getElementById("price").value;
@@ -255,14 +266,14 @@ function w3RemoveClass(element, name) {
 function toggleContentDiv() {
   document.getElementById("content").classList.toggle("active");
   if (document.getElementById("content").classList.contains("active")) {
-    containerHeight = containerHeight + 200;
+    containerHeight = containerHeight + 260;
     document.getElementById("buttonsContainer").style.height = containerHeight + "px";
     setTimeout(function(){$("#contentFilters").fadeIn(200);}, 100);
 
 
   }
   else {
-    containerHeight = containerHeight - 200;
+    containerHeight = containerHeight - 260;
     document.getElementById("contentFilters").style.display = "none"; //hides the range inputs div
     document.getElementById("buttonsContainer").style.height = containerHeight + "px";
     document.getElementById("reqs").classList.remove("active");
