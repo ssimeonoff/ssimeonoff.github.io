@@ -1863,19 +1863,20 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .onoffswitch-inner {
     display: block; width: 200%; margin-left: -100%;
-    transition: margin 0.3s ease-in 0s;
+    transition: margin 0.2s ease-in-out 0s;
 }
 .onoffswitch-inner:before, .onoffswitch-inner:after {
     display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
-    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
     box-sizing: border-box;
-}
-.onoffswitch-inner:before {
-    content: "STACKED";
     font-family: Prototype;
     font-weight: normal;
     line-height: 32px;
     font-size: 16px;
+    box-shadow: inset 0px 1px 3px 1px rgba(0,0,0,.5);
+    border-radius: 30px;
+}
+.onoffswitch-inner:before {
+    content: "STACKED";
     padding-left: 10px;
     background: #444;
     color: white;
@@ -1883,14 +1884,9 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .onoffswitch-inner:after {
     content: "CASUAL";
-    font-family: Prototype;
-    font-weight: normal;
-    padding-right: 10px;
-    text-align: center;
+    padding-right: 12px;
     background: #ccc;
     color: #444;
-    line-height: 32px;
-    font-size: 16px;
     text-align: right;
 }
 .onoffswitch-switch {
@@ -1901,10 +1897,11 @@ input[type=number]::-webkit-outer-spin-button {
     border-style: outset;
     border-radius: 30px;
     background: #ddd;
+    background: radial-gradient( #ddd, #444);
     position: absolute; top: 4px; bottom: 0;
     right: 89px;
-    box-shadow: 0 0 4px 1px rgb(58,58,58);
-    transition: all 0.3s ease-in 0s;
+    box-shadow: 0 0 4px 2px rgb(58,58,58);
+    transition: all 0.2s ease-in-out 0s;
 }
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
     margin-left: 0;
