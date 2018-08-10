@@ -108,12 +108,18 @@ function filterFunction(id) {
     x = document.querySelectorAll('li.show');
   }
 
-  //Production filters
+  //filter by production
   if (btnProduction.length > 0)  {
     for (i = 0; i < x.length; i++) {
-        if (x[i].querySelectorAll(".production.money").length > 0) {w3AddClass(x[i], "show");}
+      show = false;
+      for (j = 0; j < btnProduction.length; j++) {
+        if (x[i].querySelectorAll(btnProduction[j].id).length > 0) {
+          show = true;
+        }
+        if (show == true) {w3AddClass(x[i], "show");}
         else {w3RemoveClass(x[i], "show");}
-      }
+        }
+    }
     x = document.querySelectorAll('li.show');
   }
 
