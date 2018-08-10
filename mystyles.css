@@ -958,7 +958,9 @@
 }
 
     .oxygen-tile:after {
-        content: "O\00B2";
+        content: "O\2082";
+        font-family: Prototype;
+        font-weight: normal;
     }
 
 
@@ -1206,9 +1208,8 @@
   background-color: rgb(44,44,44);
   background: linear-gradient(to right bottom, black, rgb(60,60,60), rgb(150,150,150), rgb(60,60,60), rgb(60,60,60),black);
   color: black;
-  font-weight: bold;
-  font-family: Arial, Verdana;
-  font-size:10px;
+  font-size:12px;
+  width: 38px;
   padding-top: 3px;
   padding-bottom: 3px;
   padding-left: 7px;
@@ -1459,14 +1460,14 @@
 
 #titleContainer {
     height: 60px;
-    line-height: 60px;
+    line-height: 22px;
     display: inline-block;
     font-family: Prototype;
-    font-size: 34px;
+    font-size: 16px;
     border-style: inset;
     background: #eeeeee;
     border-radius: 10px;
-    width: 396px;
+    width: 258px;
     margin-right: 6px;
     margin-bottom: 5px;
     background: linear-gradient(to right, rgb(128, 87, 0), rgb(205,162, 130), rgb(205,162, 130), rgb(128, 87, 0));
@@ -1477,7 +1478,7 @@
 }
 
 .cardsContainer {
-  font-family: Prototype;
+    font-family: Prototype;
     vertical-align: top;
     text-align: right;
     display: inline-block;
