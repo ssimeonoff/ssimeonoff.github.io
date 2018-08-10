@@ -1921,7 +1921,7 @@ input[type=number]::-webkit-outer-spin-button {
     border-style: outset;
     border-radius: 30px;
     background: #ddd;
-    background: radial-gradient( #ddd, #444);
+    background: linear-gradient(to bottom right, #ccc, #444);
     position: absolute;
     top: 3px;
     bottom: 0;
