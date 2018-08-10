@@ -471,7 +471,7 @@
 
 /************** Style the buttons ************/
 .button {
-  box-shadow: 0 2px 4px 1px rgb(58,58,58);
+  box-shadow: 0 2px 4px 1px rgba(0,0,0,.8);
   font-family: Prototype;
 }
 
@@ -483,7 +483,7 @@
 .button.active {
   border: 2px solid rgb(137,137,137);
   box-shadow: inset 0 0 0 3px rgb(68,68,68);
-  filter: brightness(120%)  drop-shadow(0 0 10px white);
+  filter: brightness(120%)  drop-shadow(0 0 5px white);
   transform: translate(0,3px);
 }
 
@@ -572,6 +572,7 @@
     cursor: pointer;
     font-size: 16px;
     border-radius: 8px;
+    box-shadow: 0 2px 2px 1px rgba(0,0,0,.8);
 }
 
 .btn-req {
@@ -625,6 +626,7 @@
     margin-bottom: 20px;
     font-size: 26px;
     vertical-align: bottom;
+    box-shadow: 0 2px 2px 1px rgba(0,0,0,.8);
 }
 
 .footer-button {
@@ -1126,6 +1128,7 @@
     padding-left: 3px;
     padding-right: 3px;
     border-radius: 2px;
+    box-shadow: 0 1px 2px 1px rgba(0,0,0,1);
 }
 .card:after {
     content: "\1F30F\FE0E";
@@ -1211,6 +1214,7 @@
   padding-left: 7px;
   padding-right: 7px;
   border-radius: 3px;
+  box-shadow: 0 2px 2px 1px rgba(0,0,0,.8);
 }
 
 .space-resource {
@@ -1324,7 +1328,7 @@
     font-size: 26px;
     border-radius: 10px;
     border-style: outset;
-    box-shadow: 0 0 4px 1px rgb(58,58,58);
+    box-shadow: 0 2px 2px 1px rgba(0,0,0,.8);
     background: linear-gradient(rgb(255,208,4),rgb(255,255,104),rgb(255,208,4),rgb(255,208,4));
     padding: 0px;
 }
@@ -1355,7 +1359,8 @@
     display: inline-block;
     font-size: 30px;
     vertical-align: middle;
-    text-shadow: 0 0 5px darkorange;
+    text-shadow:  0 3px 2px black;
+    color:   #ffebcc;
 }
 
 .corporationLabel {
@@ -1465,7 +1470,9 @@
     margin-right: 6px;
     margin-bottom: 5px;
     background: linear-gradient(to right, rgb(128, 87, 0), rgb(205,162, 130), rgb(205,162, 130), rgb(128, 87, 0));
-    text-shadow: 0 0 5px darkorange;
+    box-shadow: inset 0px 1px 3px 1px rgba(0,0,0,.5);
+    text-shadow:  0 3px 2px black;
+    color:   #ffebcc;
     text-align: center;
 }
 
@@ -1480,6 +1487,7 @@
     height:57px;
     padding-right: 10px;
     background: linear-gradient(to right, rgb(128, 87, 0), rgb(205,162, 130), rgb(205,162, 130), rgb(128, 87, 0));
+    box-shadow: inset 0px 1px 3px 1px rgba(0,0,0,.5);
 }
 
 
