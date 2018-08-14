@@ -564,15 +564,21 @@
 }
 
 .btn-sort {
-  font-family: Prototype;
+    display: inline-block;
+    font-family: Prototype;
     outline: none;
     color: rgb(48,48,48);
-    height: 40px;
-    width: 85px;
+    height: 30px;
+    line-height: 30px;
+    width: 94px;
+    text-align: center;
     cursor: pointer;
     font-size: 16px;
-    border-radius: 8px;
+    border-radius: 1px;
+    border-style: outset;
     box-shadow: 0 2px 2px 1px rgba(0,0,0,.8);
+    background: #ccc;
+    margin-left: -28px;
 }
 
 .btn-req {
@@ -586,6 +592,7 @@
     font-size: 15px;
     margin-right: 29px;
     margin-bottom: 20px;
+    margin-left:39px;
 }
 
 .btn-production {
@@ -613,7 +620,6 @@
     margin-bottom: 20px;
     font-size: 29px;
     text-shadow: 0 0 5px darkorange;
-    vertical-align: bottom;
 }
 
 .btn-price {
@@ -625,7 +631,6 @@
     border-radius: 8px;
     margin-bottom: 20px;
     font-size: 26px;
-    vertical-align: bottom;
     box-shadow: 0 2px 2px 1px rgba(0,0,0,.8);
 }
 
@@ -1934,4 +1939,31 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
     right: 0px;
+}
+
+#sortButtons {
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-right: 20px;
+}
+
+.sort-title {
+  font-family: Prototype;
+  color: #444;
+  font-weight: normal;
+  line-height: 10px;
+  font-size:13px;
+  margin-left:0px;
+  margin-bottom: 0px;
+}
+
+input[type=radio] {
+ visibility: hidden;
+}
+
+input[type=radio]:checked + label {
+  border: 2px solid rgb(137,137,137);
+  box-shadow: inset 0 0 0 3px rgb(68,68,68);
+  filter: brightness(120%)  drop-shadow(0 0 5px white);
+  transform: translate(0,2px);
 }

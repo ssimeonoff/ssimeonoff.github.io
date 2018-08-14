@@ -1,4 +1,5 @@
 
+window.MIN_INTEGER_LEN = 2; //the length of the cards' counters
 CONTAINER = 330; //the default height of the buttons container
 var containerHeight = CONTAINER; //the current height of the buttons container
 
@@ -219,11 +220,11 @@ function filterFunction(id) {
   displayedCorporations = document.querySelectorAll('li.show.corporation').length;
   displayedPreludes = document.querySelectorAll('li.show.preludeCards').length;
   displayedColonies = document.querySelectorAll('li.show.colonyCards').length;
-  document.getElementById("totalProjects").innerHTML = displayedCards - displayedCorporations - displayedPreludes - displayedColonies;
+  displayedProjects = displayedCards - displayedCorporations - displayedPreludes - displayedColonies;
+  document.getElementById("totalProjects").innerHTML = displayedProjects;
   document.getElementById("totalCorporations").innerHTML = displayedCorporations;
   document.getElementById("totalPreludes").innerHTML = displayedPreludes;
   document.getElementById("totalColonies").innerHTML = displayedColonies;
-
 }
 
 
@@ -277,14 +278,14 @@ function w3RemoveClass(element, name) {
 function toggleContentDiv() {
   document.getElementById("content").classList.toggle("active");
   if (document.getElementById("content").classList.contains("active")) {
-    containerHeight = containerHeight + 260;
+    containerHeight = containerHeight + 270;
     document.getElementById("buttonsContainer").style.height = containerHeight + "px";
     setTimeout(function(){$("#contentFilters").fadeIn(200);}, 100);
 
 
   }
   else {
-    containerHeight = containerHeight - 260;
+    containerHeight = containerHeight - 270;
     document.getElementById("contentFilters").style.display = "none"; //hides the range inputs div
     document.getElementById("buttonsContainer").style.height = containerHeight + "px";
     document.getElementById("reqs").classList.remove("active");
@@ -371,7 +372,7 @@ function increaseOne() {
   }
 }
 
-function sortByPrice() {
+function sortByPriceUp() {
   // get array of elements
     var myArray = document.querySelectorAll('li.automated, li.events, li.active');
     var count = 0;
@@ -383,7 +384,58 @@ function sortByPrice() {
     if (a == null) {a = 0}
     b = parseInt($(b).find(".price").text(), 10);
     if (b == null) {b = 0}
-    console.log(a+ " and " +b);
+    count += 2;
+    // compare
+    if(a > b) {
+        return 1;
+    } else if(a < b) {
+        return -1;
+    } else {
+        return 0;
+    }
+  });
+  // put sorted results back on page
+  $("#projectCards").append(myArray);
+}
+
+function sortByPriceDown() {
+  // get array of elements
+    var myArray = document.querySelectorAll('li.automated, li.events, li.active');
+    var count = 0;
+    // sort based on timestamp attribute
+    myArray = [].slice.call(myArray);
+    myArray.sort(function (a, b) {
+    // convert to integers from strings
+    a = parseInt($(a).find(".price").text(), 10);
+    if (a == null) {a = 0}
+    b = parseInt($(b).find(".price").text(), 10);
+    if (b == null) {b = 0}
+    count += 2;
+    // compare
+    if(a < b) {
+        return 1;
+    } else if(a > b) {
+        return -1;
+    } else {
+        return 0;
+    }
+  });
+  // put sorted results back on page
+  $("#projectCards").append(myArray);
+}
+
+function sortByID() {
+  // get array of elements
+    var myArray = document.querySelectorAll('li.automated, li.events, li.active');
+    var count = 0;
+    // sort based on timestamp attribute
+    myArray = [].slice.call(myArray);
+    myArray.sort(function (a, b) {
+    // convert to integers from strings
+    a = parseInt($(a).find(".number").text(), 10);
+    if (a == null) {a = 0}
+    b = parseInt($(b).find(".number").text(), 10);
+    if (b == null) {b = 0}
     count += 2;
     // compare
     if(a > b) {
