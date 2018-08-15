@@ -1,5 +1,5 @@
 (function() {
-  var COUNT_FRAMERATE, COUNT_MS_PER_FRAME, DIGIT_FORMAT, DIGIT_HTML, DIGIT_SPEEDBOOST, DURATION, FORMAT_MARK_HTML, FORMAT_PARSER, FRAMERATE, FRAMES_PER_VALUE, MIN_INTEGER_LEN, MS_PER_FRAME, MutationObserver, Odometer, RIBBON_HTML, TRANSITION_END_EVENTS, TRANSITION_SUPPORT, VALUE_HTML, addClass, createFromHTML, now, removeClass, requestAnimationFrame, round, transitionCheckStyles, trigger, truncate, wrapJQuery, _jQueryWrapped, _old, _ref, _ref1,
+  var MIN_INTEGER_LEN, COUNT_FRAMERATE, COUNT_MS_PER_FRAME, DIGIT_FORMAT, DIGIT_HTML, DIGIT_SPEEDBOOST, DURATION, FORMAT_MARK_HTML, FORMAT_PARSER, FRAMERATE, FRAMES_PER_VALUE, MIN_INTEGER_LEN, MS_PER_FRAME, MutationObserver, Odometer, RIBBON_HTML, TRANSITION_END_EVENTS, TRANSITION_SUPPORT, VALUE_HTML, addClass, createFromHTML, now, removeClass, requestAnimationFrame, round, transitionCheckStyles, trigger, truncate, wrapJQuery, _jQueryWrapped, _old, _ref, _ref1,
     __slice = [].slice;
 
   VALUE_HTML = '<span class="odometer-value"></span>';
@@ -12,6 +12,7 @@
 
   DIGIT_FORMAT = '(,ddd).dd';
 
+  MIN_INTEGER_LEN = 2;
 
   FORMAT_PARSER = /^\(?([^)]*)\)?(?:(.)(D*)(d*))?$/;
 
@@ -348,7 +349,7 @@
             this.addDigit('.', true);
           }
         }
-        minIntegerLen = (_ref1 = this.options.minIntegerLen) != null ? _ref1 : window.MIN_INTEGER_LEN;
+        minIntegerLen = (_ref1 = this.options.minIntegerLen) != null ? _ref1 : MIN_INTEGER_LEN;
         for (i = _j = _ref2 = i - fractionalCount; _j < minIntegerLen; i = _j += 1) {
           this.addDigit(0, true);
         }
@@ -527,7 +528,7 @@
         return;
       }
       this.bindTransitionEnd();
-      minIntegerLen = (_ref = this.options.minIntegerLen) != null ? _ref : window.MIN_INTEGER_LEN;
+      minIntegerLen = (_ref = this.options.minIntegerLen) != null ? _ref : MIN_INTEGER_LEN;
       digitCount = Math.max(this.getDigitCount(oldValue, newValue), minIntegerLen + fractionalCount);
       digits = [];
       boosted = 0;

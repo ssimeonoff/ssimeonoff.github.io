@@ -1,5 +1,4 @@
 
-window.MIN_INTEGER_LEN = 2; //the length of the cards' counters
 CONTAINER = 330; //the default height of the buttons container
 var containerHeight = CONTAINER; //the current height of the buttons container
 
