@@ -28,7 +28,7 @@
   </div>
     <div class="cardsContainer">
       <div style="display:inline-block;width:150px;">
-      <div id="totalProjects" class="totalCardsCount odometer"></div>
+      <div id="totalProjects" class="totalCardsCount odometer" data-minintegerlen="3"></div>
       <div class="resource card" style="display:inline-block;transform: rotate(-5deg);"></div>
       <div class="resource card" style="display:inline-block;transform: rotate(0deg);margin-left:-25px;"></div>
       <div class="resource card" style="display:inline-block;transform: rotate(+5deg);margin-left:-25px;"></div>
@@ -116,7 +116,7 @@
         <button id=".production.energy" class="button btn-production" onclick="filterFunction(id)" title="filter cards with enery production"><div class="production energy"></div></button>
         <button id=".production.heat" class="button btn-production" onclick="filterFunction(id)" title="filter cards with heat production"><div class="production heat"></div></button>
 
-        <button id="reqs" class="button btn-req " onclick="filterFunction(id)" title="filter cards having Requirements">REQUIREMENTS</button>
+        <button id="reqs" class="button btn-req " onclick="filterFunction(id);toggleRequirementsFilters();" title="filter cards having Requirements">REQUIREMENTS</button>
 
 
         <div id ="subfilterReqs" class="subfilterReqs-disabled">

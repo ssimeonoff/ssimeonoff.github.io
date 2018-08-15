@@ -652,8 +652,8 @@
 #contentFilters {
     display: none;
     width: 790px;
+    height: 125px;
     padding: 10px;
-    padding-bottom: 20px;
     border-radius: 10px;
     margin-top: 12px;
     margin-bottom: -5px;
@@ -663,15 +663,13 @@
     box-shadow: 0 0 4px 1px rgb(58,58,58);
 }
 
-.subfilterReqs-disabled {
-  filter: grayscale(100%);
-  opacity: 0.2;
-  }
+#subfilterReqs {
+  display: none;
+}
 
 #footer {
   display: none;
 }
-
 
 .footer-links {
   display: inline-block;

@@ -1,6 +1,9 @@
 
 CONTAINER = 330; //the default height of the buttons container
+CONTENT_FILTERS = 125 //the default height of the Content filters area
 var containerHeight = CONTAINER; //the current height of the buttons container
+var contentFiltersCurrent = CONTENT_FILTERS;
+
 
 showAll();
 function showAll() {
@@ -231,6 +234,7 @@ function clearInput() {
   document.getElementById("myInput").value = ""; //resets the text input
   document.getElementById("price").value = 0;
   document.getElementById("contentFilters").style.display = "none"; //hides the range inputs div
+  document.getElementById("subfilterReqs").style.display = "none"; //hides the range inputs div
   document.getElementById("footer").style.display = "none"; //hide the footer
 
   //resets the range inputs
@@ -246,7 +250,9 @@ function clearInput() {
   document.getElementById("output5").innerHTML = 0;
   //shrinks any expanded AREAS
   document.getElementById("buttonsContainer").style.height = CONTAINER + "px";
+  document.getElementById("contentFilters").style.height = CONTENT_FILTERS + "px";
   containerHeight = CONTAINER;
+  contentFiltersCurrent = CONTENT_FILTERS;
 }
 
 function w3AddClass(element, name) {
@@ -273,36 +279,49 @@ function w3RemoveClass(element, name) {
 }
 
 
-//toggle subfilters div
+//toggle Content filters
 function toggleContentDiv() {
   document.getElementById("content").classList.toggle("active");
   if (document.getElementById("content").classList.contains("active")) {
-    containerHeight = containerHeight + 270;
+    containerHeight = containerHeight + contentFiltersCurrent +30; //30 for the margins
     document.getElementById("buttonsContainer").style.height = containerHeight + "px";
     setTimeout(function(){$("#contentFilters").fadeIn(200);}, 100);
-
-
   }
   else {
-    containerHeight = containerHeight - 270;
+    containerHeight = containerHeight - contentFiltersCurrent -30;
     document.getElementById("contentFilters").style.display = "none"; //hides the range inputs div
     document.getElementById("buttonsContainer").style.height = containerHeight + "px";
-    document.getElementById("reqs").classList.remove("active");
-    document.getElementById("subfilterReqs").classList.add("subfilterReqs-disabled");
-    filterFunction();
   }
 }
-
+//toggle Footer
 function toggleFooterDiv() {
   if ($('#footer:visible').length == 0) {
     containerHeight = containerHeight + 40;
     document.getElementById("buttonsContainer").style.height = containerHeight + "px";
     setTimeout(function(){$("#footer").fadeIn(200);}, 100);
-
   }
   else {
     containerHeight = containerHeight - 40;
     document.getElementById("footer").style.display = "none";
+    document.getElementById("buttonsContainer").style.height = containerHeight + "px";
+  }
+}
+
+//toggle Requerements filters
+function toggleRequirementsFilters() {
+  document.getElementById("subfilterReqs").classList.toggle("active");
+  if ($('#subfilterReqs:visible').length == 0) {
+    contentFiltersCurrent = contentFiltersCurrent + 100;
+    containerHeight = containerHeight + 100;
+    document.getElementById("buttonsContainer").style.height = containerHeight + "px";
+    document.getElementById("contentFilters").style.height = contentFiltersCurrent + "px";
+    setTimeout(function(){$("#subfilterReqs").fadeIn(200);}, 100);
+  }
+  else {
+    containerHeight = containerHeight -100;
+    contentFiltersCurrent = contentFiltersCurrent -100;
+    document.getElementById("subfilterReqs").style.display = "none";
+    document.getElementById("contentFilters").style.height = CONTENT_FILTERS + "px";
     document.getElementById("buttonsContainer").style.height = containerHeight + "px";
   }
 }

@@ -128,6 +128,10 @@
         _this = this;
       this.options = options;
       this.el = this.options.el;
+
+      // fetch the configuration from the DOM as data attribute
+      this.options.minIntegerLen = parseInt(this.el.dataset.minintegerlen) || MIN_INTEGER_LEN;
+
       if (this.el.odometer != null) {
         return this.el.odometer;
       }
@@ -174,6 +178,11 @@
         this.watchForMutations();
       }
       this;
+    }
+
+    Odometer.prototype.getMinIntegerLen = function () {
+      console.log('FFFFFFFF', this.el, this.el.dataset.minIntegerLen);
+      return MIN_INTEGER_LEN;
     }
 
     Odometer.prototype.renderInside = function() {
@@ -515,6 +524,10 @@
       this.inside.innerHTML = '';
       return this.resetFormat();
     };
+
+    Odometer.prototype.getMinIntegerLen = function () {
+      return MIN_INTEGER_LEN;
+    }
 
     Odometer.prototype.animateSlide = function(newValue) {
       var boosted, cur, diff, digitCount, digits, dist, end, fractionalCount, frame, frames, i, incr, j, mark, minIntegerLen, numEl, oldValue, start, _base, _i, _j, _k, _l, _len, _len1, _len2, _m, _ref, _ref1, _results;
