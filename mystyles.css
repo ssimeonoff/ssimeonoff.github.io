@@ -474,13 +474,8 @@
 
 
 /************** Style the buttons ************/
-.button {
+.button, .button2 {
   box-shadow: 0 2px 4px 1px rgba(0,0,0,.8);
-  font-family: Prototype;
-}
-
-.button2 {
-  box-shadow: 0 0 4px 1px rgb(58,58,58);
   font-family: Prototype;
 }
 
@@ -491,7 +486,17 @@
   transform: translate(0,3px);
 }
 
+.button2-active {
+  border: 2px solid rgb(137,137,137);
+  box-shadow: 0 1px 1px 0px rgba(0,0,0,.8);
+  transform: translate(0,2px);
+}
+
 .button:hover {
+    border: 2px solid rgb(137,137,137);
+}
+
+.button2:hover {
     border: 2px solid rgb(137,137,137);
 }
 
@@ -550,8 +555,26 @@
     background-color: #cc3333;
     vertical-align: middle;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    box-shadow: 0 0 4px 1px rgb(58,58,58);
     margin-bottom: 5px;
+}
+
+.btn-reset {
+      outline: none;
+      height: 40px;
+      width: 123px;
+      cursor: pointer;
+      border-radius: 20px;
+      text-align: center;
+      font-size:16px;
+      letter-spacing: 1px;
+      color:white;
+      font-family: Prototype;
+      background-color: #cc3333;
+      vertical-align: middle;
+      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+      margin-bottom: 5px;
+      margin-left: 20px;
+      margin-right: 43px;
 }
 
 .btn-content {
@@ -1323,7 +1346,8 @@
     margin-right: 15px;
     border-radius: 20px;
     border-style: outset;
-    box-shadow: 0 0 4px 1px rgb(58,58,58);
+    box-shadow: 0 2px 4px 1px rgba(0,0,0,.8);
+    color: rgb(48,48,48);
 }
 
 #price {
@@ -1623,38 +1647,6 @@
     border-radius: 20px;
 }
 
-/* The Close Button */
-.close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close:hover {}
-
-.close:focus {
-    color: #000;
-    text-decoration: none;
-}
-
-.tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
-}
-
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-}
-
 /* Input sliders classes */
 
 input[type=range] {
@@ -1930,10 +1922,10 @@ input[type=number]::-webkit-outer-spin-button {
     background: #ddd;
     background: linear-gradient(to bottom right, #ccc, #444);
     position: absolute;
-    top: 3px;
+    top: 2px;
     bottom: 0;
     right: 89px;
-    box-shadow: 0 0 4px 2px rgb(58,58,58);
+    box-shadow: 0 2px 4px 2px rgb(58,58,58);
     transition: all 0.2s ease-in-out 0s;
 }
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {

@@ -17,7 +17,6 @@ function showAll() {
   document.getElementById("totalPreludes").innerHTML = displayedPreludes;
   document.getElementById("totalColonies").innerHTML = displayedColonies;
 
-
   //making all buttons inactive
   y = document.querySelectorAll('button.active');
   if (y.length > 0) {
@@ -466,4 +465,11 @@ function sortByID() {
   });
   // put sorted results back on page
   $("#projectCards").append(myArray);
+}
+
+
+function toggleActive(id) {
+  clickedElementID = document.getElementById(id);
+  clickedElementID.classList.toggle("button2-active");
+  setTimeout(function(){clickedElementID.classList.toggle("button2-active");}, 300);
 }
