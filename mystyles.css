@@ -18,7 +18,6 @@
     border-style: outset;
     border-radius: 20px;
     box-shadow: 0 0 30px 15px black;
-    transition: 0.2s;
     transition: transform 200ms ease-in-out;
 }
 
@@ -561,21 +560,22 @@
 
 .btn-reset {
       outline: none;
-      height: 40px;
-      width: 123px;
+      height: 70px;
+      width: 70px;
       cursor: pointer;
-      border-radius: 20px;
+      border-radius: 35px;
       text-align: center;
-      font-size:16px;
-      letter-spacing: 1px;
+      font-size: 40px;
+      line-height: 68px;
       color:white;
       font-family: Prototype;
       background-color: #cc3333;
       vertical-align: middle;
       text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
       margin-bottom: 5px;
-      margin-left: 20px;
-      margin-right: 43px;
+      margin-top: -60px;
+      margin-left: 58px;
+      margin-right: 59px;
 }
 
 .btn-content {
