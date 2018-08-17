@@ -47,15 +47,15 @@
   margin-top: 12px;
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
-  grid-gap: 5px;
+  grid-gap: 6px;
 }
 .grid-container > div {
       color: rgb(68, 68, 68);
       text-align: center;
       font-size: 15px;
-      width: 28px;
-      height: 28px;
-      line-height: 28px;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
       border-radius: 20px;
       margin-top: 3px;
 }
