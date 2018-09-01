@@ -23,16 +23,15 @@
 }
 
 .filterDiv2 {
-    float: left;
     position: relative;
     background: #eeeeee;
     background: linear-gradient(to bottom right, #ffffff, #aaaaaa, #eeeeee, #cecece, #dddddd, #eeeeee, #cccccc);
     width: 240px;
     height: 310px;
     font-family:  Arial,Helvetica,sans-serif;
-    margin-left: 160px;
-    margin-top: 200px;
-    transform: scale(1.5);
+    left: 33%;
+    margin-top: 240px;
+    transform: scale(2);
     border-style: outset;
     border-radius: 20px;
     box-shadow: 0 0 30px 15px black;
@@ -706,6 +705,23 @@
     margin-right: 12px;
     margin-top: 15px;
     box-shadow: 0 0 4px 1px rgb(58,58,58);
+}
+
+.btn-google {
+  font-family: Prototype;
+  outline: none;
+  color: rgb(48,48,48);
+  height: 80px;
+  width: 345px;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 20px;
+  margin-left: 33%;
+  margin-top: 200px;
+  background: linear-gradient(to right, rgb(128, 87, 0), rgb(205,162, 130), rgb(205,162, 130), rgb(128, 87, 0));
+  text-shadow:  0 3px 2px black;
+  color:   #ffebcc;
+  text-align: center;
 }
 
 /*-------------------------------*/
@@ -1400,7 +1416,6 @@
 
 .myUL {
     list-style-type: none;
-    width:85%;
     margin: 15px 0px 0px 25px;
 }
 
