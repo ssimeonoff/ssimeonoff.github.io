@@ -20,6 +20,7 @@
     border-radius: 20px;
     box-shadow: 0 0 30px 15px black;
     transition: transform 200ms ease-in-out;
+    will-change: transform;
 }
 
 .filterDiv2 {
