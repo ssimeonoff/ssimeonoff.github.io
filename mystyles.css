@@ -6,6 +6,7 @@
 
 /*project card div*/
 .filterDiv {
+    cursor: pointer;
     float: left;
     position: relative;
     background: #eeeeee;
@@ -21,11 +22,37 @@
     transition: transform 200ms ease-in-out;
 }
 
+.filterDiv2 {
+    float: left;
+    position: relative;
+    background: #eeeeee;
+    background: linear-gradient(to bottom right, #ffffff, #aaaaaa, #eeeeee, #cecece, #dddddd, #eeeeee, #cccccc);
+    width: 240px;
+    height: 310px;
+    font-family:  Arial,Helvetica,sans-serif;
+    margin-left: 160px;
+    margin-top: 200px;
+    transform: scale(2);
+    border-style: outset;
+    border-radius: 20px;
+    box-shadow: 0 0 30px 15px black;
+    transition: transform 200ms ease-in-out;
+}
+
 .filterDiv-stacked {
   transform:  perspective(3500px) rotateY(45deg);
   box-shadow: 0 0 30px 15px black;
   transition: 0.2s;
   margin-right: -130px;
+  transition: transform 200ms ease-in-out;
+}
+
+.filterDiv:hover {
+  -webkit-transform: translateY(-5px);
+   -moz-transform: translateY(-5px);
+   -ms-transform: translateY(-5px);
+   -o-transform: translateY(-5px);
+   transform: translateY(-5px);
   transition: transform 200ms ease-in-out;
 }
 
@@ -296,6 +323,13 @@
 .background-color-colony { background-color: rgb(158,145,128);}
 
 /*********** Style the tags ************/
+.tag-wild {
+  line-height:40px;
+  font-family:
+  Prototype;
+  font-size:32px;
+}
+
 .tag-building {
     background-color: rgb(128,87,0);
 }
@@ -515,8 +549,8 @@
 
 .btn2 {
     outline: none;
-    height: 55px;
-    width: 55px;
+    height: 50px;
+    width: 50px;
     cursor: pointer;
     border-radius: 50%;
     text-align: center;
@@ -1367,8 +1401,7 @@
 .myUL {
     list-style-type: none;
     width:85%;
-    margin-top: 15px;
-    margin-left: -25px;
+    margin: 15px 0px 0px 25px;
 }
 
 .ul-title {
@@ -1381,7 +1414,7 @@
   padding-left: 5px;
   border-radius: 10px;
   background: linear-gradient(to right,#d8ab00, #c19900, #bb511d88,#bb511d00);
-  margin-left: 25px;
+  margin: 0px 0px 0px -25px;
   width: 880px;
 }
 
@@ -1898,15 +1931,15 @@ input[type=number]::-webkit-outer-spin-button {
     border-radius: 30px;
 }
 .onoffswitch-inner:before {
-    content: "STACKED";
-    padding-left: 10px;
+    content: "CASUAL";
+    padding-left: 15px;
     background: #444;
     color: white;
 
 }
 .onoffswitch-inner:after {
-    content: "CASUAL";
-    padding-right: 12px;
+    content: "STACKED";
+    padding-right: 7px;
     background: #ccc;
     color: #444;
     text-align: right;

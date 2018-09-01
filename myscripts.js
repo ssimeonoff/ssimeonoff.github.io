@@ -327,8 +327,8 @@ function toggleRequirementsFilters() {
 
 var design = 1;
 function toggleCardsDesign() {
-  if (design == 1) {casualCards(); design = 2;}
-  else {stackedCards(); design = 1;}
+  if (design == 1) {stackedCards(); design = 2;}
+  else {casualCards(); design = 1;}
 }
 
 function casualCards() {
