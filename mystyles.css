@@ -23,7 +23,7 @@
     will-change: transform;
 }
 
-.filterDiv2 {
+.filterDiv3 {
     position: relative;
     background: #eeeeee;
     background: linear-gradient(to bottom right, #ffffff, #aaaaaa, #eeeeee, #cecece, #dddddd, #eeeeee, #cccccc);
