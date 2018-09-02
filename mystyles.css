@@ -310,6 +310,15 @@
     margin-top: 20px;
     overflow: hidden;
 }
+
+.close {
+  position: absolute;
+  left: 870px;
+  margin-top: -10px;
+  font-weight: bold;
+  font-size: 40px;
+  cursor: pointer;
+}
 /*********** Background colors************/
 .background-color-corporation { background-color: rgb(255,204,100);}
 
@@ -335,7 +344,6 @@
 .tag-building {
     background-color: rgb(128,87,0);
 }
-
     .tag-building:after {
        border-radius: 50%;
         color: rgb(73,54,40);
