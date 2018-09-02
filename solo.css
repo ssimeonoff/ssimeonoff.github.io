@@ -20,24 +20,6 @@
   margin-bottom: 40px;
 }
 
-.header-title {
-  margin-left: 40px;
-  background: rgb(84,150,201);
-  color: white;
-  width: 875px;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-  border-radius: 10px;
-  border-style: outset;
-  margin-bottom: -15px;
-  font-family: Arial;
-  font-weight: bold;
-  font-size: 26px;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  letter-spacing: 1px;
-  margin-top: 15px;
-}
 
 .grid-container {
   font-family: Prototype;
@@ -127,7 +109,7 @@
   text-align: center;
   background: rgb(84,150,201);
   color:white;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  text-shadow: 0 2px 1px black;
   padding: 5px 20px 5px 20px;
   box-shadow: 0 0 0 1px rgba(0,0,0,0.4), 0 0 0 2px rgba(0,0,0,0.2);
   border-radius: 5px;
@@ -171,7 +153,7 @@
 .background-failed {
     background-color: #cc3333;
     border-style:outset !important;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-shadow: 0 0 1px black;
     color:white !important;
     box-shadow:0 0 0 1px rgba(0,0,0,0.4),0 0 0 2px rgba(0,0,0,0.2);
 

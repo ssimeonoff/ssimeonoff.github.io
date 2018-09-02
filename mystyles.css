@@ -335,8 +335,6 @@
 /*********** Style the tags ************/
 .tag-wild {
   line-height:40px;
-  font-family:
-  Prototype;
   font-size:32px;
   color: rgb(48,48,48);
 }
@@ -418,7 +416,7 @@
         font-weight: bold;
         font-size: 26px;
         line-height:42px;
-        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        text-shadow: 0 0 1px black;
     }
 
 .tag-earth {
@@ -613,7 +611,7 @@
       font-family: Prototype;
       background-color: #cc3333;
       vertical-align: middle;
-      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+      text-shadow: 0 0 1px black;
       margin-bottom: 5px;
       margin-left: 13px;
       margin-right: 50px;
@@ -770,7 +768,7 @@
   font-size: 14px;
   line-height: 30px;
   margin-top: -10px;
-  width: 120px;
+  width: 100px;
   margin-right: 14px;
   border-radius: 15px;
   box-shadow: 0 0px 0px 1px rgba(0,0,0,.5), 0 2px 4px 1px rgba(0,0,0,.5);
@@ -1063,7 +1061,7 @@
   line-height: 24px;
   font-size:30px;
   vertical-align: middle;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  text-shadow: 0 0 1px black;
 
 }
 
@@ -1240,7 +1238,7 @@
 .card-icon-venus {
   background: rgb(84,150,201);
   border-radius: 50%;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  text-shadow: 0 0 1px black;
   font-size:14px;
   line-height: 22px;
   margin-top: -14px;
@@ -1259,7 +1257,7 @@
   color:white;
   font-size: 14px;
   border-radius: 2px;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  text-shadow: 0 0 1px black;
 }
 
 .card-icon-space {
@@ -1281,13 +1279,13 @@
   color: rgb(73,54,40);
   font-size: 12px;
   border-radius: 50%;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  text-shadow: 0 0 1px black;
 }
 
 .floater{
     background: rgb(255,204,100);
     color:white;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-shadow: 0 0 1px black;
   }
 .floater:after {
     content: "\2601";
@@ -1361,7 +1359,7 @@
             color: white;
             font-weight: bold;
             font-size: 18px;
-            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+            text-shadow: 0 0 1px black;
         }
 
 
