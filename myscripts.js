@@ -10,7 +10,7 @@ cards = parseURLParams(urlString);
 console.log (cards);
 
 //display all card or only few ones if pointed
-if (cards == "all") {showAll();}
+if (cards == "ALL") {showAll();}
 else {displayCardsOnly(cards);}
 
 function showAll() {
@@ -42,9 +42,8 @@ function parseURLParams(url) {
     var queryStart = url.indexOf("#") + 1,
         queryEnd   = url.indexOf("%") + 1 || url.length + 1,
         query = url.slice(queryStart, queryEnd - 1)
-    query = query.toUpperCase();
-    cards = query.replace(/\+/g, " ").split(" ");
-    if (query === url || query === "") return "all";
+    cards = query.replace(/\+/g, " ").toUpperCase().split(" ");
+    if (query === url || query === "") return "ALL";
     return cards;
 }
 
