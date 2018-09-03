@@ -1520,6 +1520,7 @@
 }
 
 #buttonsContainer {
+    display: none;
     background: #cccccc;
     background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
     border-style: outset;

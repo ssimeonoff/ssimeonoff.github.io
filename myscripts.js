@@ -19,6 +19,7 @@ function showAll() {
   displayedCorporations = 26;
   displayedPreludes = 35;
   displayedColonies = 4;
+  document.getElementById("buttonsContainer").style.display = "block";
   document.getElementById("totalProjects").innerHTML = displayedProjects;
   document.getElementById("totalCorporations").innerHTML = displayedCorporations;
   document.getElementById("totalPreludes").innerHTML = displayedPreludes;
@@ -50,7 +51,6 @@ function parseURLParams(url) {
 ////////////////////// Display only pointed cards ///////////////////
 function displayCardsOnly() {
   //hiding the controller and lists' titles
-  document.getElementById("buttonsContainer").style.display = "none";
   var elements = document.querySelectorAll('.ul-title');
   for (i=0; i<elements.length; i++){elements[i].style.display = "none";}
 
