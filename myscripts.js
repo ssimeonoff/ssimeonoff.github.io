@@ -4,8 +4,15 @@ CONTENT_FILTERS = 125 //the default height of the Content filters area
 var containerHeight = CONTAINER; //the current height of the buttons container
 var contentFiltersCurrent = CONTENT_FILTERS;
 
+//parse the url
+var urlString = window.location.href;
+cards = parseURLParams(urlString);
+console.log (cards);
 
-showAll();
+//display all card or only few ones if pointed
+if (cards == "all") {showAll();}
+else {displayCardsOnly(cards);}
+
 function showAll() {
   var x, i;
   displayedProjects = 275;
@@ -30,6 +37,32 @@ function showAll() {
 
 }
 
+//////////////////////PARSE function ////////////////////////////////
+function parseURLParams(url) {
+    var queryStart = url.indexOf("#") + 1,
+        queryEnd   = url.indexOf("%") + 1 || url.length + 1,
+        query = url.slice(queryStart, queryEnd - 1)
+    query = query.toUpperCase();
+    cards = query.replace(/\+/g, " ").split(" ");
+    if (query === url || query === "") return "all";
+    return cards;
+}
+
+////////////////////// Display only pointed cards ///////////////////
+function displayCardsOnly() {
+  //hiding the controller and lists' titles
+  document.getElementById("buttonsContainer").style.display = "none";
+  var elements = document.querySelectorAll('.ul-title');
+  for (i=0; i<elements.length; i++){elements[i].style.display = "none";}
+
+  //showing only the pointed cards
+  x = document.querySelectorAll('li.automated, li.events, li.active, li.preludeCards');
+  for (i = 0; i < x.length; i++) {
+    if (cards.includes((x[i].querySelector(".number").textContent))) {
+      w3AddClass(x[i], "show");
+    }
+  }
+}
 ////////////////////// FILTER FUCTION ///////////////////////////////
 function filterFunction(id) {
   var input, filter, ul, li, a, i, x;

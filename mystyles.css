@@ -47,15 +47,6 @@
   transition: transform 200ms ease-in-out;
 }
 
-.filterDiv:hover {
-  -webkit-transform: translateY(-5px);
-   -moz-transform: translateY(-5px);
-   -ms-transform: translateY(-5px);
-   -o-transform: translateY(-5px);
-   transform: translateY(-5px);
-  transition: transform 200ms ease-in-out;
-}
-
 .filterDiv-stacked:hover {
   -webkit-transform: translateY(-20px);
    -moz-transform: translateY(-20px);
