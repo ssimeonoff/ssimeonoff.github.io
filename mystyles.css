@@ -6,6 +6,7 @@
 
 /*project card div*/
 .filterDiv {
+    cursor: pointer;
     float: left;
     position: relative;
     background: #eeeeee;
@@ -20,6 +21,10 @@
     box-shadow: 0 0 30px 15px black;
     transition: transform 200ms ease-in-out;
     will-change: transform;
+}
+
+.clicked-card {
+  box-shadow: 0 0 30px 8px #d8ab00;
 }
 
 .filterDiv3 {
@@ -608,7 +613,7 @@
       text-shadow: 0 0 1px black;
       margin-bottom: 5px;
       margin-left: 13px;
-      margin-right: 50px;
+      margin-right: 40px;
 }
 
 .btn-content {
@@ -623,6 +628,26 @@
     margin-right: 28px;
     margin-top: 20px;
     vertical-align: bottom;
+}
+
+.btn-selected-cards{
+   display: none;
+   text-decoration: none;
+   font-family: Prototype;
+   background: white;
+   position: absolute;
+   outline: none;
+   color: rgb(48,48,48);
+   height: 36px;
+   line-height: 17px;
+   width: 123px;
+   cursor: pointer;
+   font-size: 14px;
+   text-align: center;
+   border-radius: 20px;
+   margin-left: 28px;
+   margin-top: 20px;
+   vertical-align: bottom;
 }
 
 .btn-sort {
@@ -1397,7 +1422,7 @@
     padding: 0px 2px 0px 15px;
     margin-top: 10px;
     margin-bottom: 25px;
-    margin-right: 15px;
+    margin-right: 27px;
     border-radius: 20px;
     border-style: outset;
     box-shadow: 0 2px 4px 1px rgba(0,0,0,.8);
@@ -1425,6 +1450,7 @@
 }
 
 .ul-title {
+  display: none;
   position: relative;
   z-index: 1;
   font-family: Prototype;

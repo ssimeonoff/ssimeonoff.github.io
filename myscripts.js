@@ -3,11 +3,11 @@ CONTAINER = 330; //the default height of the buttons container
 CONTENT_FILTERS = 125 //the default height of the Content filters area
 var containerHeight = CONTAINER; //the current height of the buttons container
 var contentFiltersCurrent = CONTENT_FILTERS;
+var selectedCards = "";
 
 //parse the url
 var urlString = window.location.href;
 cards = parseURLParams(urlString);
-console.log (cards);
 
 //display all card or only few ones if pointed
 if (cards == "ALL") {showAll();}
@@ -20,6 +20,8 @@ function showAll() {
   displayedPreludes = 35;
   displayedColonies = 4;
   document.getElementById("buttonsContainer").style.display = "block";
+  var elements = document.querySelectorAll('.ul-title');
+  for (i=0; i<elements.length; i++){elements[i].style.display = "block";}
   document.getElementById("totalProjects").innerHTML = displayedProjects;
   document.getElementById("totalCorporations").innerHTML = displayedCorporations;
   document.getElementById("totalPreludes").innerHTML = displayedPreludes;
@@ -43,16 +45,13 @@ function parseURLParams(url) {
     var queryStart = url.indexOf("#") + 1,
         queryEnd   = url.indexOf("%") + 1 || url.length + 1,
         query = url.slice(queryStart, queryEnd - 1)
-    cards = query.replace(/\+/g, " ").toUpperCase().split(" ");
+    cards = query.replace(/\#/g, " ").toUpperCase().split(" ");
     if (query === url || query === "") return "ALL";
     return cards;
 }
 
 ////////////////////// Display only pointed cards ///////////////////
 function displayCardsOnly() {
-  //hiding the controller and lists' titles
-  var elements = document.querySelectorAll('.ul-title');
-  for (i=0; i<elements.length; i++){elements[i].style.display = "none";}
 
   //showing only the pointed cards
   x = document.querySelectorAll('li.automated, li.events, li.active, li.preludeCards');
@@ -267,6 +266,8 @@ function clearInput() {
   document.getElementById("contentFilters").style.display = "none"; //hides the range inputs div
   document.getElementById("subfilterReqs").style.display = "none"; //hides the range inputs div
   document.getElementById("footer").style.display = "none"; //hide the footer
+  document.getElementById("btn-selectedCards").style.display = "none"; //hide the selected cards button
+
 
   //resets the range inputs
   document.getElementById("slider1").value = -30;
@@ -279,11 +280,17 @@ function clearInput() {
   document.getElementById("output4").innerHTML = 0;
   document.getElementById("slider5").value = 0;
   document.getElementById("output5").innerHTML = 0;
+  
   //shrinks any expanded AREAS
   document.getElementById("buttonsContainer").style.height = CONTAINER + "px";
   document.getElementById("contentFilters").style.height = CONTENT_FILTERS + "px";
   containerHeight = CONTAINER;
   contentFiltersCurrent = CONTENT_FILTERS;
+
+  // clear any selected cards
+  x = document.querySelectorAll(".clicked-card");
+  for (i = 0; i < x.length; i++) {w3RemoveClass(x[i], "clicked-card");}
+  selectedCards = "";
 }
 
 function w3AddClass(element, name) {
@@ -499,9 +506,41 @@ function sortByID() {
   $("#projectCards").append(myArray);
 }
 
-
 function toggleActive(id) {
   clickedElementID = document.getElementById(id);
   clickedElementID.classList.toggle("button2-active");
   setTimeout(function(){clickedElementID.classList.toggle("button2-active");}, 300);
+}
+
+
+function getClickedCard() {
+  var clickedCard;
+  $(document).click(function(event) {
+    clickedCard = event.target.closest("li");
+  });
+  setTimeout(function(){selectCard(clickedCard), 100;});
+}
+
+function selectCard (clickedCard) {
+  //works only if the controller is visible
+  if ($('#buttonsContainer:visible').length > 0) {
+    //change the shadow of the clicked card
+    clickedCard.classList.toggle("clicked-card");
+
+    //adding or removing the clicked card id to the string
+    selectedCardNumber = "#" + clickedCard.querySelector(".number").textContent;
+    if (selectedCards.indexOf(selectedCardNumber) >= 0) {
+      selectedCards = selectedCards.replace(selectedCardNumber, "");
+    }
+    else {selectedCards = selectedCards + selectedCardNumber;}
+
+    if (selectedCards.length > 0) {
+      document.getElementById("btn-selectedCards").href = "https://ssimeonoff.github.io/" + selectedCards;
+      document.getElementById("btn-selectedCards").style.display = "inline-block";
+    }
+    else {
+      document.getElementById("btn-selectedCards").style.display = "none";
+    }
+    console.log(selectedCards.length);
+  }
 }
