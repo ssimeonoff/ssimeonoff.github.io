@@ -945,6 +945,7 @@
 
 .red-outline {
     border: 2px solid red;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3), inset 0 0 0px 1px #444 !important;
 }
 
 /************** Tiles**************/
