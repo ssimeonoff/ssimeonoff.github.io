@@ -54,11 +54,19 @@ function parseURLParams(url) {
 function displayCardsOnly() {
 
   //showing only the pointed cards
-  x = document.querySelectorAll('li.automated, li.events, li.active, li.preludeCards');
+  x = document.querySelectorAll('li.filterDiv');
   for (i = 0; i < x.length; i++) {
-    if (cards.includes((x[i].querySelector(".number").textContent))) {
-      w3AddClass(x[i], "show");
+    if (x[i].querySelector(".number") != null) {
+      if (cards.includes(x[i].querySelector(".number").textContent)) {
+        w3AddClass(x[i], "show");
+      }
     }
+    else {
+      if (cards.includes(x[i].id)) {
+        w3AddClass(x[i], "show");
+      }
+    }
+
   }
 }
 ////////////////////// FILTER FUCTION ///////////////////////////////
@@ -527,13 +535,20 @@ function selectCard (clickedCard) {
     //change the shadow of the clicked card
     clickedCard.classList.toggle("clicked-card");
 
-    //adding or removing the clicked card id to the string
-    selectedCardNumber = "#" + clickedCard.querySelector(".number").textContent;
+    //adding or removing the clicked card number or id to the string
+    if (clickedCard.querySelector(".number") != null) {
+      selectedCardNumber = "#" + clickedCard.querySelector(".number").textContent;
+    }
+    else {
+      selectedCardNumber = "#" + clickedCard.id;
+    }
+
     if (selectedCards.indexOf(selectedCardNumber) >= 0) {
       selectedCards = selectedCards.replace(selectedCardNumber, "");
     }
     else {selectedCards = selectedCards + selectedCardNumber;}
 
+    //showing or removing the CTA button and updating its url
     if (selectedCards.length > 0) {
       document.getElementById("btn-selectedCards").href = "https://ssimeonoff.github.io/" + selectedCards;
       $("#btn-selectedCards").fadeIn(300);
@@ -541,5 +556,6 @@ function selectCard (clickedCard) {
     else {
       $("#btn-selectedCards").fadeOut(300);
     }
+
   }
 }
