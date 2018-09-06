@@ -280,7 +280,7 @@ function clearInput() {
   document.getElementById("output4").innerHTML = 0;
   document.getElementById("slider5").value = 0;
   document.getElementById("output5").innerHTML = 0;
-  
+
   //shrinks any expanded AREAS
   document.getElementById("buttonsContainer").style.height = CONTAINER + "px";
   document.getElementById("contentFilters").style.height = CONTENT_FILTERS + "px";
@@ -536,11 +536,10 @@ function selectCard (clickedCard) {
 
     if (selectedCards.length > 0) {
       document.getElementById("btn-selectedCards").href = "https://ssimeonoff.github.io/" + selectedCards;
-      document.getElementById("btn-selectedCards").style.display = "inline-block";
+      $("#btn-selectedCards").fadeIn(300);
     }
     else {
-      document.getElementById("btn-selectedCards").style.display = "none";
+      $("#btn-selectedCards").fadeOut(300);
     }
-    console.log(selectedCards.length);
   }
 }
