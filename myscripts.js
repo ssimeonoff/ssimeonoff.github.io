@@ -359,15 +359,15 @@ function toggleFooterDiv() {
 function toggleRequirementsFilters() {
   document.getElementById("subfilterReqs").classList.toggle("active");
   if ($('#subfilterReqs:visible').length == 0) {
-    contentFiltersCurrent = contentFiltersCurrent + 100;
-    containerHeight = containerHeight + 100;
+    contentFiltersCurrent = contentFiltersCurrent + 105;
+    containerHeight = containerHeight + 105;
     document.getElementById("buttonsContainer").style.height = containerHeight + "px";
     document.getElementById("contentFilters").style.height = contentFiltersCurrent + "px";
     setTimeout(function(){$("#subfilterReqs").fadeIn(200);}, 100);
   }
   else {
-    containerHeight = containerHeight -100;
-    contentFiltersCurrent = contentFiltersCurrent -100;
+    containerHeight = containerHeight -105;
+    contentFiltersCurrent = contentFiltersCurrent -105;
     document.getElementById("subfilterReqs").style.display = "none";
     document.getElementById("contentFilters").style.height = CONTENT_FILTERS + "px";
     document.getElementById("buttonsContainer").style.height = containerHeight + "px";
