@@ -4,6 +4,7 @@ CONTENT_FILTERS = 125 //the default height of the Content filters area
 var containerHeight = CONTAINER; //the current height of the buttons container
 var contentFiltersCurrent = CONTENT_FILTERS;
 var selectedCards = "";
+var selectedCardsAmount = 0;
 
 //parse the url
 var urlString = window.location.href;
@@ -296,6 +297,7 @@ function clearInput() {
   contentFiltersCurrent = CONTENT_FILTERS;
 
   // clear any selected cards
+  selectedCardsAmount = 0;
   x = document.querySelectorAll(".clicked-card");
   for (i = 0; i < x.length; i++) {w3RemoveClass(x[i], "clicked-card");}
   selectedCards = "";
@@ -545,12 +547,17 @@ function selectCard (clickedCard) {
 
     if (selectedCards.indexOf(selectedCardNumber) >= 0) {
       selectedCards = selectedCards.replace(selectedCardNumber, "");
+      selectedCardsAmount--;
     }
-    else {selectedCards = selectedCards + selectedCardNumber;}
+    else {
+      selectedCards = selectedCards + selectedCardNumber;
+      selectedCardsAmount++;
+    }
 
     //showing or removing the CTA button and updating its url
     if (selectedCards.length > 0) {
       document.getElementById("btn-selectedCards").href = "https://ssimeonoff.github.io/" + selectedCards;
+      document.getElementById("selectedCardsAmount").innerHTML = selectedCardsAmount;
       $("#btn-selectedCards").fadeIn(300);
     }
     else {

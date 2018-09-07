@@ -645,9 +645,28 @@
    font-size: 14px;
    text-align: center;
    border-radius: 20px;
-   margin-left: 28px;
+   margin-left: 18px;
    margin-top: 20px;
    vertical-align: bottom;
+   padding-right: 25px;
+}
+
+#selectedCardsAmount {
+  position: absolute;
+  display: inline-block;
+  font-family: Prototype;
+  width: 29px;
+  height: 29px;
+  line-height: 29px;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 20px;
+  background: white;
+  margin-top: -14px;
+  margin-left: 11px;
+  box-shadow: 0 0px 1px 1px rgba(0,0,0,.8);
+  background: #cc3333;
+  color: white;
 }
 
 .btn-sort {

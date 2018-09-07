@@ -70,7 +70,7 @@
 
       <button id="powerTag" class="button btn2 tag-power  " onclick="filterFunction(id)" title="filter by Power tag"></button>
       <button id="jovianTag" class="button btn2 tag-jovian  " onclick="filterFunction(id)" title="filter by Jovian tag"></button>
-      <button id="earthTag" class="button btn2 tag-earth  " style="font-size:40px;padding-top:3px;padding-left:1px;padding-right:1px;" onclick="filterFunction(id)" title="title="filter by Earth tag""></button>
+      <button id="earthTag" class="button btn2 tag-earth  " style="font-size:40px;padding-top:3px;padding-left:1px;padding-right:1px;" onclick="filterFunction(id)" title="filter by Earth tag"></button>
 
       <button id="cityTag" class="button btn2 tag-city  " style="font-size:22px;line-height:40px" onclick="filterFunction(id)" title="filter by City tag"></button>
       <button id="eventTag" class="button btn2 tag-event  " style="line-height:40px;vertical-align:bottom;" onclick="filterFunction(id)" title="filter by Event tag"></button>
@@ -88,7 +88,8 @@
       <button id="prelude" class="button btn3 prelude-icon button-icon  " onclick="filterFunction(id)" title="filter Prelude cards"></button>
       <button id="colonies" class="button btn3 colonies-icon button-icon  " onclick="filterFunction(id)" title="filter Colonies cards"></button>
       <button id="promo" class="button btn3 promo-icon button-icon  " onclick="filterFunction(id)" title="filter Promo cards"></button>
-      <a id="btn-selectedCards" class="button btn-selected-cards"  title="open selected cards" href="https://ssimeonoff.github.io/" target="_blank">SELECTED<br> CARDS ONLY</a>
+      <a id="btn-selectedCards" class="button btn-selected-cards"  title="open selected cards" href="https://ssimeonoff.github.io/" target="_blank">SELECTED<br> CARDS ONLY<div id="selectedCardsAmount">0</div></a>
+
 
       <div class="onoffswitch">
         <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" onclick="toggleCardsDesign();" checked>
@@ -210,8 +211,8 @@
         <!--2-->
         <li onclick="getClickedCard();" class="filterDiv automated jovianTag corporate reqs">
             <div class="title background-color-automated ">Asteroid Mining Consortium</div>
-            <div class="price ">13</div>
-            <div class="tag tag1 tag-jovian "></div>
+            <div class="price">13</div>
+            <div class="tag tag1 tag-jovian"></div>
             <div class="number">002</div>
             <div class="corporate-icon project-icon"></div>
             <div class="content ">
