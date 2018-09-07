@@ -655,18 +655,19 @@
   position: absolute;
   display: inline-block;
   font-family: Prototype;
-  width: 29px;
-  height: 29px;
-  line-height: 29px;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
   font-size: 18px;
   text-align: center;
   border-radius: 20px;
   background: white;
-  margin-top: -14px;
-  margin-left: 11px;
+  margin-top: -13px;
+  margin-left: 12px;
   box-shadow: 0 0px 1px 1px rgba(0,0,0,.8);
   background: #cc3333;
   color: white;
+  text-shadow: 0 0 1px black;
 }
 
 .btn-sort {
