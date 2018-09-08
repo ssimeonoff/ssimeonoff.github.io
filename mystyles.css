@@ -697,15 +697,15 @@ border-right: 2px solid rgb(137,137,137);
     color: rgb(48,48,48);
     height: 30px;
     line-height: 30px;
-    width: 94px;
+    width: 80px;
     text-align: center;
     cursor: pointer;
     font-size: 16px;
     border-radius: 1px;
     border-top: 2px solid rgb(221,221,221);
-border-left: 2px solid rgb(221,221,221);
-border-bottom: 2px solid rgb(137,137,137);
-border-right: 2px solid rgb(137,137,137);
+    border-left: 2px solid rgb(221,221,221);
+    border-bottom: 2px solid rgb(137,137,137);
+    border-right: 2px solid rgb(137,137,137);
     box-shadow: 0 2px 2px 1px rgba(0,0,0,.8);
     background: #ccc;
     margin-left: -28px;
@@ -715,14 +715,14 @@ border-right: 2px solid rgb(137,137,137);
     outline: none;
     background-color: rgb(255,204,100);
     background: linear-gradient(to right, #e28c22, rgb(255,204,100),rgb(255,204,100), #e28c22);
-    height: 40px;
+    height: 44px;
     border-radius: 8px;
-    width: 140px;
+    width: 280px;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 18px;
     margin-right: 29px;
     margin-bottom: 20px;
-    margin-left:28px;
+    margin-left:3px;
 }
 
 .btn-production {
@@ -742,14 +742,16 @@ border-right: 2px solid rgb(137,137,137);
     outline: none;
     background-color: rgb(255,204,100);
     background: linear-gradient(#cc8b00, rgb(128, 87, 0),rgb(128, 87, 0));
-    height: 46px;
-    width: 80px;
+    height: 44px;
+    width: 84px;
     cursor: pointer;
     border-radius: 12px;
-    margin-right: 60px;
+    margin-right: 30px;
+    margin-left: 12px;
     margin-bottom: 20px;
     font-size: 29px;
     text-shadow: 0 0 5px darkorange;
+    vertical-align: top;
 }
 
 .btn-price {
@@ -801,6 +803,7 @@ border-right: 2px solid rgb(137,137,137);
   width: 52px !important;
   vertical-align: middle;
   border-radius: 8px;
+  margin-top: -3px;
 }
 
 /*-------------------------------*/
@@ -874,11 +877,11 @@ border-right: 2px solid rgb(137,137,137);
     background-color: rgb(255,204,100);
     background: linear-gradient(to right, #e28c22, rgb(255,204,100),rgb(255,204,100), #e28c22);
     border-top: 2px solid rgb(221,221,221);
-border-left: 2px solid rgb(221,221,221);
-border-bottom: 2px solid rgb(137,137,137);
-border-right: 2px solid rgb(137,137,137);
-    width: 60%;
-    margin-left: 42px;
+    border-left: 2px solid rgb(221,221,221);
+    border-bottom: 2px solid rgb(137,137,137);
+    border-right: 2px solid rgb(137,137,137);
+    width: 70%;
+    margin-left: 30px;
     margin-bottom: 10px;
     height: 25px;
     line-height: 25px;
@@ -1125,14 +1128,13 @@ border-right: 2px solid rgb(137,137,137);
 
 .oxygen-tile {
     background-color: rgb(246,241,175);
-    color: red;
+    color: #cc3333;
     font-size: 24px;
     width: 30px;
-    box-shadow: 0 0 0 1px rgba(0,0,0,0.4), 0 0 0 2px rgba(0,0,0,0.2);
 }
 
     .oxygen-tile:after {
-        content: "O\2082";
+        content: "O\2082\FE0E";
         font-family: Prototype;
         font-weight: normal;
     }
@@ -1451,9 +1453,10 @@ border-right: 2px solid rgb(137,137,137);
 .rating {
     background-color: rgb(240,100,00);
     background: linear-gradient(orange, orangered);
-    font-size: 24px;
-    padding-bottom: 8px;
-    padding-left: 6px;
+    font-size: 28px;
+    font-weight: normal;
+    padding-bottom: 7px;
+    padding-left: 5px;
     vertical-align: middle;
 }
     .rating:after {
@@ -2176,7 +2179,13 @@ input[type=number]::-webkit-outer-spin-button {
 #sortButtons {
   display: inline-block;
   margin-bottom: 10px;
-  margin-right: 20px;
+  margin-right: 10px;
+}
+
+#filterByPrice {
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-right: 10px;
 }
 
 .sort-title {

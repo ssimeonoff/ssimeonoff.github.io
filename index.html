@@ -105,33 +105,33 @@
             <input type="radio" name='radio' id="radio-choice-1" value="on" checked="checked" onclick="sortByID();">
             <label class= "btn-sort" for="radio-choice-1">ID</label>
             <input type="radio" name='radio' id="radio-choice-2" value="off" onclick="sortByPriceUp();">
-            <label class= "btn-sort" for="radio-choice-2" >Price UP</label>
+            <label class= "btn-sort" for="radio-choice-2" >MC UP</label>
             <input type="radio" name='radio' id="radio-choice-3" value="other" onclick="sortByPriceDown();">
-            <label class= "btn-sort" for="radio-choice-3">Price Down</label>
+            <label class= "btn-sort" for="radio-choice-3">MC Down</label>
           </fieldset>
         </form>
+
         <button title="decrease Price filter by 1" class="button2   btn-price" onclick="reduceOne()" title="decrease Price filter by 1">-</button>
         <input  type="number" title="filter by Price" id="price" oninput="filterFunction(id);" value="0" min="0" max="50"></input>
-        <button class="button2   btn-price" style="margin-right:36px;" onclick="increaseOne()" title="increase Price filter by 1">+</button>
-        <button id="vp" class="button btn-vp" onclick="filterFunction(id)" title="filter cards with VP">VP</button>
+        <button class="button2   btn-price" style="margin-right:10px;" onclick="increaseOne()" title="increase Price filter by 1">+</button>
 
-        <br>
         <button id=".production.money" class="button btn-production" onclick="filterFunction(id)" title="filter cards with money production" style="margin-left:6px;"><div class="production money">M</div></button>
         <button id=".production.steel" class="button btn-production" onclick="filterFunction(id)" title="filter cards with steel production"><div class="production steel"></div></button>
         <button id=".production.titanium" class="button btn-production" onclick="filterFunction(id)" title="filter cards with titanium production"><div class="production titanium"></div></button>
         <button id=".production.plant" class="button btn-production" onclick="filterFunction(id)" title="filter cards with plant production"><div class="production plant"></div></button>
         <button id=".production.energy" class="button btn-production" onclick="filterFunction(id)" title="filter cards with enery production"><div class="production energy"></div></button>
         <button id=".production.heat" class="button btn-production" onclick="filterFunction(id)" title="filter cards with heat production"><div class="production heat"></div></button>
+        <br>
 
         <button id="reqs" class="button btn-req" onclick="filterFunction(id);toggleRequirementsFilters();" title="filter cards having Requirements">REQUIREMENTS</button>
+        <button id="vp" class="button btn-vp" onclick="filterFunction(id)" title="filter cards with VP">VP</button>
 
-        <button id="rating" class="button btn-tile rating" onclick="filterFunction(id)" title="filter cards with TR tiles"></button>
         <button id="temperature-tile" class="button btn-tile temperature-tile" onclick="filterFunction(id)" title="filter cards with Temperature tiles"></button>
         <button id="ocean-tile" class="button btn-tile ocean-tile" onclick="filterFunction(id)" title="filter cards with Ocean tiles" style="padding:0px;"></button>
         <button id="greenery-tile" class="button btn-tile greenery-tile" onclick="filterFunction(id)" title="filter cards with Greenery tiles" style="padding:0px;"></button>
-
-
-
+        <button id="oxygen-tile" class="button btn-tile oxygen-tile" onclick="filterFunction(id)" title="filter cards with Oxygen tiles" style="padding:0px;"></button>
+        <button id="venus-tile" class="button btn-tile venus-tile" onclick="filterFunction(id)" title="filter cards with Venus tiles" style="padding:0px;">V</button>
+        <button id="rating" class="button btn-tile rating" onclick="filterFunction(id)" title="filter cards with TR tiles" style="padding-left:7px;"></button>
 
 
         <div id ="subfilterReqs" class="subfilterReqs-disabled">
@@ -2607,7 +2607,7 @@
           <div class="number">135</div>
           <div class="content">
             <div class="points points-big">3</div>
-            <div class="requirements" style="font-size:14px;">Plant Microbe Animal</div>
+            <div class="requirements">Plant Microbe Animal</div>
             <div class="description">
               (Requires a Plant tag, a Microbe tag, and an Animal tag.)
             </div>
