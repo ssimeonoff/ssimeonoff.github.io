@@ -423,6 +423,7 @@ border-right: 2px solid rgb(137,137,137);
 
 .tag-venus {
     background: rgb(84,150,201);
+    font-family: Prototype;
 }
 
     .tag-venus:after {
@@ -531,6 +532,7 @@ border-right: 2px solid rgb(137,137,137);
 
 /************** Style the buttons ************/
 .button, .button2 {
+  outline: none;
   box-shadow: 0 2px 4px 1px rgba(0,0,0,.8);
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
@@ -791,6 +793,14 @@ border-right: 2px solid rgb(137,137,137);
   text-shadow:  0 3px 2px black;
   color:   #ffebcc;
   text-align: center;
+}
+
+.btn-tile {
+  height: 44px !important;
+  line-height: 40px;
+  width: 52px !important;
+  vertical-align: middle;
+  border-radius: 8px;
 }
 
 /*-------------------------------*/
@@ -1873,20 +1883,50 @@ input[type=range]:focus {
   background: url("thumb4.png") !important;
   width: 46px !important;
   background-repeat: no-repeat;
-
 }
 
 .track-science-thumb::-webkit-slider-thumb {
   background: url("thumb5.png") !important;
   border-radius: 50% !important;
   background-repeat: no-repeat;
-
 }
 .track-science-thumb::-moz-range-thumb {
   background: url("thumb5.png") !important;
   border-radius: 50% !important;
   background-repeat: no-repeat;
+}
 
+.track-jovian-thumb::-webkit-slider-thumb {
+  background: url("thumb6.png") !important;
+  border-radius: 50% !important;
+  background-repeat: no-repeat;
+}
+.track-jovian-thumb::-moz-range-thumb {
+  background: url("thumb6.png") !important;
+  border-radius: 50% !important;
+  background-repeat: no-repeat;
+}
+
+.track-venusTag-thumb::-webkit-slider-thumb {
+  background: url("thumb7.png") !important;
+  border-radius: 50% !important;
+  background-repeat: no-repeat;
+}
+.track-venusTag-thumb::-moz-range-thumb {
+  background: url("thumb7.png") !important;
+  border-radius: 50% !important;
+  background-repeat: no-repeat;
+}
+
+.track-earth-thumb::-webkit-slider-thumb {
+  background: url("thumb8.png") !important;
+  border-radius: 50% !important;
+  background-repeat: no-repeat;
+}
+.track-earth-thumb::-moz-range-thumb {
+  background: url("thumb8.png") !important;
+  border-radius: 50% !important;
+  background-repeat: no-repeat;
 }
 
 
@@ -1910,12 +1950,36 @@ input[type=range]:focus {
   background-color: #8bb8da !important;
 }
 
+.track-venusTag-background::-webkit-slider-runnable-track {
+  background-color: rgb(84,150,201) !important;
+}
+
+.track-venusTag-background::-moz-range-track {
+  background-color: rgb(84,150,201) !important;
+}
+
 .track-science-background::-webkit-slider-runnable-track {
   background-color: white !important;
 }
 
 .track-science-background::-moz-range-track {
   background-color: white !important;
+}
+
+.track-jovian-background::-webkit-slider-runnable-track {
+  background-color: rgb(255,223,149) !important;
+}
+
+.track-jovian-background::-moz-range-track {
+  background-color: rgb(255,223,149)  !important;
+}
+
+.track-earth-background::-webkit-slider-runnable-track {
+  background-color: rgb(15,96,151) !important;
+}
+
+.track-earth-background::-moz-range-track {
+  background-color: rgb(15,96,151)  !important;
 }
 
 input[type=range]::-webkit-slider-runnable-track {
@@ -1940,7 +2004,7 @@ input[type=range]::-webkit-slider-thumb {
   background: white;
   cursor: pointer;
   -webkit-appearance: none;
-  margin-top: -14px;
+  margin-top: -13px;
 }
 input[type=range]:focus::-webkit-slider-runnable-track {
   background: #3071A9;

@@ -86,6 +86,9 @@ function filterFunction(id) {
   btnDeck = document.querySelectorAll('button.active.btn3');
   btnReq = document.getElementById('reqs');
   btnVP = document.getElementById('vp');
+  btnTile = document.querySelectorAll('button.active.btn-tile');
+
+
   btnProduction = document.querySelectorAll('button.active.btn-production');
 
   //filter by Card type
@@ -153,6 +156,22 @@ function filterFunction(id) {
     x = document.querySelectorAll('li.show');
   }
 
+  //filter by tiles
+  if (btnTile.length > 0)  {
+    for (i = 0; i < x.length; i++) {
+      show = false;
+      for (j = 0; j < btnTile.length; j++) {
+        if (x[i].querySelectorAll(".tile." + btnTile[j].id).length > 0) {
+          show = true;
+        }
+        if (show == true) {w3AddClass(x[i], "show");}
+        else {w3RemoveClass(x[i], "show");}
+        }
+    }
+    x = document.querySelectorAll('li.show');
+  }
+
+
   //filter by production
   if (btnProduction.length > 0)  {
     for (i = 0; i < x.length; i++) {
@@ -193,8 +212,12 @@ function filterFunction(id) {
     oceansValue = document.getElementById("slider3").value;
     venusValue = document.getElementById("slider4").value;
     scienceValue = document.getElementById("slider5").value;
+    jovianValue = document.getElementById("slider6").value;
+    venusTagValue = document.getElementById("slider7").value;
+    earthValue = document.getElementById("slider8").value;
 
-    if ( temperatureValue > -30 || oxygenValue > 0 || oceansValue > 0 || venusValue > 0 || scienceValue > 0) {
+    if ( temperatureValue > -30 || oxygenValue > 0 || oceansValue > 0 || venusValue > 0 || scienceValue > 0
+      || jovianValue > 0 || venusTagValue > 0 || earthValue > 0) {
       for (i = 0; i < x.length; i++) {
 
         //obtaining the data without writing over it
@@ -203,6 +226,11 @@ function filterFunction(id) {
         oceansData = parseInt(li[i].dataset.oceans);
         venusData = parseInt(li[i].dataset.venus);
         scienceData = parseInt(li[i].dataset.science);
+        jovianData = parseInt(li[i].dataset.jovian);
+        venusTagData = parseInt(li[i].dataset.venustag);
+        earthData = parseInt(li[i].dataset.earth);
+
+
 
         show = false;
         if (temperatureValue > -30) {
@@ -220,6 +248,15 @@ function filterFunction(id) {
         if (scienceValue > 0 ) {
           if ( scienceValue <= scienceData ) { show = true }
         }
+        if (jovianValue > 0 ) {
+          if ( jovianValue <= jovianData ) { show = true }
+        }
+        if (venusTagValue > 0 ) {
+          if ( venusTagValue <= venusTagData ) { show = true }
+        }
+        if (earthValue > 0 ) {
+          if ( earthValue <= earthData ) { show = true }
+        }
 
         //the check
         if (show) {w3AddClass(li[i], "show");}
@@ -236,6 +273,10 @@ function filterFunction(id) {
     document.getElementById("output3").innerHTML = 0;
     document.getElementById("slider4").value = 0;
     document.getElementById("output4").innerHTML = 0;
+    document.getElementById("slider5").value = 0;
+    document.getElementById("output5").innerHTML = 0;
+    document.getElementById("slider6").value = 0;
+    document.getElementById("output6").innerHTML = 0;
   }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -289,6 +330,12 @@ function clearInput() {
   document.getElementById("output4").innerHTML = 0;
   document.getElementById("slider5").value = 0;
   document.getElementById("output5").innerHTML = 0;
+  document.getElementById("slider6").value = 0;
+  document.getElementById("output6").innerHTML = 0;
+  document.getElementById("slider7").value = 0;
+  document.getElementById("output7").innerHTML = 0;
+  document.getElementById("slider8").value = 0;
+  document.getElementById("output8").innerHTML = 0;
 
   //shrinks any expanded AREAS
   document.getElementById("buttonsContainer").style.height = CONTAINER + "px";

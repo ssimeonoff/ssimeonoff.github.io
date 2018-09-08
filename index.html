@@ -114,6 +114,7 @@
         <input  type="number" title="filter by Price" id="price" oninput="filterFunction(id);" value="0" min="0" max="50"></input>
         <button class="button2   btn-price" style="margin-right:36px;" onclick="increaseOne()" title="increase Price filter by 1">+</button>
         <button id="vp" class="button btn-vp" onclick="filterFunction(id)" title="filter cards with VP">VP</button>
+
         <br>
         <button id=".production.money" class="button btn-production" onclick="filterFunction(id)" title="filter cards with money production" style="margin-left:6px;"><div class="production money">M</div></button>
         <button id=".production.steel" class="button btn-production" onclick="filterFunction(id)" title="filter cards with steel production"><div class="production steel"></div></button>
@@ -122,10 +123,19 @@
         <button id=".production.energy" class="button btn-production" onclick="filterFunction(id)" title="filter cards with enery production"><div class="production energy"></div></button>
         <button id=".production.heat" class="button btn-production" onclick="filterFunction(id)" title="filter cards with heat production"><div class="production heat"></div></button>
 
-        <button id="reqs" class="button btn-req " onclick="filterFunction(id);toggleRequirementsFilters();" title="filter cards having Requirements">REQUIREMENTS</button>
+        <button id="reqs" class="button btn-req" onclick="filterFunction(id);toggleRequirementsFilters();" title="filter cards having Requirements">REQUIREMENTS</button>
+
+        <button id="rating" class="button btn-tile rating" onclick="filterFunction(id)" title="filter cards with TR tiles"></button>
+        <button id="temperature-tile" class="button btn-tile temperature-tile" onclick="filterFunction(id)" title="filter cards with Temperature tiles"></button>
+        <button id="ocean-tile" class="button btn-tile ocean-tile" onclick="filterFunction(id)" title="filter cards with Ocean tiles" style="padding:0px;"></button>
+        <button id="greenery-tile" class="button btn-tile greenery-tile" onclick="filterFunction(id)" title="filter cards with Greenery tiles" style="padding:0px;"></button>
+
+
+
+
 
         <div id ="subfilterReqs" class="subfilterReqs-disabled">
-          <output id="output1" for="slider1" class="output-label" style="color:#f25540;margin-left: 210px;">-30</output> <!-- Just to display selected value -->
+          <output id="output1" for="slider1" class="output-label" style="color:#f25540; margin-left: 210px;">-30</output> <!-- Just to display selected value -->
           <input id="slider1" type="range" min="-30" max="8" value="-30" step="2" list="tickmarks" oninput="output1.value = slider1.value; filterFunction(id);" class="track-temp-background track-temp-thumb" style="width:200px;margin-right:70px;">
 
           <output id="output3" for="slider3" class="output-label" style="margin-left: 110px;">0</output> <!-- Just to display selected value -->
@@ -140,6 +150,15 @@
           <p></p>
           <output id="output5" for="slider5" class="output-label" style="color: white;">0</output> <!-- Just to display selected value -->
           <input id="slider5" type="range" min="0" max="7" value="0" step="1" list="tickmarks" oninput="output5.value = slider5.value; filterFunction(id);" class="track-science-background track-science-thumb">
+
+          <output id="output8" for="slider8" class="output-label" style="margin-left: 70px;color: rgb(15,96,151);">0</output> <!-- Just to display selected value -->
+          <input id="slider8" type="range" min="0" max="1" value="0" step="1" list="tickmarks" oninput="output8.value = slider8.value; filterFunction(id);" class="track-earth-background track-earth-thumb" style="width:60px;">
+
+          <output id="output6" for="slider6" class="output-label" style="margin-left: 70px;color:rgb(255,223,149)">0</output> <!-- Just to display selected value -->
+          <input id="slider6" type="range" min="0" max="1" value="0" step="1" list="tickmarks" oninput="output6.value = slider6.value; filterFunction(id);" class="track-jovian-background track-jovian-thumb" style="width:60px;">
+
+          <output id="output7" for="slider7" class="output-label" style="margin-left: 90px; color:rgb(84,150,201)">0</output> <!-- Just to display selected value -->
+          <input id="slider7" type="range" min="0" max="2" value="0" step="1" list="tickmarks" oninput="output7.value = slider7.value; filterFunction(id);" class="track-venusTag-background track-venusTag-thumb" style="width:80px;">
         </div>
       </div>
     </div>
@@ -1237,7 +1256,7 @@
         </li>
 
         <!--58-->
-        <li onclick="getClickedCard();" class="filterDiv automated spaceTag jovianTag powerTag standard reqs">
+        <li onclick="getClickedCard();" class="filterDiv automated spaceTag jovianTag powerTag standard reqs" data-jovian="1">
           <div class="title background-color-automated" style="font-size:14px">Beam from a Thorium Asteroid</div>
           <div class="price">32</div>
           <div class="tag tag1 tag-power"></div>
@@ -4410,7 +4429,7 @@
             </li>
 
             <!--237-->
-            <li onclick="getClickedCard();" class="filterDiv automated  venusNext reqs">
+            <li onclick="getClickedCard();" class="filterDiv automated  venusNext reqs" data-jovian="1" data-venustag="1" data-earth="1">
                 <div class="title background-color-automated ">Luxury Foods</div>
                 <div class="price ">8</div>
                 <div class="number">237</div>
@@ -4447,7 +4466,7 @@
             </li>
 
             <!--239-->
-            <li onclick="getClickedCard();" class="filterDiv automated buildingTag venusNext reqs">
+            <li onclick="getClickedCard();" class="filterDiv automated buildingTag venusNext reqs" data-jovian="1" data-venustag="1" data-earth="1">
                 <div class="title background-color-automated ">Mining Quota</div>
                 <div class="price ">5</div>
                 <div class="tag tag1 tag-building"></div>
@@ -4481,7 +4500,7 @@
             </li>
 
             <!--241-->
-            <li onclick="getClickedCard();" class="filterDiv automated buildingTag venusNext reqs">
+            <li onclick="getClickedCard();" class="filterDiv automated buildingTag venusNext reqs" data-jovian="1" data-venustag="1" data-earth="1">
                 <div class="title background-color-automated ">Omnicourt</div>
                 <div class="price ">11</div>
                 <div class="tag tag1 tag-building"></div>
@@ -4535,7 +4554,7 @@
             </li>
 
             <!--244-->
-            <li onclick="getClickedCard();" class="filterDiv automated venusTag earthTag venusNext reqs">
+            <li onclick="getClickedCard();" class="filterDiv automated venusTag earthTag venusNext reqs" data-venustag="1" data-earth="1">
                 <div class="title background-color-automated ">Sister Planet Support</div>
                 <div class="price ">7</div>
                 <div class="tag tag1 tag-earth"></div>
@@ -4554,7 +4573,7 @@
             </li>
 
             <!--245-->
-            <li onclick="getClickedCard();" class="filterDiv automated  venusNext reqs">
+            <li onclick="getClickedCard();" class="filterDiv automated  venusNext reqs" data-jovian="1">
                 <div class="title background-color-automated ">Solarnet</div>
                 <div class="price ">7</div>
                 <div class="number">245</div>
@@ -4750,7 +4769,7 @@
             </li>
 
             <!--255-->
-            <li onclick="getClickedCard();" class="filterDiv automated venusTag venusNext reqs">
+            <li onclick="getClickedCard();" class="filterDiv automated venusTag venusNext reqs"  data-venustag="2" >
                 <div class="title background-color-automated ">Venus Governer</div>
                 <div class="price ">4</div>
                 <div class="tag tag1 tag-venus"></div>
