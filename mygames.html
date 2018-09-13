@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="TERRAFORMING MARS COMPLETE ANIMATED LIST">
+  <meta name="keywords" content="HTML,CSS,JavaScript">
+  <link rel="shortcut icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" type="text/css" href="mygames.css">
+
+</head>
+
+
+<body background="images/" style="background-color:black;background-repeat:no-repeat; background-size:100%">
+  <div id="buttonsContainer">
+  <div id="title">
+    <div style="transform:scale(2,1);;margin-top:6px;">TERRAFORMING<br> <span style="font-size:26px;transform: scale(2,1);">MARS</span></div>
+   </div>
+   <div class="title2"><div style="transform:scale(2,1)">MY GAMES</div></div>
+  <form id="form">
+    <fieldset style="display:inline-block;margin-right:20px;margin-bottom:-10px;">
+      <legend class="fieldset2">PLAYERS</legend>
+      <input type="radio" name='players' id="radio-choice-2" value="2" onclick="enableTwoCorporations();" style="display:none;">
+      <label class= "btn-corporations" for="radio-choice-2" style="margin-left:0px;">2</label>
+      <input type="radio" name='players' id="radio-choice-3" value="3" onclick="enableThreeCorporations();" style="display:none;">
+      <label class= "btn-corporations" for="radio-choice-3" >3</label>
+      <input type="radio" name='players' id="radio-choice-4" value="4" onclick="enableFourCorporations();" style="display:none;">
+      <label class= "btn-corporations" for="radio-choice-4">4</label>
+      <input type="radio" name='players' id="radio-choice-5" value="5" onclick="enableFiveCorporations();" style="display:none;">
+      <label class= "btn-corporations" for="radio-choice-5">5</label>
+    </fieldset>
+
+    <fieldset style="display:inline-block;margin-bottom:-10px;">
+      <legend class="fieldset2">GAME TYPE (may select more than one)</legend>
+        <input class="checkbox" type="checkbox" id="corporate" value="corporate" name="gametype">
+        <label for="corporate" class="btn-gametype" style="margin-left:0px;">CORPORATE</label>
+        <input class="checkbox" type="checkbox" id="venus" value="venus" name="gametype">
+        <label for="venus" class="btn-gametype">VENUS</label>
+        <input class="checkbox" type="checkbox" id="prelude" value="prelude" name="gametype">
+        <label for="prelude" class="btn-gametype">PRELUDE</label>
+        <input class="checkbox" type="checkbox" id="colonies" value="colonies" name="gametype">
+        <label for="colonies" class="btn-gametype">COLONIES</label>
+    </fieldset>
+
+  <br><br>
+
+  <fieldset style="display:inline-block;width:250px;margin-right:-8px;vertical-align:top;">
+    <legend class="fieldset2">CORPORATIONS</legend>
+    <select disabled id="corporation1" class="drop-down" name="corporations" size="1" value="Select corporation" style="margin-top:0px;">
+      <option disabled selected value> </option>
+      <option value="corporation1">corporation 1</option>
+      <option value="corporation2">corporation 2</option>
+      <option value="corporation3">corporation 3</option>
+      <option value="corporation4">corporation 4</option>
+    </select>
+    <select disabled id="corporation2" class="drop-down" name="corporations" size="1" value="Select corporation">
+      <option disabled selected value> </option>
+      <option value="corporation1">corporation 1</option>
+      <option value="corporation2">corporation 2</option>
+      <option value="corporation3">corporation 3</option>
+      <option value="corporation4">corporation 4</option>
+      <option value="corporation1">corporation 1</option>
+      <option value="corporation2">corporation 2</option>
+      <option value="corporation3">corporation 3</option>
+      <option value="corporation1">corporation 1</option>
+      <option value="corporation2">corporation 2</option>
+      <option value="corporation3">corporation 3</option>
+      <option value="corporation1">corporation 1</option>
+      <option value="corporation2">corporation 2</option>
+      <option value="corporation3">corporation 3</option>
+      <option value="corporation1">corporation 1</option>
+      <option value="corporation2">corporation 2</option>
+      <option value="corporation3">corporation 3</option>
+      <option value="corporation1">corporation 1</option>
+      <option value="corporation2">corporation 2</option>
+      <option value="corporation3">corporation 3</option>
+      <option value="corporation1">corporation 1</option>
+      <option value="corporation2">corporation 2</option>
+      <option value="corporation3">corporation 3</option>
+    </select>
+    <select disabled id="corporation3" class="drop-down" name="corporations" size="1" value="Select corporation">
+      <option disabled selected value> </option>
+      <option value="corporation1">corporation 1</option>
+      <option value="corporation2">corporation 2</option>
+      <option value="corporation3">corporation 3</option>
+      <option value="corporation4">corporation 4</option>
+    </select>
+    <select disabled id="corporation4" class="drop-down" name="corporations" size="1" value="Select corporation">
+      <option disabled selected value> </option>
+      <option value="corporation1">corporation 1</option>
+      <option value="corporation2">corporation 2</option>
+      <option value="corporation3">corporation 3</option>
+      <option value="corporation4">corporation 4</option>
+    </select>
+    <select disabled id="corporation5" class="drop-down" name="corporations" size="1" value="Select corporation">
+      <option disabled selected value> </option>
+      <option value="corporation1">corporation 1</option>
+      <option value="corporation2">corporation 2 </option>
+      <option value="corporation3">corporation 3</option>
+      <option value="corporation4">corporation 4</option>
+    </select>
+  </fieldset>
+  <fieldset style="display:inline-block;margin-right:20px;vertical-align:top;">
+    <legend class="fieldset2">SCORE</legend>
+      <input disabled class="corporation-points"  type="number" min="20" max ="200" id="corporation1-points" name="scores" style="margin-top:0px;"><br>
+      <input disabled class="corporation-points"  type="number" min="20" max ="200" id="corporation2-points" name="scores"><br>
+      <input disabled class="corporation-points"  type="number" min="20" max ="200" id="corporation3-points" name="scores"><br>
+      <input disabled class="corporation-points"  type="number" min="20" max ="200" id="corporation4-points" name="scores"><br>
+      <input disabled class="corporation-points"  type="number" min="20" max ="200" id="corporation5-points" name="scores">
+  </fieldset>
+
+  <fieldset style="display:inline-block;vertical-align:top;margin-right: -8px;">
+    <legend class="fieldset2">GENERATIONS</legend>
+    <select  class="btn-generaions custom-select" id="generations"  size="1" name="generations" >
+      <option disabled selected value>#</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+      <option value="11">11</option>
+      <option value="12">12</option>
+      <option value="13">13</option>
+      <option value="14">14</option>
+      <option value="15">15</option>
+      <option value="16">16</option>
+    </select>
+  </fieldset>
+
+  <fieldset style="display:inline-block;vertical-align:top;">
+    <legend class="fieldset2">DRAFTING</legend>
+    <input class="checkbox" type="radio" id="draft" value="true" name="draft">
+    <label for="draft" class="btn-gametype" style="width:121px;">DRAFT</label>
+    <input class="checkbox" type="radio" id="no-draft"  value="false" name="draft">
+    <label for="no-draft" class="btn-gametype" style="width:121px;">NO DRAFT</label>
+  </fieldset>
+
+  <fieldset style="display:inline-block;position:absolute;margin-left:-400px;margin-top:72px;">
+    <legend class="fieldset2">MAP</legend>
+    <input class="checkbox" type="radio" id="tharsis" value="tharsis" name="map">
+    <label for="tharsis" class="btn-map"  onclick="tharsisAwards();" style="margin-top:0px;">THARSIS</label><br>
+    <input class="checkbox" type="radio" id="hellas"  value="ellas" name="map">
+    <label for="hellas" class="btn-map"  onclick="hellasAwards();">HELLAS</label><br>
+    <input class="checkbox" type="radio" id="elysium"  value="ellas" name="map">
+    <label for="elysium" class="btn-map" onclick="elysiumAwards();">ELYSIUM</label><br>
+  </fieldset>
+
+  <fieldset disabled id="no-milestones" class="awards" style="display:inline-block;">
+    <legend class="fieldset2">MILESTONES</legend>
+      <input class="checkbox" type="checkbox">
+      <label class="btn-awards" style="box-shadow:none;opacity:0.3;margin-top:1px;"></label><br>
+      <input class="checkbox" type="checkbox" >
+      <label class="btn-awards" style="box-shadow:none;opacity:0.3;"></label><br>
+      <input class="checkbox" type="checkbox" >
+      <label class="btn-awards" style="box-shadow:none;opacity:0.3;"></label><br>
+      <input class="checkbox" type="checkbox" >
+      <label class="btn-awards" style="box-shadow:none;opacity:0.3;"></label><br>
+      <input class="checkbox" type="checkbox" >
+      <label class="btn-awards" style="box-shadow:none;opacity:0.3;"></label><br>
+  </fieldset>
+  <fieldset disabled id="no-awards" class="awards" style="margin-left:-146px;display:inline-block;">
+    <legend class="fieldset2">AWARDS</legend>
+    <input class="checkbox" type="checkbox">
+    <label class="btn-awards" style="box-shadow:none;opacity:0.3;"></label><br>
+    <input class="checkbox" type="checkbox" >
+    <label class="btn-awards" style="box-shadow:none;opacity:0.3;"></label><br>
+    <input class="checkbox" type="checkbox" >
+    <label class="btn-awards" style="box-shadow:none;opacity:0.3;"></label><br>
+    <input class="checkbox" type="checkbox" >
+    <label class="btn-awards" style="box-shadow:none;opacity:0.3;"></label><br>
+    <input class="checkbox" type="checkbox" >
+    <label class="btn-awards" style="box-shadow:none;opacity:0.3;"></label><br>
+  </fieldset>
+
+  <fieldset  id="tharsis-milestones" class="awards">
+    <legend class="fieldset2">MILESTONES</legend>
+      <input class="checkbox" type="checkbox" id="terraformer" value="terraformer" name="milestones">
+      <label for="terraformer" class="btn-awards " style="margin-top:1px">TERRAFORMER</label><br>
+      <input class="checkbox" type="checkbox" id="mayor" value="mayor" name="milestones">
+      <label for="mayor" class="btn-awards">MAYOR</label><br>
+      <input class="checkbox" type="checkbox" id="gardener" value="gardener" name="milestones">
+      <label for="gardener" class="btn-awards">GARDENER</label><br>
+      <input class="checkbox" type="checkbox" id="builder" value="builder" name="milestones">
+      <label for="builder" class="btn-awards">BUILDER</label><br>
+      <input class="checkbox" type="checkbox" id="planner" value="planner" name="milestones">
+      <label for="planner" class="btn-awards">PLANNER</label><br>
+   </fieldset>
+   <fieldset  id="tharsis-awards" class="awards" style="margin-left:-146px;">
+     <legend class="fieldset2">AWARDS</legend>
+      <input class="checkbox" type="checkbox" id="landlord" value="landlord" name="awards">
+      <label for="landlord" class="btn-awards" style="margin-top:1px">LANDLORD</label><br>
+      <input class="checkbox" type="checkbox" id="banker" value="banker" name="awards">
+      <label for="banker" class="btn-awards">BANKER</label><br>
+      <input class="checkbox" type="checkbox" id="scientist" value="scientist" name="awards">
+      <label for="scientist" class="btn-awards">SCIENTIST</label><br>
+      <input class="checkbox" type="checkbox" id="global-warmer" value="global warmer" name="awards">
+      <label for="global-warmer" class="btn-awards  ">GLOBAL WARMER</label><br>
+      <input class="checkbox" type="checkbox" id="miner" value="miner" name="awards">
+      <label for="miner" class="btn-awards">MINER</label><br>
+    </fieldset>
+
+    <fieldset  id="hellas-milestones" class="awards">
+      <legend class="fieldset2">MILESTONES</legend>
+        <input class="checkbox" type="checkbox" id="diversifier" value="diversifier" name="milestones">
+        <label for="diversifier" class="btn-awards style="margin-top:1px"">DIVERSIFIER</label><br>
+        <input class="checkbox" type="checkbox" id="tactician" value="tactician" name="milestones">
+        <label for="tactician" class="btn-awards">TACTICIAN</label><br>
+        <input class="checkbox" type="checkbox" id="polar-explorer" value="polar-explorer" name="milestones">
+        <label for="polar-explorer" class="btn-awards">POLAR EXPLORER</label><br>
+        <input class="checkbox" type="checkbox" id="energizer" value="energizer" name="milestones">
+        <label for="energizer" class="btn-awards">ENERGIZER</label><br>
+        <input class="checkbox" type="checkbox" id="rim-settler" value="rim-settler" name="milestones">
+        <label for="rim-settler" class="btn-awards">RIM SETTLER</label><br>
+    </fieldset>
+    <fieldset  id="hellas-awards" class="awards" style="margin-left:-146px;">
+      <legend class="fieldset2">AWARDS</legend>
+        <input class="checkbox" type="checkbox" id="cultivator" value="cultivator" name="awards">
+        <label for="cultivator" class="btn-awards" style="margin-top:1px">CULTIVATOR</label><br>
+        <input class="checkbox" type="checkbox" id="magnate" value="magnate" name="awards">
+        <label for="magnate" class="btn-awards">MAGNATE</label><br>
+        <input class="checkbox" type="checkbox" id="space-baron" value="space-baron" name="awards">
+        <label for="space-baron" class="btn-awards  ">SPACE BARON</label><br>
+        <input class="checkbox" type="checkbox" id="excentric" value="excentric" name="awards">
+        <label for="excentric" class="btn-awards">EXCENTRIC</label><br>
+        <input class="checkbox" type="checkbox" id="contractor" value="contractor" name="awards">
+        <label for="contractor" class="btn-awards  ">CONTRACTOR</label><br>
+      </fieldset>
+
+      <fieldset  id="elysium-milestones" class="awards">
+        <legend class="fieldset2">MILESTONES</legend>
+          <input class="checkbox" type="checkbox" id="generalist" value="generalist" name="milestones">
+          <label for="generalist" class="btn-awards " style="margin-top:1px">GENERALIST</label><br>
+          <input class="checkbox" type="checkbox" id="specialist" value="specialist" name="milestones">
+          <label for="specialist" class="btn-awards">SPECIALIST</label><br>
+          <input class="checkbox" type="checkbox" id="ecologist" value="ecologist" name="milestones">
+          <label for="ecologist" class="btn-awards">ECOLOGIST</label><br>
+          <input class="checkbox" type="checkbox" id="tycoon" value="tycoon" name="milestones">
+          <label for="tycoon" class="btn-awards">TYCOON</label><br>
+          <input class="checkbox" type="checkbox" id="legend" value="legend" name="milestones">
+          <label for="legend" class="btn-awards">LEGEND</label><br>
+      </fieldset>
+      <fieldset  id="elysium-awards" class="awards" style="margin-left:-146px;">
+        <legend class="fieldset2">AWARDS</legend>
+          <input class="checkbox" type="checkbox" id="celebrity" value="celebrity" name="awards">
+          <label for="celebrity" class="btn-awards" style="margin-top:1px">CELEBRITY</label><br>
+          <input class="checkbox" type="checkbox" id="industrialist" value="industrialist" name="awards">
+          <label for="industrialist" class="btn-awards  ">INDUS TRIALIST</label><br>
+          <input class="checkbox" type="checkbox" id="desert-settler" value="desert-settler" name="awards">
+          <label for="desert-settler" class="btn-awards  ">DESERT SETTLER</label><br>
+          <input class="checkbox" type="checkbox" id="estate-dealer" value="estate-dealer" name="awards">
+          <label for="estate-dealer" class="btn-awards  ">ESTATE DEALER</label><br>
+          <input class="checkbox" type="checkbox" id="benefactor" value="benefactor" name="awards">
+          <label for="benefactor" class="btn-awards  ">BENE FACTOR</label><br>
+        </fieldset>
+
+
+
+
+
+
+  <button disabled class="button2 btn-submit " onclick="submitForm();"><div>SUBMIT GAME</div></button>
+</form>
+
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="mygames.js"></script>
+
+</body>
+</html>

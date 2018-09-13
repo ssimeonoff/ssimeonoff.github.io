@@ -1,0 +1,276 @@
+
+@font-face {
+    font-family: Prototype;
+    src: url(fonts/Prototype.ttf);
+}
+
+#title {
+  display: inline-block;
+  font-family: Prototype;
+  height: 60px;
+  line-height: 22px;
+  text-align: center;
+  border-radius: 1px;
+  font-size: 16px;
+  border-bottom: 2px solid rgb(221,221,221);
+  border-right: 2px solid rgb(221,221,221);
+  border-top: 2px solid rgb(137,137,137);
+  border-left: 2px solid rgb(137,137,137);
+  margin-left: 2px;
+  width: 258px;
+  margin-bottom: 15px;
+  color: #eee;
+  text-shadow: 0 0 1px black, 0 2px 1px black;
+  margin-right: 5px;
+}
+
+.title2 {
+  display: inline-block;
+  vertical-align: top;
+  font-family: Prototype;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  border-radius: 1px;
+  font-size: 26px;
+  border-bottom: 2px solid rgb(221,221,221);
+  border-right: 2px solid rgb(221,221,221);
+  border-top: 2px solid rgb(137,137,137);
+  border-left: 2px solid rgb(137,137,137);
+  margin-left: 2px;
+  width: 536px;
+  margin-bottom: 15px;
+  color: #eee;
+  text-shadow: 0 0 1px black, 0 2px 1px black;
+}
+
+
+#buttonsContainer {
+    background: #cccccc;
+    background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
+    border-top: 2px solid rgb(221,221,221);
+    border-left: 2px solid rgb(221,221,221);
+    border-bottom: 2px solid rgb(137,137,137);
+    border-right: 2px solid rgb(137,137,137);
+    border-radius: 2px;
+    margin-left: 40px;
+    padding-left: 30px;
+    padding-top: 15px;
+    padding-bottom: 17px;
+    width: 845px;
+    height: 440px;
+    margin-top: 40px;
+}
+
+.drop-down {
+  cursor: pointer;
+  outline: none;
+  background: #eee;
+  font-family: Prototype;
+  width: 250px;
+  height: 40px;
+  font-size: 18px;
+  border-radius: 1px;
+  border-top: 2px solid rgb(221,221,221);
+  border-left: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
+  box-shadow: 0 0px 1px 1px rgba(0,0,0,.8);
+  margin-top: 2px;
+  transition:opacity 0.3s;
+  padding-left: 10px;
+}
+
+.corporation-points {
+  cursor: pointer;
+  background: #eee;
+  outline: none;
+  font-family: Prototype;
+  text-align: center;
+  width: 86px;
+  height: 34px;
+  font-size: 18px;
+  border-radius: 1px;
+  border-top: 2px solid rgb(221,221,221);
+  border-left: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
+  box-shadow: 0 0px 1px 1px rgba(0,0,0,.8);
+  transition: 0.3s;
+  margin-top: 2px;
+}
+
+.drop-down:disabled {
+  opacity: 0.3;
+  box-shadow: none;
+}
+.corporation-points:disabled {
+  opacity: 0.3;
+  box-shadow: none;
+}
+
+
+.btn-corporations {
+    display: inline-block;
+    font-family: Prototype;
+    outline: none;
+    background: #eee;
+    height: 30px;
+    line-height: 30px;
+    width: 86px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 1px;
+    border-top: 2px solid rgb(221,221,221);
+    border-left: 2px solid rgb(221,221,221);
+    border-bottom: 2px solid rgb(137,137,137);
+    border-right: 2px solid rgb(137,137,137);
+    box-shadow: 0 0px 1px 1px rgba(0,0,0,.8);
+    margin-left: -2px;
+    vertical-align: middle;
+}
+
+.btn-gametype {
+    display: inline-block;
+    font-family: Prototype;
+    outline: none;
+    color: black;
+    height: 30px;
+    line-height: 30px;
+    width: 86px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 13px;
+    border-radius: 1px;
+    border-top: 2px solid rgb(221,221,221);
+    border-left: 2px solid rgb(221,221,221);
+    border-bottom: 2px solid rgb(137,137,137);
+    border-right: 2px solid rgb(137,137,137);
+    box-shadow: 0 0px 1px 1px rgba(0,0,0,.8);
+    background: #eee;
+    margin-left: -2px;
+}
+
+.btn-map {
+    display: inline-block;
+    font-family: Prototype;
+    outline: none;
+    color: black;
+    height: 40px;
+    line-height: 40px;
+    width: 86px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 1px;
+    border-top: 2px solid rgb(221,221,221);
+    border-left: 2px solid rgb(221,221,221);
+    border-bottom: 2px solid rgb(137,137,137);
+    border-right: 2px solid rgb(137,137,137);
+    box-shadow: 0 0px 1px 1px rgba(0,0,0,.8);
+    background: #eee;
+    margin-top:2px;
+}
+
+.btn-awards {
+    display: inline-block;
+    font-family: Prototype;
+    outline: none;
+    height: 21px;
+    line-height: 21px;
+    width: 108px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 1px;
+    border-top: 2px solid rgb(221,221,221);
+    border-left: 2px solid rgb(221,221,221);
+    border-bottom: 2px solid rgb(137,137,137);
+    border-right: 2px solid rgb(137,137,137);
+    box-shadow: 0 0px 1px 1px rgba(0,0,0,.8);
+    background: #eee;
+    margin-bottom: 2px;
+}
+
+.btn-generaions {
+    display: inline-block;
+    font-family: Prototype;
+    outline: none;
+    color: rgb(48,48,48);
+    height: 34px;
+    line-height: 34px;
+    width: 90px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 1px;
+    border-top: 2px solid rgb(221,221,221);
+    border-left: 2px solid rgb(221,221,221);
+    border-bottom: 2px solid rgb(137,137,137);
+    border-right: 2px solid rgb(137,137,137);
+    box-shadow: 0 0px 1px 1px rgba(0,0,0,.8);
+    background: #eee;
+    padding-left:30px;
+}
+
+.btn-submit {
+  font-family: Prototype;
+  height: 40px;
+  border-radius: 1px;
+  font-size: 20px;
+  border-top: 2px solid rgb(221,221,221);
+  border-left: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
+  box-shadow: 0 0px 1px 1px rgba(0,0,0,.8);
+  margin-top: 15px;
+  margin-left: 2px;
+  width: 813px;
+  color: black;
+  letter-spacing: 1px;
+}
+
+.btn-submit:disabled {
+  box-shadow: none;
+  opacity: 0.3;
+}
+
+.fieldset2 {
+  font-family: Prototype;
+  color: black;
+  border-radius: 2px;
+  text-align: center;
+  font-weight: normal;
+  line-height: 10px;
+  font-size: 13px;
+  margin-bottom: 2px;
+}
+
+.checkbox{
+  display: none;
+}
+
+.checkbox:checked + label, input[type=radio]:checked + label {
+    border: 2px solid rgb(221,221,221);
+    border-top: 2px solid rgb(137,137,137);
+    border-left: 2px solid rgb(137,137,137);    box-shadow: none;
+    background: #444;
+    color: white;
+}
+
+.awards {
+  display:none;
+  position: absolute;
+  margin-left:-284px;
+  margin-top:72px;
+  height: 146px;
+  line-height: 13px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}

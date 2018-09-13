@@ -708,7 +708,7 @@ border-right: 2px solid rgb(137,137,137);
     border-right: 2px solid rgb(137,137,137);
     box-shadow: 0 2px 2px 1px rgba(0,0,0,.8);
     background: #ccc;
-    margin-left: -28px;
+    margin-left: -3px;
 }
 
 .btn-req {
@@ -1632,9 +1632,9 @@ border-right: 2px solid rgb(137,137,137);
     background: #cccccc;
     background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
     border-top: 2px solid rgb(221,221,221);
-border-left: 2px solid rgb(221,221,221);
-border-bottom: 2px solid rgb(137,137,137);
-border-right: 2px solid rgb(137,137,137);
+    border-left: 2px solid rgb(221,221,221);
+    border-bottom: 2px solid rgb(137,137,137);
+    border-right: 2px solid rgb(137,137,137);
     border-radius: 20px;
     margin-left: 40px;
     padding-left: 30px;
@@ -2207,4 +2207,14 @@ input[type=radio]:checked + label {
   box-shadow: inset 0 0 0 3px rgb(68,68,68);
   filter: brightness(120%)  drop-shadow(0 0 5px white);
   transform: translate(0,2px);
+}
+
+.fieldset {
+  font-family: Prototype;
+  color: #444;
+  font-weight: normal;
+  line-height: 10px;
+  font-size:13px;
+  margin-left:0px;
+  margin-bottom: 0px;
 }
