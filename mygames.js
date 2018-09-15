@@ -1,4 +1,17 @@
 
+function init() {
+ Tabletop.init( { key: '1kJG6JEcDoLQ8JbU7Lvbkiajuf1689jZvCKcz5YWG81Q',
+ callback: showInfo,
+ simpleSheet: true } )
+}
+window.addEventListener('DOMContentLoaded', init);
+
+function showInfo (data,tabletop) {
+  console.log(data);
+  console.log(JSON.stringify(data));
+}
+
+
 //event listeners to change clicked elements designs
 document.getElementById("generations").addEventListener("input", changeColours);
 document.getElementById("corporation1").addEventListener("input", changeColours);
@@ -11,30 +24,77 @@ document.getElementById("corporation4").addEventListener("input", changeColours)
 document.getElementById("corporation4-points").addEventListener("input", changeColours2);
 document.getElementById("corporation5").addEventListener("input", changeColours);
 document.getElementById("corporation5-points").addEventListener("input", changeColours2);
+document.getElementById("venus").addEventListener("input", displayVenusAwards);
+/////////////////////////////////////////////////////////////////////////////////////
+function checkForm () {
+  enableSubmit = true;
+  if (document.querySelectorAll("input[name='players']:checked").length < 1 ) {
+    //if players button is not clicked
+    enableSubmit = false;
+  }
+  else {
+    if (document.querySelectorAll("select[name='corporations'][class*='change-colours']").length < document.querySelector("input[name='players']:checked").value) {
+      //if not all* corporation are selected
+      enableSubmit = false;
+    }
+    if (document.querySelectorAll("input[name='scores'][class*='change-colours']").length < document.querySelector("input[name='players']:checked").value) {
+      //if not all* scores are selected
+      enableSubmit = false;
+    }
+  }
+  if (document.querySelectorAll("select[name='generations'][class*='change-colours']").length < 1) {
+    //if generations are selected
+    enableSubmit = false;
+  }
+  if (document.querySelectorAll("input[name='draft']:checked").length < 1 ) {
+    //if draft is selected
+    enableSubmit = false;
+  }
+  if (document.querySelectorAll("input[name='map']:checked").length < 1 ) {
+    //if map is selected
+    enableSubmit = false;
+  }
+  //enables or disables the submit button
+  if (enableSubmit) {document.getElementById("submit").disabled = false;}
+  else {document.getElementById("submit").disabled = true;}
+  console.log(JSON.stringify($("form").serializeArray()));
+}
+/////////////////////////////////////////////////////////////////////////////////////
+function displayVenusAwards () {
+  x = document.querySelectorAll(".btn-awards");
+  v = document.querySelectorAll(".awards-venus");
+  if (document.querySelector("input[id='venus']:checked") != null) {
+    for (i = 0; i < x.length; i++) {
+      x[i].style.height = "30px";
+      x[i].style.lineHeight = "30px";
+    }
+    for (i = 0; i < v.length; i++) {
+      v[i].style.display = "inline-block";
+    }
+
+  } else {
+    for (i = 0; i < x.length; i++) {
+      x[i].style.height = "";
+      x[i].style.lineHeight = "";
+    }
+    for (i = 0; i < v.length; i++) {
+      v[i].style.display = "none";
+    }
+
+  }
+}
+
 
 function changeColours () {
-  this.style.background = "#444";
-  this.style.color = "white";
-  this.style.boxShadow = "none";
-  this.style.border = "2px solid rgb(221,221,221)";
-  this.style.borderTop = "2px solid rgb(137,137,137)";
-  this.style.borderLeft = "2px solid rgb(137,137,137)";
+  this.classList.add("change-colours");
 }
 
 function changeColours2 () {
   if (this.value < 20) {
-  this.style.background = "";
-  this.style.color = "";
-  this.style.border = "";
-  this.style.boxShadow = "";
+    this.classList.remove("change-colours");
   }
   else {
-    this.style.background = "#444";
-    this.style.color = "white";
-    this.style.boxShadow = "none";
-    this.style.border = "2px solid rgb(221,221,221)";
-    this.style.borderTop = "2px solid rgb(137,137,137)";
-    this.style.borderLeft = "2px solid rgb(137,137,137)";
+    this.classList.add("change-colours");
   }
 }
 
