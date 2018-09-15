@@ -11,6 +11,11 @@
     src: url(fonts/Prototype.ttf);
 }
 
+#form {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
 #title {
   display: inline-block;
   font-family: Prototype;
@@ -44,7 +49,7 @@
   border-top: 2px solid rgb(137,137,137);
   border-left: 2px solid rgb(137,137,137);
   margin-left: 2px;
-  width: 521px;
+  width: calc(100% - 280px);
   margin-bottom: 20px;
   color: #eee;
   text-shadow: 0 0 1px black, 0 2px 1px black;
@@ -63,8 +68,8 @@
     margin-left: auto;
     margin-right: auto;
     padding:20px;
-    padding-bottom: 0px;
-    width: 820px;
+    padding-bottom: 10px;
+    width: 805px;
     margin-top: 40px;
 }
 
@@ -230,7 +235,7 @@
   border-bottom: 2px solid rgb(137,137,137);
   border-right: 2px solid rgb(137,137,137);
   box-shadow: 0 0px 1px 1px rgba(0,0,0,.8);
-  width: 100%;
+  width: 98%;
   color: black;
   letter-spacing: 1px;
 }
@@ -247,7 +252,7 @@
   text-align: center;
   font-weight: normal;
   line-height: 10px;
-  font-size: 13px;
+  font-size: 12px;
   margin-bottom: 2px;
   transition: 0.3s;
 }
@@ -299,5 +304,5 @@ input::-webkit-inner-spin-button {
 .column {
   display: inline-block;
   vertical-align: top;
-  width: 400px;
+  text-align: center;
 }
