@@ -8,8 +8,7 @@
       grid-template-columns: auto !important;
     }
     #title2 {
-      font-size: 16px !important;
-      line-height: 30px !important;
+      line-height: 28px !important;
     }
 
 }
@@ -64,8 +63,9 @@
   vertical-align: top;
 }
 
-#title2:before {
+#title2::before {
   content: "MY GAMES";
+  transform: scale(2,1);
 }
 
 
@@ -319,5 +319,5 @@ input::-webkit-inner-spin-button {
 .column {
   display: inline-block;
   vertical-align: top;
-  width: 398px;
+  width: 400px;
 }
