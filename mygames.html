@@ -7,7 +7,7 @@
   <meta name="keywords" content="HTML,CSS,JavaScript">
   <link rel="shortcut icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" type="text/css" href="mygames.css">
-  <meta name="viewpoint" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116626580-4"></script>
@@ -26,12 +26,12 @@
   <div id="title">
     <div style="transform:scale(2,1);;margin-top:6px;">TERRAFORMING<br> <span style="font-size:26px;transform: scale(2,1);">MARS</span></div>
    </div>
-   <div class="title2"><div style="transform:scale(2,1)">MY GAMES</div></div>
+   <div id="title2"><div style="transform:scale(2,1)">MY GAMES</div></div>
    <br>
   <form id="form" oninput="checkForm();">
 
     <div class="column" style="margin-right:10px;">
-     <fieldset class="fieldset-alignment" style="width:370px;">
+     <fieldset class="fieldset-alignment">
       <legend class="fieldset2">PLAYERS</legend>
       <input type="radio" name='players' id="radio-choice-2" value="2" onclick="enableTwoCorporations();" style="display:none;">
       <label class= "btn-players" for="radio-choice-2" style="margin-left:0px;">2</label>
@@ -233,7 +233,7 @@
   </div>
 
   <div class="column">
-    <fieldset class="fieldset-alignment" style="width:370px;">
+    <fieldset class="fieldset-alignment">
      <legend class="fieldset2">GAME TYPE (may select none or more than one)</legend>
        <input class="checkbox" type="checkbox" id="corporate" value="corporate" name="gametype">
        <label for="corporate" class="btn-gametype" style="margin-left:0px;">CORPORATE</label>
