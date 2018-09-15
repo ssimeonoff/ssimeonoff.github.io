@@ -64,6 +64,10 @@
   vertical-align: top;
 }
 
+#title2:before {
+  content: "MY GAMES";
+}
+
 
 #buttonsContainer {
     background: #cccccc;
