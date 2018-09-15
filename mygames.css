@@ -1,5 +1,5 @@
 
-@media  (max-width: 900px) {
+@media  (max-width: 720px) {
     #buttonsContainer {
         width: 398px !important;
     }
@@ -319,5 +319,5 @@ input::-webkit-inner-spin-button {
 .column {
   display: inline-block;
   vertical-align: top;
-  width: 405px;
+  width: 400px;
 }
