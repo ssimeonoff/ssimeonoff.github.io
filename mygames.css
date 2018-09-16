@@ -154,7 +154,7 @@
     border-right: 2px solid rgb(137,137,137);
     box-shadow: 0 0px 1px 1px rgba(0,0,0,.8);
     margin-left: -2px;
-    margin-bottom: 1px;
+    margin-bottom: 2px;
 }
 
 .btn-gametype {
@@ -176,7 +176,7 @@
     box-shadow: 0 0px 1px 1px rgba(0,0,0,.8);
     background: #eee;
     margin-left: -2px;
-    margin-bottom: 1px;
+    margin-bottom: 2px;
 }
 
 .btn-map {
@@ -226,9 +226,9 @@
     font-family: Prototype;
     outline: none;
     color: rgb(48,48,48);
-    height: 69px;
-    line-height: 69px;
-    margin-bottom: 1px;
+    height: 70px;
+    line-height: 70px;
+    margin-bottom: 2px;
     width: 90px;
     text-align: center;
     cursor: pointer;
