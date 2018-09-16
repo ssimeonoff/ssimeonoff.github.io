@@ -39,7 +39,7 @@
   border-top: 2px solid rgb(137,137,137);
   border-left: 2px solid rgb(137,137,137);
   margin-left: 2px;
-  width: 258px;
+  width: 261px;
   margin-bottom: 15px;
   color: #eee;
   text-shadow: 0 0 1px black, 0 2px 1px black;
@@ -59,7 +59,7 @@
   border-top: 2px solid rgb(137,137,137);
   border-left: 2px solid rgb(137,137,137);
   margin-left: 2px;
-  width: calc(100% - 280px);
+  width: calc(100% - 286px);
   margin-bottom: 20px;
   color: #eee;
   text-shadow: 0 0 1px black, 0 2px 1px black;
@@ -167,7 +167,7 @@
     width: 120px;
     text-align: center;
     cursor: pointer;
-    font-size: 13px;
+    font-size: 14px;
     border-radius: 1px;
     border-top: 2px solid rgb(221,221,221);
     border-left: 2px solid rgb(221,221,221);
@@ -320,6 +320,7 @@ input::-webkit-inner-spin-button {
 .fieldset-alignment {
   margin-bottom: 10px;
   vertical-align: top;
+  padding-left: 12px;
 }
 
 .column {
