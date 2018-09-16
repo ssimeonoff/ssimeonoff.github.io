@@ -31,26 +31,18 @@
    <br>
   <form id="form" oninput="checkForm();">
 
-    <div class="column" style="margin-right:10px;">
-     <fieldset class="fieldset-alignment">
+    <div class="column">
+     <fieldset class="fieldset-alignment" style="display:inline-block;width:250px;">
       <legend class="fieldset2">PLAYERS</legend>
       <input type="radio" name='players' id="radio-choice-2" value="2" onclick="enableTwoCorporations();" style="display:none;">
       <label class= "btn-players" for="radio-choice-2" style="margin-left:0px;">2</label>
       <input type="radio" name='players' id="radio-choice-3" value="3" onclick="enableThreeCorporations();" style="display:none;">
       <label class= "btn-players" for="radio-choice-3" >3</label>
       <input type="radio" name='players' id="radio-choice-4" value="4" onclick="enableFourCorporations();" style="display:none;">
-      <label class= "btn-players" for="radio-choice-4">4</label>
+      <label class= "btn-players" for="radio-choice-4" style="margin-left:0px;">4</label>
       <input type="radio" name='players' id="radio-choice-5" value="5" onclick="enableFiveCorporations();" style="display:none;">
       <label class= "btn-players" for="radio-choice-5">5</label>
     </fieldset>
-
-        <fieldset class="fieldset-alignment" style="display:inline-block;">
-         <legend class="fieldset2">RULES</legend>
-         <input class="checkbox" type="radio" id="draft" value="true" name="draft">
-         <label for="draft" class="btn-gametype" style="width:121px;">DRAFT</label>
-         <input class="checkbox" type="radio" id="no-draft"  value="false" name="draft">
-         <label for="no-draft" class="btn-gametype" style="width:121px;">NO DRAFT</label>
-       </fieldset>
 
     <fieldset class="fieldset-alignment" style="width:90px;display:inline-block;margin-left:-8px;">
      <legend class="fieldset2">GENERATIONS</legend>
@@ -71,9 +63,6 @@
        <option value="16">16</option>
      </select>
    </fieldset>
-
-
-
 
      <fieldset class="fieldset-alignment" style="width:250px;display:inline-block;">
       <legend class="fieldset2">CORPORATIONS</legend>
@@ -234,20 +223,29 @@
   </div>
 
   <div class="column">
-    <fieldset class="fieldset-alignment">
-     <legend class="fieldset2">GAME TYPE (may select none or more than one)</legend>
+
+    <fieldset class="fieldset-alignment" style="display:inline-block;width:90px;" >
+     <legend class="fieldset2">RULES</legend>
+     <input class="checkbox" type="radio" id="draft" value="true" name="draft">
+     <label for="draft" class="btn-gametype" style="width:86px;">DRAFT</label>
+     <input class="checkbox" type="radio" id="no-draft"  value="false" name="draft">
+     <label for="no-draft" class="btn-gametype" style="width:86px;">NO DRAFT</label>
+   </fieldset>
+
+    <fieldset class="fieldset-alignment" style="width:250px;display:inline-block;margin-left:-8px;">
+     <legend class="fieldset2">EXPANSIONS</legend>
        <input class="checkbox" type="checkbox" id="corporate" value="corporate" name="gametype">
        <label for="corporate" class="btn-gametype" style="margin-left:0px;">CORPORATE</label>
        <input class="checkbox" type="checkbox" id="venus" value="venus" name="gametype">
        <label for="venus" class="btn-gametype">VENUS</label>
        <input class="checkbox" type="checkbox" id="prelude" value="prelude" name="gametype">
-       <label for="prelude" class="btn-gametype">PRELUDE</label>
+       <label for="prelude" class="btn-gametype" style="margin-left:0px;">PRELUDE</label>
        <input class="checkbox" type="checkbox" id="colonies" value="colonies" name="gametype">
        <label for="colonies" class="btn-gametype">COLONIES</label>
    </fieldset>
 
 
-   <fieldset class="fieldset-alignment" style="width:90px;display:inline-block;">
+   <fieldset class="fieldset-alignment" style="width:90px;display:inline-block;height: 228px;">
     <legend class="fieldset2">MAP</legend>
     <input class="checkbox" type="radio" id="tharsis" value="tharsis" name="map">
     <label for="tharsis" class="btn-map"  onclick="tharsisAwards();" style="margin-top:0px;">THARSIS</label><br>
@@ -380,11 +378,8 @@
           <input class="checkbox" type="checkbox" id="venuphile" value="venuphile" name="awards">
           <label for="venuphile" class="btn-awards awards-venus ">VENUPHILE</label><br>
         </fieldset>
-
-        <button disabled id="submit" class="btn-submit " onclick="submitForm();"><div>SUBMIT GAME</div></button>
-
     </div>
-
+    <button disabled id="submit" class="btn-submit " onclick="submitForm();"><div>SUBMIT GAME</div></button>
 </form>
 
 </div>

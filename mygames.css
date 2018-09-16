@@ -5,10 +5,13 @@
     }
     #form {
       display: grid;
-      grid-template-columns: 408px !important;
+      grid-template-columns: 410px !important;
     }
     #title2 {
       line-height: 28px !important;
+    }
+    .btn-submit {
+      width: 393px !important;
     }
 
 }
@@ -91,7 +94,7 @@
   background: #eee;
   font-family: Prototype;
   width: 250px;
-  height: 38px;
+  height: 42px;
   font-size: 18px;
   border-radius: 1px;
   border-top: 2px solid rgb(221,221,221);
@@ -111,7 +114,7 @@
   font-family: Prototype;
   text-align: center;
   width: 86px;
-  height: 32px;
+  height: 36px;
   font-size: 18px;
   border-radius: 1px;
   border-top: 2px solid rgb(221,221,221);
@@ -140,7 +143,7 @@
     background: #eee;
     height: 30px;
     line-height: 30px;
-    width: 86px;
+    width: 120px;
     text-align: center;
     cursor: pointer;
     font-size: 20px;
@@ -151,6 +154,7 @@
     border-right: 2px solid rgb(137,137,137);
     box-shadow: 0 0px 1px 1px rgba(0,0,0,.8);
     margin-left: -2px;
+    margin-bottom: 1px;
 }
 
 .btn-gametype {
@@ -160,7 +164,7 @@
     color: black;
     height: 30px;
     line-height: 30px;
-    width: 86px;
+    width: 120px;
     text-align: center;
     cursor: pointer;
     font-size: 13px;
@@ -172,6 +176,7 @@
     box-shadow: 0 0px 1px 1px rgba(0,0,0,.8);
     background: #eee;
     margin-left: -2px;
+    margin-bottom: 1px;
 }
 
 .btn-map {
@@ -221,12 +226,13 @@
     font-family: Prototype;
     outline: none;
     color: rgb(48,48,48);
-    height: 34px;
-    line-height: 34px;
+    height: 69px;
+    line-height: 69px;
+    margin-bottom: 1px;
     width: 90px;
     text-align: center;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 24px;
     border-radius: 1px;
     border-top: 2px solid rgb(221,221,221);
     border-left: 2px solid rgb(221,221,221);
@@ -247,10 +253,10 @@
   border-bottom: 2px solid rgb(137,137,137);
   border-right: 2px solid rgb(137,137,137);
   box-shadow: 0 0px 1px 1px rgba(0,0,0,.8);
-  width: 395px;
+  width: 801px;
+  margin-left: 2px;
   color: black;
   letter-spacing: 1px;
-  margin-left: 1px;
 
 }
 
@@ -288,7 +294,7 @@
   display:none;
   line-height: 13px;
   margin-left: -8px;
-  height: 227px;
+  height: 228px;
 }
 
 .awards-venus {
