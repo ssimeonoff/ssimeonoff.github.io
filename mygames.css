@@ -5,7 +5,7 @@
     }
     #form {
       display: grid;
-      grid-template-columns: 410px !important;
+      grid-template-columns: 412px !important;
     }
     #title2 {
       line-height: 28px !important;
@@ -23,7 +23,7 @@
 
 #form {
   display: grid;
-  grid-template-columns: 408px 408px;
+  grid-template-columns: 412px 412px;
 }
 
 #title {
