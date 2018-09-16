@@ -372,6 +372,7 @@ input::-webkit-inner-spin-button {
     border-radius: 3px;
     font-size: 18px;
     box-shadow: 0 2px 10px 1px black;
+    text-align: center;
 }
 
 .close {

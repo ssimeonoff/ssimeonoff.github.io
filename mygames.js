@@ -27,6 +27,7 @@ document.getElementById("corporation5-points").addEventListener("input", changeC
 document.getElementById("venus").addEventListener("input", displayVenusAwards);
 /////////////////////////////////////////////////////////////////////////////////////
 function checkForm () {
+  //code executed every time there is an input in the form
   enableSubmit = true;
   if (document.querySelectorAll("input[name='players']:checked").length < 1 ) {
     //if players button is not clicked
@@ -56,7 +57,7 @@ function checkForm () {
   }
 
   //letting max 3 awards/milestones to be clicked
-
+  limitAwards();
 
   //enables or disables the submit button
   if (enableSubmit) {
@@ -176,6 +177,7 @@ function tharsisAwards() {
   document.getElementById("hellas-awards").style.display = "none";
   document.getElementById("elysium-milestones").style.display = "none";
   document.getElementById("elysium-awards").style.display = "none";
+  resetAwards();
 }
 
 function hellasAwards() {
@@ -187,6 +189,7 @@ function hellasAwards() {
   document.getElementById("hellas-awards").style.display = "inline-block";
   document.getElementById("elysium-milestones").style.display = "none";
   document.getElementById("elysium-awards").style.display = "none";
+  resetAwards();
 }
 
 function elysiumAwards() {
@@ -198,6 +201,7 @@ function elysiumAwards() {
   document.getElementById("hellas-awards").style.display = "none";
   document.getElementById("elysium-milestones").style.display = "inline-block";
   document.getElementById("elysium-awards").style.display = "inline-block";
+  resetAwards();
 }
 
 //modal functions
@@ -224,8 +228,26 @@ window.onclick = function(event) {
 }
 
 function generateComfirmationText () {
-  content = "Players: " + document.querySelector("input[name='players']:checked").value + "<br><br>";
-  content = content + "the rest selected fields will be here..."
+  content = "GENERATIONS: " + document.getElementById("generations").value + "<br>";
+  x = document.querySelectorAll("select[name='corporations'][class*='change-colours'] > option:checked");
+  y = document.querySelectorAll("input[name='scores'][class*='change-colours']");
+  for (i = 0; i < x.length; i++) {
+    content = content + x[i].innerHTML + " - " + y[i].value + "<br>";
+  }
 
   document.getElementById("modal-content").innerHTML = content;
+}
+
+function resetAwards() {
+  x = document.querySelectorAll("input[name='milestones']:checked,input[name='awards']:checked ");
+  for (i = 0; i < x.length; i++) {
+    x[i].checked = false;
+  }
+}
+
+function limitAwards() {
+  x = document.querySelectorAll("input[name='milestones']:checked");
+  if (x.length > 3) { setTimeout(function(){x[3].checked = false;}, 300);}
+  y = document.querySelectorAll("input[name='awards']:checked");
+  if (y.length > 3) { setTimeout(function(){y[3].checked = false;}, 300);}
 }
