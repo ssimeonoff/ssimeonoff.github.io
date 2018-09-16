@@ -5,7 +5,7 @@
     }
     #form {
       display: grid;
-      grid-template-columns: auto !important;
+      grid-template-columns: 408px !important;
     }
     #title2 {
       line-height: 28px !important;
@@ -20,7 +20,7 @@
 
 #form {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 408px 408px;
 }
 
 #title {
@@ -50,7 +50,7 @@
   line-height: 60px;
   text-align: center;
   border-radius: 1px;
-  font-size: 26px;
+  font-size: 24px;
   border-bottom: 2px solid rgb(221,221,221);
   border-right: 2px solid rgb(221,221,221);
   border-top: 2px solid rgb(137,137,137);
@@ -319,5 +319,5 @@ input::-webkit-inner-spin-button {
 .column {
   display: inline-block;
   vertical-align: top;
-  width: 398px;
+  margin-right: 10px;
 }
