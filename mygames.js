@@ -54,6 +54,10 @@ function checkForm () {
     //if map is selected
     enableSubmit = false;
   }
+
+  //letting max 3 awards/milestones to be clicked
+
+
   //enables or disables the submit button
   if (enableSubmit) {document.getElementById("submit").disabled = false;}
   else {document.getElementById("submit").disabled = true;}
@@ -83,7 +87,6 @@ function displayVenusAwards () {
 
   }
 }
-
 
 function changeColours () {
   this.classList.add("change-colours");
@@ -192,4 +195,27 @@ function elysiumAwards() {
   document.getElementById("hellas-awards").style.display = "none";
   document.getElementById("elysium-milestones").style.display = "inline-block";
   document.getElementById("elysium-awards").style.display = "inline-block";
+}
+
+//modal functions
+var modalBtns = [...document.querySelectorAll(".button")];
+modalBtns.forEach(function(btn){
+  btn.onclick = function() {
+    var modal = btn.getAttribute('data-modal');
+    document.getElementById(modal).style.display = "block";
+  }
+});
+
+var closeBtns = [...document.querySelectorAll(".close")];
+closeBtns.forEach(function(btn){
+  btn.onclick = function() {
+    var modal = btn.closest('.modal');
+    modal.style.display = "none";
+  }
+});
+
+window.onclick = function(event) {
+  if (event.target.className === "modal") {
+    event.target.style.display = "none";
+  }
 }

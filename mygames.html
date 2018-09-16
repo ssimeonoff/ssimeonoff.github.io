@@ -27,7 +27,7 @@
   <div id="title">
     <div style="transform:scale(2,1);margin-top:6px;">TERRAFORMING<br> <span style="font-size:26px;transform: scale(2,1);">MARS</span></div>
    </div>
-   <div id="title2"></div>
+   <div id="title2">MY GAMES</div>
    <br>
   <form id="form" oninput="checkForm();">
 
@@ -379,8 +379,17 @@
           <label for="venuphile" class="btn-awards awards-venus ">VENUPHILE</label><br>
         </fieldset>
     </div>
-    <button disabled id="submit" class="btn-submit " onclick="submitForm();"><div>SUBMIT GAME</div></button>
+    <div id="modalOne" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <input id="comfirm" type="submit" value="COMFIRM"></input>
+      </div>
+    </div>
 </form>
+<button  disabled id="submit" class="button btn-submit " data-modal="modalOne" onclick="submitForm();"><div>SUBMIT GAME</div></button>
+
+
+
 
 </div>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
