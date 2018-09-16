@@ -59,7 +59,10 @@ function checkForm () {
 
 
   //enables or disables the submit button
-  if (enableSubmit) {document.getElementById("submit").disabled = false;}
+  if (enableSubmit) {
+    document.getElementById("submit").disabled = false;
+    generateComfirmationText();
+    }
   else {document.getElementById("submit").disabled = true;}
   console.log(JSON.stringify($("form").serializeArray()));
 }
@@ -218,4 +221,11 @@ window.onclick = function(event) {
   if (event.target.className === "modal") {
     event.target.style.display = "none";
   }
+}
+
+function generateComfirmationText () {
+  content = "Players: " + document.querySelector("input[name='players']:checked").value + "<br><br>";
+  content = content + "the rest selected fields will be here..."
+
+  document.getElementById("modal-content").innerHTML = content;
 }
