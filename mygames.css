@@ -110,7 +110,8 @@
   font-family: Prototype;
   text-align: center;
   width: 100%;
-  height: 36px;
+  height: 38px;
+  padding: 0px;
   font-size: 18px;
   border-radius: 1px;
   border-top: 2px solid rgb(221,221,221);
