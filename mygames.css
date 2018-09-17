@@ -1,7 +1,7 @@
 
 @media screen and (max-width: 480px) {
     #buttonsContainer {
-        width: 400px !important;
+        width: 402px !important;
     }
     #form {
       display: grid;
@@ -103,7 +103,7 @@
   padding-left: 3px;
 }
 
-.corporation-points {
+.corporation-score {
   cursor: pointer;
   background: #eee;
   outline: none;
@@ -126,7 +126,7 @@
   opacity: 0.3;
   box-shadow: none;
 }
-.corporation-points:disabled {
+.corporation-score:disabled {
   opacity: 0.3;
   box-shadow: none;
 }

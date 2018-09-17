@@ -1,4 +1,11 @@
 
+//posting data to the spreadsheet
+
+
+
+
+
+//obtaing data from the spreadsheet
 function init() {
  Tabletop.init( { key: '1kJG6JEcDoLQ8JbU7Lvbkiajuf1689jZvCKcz5YWG81Q',
  callback: showInfo,
@@ -7,23 +14,22 @@ function init() {
 window.addEventListener('DOMContentLoaded', init);
 
 function showInfo (data,tabletop) {
-  console.log(data);
-  console.log(JSON.stringify(data));
+  console.log(data); //as array
+  console.log(JSON.stringify(data)); //as string
 }
-
 
 //event listeners to change clicked elements designs
 document.getElementById("generations").addEventListener("input", changeColours);
 document.getElementById("corporation1").addEventListener("input", changeColours);
-document.getElementById("corporation1-points").addEventListener("input", changeColours2);
+document.getElementById("corporation1-score").addEventListener("input", changeColours2);
 document.getElementById("corporation2").addEventListener("input", changeColours);
-document.getElementById("corporation2-points").addEventListener("input", changeColours2);
+document.getElementById("corporation2-score").addEventListener("input", changeColours2);
 document.getElementById("corporation3").addEventListener("input", changeColours);
-document.getElementById("corporation3-points").addEventListener("input", changeColours2);
+document.getElementById("corporation3-score").addEventListener("input", changeColours2);
 document.getElementById("corporation4").addEventListener("input", changeColours);
-document.getElementById("corporation4-points").addEventListener("input", changeColours2);
+document.getElementById("corporation4-score").addEventListener("input", changeColours2);
 document.getElementById("corporation5").addEventListener("input", changeColours);
-document.getElementById("corporation5-points").addEventListener("input", changeColours2);
+document.getElementById("corporation5-score").addEventListener("input", changeColours2);
 document.getElementById("venus").addEventListener("input", displayVenusAwards);
 /////////////////////////////////////////////////////////////////////////////////////
 function checkForm () {
@@ -106,9 +112,6 @@ function changeColours2 () {
 }
 
 
-function submitForm () {
-      console.log("ok");
-}
 
 function clickedButton (id) {
   clickedElementID = document.getElementById(id);
@@ -118,54 +121,54 @@ function clickedButton (id) {
 
 function enableTwoCorporations() {
   document.getElementById("corporation1").disabled = false;
-  document.getElementById("corporation1-points").disabled = false;
+  document.getElementById("corporation1-score").disabled = false;
   document.getElementById("corporation2").disabled = false;
-  document.getElementById("corporation2-points").disabled = false;
+  document.getElementById("corporation2-score").disabled = false;
   document.getElementById("corporation3").disabled = true;
-  document.getElementById("corporation3-points").disabled = true;
+  document.getElementById("corporation3-score").disabled = true;
   document.getElementById("corporation4").disabled = true;
-  document.getElementById("corporation4-points").disabled = true;
+  document.getElementById("corporation4-score").disabled = true;
   document.getElementById("corporation5").disabled = true;
-  document.getElementById("corporation5-points").disabled = true;
+  document.getElementById("corporation5-score").disabled = true;
 }
 
 function enableThreeCorporations() {
   document.getElementById("corporation1").disabled = false;
-  document.getElementById("corporation1-points").disabled = false;
+  document.getElementById("corporation1-score").disabled = false;
   document.getElementById("corporation2").disabled = false;
-  document.getElementById("corporation2-points").disabled = false;
+  document.getElementById("corporation2-score").disabled = false;
   document.getElementById("corporation3").disabled = false;
-  document.getElementById("corporation3-points").disabled = false;
+  document.getElementById("corporation3-score").disabled = false;
   document.getElementById("corporation4").disabled = true;
-  document.getElementById("corporation4-points").disabled = true;
+  document.getElementById("corporation4-score").disabled = true;
   document.getElementById("corporation5").disabled = true;
-  document.getElementById("corporation5-points").disabled = true;
+  document.getElementById("corporation5-score").disabled = true;
 }
 
 function enableFourCorporations() {
   document.getElementById("corporation1").disabled = false;
-  document.getElementById("corporation1-points").disabled = false;
+  document.getElementById("corporation1-score").disabled = false;
   document.getElementById("corporation2").disabled = false;
-  document.getElementById("corporation2-points").disabled = false;
+  document.getElementById("corporation2-score").disabled = false;
   document.getElementById("corporation3").disabled = false;
-  document.getElementById("corporation3-points").disabled = false;
+  document.getElementById("corporation3-score").disabled = false;
   document.getElementById("corporation4").disabled = false;
-  document.getElementById("corporation4-points").disabled = false;
+  document.getElementById("corporation4-score").disabled = false;
   document.getElementById("corporation5").disabled = true;
-  document.getElementById("corporation5-points").disabled = true;
+  document.getElementById("corporation5-score").disabled = true;
 }
 
 function enableFiveCorporations() {
   document.getElementById("corporation1").disabled = false;
-  document.getElementById("corporation1-points").disabled = false;
+  document.getElementById("corporation1-score").disabled = false;
   document.getElementById("corporation2").disabled = false;
-  document.getElementById("corporation2-points").disabled = false;
+  document.getElementById("corporation2-score").disabled = false;
   document.getElementById("corporation3").disabled = false;
-  document.getElementById("corporation3-points").disabled = false;
+  document.getElementById("corporation3-score").disabled = false;
   document.getElementById("corporation4").disabled = false;
-  document.getElementById("corporation4-points").disabled = false;
+  document.getElementById("corporation4-score").disabled = false;
   document.getElementById("corporation5").disabled = false;
-  document.getElementById("corporation5-points").disabled = false;
+  document.getElementById("corporation5-score").disabled = false;
 }
 
 function tharsisAwards() {
