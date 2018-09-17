@@ -1,7 +1,7 @@
 
 @media screen and (max-width: 480px) {
     #buttonsContainer {
-        width: 412px !important;
+        width: 400px !important;
     }
     #form {
       display: grid;
