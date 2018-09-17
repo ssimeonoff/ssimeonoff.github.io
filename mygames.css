@@ -1,11 +1,11 @@
 
 @media screen and (max-width: 480px) {
     #buttonsContainer {
-        width: 402px !important;
+        width: 408px !important;
     }
     #form {
       display: grid;
-      grid-template-columns: 412px !important;
+      grid-template-columns: 408px !important;
     }
     #title2 {
       line-height: 28px !important;
