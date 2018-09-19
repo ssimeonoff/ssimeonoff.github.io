@@ -21,7 +21,7 @@ r1.on('value', (snap) => {
   console.log(asArray);
   console.log(asArray.length);
   setTimeout(function(){document.getElementById("title3").innerHTML = asArray.length;
-}, 1000)
+}, 2000)
   console.log(asArray[asArray.length-1]);
 })
 
