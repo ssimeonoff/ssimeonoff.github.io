@@ -29,18 +29,18 @@
    </div>
    <div id="title2">SUBMITTED<br> <div id="title3" class="odometer" data-minintegerlen="3">0</div></div>
    <br>
-  <form id="form" name="submit-to-google-sheet" oninput="checkForm();">
+  <form id="form" name="submit-to-google-sheet">
 
     <div class="column">
-     <fieldset class="fieldset-alignment" style="display:inline-block;width:250px;">
+     <fieldset class="fieldset-alignment" style="display:inline-block;width:250px;" oninput="enableCorporations()">
       <legend class="fieldset2">PLAYERS</legend>
-      <input type="radio" name='players' id="radio-choice-2" value="2" onclick="enableTwoCorporations();" style="display:none;">
+      <input type="radio" name='players' id="radio-choice-2" value="2" style="display:none;">
       <label class= "btn-players" for="radio-choice-2">2</label>
-      <input type="radio" name='players' id="radio-choice-3" value="3" onclick="enableThreeCorporations();" style="display:none;">
+      <input type="radio" name='players' id="radio-choice-3" value="3" style="display:none;">
       <label class= "btn-players" for="radio-choice-3" >3</label>
-      <input type="radio" name='players' id="radio-choice-4" value="4" onclick="enableFourCorporations();" style="display:none;">
+      <input type="radio" name='players' id="radio-choice-4" value="4" style="display:none;">
       <label class= "btn-players" for="radio-choice-4">4</label>
-      <input type="radio" name='players' id="radio-choice-5" value="5" onclick="enableFiveCorporations();" style="display:none;">
+      <input type="radio" name='players' id="radio-choice-5" value="5" style="display:none;">
       <label class= "btn-players" for="radio-choice-5">5</label>
     </fieldset>
 
@@ -214,7 +214,7 @@
   </fieldset>
    <fieldset class="fieldset-alignment" style="display:inline-block;margin-left:-8px;">
     <legend class="fieldset2">SCORES</legend>
-      <input disabled required class="corporation-score"  type="number" min="20" max ="200" step="1" id="corporation1-score" name="scores" style="margin-top:0px;"><br>
+      <input disabled class="corporation-score"  type="number" min="20" max ="200" step="1" id="corporation1-score" name="scores" style="margin-top:0px;"><br>
       <input disabled class="corporation-score"  type="number" min="20" max ="200" step="1" id="corporation2-score" name="scores"><br>
       <input disabled class="corporation-score"  type="number" min="20" max ="200" step="1" id="corporation3-score" name="scores"><br>
       <input disabled class="corporation-score"  type="number" min="20" max ="200" step="1" id="corporation4-score" name="scores"><br>
@@ -430,7 +430,7 @@
       </div>
     </div>
 </form>
-<button disabled id="submit" class="button btn-submit " data-modal="modalOne"><div>SUBMIT GAME</div></button>
+<button id="submit" class="button btn-submit " onclick="checkForm()"><div>SUBMIT GAME</div></button>
 <div class="alert">YOUR GAME HAS BEEN SUBMITTED</div>
 
 

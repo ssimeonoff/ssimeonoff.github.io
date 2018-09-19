@@ -18,37 +18,56 @@ function checkForm () {
   enableSubmit = true;
   if (document.querySelectorAll("input[name='players']:checked").length < 1 ) {
     //if players button is not clicked
+    x = document.querySelectorAll(".btn-players");
+    for (i = 0; i < x.length; i++) {
+      x[i].classList.add("red-outline");
+    }
     enableSubmit = false;
   }
   else {
-    if (document.querySelectorAll("select[name='corporations'][class*='change-colours']").length < document.querySelector("input[name='players']:checked").value) {
       //if not all* corporation are selected
-      enableSubmit = false;
-    }
-    if (document.querySelectorAll("input[name='scores'][class*='change-colours']").length < document.querySelector("input[name='players']:checked").value) {
       //if not all* scores are selected
-      enableSubmit = false;
-    }
+      x = document.querySelectorAll("select[class='drop-down not-filled'], input[class='corporation-score not-filled']");
+      if (x.length > 0) {enableSubmit = false;}
+      for (i = 0; i < x.length; i++) {
+        x[i].classList.add("red-outline");
+      }
   }
   if (document.querySelectorAll("select[name='generations'][class*='change-colours']").length < 1) {
-    //if generations are selected
+    //if generations are not selected
+    document.querySelector(".btn-generations").classList.add("red-outline");
     enableSubmit = false;
   }
   if (document.querySelectorAll("input[name='draft']:checked").length < 1 ) {
     //if draft is selected
+    x = document.querySelectorAll("label[for*='draft']");
+    for (i = 0; i < x.length; i++) {
+      x[i].classList.add("red-outline");
+    }
     enableSubmit = false;
   }
   if (document.querySelectorAll("input[name='map']:checked").length < 1 ) {
     //if map is selected
+    x = document.querySelectorAll(".btn-map");
+    for (i = 0; i < x.length; i++) {
+      x[i].classList.add("red-outline");
+    }
     enableSubmit = false;
   }
 
-  //enables or disables the submit button
+  //generates the modal t
   if (enableSubmit) {
-    document.getElementById("submit").disabled = false;
     generateConfirmationText();
+    document.getElementById("modalOne").style.display = "block";
     }
-  else {document.getElementById("submit").disabled = true;}
+
+  //remove the red outlines after 3 seconds
+  setTimeout(function(){
+    x = document.querySelectorAll(".red-outline");
+    for (i = 0; i < x.length; i++) {
+      x[i].classList.remove("red-outline");
+    }
+  }, 2000);
 }
 /////////////////////////////////////////////////////////////////////////////////////
 function displayVenusAwards () {
@@ -77,6 +96,8 @@ function displayVenusAwards () {
 
 function changeColours () {
   this.classList.add("change-colours");
+  this.classList.remove("not-filled");
+
 }
 
 function changeColours2 () {
@@ -88,64 +109,23 @@ function changeColours2 () {
   }
 }
 
+function enableCorporations() {
+  var players = document.querySelector("input[name='players']:checked").value;
+  var corps = document.querySelectorAll(".drop-down");
+  var scores = document.querySelectorAll("input[name='scores']");
+  for (i = 0; i < 5; i++) {
+    corps[i].disabled = true;
+    corps[i].classList.remove("not-filled");
+    scores[i].disabled = true;
+    scores[i].classList.remove("not-filled");
+  }
+  for (i = 0; i < players; i++) {
+    corps[i].disabled = false;
+    corps[i].classList.add("not-filled");
+    scores[i].disabled = false;
+    scores[i].classList.add("not-filled");
+  }
 
-
-function clickedButton (id) {
-  clickedElementID = document.getElementById(id);
-  if (clickedElementID != null) {clickedElementID.classList.toggle("active");}
-  console.log(clickedElementID);
-}
-
-function enableTwoCorporations() {
-  document.getElementById("corporation1").disabled = false;
-  document.getElementById("corporation1-score").disabled = false;
-  document.getElementById("corporation2").disabled = false;
-  document.getElementById("corporation2-score").disabled = false;
-  document.getElementById("corporation3").disabled = true;
-  document.getElementById("corporation3-score").disabled = true;
-  document.getElementById("corporation4").disabled = true;
-  document.getElementById("corporation4-score").disabled = true;
-  document.getElementById("corporation5").disabled = true;
-  document.getElementById("corporation5-score").disabled = true;
-}
-
-function enableThreeCorporations() {
-  document.getElementById("corporation1").disabled = false;
-  document.getElementById("corporation1-score").disabled = false;
-  document.getElementById("corporation2").disabled = false;
-  document.getElementById("corporation2-score").disabled = false;
-  document.getElementById("corporation3").disabled = false;
-  document.getElementById("corporation3-score").disabled = false;
-  document.getElementById("corporation4").disabled = true;
-  document.getElementById("corporation4-score").disabled = true;
-  document.getElementById("corporation5").disabled = true;
-  document.getElementById("corporation5-score").disabled = true;
-}
-
-function enableFourCorporations() {
-  document.getElementById("corporation1").disabled = false;
-  document.getElementById("corporation1-score").disabled = false;
-  document.getElementById("corporation2").disabled = false;
-  document.getElementById("corporation2-score").disabled = false;
-  document.getElementById("corporation3").disabled = false;
-  document.getElementById("corporation3-score").disabled = false;
-  document.getElementById("corporation4").disabled = false;
-  document.getElementById("corporation4-score").disabled = false;
-  document.getElementById("corporation5").disabled = true;
-  document.getElementById("corporation5-score").disabled = true;
-}
-
-function enableFiveCorporations() {
-  document.getElementById("corporation1").disabled = false;
-  document.getElementById("corporation1-score").disabled = false;
-  document.getElementById("corporation2").disabled = false;
-  document.getElementById("corporation2-score").disabled = false;
-  document.getElementById("corporation3").disabled = false;
-  document.getElementById("corporation3-score").disabled = false;
-  document.getElementById("corporation4").disabled = false;
-  document.getElementById("corporation4-score").disabled = false;
-  document.getElementById("corporation5").disabled = false;
-  document.getElementById("corporation5-score").disabled = false;
 }
 
 function tharsisAwards() {
@@ -184,15 +164,9 @@ function elysiumAwards() {
   resetAwards();
 }
 
-//modal functions
 
-var modalBtns = [...document.querySelectorAll(".button")];
-modalBtns.forEach(function(btn){
-  btn.onclick = function() {
-    var modal = btn.getAttribute('data-modal');
-    document.getElementById(modal).style.display = "block";
-  }
-});
+
+//modal functions
 
 var closeBtns = [...document.querySelectorAll(".close")];
 closeBtns.forEach(function(btn){

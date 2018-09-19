@@ -87,6 +87,10 @@
     transition: 0.3s;
 }
 
+.red-outline {
+  box-shadow: 0 0px 1px 1px rgba(0,0,0,.8), 0 0 4px 2px red !important;
+}
+
 .drop-down {
   cursor: pointer;
   outline: none;
@@ -266,9 +270,10 @@
 }
 
 .btn-submit {
+  outline: none;
   cursor: pointer;
   font-family: Prototype;
-  height: 40px;
+  height: 50px;
   border-radius: 1px;
   font-size: 20px;
   border-top: 2px solid rgb(221,221,221);
@@ -417,10 +422,12 @@ input::-webkit-inner-spin-button {
 .alert {
   display: none;
   text-align: center;
-  padding: 10px;
-  background: #79c879;
+  background: #444;
+  margin-top: 10px;
   font-family: Prototype;
   font-size: 22px;
+  height: 48px;
+  line-height: 48px;
   color:white;
   margin-bottom: 10px;
   text-shadow: 0 0 1px black, 0 2px 1px black;

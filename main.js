@@ -48,18 +48,17 @@ function submitForm(e) {
   saveGame(players, generations, corporations, scores, expansions, draft, map, milestones, awards);
 
   //Show aleart
-  setTimeout(function(){
-    $(".alert").fadeIn(2000);
-  }, 1000);
-
+    document.getElementById("submit").style.display = "none";
+    document.querySelector(".alert").style.display = "block";
   //clear form
   document.getElementById("form").reset();
   resetAll();
 
   //hide alert after 3 seconds
   setTimeout(function(){
-    $(".alert").fadeOut(1000);
-  }, 6000);
+    document.getElementById("submit").style.display = "block";
+    document.querySelector(".alert").style.display = "none";
+  }, 3000);
 
 }
 
@@ -139,7 +138,6 @@ function resetAll () {
   for (i=0; i < x.length; i++) {
     x[i].classList.remove("change-colours");
   }
-  document.getElementById("submit").disabled = true;
   x = document.querySelectorAll(".drop-down, .corporation-score");
   for (i=0; i < x.length; i++) {
     x[i].disabled = true;
