@@ -21,7 +21,7 @@ r1.on('value', (snap) => {
   console.log(asArray);
   console.log(asArray.length);
   setTimeout(function(){document.getElementById("title3").innerHTML = asArray.length;
-}, 2000)
+}, 500)
   console.log(asArray[asArray.length-1]);
 })
 
@@ -49,7 +49,7 @@ function submitForm(e) {
 
   //Show aleart
   setTimeout(function(){
-    $(".alert").fadeIn(500);
+    $(".alert").fadeIn(2000);
   }, 1000);
 
   //clear form
@@ -58,8 +58,8 @@ function submitForm(e) {
 
   //hide alert after 3 seconds
   setTimeout(function(){
-    $(".alert").fadeOut(50);
-  }, 4000);
+    $(".alert").fadeOut(1000);
+  }, 6000);
 
 }
 
