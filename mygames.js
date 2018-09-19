@@ -1,23 +1,4 @@
 
-//posting data to the spreadsheet
-
-
-
-
-
-//obtaing data from the spreadsheet
-function init() {
- Tabletop.init( { key: '1kJG6JEcDoLQ8JbU7Lvbkiajuf1689jZvCKcz5YWG81Q',
- callback: showInfo,
- simpleSheet: true } )
-}
-window.addEventListener('DOMContentLoaded', init);
-
-function showInfo (data,tabletop) {
-  console.log(data); //as array
-  console.log(JSON.stringify(data)); //as string
-}
-
 //event listeners to change clicked elements designs
 document.getElementById("generations").addEventListener("input", changeColours);
 document.getElementById("corporation1").addEventListener("input", changeColours);
@@ -62,16 +43,12 @@ function checkForm () {
     enableSubmit = false;
   }
 
-  //letting max 3 awards/milestones to be clicked
-  limitAwards();
-
   //enables or disables the submit button
   if (enableSubmit) {
     document.getElementById("submit").disabled = false;
-    generateComfirmationText();
+    generateConfirmationText();
     }
   else {document.getElementById("submit").disabled = true;}
-  console.log(JSON.stringify($("form").serializeArray()));
 }
 /////////////////////////////////////////////////////////////////////////////////////
 function displayVenusAwards () {
@@ -208,6 +185,7 @@ function elysiumAwards() {
 }
 
 //modal functions
+
 var modalBtns = [...document.querySelectorAll(".button")];
 modalBtns.forEach(function(btn){
   btn.onclick = function() {
@@ -230,17 +208,34 @@ window.onclick = function(event) {
   }
 }
 
-function generateComfirmationText () {
-  content = "GENERATIONS: " + document.getElementById("generations").value + "<br>";
-  x = document.querySelectorAll("select[name='corporations'][class*='change-colours'] > option:checked");
-  y = document.querySelectorAll("input[name='scores'][class*='change-colours']");
-  for (i = 0; i < x.length; i++) {
-    content = content + x[i].innerHTML + " - " + y[i].value + "<br>";
-  }
+function generateConfirmationText () {
+  //Get values
+  var players = document.querySelector('input[name="players"]:checked').value;
+  var generations = document.getElementById("generations").value;
+  var corporations = arrayCorporations();
+  var scores = arrayScores();
+  var expansions = arrayExpansions();
+  var draft = document.querySelector('input[name="draft"]:checked').value;
+  var map = document.querySelector('input[name="map"]:checked').value;
+  var milestones = arrayMilestones();
+  var awards = arrayAwards();
 
-  document.getElementById("modal-content").innerHTML = content;
+
+  document.getElementById("modalPlayers").innerHTML = players;
+  document.getElementById("modalGeneraions").innerHTML = generations;
+  document.getElementById("modalCorporations").innerHTML = corporations.toString().replace(/,/g, " - ");
+  document.getElementById("modalScores").innerHTML = scores.toString().replace(/,/g, " - ");
+  document.getElementById("modalExpansions").innerHTML = expansions.toString().replace(/,/g, " - ");
+  document.getElementById("modalDraft").innerHTML = draft;
+  document.getElementById("modalMap").innerHTML = map;
+  document.getElementById("modalMilestones").innerHTML = milestones.toString().replace(/,/g, " - ");
+  document.getElementById("modalAwards").innerHTML = awards.toString().replace(/,/g, " - ");
 }
 
+function closeModal () {
+  document.getElementById("modalOne").style.display = "none";
+}
+//////////////////////////////////////////////////////////////////////////////
 function resetAwards() {
   x = document.querySelectorAll("input[name='milestones']:checked,input[name='awards']:checked ");
   for (i = 0; i < x.length; i++) {
@@ -249,8 +244,11 @@ function resetAwards() {
 }
 
 function limitAwards() {
-  x = document.querySelectorAll("input[name='milestones']:checked");
-  if (x.length > 3) { setTimeout(function(){x[3].checked = false;}, 300);}
-  y = document.querySelectorAll("input[name='awards']:checked");
-  if (y.length > 3) { setTimeout(function(){y[3].checked = false;}, 300);}
+  const x = document.querySelectorAll("input[name='milestones']:checked");
+  if (x.length > 3) { setTimeout(function(){
+    x[3].checked = false;
+  }, 300);}
+  const y = document.querySelectorAll("input[name='awards']:checked");
+  if (y.length > 3) { setTimeout(function(){
+    y[3].checked = false;}, 300);}
 }
