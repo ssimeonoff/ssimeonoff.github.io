@@ -307,12 +307,12 @@
 
 .aphrodite {
   font-size:26px;
+  font-family: Arial;
   color: orange;
   margin-left:20px;
   font-weight:bold;
   margin-top:17px;
-  text-shadow:  6px 6px 6px  grey;
-  text-shadow: -1px 0 #333333, 0 1px #333333, 1px 0 #333333,0px -1px #333333, 6px 3px 5px  grey;
+  text-shadow: 0 0 1px black, 6px 3px 5px  grey;
 }
 
 .tharsis {
@@ -388,6 +388,29 @@
   margin-left:25px;
   width:138px;
 }
+
+.arcadian-communities {
+  font-size:20px;
+  border-style:outset;
+  padding-left:3px;
+  width:147px;
+  background:#eeeeee;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.4), 3px 3px 3px grey;
+  margin-left:22px;
+  margin-top: 5px;
+  border-radius:5px;
+  font-weight: bold;
+  line-height: 24px;
+  border-top: 2px solid rgb(221,221,221);
+  border-left: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
+}
+
+
+
+
+
 
 .modal-content1 {
     background-color: #fefefe;

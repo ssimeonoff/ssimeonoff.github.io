@@ -59,7 +59,7 @@ function checkForm () {
   if (enableSubmit) {
     generateConfirmationText();
     document.getElementById("modalOne").style.display = "block";
-    document.querySelector(".modal-window").style.transform = "scale(1)";
+    setTimeout(function() {document.querySelector(".modal-window").style.transform = "scale(1)";}, 100);
     }
 
   //remove the red outlines after 3 seconds
