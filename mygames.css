@@ -84,11 +84,10 @@
     padding:20px;
     padding-bottom: 10px;
     width: 812px;
-    transition: 0.3s;
 }
 
 .red-outline {
-  box-shadow: 0 0px 1px 1px rgba(0,0,0,.8), 0 0 4px 2px red !important;
+  box-shadow: 0 0px 1px 1px rgba(0,0,0,.8), 0 0 6px 3px red !important;
 }
 
 .drop-down {
@@ -108,6 +107,7 @@
   margin-top: 2px;
   transition:opacity 0.3s;
   padding-left: 3px;
+  transition: 0.3s;
 }
 
 .corporation-score {
@@ -160,6 +160,7 @@
     box-shadow: 0 0px 1px 1px rgba(0,0,0,.8);
     margin-right: -2px;
     margin-bottom: 2px;
+    transition: 0.3s;
 }
 
 .btn-gametype {
@@ -182,6 +183,7 @@
     background: #eee;
     margin-right: -2px;
     margin-bottom: 2px;
+    transition: 0.3s;
 }
 
 .btn-map {
@@ -204,6 +206,7 @@
     background: #eee;
     color: #222;
     margin-top: 2px;
+    transition: 0.3s;
 }
 
 .btn-awards {
@@ -248,6 +251,7 @@
     box-shadow: 0 0px 1px 1px rgba(0,0,0,.8);
     background: #eee;
     padding-left:30px;
+    transition: 0.3s;
 }
 
 #confirm {
@@ -393,6 +397,8 @@ input::-webkit-inner-spin-button {
 }
 
 .modal-window {
+    transform: scale(0);
+    transition: 0.3s;
     background-color: #fefefe;
     font-family: Prototype;
     line-height: 28px;
@@ -403,7 +409,6 @@ input::-webkit-inner-spin-button {
     height: 445px;
     margin-left: auto;
     margin-right:auto;
-    transition-duration: 2s;
     border-radius: 3px;
     font-size: 14px;
     box-shadow: 0 2px 10px 1px black;

@@ -59,6 +59,7 @@ function checkForm () {
   if (enableSubmit) {
     generateConfirmationText();
     document.getElementById("modalOne").style.display = "block";
+    document.querySelector(".modal-window").style.transform = "scale(1)";
     }
 
   //remove the red outlines after 3 seconds
@@ -178,7 +179,10 @@ closeBtns.forEach(function(btn){
 
 window.onclick = function(event) {
   if (event.target.className === "modal") {
-    event.target.style.display = "none";
+    document.querySelector(".modal-window").style.transform = "scale(0)";
+    setTimeout(function(){
+      event.target.style.display = "none";
+    }, 300); //waiting for the animation duration of closing the modal
   }
 }
 
