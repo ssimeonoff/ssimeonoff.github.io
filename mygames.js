@@ -14,7 +14,7 @@ document.getElementById("corporation5-score").addEventListener("input", changeCo
 document.getElementById("venus").addEventListener("input", displayVenusAwards);
 /////////////////////////////////////////////////////////////////////////////////////
 function checkForm () {
-  //code executed every time there is an input in the form
+  //code executed when "submit" is clicked
   enableSubmit = true;
   if (document.querySelectorAll("input[name='players']:checked").length < 1 ) {
     //if players button is not clicked
@@ -102,7 +102,7 @@ function changeColours () {
 }
 
 function changeColours2 () {
-  if (this.value < 20) {
+  if (this.value < 20 || this.value > 200) {
     this.classList.remove("change-colours");
   }
   else {
@@ -213,7 +213,11 @@ function generateConfirmationText () {
 }
 
 function closeModal () {
-  document.getElementById("modalOne").style.display = "none";
+  document.querySelector(".modal-window").style.transform = "scale(0)";
+  setTimeout(function(){
+    document.getElementById("modalOne").style.display = "none";
+  }, 300); //waiting during the animation duration of closing the modal
+
 }
 //////////////////////////////////////////////////////////////////////////////
 function resetAwards() {
@@ -231,4 +235,26 @@ function limitAwards() {
   const y = document.querySelectorAll("input[name='awards']:checked");
   if (y.length > 3) { setTimeout(function(){
     y[3].checked = false;}, 500);}
+}
+
+function disableSelectedCorporation() {
+  //disabling corporations options when that corporation is alreaydy chosen
+
+  //enabling all disabled options
+  disabled = document.querySelectorAll("option:disabled");
+  for (i = 0; i < disabled.length; i++) {
+    if (disabled[i].value.length > 1) {
+      disabled[i].disabled = false;
+    }
+  }
+  //disabling the current selections
+  var x = document.querySelectorAll("select[name='corporations']");
+  for (i = 0; i < x.length; i++) {
+    if (x[i].value.length > 1) {
+      var y = document.querySelectorAll("option[value='"+ x[i].value +"']");
+      for (j = 0; j < y.length; j++) {
+        y[j].disabled =true;
+      }
+    }
+  }
 }

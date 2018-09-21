@@ -58,7 +58,7 @@ function submitForm(e) {
   setTimeout(function(){
     document.getElementById("submit").style.display = "block";
     document.querySelector(".alert").style.display = "none";
-  }, 3000);
+  }, 5000);
 
 }
 
@@ -148,4 +148,12 @@ function resetAll () {
   }
   document.getElementById("no-milestones").style.display="inline-block";
   document.getElementById("no-awards").style.display="inline-block";
+
+  //enabling all disabled options
+  disabled = document.querySelectorAll("option:disabled");
+  for (i = 0; i < disabled.length; i++) {
+    if (disabled[i].value.length > 1) {
+      disabled[i].disabled = false;
+    }
+  }
 }

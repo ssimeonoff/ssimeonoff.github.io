@@ -3,46 +3,49 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="TERRAFORMING MARS MY GAMES">
+  <meta name="description" content="TERRAFORMING MARS GAMES STATS">
   <meta name="keywords" content="HTML,CSS,JavaScript">
   <link rel="shortcut icon" type="image/png" href="favicon.png">
-  <link rel="stylesheet" type="text/css" href="mygames.css">
-  <link rel="stylesheet" href="odometer.css">
   <link rel="stylesheet" href="stats.css">
-  <link rel="stylesheet" href="solo.css">
-  <meta name="viewport" content="width=480px">
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116626580-4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
 
-  gtag('config', 'UA-116626580-4');
-</script>
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['CORPORATION WINRATE[%]', '2 PLAYERS', '3 PLAYERS', '4 PLAYERS', '5 PLAYERS'],
+          ['HELION', 20, 30, 40, 50],
+          ['VIRON', 11, 46, 85, 67],
+          ['VITOR', 66, 20, 30, 20],
+          ['ECOLINE', 10, 54, 35, 20]
+        ]);
+
+        var options = {
+          chart: {
+            title: '',
+            subtitle: ''
+          },
+          bars: 'horizontal',
+          HAxis: {textStyle : {fontSize: 17, fontName: 'Prototype'}},
+          VAxis: {textStyle : {fontSize: 17, fontName: 'Prototype'}},
+          colors: ['#1b9e77', '#d95f02', '#0070FF', '#444444']
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
 </head>
 
 
-<body style="background-color:black;">
-  <div class="grid-container-stats">
-    <div class="grid-div">
-      <div class="corp-div">A</div>
-      <div class="winrate-div">B</div>
-    </div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-</div>
+<body>
+  <div id="barchart_material" style="width: 900px; height: 400px;"></div>
+
 
   <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="mygames.js"></script>
-  <script src="main.js"></script>
-  <script src="odometer.js"></script>
-
 </body>
 </html>

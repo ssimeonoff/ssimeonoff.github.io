@@ -115,6 +115,7 @@
 }
 
 .corporation-score {
+  -webkit-appearance: none;
   cursor: pointer;
   background: #eee;
   outline: none;
