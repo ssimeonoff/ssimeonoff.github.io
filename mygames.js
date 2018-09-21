@@ -172,7 +172,11 @@ var closeBtns = [...document.querySelectorAll(".close")];
 closeBtns.forEach(function(btn){
   btn.onclick = function() {
     var modal = btn.closest('.modal');
-    modal.style.display = "none";
+    document.querySelector(".modal-window").style.transform = "scale(0)";
+    setTimeout(function(){
+      modal.style.display = "none";
+    }, 300); //waiting for the animation duration of closing the modal
+
   }
 });
 

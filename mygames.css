@@ -107,7 +107,7 @@
   box-shadow: 0 0px 1px 1px rgba(0,0,0,.8);
   margin-top: 2px;
   transition:opacity 0.3s;
-  padding-left: 3px;
+  padding-left: 8px;
   transition: 0.3s;
 }
 
@@ -252,7 +252,7 @@
     border-right: 2px solid rgb(137,137,137);
     box-shadow: 0 0px 1px 1px rgba(0,0,0,.8);
     background: #eee;
-    padding-left:36px;
+    padding-left: 33px;
     transition: 0.3s;
 }
 
