@@ -59,7 +59,7 @@ function checkForm () {
   if (enableSubmit) {
     generateConfirmationText();
     document.getElementById("modalOne").style.display = "block";
-    setTimeout(function() {document.querySelector(".modal-window").style.transform = "scale(1)";}, 100);
+    setTimeout(function() {document.querySelector(".modal-window").style.transform = "scale(1)";}, 200);
     }
 
   //remove the red outlines after 3 seconds
@@ -226,5 +226,5 @@ function limitAwards() {
   }, 300);}
   const y = document.querySelectorAll("input[name='awards']:checked");
   if (y.length > 3) { setTimeout(function(){
-    y[3].checked = false;}, 300);}
+    y[3].checked = false;}, 500);}
 }
