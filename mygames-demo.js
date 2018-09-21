@@ -25,6 +25,7 @@ function checkForm () {
     enableSubmit = false;
   }
   else {
+      enableCorporations();
       //if not all* corporation are selected
       //if not all* scores are selected
       x = document.querySelectorAll("select[class='drop-down not-filled'], input[class='corporation-score not-filled']");
@@ -111,8 +112,7 @@ function changeColours2 () {
 }
 
 function enableCorporations() {
-  //var players = document.querySelector("input[name='players']:checked").value;
-  var players = 2;
+  var players = document.querySelector("input[name='players']:checked").value;
   var corps = document.querySelectorAll(".drop-down");
   var scores = document.querySelectorAll("input[name='scores']");
   for (i = 0; i < 5; i++) {
