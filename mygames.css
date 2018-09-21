@@ -163,8 +163,8 @@
     outline: none;
     background: #eee;
     color: #222;
-    height: 66px;
-    line-height: 66px;
+    height: 50px;
+    line-height: 50px;
     width: 57px;
     text-align: center;
     cursor: pointer;
@@ -184,9 +184,6 @@
     font-family: Prototype;
     outline: none;
     color: #222;
-    height: 30px;
-    line-height: 30px;
-    width: 120px;
     text-align: center;
     cursor: pointer;
     font-size: 14px;
@@ -201,14 +198,26 @@
     margin-bottom: 2px;
 }
 
+.btn-draft {
+  height: 49px;
+  line-height: 49px;
+  width: 40px;
+}
+
+.btn-expansions {
+  width:86px;
+  height: 48px;
+  line-height: 48px;
+}
+
 .btn-map {
     display: inline-block;
     font-family: Prototype;
     outline: none;
     color: black;
-    height: 67px;
-    line-height: 67px;
-    width: 86px;
+    height: 50px;
+    line-height: 50px;
+    width: 78px;
     text-align: center;
     cursor: pointer;
     font-size: 16px;
@@ -220,7 +229,7 @@
     box-shadow: 0 0px 1px 1px rgba(0,0,0,.8);
     background: #eee;
     color: #222;
-    margin-top: 2px;
+    margin-right: -2px;
 }
 
 .btn-awards {
@@ -250,8 +259,8 @@
     font-family: Prototype;
     outline: none;
     color: #222;
-    height: 70px;
-    line-height: 66px;
+    height: 54px;
+    line-height: 50px;
     margin-bottom: 2px;
     width: 90px;
     text-align: center;
@@ -370,7 +379,8 @@ input::-webkit-inner-spin-button {
 }
 
 .fieldset-alignment {
-  margin-bottom: 10px;
+  margin-bottom: -4px;
+  margin-left: 2px;
   vertical-align: top;
 }
 
@@ -388,12 +398,14 @@ input::-webkit-inner-spin-button {
   padding-top: 3px;
   line-height: 22px;
   font-size: 18px;
+  padding-bottom: 12px;
 }
 
 .column {
   display: inline-block;
   vertical-align: top;
   margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 /* The Modal (background) */
