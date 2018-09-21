@@ -111,7 +111,8 @@ function changeColours2 () {
 }
 
 function enableCorporations() {
-  var players = document.querySelector("input[name='players']:checked").value;
+  //var players = document.querySelector("input[name='players']:checked").value;
+  var players = 2;
   var corps = document.querySelectorAll(".drop-down");
   var scores = document.querySelectorAll("input[name='scores']");
   for (i = 0; i < 5; i++) {
