@@ -474,7 +474,7 @@ input::-webkit-inner-spin-button {
   text-align: right;
 }
 .ribbon span {
-  font-size: 13px;
+  font-size: 12px;
   color: #FFF;
   font-family: Prototype;
   text-transform: uppercase;
@@ -484,8 +484,7 @@ input::-webkit-inner-spin-button {
   -webkit-transform: rotate(-45deg);
   width: 100px;
   display: block;
-  background: #888;
-  background: linear-gradient(#888, #444);
+  background: #444;
   box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
   position: absolute;
   top: 17px; left: -23px;
