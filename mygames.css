@@ -91,6 +91,7 @@
 }
 
 .drop-down {
+  -webkit-appearance: none;
   cursor: pointer;
   outline: none;
   background: #eee;
@@ -232,6 +233,7 @@
 }
 
 .btn-generations {
+    -webkit-appearance: none;
     display: inline-block;
     font-family: Prototype;
     outline: none;
@@ -250,7 +252,7 @@
     border-right: 2px solid rgb(137,137,137);
     box-shadow: 0 0px 1px 1px rgba(0,0,0,.8);
     background: #eee;
-    padding-left:30px;
+    padding-left:36px;
     transition: 0.3s;
 }
 
@@ -274,6 +276,7 @@
 }
 
 .btn-submit {
+  -webkit-appearance: none;
   outline: none;
   cursor: pointer;
   font-family: Prototype;
@@ -416,10 +419,9 @@ input::-webkit-inner-spin-button {
 }
 
 .close {
-  display: none;
   position: absolute;
-  margin-left: 330px;
-  margin-top: -20px;
+  margin-left: 340px;
+  margin-top: -30px;
   font-weight: bold;
   font-size: 40px;
   cursor: pointer;
