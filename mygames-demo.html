@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="TERRAFORMING MARS MY GAMES">
+  <meta name="keywords" content="HTML,CSS,JavaScript">
+  <link rel="shortcut icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" type="text/css" href="mygames.css">
+  <link rel="stylesheet" href="odometer.css">
+  <meta name="viewport" content="width=480px">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116626580-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-116626580-4');
+</script>
+</head>
+
+
+<body style="background-color:black;">
+  <div id="buttonsContainer" class="box">
+     <div class="ribbon"><span>DEMO</span></div>
+  <div id="title">
+    <div style="transform:scale(2,1);margin-top:6px;">TERRAFORMING<br> <span style="font-size:26px;transform: scale(2,1);">MARS</span></div>
+   </div>
+   <div id="title2">SUBMITTED<br> <div id="title3" class="odometer" data-minintegerlen="3">0</div></div>
+   <br>
+  <form id="form" name="submit-to-google-sheet">
+
+    <div class="column">
+     <fieldset class="fieldset-alignment" style="display:inline-block;width:250px;" oninput="enableCorporations()">
+      <legend class="fieldset2">PLAYERS</legend>
+      <input type="radio" name='players' id="radio-choice-2" value="2" style="display:none;">
+      <label class= "btn-players" for="radio-choice-2">2</label>
+      <input type="radio" name='players' id="radio-choice-3" value="3" style="display:none;">
+      <label class= "btn-players" for="radio-choice-3" >3</label>
+      <input type="radio" name='players' id="radio-choice-4" value="4" style="display:none;">
+      <label class= "btn-players" for="radio-choice-4">4</label>
+      <input type="radio" name='players' id="radio-choice-5" value="5" style="display:none;">
+      <label class= "btn-players" for="radio-choice-5">5</label>
+    </fieldset>
+
+    <fieldset class="fieldset-alignment" style="width:90px;display:inline-block;margin-left:-8px;">
+     <legend class="fieldset2">GENERATIONS</legend>
+     <select  class="btn-generations custom-select" id="generations"  size="1" name="generations" >
+       <option disabled selected value>#</option>
+       <option value="4">4</option>
+       <option value="5">5</option>
+       <option value="6">6</option>
+       <option value="7">7</option>
+       <option value="8">8</option>
+       <option value="9">9</option>
+       <option value="10">10</option>
+       <option value="11">11</option>
+       <option value="12">12</option>
+       <option value="13">13</option>
+       <option value="14">14</option>
+       <option value="15">15</option>
+       <option value="16">16</option>
+     </select>
+   </fieldset>
+
+     <fieldset class="fieldset-alignment" style="width:250px;display:inline-block;">
+      <legend class="fieldset2">CORPORATIONS</legend>
+      <select disabled id="corporation1" class="drop-down" name="corporations" size="1" value="Select corporation" style="margin-top:0px;">
+      <option disabled selected value> </option>
+      <option value="APHRODITE">APHRODITE</option>
+      <option value="ARCADIAN COMMUNITIES">ARCADIAN COMMUNITIES</option>
+      <option value="ARKLIGHT">ARKLIGHT</option>
+      <option value="CELESTIC">CELESTIC</option>
+      <option value="CHEUNG SHING MARS">CHEUNG SHING MARS</option>
+      <option value="CREDICOR">CREDICOR</option>
+      <option value="ECOLINE">ECOLINE</option>
+      <option value="HELION">HELION</option>
+      <option value="INTERPLAN. CINEMATICS">INTERPLAN. CINEMATICS</option>
+      <option value="INVENTRIX">INVENTRIX</option>
+      <option value="MANUTECH">MANUTECH</option>
+      <option value="MINING GUILD">MINING GUILD</option>
+      <option value="MORNING STAR">MORNING STAR</option>
+      <option value="PHOBOLOG">PHOBOLOG</option>
+      <option value="POINT LUNA">POINT LUNA</option>
+      <option value="RECYCLON">RECYCLON</option>
+      <option value="ROBINSON INDUSTRIES">ROBINSON INDUSTRIES</option>
+      <option value="SATURN SYSTEMS">SATURN SYSTEMS</option>
+      <option value="SPLICE">SPLICE</option>
+      <option value="TERACTOR">TERACTOR</option>
+      <option value="THARSIS REPUBLIC">THARSIS REPUBLIC</option>
+      <option value="THORGATE">THORGATE</option>
+      <option value="UNMI">U.N.M.I.</option>
+      <option value="VALLEY TRUST">VALLEY TRUST</option>
+      <option value="VIRON">VIRON</option>
+      <option value="VITOR">VITOR</option>
+    </select>
+    <select disabled id="corporation2" class="drop-down" name="corporations" size="1" value="Select corporation">
+      <option disabled selected value> </option>
+      <option value="APHRODITE">APHRODITE</option>
+      <option value="ARCADIAN COMMUNITIES">ARCADIAN COMMUNITIES</option>
+      <option value="ARKLIGHT">ARKLIGHT</option>
+      <option value="CELESTIC">CELESTIC</option>
+      <option value="CHEUNG SHING MARS">CHEUNG SHING MARS</option>
+      <option value="CREDICOR">CREDICOR</option>
+      <option value="ECOLINE">ECOLINE</option>
+      <option value="HELION">HELION</option>
+      <option value="INTERPLAN. CINEMATICS">INTERPLAN. CINEMATICS</option>
+      <option value="INVENTRIX">INVENTRIX</option>
+      <option value="MANUTECH">MANUTECH</option>
+      <option value="MINING GUILD">MINING GUILD</option>
+      <option value="MORNING STAR">MORNING STAR</option>
+      <option value="PHOBOLOG">PHOBOLOG</option>
+      <option value="POINT LUNA">POINT LUNA</option>
+      <option value="RECYCLON">RECYCLON</option>
+      <option value="ROBINSON INDUSTRIES">ROBINSON INDUSTRIES</option>
+      <option value="SATURN SYSTEMS">SATURN SYSTEMS</option>
+      <option value="SPLICE">SPLICE</option>
+      <option value="TERACTOR">TERACTOR</option>
+      <option value="THARSIS REPUBLIC">THARSIS REPUBLIC</option>
+      <option value="THORGATE">THORGATE</option>
+      <option value="UNMI">U.N.M.I.</option>
+      <option value="VALLEY TRUST">VALLEY TRUST</option>
+      <option value="VIRON">VIRON</option>
+      <option value="VITOR">VITOR</option>
+    </select>
+    <select disabled id="corporation3" class="drop-down" name="corporations" size="1" value="Select corporation">
+      <option disabled selected value> </option>
+      <option value="APHRODITE">APHRODITE</option>
+      <option value="ARCADIAN COMMUNITIES">ARCADIAN COMMUNITIES</option>
+      <option value="ARKLIGHT">ARKLIGHT</option>
+      <option value="CELESTIC">CELESTIC</option>
+      <option value="CHEUNG SHING MARS">CHEUNG SHING MARS</option>
+      <option value="CREDICOR">CREDICOR</option>
+      <option value="ECOLINE">ECOLINE</option>
+      <option value="HELION">HELION</option>
+      <option value="INTERPLAN. CINEMATICS">INTERPLAN. CINEMATICS</option>
+      <option value="INVENTRIX">INVENTRIX</option>
+      <option value="MANUTECH">MANUTECH</option>
+      <option value="MINING GUILD">MINING GUILD</option>
+      <option value="MORNING STAR">MORNING STAR</option>
+      <option value="PHOBOLOG">PHOBOLOG</option>
+      <option value="POINT LUNA">POINT LUNA</option>
+      <option value="RECYCLON">RECYCLON</option>
+      <option value="ROBINSON INDUSTRIES">ROBINSON INDUSTRIES</option>
+      <option value="SATURN SYSTEMS">SATURN SYSTEMS</option>
+      <option value="SPLICE">SPLICE</option>
+      <option value="TERACTOR">TERACTOR</option>
+      <option value="THARSIS REPUBLIC">THARSIS REPUBLIC</option>
+      <option value="THORGATE">THORGATE</option>
+      <option value="UNMI">U.N.M.I.</option>
+      <option value="VALLEY TRUST">VALLEY TRUST</option>
+      <option value="VIRON">VIRON</option>
+      <option value="VITOR">VITOR</option>
+    </select>
+    <select disabled id="corporation4" class="drop-down" name="corporations" size="1" value="Select corporation">
+      <option disabled selected value> </option>
+      <option value="APHRODITE">APHRODITE</option>
+      <option value="ARCADIAN COMMUNITIES">ARCADIAN COMMUNITIES</option>
+      <option value="ARKLIGHT">ARKLIGHT</option>
+      <option value="CELESTIC">CELESTIC</option>
+      <option value="CHEUNG SHING MARS">CHEUNG SHING MARS</option>
+      <option value="CREDICOR">CREDICOR</option>
+      <option value="ECOLINE">ECOLINE</option>
+      <option value="HELION">HELION</option>
+      <option value="INTERPLAN. CINEMATICS">INTERPLAN. CINEMATICS</option>
+      <option value="INVENTRIX">INVENTRIX</option>
+      <option value="MANUTECH">MANUTECH</option>
+      <option value="MINING GUILD">MINING GUILD</option>
+      <option value="MORNING STAR">MORNING STAR</option>
+      <option value="PHOBOLOG">PHOBOLOG</option>
+      <option value="POINT LUNA">POINT LUNA</option>
+      <option value="RECYCLON">RECYCLON</option>
+      <option value="ROBINSON INDUSTRIES">ROBINSON INDUSTRIES</option>
+      <option value="SATURN SYSTEMS">SATURN SYSTEMS</option>
+      <option value="SPLICE">SPLICE</option>
+      <option value="TERACTOR">TERACTOR</option>
+      <option value="THARSIS REPUBLIC">THARSIS REPUBLIC</option>
+      <option value="THORGATE">THORGATE</option>
+      <option value="UNMI">U.N.M.I.</option>
+      <option value="VALLEY TRUST">VALLEY TRUST</option>
+      <option value="VIRON">VIRON</option>
+      <option value="VITOR">VITOR</option>
+    </select>
+    <select disabled id="corporation5" class="drop-down" name="corporations" size="1" value="Select corporation">
+      <option disabled selected value> </option>
+      <option value="APHRODITE">APHRODITE</option>
+      <option value="ARCADIAN COMMUNITIES">ARCADIAN COMMUNITIES</option>
+      <option value="ARKLIGHT">ARKLIGHT</option>
+      <option value="CELESTIC">CELESTIC</option>
+      <option value="CHEUNG SHING MARS">CHEUNG SHING MARS</option>
+      <option value="CREDICOR">CREDICOR</option>
+      <option value="ECOLINE">ECOLINE</option>
+      <option value="HELION">HELION</option>
+      <option value="INTERPLAN. CINEMATICS">INTERPLAN. CINEMATICS</option>
+      <option value="INVENTRIX">INVENTRIX</option>
+      <option value="MANUTECH">MANUTECH</option>
+      <option value="MINING GUILD">MINING GUILD</option>
+      <option value="MORNING STAR">MORNING STAR</option>
+      <option value="PHOBOLOG">PHOBOLOG</option>
+      <option value="POINT LUNA">POINT LUNA</option>
+      <option value="RECYCLON">RECYCLON</option>
+      <option value="ROBINSON INDUSTRIES">ROBINSON INDUSTRIES</option>
+      <option value="SATURN SYSTEMS">SATURN SYSTEMS</option>
+      <option value="SPLICE">SPLICE</option>
+      <option value="TERACTOR">TERACTOR</option>
+      <option value="THARSIS REPUBLIC">THARSIS REPUBLIC</option>
+      <option value="THORGATE">THORGATE</option>
+      <option value="UNMI">U.N.M.I.</option>
+      <option value="VALLEY TRUST">VALLEY TRUST</option>
+      <option value="VIRON">VIRON</option>
+      <option value="VITOR">VITOR</option>
+    </select>
+  </fieldset>
+   <fieldset class="fieldset-alignment" style="display:inline-block;margin-left:-8px;">
+    <legend class="fieldset2">SCORES</legend>
+      <input disabled class="corporation-score"  type="number" min="20" max ="200" step="1" id="corporation1-score" name="scores" style="margin-top:0px;"><br>
+      <input disabled class="corporation-score"  type="number" min="20" max ="200" step="1" id="corporation2-score" name="scores"><br>
+      <input disabled class="corporation-score"  type="number" min="20" max ="200" step="1" id="corporation3-score" name="scores"><br>
+      <input disabled class="corporation-score"  type="number" min="20" max ="200" step="1" id="corporation4-score" name="scores"><br>
+      <input disabled class="corporation-score"  type="number" min="20" max ="200" step="1" id="corporation5-score" name="scores">
+  </fieldset>
+  </div>
+
+  <div class="column">
+
+    <fieldset class="fieldset-alignment" style="display:inline-block;width:90px;" >
+     <legend class="fieldset2">DRAFT</legend>
+     <input class="checkbox" type="radio" id="draft" value="YES" name="draft">
+     <label for="draft" class="btn-gametype" style="width:86px;">YES</label>
+     <input class="checkbox" type="radio" id="no-draft"  value="NO" name="draft">
+     <label for="no-draft" class="btn-gametype" style="width:86px;">NO</label>
+   </fieldset>
+
+    <fieldset class="fieldset-alignment" style="width:250px;display:inline-block;margin-left:-8px;">
+     <legend class="fieldset2">EXPANSIONS (optional)</legend>
+       <input class="checkbox" type="checkbox" id="corporate" value="CORPORATE" name="expansions">
+       <label for="corporate" class="btn-gametype" >CORPORATE</label>
+       <input class="checkbox" type="checkbox" id="venus" value="VENUS" name="expansions">
+       <label for="venus" class="btn-gametype">VENUS</label>
+       <input class="checkbox" type="checkbox" id="prelude" value="PRELUDE" name="expansions">
+       <label for="prelude" class="btn-gametype" >PRELUDE</label>
+       <input class="checkbox" type="checkbox" id="colonies" value="COLONIES" name="expansions">
+       <label for="colonies" class="btn-gametype">COLONIES</label>
+   </fieldset>
+
+
+   <fieldset class="fieldset-alignment" style="width:90px;display:inline-block;height: 228px;">
+    <legend class="fieldset2">MAP</legend>
+    <input class="checkbox" type="radio" id="tharsis" value="THARSIS" name="map">
+    <label for="tharsis" class="btn-map"  onclick="tharsisAwards();" style="margin-top:0px;">THARSIS</label><br>
+    <input class="checkbox" type="radio" id="hellas"  value="HELLAS" name="map">
+    <label for="hellas" class="btn-map"  onclick="hellasAwards();">HELLAS</label><br>
+    <input class="checkbox" type="radio" id="elysium"  value="ELYSIUM" name="map">
+    <label for="elysium" class="btn-map" onclick="elysiumAwards();">ELYSIUM</label><br>
+  </fieldset>
+
+   <fieldset class="fieldset-alignment awards" disabled id="no-milestones" class="awards" style="display:inline-block;">
+    <legend class="fieldset2">MILESTONES</legend>
+      <input class="checkbox" type="checkbox">
+      <label class="btn-awards" style="box-shadow:none;opacity:0.3;"></label><br>
+      <input class="checkbox" type="checkbox" >
+      <label class="btn-awards" style="box-shadow:none;opacity:0.3;"></label><br>
+      <input class="checkbox" type="checkbox" >
+      <label class="btn-awards" style="box-shadow:none;opacity:0.3;"></label><br>
+      <input class="checkbox" type="checkbox" >
+      <label class="btn-awards" style="box-shadow:none;opacity:0.3;"></label><br>
+      <input class="checkbox" type="checkbox" >
+      <label class="btn-awards" style="box-shadow:none;opacity:0.3;"></label><br>
+      <input class="checkbox" type="checkbox" >
+      <label class="btn-awards awards-venus" style="box-shadow:none;opacity:0.3;"></label><br>
+  </fieldset>
+   <fieldset class="fieldset-alignment awards" disabled id="no-awards" class="awards" style="display:inline-block;">
+    <legend class="fieldset2">AWARDS</legend>
+    <input class="checkbox" type="checkbox">
+    <label class="btn-awards" style="box-shadow:none;opacity:0.3;"></label><br>
+    <input class="checkbox" type="checkbox" >
+    <label class="btn-awards" style="box-shadow:none;opacity:0.3;"></label><br>
+    <input class="checkbox" type="checkbox" >
+    <label class="btn-awards" style="box-shadow:none;opacity:0.3;"></label><br>
+    <input class="checkbox" type="checkbox" >
+    <label class="btn-awards" style="box-shadow:none;opacity:0.3;"></label><br>
+    <input class="checkbox" type="checkbox" >
+    <label class="btn-awards" style="box-shadow:none;opacity:0.3;"></label><br>
+    <input class="checkbox" type="checkbox" >
+    <label class="btn-awards awards-venus" style="box-shadow:none;opacity:0.3;"></label><br>
+  </fieldset>
+
+   <fieldset class="fieldset-alignment awards"  id="tharsis-milestones" class="awards" oninput="limitAwards()">
+    <legend class="fieldset2">MILESTONES</legend>
+      <input class="checkbox" type="checkbox" id="terraformer" value="TERRAFORMER" name="milestones">
+      <label for="terraformer" class="btn-awards">TERRAFORMER</label><br>
+      <input class="checkbox" type="checkbox" id="mayor" value="MAYOR" name="milestones">
+      <label for="mayor" class="btn-awards">MAYOR</label><br>
+      <input class="checkbox" type="checkbox" id="gardener" value="GARDENER" name="milestones">
+      <label for="gardener" class="btn-awards">GARDENER</label><br>
+      <input class="checkbox" type="checkbox" id="builder" value="BUILDER" name="milestones">
+      <label for="builder" class="btn-awards">BUILDER</label><br>
+      <input class="checkbox" type="checkbox" id="planner" value="PLANNER" name="milestones">
+      <label for="planner" class="btn-awards">PLANNER</label><br>
+      <input class="checkbox" type="checkbox" id="hoverlord" value="HOVERLORD" name="milestones">
+      <label for="hoverlord" class="btn-awards  awards-venus">HOVERLORD</label><br>
+   </fieldset>
+    <fieldset class="fieldset-alignment awards"  id="tharsis-awards" class="awards" oninput="limitAwards()">
+     <legend class="fieldset2">AWARDS</legend>
+      <input class="checkbox" type="checkbox" id="landlord" value="LANDLORD" name="awards">
+      <label for="landlord" class="btn-awards">LANDLORD</label><br>
+      <input class="checkbox" type="checkbox" id="banker" value="BANKER" name="awards">
+      <label for="banker" class="btn-awards">BANKER</label><br>
+      <input class="checkbox" type="checkbox" id="scientist" value="SCIENTIST" name="awards">
+      <label for="scientist" class="btn-awards">SCIENTIST</label><br>
+      <input class="checkbox" type="checkbox" id="global-warmer" value="GLOBAL WARMER" name="awards">
+      <label for="global-warmer" class="btn-awards  ">GLOBAL WARMER</label><br>
+      <input class="checkbox" type="checkbox" id="miner" value="MINER" name="awards">
+      <label for="miner" class="btn-awards">MINER</label><br>
+      <input class="checkbox" type="checkbox" id="venuphile" value="VENUPHILE" name="awards">
+      <label for="venuphile" class="btn-awards awards-venus ">VENUPHILE</label><br>
+    </fieldset>
+
+     <fieldset class="fieldset-alignment awards"  id="hellas-milestones" class="awards" oninput="limitAwards()">
+      <legend class="fieldset2">MILESTONES</legend>
+        <input class="checkbox" type="checkbox" id="diversifier" value="DIVERSIFIER" name="milestones">
+        <label for="diversifier" class="btn-awards">DIVERSIFIER</label><br>
+        <input class="checkbox" type="checkbox" id="tactician" value="TACTICIAN" name="milestones">
+        <label for="tactician" class="btn-awards">TACTICIAN</label><br>
+        <input class="checkbox" type="checkbox" id="polar-explorer" value="POLAR EXPLORER" name="milestones">
+        <label for="polar-explorer" class="btn-awards">POLAR EXPLORER</label><br>
+        <input class="checkbox" type="checkbox" id="energizer" value="ENERGIZER" name="milestones">
+        <label for="energizer" class="btn-awards">ENERGIZER</label><br>
+        <input class="checkbox" type="checkbox" id="rim-settler" value="RIM SETTLER" name="milestones">
+        <label for="rim-settler" class="btn-awards">RIM SETTLER</label><br>
+        <input class="checkbox" type="checkbox" id="hoverlord2" value="HOVERLORD" name="milestones">
+        <label for="hoverlord2" class="btn-awards  awards-venus">HOVERLORD</label><br>
+    </fieldset>
+     <fieldset class="fieldset-alignment awards"  id="hellas-awards" class="awards" oninput="limitAwards()">
+      <legend class="fieldset2">AWARDS</legend>
+        <input class="checkbox" type="checkbox" id="cultivator" value="CULTIVATOR" name="awards" >
+        <label for="cultivator" class="btn-awards">CULTIVATOR</label><br>
+        <input class="checkbox" type="checkbox" id="magnate" value="MAGNATE" name="awards">
+        <label for="magnate" class="btn-awards">MAGNATE</label><br>
+        <input class="checkbox" type="checkbox" id="space-baron" value="SPACE BARON" name="awards">
+        <label for="space-baron" class="btn-awards  ">SPACE BARON</label><br>
+        <input class="checkbox" type="checkbox" id="excentric" value="EXCENTRIC" name="awards">
+        <label for="excentric" class="btn-awards">EXCENTRIC</label><br>
+        <input class="checkbox" type="checkbox" id="contractor" value="CONTRACTOR" name="awards">
+        <label for="contractor" class="btn-awards  ">CONTRACTOR</label><br>
+        <input class="checkbox" type="checkbox" id="venuphile2" value="VENUPHILE" name="awards">
+        <label for="venuphile2" class="btn-awards awards-venus ">VENUPHILE</label><br>
+      </fieldset>
+
+       <fieldset class="fieldset-alignment awards"  id="elysium-milestones" class="awards" oninput="limitAwards()">
+        <legend class="fieldset2">MILESTONES</legend>
+          <input class="checkbox" type="checkbox" id="generalist" value="GENERALIST" name="milestones">
+          <label for="generalist" class="btn-awards">GENERALIST</label><br>
+          <input class="checkbox" type="checkbox" id="specialist" value="SPECIALIST" name="milestones">
+          <label for="specialist" class="btn-awards">SPECIALIST</label><br>
+          <input class="checkbox" type="checkbox" id="ecologist" value="ECOLOGIST" name="milestones">
+          <label for="ecologist" class="btn-awards">ECOLOGIST</label><br>
+          <input class="checkbox" type="checkbox" id="tycoon" value="TYCOON" name="milestones">
+          <label for="tycoon" class="btn-awards">TYCOON</label><br>
+          <input class="checkbox" type="checkbox" id="legend" value="LEGEND" name="milestones">
+          <label for="legend" class="btn-awards">LEGEND</label><br>
+          <input class="checkbox" type="checkbox" id="hoverlord3" value="HOVERLORD" name="milestones">
+          <label for="hoverlord3" class="btn-awards  awards-venus">HOVERLORD</label><br>
+      </fieldset>
+       <fieldset class="fieldset-alignment awards"  id="elysium-awards" class="awards" oninput="limitAwards()">
+        <legend class="fieldset2">AWARDS</legend>
+          <input class="checkbox" type="checkbox" id="celebrity" value="CELEBRITY" name="awards">
+          <label for="celebrity" class="btn-awards" style="margin-top:1px">CELEBRITY</label><br>
+          <input class="checkbox" type="checkbox" id="industrialist" value="INDUSTRIALIST" name="awards">
+          <label for="industrialist" class="btn-awards  ">INDUSTRIALIST</label><br>
+          <input class="checkbox" type="checkbox" id="desert-settler" value="DESERT SETTLER" name="awards">
+          <label for="desert-settler" class="btn-awards  ">DESERT SETTLER</label><br>
+          <input class="checkbox" type="checkbox" id="estate-dealer" value="ESTATE DEALER" name="awards">
+          <label for="estate-dealer" class="btn-awards  ">ESTATE DEALER</label><br>
+          <input class="checkbox" type="checkbox" id="benefactor" value="BENEFACTOR" name="awards">
+          <label for="benefactor" class="btn-awards  ">BENEFACTOR</label><br>
+          <input class="checkbox" type="checkbox" id="venuphile3" value="VENUPHILE" name="awards">
+          <label for="venuphile3" class="btn-awards awards-venus ">VENUPHILE</label><br>
+        </fieldset>
+    </div>
+    <div id="modalOne" class="modal">
+      <div class="modal-window">
+        <span class="close">&times;</span>
+        <div id="modalContent" >
+
+          <fieldset class="fieldset-alignment2" style="width:70px;margin-top:0px;">
+            <legend class="fieldset2">PLAYERS</legend>
+            <div id="modalPlayers"></div>
+          </fieldset>
+          <fieldset class="fieldset-alignment2" style="width:115px;margin-left:-8px;margin-top:0px;">
+            <legend class="fieldset2">GENERATIONS</legend>
+            <div id="modalGeneraions"></div>
+          </fieldset>
+          <fieldset class="fieldset-alignment2" style="width:70px;margin-left:-8px;margin-top:0px;">
+            <legend class="fieldset2">DRAFT</legend>
+            <div id="modalDraft"></div>
+          </fieldset>
+          <fieldset class="fieldset-alignment2" style="height:74px">
+            <legend class="fieldset2">CORPORATIONS</legend>
+            <div id="modalCorporations"></div>
+          </fieldset>
+          <fieldset class="fieldset-alignment2">
+            <legend class="fieldset2">SCORES</legend>
+            <div id="modalScores"></div>
+          </fieldset>
+          <fieldset class="fieldset-alignment2" style="height:50px">
+            <legend class="fieldset2">EXPANSIONS</legend>
+            <div id="modalExpansions"></div>
+          </fieldset>
+          <fieldset class="fieldset-alignment2">
+            <legend class="fieldset2">MAP</legend>
+            <div id="modalMap"></div>
+          </fieldset>
+          <fieldset class="fieldset-alignment2" style="height:52px">
+            <legend class="fieldset2">MILESTONES</legend>
+            <div id="modalMilestones"></div>
+          </fieldset>
+          <fieldset class="fieldset-alignment2" style="height:52px">
+            <legend class="fieldset2">AWARDS</legend>
+            <div id="modalAwards"></div>
+          </fieldset>
+
+
+
+
+
+        </div>
+        <input id="confirm" type="submit" value="CONFIRM SUBMIT" onclick="closeModal();"></input>
+      </div>
+    </div>
+</form>
+<button id="submit" class="button btn-submit " onclick="checkForm()"><div>SUBMIT GAME</div></button>
+<div class="alert">YOUR GAME HAS BEEN SUBMITTED</div>
+</div>
+
+  <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="mygames-demo.js"></script>
+  <script src="main.js"></script>
+  <script src="odometer.js"></script>
+
+</body>
+</html>
