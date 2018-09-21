@@ -10,6 +10,9 @@
     .btn-submit {
       width: 393px !important;
     }
+    .modal-window {
+      margin-top: 100px !important;
+    }
 
 }
 
@@ -252,7 +255,7 @@
     border-right: 2px solid rgb(137,137,137);
     box-shadow: 0 0px 1px 1px rgba(0,0,0,.8);
     background: #eee;
-    padding-left: 33px;
+    padding-left: 36px;
     transition: 0.3s;
 }
 
@@ -272,6 +275,7 @@
   border-right: 2px solid rgb(137,137,137);
   box-shadow: 0 0px 1px 1px rgba(0,0,0,.8);
   color: #222;
+  background: #ccc;
   letter-spacing: 1px;
   margin-top: 100px;
 }

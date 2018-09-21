@@ -175,7 +175,7 @@ closeBtns.forEach(function(btn){
     document.querySelector(".modal-window").style.transform = "scale(0)";
     setTimeout(function(){
       modal.style.display = "none";
-    }, 300); //waiting for the animation duration of closing the modal
+    }, 300); //waiting during the animation duration of closing the modal
 
   }
 });
@@ -185,7 +185,7 @@ window.onclick = function(event) {
     document.querySelector(".modal-window").style.transform = "scale(0)";
     setTimeout(function(){
       event.target.style.display = "none";
-    }, 300); //waiting for the animation duration of closing the modal
+    }, 300); //waiting during the animation duration of closing the modal
   }
 }
 
