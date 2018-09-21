@@ -25,7 +25,7 @@ function checkForm () {
     enableSubmit = false;
   }
   else {
-      enableCorporations();
+      
       //if not all* corporation are selected
       //if not all* scores are selected
       x = document.querySelectorAll("select[class='drop-down not-filled'], input[class='corporation-score not-filled']");
