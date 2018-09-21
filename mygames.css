@@ -74,6 +74,7 @@
 
 #buttonsContainer {
     background: #cccccc;
+    position: relative;
     background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
     border-top: 2px solid rgb(221,221,221);
     border-left: 2px solid rgb(221,221,221);
@@ -82,11 +83,24 @@
     border-radius: 2px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 20px;
     padding:20px;
     padding-bottom: 10px;
     width: 812px;
+    position: relative;
+
+}
+
+#buttonsContainer::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: -15px;
+  left: -15px;
+  right: -10px;
+  bottom: -15px;
+  border: 1px solid black;
 }
 
 .red-outline {
