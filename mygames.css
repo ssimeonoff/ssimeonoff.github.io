@@ -333,7 +333,7 @@
 .checkbox:checked + label, input[type=radio]:checked + label {
     border: 2px solid rgb(221,221,221);
     border-top: 2px solid rgb(137,137,137);
-    border-left: 2px solid rgb(137,137,137); 
+    border-left: 2px solid rgb(137,137,137);
     background: #444;
     color: white;
     text-shadow: 0 3px 1px black;
@@ -377,16 +377,17 @@ input::-webkit-inner-spin-button {
 .fieldset-alignment2 {
   display: inline-block;
   margin-top: -4px;
+  color: #cc3333;
   margin-bottom: 10px;
   height:35px;
-  width: 307px;
+  width: 304px;
   vertical-align: top;
   text-align: center;
   border-bottom: none;
   margin-top: -14px;
   padding-top: 3px;
   line-height: 22px;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .column {
