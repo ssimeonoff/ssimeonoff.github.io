@@ -1,17 +1,5 @@
 
-//event listeners to change clicked elements designs
-document.getElementById("generations").addEventListener("input", changeColours);
-document.getElementById("corporation1").addEventListener("input", changeColours);
-document.getElementById("corporation1-score").addEventListener("input", changeColours2);
-document.getElementById("corporation2").addEventListener("input", changeColours);
-document.getElementById("corporation2-score").addEventListener("input", changeColours2);
-document.getElementById("corporation3").addEventListener("input", changeColours);
-document.getElementById("corporation3-score").addEventListener("input", changeColours2);
-document.getElementById("corporation4").addEventListener("input", changeColours);
-document.getElementById("corporation4-score").addEventListener("input", changeColours2);
-document.getElementById("corporation5").addEventListener("input", changeColours);
-document.getElementById("corporation5-score").addEventListener("input", changeColours2);
-document.getElementById("venus").addEventListener("input", displayVenusAwards);
+
 /////////////////////////////////////////////////////////////////////////////////////
 function checkForm () {
   //code executed when "submit" is clicked
@@ -95,18 +83,19 @@ function displayVenusAwards () {
   }
 }
 
-function changeColours () {
-  this.classList.add("change-colours");
-  this.classList.remove("not-filled");
-
+function changeColours (id) {
+  console.log(id);
+  document.getElementById(id).classList.add("change-colours");
+  document.getElementById(id).classList.remove("not-filled");
+  console.log("hi");
 }
 
-function changeColours2 () {
-  if (this.value < 20 || this.value > 200) {
-    this.classList.remove("change-colours");
+function changeColours2 (id) {
+  if (document.getElementById(id).value < 20 || document.getElementById(id).value > 200) {
+    document.getElementById(id).classList.remove("change-colours");
   }
   else {
-    this.classList.add("change-colours");
+    document.getElementById(id).classList.add("change-colours");
   }
 }
 
