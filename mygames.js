@@ -43,12 +43,14 @@ function checkForm () {
     enableSubmit = false;
   }
 
-  //generates the modal t
+  //generates the modal text
   if (enableSubmit) {
     generateConfirmationText();
     document.getElementById("modalOne").style.display = "block";
     setTimeout(function() {document.querySelector(".modal-window").style.transform = "scale(1)";}, 200);
     }
+
+    else {document.getElementById("submit").disabled = true;}
 
   //remove the red outlines after 3 seconds
   setTimeout(function(){
@@ -56,6 +58,7 @@ function checkForm () {
     for (i = 0; i < x.length; i++) {
       x[i].classList.remove("red-outline");
     }
+    document.getElementById("submit").disabled = false;
   }, 2000);
 }
 /////////////////////////////////////////////////////////////////////////////////////
