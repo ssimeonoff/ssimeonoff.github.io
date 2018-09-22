@@ -251,6 +251,7 @@
     background: #eee;
     color: #222;
     margin-bottom: 2px;
+    transition: 0.3s;
 }
 
 .btn-generations {
