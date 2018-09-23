@@ -100,7 +100,7 @@
   left: -15px;
   right: -10px;
   bottom: -15px;
-  border: 1px solid black;
+  border: 1px solid rgba(0,0,0,0);
 }
 
 .red-outline {
