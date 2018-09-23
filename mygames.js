@@ -195,13 +195,13 @@ function generateConfirmationText () {
 
   document.getElementById("modalPlayers").innerHTML = players;
   document.getElementById("modalGeneraions").innerHTML = generations;
-  document.getElementById("modalCorporations").innerHTML = corporations.toString().replace(/,/g, " - ");
-  document.getElementById("modalScores").innerHTML = scores.toString().replace(/,/g, " - ");
+  document.getElementById("modalCorporations").innerHTML = corporations.toString().replace(/,/g, "<br>");
+  document.getElementById("modalScores").innerHTML = scores.toString().replace(/,/g, "<br>");
   document.getElementById("modalExpansions").innerHTML = expansions.toString().replace(/,/g, " - ");
   document.getElementById("modalDraft").innerHTML = draft;
   document.getElementById("modalMap").innerHTML = map;
-  document.getElementById("modalMilestones").innerHTML = milestones.toString().replace(/,/g, " - ");
-  document.getElementById("modalAwards").innerHTML = awards.toString().replace(/,/g, " - ");
+  document.getElementById("modalMilestones").innerHTML = milestones.toString().replace(/,/g, "<br>");
+  document.getElementById("modalAwards").innerHTML = awards.toString().replace(/,/g, "<br>");
 }
 
 function closeModal () {

@@ -89,7 +89,6 @@
     padding-bottom: 10px;
     width: 812px;
     position: relative;
-
 }
 
 #buttonsContainer::before {
@@ -104,7 +103,7 @@
 }
 
 .red-outline {
-  box-shadow: 0 0px 1px 1px rgba(0,0,0,.8), 0 0 6px 3px red !important;
+  box-shadow: 0 1px 3px 1px rgba(0,0,0,.8), 0 1px 6px 3px red !important;
 }
 
 .drop-down {
@@ -115,16 +114,16 @@
   font-family: Prototype;
   width: 100%;
   height: 41px;
-  font-size: 16px;
+  font-size: 14px;
   border-radius: 1px;
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
   border-bottom: 2px solid rgb(137,137,137);
   border-right: 2px solid rgb(137,137,137);
-  box-shadow: 0 0px 1px 1px rgba(0,0,0,.8);
+  box-shadow: 0 1px 3px 1px rgba(0,0,0,.8);
   margin-top: 2px;
   padding-left: 8px;
-  transition: font-size 0.3s;
+  transition: font-size 0.3s, box-shadow 0.3s;
 }
 
 .corporation-score {
@@ -143,7 +142,7 @@
   border-left: 2px solid rgb(221,221,221);
   border-bottom: 2px solid rgb(137,137,137);
   border-right: 2px solid rgb(137,137,137);
-  box-shadow: 0 0px 1px 1px rgba(0,0,0,.8);
+  box-shadow: 0 1px 3px 1px rgba(0,0,0,.8);
   margin-top: 2px;
 }
 
@@ -174,9 +173,10 @@
     border-left: 2px solid rgb(221,221,221);
     border-bottom: 2px solid rgb(137,137,137);
     border-right: 2px solid rgb(137,137,137);
-    box-shadow: 0 0px 1px 1px rgba(0,0,0,.8);
+    box-shadow: 0 1px 3px 1px rgba(0,0,0,.8);
     margin-right: -2px;
     margin-bottom: 2px;
+    transition: box-shadow 0.3s;
 }
 
 .btn-gametype {
@@ -192,22 +192,25 @@
     border-left: 2px solid rgb(221,221,221);
     border-bottom: 2px solid rgb(137,137,137);
     border-right: 2px solid rgb(137,137,137);
-    box-shadow: 0 0px 1px 1px rgba(0,0,0,.8);
+    box-shadow: 0 1px 3px 1px rgba(0,0,0,.8);
     background: #eee;
     margin-right: -2px;
     margin-bottom: 2px;
+    transition: box-shadow 0.3s;
 }
 
 .btn-draft {
   height: 49px;
   line-height: 49px;
   width: 40px;
+  transition: box-shadow 0.3s;
 }
 
 .btn-expansions {
   width:86px;
   height: 48px;
   line-height: 48px;
+
 }
 
 .btn-map {
@@ -226,10 +229,11 @@
     border-left: 2px solid rgb(221,221,221);
     border-bottom: 2px solid rgb(137,137,137);
     border-right: 2px solid rgb(137,137,137);
-    box-shadow: 0 0px 1px 1px rgba(0,0,0,.8);
+    box-shadow: 0 1px 3px 1px rgba(0,0,0,.8);
     background: #eee;
     color: #222;
     margin-right: -2px;
+    transition: box-shadow 0.3s;
 }
 
 .btn-awards {
@@ -247,11 +251,11 @@
     border-left: 2px solid rgb(221,221,221);
     border-bottom: 2px solid rgb(137,137,137);
     border-right: 2px solid rgb(137,137,137);
-    box-shadow: 0 0px 1px 1px rgba(0,0,0,.8);
+    box-shadow: 0 1px 3px 1px rgba(0,0,0,.8);
     background: #eee;
     color: #222;
     margin-bottom: 2px;
-    transition: 0.3s;
+    transition: box-shadow 0.3s;
 }
 
 .btn-generations {
@@ -272,9 +276,10 @@
     border-left: 2px solid rgb(221,221,221);
     border-bottom: 2px solid rgb(137,137,137);
     border-right: 2px solid rgb(137,137,137);
-    box-shadow: 0 0px 1px 1px rgba(0,0,0,.8);
+    box-shadow: 0 1px 3px 1px rgba(0,0,0,.8);
     background: #eee;
     padding-left: 32px;
+    transition: box-shadow 0.3s;
 }
 
 #confirm {
@@ -284,18 +289,20 @@
   margin-left: auto;
   margin-right: auto;
   font-family: Prototype;
-  height: 40px;
+  height: 60px;
   border-radius: 1px;
   font-size: 20px;
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
   border-bottom: 2px solid rgb(137,137,137);
   border-right: 2px solid rgb(137,137,137);
-  box-shadow: 0 0px 1px 1px rgba(0,0,0,.8);
+  box-shadow: 0 1px 3px 1px rgba(0,0,0,.8);
   color: #222;
-  background: #ccc;
+  background: #eee;
   letter-spacing: 1px;
-  margin-top: 100px;
+  margin-top: 15px;
+  width: 336px;
+  margin-left: 2px;
 }
 
 .btn-submit {
@@ -310,7 +317,7 @@
   border-left: 2px solid rgb(221,221,221);
   border-bottom: 2px solid rgb(137,137,137);
   border-right: 2px solid rgb(137,137,137);
-  box-shadow: 0 0px 1px 1px rgba(0,0,0,.8);
+  box-shadow: 0 1px 3px 1px rgba(0,0,0,.8);
   width: 805px;
   margin-top: 10px;
   margin-left: 3px;
@@ -325,16 +332,6 @@
   opacity: 0.3;
 }
 
-.fieldset2 {
-  font-family: Prototype;
-  border-radius: 2px;
-  text-align: center;
-  font-weight: normal;
-  line-height: 10px;
-  font-size: 12px;
-  margin-bottom: 2px;
-  color: #222;
-}
 
 .checkbox{
   display: none;
@@ -385,22 +382,40 @@ input::-webkit-inner-spin-button {
   vertical-align: top;
 }
 
+.fieldset2 {
+  font-family: Prototype;
+  border-radius: 2px;
+  text-align: center;
+  font-weight: normal;
+  line-height: 10px;
+  font-size: 12px;
+  margin-bottom: 2px;
+  color: #222;
+  text-shadow: none;
+}
+
 .fieldset-alignment2 {
   display: inline-block;
   margin-top: -4px;
-  color: #cc3333;
+  color: #eee;
+  text-shadow: 0 0 1px black, 0 2px 1px black;
   margin-bottom: 10px;
   height:35px;
-  width: 304px;
   vertical-align: top;
   text-align: center;
   border-bottom: none;
   margin-top: -14px;
   padding-top: 3px;
   line-height: 22px;
-  font-size: 18px;
   padding-bottom: 12px;
+  font-size: 15px;
+  width: 309px;
 }
+
+.highlight {
+  filter: drop-shadow(0 0 3px red);
+}
+
 
 .column {
   display: inline-block;
@@ -426,15 +441,16 @@ input::-webkit-inner-spin-button {
 
 /* Modal Content */
 #modalContent {
-  height: 313px;
   margin-top: -5px;
   text-align: center;
+
 }
 
 .modal-window {
     transform: scale(0);
     transition: 0.3s;
-    background-color: #fefefe;
+    background: #cccccc;
+    background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
     font-family: Prototype;
     line-height: 28px;
     margin-top: -86px;
@@ -446,13 +462,19 @@ input::-webkit-inner-spin-button {
     margin-right:auto;
     border-radius: 3px;
     font-size: 14px;
-    box-shadow: 0 2px 10px 1px black;
+    color: #eee;
+    text-shadow: 0 0 1px black, 0 2px 1px black;
+    box-shadow: 0 0 20px 5px black;
+    border-top: 2px solid rgb(221,221,221);
+    border-left: 2px solid rgb(221,221,221);
+    border-bottom: 2px solid rgb(137,137,137);
+    border-right: 2px solid rgb(137,137,137);
 }
 
 .close {
   position: absolute;
-  margin-left: 340px;
-  margin-top: -30px;
+  margin-left: 343px;
+  margin-top: -33px;
   font-weight: bold;
   font-size: 40px;
   cursor: pointer;

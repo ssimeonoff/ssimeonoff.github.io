@@ -3,3 +3,35 @@
     font-family: Prototype;
     src: url(fonts/Prototype.ttf);
 }
+
+#playerStats {
+    display: grid;
+    position: relative;
+    font-family: Prototype;
+    grid-template-columns: 120px 70px 70px 70px 70px;
+    background: #cccccc;
+    background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
+    border-top: 2px solid rgb(221,221,221);
+    border-left: 2px solid rgb(221,221,221);
+    border-bottom: 2px solid rgb(137,137,137);
+    border-right: 2px solid rgb(137,137,137);
+    border-radius: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    position: relative;
+    text-align: center;
+}
+
+#playerStats > div {
+      background: transparent:
+      text-align: center;
+      font-size: 15px;
+      height: 30px;
+      line-height: 30px;
+      border-radius: 1px;
+      border-top: 2px solid rgb(221,221,221);
+      border-left: 2px solid rgb(221,221,221);
+      border-bottom: 2px solid rgb(137,137,137);
+      border-right: 2px solid rgb(137,137,137);
+}
