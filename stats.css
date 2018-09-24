@@ -60,8 +60,9 @@
       border-left: 2px solid rgb(221,221,221);
       border-bottom: 2px solid rgb(137,137,137);
       border-right: 2px solid rgb(137,137,137);
-      color:white;
-      text-shadow: 0 0 1px black, 0 2px 1px black;
+      color:black;
+      font-weight: normal;
+      text-shadow: none;
 }
 
 .header {
@@ -120,7 +121,8 @@
 }
 
 .link:hover {
-  filter: brightness(120%);
+  background: #ccc;
+  box-shadow: inset 0 0 0 1px #aaa;
 }
 
 /* Corporations CSS */
@@ -160,7 +162,7 @@
   text-align: center;
   margin-left: 5px;
   border:2px solid black;
-  margin-top: 0px;
+  margin-top: 2px;
   padding-top: 5px;
   padding-bottom: 5px;
   background: #e6e600;
@@ -185,4 +187,29 @@
   -ms-transform:scale(1.5,1); /* IE 9 */
   -o-transform:scale(1.5,1); /* Opera */
   transform:scale(1.5,1); /* W3C */
+}
+
+.thorgate {
+  font-size: 18px;
+  letter-spacing: 2px;
+  padding: 8px;
+  margin-top: -2px;
+  margin-left: 2px;
+  font-family: Arial;
+  font-weight: bold;
+  text-shadow: 6px 3px 5px grey;
+}
+
+.united-nations {
+  font-size: 14px;
+  width: 110px;
+  color: white;
+  margin-left: 8px;
+  margin-top: 0px;
+  padding: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+  box-shadow: 0 0 0px 1px #888, 3px 3px 6px grey;
+  background: #3b9ae3;
 }
