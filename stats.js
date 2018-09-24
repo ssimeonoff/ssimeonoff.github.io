@@ -57,7 +57,7 @@ function generateGameStats (players, corporationName) {
     }
   totalGames = playedGames.length;
   totalWins = 0;
-
+  sum = 0;
   for (i = 0; i < totalGames; i++) {
     //checking if that corporation is the winner
     var corpsArray = playedGames[i]["corporations"];
@@ -67,13 +67,19 @@ function generateGameStats (players, corporationName) {
     winnerIndex = indexOfMax(scoresArray);
     //counting a win if corporation and winning score indexes match
     if (winnerIndex == corpIndex) {totalWins++;}
+    //calculating the average score
+     if (parseInt(scoresArray[corpIndex])>0) {
+     sum += parseInt(scoresArray[corpIndex]);
+   }
   }
+  //calculating the average score
+  avg = sum/totalGames;
 
   if (totalWins==0 && totalGames==0) {
     //capturing division by 0
-    return "<div class='ratio'>" + totalWins + "/" + totalGames + "</div>" + 0 +"<span style='font-size:12px;'>%</span>"}
+    return "<div class='ratio'>" + totalWins + "/" + totalGames + "</div><div>" + 0 +"<span style='font-size:12px;'>P</span>  " + 0 +"<span style='font-size:12px;'>%</span></div>"}
   else {
-    return  "<div class='ratio'>" + totalWins + "/" + totalGames + "</div>" + Math.round(totalWins*100/totalGames) +"<span style='font-size:12px;'>%</span>";}
+    return  "<div class='ratio'>" + totalWins + "/" + totalGames + "</div><div>"+ Math.round(avg) +"<span style='font-size:12px;'>P</span> " + Math.round(totalWins*100/totalGames) +"<span style='font-size:12px;'>%</span></div>";}
 }
 
 function indexOfMax(arr) {
