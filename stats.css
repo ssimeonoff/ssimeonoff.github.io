@@ -67,10 +67,10 @@
 
 .header {
   color:#444;
-  font-size: 12px;
+  font-size: 14px;
   background: #ccc;
-  height: 20px;
-  line-height: 23px;
+  height: 25px;
+  line-height: 27px;
 }
 
 .ratio {
@@ -190,13 +190,12 @@
 }
 
 .thorgate {
-  font-size: 18px;
+  font-size: 19px;
   letter-spacing: 2px;
   padding: 8px;
   margin-top: -2px;
   margin-left: 2px;
   font-family: Arial;
-  font-weight: bold;
   text-shadow: 6px 3px 5px grey;
 }
 
@@ -212,4 +211,83 @@
   text-align: center;
   box-shadow: 0 0 0px 1px #888, 3px 3px 6px grey;
   background: #3b9ae3;
+}
+
+
+
+
+
+
+
+
+
+/* expansion icons */
+
+.icon:after {
+        position: absolute;
+        border: 1px solid black;
+        font-size: 11px;
+        line-height: 15px;
+        width: 16px;
+        height:16px;
+        text-align: center;
+        color: white;
+        border-radius: 50%;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.4);
+        content: "";
+        background-size: 10px 10px !important;
+        background-position: bottom 4px right 3px !important;
+        background-repeat: no-repeat !important;
+        margin-left: -66px;
+        margin-top: 4px;
+  }
+
+.corporate-era-icon:after {
+  background-color: #cc3333;
+  background-image: url("images/triangle16.png");
+}
+
+.venus-icon:after {
+  background: rgb(84,150,201);
+  background-image: url("images/triangle16.png");
+  transform: rotate(180deg);
+}
+
+.prelude-icon:after {
+  background: rgb(235,118,171);
+  background-image: url("images/triangle16.png");
+  transform: rotate(-90deg);
+}
+
+.colonies-icon:after {
+  content: "\25b2";
+  color: #444444;
+  border: 1px solid black;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 13px;
+
+}
+
+.promo-icon:after {
+    background: white;
+    border: 5px solid #444444;
+    width: 8px;
+    height: 8px;
+    color: white;
+    content: "\0020";
+}
+
+.fanmade-icon:after {
+    background: yellow;
+    border: 2px solid #444;
+    width: 14px;
+    height: 14px;
+    color: #444;
+    content: "+";
+    font-size: 26px;
+    line-height: 14px;
+    transform: rotate(45deg);
+    font-weight: bold;
+
 }
