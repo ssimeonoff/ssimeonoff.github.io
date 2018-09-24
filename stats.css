@@ -4,19 +4,21 @@
     src: url(fonts/Prototype.ttf);
 }
 
-#playerStats {
+.playerStats {
     display: grid;
     position: relative;
     font-family: Prototype;
     grid-template-columns: 140px 80px 80px 80px 80px;
     background: #cccccc;
     background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
-    border-radius: 2px;
+    border-radius: 1px;
     margin-left: auto;
     margin-right: auto;
     width: 460px;
     position: relative;
     text-align: center;
+    border: 3px solid #ccc;
+    margin-bottom: 10px;
 }
 
 .grid-cell {
@@ -35,8 +37,8 @@
 .grid-cell-stats {
       padding-left: 5px;
       font-size: 16px;
-      height: 40px;
-      line-height: 50px;
+      height: 65px;
+      line-height: 65px;
       border-radius: 1px;
       border-top: 2px solid rgb(221,221,221);
       border-left: 2px solid rgb(221,221,221);
@@ -50,8 +52,9 @@
       text-align: right;
       padding-right: 5px;
       font-size: 15px;
-      height: 40px;
-      line-height: 50px;
+      height: 60px;
+      padding-top: 5px;
+      line-height: 18px;
       border-radius: 1px;
       border-top: 2px solid rgb(221,221,221);
       border-left: 2px solid rgb(221,221,221);
@@ -61,21 +64,52 @@
       text-shadow: 0 0 1px black, 0 2px 1px black;
 }
 
-
-.ratio {
-  display: inline-block;
-  position: absolute;
-  font-size: 12px;
-  width: 30px;
-  color: #444;
-  margin-top: -16px;
-  margin-left: -0px;
-  text-align: right;
-  text-shadow: none;
-}
-
 .header {
   color:#444;
   font-size: 12px;
   background: #ccc;
+  height: 20px;
+  line-height: 23px;
+}
+
+.ratio {
+  font-size: 13px;
+  width: 30px;
+  color: #444;
+  margin-left: 34px;
+  margin-top: 20px;
+  text-align: right;
+  text-shadow: none;
+}
+
+.winrate {
+  display: inline-block;
+  position: absolute;
+  width: 40px;
+  text-align: left;
+  font-size: 18px;
+  margin-top: 18px;
+  margin-left: -35px;
+
+}
+
+.points {
+  display: inline-block;
+  position: absolute;
+  margin-top: 5px;
+  margin-left: -37px;
+  font-size: 18px;
+  height: 27px;
+  width: 62px;
+  line-height: 27px;
+  background-color: rgb(205,162, 130);
+  background: linear-gradient(#cc8b00, rgb(128, 87, 0),rgb(128, 87, 0));
+  text-shadow: 0 0 5px darkorange;
+  color: black;
+  border-radius: 1px;
+  border-top: 2px solid rgb(221,221,221);
+  border-left: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
+  box-shadow: 0 0 1px 1px #444;
 }

@@ -231,7 +231,6 @@ function limitAwards() {
 
 function disableSelectedCorporation() {
   //disabling corporations options when that corporation is alreaydy chosen
-
   //enabling all disabled options
   disabled = document.querySelectorAll("option:disabled");
   for (i = 0; i < disabled.length; i++) {
