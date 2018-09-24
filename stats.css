@@ -49,7 +49,7 @@
 }
 
 .grid-cell-corporation {
-      text-align: right;
+      text-align: center;
       padding-right: 5px;
       font-size: 15px;
       height: 60px;
@@ -112,4 +112,68 @@
   border-bottom: 2px solid rgb(137,137,137);
   border-right: 2px solid rgb(137,137,137);
   box-shadow: 0 0 1px 1px #444;
+}
+
+/* Corporations CSS */
+.credicor {
+  text-align: center;
+      font-size: 22px;
+      color: white;
+      font-family: 'Times New Roman';
+      font-weight: normal;
+      line-height: 40px;
+      border: 2px solid purple;
+      padding-left: 5px;
+      /* padding-bottom: 5px; */
+      padding-right: 20px;
+      margin-left: 7px;
+      box-shadow: 6px 6px 10px grey;
+      text-shadow: -1px 0 purple, 0 1px purple, 1px 0 purple, 0 -1px purple, 6px 6px 10px grey;
+}
+
+.ecoline {
+  font-family: 'Arial';
+  font-weight:bold;
+  margin-top: 3px;
+  margin-left: 8px;
+  font-size:25px;
+  letter-spacing: 2px;
+  font-weight:normal;
+  color:rgb(0,180,0);
+  text-shadow: -1px 0 #404040, 0 1px #404040, 1px 0 #404040, 0 -1px #404040, 5px 5px 5px grey;
+}
+
+.helion {
+  font-family: "Arial";
+  color:black;
+  font-size:28px;
+  font-weight: bold;
+  text-align: center;
+  margin-left: 5px;
+  border:2px solid black;
+  margin-top: 0px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background: #e6e600;
+  box-shadow: 6px 6px 6px grey;
+  border-radius:2px;
+  text-shadow: none;
+}
+
+.mining-guild {
+  font-weight:normal;
+  font-family: "Arial";
+  padding: 7px;
+  font-size:20px;
+  line-height: 20px;
+  letter-spacing: 1px;
+  margin-left:3px;
+  margin-top:-5px;
+  color:#c9380e;
+  text-shadow: -1px 0 #333333, 0 1px #333333, 1px 0 #333333, 0 -1px #333333, 2px 2px 2px  black;
+  -webkit-transform:scale(1.5,1); /* Safari and Chrome */
+  -moz-transform:scale(1.5,1); /* Firefox */
+  -ms-transform:scale(1.5,1); /* IE 9 */
+  -o-transform:scale(1.5,1); /* Opera */
+  transform:scale(1.5,1); /* W3C */
 }
