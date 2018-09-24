@@ -108,6 +108,8 @@
 
 .drop-down {
   -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
   cursor: pointer;
   outline: none;
   background: #eee;
@@ -128,6 +130,8 @@
 
 .corporation-score {
   -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
   cursor: pointer;
   background: #eee;
   outline: none;
@@ -260,6 +264,8 @@
 
 .btn-generations {
     -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
     display: inline-block;
     font-family: Prototype;
     outline: none;
