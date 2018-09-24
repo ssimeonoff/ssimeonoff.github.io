@@ -73,3 +73,9 @@
   text-align: right;
   text-shadow: none;
 }
+
+.header {
+  color:#444;
+  font-size: 12px;
+  background: #ccc;
+}

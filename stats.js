@@ -17,10 +17,40 @@ gamesRef.on('value', (snap) => {
 
 
 //push data to the html
-document.getElementById("games2p-aphrodite").innerHTML = generateGameStats(2, "APHRODITE");
-document.getElementById("games3p-aphrodite").innerHTML = generateGameStats(3, "APHRODITE");
-document.getElementById("games4p-aphrodite").innerHTML = generateGameStats(4, "APHRODITE");
-document.getElementById("games5p-aphrodite").innerHTML = generateGameStats(5, "APHRODITE");
+document.getElementById("games2p-credicor").innerHTML = generateGameStats(2, "CREDICOR");
+document.getElementById("games3p-credicor").innerHTML = generateGameStats(3, "CREDICOR");
+document.getElementById("games4p-credicor").innerHTML = generateGameStats(4, "CREDICOR");
+document.getElementById("games5p-credicor").innerHTML = generateGameStats(5, "CREDICOR");
+
+document.getElementById("games2p-ecoline").innerHTML = generateGameStats(2, "ECOLINE");
+document.getElementById("games3p-ecoline").innerHTML = generateGameStats(3, "ECOLINE");
+document.getElementById("games4p-ecoline").innerHTML = generateGameStats(4, "ECOLINE");
+document.getElementById("games5p-ecoline").innerHTML = generateGameStats(5, "ECOLINE");
+
+document.getElementById("games2p-helion").innerHTML = generateGameStats(2, "HELION");
+document.getElementById("games3p-helion").innerHTML = generateGameStats(3, "HELION");
+document.getElementById("games4p-helion").innerHTML = generateGameStats(4, "HELION");
+document.getElementById("games5p-helion").innerHTML = generateGameStats(5, "HELION");
+
+document.getElementById("games2p-mining").innerHTML = generateGameStats(2, "MINING GUILD");
+document.getElementById("games3p-mining").innerHTML = generateGameStats(3, "MINING GUILD");
+document.getElementById("games4p-mining").innerHTML = generateGameStats(4, "MINING GUILD");
+document.getElementById("games5p-mining").innerHTML = generateGameStats(5, "MINING GUILD");
+
+document.getElementById("games2p-interplan").innerHTML = generateGameStats(2, "INTERPLAN. CINEMATICS");
+document.getElementById("games3p-interplan").innerHTML = generateGameStats(3, "INTERPLAN. CINEMATICS");
+document.getElementById("games4p-interplan").innerHTML = generateGameStats(4, "INTERPLAN. CINEMATICS");
+document.getElementById("games5p-interplan").innerHTML = generateGameStats(5, "INTERPLAN. CINEMATICS");
+
+document.getElementById("games2p-teractor").innerHTML = generateGameStats(2, "TERACTOR");
+document.getElementById("games3p-teractor").innerHTML = generateGameStats(3, "TERACTOR");
+document.getElementById("games4p-teractor").innerHTML = generateGameStats(4, "TERACTOR");
+document.getElementById("games5p-teractor").innerHTML = generateGameStats(5, "TERACTOR");
+
+document.getElementById("games2p-saturn").innerHTML = generateGameStats(2, "SATURN SYSTEMS");
+document.getElementById("games3p-saturn").innerHTML = generateGameStats(3, "SATURN SYSTEMS");
+document.getElementById("games4p-saturn").innerHTML = generateGameStats(4, "SATURN SYSTEMS");
+document.getElementById("games5p-saturn").innerHTML = generateGameStats(5, "SATURN SYSTEMS");
 
 document.getElementById("games2p-arcadian").innerHTML = generateGameStats(2, "ARCADIAN COMMUNITIES");
 document.getElementById("games3p-arcadian").innerHTML = generateGameStats(3, "ARCADIAN COMMUNITIES");
