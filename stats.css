@@ -114,6 +114,16 @@
   box-shadow: 0 0 1px 1px #444;
 }
 
+.link {
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.link:hover {
+  filter: brightness(120%);
+}
+
 /* Corporations CSS */
 .credicor {
   text-align: center;
@@ -161,7 +171,7 @@
 }
 
 .mining-guild {
-  font-weight:normal;
+  font-weight:bold;
   font-family: "Arial";
   padding: 7px;
   font-size:20px;
