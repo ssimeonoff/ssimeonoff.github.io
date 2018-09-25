@@ -205,7 +205,9 @@
 }
 
 .united-nations {
-  font-size: 14px;
+  font-size: 13px;
+  font-family: Arial;
+  font-weight: bold;
   width: 110px;
   color: white;
   margin-left: 8px;
@@ -214,7 +216,7 @@
   padding-top: 5px;
   padding-bottom: 5px;
   text-align: center;
-  box-shadow: 0 0 0px 1px #888, 3px 3px 6px grey;
+  box-shadow: 3px 3px 6px grey;
   background: #3b9ae3;
 }
 
