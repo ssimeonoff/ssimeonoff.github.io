@@ -9,9 +9,9 @@
     position: relative;
     font-family: Prototype;
     grid-template-columns: 140px 80px 80px 80px 80px;
-    background: #cccccc;
+    background: #ccc;
     background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
-    border-radius: 1px;
+    border-radius: 2px;
     margin-left: auto;
     margin-right: auto;
     width: 460px;
@@ -23,15 +23,16 @@
 
 .grid-cell {
       text-align: center;
-      font-size: 14px;
+      font-size: 16px;
       color: #444;
-      height: 20px;
-      line-height: 20px;
+      height: 30px;
+      line-height: 30px;
       border-radius: 1px;
       border-top: 2px solid rgb(221,221,221);
       border-left: 2px solid rgb(221,221,221);
       border-bottom: 2px solid rgb(137,137,137);
       border-right: 2px solid rgb(137,137,137);
+      background: #eee;
 }
 
 .grid-cell-stats {
@@ -67,10 +68,15 @@
 
 .header {
   color:#444;
-  font-size: 14px;
+  font-size: 16px;
   background: #ccc;
   height: 25px;
   line-height: 27px;
+}
+
+.header-section {
+  text-align: left;
+  padding-left: 35px;
 }
 
 .ratio {
@@ -225,7 +231,7 @@
 
 .icon:after {
         position: absolute;
-        border: 1px solid black;
+        border: 1px solid #444;
         font-size: 11px;
         line-height: 15px;
         width: 16px;
@@ -233,13 +239,13 @@
         text-align: center;
         color: white;
         border-radius: 50%;
-        box-shadow: 0 0 0 1px rgba(0,0,0,0.4);
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.7);
         content: "";
         background-size: 10px 10px !important;
         background-position: bottom 4px right 3px !important;
         background-repeat: no-repeat !important;
-        margin-left: -66px;
-        margin-top: 4px;
+        margin-left: -26px;
+        margin-top: 5px;
   }
 
 .corporate-era-icon:after {
@@ -279,15 +285,13 @@
 }
 
 .fanmade-icon:after {
-    background: yellow;
-    border: 2px solid #444;
+    background: #444;
+    border: 2px solid #eee;
     width: 14px;
     height: 14px;
-    color: #444;
-    content: "+";
-    font-size: 26px;
+    color: #eee;
+    content: "F";
+    font-size: 12px;
     line-height: 14px;
-    transform: rotate(45deg);
-    font-weight: bold;
-
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.8), 0 0 0 1px rgba(0,0,0,0.4);
 }
