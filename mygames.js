@@ -243,8 +243,10 @@ function disableSelectedCorporation() {
   for (i = 0; i < x.length; i++) {
     if (x[i].value.length > 1) {
       var y = document.querySelectorAll("option[value='"+ x[i].value +"']");
-      for (j = 0; j < y.length; j++) {
-        y[j].disabled =true;
+      if (x[i].value != "BEGINNER") {
+        for (j = 0; j < y.length; j++) {
+          y[j].disabled =true;
+        }
       }
     }
   }
