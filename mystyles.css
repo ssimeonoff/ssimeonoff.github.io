@@ -21,7 +21,7 @@
     border-bottom: 2px solid rgb(137,137,137);
     border-right: 2px solid rgb(137,137,137);
     border-radius: 20px;
-    box-shadow: 0 0 30px 15px black;
+    box-shadow: 0 0 10px 5px black;
     transition: transform 200ms ease-in-out;
     will-change: transform;
 }
@@ -1638,7 +1638,7 @@ border-right: 2px solid rgb(137,137,137);
     height: 330px;
     margin-top: 40px;
     transition: height 0.2s;
-    box-shadow: 0 0 30px 15px black;
+    box-shadow: 0 0 10px 5px black;
 }
 
 #titleContainer {

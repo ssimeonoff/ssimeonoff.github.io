@@ -618,8 +618,11 @@ function selectCard (clickedCard) {
 
 function zoomSingleCard() {
   if (cards.length == 1) {
+    document.getElementById(cards[0]).style.transform = "scale(0)";
+    document.getElementById(cards[0]).style.transition = "0.3s";
     document.getElementById(cards[0]).style.marginLeft = "32%";
     document.getElementById(cards[0]).style.marginTop = "200px";
-    document.getElementById(cards[0]).style.transform = "scale(2)";
+    setTimeout(function() {document.getElementById(cards[0]).style.transform = "scale(2)";}, 300);
+
   }
 }
