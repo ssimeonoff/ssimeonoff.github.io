@@ -248,11 +248,69 @@
   margin-left: 3px;
 }
 
+.aphrodite {
+  font-size:20px;
+  font-family: Arial;
+  color: orange;
+  margin-left:4px;
+  font-weight:bold;
+  margin-top:6px;
+  text-shadow: 0 0 1px black, 6px 3px 5px  grey;
+}
 
+.celestic {
+  font-family: Arial;
+  font-size:20px;
+  font-weight: bold;
+  margin-top:5px;
+  box-shadow:6px 6px 6px grey;
+  margin-left:9px;
+  width:116px;
+}
 
+.manutech {
+  font-weight:bold;
+  font-family: Arial;
+  padding: 8px;
+  font-size:21px;
+  color: #e63900;
+  margin-top:-3px;
+  margin-left: 0px;
+  text-shadow: 6px 3px 5px  grey;
+}
 
+.morning-star {
+  font-family: Arial;
+  font-size:16px;
+  font-weight: bold;
+  color:white;
+  margin-left:4px;
+  margin-top: 5px;
+  line-height: 17px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, 6px 3px 5px  grey;
+}
 
+.viron {
+  font-size:30px;
+  font-weight: bold;
+  margin-top: 7px;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white, 6px 3px 5px  grey;
+}
 
+.point-luna {
+  style="font-size:22px;
+  font-family: Prototype;
+  font-weight: normal;
+  display:inline-block;
+  margin-top: 6px;
+  text-decoration: underline;
+  margin-left: 7px;
+  -webkit-transform:scale(1.5,1); /* Safari and Chrome */
+  -moz-transform:scale(1.5,1); /* Firefox */
+  -ms-transform:scale(1.5,1); /* IE 9 */
+  -o-transform:scale(1.5,1); /* Opera */
+  transform:scale(1.5,1); /* W3C */
+}
 
 
 

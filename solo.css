@@ -361,7 +361,8 @@
 }
 
 .viron {
-  font-size:46px;
+  font-size:42px;
+  font-family: Prototype;
   font-weight: bold;
   margin-left:25px;
   margin-top: 7px;
@@ -384,7 +385,7 @@
   margin-top:15px;
   box-shadow:6px 6px 6px grey;
   margin-left:25px;
-  width:138px;
+  width:128px;
 }
 
 .arcadian-communities {
