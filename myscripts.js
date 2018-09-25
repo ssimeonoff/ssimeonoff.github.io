@@ -7,7 +7,7 @@ var selectedCards = "";
 var selectedCardsAmount = 0;
 
 //parse the url
-var urlString = window.location.href;
+urlString = window.location.href;
 cards = parseURLParams(urlString);
 
 //display all card or only few ones if pointed
@@ -617,13 +617,9 @@ function selectCard (clickedCard) {
 }
 
 function zoomSingleCard() {
-  cards= parseURLParams(urlString);
   if (cards.length == 1) {
     document.getElementById(cards[0]).style.marginLeft = "32%";
     document.getElementById(cards[0]).style.marginTop = "200px";
     document.getElementById(cards[0]).style.transform = "scale(2)";
-
-
-    console.log("hi");
   }
 }
