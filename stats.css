@@ -67,11 +67,10 @@
 }
 
 .header {
-  color:#444;
-  font-size: 16px;
-  background: #ccc;
-  height: 25px;
-  line-height: 27px;
+  border-left: none;
+  border-right:none;
+  color: white;
+  text-shadow: 0 0 1px black, 0 3px 1px black;
 }
 
 .header-section {
