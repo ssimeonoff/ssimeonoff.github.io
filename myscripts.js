@@ -12,7 +12,9 @@ cards = parseURLParams(urlString);
 
 //display all card or only few ones if pointed
 if (cards == "ALL") {showAll();}
-else {displayCardsOnly(cards);}
+else {
+  displayCardsOnly(cards);
+  zoomSingleCard();}
 
 function showAll() {
   var x, i;
@@ -611,5 +613,17 @@ function selectCard (clickedCard) {
       $("#btn-selectedCards").fadeOut(300);
     }
 
+  }
+}
+
+function zoomSingleCard() {
+  cards= parseURLParams(urlString);
+  if (cards.length == 1) {
+    document.getElementById(cards[0]).style.marginLeft = "32%";
+    document.getElementById(cards[0]).style.marginTop = "200px";
+    document.getElementById(cards[0]).style.transform = "scale(2)";
+
+
+    console.log("hi");
   }
 }
