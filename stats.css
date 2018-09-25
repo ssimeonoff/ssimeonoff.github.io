@@ -168,8 +168,8 @@
   margin-left: 5px;
   border:2px solid black;
   margin-top: 2px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 9px;
+  padding-bottom: 9px;
   background: #e6e600;
   box-shadow: 6px 6px 6px grey;
   border-radius:2px;
@@ -218,6 +218,34 @@
   text-align: center;
   box-shadow: 3px 3px 6px grey;
   background: #3b9ae3;
+}
+
+.teractor {
+  padding: 8px;
+  margin-top:0px;
+  color: orangered;
+  font-size:22px;
+  font-family: 'Times New Roman';
+  font-weight:normal;
+  text-shadow: -1px 0 #333333, 0 1px #333333, 1px 0 #333333,0px -1px #333333, 6px 3px 5px  grey;
+}
+
+.saturn-systems {
+  font-family: Arial;
+  font-size:11px;
+  color:white;
+  line-height:25px;
+  background: #32004d;
+  padding-top:2px;
+  padding-bottom:2px;
+  width:120px;
+  text-align: center;
+  border-radius:50%;
+  font-weight:normal;
+  border:2px solid white;
+  box-shadow:  6px 6px 5px grey;
+  margin-top: 0px;
+  margin-left: 3px;
 }
 
 

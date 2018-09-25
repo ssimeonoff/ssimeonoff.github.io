@@ -622,7 +622,7 @@ function zoomSingleCard() {
     document.getElementById(cards[0]).style.transition = "0.3s";
     document.getElementById(cards[0]).style.marginLeft = "32%";
     document.getElementById(cards[0]).style.marginTop = "200px";
-    setTimeout(function() {document.getElementById(cards[0]).style.transform = "scale(2)";}, 300);
+    setTimeout(function() {document.getElementById(cards[0]).style.transform = "scale(2)";}, 500);
 
   }
 }
