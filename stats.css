@@ -4,14 +4,19 @@
     src: url(fonts/Prototype.ttf);
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 520px) {
     .layout {
       width: 460px !important;
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+    .playerStats {
+      width: 100%;
     }
 }
 
 .layout {
-  width: 1000px;
+  width: 1500px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -28,6 +33,10 @@
     position: relative;
     text-align: center;
     margin-bottom: 10px;
+    border-top: 2px solid rgb(221,221,221);
+    border-left: 2px solid rgb(221,221,221);
+    border-bottom: 2px solid rgb(137,137,137);
+    border-right: 2px solid rgb(137,137,137);
 }
 
 .grid-cell {
@@ -78,8 +87,16 @@
 .header {
   border-left: none;
   border-right:none;
+  background: transparent;
   color: white;
   text-shadow: 0 0 1px black, 0 3px 1px black;
+}
+
+.header-big {
+  color: white;
+  background: transparent;
+  text-shadow: 0 0 1px black, 0 3px 1px black;
+  width: 456px;
 }
 
 .header-section {
@@ -283,7 +300,7 @@
   margin-top:5px;
   box-shadow:6px 6px 6px grey;
   margin-left:9px;
-  width:116px;
+  width:110px;
 }
 
 .manutech {
@@ -328,6 +345,35 @@
   -ms-transform:scale(1.5,1); /* IE 9 */
   -o-transform:scale(1.5,1); /* Opera */
   transform:scale(1.5,1); /* W3C */
+}
+
+.robinson {
+  font-family: Prototype;
+  margin-left:10px;
+  font-size: 14px;
+  line-height: 12px;
+  width: 113px;
+  padding-left:4px;
+  text-align: center;
+  background:white;
+  font-weight: normal;
+}
+
+.valley {
+  display:inline-block;
+  margin-left:10px;
+  margin-top: 3px;
+  font-size:18px;
+  text-shadow: 2px 2px #ccc;
+}
+.valley-background {
+  color:rgb(2,125,195);
+  margin-left:20px;
+  background:linear-gradient(to right,rgb(2,125,195) 10%,white,white,white, white,white,white, white);
+  box-shadow:3px 3px 10px 1px rgb(58,58,58);
+  width:90px;
+  line-height:20px;
+  border-radius:8px 0px 0px 8px;
 }
 
 
