@@ -87,10 +87,8 @@ function displayVenusAwards () {
 }
 
 function changeColours (id) {
-  console.log(id);
   document.getElementById(id).classList.add("change-colours");
   document.getElementById(id).classList.remove("not-filled");
-  console.log("hi");
 }
 
 function changeColours2 (id) {
