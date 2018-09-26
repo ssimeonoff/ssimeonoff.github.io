@@ -4,9 +4,9 @@
     src: url(fonts/Prototype.ttf);
 }
 
-@media screen and (max-width: 490fpx) {
+@media screen and (max-width: 480px) {
     .layout {
-      width: 470px !important;
+      width: 460px !important;
     }
 }
 
