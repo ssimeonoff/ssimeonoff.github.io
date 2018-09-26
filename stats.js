@@ -14,7 +14,7 @@ gamesRef.on('value', (snap) => {
   const val = snap.val()
   games = Object.keys(val)
     .map(key => val[key])
-
+///////////////////////////////////////////////////////////////////////////////
 
 //push data to the html
   pushTheData();

@@ -64,8 +64,8 @@
       border-left: 2px solid rgb(221,221,221);
       border-bottom: 2px solid rgb(137,137,137);
       border-right: 2px solid rgb(137,137,137);
-      color:white;
       text-shadow: 0 0 1px black, 0 2px 1px black;
+      transition: 0.3s;
 }
 
 .grid-cell-corporation {
@@ -108,7 +108,7 @@
 .ratio {
   font-size: 13px;
   width: 30px;
-  color: #444;
+  color: #222;
   margin-left: 34px;
   margin-top: 20px;
   text-align: right;
@@ -123,7 +123,8 @@
   font-size: 18px;
   margin-top: 18px;
   margin-left: -35px;
-
+  text-shadow: none;
+  color: #222;
 }
 
 .points {
