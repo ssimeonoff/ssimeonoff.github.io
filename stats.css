@@ -4,6 +4,18 @@
     src: url(fonts/Prototype.ttf);
 }
 
+@media screen and (max-width: 490fpx) {
+    .layout {
+      width: 470px !important;
+    }
+}
+
+.layout {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .playerStats {
     display: grid;
     position: relative;
@@ -12,12 +24,9 @@
     background: #ccc;
     background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
     border-radius: 2px;
-    margin-left: auto;
-    margin-right: auto;
     width: 460px;
     position: relative;
     text-align: center;
-    border: 3px solid #ccc;
     margin-bottom: 10px;
 }
 
@@ -129,6 +138,15 @@
   background: #ccc;
   box-shadow: inset 0 0 0 1px #aaa;
 }
+
+
+.column {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
 
 /* Corporations CSS */
 .credicor {
