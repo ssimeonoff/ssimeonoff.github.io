@@ -16,13 +16,16 @@ gamesRef.on('value', (snap) => {
     .map(key => val[key])
 ///////////////////////////////////////////////////////////////////////////////
 
-//push data to the html
+//push data to the Players stats
   pushTheData();
+//push the data to general stats
+  pushGeneralStats();
+
 });
 
 function generateGameStats (players, corporationName) {
   //returning html formatted text
-  console.log("hi");
+
   //filtering the games per players' count
   gamesPerPlayers = games.filter(function(el) {
     return el.players == players
@@ -40,7 +43,7 @@ function generateGameStats (players, corporationName) {
         playedGames.push(gamesPerPlayers[i]);
         }
       }
-    }
+  }
   totalGames = playedGames.length;
   totalWins = 0;
   sum = 0;
@@ -237,4 +240,36 @@ function pushTheData() {
   document.getElementById("games4p-kuiper").innerHTML = generateGameStats(4, "KUIPER BELT COOP.");
   document.getElementById("games5p-kuiper").innerHTML = generateGameStats(5, "KUIPER BELT COOP.");
 
+}
+
+function pushGeneralStats() {
+  //total games
+  document.getElementById("total_games").innerHTML =games.length;
+
+  //draft games
+  draftGames = games.filter(function(el) {
+    return el.draft == "YES"
+  });
+  document.getElementById("draft_games").innerHTML = Math.round(draftGames.length*100/games.length) + "%" ;
+  document.getElementById("corporate_games").innerHTML =  Math.round(checkForExpansion("CORPORATE")*100/games.length) + "%"
+  document.getElementById("venus_games").innerHTML =  Math.round(checkForExpansion("VENUS")*100/games.length) + "%"
+  document.getElementById("prelude_games").innerHTML =  Math.round(checkForExpansion("PRELUDE")*100/games.length) + "%"
+
+}
+
+function checkForExpansion (expansion) {
+  //calculated played and won games per corporation
+  var playedExpansion = 0
+  for (i = 0; i < games.length; i++) {
+    var expansionsArray = games[i]["expansions"]; //getting the expansions array
+    if (expansionsArray == undefined) {} //to chatch firebase errors if the array is undefined
+    else {
+      if (expansionsArray.indexOf(expansion) > -1) {
+        //if the expansion is present in the corporatins' arrayAwards
+        //add +1 to the counter
+        playedExpansion++;
+        }
+      }
+  }
+  return playedExpansion
 }

@@ -40,10 +40,29 @@
     border-right: 2px solid rgb(137,137,137);
 }
 
+.generalStats {
+    display: grid;
+    grid-template-columns: 140px 80px 80px 80px 80px;
+    position: relative;
+    font-family: Prototype;
+    background: #ccc;
+    color: #222;
+    background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
+    border-radius: 2px;
+    width: 460px;
+    position: relative;
+    text-align: center;
+    margin-bottom: 10px;
+    border-top: 2px solid rgb(221,221,221);
+    border-left: 2px solid rgb(221,221,221);
+    border-bottom: 2px solid rgb(137,137,137);
+    border-right: 2px solid rgb(137,137,137);
+}
+
 .grid-cell {
       text-align: center;
       font-size: 16px;
-      color: #444;
+      color: #222;
       height: 30px;
       line-height: 30px;
       border-radius: 1px;
@@ -64,8 +83,13 @@
       border-left: 2px solid rgb(221,221,221);
       border-bottom: 2px solid rgb(137,137,137);
       border-right: 2px solid rgb(137,137,137);
-      text-shadow: 0 0 1px black, 0 2px 1px black;
       transition: 0.3s;
+}
+
+.stats-general {
+  line-height: 25px;
+  padding-left: 0px;
+  font-size: 16px;
 }
 
 .grid-cell-corporation {
@@ -378,13 +402,72 @@
   border-radius:8px 0px 0px 8px;
 }
 
+.arklight {
+ font-size: 17px;
+ font-weight: bold;
+ font-family: Prototype;
+ margin-left: 5px;
+ letter-spacing: 1px;
+ background: linear-gradient(to right,#000089,#23238d, lightblue, white);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ -webkit-transform:scale(1.5,1); /* Safari and Chrome */
+ -moz-transform:scale(1.5,1); /* Firefox */
+ -ms-transform:scale(1.5,1); /* IE 9 */
+ -o-transform:scale(1.5,1); /* Opera */
+ transform:scale(1.5,1); /* W3C */
+ margin-top: 3px;
+ margin-bottom: -12px;
+}
+
+.arcadian {
+  font-size:16px;
+  padding-left:3px;
+  width:110px;
+  background:#eeeeee;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 3px 3px 3px grey;
+  margin-left:10px;
+  margin-top: 2px;
+  border-radius:5px;
+  border-top: 2px solid rgb(221,221,221);
+  border-left: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
+}
+
+.splice {
+  font-family: Arial;
+   margin-left: 13px;
+   margin-top:2px;
+   font-size:26px;
+   line-height: 31px;
+   font-weight:bold;
+   width:109px;
+   background:#eeeeee;box-shadow: 0 0 0 1px rgba(0,0,0,0.2), 3px 3px 3px grey;
+}
+
+.recyclon {
+  font-family: Prototype;
+  font-weight: normal;
+  width: 90px;
+  margin-left: 12px;
+  font-size:18px;
+  margin-top:5px;
+  margin-bottom:5px;
+  border-radius:25px;
+  padding:10px;
+  background:red;
+  color:white;
+  text-shadow: 0 0 1px black;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3), 3px 3px 3px #222;
+}
 
 
 /* expansion icons */
 
 .icon:after {
         position: absolute;
-        border: 1px solid #444;
+        border: 1px solid #222;
         font-size: 11px;
         line-height: 15px;
         width: 16px;
@@ -399,6 +482,11 @@
         background-repeat: no-repeat !important;
         margin-left: -26px;
         margin-top: 5px;
+  }
+
+  .icon-align {
+    margin-left: 31px;
+    margin-top:4px;
   }
 
 .corporate-era-icon:after {
@@ -420,7 +508,7 @@
 
 .colonies-icon:after {
   content: "\25b2";
-  color: #444444;
+  color: #222;
   border: 1px solid black;
   font-weight: bold;
   font-size: 17px;
@@ -430,7 +518,7 @@
 
 .promo-icon:after {
     background: white;
-    border: 5px solid #444444;
+    border: 5px solid #222;
     width: 8px;
     height: 8px;
     color: white;
@@ -438,7 +526,7 @@
 }
 
 .fanmade-icon:after {
-    background: #444;
+    background: #222;
     border: 2px solid #eee;
     width: 14px;
     height: 14px;
