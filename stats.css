@@ -59,6 +59,26 @@
     border-right: 2px solid rgb(137,137,137);
 }
 
+.generalStats2 {
+    display: grid;
+    grid-template-columns: 140px 160px 160px;
+    position: relative;
+    font-family: Prototype;
+    background: #ccc;
+    color: #222;
+    background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
+    border-radius: 2px;
+    width: 460px;
+    position: relative;
+    text-align: center;
+    margin-bottom: 10px;
+    border-top: 2px solid rgb(221,221,221);
+    border-left: 2px solid rgb(221,221,221);
+    border-bottom: 2px solid rgb(137,137,137);
+    border-right: 2px solid rgb(137,137,137);
+}
+
+
 .grid-cell {
       text-align: center;
       font-size: 16px;
@@ -78,6 +98,19 @@
       font-size: 16px;
       height: 65px;
       line-height: 65px;
+      border-radius: 1px;
+      border-top: 2px solid rgb(221,221,221);
+      border-left: 2px solid rgb(221,221,221);
+      border-bottom: 2px solid rgb(137,137,137);
+      border-right: 2px solid rgb(137,137,137);
+      transition: 0.3s;
+}
+
+.grid-cell-stats2 {
+      padding-left: 5px;
+      font-size: 16px;
+      height: 32px;
+      line-height: 32px;
       border-radius: 1px;
       border-top: 2px solid rgb(221,221,221);
       border-left: 2px solid rgb(221,221,221);
