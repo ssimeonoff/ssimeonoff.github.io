@@ -18,8 +18,7 @@ r1.on('value', (snap) => {
   const asArray = Object.keys(val)
     //.map(key => Object.assign({}, val[key], { key }))
     .map(key => val[key])
-    setTimeout(function(){document.getElementById("title3").innerHTML = asArray.length;
-}, 500)
+    document.getElementById("title3").innerHTML = asArray.length;
 })
 
 
