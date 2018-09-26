@@ -48,16 +48,39 @@ function submitForm(e) {
   saveGame(players, generations, corporations, scores, expansions, draft, map, milestones, awards);
 
   //Show aleart
-    document.getElementById("submit").style.display = "none";
-    document.querySelector(".alert").style.display = "block";
+    document.getElementById("submit").style.opacity = 0;
+    setTimeout(function(){
+      document.getElementById("submit").style.display = "none";
+      document.querySelector(".alert").style.display = "block";
+    }, 300);
+  setTimeout(function(){
+    document.querySelector(".alert").style.opacity = 1;
+  },600);
+  setTimeout(function(){
+  document.querySelector(".alert").style.backgroundPosition = "90% 2px";
+},1000);
+
+
   //clear form
   document.getElementById("form").reset();
   resetAll();
 
   //hide alert after 3 seconds
+
   setTimeout(function(){
-    document.getElementById("submit").style.display = "block";
+    document.querySelector(".alert").style.backgroundPosition = "90% 60px";
+    setTimeout(function(){
+      document.querySelector(".alert").style.opacity = 0;
+    },400);
+    setTimeout(function(){
     document.querySelector(".alert").style.display = "none";
+    document.getElementById("submit").style.display = "block";
+  }, 700);
+  setTimeout(function(){
+  document.getElementById("submit").style.opacity = 1;
+}, 1000);
+
+
   }, 5000);
 
 }

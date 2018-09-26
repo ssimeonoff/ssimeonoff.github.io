@@ -316,7 +316,7 @@
   outline: none;
   cursor: pointer;
   font-family: Prototype;
-  height: 50px;
+  height: 60px;
   border-radius: 1px;
   font-size: 20px;
   border-top: 2px solid rgb(221,221,221);
@@ -331,11 +331,12 @@
   color: #222;
   background: #eee;
   letter-spacing: 1px;
+  transition: 0.3s ease-in-out;
 }
 
 .btn-submit:disabled {
   box-shadow: none;
-  opacity: 0.3;
+  opacity: 0.3 !important;
 }
 
 
@@ -487,20 +488,26 @@ input::-webkit-inner-spin-button {
 }
 
 .alert {
+  opacity: 0;
   display: none;
   text-align: center;
   background: #444;
   margin-top: 10px;
   font-family: Prototype;
   font-size: 22px;
-  height: 48px;
-  line-height: 48px;
-  color:white;
+  height: 58px;
+  line-height: 58px;
+  color: #ccc;
   margin-bottom: 10px;
-  text-shadow: 0 0 1px black, 0 2px 1px black;
   border-right: 2px solid rgb(221,221,221);
   border-top: 2px solid rgb(137,137,137);
   border-left: 2px solid rgb(137,137,137);
+  transition: 0.3s ease-in-out;
+  background-image: url("images/boy.png");
+  background-repeat: no-repeat;
+  background-size: 90px 54px;
+  filter: grayscale(100%);
+  background-position: 90% 60px;
 }
 
 .box {

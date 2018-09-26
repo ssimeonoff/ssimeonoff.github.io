@@ -22,7 +22,7 @@ gamesRef.on('value', (snap) => {
 
 function generateGameStats (players, corporationName) {
   //returning html formatted text
-
+  console.log("hi");
   //filtering the games per players' count
   gamesPerPlayers = games.filter(function(el) {
     return el.players == players
@@ -91,6 +91,9 @@ function indexOfMax(arr) {
 
     return maxIndex;
 }
+
+
+
 
 function pushTheData() {
   //standard
