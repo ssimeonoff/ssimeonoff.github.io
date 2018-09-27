@@ -290,11 +290,42 @@ function pushMapStats() {
 }
 
 function pushAwardsStats() {
+  //THARSIS milestones and awards
   document.getElementById("terraformer").innerHTML =  Math.round(checkForElement("milestones", "TERRAFORMER")*100/games.length) + "%";
   document.getElementById("mayor").innerHTML =  Math.round(checkForElement("milestones", "MAYOR")*100/games.length) + "%";
   document.getElementById("gardener").innerHTML =  Math.round(checkForElement("milestones", "GARDENER")*100/games.length) + "%";
   document.getElementById("builder").innerHTML =  Math.round(checkForElement("milestones", "BUILDER")*100/games.length) + "%";
   document.getElementById("planner").innerHTML =  Math.round(checkForElement("milestones", "PLANNER")*100/games.length) + "%";
+  document.getElementById("landlord").innerHTML =  Math.round(checkForElement("awards", "LANDLORD")*100/games.length) + "%";
+  document.getElementById("banker").innerHTML =  Math.round(checkForElement("awards", "BANKER")*100/games.length) + "%";
+  document.getElementById("scientist").innerHTML =  Math.round(checkForElement("awards", "SCIENTIST")*100/games.length) + "%";
+  document.getElementById("thermalist").innerHTML =  Math.round(checkForElement("awards", "THERMALIST")*100/games.length) + "%";
+  document.getElementById("miner").innerHTML =  Math.round(checkForElement("awards", "MINER")*100/games.length) + "%";
+
+  document.getElementById("terraformer").innerHTML =  Math.round(checkForElement("milestones", "TERRAFORMER")*100/games.length) + "%";
+  document.getElementById("mayor").innerHTML =  Math.round(checkForElement("milestones", "MAYOR")*100/games.length) + "%";
+  document.getElementById("gardener").innerHTML =  Math.round(checkForElement("milestones", "GARDENER")*100/games.length) + "%";
+  document.getElementById("builder").innerHTML =  Math.round(checkForElement("milestones", "BUILDER")*100/games.length) + "%";
+  document.getElementById("planner").innerHTML =  Math.round(checkForElement("milestones", "PLANNER")*100/games.length) + "%";
+  document.getElementById("landlord").innerHTML =  Math.round(checkForElement("awards", "LANDLORD")*100/games.length) + "%";
+  document.getElementById("banker").innerHTML =  Math.round(checkForElement("awards", "BANKER")*100/games.length) + "%";
+  document.getElementById("scientist").innerHTML =  Math.round(checkForElement("awards", "SCIENTIST")*100/games.length) + "%";
+  document.getElementById("thermalist").innerHTML =  Math.round(checkForElement("awards", "THERMALIST")*100/games.length) + "%";
+  document.getElementById("miner").innerHTML =  Math.round(checkForElement("awards", "MINER")*100/games.length) + "%";
+
+  document.getElementById("generelast").innerHTML =  Math.round(checkForElement("milestones", "GENERALIST")*100/games.length) + "%";
+  document.getElementById("specialist").innerHTML =  Math.round(checkForElement("milestones", "SPECIALIST")*100/games.length) + "%";
+  document.getElementById("ecologist").innerHTML =  Math.round(checkForElement("milestones", "ECOLOGIST")*100/games.length) + "%";
+  document.getElementById("tycoon").innerHTML =  Math.round(checkForElement("milestones", "TYCOON")*100/games.length) + "%";
+  document.getElementById("legend").innerHTML =  Math.round(checkForElement("milestones", "LEGEND")*100/games.length) + "%";
+  document.getElementById("celebrity").innerHTML =  Math.round(checkForElement("awards", "CELEBRITY")*100/games.length) + "%";
+  document.getElementById("industrialist").innerHTML =  Math.round(checkForElement("awards", "INDUSTRIALIST")*100/games.length) + "%";
+  document.getElementById("desert_settler").innerHTML =  Math.round(checkForElement("awards", "DESERT SETTLER")*100/games.length) + "%";
+  document.getElementById("estate_dealer").innerHTML =  Math.round(checkForElement("awards", "ESTATE DEALER")*100/games.length) + "%";
+  document.getElementById("benefactor").innerHTML =  Math.round(checkForElement("awards", "BENEFACTOR")*100/games.length) + "%";
+
+  document.getElementById("hoverlord").innerHTML =  Math.round(checkForElement("milestones", "HOVERLORD")*100/games.length) + "%";
+  document.getElementById("venuphile").innerHTML =  Math.round(checkForElement("awards", "VENUPHILE")*100/games.length) + "%";
 
 
 }
