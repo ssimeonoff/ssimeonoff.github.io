@@ -54,7 +54,7 @@ function submitForm(e) {
   },600);
   setTimeout(function(){
   document.querySelector(".alert").style.backgroundPosition = "90% 2px";
-},1000);
+},1100);
 
 
   //clear form
@@ -67,17 +67,15 @@ function submitForm(e) {
     document.querySelector(".alert").style.backgroundPosition = "90% 60px";
     setTimeout(function(){
       document.querySelector(".alert").style.opacity = 0;
-    },400);
+    },500);
     setTimeout(function(){
     document.querySelector(".alert").style.display = "none";
     document.getElementById("submit").style.display = "block";
-  }, 700);
+  }, 800);
   setTimeout(function(){
   document.getElementById("submit").style.opacity = 1;
-}, 1000);
-
-
-  }, 5000);
+}, 1100);
+}, 5000);
 
 }
 

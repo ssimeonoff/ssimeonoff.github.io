@@ -113,10 +113,11 @@
   cursor: pointer;
   outline: none;
   background: #eee;
+  color: #222;
   font-family: Prototype;
   width: 100%;
   height: 41px;
-  font-size: 14px;
+  font-size: 16px;
   border-radius: 1px;
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
@@ -148,6 +149,10 @@
   border-right: 2px solid rgb(137,137,137);
   box-shadow: 0 1px 3px 1px rgba(0,0,0,.8);
   margin-top: 2px;
+}
+
+input::placeholder {
+  color: #222;
 }
 
 .drop-down:disabled {

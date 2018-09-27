@@ -104,18 +104,30 @@ function enableCorporations() {
   var players = document.querySelector("input[name='players']:checked").value;
   var corps = document.querySelectorAll(".drop-down");
   var scores = document.querySelectorAll("input[name='scores']");
-  for (i = 0; i < 5; i++) {
+  var options = document.querySelectorAll(".drop-down > option[value='select corporation']");
+  for (i = players; i < 5; i++) {
     corps[i].disabled = true;
     corps[i].classList.remove("not-filled");
+    corps[i].classList.remove("change-colours");
+    options[i].selected = true;
+    options[i].innerHTML = "";
+
     scores[i].disabled = true;
     scores[i].classList.remove("not-filled");
+    scores[i].classList.remove("change-colours");
+    scores[i].value = "";
+    scores[i].placeholder = "";
   }
   for (i = 0; i < players; i++) {
     corps[i].disabled = false;
     corps[i].classList.add("not-filled");
+    options[i].innerHTML = "SELECT CORPORATION";
+
     scores[i].disabled = false;
     scores[i].classList.add("not-filled");
+    scores[i].placeholder = "#";
   }
+  disableSelectedCorporation();
 }
 
 function tharsisAwards() {
