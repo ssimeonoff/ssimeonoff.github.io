@@ -20,7 +20,7 @@ gamesRef.on('value', (snap) => {
   pushTheData();
 //push the data to general stats
   pushGeneralStats();
-
+  pushMapStats();
 });
 
 function generateGameStats (players, corporationName) {
@@ -247,14 +247,13 @@ function pushGeneralStats() {
   document.getElementById("total_games").innerHTML =games.length;
 
   //draft games
-  draftGames = games.filter(function(el) {
+  var draftGames = games.filter(function(el) {
     return el.draft == "YES"
   });
   document.getElementById("draft_games").innerHTML = Math.round(draftGames.length*100/games.length) + "%" ;
   document.getElementById("corporate_games").innerHTML =  Math.round(checkForExpansion("CORPORATE")*100/games.length) + "%"
   document.getElementById("venus_games").innerHTML =  Math.round(checkForExpansion("VENUS")*100/games.length) + "%"
   document.getElementById("prelude_games").innerHTML =  Math.round(checkForExpansion("PRELUDE")*100/games.length) + "%"
-
 }
 
 function checkForExpansion (expansion) {
@@ -272,4 +271,20 @@ function checkForExpansion (expansion) {
       }
   }
   return playedExpansion
+}
+
+function pushMapStats() {
+  var tharsisGames = games.filter(function(el) {
+    return el.map == "THARSIS"
+  });
+  var hellasGames = games.filter(function(el) {
+    return el.map == "HELLAS"
+  });
+  var elysiumGames = games.filter(function(el) {
+    return el.map == "ELYSIUM"
+  });
+  document.getElementById("map_tharsis").innerHTML = Math.round(tharsisGames.length*100/games.length) + "%" ;
+  document.getElementById("map_hellas").innerHTML = Math.round(hellasGames.length*100/games.length) + "%" ;
+  document.getElementById("map_elysium").innerHTML = Math.round(elysiumGames.length*100/games.length) + "%" ;
+
 }
