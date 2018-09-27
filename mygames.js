@@ -108,7 +108,7 @@ function enableCorporations() {
   var players = document.querySelector("input[name='players']:checked").value;
   var corps = document.querySelectorAll(".drop-down");
   var scores = document.querySelectorAll("input[name='scores']");
-  var options = document.querySelectorAll(".drop-down > option[value='select corporation']");
+  var options = document.querySelectorAll(".drop-down > option[class='selected-option']");
   for (i = players; i < 5; i++) {
     corps[i].disabled = true;
     corps[i].classList.remove("not-filled");
