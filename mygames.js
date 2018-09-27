@@ -228,7 +228,7 @@ function closeModal () {
 function clearInputs() {
   var corps = document.querySelectorAll(".drop-down");
   var scores = document.querySelectorAll("input[name='scores']");
-  var options = document.querySelectorAll(".drop-down > option[value='select corporation']");
+  var options = document.querySelectorAll(".drop-down > option[class='selected-option']");
   for (i = 0; i < 5; i++) {
     options[i].selected = true;
     options[i].innerHTML = "";
