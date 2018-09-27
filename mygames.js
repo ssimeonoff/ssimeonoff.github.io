@@ -1,5 +1,11 @@
+//disable enter to submit the form
+function stopRKey(evt) {
+  var evt = (evt) ? evt : ((event) ? event : null);
+  var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
+  if ((evt.keyCode == 13) && (node.type=="text"))  {return false;}
+}
 
-
+document.onkeypress = stopRKey;
 /////////////////////////////////////////////////////////////////////////////////////
 function checkForm () {
   //code executed when "submit" is clicked
@@ -125,7 +131,7 @@ function enableCorporations() {
 
     scores[i].disabled = false;
     scores[i].classList.add("not-filled");
-    scores[i].placeholder = "#";
+    scores[i].placeholder = "--";
   }
   disableSelectedCorporation();
 }
@@ -219,7 +225,18 @@ function closeModal () {
   setTimeout(function(){
     document.getElementById("modalOne").style.display = "none";
   }, 300); //waiting during the animation duration of closing the modal
+}
 
+function clearInputs() {
+  var corps = document.querySelectorAll(".drop-down");
+  var scores = document.querySelectorAll("input[name='scores']");
+  var options = document.querySelectorAll(".drop-down > option[value='select corporation']");
+  for (i = 0; i < 5; i++) {
+    options[i].selected = true;
+    options[i].innerHTML = "";
+    scores[i].value = "";
+    scores[i].placeholder = "";
+  }
 }
 //////////////////////////////////////////////////////////////////////////////
 function resetAwards() {
