@@ -18,7 +18,7 @@ r1.on('value', (snap) => {
   const asArray = Object.keys(val)
     //.map(key => Object.assign({}, val[key], { key }))
     .map(key => val[key])
-    document.getElementById("title3").innerHTML = asArray.length;
+    document.getElementById("title3").innerHTML = asArray.length; //for the odometer counter
 })
 
 

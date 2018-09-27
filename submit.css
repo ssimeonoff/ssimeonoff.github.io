@@ -539,7 +539,7 @@ input::-webkit-inner-spin-button {
   -webkit-transform: rotate(-45deg);
   width: 100px;
   display: block;
-  background: #444;
+  background: #cc3333;
   box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
   position: absolute;
   top: 17px; left: -23px;

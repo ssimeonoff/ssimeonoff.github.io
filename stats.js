@@ -302,16 +302,16 @@ function pushAwardsStats() {
   document.getElementById("thermalist").innerHTML =  Math.round(checkForElement("awards", "THERMALIST")*100/games.length) + "%";
   document.getElementById("miner").innerHTML =  Math.round(checkForElement("awards", "MINER")*100/games.length) + "%";
 
-  document.getElementById("terraformer").innerHTML =  Math.round(checkForElement("milestones", "TERRAFORMER")*100/games.length) + "%";
-  document.getElementById("mayor").innerHTML =  Math.round(checkForElement("milestones", "MAYOR")*100/games.length) + "%";
-  document.getElementById("gardener").innerHTML =  Math.round(checkForElement("milestones", "GARDENER")*100/games.length) + "%";
-  document.getElementById("builder").innerHTML =  Math.round(checkForElement("milestones", "BUILDER")*100/games.length) + "%";
-  document.getElementById("planner").innerHTML =  Math.round(checkForElement("milestones", "PLANNER")*100/games.length) + "%";
-  document.getElementById("landlord").innerHTML =  Math.round(checkForElement("awards", "LANDLORD")*100/games.length) + "%";
-  document.getElementById("banker").innerHTML =  Math.round(checkForElement("awards", "BANKER")*100/games.length) + "%";
-  document.getElementById("scientist").innerHTML =  Math.round(checkForElement("awards", "SCIENTIST")*100/games.length) + "%";
-  document.getElementById("thermalist").innerHTML =  Math.round(checkForElement("awards", "THERMALIST")*100/games.length) + "%";
-  document.getElementById("miner").innerHTML =  Math.round(checkForElement("awards", "MINER")*100/games.length) + "%";
+  document.getElementById("diversifier").innerHTML =  Math.round(checkForElement("milestones", "DIVERSIFIER")*100/games.length) + "%";
+  document.getElementById("tactician").innerHTML =  Math.round(checkForElement("milestones", "TACTICIAN")*100/games.length) + "%";
+  document.getElementById("polar_explorer").innerHTML =  Math.round(checkForElement("milestones", "POLAR EXPLORER")*100/games.length) + "%";
+  document.getElementById("energizer").innerHTML =  Math.round(checkForElement("milestones", "ENERGIZER")*100/games.length) + "%";
+  document.getElementById("rim_settler").innerHTML =  Math.round(checkForElement("milestones", "RIM SETTLER")*100/games.length) + "%";
+  document.getElementById("cultivator").innerHTML =  Math.round(checkForElement("awards", "CULTIVATOR")*100/games.length) + "%";
+  document.getElementById("magnate").innerHTML =  Math.round(checkForElement("awards", "MAGNATE")*100/games.length) + "%";
+  document.getElementById("space_baron").innerHTML =  Math.round(checkForElement("awards", "SPACE BARON")*100/games.length) + "%";
+  document.getElementById("excentric").innerHTML =  Math.round(checkForElement("awards", "EXCENTRIC")*100/games.length) + "%";
+  document.getElementById("contractor").innerHTML =  Math.round(checkForElement("awards", "CONTRACTOR")*100/games.length) + "%";
 
   document.getElementById("generelast").innerHTML =  Math.round(checkForElement("milestones", "GENERALIST")*100/games.length) + "%";
   document.getElementById("specialist").innerHTML =  Math.round(checkForElement("milestones", "SPECIALIST")*100/games.length) + "%";
