@@ -21,6 +21,7 @@ gamesRef.on('value', (snap) => {
 //push the data to general stats
   pushGeneralStats();
   pushMapStats();
+  pushAwardsStats();
 });
 
 function generateGameStats (players, corporationName) {
@@ -244,33 +245,33 @@ function pushTheData() {
 
 function pushGeneralStats() {
   //total games
-  document.getElementById("total_games").innerHTML =games.length;
+  document.getElementById("total_games").innerHTML = games.length;
 
   //draft games
   var draftGames = games.filter(function(el) {
     return el.draft == "YES"
   });
   document.getElementById("draft_games").innerHTML = Math.round(draftGames.length*100/games.length) + "%" ;
-  document.getElementById("corporate_games").innerHTML =  Math.round(checkForExpansion("CORPORATE")*100/games.length) + "%"
-  document.getElementById("venus_games").innerHTML =  Math.round(checkForExpansion("VENUS")*100/games.length) + "%"
-  document.getElementById("prelude_games").innerHTML =  Math.round(checkForExpansion("PRELUDE")*100/games.length) + "%"
+  document.getElementById("corporate_games").innerHTML =  Math.round(checkForElement("expansions", "CORPORATE")*100/games.length) + "%"
+  document.getElementById("venus_games").innerHTML =  Math.round(checkForElement("expansions", "VENUS")*100/games.length) + "%"
+  document.getElementById("prelude_games").innerHTML =  Math.round(checkForElement("expansions", "PRELUDE")*100/games.length) + "%"
 }
 
-function checkForExpansion (expansion) {
+function checkForElement (subArrayName, element) {
   //calculated played and won games per corporation
-  var playedExpansion = 0
+  var playedElement = 0
   for (i = 0; i < games.length; i++) {
-    var expansionsArray = games[i]["expansions"]; //getting the expansions array
-    if (expansionsArray == undefined) {} //to chatch firebase errors if the array is undefined
+    var subArray = games[i][subArrayName]; //getting the expansions array
+    if (subArray == undefined) {} //to chatch firebase errors if the array is undefined
     else {
-      if (expansionsArray.indexOf(expansion) > -1) {
+      if (subArray.indexOf(element) > -1) {
         //if the expansion is present in the corporatins' arrayAwards
         //add +1 to the counter
-        playedExpansion++;
+        playedElement++;
         }
       }
   }
-  return playedExpansion
+  return playedElement;
 }
 
 function pushMapStats() {
@@ -286,5 +287,14 @@ function pushMapStats() {
   document.getElementById("map_tharsis").innerHTML = Math.round(tharsisGames.length*100/games.length) + "%" ;
   document.getElementById("map_hellas").innerHTML = Math.round(hellasGames.length*100/games.length) + "%" ;
   document.getElementById("map_elysium").innerHTML = Math.round(elysiumGames.length*100/games.length) + "%" ;
+}
+
+function pushAwardsStats() {
+  document.getElementById("terraformer").innerHTML =  Math.round(checkForElement("milestones", "TERRAFORMER")*100/games.length) + "%";
+  document.getElementById("mayor").innerHTML =  Math.round(checkForElement("milestones", "MAYOR")*100/games.length) + "%";
+  document.getElementById("gardener").innerHTML =  Math.round(checkForElement("milestones", "GARDENER")*100/games.length) + "%";
+  document.getElementById("builder").innerHTML =  Math.round(checkForElement("milestones", "BUILDER")*100/games.length) + "%";
+  document.getElementById("planner").innerHTML =  Math.round(checkForElement("milestones", "PLANNER")*100/games.length) + "%";
+
 
 }
