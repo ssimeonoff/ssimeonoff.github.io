@@ -61,6 +61,11 @@
     border-right: 2px solid rgb(137,137,137);
 }
 
+.grid-two-columns {
+  grid-template-columns: 299px 161px !important;
+
+}
+
 .generalStats2 {
     display: grid;
     grid-template-columns: 140px 160px 160px;
