@@ -324,8 +324,8 @@ function pushAwardsStats() {
   document.getElementById("estate_dealer").innerHTML =  Math.round(checkForElement("awards", "ESTATE DEALER")*100/games.length) + "%";
   document.getElementById("benefactor").innerHTML =  Math.round(checkForElement("awards", "BENEFACTOR")*100/games.length) + "%";
 
-  document.getElementById("hoverlord").innerHTML =  Math.round(checkForElement("milestones", "HOVERLORD")*100/games.length) + "%";
-  document.getElementById("venuphile").innerHTML =  Math.round(checkForElement("awards", "VENUPHILE")*100/games.length) + "%";
+  document.getElementById("hoverlord").innerHTML =  Math.round(checkForElement("milestones", "HOVERLORD")*100/Math.round(checkForElement("expansions", "VENUS"))) + "%";
+  document.getElementById("venuphile").innerHTML =  Math.round(checkForElement("awards", "VENUPHILE")*100/Math.round(checkForElement("expansions", "VENUS"))) + "%";
 
 
 }
