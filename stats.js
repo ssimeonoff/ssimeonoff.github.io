@@ -55,6 +55,8 @@ function generateGameStats (players, corporationName) {
     corpIndex = corpsArray.indexOf(corporationName); //find the corporation index
     //findind the winning score index
     winnerIndex = indexOfMax(scoresArray);
+    if (corporationName == "SPLICE") {
+   }
     //counting a win if corporation and winning score indexes match
     if (winnerIndex == corpIndex) {totalWins++;}
     //calculating the average score
@@ -82,17 +84,15 @@ function indexOfMax(arr) {
     if (arr.length === 0) {
         return -1;
     }
-
-    var max = arr[0];
+    var max = parseInt(arr[0]);
     var maxIndex = 0;
 
     for (var i = 1; i < arr.length; i++) {
-        if (arr[i] > max) {
+        if (parseInt(arr[i]) > max) {
             maxIndex = i;
-            max = arr[i];
+            max = parseInt(arr[i]);
         }
     }
-
     return maxIndex;
 }
 
