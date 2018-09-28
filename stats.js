@@ -55,8 +55,6 @@ function generateGameStats (players, corporationName) {
     corpIndex = corpsArray.indexOf(corporationName); //find the corporation index
     //findind the winning score index
     winnerIndex = indexOfMax(scoresArray);
-    if (corporationName == "SPLICE") {
-   }
     //counting a win if corporation and winning score indexes match
     if (winnerIndex == corpIndex) {totalWins++;}
     //calculating the average score
@@ -246,6 +244,11 @@ function pushTheData() {
 function pushGeneralStats() {
   //total games
   document.getElementById("total_games").innerHTML = games.length;
+  document.getElementById("2p_games").innerHTML = games.filter(function(el) {return el.players == 2}).length;
+  document.getElementById("3p_games").innerHTML = games.filter(function(el) {return el.players == 3}).length;
+  document.getElementById("4p_games").innerHTML = games.filter(function(el) {return el.players == 4}).length;
+  document.getElementById("5p_games").innerHTML = games.filter(function(el) {return el.players == 5}).length;
+
 
   //draft games
   var draftGames = games.filter(function(el) {

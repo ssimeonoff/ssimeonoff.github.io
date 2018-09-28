@@ -26,22 +26,29 @@
 <body background="images/mars.jpg" style="background-color:black;background-repeat:no-repeat; background-size:100%">
   <div class="layout">
   <div class="column">
-    <div class="generalStats grid-two-columns">
-      <a class="grid-cell-corporation link" style="height:94px;" href="https://ssimeonoff.github.io/" target="_blank">
-          <div style="font-size:16px;line-height: 30px; margin-top:10px;margin-bottom: 5px;color:#eee;text-shadow: 0 0 1px black, 0 2px 1px black;"><div style="transform:scale(2,1);">TERRAFORMING</div><div style="font-size:26px;transform: scale(2,1);">MARS</div></div>
-      </a>
-      <a class="grid-cell-corporation link" style="height:94px;z-index:1;" href="https://ssimeonoff.github.io/submit" target="_blank">
-        <div style="margin-top:16px;color:#eee;text-shadow: 0 0 1px black, 0 2px 1px black;font-size:16px;transform:scale(2,1);">GAMES</div>
-        <div id="total_games" class="odometer" data-minintegerlen="3" style="font-size: 30px;line-height: 32px; margin-top:4px; margin-left:5px; color:#eee;text-shadow: 0 0 1px black, 0 2px 1px black">0</div>
-      </a>
+
+    <div class="generalStats">
+      <a class="grid-cell link" href="https://ssimeonoff.github.io/submit" target="_blank"><div>SUBMIT GAME</div></a>
+      <div class="grid-cell title-cell" style="width:316px;"> <div>TM GAMES</div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+
+      <div class="grid-cell-stats stats-general"><div class="header-cell" style="margin-top: 5px;">GAMES</div><div id="total_games" class="odometer header-cell" data-minintegerlen="3" style="font-size:26px"></div></div>
+      <div class="grid-cell-stats stats-general"><div class="header-cell" style="margin-top: 5px;">2P</div><div id="2p_games" class="odometer header-cell" data-minintegerlen="2" style="font-size:26px"></div></div>
+      <div class="grid-cell-stats stats-general"><div class="header-cell" style="margin-top: 5px;">3P</div><div id="3p_games" class="odometer header-cell" data-minintegerlen="2" style="font-size:26px"></div></div>
+      <div class="grid-cell-stats stats-general"><div class="header-cell" style="margin-top: 5px;">4P</div><div id="4p_games" class="odometer header-cell" data-minintegerlen="2" style="font-size:26px"></div></div>
+      <div class="grid-cell-stats stats-general"><div class="header-cell" style="margin-top: 5px;">5P</div><div id="5p_games" class="odometer header-cell" data-minintegerlen="2" style="font-size:26px"></div></div>
+
     </div>
+
   <div class="playerStats">
 
     <div class="grid-cell header-section"><div class="icon"></div>  STANDARD   </div>
-    <div class="grid-cell">2 players</div>
-    <div class="grid-cell">3 players</div>
-    <div class="grid-cell">4 players</div>
-    <div class="grid-cell">5 players</div>
+    <div class="grid-cell">2P</div>
+    <div class="grid-cell">3P</div>
+    <div class="grid-cell">4P</div>
+    <div class="grid-cell">5P</div>
 
     <a class="grid-cell-corporation link" href="https://ssimeonoff.github.io/#CORP26" target="_blank"><div class="credicor">CREDICOR</div></a>
     <div class="grid-cell-stats" id="games2p-credicor"></div>
@@ -215,26 +222,26 @@
   <div class="column">
 
     <div class="generalStats">
-      <div class="grid-cell" style="width:456px;text-align:center;">  DRAFT - EXPANSIONS   </div>
+      <div class="grid-cell title-cell"> <div>DRAFT - EXPANSIONS</div></div>
       <div></div>
       <div></div>
       <div></div>
       <div></div>
 
-      <div class="grid-cell-stats stats-general"><div style="margin-top:5px;">DRAFT</div><div id="draft_games" style="font-size: 26px;"></div></div>
-      <div class="grid-cell-stats stats-general"><div class="icon corporate-era-icon icon-align"></div><div id="corporate_games" style="font-size: 26px;margin-top:30px;"></div></div>
-      <div class="grid-cell-stats stats-general"><div class="icon venus-icon icon-align"></div><div id="venus_games" style="font-size: 26px;margin-top:30px;"></div></div>
-      <div class="grid-cell-stats stats-general"><div class="icon prelude-icon icon-align"></div><div id="prelude_games" style="font-size: 26px;margin-top:30px;"></div></div>
-      <div class="grid-cell-stats stats-general"><div class="icon colonies-icon icon-align"></div><div id="colonies_games" style="font-size: 26px;margin-top:30px;">0%</div></div>
+      <div class="grid-cell-stats stats-general"><div style="margin-top:7px;">DRAFT</div><div id="draft_games"></div></div>
+      <div class="grid-cell-stats stats-general"><div class="icon corporate-era-icon icon-align"></div><div id="corporate_games" style="  margin-top:32px;"></div></div>
+      <div class="grid-cell-stats stats-general"><div class="icon venus-icon icon-align"></div><div id="venus_games" style="  margin-top:32px;"></div></div>
+      <div class="grid-cell-stats stats-general"><div class="icon prelude-icon icon-align"></div><div id="prelude_games" style="  margin-top:32px;"></div></div>
+      <div class="grid-cell-stats stats-general"><div class="icon colonies-icon icon-align"></div><div id="colonies_games" style="  margin-top:32px;">0%</div></div>
 
     </div>
 
     <div class="playerStats">
     <div class="grid-cell header-section"><div class="icon prelude-icon"></div>   PRELUDE   </div>
-    <div class="grid-cell">2 players</div>
-    <div class="grid-cell">3 players</div>
-    <div class="grid-cell">4 players</div>
-    <div class="grid-cell">5 players</div>
+    <div class="grid-cell">2P</div>
+    <div class="grid-cell">3P</div>
+    <div class="grid-cell">4P</div>
+    <div class="grid-cell">5P</div>
 
     <a class="grid-cell-corporation link" href="https://ssimeonoff.github.io/#CORP02" target="_blank">
         <div style="display:inline-block;margin-left:-83px;margin-top:1px;color:red;border:3px solid red;border-radius:50%;padding:5px;font-size:20px;line-height:20px;box-shadow: 3px 3px 3px grey, inset 0 0 3px 3px grey;text-shadow: 3px 3px 3px grey;">㨐
@@ -379,56 +386,56 @@
 
   <div class="column">
       <div class="generalStats2">
-      <div class="grid-cell" style="width:456px;text-align:center;">  MAPS - MILESTONES - AWARDS  </div>
+        <div class="grid-cell title-cell"> <div>&nbsp;&nbsp;&nbsp;MAPS - MILESTONES - AWARDS</div></div>
       <div></div>
       <div></div>
 
-      <div class="grid-cell-stats stats-general-maps"><div style="margin-top:18px;">THARSIS</div><div id="map_tharsis" style="font-size: 26px;"></div></div>
+      <div class="grid-cell-stats stats-general-maps"><div style="margin-top:18px;">THARSIS</div><div id="map_tharsis"  ></div></div>
       <div class="grid-cell-stats stats-general-maps">
-        <div class="stats-awards-div"><div class="stats-awards" style="margin-top:5px">TERRAFORMER</div><div class="stats-awards-values" id="terraformer"></div></div>
+        <div class="stats-awards-div" style="border-top:none;"><div class="stats-awards">TERRAFORMER</div><div class="stats-awards-values" id="terraformer"></div></div>
         <div class="stats-awards-div"><div class="stats-awards">MAYOR</div><div class="stats-awards-values" id="mayor"></div></div>
         <div class="stats-awards-div"><div class="stats-awards">GARDENER</div><div class="stats-awards-values" id="gardener"></div></div>
         <div class="stats-awards-div"><div class="stats-awards">BUILDER</div><div class="stats-awards-values" id="builder"></div></div>
-        <div class="stats-awards-div"><div class="stats-awards">PLANNER</div><div class="stats-awards-values" id="planner"></div></div>
+        <div class="stats-awards-div" style="border-bottom:none;"><div class="stats-awards">PLANNER</div><div class="stats-awards-values" id="planner"></div></div>
       </div>
       <div class="grid-cell-stats stats-general-maps">
-        <div class="stats-awards-div"><div class="stats-awards" style="margin-top:3px">LANDLORD</div><div class="stats-awards-values" id="landlord"></div></div>
+        <div class="stats-awards-div"  style="border-top:none;"><div class="stats-awards">LANDLORD</div><div class="stats-awards-values" id="landlord"></div></div>
         <div class="stats-awards-div"><div class="stats-awards">BANKER</div><div class="stats-awards-values" id="banker"></div></div>
         <div class="stats-awards-div"><div class="stats-awards">SCIENTIST</div><div class="stats-awards-values" id="scientist"></div></div>
         <div class="stats-awards-div"><div class="stats-awards">THERMALIST</div><div class="stats-awards-values" id="thermalist"></div></div>
-        <div class="stats-awards-div"><div class="stats-awards">MINER</div><div class="stats-awards-values" id="miner"></div></div>
+        <div class="stats-awards-div"  style="border-bottom:none;"><div class="stats-awards">MINER</div><div class="stats-awards-values" id="miner"></div></div>
       </div>
 
-      <div class="grid-cell-stats stats-general-maps"><div style="margin-top:18px;">HELLAS</div><div id="map_hellas" style="font-size: 26px;"></div></div>
-      <div class="grid-cell-stats stats-general-maps">
-        <div class="stats-awards-div"><div class="stats-awards" style="margin-top:3px">DIVERSIFIER</div><div class="stats-awards-values" id="diversifier"></div></div>
+      <div class="grid-cell-stats stats-general-maps"><div style="margin-top:18px;">HELLAS</div><div id="map_hellas"  ></div></div>
+      <div class="grid-cell-stats stats-general-maps" >
+        <div class="stats-awards-div" style="border-top:none;"><div class="stats-awards">DIVERSIFIER</div><div class="stats-awards-values" id="diversifier"></div></div>
         <div class="stats-awards-div"><div class="stats-awards">TACTICIAN</div><div class="stats-awards-values" id="tactician"></div></div>
         <div class="stats-awards-div"><div class="stats-awards">POLAR EXPLORER</div><div class="stats-awards-values" id="polar_explorer"></div></div>
         <div class="stats-awards-div"><div class="stats-awards">ENERGIZER</div><div class="stats-awards-values" id="energizer"></div></div>
-        <div class="stats-awards-div"><div class="stats-awards">RIM SETTLER</div><div class="stats-awards-values" id="rim_settler"></div></div>
+        <div class="stats-awards-div" style="border-bottom:none;"><div class="stats-awards">RIM SETTLER</div><div class="stats-awards-values" id="rim_settler"></div></div>
       </div>
       <div class="grid-cell-stats stats-general-maps">
-        <div class="stats-awards-div"><div class="stats-awards" style="margin-top:3px">CULTIVATOR</div><div class="stats-awards-values" id="cultivator"></div></div>
+        <div class="stats-awards-div" style="border-top:none;"><div class="stats-awards">CULTIVATOR</div><div class="stats-awards-values" id="cultivator"></div></div>
         <div class="stats-awards-div"><div class="stats-awards">MAGNATE</div><div class="stats-awards-values" id="magnate"></div></div>
         <div class="stats-awards-div"><div class="stats-awards">SPACE BARON</div><div class="stats-awards-values" id="space_baron"></div></div>
         <div class="stats-awards-div"><div class="stats-awards">EXCENTRIC</div><div class="stats-awards-values" id="excentric"></div></div>
-        <div class="stats-awards-div"><div class="stats-awards">CONTRACTOR</div><div class="stats-awards-values" id="contractor"></div></div>
+        <div class="stats-awards-div" style="border-bottom:none;"><div class="stats-awards">CONTRACTOR</div><div class="stats-awards-values" id="contractor"></div></div>
       </div>
 
-      <div class="grid-cell-stats stats-general-maps"><div style="margin-top:18px;">ELYSIUM</div><div id="map_elysium" style="font-size: 26px;"></div></div>
+      <div class="grid-cell-stats stats-general-maps" style="margin-bottom:10px;"><div style="margin-top:18px;">ELYSIUM</div><div id="map_elysium"  ></div></div>
       <div class="grid-cell-stats stats-general-maps">
-        <div class="stats-awards-div"><div class="stats-awards" style="margin-top:5px">GENERALIST</div><div class="stats-awards-values" id="generelast"></div></div>
+        <div class="stats-awards-div" style="border-top:none;"><div class="stats-awards">GENERALIST</div><div class="stats-awards-values" id="generelast"></div></div>
         <div class="stats-awards-div"><div class="stats-awards">SPECIALIST</div><div class="stats-awards-values" id="specialist"></div></div>
         <div class="stats-awards-div"><div class="stats-awards">ECOLOGIST</div><div class="stats-awards-values" id="ecologist"></div></div>
         <div class="stats-awards-div"><div class="stats-awards">TYCOON</div><div class="stats-awards-values" id="tycoon"></div></div>
-        <div class="stats-awards-div"><div class="stats-awards">LEGEND</div><div class="stats-awards-values" id="legend"></div></div>
+        <div class="stats-awards-div" style="border-bottom:none;"><div class="stats-awards">LEGEND</div><div class="stats-awards-values" id="legend"></div></div>
       </div>
       <div class="grid-cell-stats stats-general-maps">
-        <div class="stats-awards-div"><div class="stats-awards" style="margin-top:5px">CELEBRITY</div><div class="stats-awards-values" id="celebrity"></div></div>
+        <div class="stats-awards-div" style="border-top:none;"><div class="stats-awards">CELEBRITY</div><div class="stats-awards-values" id="celebrity"></div></div>
         <div class="stats-awards-div"><div class="stats-awards">INDUSTRIALIST</div><div class="stats-awards-values" id="industrialist"></div></div>
         <div class="stats-awards-div"><div class="stats-awards">DESERT SETTLER</div><div class="stats-awards-values" id="desert_settler"></div></div>
         <div class="stats-awards-div"><div class="stats-awards">ESTATE DEALER</div><div class="stats-awards-values" id="estate_dealer"></div></div>
-        <div class="stats-awards-div"><div class="stats-awards">BENEFACTOR</div><div class="stats-awards-values" id="benefactor"></div></div>
+        <div class="stats-awards-div" style="border-bottom:none;"><div class="stats-awards">BENEFACTOR</div><div class="stats-awards-values" id="benefactor"></div></div>
       </div>
 
       <div class="grid-cell-stats2">VENUS NEXT</div>
