@@ -39,7 +39,7 @@ function generateGameStats (players, corporationName) {
     if (corpsArray == undefined) {} //to chatch firebase errors if the array is undefined
     else {
       if (corpsArray.indexOf(corporationName) > -1) {
-        //if the corporation is present in the corporatins' arrayAwards
+        //if the corporation is present in the corporations' arrayAwards
         //add this game to the played games
         playedGames.push(gamesPerPlayers[i]);
         }
@@ -265,7 +265,7 @@ function checkForElement (subArrayName, element) {
     if (subArray == undefined) {} //to chatch firebase errors if the array is undefined
     else {
       if (subArray.indexOf(element) > -1) {
-        //if the expansion is present in the corporatins' arrayAwards
+        //if the expansion is present in the corporations' arrayAwards
         //add +1 to the counter
         playedElement++;
         }

@@ -42,6 +42,7 @@ function submitForm(e) {
 
   // Save Game
   saveGame(players, generations, corporations, scores, expansions, draft, map, milestones, awards);
+  clearInputs(); //to clear the drop-downs and inputs after the submission
 
   //Show aleart
     document.getElementById("submit").style.opacity = 0;
