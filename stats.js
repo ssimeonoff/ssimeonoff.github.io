@@ -18,11 +18,12 @@ gamesRef.on('value', (snap) => {
 
 //push data to the Players stats
   pushTheData();
-//push the data to general stats
   pushGeneralStats();
   pushMapStats();
   pushAwardsStats();
   pushAverageGenerations();
+  pushHistograms();
+
 });
 
 function generateGameStats (players, corporationName) {
@@ -364,5 +365,116 @@ function pushAverageGenerations () {
   generateAverageScores(3);
   generateAverageScores(4);
   generateAverageScores(5);
+}
 
+function pushHistograms() {
+  histogram(2);
+  histogram(3);
+  histogram(4);
+  histogram(5);
+}
+
+
+/// charts and their functions
+
+function histogram (players) {
+  google.charts.load("current", {packages:["corechart"]});
+  google.charts.setOnLoadCallback(drawChart);
+  function drawChart() {
+
+  var data = google.visualization.arrayToDataTable(generateScoresArray(players));
+  if (players == 2) {
+    var options = {
+      animation: {"startup": true},
+      title: '',
+      titleTextStyle: {fontSize:20, color:"#444444", },
+      legend: { position: 'none' },
+      fontSize: 12,
+      backgroundColor: "transparent",
+      vAxis: { gridlines: { count: 5},maxValue:20 },
+      HAxis: {textStyle : {fontSize: 7, fontName: 'Prototype'}},
+      bar: {gap: 1},
+      chartArea:{left:0,bottom:20,top:0,width:460},
+      colors: ['#444444','#888888'],
+      histogram: {bucketSize: 10, minValue: 60, maxValue: 200}
+    };}
+
+    if (players == 3) {
+      var options = {
+        animation: {"startup": true},
+        title: '',
+        titleTextStyle: {fontSize:20, color:"#444444", },
+        legend: { position: 'none' },
+        fontSize: 12,
+        backgroundColor: "transparent",
+        vAxis: { gridlines: { count: 5},maxValue:20 },
+        HAxis: {textStyle : {fontSize: 7, fontName: 'Prototype'}},
+        bar: {gap: 1},
+        chartArea:{left:0,bottom:20,top:0,width:460},
+        colors: ['#444444','#888888'],
+        histogram: {bucketSize: 10, minValue: 40, maxValue: 150}
+      };}
+
+      if (players == 4) {
+        var options = {
+          animation: {"startup": true},
+          title: '',
+          titleTextStyle: {fontSize:20, color:"#444444", },
+          legend: { position: 'none' },
+          fontSize: 12,
+          backgroundColor: "transparent",
+          vAxis: { gridlines: { count: 5},maxValue:20 },
+          HAxis: {textStyle : {fontSize: 7, fontName: 'Prototype'}},
+          bar: {gap: 1},
+          chartArea:{left:0,bottom:20,top:0,width:460},
+          colors: ['#444444','#888888'],
+          histogram: {bucketSize: 5, minValue: 40, maxValue: 110}
+        };}
+
+        if (players == 5) {
+          var options = {
+            animation: {"startup": true},
+            title: '',
+            titleTextStyle: {fontSize:20, color:"#444444", },
+            legend: { position: 'none' },
+            fontSize: 12,
+            backgroundColor: "transparent",
+            vAxis: { gridlines: { count: 5},maxValue:20 },
+            HAxis: {textStyle : {fontSize: 7, fontName: 'Prototype'}},
+            bar: {gap: 1},
+            chartArea:{left:0,bottom:20,top:0,width:460},
+            colors: ['#444444','#888888'],
+            histogram: {bucketSize: 5, minValue: 20, maxValue: 90}
+          };}
+
+    var chart = new google.visualization.Histogram(document.getElementById('histogram_' + players));
+    chart.draw(data, options);
+  }
+}
+
+function generateScoresArray (players) {
+  //average scores calculation for the chart headers
+  var totalScores = 0
+  var totalGames = 0
+  //Generating the array for the Google histograms
+  var scores = [['Corporation', 'Score']];
+  var gamesPerPlayers = games.filter(function(el) {
+    return el.players == players
+  });
+
+  for (i = 0; i < gamesPerPlayers.length; i++) {
+    var scoresArray = gamesPerPlayers[i]["scores"];
+    var corporationsArray = gamesPerPlayers[i]["corporations"];
+    for (j = 0; j < scoresArray.length; j++) {
+      //['Ecoline', 88]
+      var arr = [corporationsArray[j], parseInt(scoresArray[j])];
+      scores.push(arr);
+      //average scores calculation for the chart headers
+      totalGames++;
+      totalScores = totalScores + parseInt(scoresArray[j]);
+    }
+  }
+  //pushing the AVERAGE
+  document.getElementById("chart_scores_" + players).innerHTML = Math.round(totalScores/totalGames);
+  return scores;
 }
