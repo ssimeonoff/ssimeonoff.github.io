@@ -22,6 +22,7 @@ gamesRef.on('value', (snap) => {
   pushGeneralStats();
   pushMapStats();
   pushAwardsStats();
+  pushAverageGenerations();
 });
 
 function generateGameStats (players, corporationName) {
@@ -45,9 +46,9 @@ function generateGameStats (players, corporationName) {
         }
       }
   }
-  totalGames = playedGames.length;
-  totalWins = 0;
-  sum = 0;
+  var totalGames = playedGames.length;
+  var totalWins = 0;
+  var sum = 0;
   for (i = 0; i < totalGames; i++) {
     //checking if that corporation is the winner
     var corpsArray = playedGames[i]["corporations"];
@@ -331,19 +332,37 @@ function pushAwardsStats() {
   document.getElementById("venuphile").innerHTML =  Math.round(checkForElement("awards", "VENUPHILE")*100/Math.round(checkForElement("expansions", "VENUS"))) + "%";
 }
 
-function generateAverageScores (prelude) {
-  //calculated played and won games per corporation
-  var playedElement = 0
-  for (i = 0; i < games.length; i++) {
-    var subArray = games[i][subArrayName]; //getting the expansions array
-    if (subArray == undefined) {} //to chatch firebase errors if the array is undefined
-    else {
-      if (subArray.indexOf(element) > -1) {
-        //if the expansion is present in the corporations' arrayAwards
-        //add +1 to the counter
-        playedElement++;
-        }
-      }
+function generateAverageScores (players) {
+  gamesPerPlayers = games.filter(function(el) {
+    return el.players == players
+  });
+
+  //calculating average generations
+  var preludeGames = 0;
+  var preludeSum = 0;
+  var totalSum = 0;
+
+  for (i = 0; i < gamesPerPlayers.length; i++) {
+    var generationsValue = gamesPerPlayers[i]["generations"]; //getting the generations value
+    var expansionsArray = gamesPerPlayers[i]["expansions"]; //getting the generations value
+
+    if (expansionsArray.indexOf("PRELUDE") > -1) {
+      //if the expansion PRELUDE is present
+      preludeGames++;   //add +1 to the counter
+      preludeSum = preludeSum + parseInt(generationsValue);
+    } else {totalSum = totalSum + parseInt(generationsValue);}
   }
-  return playedElement;
+
+  var totalGames = gamesPerPlayers.length - preludeGames;
+  document.getElementById("generations_" + players).innerHTML = (Math.round(totalSum*10/totalGames)/10).toFixed(1);
+  document.getElementById("generations_" + players + "_prelude").innerHTML = (Math.round(preludeSum*10/preludeGames)/10).toFixed(1);
+
+}
+
+function pushAverageGenerations () {
+  generateAverageScores(2);
+  generateAverageScores(3);
+  generateAverageScores(4);
+  generateAverageScores(5);
+
 }
