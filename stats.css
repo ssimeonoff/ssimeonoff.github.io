@@ -15,7 +15,21 @@
     }
 }
 
+.button {
+  line-height: 24px !important;
+  height: 24px !important;
+  margin: 2px;
+  box-shadow: 0 1px 1px 1px #444;
+  text-shadow: 0 0 1px black, 0 1px 1px black;
+  width: 131px;
+  font-size: 14px !important;
+  color: white !important;
+  background: linear-gradient(#888, #ccc, #888);
+}
 
+.button:hover {
+  box-shadow: 0 1px 1px 1px #444 !important;
+}
 
 .layout {
   width: 1500px;
@@ -27,8 +41,7 @@
 .title-cell {
   color: white !important;
   text-shadow: 0 0 1px black, 0 2px 2px black;
-  width: 456px;
-  font-size:20px !important;
+  font-size:18px !important;
   background: transparent !important;
 
 }
