@@ -329,6 +329,21 @@ function pushAwardsStats() {
 
   document.getElementById("hoverlord").innerHTML =  Math.round(checkForElement("milestones", "HOVERLORD")*100/Math.round(checkForElement("expansions", "VENUS"))) + "%";
   document.getElementById("venuphile").innerHTML =  Math.round(checkForElement("awards", "VENUPHILE")*100/Math.round(checkForElement("expansions", "VENUS"))) + "%";
+}
 
-
+function generateAverageScores (prelude) {
+  //calculated played and won games per corporation
+  var playedElement = 0
+  for (i = 0; i < games.length; i++) {
+    var subArray = games[i][subArrayName]; //getting the expansions array
+    if (subArray == undefined) {} //to chatch firebase errors if the array is undefined
+    else {
+      if (subArray.indexOf(element) > -1) {
+        //if the expansion is present in the corporations' arrayAwards
+        //add +1 to the counter
+        playedElement++;
+        }
+      }
+  }
+  return playedElement;
 }
