@@ -483,8 +483,6 @@ function generateScoresArray (players) {
 
 
 function getUTCtime() {
-  var time = new Date().getTime();
-var date = new Date(time);
-alert(date.toString()); // Wed Jan 12 2011 12:42:46 GMT-0800 (PST)
+
 
 }
