@@ -626,8 +626,24 @@ border-right: 2px solid rgb(137,137,137);
       vertical-align: middle;
       text-shadow: 0 0 1px black;
       margin-bottom: 5px;
-      margin-left: 13px;
-      margin-right: 40px;
+      margin-right: 20px;
+}
+
+.btn-submit {
+  outline: none;
+  height: 40px;
+  line-height: 16px;
+  width: 100px;
+  cursor: pointer;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 16px;
+  font-family: Prototype;
+  background-color: #eee;
+  color:#444;
+  vertical-align: middle;
+  margin-bottom: 5px;
+  margin-left: -2px;
 }
 
 .btn-content {
@@ -1476,19 +1492,19 @@ border-right: 2px solid rgb(137,137,137);
     outline: none;
     background-position: 10px 12px;
     background-repeat: no-repeat;
-    width: 445px;
+    width: 280px;
     height: 40px;
     line-height: 40px;
     font-size: 20px;
     padding: 0px 2px 0px 15px;
     margin-top: 10px;
     margin-bottom: 25px;
-    margin-right: 27px;
+    margin-right: 22px;
     border-radius: 20px;
     border-top: 2px solid rgb(221,221,221);
-border-left: 2px solid rgb(221,221,221);
-border-bottom: 2px solid rgb(137,137,137);
-border-right: 2px solid rgb(137,137,137);
+    border-left: 2px solid rgb(221,221,221);
+    border-bottom: 2px solid rgb(137,137,137);
+    border-right: 2px solid rgb(137,137,137);
     box-shadow: 0 2px 4px 1px rgba(0,0,0,.8);
     color: rgb(48,48,48);
 }
