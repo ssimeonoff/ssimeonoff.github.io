@@ -430,7 +430,7 @@ function histogram (players) {
           bar: {gap: 1},
           chartArea:{left:0,bottom:20,top:0,width:460},
           colors: ['#444444','#888888'],
-          histogram: {bucketSize: 5, minValue: 40, maxValue: 110}
+          histogram: {bucketSize: 10, minValue: 40, maxValue: 150}
         };}
 
         if (players == 5) {
