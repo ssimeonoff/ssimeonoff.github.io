@@ -52,8 +52,8 @@
 .chart-header {
   position: absolute;
   font-size:18px;
-  margin-left: 20px;
-  margin-top: 25px;
+  margin-left: 10px;
+  margin-top: 10px;
   color:white;
   text-shadow: 0 0 1px black, 0 2px 2px black;
 }
@@ -61,8 +61,8 @@
 .chart-points {
   display: inline-block;
   position: absolute;
-  margin-top: -283px;
-  margin-left: 145px;
+  margin-top: -295px;
+  margin-left: 155px;
   font-size: 18px;
   height: 27px;
   width: 62px;
