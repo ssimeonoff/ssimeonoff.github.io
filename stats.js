@@ -346,6 +346,8 @@ function generateAverageScores (players) {
   for (i = 0; i < gamesPerPlayers.length; i++) {
     var generationsValue = gamesPerPlayers[i]["generations"]; //getting the generations value
     var expansionsArray = gamesPerPlayers[i]["expansions"]; //getting the generations value
+    if (expansionsArray == undefined) { var expansionsArray = [];} //capturing errors if there are no expansions selected
+
 
     if (expansionsArray.indexOf("PRELUDE") > -1) {
       //if the expansion PRELUDE is present
@@ -428,7 +430,7 @@ function histogram (players) {
           bar: {gap: 1},
           chartArea:{left:0,bottom:20,top:0,width:460},
           colors: ['#444444','#888888'],
-          histogram: {bucketSize: 10, minValue: 40, maxValue: 150}
+          histogram: {bucketSize: 5, minValue: 40, maxValue: 110}
         };}
 
         if (players == 5) {
@@ -444,7 +446,7 @@ function histogram (players) {
             bar: {gap: 1},
             chartArea:{left:0,bottom:20,top:0,width:460},
             colors: ['#444444','#888888'],
-            histogram: {bucketSize: 5, minValue: 30, maxValue: 85}
+            histogram: {bucketSize: 5, minValue: 20, maxValue: 90}
           };}
 
     var chart = new google.visualization.Histogram(document.getElementById('histogram_' + players));
