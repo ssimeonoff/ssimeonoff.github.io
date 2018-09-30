@@ -237,6 +237,22 @@
 
     </div>
 
+    <div class="generalStats">
+      <div class="grid-cell title-cell"> <div>GENERATIONS</div></div>
+      <div class="grid-cell title-cell"> <div>2P</div></div>
+      <div class="grid-cell title-cell"> <div>3P</div></div>
+      <div class="grid-cell title-cell"> <div>4P</div></div>
+      <div class="grid-cell title-cell"> <div>5P</div></div>
+
+      <div class="grid-cell-stats stats-general" style="font-size:14px;"><div style="margin-top:5px;">WITHOUT PRELUDE</div><div>WITH PRELUDE</div></div>
+      <div class="grid-cell-stats stats-general"><div style="margin-top:5px;" id="generations_2"></div><div id="generations_2_prelude"></div></div>
+      <div class="grid-cell-stats stats-general"><div style="margin-top:5px;" id="generations_3"></div><div id="generations_3_prelude"></div></div>
+      <div class="grid-cell-stats stats-general"><div style="margin-top:5px;" id="generations_4"></div><div id="generations_4_prelude"></div></div>
+      <div class="grid-cell-stats stats-general"><div style="margin-top:5px;" id="generations_5"></div><div id="generations_5_prelude"></div></div>
+
+    </div>
+
+
     <div class="playerStats">
     <div class="grid-cell header-section"><div class="icon prelude-icon"></div>   PRELUDE   </div>
     <div class="grid-cell">2P</div>
@@ -382,26 +398,20 @@
     <div class="grid-cell-stats" id="games3p-kuiper"></div>
     <div class="grid-cell-stats" id="games4p-kuiper"></div>
     <div class="grid-cell-stats" id="games5p-kuiper"></div>
-  </div>
+    </div>
   </div>
 
   <div class="column">
+      <div class="chartStats">
+        <div class="grid-cell title-cell"> <div>SCORES DISTRIBUTION AND MEAN VALUES</div></div>
+        <div><div class="chart-header">2P</div><div class="chart-div" id="histogram_2"></div><div class="chart-points" id="chart_scores_2">--</div></div>
+        <div><div class="chart-header">3P</div><div class="chart-div" id="histogram_3"></div><div class="chart-points" id="chart_scores_3">--</div></div>
+        <div><div class="chart-header">4P</div><div class="chart-div" id="histogram_4"></div><div class="chart-points" id="chart_scores_4">--</div></div>
+        <div><div class="chart-header">5P</div><div class="chart-div" id="histogram_5"></div><div class="chart-points" id="chart_scores_5">--</div></div>
+      </div>
+  </div>
 
-    <div class="generalStats">
-      <div class="grid-cell title-cell"> <div>GENERATIONS</div></div>
-      <div class="grid-cell title-cell"> <div>2P</div></div>
-      <div class="grid-cell title-cell"> <div>3P</div></div>
-      <div class="grid-cell title-cell"> <div>4P</div></div>
-      <div class="grid-cell title-cell"> <div>5P</div></div>
-
-      <div class="grid-cell-stats stats-general" style="font-size:14px;"><div style="margin-top:5px;">WITHOUT PRELUDE</div><div>WITH PRELUDE</div></div>
-      <div class="grid-cell-stats stats-general"><div style="margin-top:5px;" id="generations_2"></div><div id="generations_2_prelude"></div></div>
-      <div class="grid-cell-stats stats-general"><div style="margin-top:5px;" id="generations_3"></div><div id="generations_3_prelude"></div></div>
-      <div class="grid-cell-stats stats-general"><div style="margin-top:5px;" id="generations_4"></div><div id="generations_4_prelude"></div></div>
-      <div class="grid-cell-stats stats-general"><div style="margin-top:5px;" id="generations_5"></div><div id="generations_5_prelude"></div></div>
-
-    </div>
-
+  <div class="column">
     <div class="generalStats2">
         <div class="grid-cell title-cell"> <div>MAPS</div></div>
         <div class="grid-cell title-cell"> <div>MILESTONES</div></div>
@@ -461,16 +471,6 @@
     </div>
   </div>
 
-
-    <div class="column">
-        <div class="chartStats">
-          <div class="grid-cell title-cell"> <div>SCORES DISTRIBUTION AND MEAN VALUES</div></div>
-          <div><div class="chart-header">2P</div><div class="chart-div" id="histogram_2"></div><div class="chart-points" id="chart_scores_2">--</div></div>
-          <div><div class="chart-header">3P</div><div class="chart-div" id="histogram_3"></div><div class="chart-points" id="chart_scores_3">--</div></div>
-          <div><div class="chart-header">4P</div><div class="chart-div" id="histogram_4"></div><div class="chart-points" id="chart_scores_4">--</div></div>
-          <div><div class="chart-header">5P</div><div class="chart-div" id="histogram_5"></div><div class="chart-points" id="chart_scores_5">--</div></div>
-        </div>
-    </div>
   </div>
 
   <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>

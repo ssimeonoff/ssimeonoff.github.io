@@ -653,12 +653,8 @@
 }
 
 .colonies-icon:after {
-  content: "\25b2";
-  color: #222;
-  border: 1px solid black;
-  font-weight: bold;
-  font-size: 15px;
-  line-height: 13px;
+  background-color: #444;
+  background-image: url("images/triangle16.png");
 
 }
 
