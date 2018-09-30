@@ -23,7 +23,7 @@ gamesRef.on('value', (snap) => {
   pushAwardsStats();
   pushAverageGenerations();
   pushHistograms();
-
+  getUTCtime();
 });
 
 function generateGameStats (players, corporationName) {
@@ -446,7 +446,7 @@ function histogram (players) {
             bar: {gap: 1},
             chartArea:{left:0,bottom:20,top:0,width:460},
             colors: ['#444444','#888888'],
-            histogram: {bucketSize: 5, minValue: 20, maxValue: 90}
+            histogram: {bucketSize: 5, minValue: 35, maxValue: 90}
           };}
 
     var chart = new google.visualization.Histogram(document.getElementById('histogram_' + players));
@@ -479,4 +479,12 @@ function generateScoresArray (players) {
   //pushing the AVERAGE
   document.getElementById("chart_scores_" + players).innerHTML = Math.round(totalScores/totalGames);
   return scores;
+}
+
+
+function getUTCtime() {
+  var time = new Date().getTime();
+var date = new Date(time);
+alert(date.toString()); // Wed Jan 12 2011 12:42:46 GMT-0800 (PST)
+
 }
