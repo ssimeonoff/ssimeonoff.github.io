@@ -507,7 +507,7 @@ function sortByPoints(players) {
   });
   // put sorted results back on page
   $("#playerStats").append(myArray);
-  var y = document.querySelectorAll(".grid-cell-stats");
+  var y = document.querySelectorAll("div[class*='grid-cell-stats'][id*='games']");
   for (j=0; j < y.length; j++) {
     y[j].style.opacity = 0.3;
   }

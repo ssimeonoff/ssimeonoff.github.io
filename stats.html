@@ -45,11 +45,11 @@
 
   <div class="playerStats">
     <div class="grid5">
-      <select  class="sort-menu" id="sorting"  size="1" name="sort types" onchange="">
-        <option disabled selected value>SORT BY</option>
-        <option value="4">SCORE</option>
-        <option value="5">WINRATE</option>
-        <option value="6">GAMES</option>
+      <select  disabled style="opacity:0.5" class="sort-menu" id="sorting"  size="1" name="sort types" onchange="">
+        <option disabled selected value>BY SCORE</option>
+        <option value="score">SCORE</option>
+        <option value="winrate">WINRATE</option>
+        <option value="games">GAMES</option>
       </select>
     <button class="button btn-grid-cell" onclick="sortByPoints(2)">2P</button>
     <button class="button btn-grid-cell" onclick="sortByPoints(3)">3P</button>
