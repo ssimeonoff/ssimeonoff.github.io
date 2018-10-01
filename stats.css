@@ -218,8 +218,8 @@
 .grid-cell-stats {
       padding-left: 5px;
       font-size: 16px;
-      height: 60px;
-      line-height: 60px;
+      height: 50px;
+      line-height: 50px;
       border-radius: 1px;
       border-top: 2px solid rgb(221,221,221);
       border-left: 2px solid rgb(221,221,221);
@@ -245,6 +245,7 @@
   line-height: 25px;
   padding-left: 0px;
   font-size: 20px;
+  height: 60px;
 }
 
 .stats-general-maps {
@@ -259,7 +260,7 @@
       text-align: center;
       padding-right: 5px;
       font-size: 15px;
-      height: 55px;
+      height: 45px;
       padding-top: 5px;
       line-height: 18px;
       border-radius: 1px;
@@ -293,12 +294,11 @@
 }
 
 .ratio {
-  font-size: 13px;
+  font-size: 14px;
   width: 30px;
   color: #222;
-  margin-left: 34px;
-  margin-top: 20px;
-  text-align: right;
+  margin-left: 18px;
+  margin-top: 15px;
   text-shadow: none;
 }
 
@@ -317,11 +317,10 @@
 .points {
   display: inline-block;
   position: absolute;
-  margin-top: 5px;
-  margin-left: -35px;
+  margin-left: -40px;
   font-size: 18px;
   height: 27px;
-  width: 62px;
+  width: 71px;
   line-height: 27px;
   border-radius: 1px;
   border: 2px solid rgb(221,221,221);
@@ -385,6 +384,7 @@
       margin-top: 2px;
       padding-right: 20px;
       margin-left: 7px;
+      margin-top:-2px;
       box-shadow: 6px 6px 10px grey;
       text-shadow: -1px 0 purple, 0 1px purple, 1px 0 purple, 0 -1px purple, 6px 6px 10px grey;
 }
@@ -453,10 +453,10 @@
   width: 110px;
   color: white;
   margin-left: 8px;
-  margin-top: 0px;
+  margin-top: -3px;
   padding: 5px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
   text-align: center;
   box-shadow: 3px 3px 6px grey;
   background: #3b9ae3;
@@ -569,7 +569,6 @@
 .valley {
   display:inline-block;
   margin-left:10px;
-  margin-top: 3px;
   font-size:18px;
 }
 
@@ -608,7 +607,6 @@
   background:#eeeeee;
   box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 3px 3px 3px grey;
   margin-left:10px;
-  margin-top: 2px;
   border-radius:5px;
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
@@ -619,10 +617,10 @@
 .splice {
   font-family: Arial;
    margin-left: 13px;
-   margin-top:2px;
    font-size:26px;
    line-height: 31px;
    font-weight:bold;
+   margin-top: -2px;
    width:109px;
    background:#eeeeee;box-shadow: 0 0 0 1px rgba(0,0,0,0.2), 3px 3px 3px grey;
 }
@@ -633,7 +631,6 @@
   width: 90px;
   margin-left: 12px;
   font-size:18px;
-  margin-top:5px;
   margin-bottom:5px;
   border-radius:25px;
   padding:10px;
