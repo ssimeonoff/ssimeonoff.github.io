@@ -15,20 +15,56 @@
     }
 }
 
+.sort-menu {
+  cursor: pointer;
+  outline: none;
+  font-family: Prototype;
+  border-top: 2px solid rgb(221,221,221);
+  border-left: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
+  cursor: pointer;
+  outline: none;
+  line-height: 24px;
+  box-shadow: 0 1px 1px 1px #444;
+  text-shadow: 0 0 1px black, 0 2px 2px black;
+  width: 136px;
+  height: 28px;
+  margin-top: 2px;
+  margin-left: 2px;
+  font-size: 16px;
+  color: white;
+  background: linear-gradient(#888, #ccc, #888);
+}
+
 .button {
+  font-family: Prototype;
+  cursor: pointer;
+  outline: none;
   line-height: 24px !important;
   height: 24px !important;
   margin: 2px;
   box-shadow: 0 1px 1px 1px #444;
-  text-shadow: 0 0 1px black, 0 1px 1px black;
+  text-shadow: 0 0 1px black, 0 2px 2px black;
   width: 131px;
-  font-size: 14px !important;
+  font-size: 16px !important;
   color: white !important;
   background: linear-gradient(#888, #ccc, #888);
 }
 
 .button:hover {
   box-shadow: 0 1px 1px 1px #444 !important;
+}
+
+.btn-grid-cell {
+  width:76px;
+  height: 28px !important;
+  margin-bottom: 4px;
+  font-size: 20px !important;
+}
+
+.highlighed-column {
+  border: 2px solid black;
 }
 
 .layout {
@@ -79,10 +115,10 @@
 }
 
 .playerStats {
-    display: grid;
+    display: inline-block;
     position: relative;
     font-family: Prototype;
-    grid-template-columns: 140px 80px 80px 80px 80px;
+    grid-template-columns: auto;
     background: #ccc;
     background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
     border-radius: 2px;
@@ -95,6 +131,13 @@
     border-bottom: 2px solid rgb(137,137,137);
     border-right: 2px solid rgb(137,137,137);
 }
+
+.grid5 {
+  display: grid;
+  grid-template-columns: 140px 80px 80px 80px 80px;
+
+}
+
 
 .generalStats {
     display: grid;
@@ -193,6 +236,8 @@
       border-bottom: 2px solid rgb(137,137,137);
       border-right: 2px solid rgb(137,137,137);
 }
+
+
 
 .header-cell {
   color:white;

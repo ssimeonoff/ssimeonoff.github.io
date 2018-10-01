@@ -479,8 +479,41 @@ function generateScoresArray (players) {
   return scores;
 }
 
-
 function getUTCtime() {
 
+}
 
+function sortByPoints(players) {
+  // get array of elements
+    var myArray = document.querySelectorAll('.corporation-row');
+    var count = 0;
+    // sort based on timestamp attribute
+    myArray = [].slice.call(myArray);
+    myArray.sort(function (a, b) {
+    // convert to integers from strings
+    a = parseInt($(a).find("div[id*='games" + players +"p'] > div[class='points']").text(), 10);
+    if (a == null || isNaN(a)) {a = 0}
+    b = parseInt($(b).find("div[id*='games" + players +"p'] > div[class='points']").text(), 10);
+    if (b == null || isNaN(b)) {b = 0}
+    count += 2;
+    // compare
+    if(a < b) {
+        return 1;
+    } else if(a > b) {
+        return -1;
+    } else {
+        return 0;
+    }
+  });
+  // put sorted results back on page
+  $("#playerStats").append(myArray);
+  var y = document.querySelectorAll(".grid-cell-stats");
+  for (j=0; j < y.length; j++) {
+    y[j].style.opacity = 0.3;
+  }
+
+  var x = document.querySelectorAll("div[id*='games" + players +"p']");
+  for (i=0; i < x.length; i++) {
+    x[i].style.opacity = 1;
+  }
 }
