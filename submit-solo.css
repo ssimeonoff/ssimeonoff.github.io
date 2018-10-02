@@ -74,8 +74,6 @@
     position: relative;
 }
 
-
-
 .red-outline {
   box-shadow: 0 1px 3px 1px rgba(0,0,0,.8), 0 1px 6px 3px red !important;
 }
@@ -89,7 +87,7 @@
   background: #eee;
   color: #222;
   font-family: Prototype;
-  width: 244px;
+  width: 242px;
   height: 60px;
   font-size: 20px;
   border-radius: 1px;
@@ -133,7 +131,7 @@ input::placeholder {
 }
 
 .btn-expansions {
-    width: 117px;
+    width: 116px;
     height: 56px;
     line-height: 56px;
     display: inline-block;
