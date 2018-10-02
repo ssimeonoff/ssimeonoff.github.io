@@ -151,8 +151,6 @@ input::placeholder {
     margin-right: -2px;
     margin-bottom: 2px;
     transition: box-shadow 0.3s;
-    transition: width 0.3s;
-
 }
 
 #confirm {
@@ -361,21 +359,22 @@ input::-webkit-inner-spin-button {
   border-right: 2px solid rgb(221,221,221);
   border-top: 2px solid rgb(137,137,137);
   border-left: 2px solid rgb(137,137,137);
-  transition: 0.3s ease-in-out;
-  background-image: url("images/boy.png");
-  background-repeat: no-repeat;
-  background-size: 90px 54px;
-  filter: grayscale(100%);
-  background-position: 90% 60px;
 }
 
 .loss {
   background-image: url("images/boy2.png");
   background-repeat: no-repeat;
-  background-size: 60px 53px;
-  filter: grayscale(100%);
-  background-position: 120px 0px;
-  transition: background-position 0.3s;
+  background-size: 150px 150px;
+  background-position: 16px 80px;
+  transition: width 0.3s, background-position 0.3s;
+}
+
+.win {
+  background-image: url("images/boy3.png");
+  background-repeat: no-repeat;
+  background-size: 90px 90px;
+  background-position: 144px 80px;
+  transition: background-position 0.3s, width 0.3s;
 }
 
 .box {

@@ -89,7 +89,7 @@
   <fieldset class="fieldset-alignment" style="width:366px;display:inline-block;margin-bottom:15px;">
    <legend class="fieldset2">RESULT</legend>
      <input class="checkbox" type="radio" id="win" value="WIN" name="result">
-     <label for="win" class="btn-gametype btn-expansions btn-result" style="width:238px;" onclick = "disableSteps();">WIN</label>
+     <label for="win" class="btn-gametype btn-expansions btn-result win" style="width:238px;" onclick = "disableSteps();">WIN</label>
      <input class="checkbox" type="radio" id="loss" value="LOSS" name="result">
      <label for="loss" class="btn-gametype btn-expansions btn-result loss" onclick = "enableSteps();"><span style="transition:margin 0.3s" id="loss_text">LOSS</span></label>
  </fieldset>
@@ -115,7 +115,7 @@
          <div id="modalResult" class="highlight"></div>
        </fieldset>
      </div>
-     <input id="confirm" type="submit" value="CONFIRM SUBMIT" onclick="closeModal();"></input>
+     <input id="confirm" type="submit" value="CONFIRM SUBMIT" onclick="closeModal();disableSteps()"></input>
    </div>
  </div>
 </form>

@@ -104,17 +104,21 @@ function closeModal () {
 }
 
 function enableSteps() {
+  document.querySelector(".win").style.backgroundPosition = "144px 80px";
   document.querySelector("label[for='win']").style.width = "118px";
   document.getElementById("loss_text").style.marginLeft = "-50px";
   setTimeout(function() {
-      document.querySelector(".loss").style.backgroundPosition = "56px 0px";
-  },500);
+      document.querySelector(".loss").style.backgroundPosition = "16px -10px";
+  },300);
 
 }
 
 
 function disableSteps() {
-  document.querySelector("label[for='win']").style.width = "240px";
+  document.querySelector(".loss").style.backgroundPosition = "16px 80px";
+  document.querySelector("label[for='win']").style.width = "238px";
   document.getElementById("loss_text").style.marginLeft = "";
-  document.querySelector(".loss").style.backgroundPosition = "120px 0px";
+  setTimeout(function() {
+    document.querySelector(".win").style.backgroundPosition = "144px 0px";
+  }, 300)
 }

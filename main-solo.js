@@ -47,7 +47,6 @@ function submitForm(e) {
     document.querySelector(".alert").style.opacity = 1;
   },600);
   setTimeout(function(){
-  document.querySelector(".alert").style.backgroundPosition = "90% 2px";
 },1100);
 
 
@@ -58,7 +57,6 @@ function submitForm(e) {
   //hide alert after 3 seconds
 
   setTimeout(function(){
-    document.querySelector(".alert").style.backgroundPosition = "90% 60px";
     setTimeout(function(){
       document.querySelector(".alert").style.opacity = 0;
     },500);
