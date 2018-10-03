@@ -33,21 +33,12 @@ function submitForm(e) {
   var score = document.getElementById("corporation-score").value;
   var expansions = arrayExpansions();
   var result = document.querySelector("input[name='result']:checked").value;
+  var steps = document.getElementById("steps").value;
 
   // Save Game
-  saveGame(score, corporation, expansions, result);
+  saveGame(score, corporation, expansions, result, steps);
 
-  //Show aleart
-    document.getElementById("submit").style.opacity = 0;
-    setTimeout(function(){
-      document.getElementById("submit").style.display = "none";
-      document.querySelector(".alert").style.display = "block";
-    }, 300);
-  setTimeout(function(){
-    document.querySelector(".alert").style.opacity = 1;
-  },600);
-  setTimeout(function(){
-},1100);
+
 
 
   //clear form
@@ -72,13 +63,14 @@ function submitForm(e) {
 }
 
 // Save Game to firebasejs
-function saveGame(corporation, score, expansions, result) {
+function saveGame(corporation, score, expansions, result, steps) {
   var newGameRef = gamesRef.push();
   newGameRef.set({
     corporation: corporation,
     score: score,
     expansions: expansions,
-    result: result
+    result: result,
+    steps: steps
   })
   console.log(corporation + " " + score)
 }
@@ -92,12 +84,4 @@ function arrayExpansions() {
       expansions.push(x[i].value);
   }
   return expansions;
-}
-
-function resetAll () {
-  //clear the selected colour
-  x = document.querySelectorAll(".change-colours");
-  for (i=0; i < x.length; i++) {
-    x[i].classList.remove("change-colours");
-  }
 }

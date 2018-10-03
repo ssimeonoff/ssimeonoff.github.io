@@ -72,6 +72,8 @@
     width: 400px;
     margin-top: 20px;
     position: relative;
+    transform: perspective(1000px) rotateX(0deg) scale(1);
+    transition: 1s;
 }
 
 .red-outline {
@@ -98,6 +100,31 @@
   box-shadow: 0 1px 3px 1px rgba(0,0,0,.8);
   transition: font-size 0.3s, box-shadow 0.3s;
   padding-left: 10px;
+}
+
+.drop-down2 {
+  display: none;
+  transform: scale(0);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  cursor: pointer;
+  outline: none;
+  background: #eee;
+  color: #222;
+  font-family: Prototype;
+  width: 118px;
+  height: 60px;
+  font-size: 20px;
+  border-radius: 1px;
+  border-top: 2px solid rgb(221,221,221);
+  border-left: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
+  box-shadow: 0 1px 3px 1px rgba(0,0,0,.8);
+  transition: font-size 0.3s, box-shadow 0.3s;
+  padding-left: 18px;
+  transition: transform 0.3s;
 }
 
 .corporation-score {
@@ -162,14 +189,15 @@ input::placeholder {
   font-family: Prototype;
   height: 60px;
   border-radius: 1px;
-  font-size: 20px;
+  font-size: 30px;
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
   border-bottom: 2px solid rgb(137,137,137);
   border-right: 2px solid rgb(137,137,137);
   box-shadow: 0 1px 3px 1px rgba(0,0,0,.8);
-  color: #222;
-  background: #eee;
+  color: white;
+  text-shadow: 0 0 1px black, 0 2px 2px black;
+  background: rgba(0,0,0,0.3);
   letter-spacing: 1px;
   margin-top: 15px;
   width: 336px;
@@ -252,8 +280,8 @@ input::-webkit-inner-spin-button {
   line-height: 10px;
   font-size: 12px;
   margin-bottom: 2px;
-  color: #222;
-  text-shadow: none;
+  color: white;
+  text-shadow: 0 0 0 black, 0 2px 1px black;
 }
 
 .fieldset-alignment2 {
@@ -268,14 +296,13 @@ input::-webkit-inner-spin-button {
   border-bottom: none;
   margin-top: -14px;
   padding-top: 3px;
-  line-height: 50px;
+  line-height: 28px;
   padding-bottom: 12px;
   font-size: 30px;
   width: 288px;
 }
 
 .highlight {
-  filter: drop-shadow(0 0 3px red);
 }
 
 
@@ -317,7 +344,7 @@ input::-webkit-inner-spin-button {
     background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
     font-family: Prototype;
     line-height: 28px;
-    margin-top: -55px;
+    margin-top: -77px;
     padding: 30px;
     border: 1px solid #888;
     width: 340px;
@@ -333,6 +360,10 @@ input::-webkit-inner-spin-button {
     border-left: 2px solid rgb(221,221,221);
     border-bottom: 2px solid rgb(137,137,137);
     border-right: 2px solid rgb(137,137,137);
+    background-image: url(images/mars2.jpg);
+    background-repeat: no-repeat;
+    background-size: 700px 505px;
+    background-position: 0px -65px;
 }
 
 .close {
@@ -366,7 +397,7 @@ input::-webkit-inner-spin-button {
   background-repeat: no-repeat;
   background-size: 150px 150px;
   background-position: 16px 80px;
-  transition: width 0.3s, background-position 0.3s;
+  transition: width 0.2s, background-position 0.2s;
 }
 
 .win {
@@ -374,7 +405,7 @@ input::-webkit-inner-spin-button {
   background-repeat: no-repeat;
   background-size: 90px 90px;
   background-position: 144px 80px;
-  transition: background-position 0.3s, width 0.3s;
+  transition: background-position 0.2s, width 0.2s;
 }
 
 .box {
