@@ -339,12 +339,14 @@
 }
 
 .ratio {
-  font-size: 14px;
+  font-size: 18px;
   width: 30px;
   color: #222;
-  margin-left: 18px;
-  margin-top: 15px;
+  margin-left: 38px;
+  margin-top: 16px;
   text-shadow: none;
+  text-align: right;
+
 }
 
 .winrate {
@@ -353,7 +355,7 @@
   width: 40px;
   text-align: left;
   font-size: 18px;
-  margin-top: 18px;
+  margin-top: 16px;
   margin-left: -35px;
   text-shadow: none;
   color: #222;

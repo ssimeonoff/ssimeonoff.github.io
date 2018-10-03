@@ -69,13 +69,12 @@ function generateGameStats (players, corporationName) {
 
   if (totalWins==0 && totalGames==0) {
     //capturing division by 0
-    return  "<div class='points'>--</div>"+
-            "<div class='ratio'> -/- </div>"
+    return  "<div class='points'>--</div>"
             ;}
   else {
-    return  "<div class='points'>"+ Math.round(totalWins*100/totalGames) +"%</div>" +
-            "<div class='winrate'>"+ Math.round(totalWins*100/totalGames) + "%</div>" +
-            "<div class='ratio'>" + totalWins + "/" + totalGames + "</div>"
+    return  "<div class='points'>"+ Math.round(totalWins*100/totalGames) +"<span style='font-size:12px'>%</span></div>" +
+            "<div class='winrate'>"+ Math.round(avg) + "<span style='font-size:12px'>P</span></div>" +
+            "<div class='ratio'>" + " " + totalGames + "</div>"
             ;}
 }
 
