@@ -139,20 +139,22 @@ function animateTakeOff() {
   el = document.getElementById("buttonsContainer")
 
   setTimeout(function(){
-    el.style.transform = "perspective(1000px) rotateX(80deg) scale(1)";
+    el.style.transform = "perspective(700px) rotateX(80deg) scale(1)";
     el.style.boxShadow = "0 10px 50px darkorange";
   },500);
   setTimeout(function(){
-    el.style.transform = "perspective(1000px) rotateX(89deg) scale(0)";
+    el.style.transition = "0.3s";
+    el.style.transform = "perspective(700px) rotateX(89deg) scale(0)";
     el.style.marginTop = "-100px";
   },1500);
   setTimeout(function(){
+    el.style.transition = "1s";
     el.style.display = "none";
     el.style.boxShadow = "";
   },2500);
   setTimeout(function(){
     el.style.marginTop = "-800px";
-    el.style.transform = "perspective(1000px) rotateX(0deg) scale(1)";
+    el.style.transform = "perspective(700px) rotateX(0deg) scale(1)";
   },3000);
   setTimeout(function(){
     el.style.display = "block";

@@ -72,7 +72,7 @@
     width: 400px;
     margin-top: 20px;
     position: relative;
-    transform: perspective(1000px) rotateX(0deg) scale(1);
+    transform: perspective(700px) rotateX(0deg) scale(1);
     transition: 1s;
 }
 
@@ -360,10 +360,10 @@ input::-webkit-inner-spin-button {
     border-left: 2px solid rgb(221,221,221);
     border-bottom: 2px solid rgb(137,137,137);
     border-right: 2px solid rgb(137,137,137);
-    background-image: url(images/mars2.jpg);
+    /*background-image: url(images/mars2.jpg);
     background-repeat: no-repeat;
     background-size: 700px 505px;
-    background-position: 0px -65px;
+    background-position: 0px -65px;*/
 }
 
 .close {

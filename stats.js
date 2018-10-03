@@ -73,7 +73,8 @@ function generateGameStats (players, corporationName) {
             "<div class='ratio'> -/- </div>"
             ;}
   else {
-    return  "<div class='points'>"+ Math.round(avg) +"</div>" +
+    return  "<div class='points'>"+ Math.round(totalWins*100/totalGames) +"%</div>" +
+            "<div class='winrate'>"+ Math.round(totalWins*100/totalGames) + "%</div>" +
             "<div class='ratio'>" + totalWins + "/" + totalGames + "</div>"
             ;}
 }
