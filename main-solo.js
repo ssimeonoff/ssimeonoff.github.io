@@ -38,28 +38,9 @@ function submitForm(e) {
   // Save Game
   saveGame(score, corporation, expansions, result, steps);
 
-
-
-
   //clear form
   document.getElementById("form").reset();
   resetAll();
-
-  //hide alert after 3 seconds
-
-  setTimeout(function(){
-    setTimeout(function(){
-      document.querySelector(".alert").style.opacity = 0;
-    },500);
-    setTimeout(function(){
-    document.querySelector(".alert").style.display = "none";
-    document.getElementById("submit").style.display = "block";
-  }, 800);
-  setTimeout(function(){
-  document.getElementById("submit").style.opacity = 1;
-}, 1100);
-}, 5000);
-
 }
 
 // Save Game to firebasejs
@@ -72,7 +53,6 @@ function saveGame(corporation, score, expansions, result, steps) {
     result: result,
     steps: steps
   })
-  console.log(corporation + " " + score)
 }
 
 //getting form values

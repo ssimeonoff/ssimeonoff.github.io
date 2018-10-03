@@ -26,17 +26,17 @@ function checkForm () {
     }
     enableSubmit = false;
   };
-
-  if (document.querySelectorAll("select[class='drop-down2 change-colours']").length < 1 && document.querySelectorAll(".loss:checked").length > 1 ) {
+  //if steps is not selected, but loss is
+  if (document.querySelectorAll("select[class='drop-down2 change-colours']").length < 1 && document.getElementById("loss").checked ) {
     enableSubmit = false;
+    console.log("hi");
     document.getElementById("steps").classList.add("red-outline");
    };
 
   //generates the modal text
   if (enableSubmit) {
     generateConfirmationText();
-    document.getElementById("modalOne").style.display = "block";
-    setTimeout(function() {document.querySelector(".modal-window").style.transform = "scale(1)";}, 200);
+    flipCard();
     } else { document.getElementById("submit").disabled = true;}
 
   //remove the red outlines after 3 seconds
@@ -65,47 +65,22 @@ function changeColours2 (id) {
   }
 }
 
-//modal functions
-
-var closeBtns = [...document.querySelectorAll(".close")];
-closeBtns.forEach(function(btn){
-  btn.onclick = function() {
-    var modal = btn.closest('.modal');
-    document.querySelector(".modal-window").style.transform = "scale(0)";
-    setTimeout(function(){
-      modal.style.display = "none";
-    }, 300); //waiting during the animation duration of closing the modal
-
-  }
-});
-
-window.onclick = function(event) {
-  if (event.target.className === "modal") {
-    document.querySelector(".modal-window").style.transform = "scale(0)";
-    setTimeout(function(){
-      event.target.style.display = "none";
-    }, 300); //waiting during the animation duration of closing the modal
-  }
-}
-
 function generateConfirmationText () {
 
   var corporation = document.getElementById("corporation").value;
   var score = document.getElementById("corporation-score").value;
   var expansions = arrayExpansions();
   var result = document.querySelector("input[name='result']:checked").value;
+  var steps = "";
 
+  if (document.getElementById("loss").checked) {
+    steps = document.getElementById("steps").value;
+    result = result + " - by " + steps + " STEPS";}
+
+  document.getElementById("modalResult").innerHTML = result;
   document.getElementById("modalCorporation").innerHTML = corporation;
   document.getElementById("modalScore").innerHTML = score;
   document.getElementById("modalExpansions").innerHTML = expansions.toString().replace(/,/g, " - ");
-  document.getElementById("modalResult").innerHTML = result;
-}
-
-function closeModal () {
-  document.querySelector(".modal-window").style.transform = "scale(0)";
-  setTimeout(function(){
-    document.getElementById("modalOne").style.display = "none";
-  }, 300); //waiting during the animation duration of closing the modal
 }
 
 function enableSteps() {
@@ -136,12 +111,12 @@ function disableSteps() {
 }
 
 function animateTakeOff() {
-  el = document.getElementById("buttonsContainer")
+  el = document.querySelector(".flip-card")
 
   setTimeout(function(){
     el.style.transform = "perspective(700px) rotateX(80deg) scale(1)";
     el.style.boxShadow = "0 10px 50px darkorange";
-  },500);
+  },200);
   setTimeout(function(){
     el.style.transition = "0.3s";
     el.style.transform = "perspective(700px) rotateX(89deg) scale(0)";
@@ -178,6 +153,14 @@ function resetAll () {
     document.getElementById("loss_text").style.marginLeft = "";
     document.querySelector(".drop-down2").style.display = "none";
     document.querySelector(".drop-down2").style.transform = "scale(0)";
-
+    flipCardBack ();
   }, 3000)
+}
+
+function flipCard () {
+  document.querySelector(".flip-card-inner").style.transform = "rotateY(-180deg)";
+}
+
+function flipCardBack () {
+  document.querySelector(".flip-card-inner").style.transform = "rotateY(0deg)";
 }
