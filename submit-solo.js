@@ -116,7 +116,7 @@ function animateTakeOff() {
   setTimeout(function(){
     el.style.transform = "perspective(700px) rotateX(80deg) scale(1)";
     el.style.boxShadow = "0 10px 50px darkorange";
-  },200);
+  },100);
   setTimeout(function(){
     el.style.transition = "0.3s";
     el.style.transform = "perspective(700px) rotateX(89deg) scale(0)";
