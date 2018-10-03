@@ -465,7 +465,7 @@ input::-webkit-inner-spin-button {
 }
 
 .flip-card {
-  margin-top: 20px;
+  margin-top: 150px;
   perspective: 1000px;
   margin-left: auto;
   margin-right: auto;
@@ -489,6 +489,7 @@ input::-webkit-inner-spin-button {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  border-radius: 20px;
 }
 
 .flip-card-front {
