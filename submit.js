@@ -39,7 +39,7 @@ function checkForm () {
     enableSubmit = false;
   }
   if (document.querySelectorAll("input[name='map']:checked").length < 1 ) {
-    //if map is selected
+    //if map is not selected
     x = document.querySelectorAll(".btn-map");
     for (i = 0; i < x.length; i++) {
       x[i].classList.add("red-outline");
@@ -63,7 +63,7 @@ function checkForm () {
       x[i].classList.remove("red-outline");
     }
     document.getElementById("submit").disabled = false;
-  }, 2000);
+  }, 500);
 }
 /////////////////////////////////////////////////////////////////////////////////////
 function displayVenusAwards () {

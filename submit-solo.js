@@ -13,6 +13,15 @@ function checkForm () {
     enableSubmit = false;
     document.getElementById("corporation").classList.add("red-outline");
    };
+
+   if (document.querySelectorAll("input[name='map']:checked").length < 1 ) {
+     //if map is not selected
+     x = document.querySelectorAll(".map");
+     for (i = 0; i < x.length; i++) {
+       x[i].classList.add("red-outline");
+     }
+     enableSubmit = false;
+   }
   //if score is not selected
   if (document.querySelectorAll("input[class*='change-colour']").length < 1) {
     enableSubmit = false;
@@ -46,7 +55,7 @@ function checkForm () {
       x[i].classList.remove("red-outline");
     }
     document.getElementById("submit").disabled = false;
-  }, 2000);
+  }, 500);
 }
 
 /////////////////////////////////////////////////////////////////////////////////////
@@ -71,6 +80,7 @@ function generateConfirmationText () {
   var score = document.getElementById("corporation-score").value;
   var expansions = arrayExpansions();
   var result = document.querySelector("input[name='result']:checked").value;
+  var map = document.querySelector('input[name="map"]:checked').value;
   var steps = "";
 
   if (document.getElementById("loss").checked) {
@@ -80,6 +90,7 @@ function generateConfirmationText () {
   document.getElementById("modalResult").innerHTML = result;
   document.getElementById("modalCorporation").innerHTML = corporation;
   document.getElementById("modalScore").innerHTML = score;
+  document.getElementById("modalMap").innerHTML = map;
   document.getElementById("modalExpansions").innerHTML = expansions.toString().replace(/,/g, " - ");
 }
 

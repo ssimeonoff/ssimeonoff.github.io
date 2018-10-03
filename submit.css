@@ -341,7 +341,7 @@ input::placeholder {
 
 .btn-submit:disabled {
   box-shadow: none;
-  opacity: 0.3 !important;
+  opacity: 0.6;
 }
 
 

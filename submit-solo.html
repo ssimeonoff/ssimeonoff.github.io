@@ -40,9 +40,19 @@
            <label for="venus" class="expansion btn-expansions">VENUS</label>
            <input class="checkbox" type="checkbox" id="prelude" value="PRELUDE" name="expansions">
            <label for="prelude" class="expansion btn-expansions" >PRELUDE</label>
-           <input class="checkbox" type="checkbox" id="colonies" value="COLONIES" name="expansions">
-           <label for="colonies" class="expansion btn-expansions">COLONIES</label>
+           <input disabled class="checkbox" type="checkbox" id="colonies" value="COLONIES" name="expansions">
+           <label for="colonies" class="expansion btn-expansions" style="opacity:0.2;background:transparent;">COLONIES</label>
         </fieldset>
+
+        <fieldset class="fieldset-alignment" style="display:inline-block;width:366px;padding-bottom:15px; border-bottom:none">
+          <legend class="fieldset2">MAPS</legend>
+          <input class="checkbox" type="radio" id="tharsis" value="THARSIS" name="map">
+          <label for="tharsis" class="map btn-expansions">THARSIS</label>
+          <input class="checkbox" type="radio" id="hellas" value="HELLAS" name="map">
+          <label for="hellas" class="map btn-expansions" >HELLAS</label>
+          <input class="checkbox" type="radio" id="elysium" value="ELYSIUM" name="map">
+          <label for="elysium" class="map btn-expansions">ELYSIUM</label>
+       </fieldset>
 
          <fieldset class="fieldset-alignment" style="width:366px;padding-bottom: 15px;display:inline-block;border-bottom: none;padding-bottom:15px;">
           <legend class="fieldset2">CORPORATION</legend>
@@ -117,6 +127,10 @@
               <div id="modalExpansions" class="highlight"></div>
             </fieldset>
             <fieldset class="fieldset-alignment2">
+              <legend class="fieldset2">MAPS</legend>
+              <div id="modalMap" class="highlight"></div>
+            </fieldset>
+            <fieldset class="fieldset-alignment2">
               <legend class="fieldset2">CORPORATION</legend>
               <div id="modalCorporation" class="highlight"></div>
             </fieldset>
@@ -124,7 +138,7 @@
               <legend class="fieldset2">SCORE</legend>
               <div id="modalScore" class="highlight"></div>
             </fieldset>
-            <fieldset class="fieldset-alignment2" style="border-bottom: 2px groove threedface;">
+            <fieldset class="fieldset-alignment2">
               <legend class="fieldset2">RESULT</legend>
               <div id="modalResult" class="highlight"></div>
             </fieldset>

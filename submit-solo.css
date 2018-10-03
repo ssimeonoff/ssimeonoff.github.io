@@ -234,7 +234,7 @@ input::placeholder {
 
 .btn-submit:disabled {
   box-shadow: none;
-  opacity: 0.3 !important;
+  opacity: 0.6;
 }
 
 
@@ -285,8 +285,8 @@ input::-webkit-inner-spin-button {
   line-height: 10px;
   font-size: 12px;
   margin-bottom: 2px;
-  color: white;
-  text-shadow: 0 0 0 black, 0 2px 1px black;
+  color: #444;
+  text-shadow: none;
 }
 
 .fieldset-alignment2 {
@@ -305,6 +305,7 @@ input::-webkit-inner-spin-button {
   padding-bottom: 12px;
   font-size: 30px;
   width: 288px;
+  border: none;
 }
 
 .highlight {
@@ -337,7 +338,7 @@ input::-webkit-inner-spin-button {
 
 /* Modal Content */
 #modalContent {
-  margin-top: 20px;
+  margin-top: 30px;
   font-family: Prototype;
   text-align: center;
 
@@ -470,12 +471,14 @@ input::-webkit-inner-spin-button {
   margin-left: auto;
   margin-right: auto;
   width: 440px;
-  height: 470px;
+  height: 560px;
+  border-radius: 20px;
   transform: perspective(700px) rotateX(0deg) scale(1);
   transition: 1s;
 }
 
 .flip-card-inner {
+  border-radius: 20px;
   position: relative;
   width: 100%;
   height: 100%;

@@ -34,9 +34,11 @@ function submitForm(e) {
   var expansions = arrayExpansions();
   var result = document.querySelector("input[name='result']:checked").value;
   var steps = document.getElementById("steps").value;
+  var map = document.querySelector('input[name="map"]:checked').value;
+
 
   // Save Game
-  saveGame(score, corporation, expansions, result, steps);
+  saveGame(score, corporation, expansions, result, steps, map);
 
   //clear form
   document.getElementById("form").reset();
@@ -44,14 +46,15 @@ function submitForm(e) {
 }
 
 // Save Game to firebasejs
-function saveGame(corporation, score, expansions, result, steps) {
+function saveGame(corporation, score, expansions, result, steps, map) {
   var newGameRef = gamesRef.push();
   newGameRef.set({
     corporation: corporation,
     score: score,
     expansions: expansions,
     result: result,
-    steps: steps
+    steps: steps,
+    map: map
   })
 }
 
