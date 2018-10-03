@@ -23,115 +23,115 @@
 
 
 <body background="images/mars.jpg" style="background-color:black;background-repeat:no-repeat; background-size:100%">
-  <div id="buttonsContainer" class="box">
-     <div class="ribbon"><span>SOLO</span></div>
-  <div id="title">
-    <div style="transform:scale(2,1);margin-top:6px;">TERRAFORMING<br> <span style="font-size:26px;transform: scale(2,1);">MARS</span></div>
-   </div>
-   <div id="title2">GAMES<br> <div id="title3" class="odometer" data-minintegerlen="3">0</div></div>
-   <br>
-  <form id="form" name="submit-to-google-sheet">
-     <fieldset class="fieldset-alignment" style="display:inline-block;width:366px;padding-bottom:15px; border-bottom:none">
-       <legend class="fieldset2">EXPANSIONS</legend>
-       <input class="checkbox" type="checkbox" id="venus" value="VENUS" name="expansions">
-       <label for="venus" class="expansion btn-expansions">VENUS</label>
-       <input class="checkbox" type="checkbox" id="prelude" value="PRELUDE" name="expansions">
-       <label for="prelude" class="expansion btn-expansions" >PRELUDE</label>
-       <input class="checkbox" type="checkbox" id="colonies" value="COLONIES" name="expansions">
-       <label for="colonies" class="expansion btn-expansions">COLONIES</label>
-    </fieldset>
 
-     <fieldset class="fieldset-alignment" style="width:366px;padding-bottom: 15px;display:inline-block;border-bottom: none;padding-bottom:15px;">
-      <legend class="fieldset2">CORPORATION</legend>
-      <select  id="corporation" class="drop-down" name="corporations" size="1" onchange="changeColours(id)">
-      <option value disabled selected class="selected-option">&nbsp;SELECT CORPORATION</option>
-      <option disabled value> ----- [ STANDARD ] ----- </option>
-      <option value="BEGINNER">BEGINNER</option>
-      <option value="CREDICOR">CREDICOR</option>
-      <option value="ECOLINE">ECOLINE</option>
-      <option value="HELION">HELION</option>
-      <option value="MINING GUILD">MINING GUILD</option>
-      <option value="INTERPLAN. CINEMATICS">INTERPLAN. CINEMATICS</option>
-      <option value="INVENTRIX">INVENTRIX</option>
-      <option value="PHOBOLOG">PHOBOLOG</option>
-      <option value="THARSIS REPUBLIC">THARSIS REPUBLIC</option>
-      <option value="THORGATE">THORGATE</option>
-      <option value="UNMI">U.N.M.I.</option>
-      <option disabled value> ----- [ CORPORATE ] ----- </option>
-      <option value="TERACTOR">TERACTOR</option>
-      <option value="SATURN SYSTEMS">SATURN SYSTEMS</option>
-      <option disabled value> ----- [ VENUS ] ----- </option>
-      <option value="APHRODITE">APHRODITE</option>
-      <option value="CELESTIC">CELESTIC</option>
-      <option value="MANUTECH">MANUTECH</option>
-      <option value="MORNING STAR">MORNING STAR</option>
-      <option value="VIRON">VIRON</option>
-      <option disabled value> ----- [ PRELUDE ] -----</option>
-      <option value="CHEUNG SHING MARS">CHEUNG SHING MARS</option>
-      <option value="POINT LUNA">POINT LUNA</option>
-      <option value="ROBINSON INDUSTRIES">ROBINSON INDUSTRIES</option>
-      <option value="VALLEY TRUST">VALLEY TRUST</option>
-      <option value="VITOR">VITOR</option>
-      <option disabled value> ----- [ COLONIES ] ----- </option>
-      <option value="ARKLIGHT">ARKLIGHT</option>
-      <option disabled value> ----- [ PROMO ] ----- </option>
-      <option value="ARCADIAN COMMUNITIES">ARCADIAN COMMUNITIES</option>
-      <option value="RECYCLON">RECYCLON</option>
-      <option value="SPLICE">SPLICE</option>
-      <option disabled value> ----- [ FANMADE ] ----- </option>
-      <option value="KUIPER BELT COOP.">KUIPER BELT COOP.</option>
-    </select>
-    <input id="corporation-score" class="corporation-score"  type="number" min="20" max ="200" step="1" id="corporation-score" name="score" placeholder="--" oninput="changeColours2(id)"><br>
-  </fieldset>
+  <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <div class="ribbon"><span>SOLO</span></div>
+      <div id="title">
+        <div style="transform:scale(2,1);margin-top:6px;">TERRAFORMING<br> <span style="font-size:26px;transform: scale(2,1);">MARS</span></div>
+       </div>
+       <div id="title2">GAMES<br> <div id="title3" class="odometer" data-minintegerlen="3">0</div></div>
+       <br>
+      <form id="form" name="submit-to-google-sheet">
+         <fieldset class="fieldset-alignment" style="display:inline-block;width:366px;padding-bottom:15px; border-bottom:none">
+           <legend class="fieldset2">EXPANSIONS</legend>
+           <input class="checkbox" type="checkbox" id="venus" value="VENUS" name="expansions">
+           <label for="venus" class="expansion btn-expansions">VENUS</label>
+           <input class="checkbox" type="checkbox" id="prelude" value="PRELUDE" name="expansions">
+           <label for="prelude" class="expansion btn-expansions" >PRELUDE</label>
+           <input class="checkbox" type="checkbox" id="colonies" value="COLONIES" name="expansions">
+           <label for="colonies" class="expansion btn-expansions">COLONIES</label>
+        </fieldset>
 
-  <fieldset class="fieldset-alignment" style="width:366px;display:inline-block;margin-bottom:15px;">
-   <legend class="fieldset2">RESULT</legend>
-     <input class="checkbox" type="radio" id="win" value="WIN" name="result">
-     <label for="win" class="btn-gametype btn-expansions btn-result win" style="width:238px;" onclick = "disableSteps();">WIN</label>
-     <input class="checkbox" type="radio" id="loss" value="LOSS" name="result">
-     <label for="loss" class="btn-gametype btn-expansions btn-result loss" onclick = "enableSteps();"><span style="transition:margin 0.3s" id="loss_text">LOSS</span></label>
+         <fieldset class="fieldset-alignment" style="width:366px;padding-bottom: 15px;display:inline-block;border-bottom: none;padding-bottom:15px;">
+          <legend class="fieldset2">CORPORATION</legend>
+          <select  id="corporation" class="drop-down" name="corporations" size="1" onchange="changeColours(id)">
+          <option value disabled selected class="selected-option">&nbsp;SELECT CORPORATION</option>
+          <option disabled value> ----- [ STANDARD ] ----- </option>
+          <option value="BEGINNER">BEGINNER</option>
+          <option value="CREDICOR">CREDICOR</option>
+          <option value="ECOLINE">ECOLINE</option>
+          <option value="HELION">HELION</option>
+          <option value="MINING GUILD">MINING GUILD</option>
+          <option value="INTERPLAN. CINEMATICS">INTERPLAN. CINEMATICS</option>
+          <option value="INVENTRIX">INVENTRIX</option>
+          <option value="PHOBOLOG">PHOBOLOG</option>
+          <option value="THARSIS REPUBLIC">THARSIS REPUBLIC</option>
+          <option value="THORGATE">THORGATE</option>
+          <option value="UNMI">U.N.M.I.</option>
+          <option disabled value> ----- [ CORPORATE ] ----- </option>
+          <option value="TERACTOR">TERACTOR</option>
+          <option value="SATURN SYSTEMS">SATURN SYSTEMS</option>
+          <option disabled value> ----- [ VENUS ] ----- </option>
+          <option value="APHRODITE">APHRODITE</option>
+          <option value="CELESTIC">CELESTIC</option>
+          <option value="MANUTECH">MANUTECH</option>
+          <option value="MORNING STAR">MORNING STAR</option>
+          <option value="VIRON">VIRON</option>
+          <option disabled value> ----- [ PRELUDE ] -----</option>
+          <option value="CHEUNG SHING MARS">CHEUNG SHING MARS</option>
+          <option value="POINT LUNA">POINT LUNA</option>
+          <option value="ROBINSON INDUSTRIES">ROBINSON INDUSTRIES</option>
+          <option value="VALLEY TRUST">VALLEY TRUST</option>
+          <option value="VITOR">VITOR</option>
+          <option disabled value> ----- [ COLONIES ] ----- </option>
+          <option value="ARKLIGHT">ARKLIGHT</option>
+          <option disabled value> ----- [ PROMO ] ----- </option>
+          <option value="ARCADIAN COMMUNITIES">ARCADIAN COMMUNITIES</option>
+          <option value="RECYCLON">RECYCLON</option>
+          <option value="SPLICE">SPLICE</option>
+          <option disabled value> ----- [ FANMADE ] ----- </option>
+          <option value="KUIPER BELT COOP.">KUIPER BELT COOP.</option>
+        </select>
+        <input id="corporation-score" class="corporation-score"  type="number" min="20" max ="200" step="1" id="corporation-score" name="score" placeholder="--" oninput="changeColours2(id)"><br>
+      </fieldset>
 
-     <select id="steps" class="drop-down2" name="steps" size="1" onchange="changeColours(id)">
-     <option value="0" disabled selected class="selected-option"><div>BY</option>
-     <option value="1">1 STEP</option>
-     <option value="2">2 STEPS</option>
-     <option value="3">3 STEPS</option>
-     <option value="4">4 STEPS</option>
-     <option value="5">5 STEPS</option>
-     <option value="6">6 STEPS</option>
-     <option value="7">7 STEPS</option>
-     <option value="8">8 STEPS</option>
-     <option value="9">9 STEPS</option>
-   </select>
- </fieldset>
+      <fieldset class="fieldset-alignment" style="width:366px;display:inline-block;margin-bottom:15px;">
+       <legend class="fieldset2">RESULT</legend>
+         <input class="checkbox" type="radio" id="win" value="WIN" name="result">
+         <label for="win" class="btn-gametype btn-expansions btn-result win" style="width:238px;" onclick = "disableSteps();">WIN</label>
+         <input class="checkbox" type="radio" id="loss" value="LOSS" name="result">
+         <label for="loss" class="btn-gametype btn-expansions btn-result loss" onclick = "enableSteps();"><span style="transition:margin 0.3s" id="loss_text">LOSS</span></label>
 
- <div id="modalOne" class="modal">
-   <div class="modal-window">
-     <span class="close">&times;</span>
-     <div id="modalContent" >
-       <fieldset class="fieldset-alignment2" style="margin-top:5px;">
-         <legend class="fieldset2">EXPANSIONS</legend>
-         <div id="modalExpansions" class="highlight"></div>
-       </fieldset>
-       <fieldset class="fieldset-alignment2">
-         <legend class="fieldset2">CORPORATION</legend>
-         <div id="modalCorporation" class="highlight"></div>
-       </fieldset>
-       <fieldset class="fieldset-alignment2">
-         <legend class="fieldset2">SCORE</legend>
-         <div id="modalScore" class="highlight"></div>
-       </fieldset>
-       <fieldset class="fieldset-alignment2" style="border-bottom: 2px groove threedface;">
-         <legend class="fieldset2">RESULT</legend>
-         <div id="modalResult" class="highlight"></div>
-       </fieldset>
-     </div>
-     <input id="confirm" type="submit" value="TERRAFORM" onclick="flipCard();animateTakeOff();"></input>
-   </div>
- </div>
-</form>
-<button  type="button" id="submit" class="button btn-submit " onclick="checkForm()"><div>SUBMIT GAME</div></button>
-<div class="alert">SUBMITTED</div>
+         <select id="steps" class="drop-down2" name="steps" size="1" onchange="changeColours(id)">
+         <option value="0" disabled selected class="selected-option"><div>BY</option>
+         <option value="1">1 STEP</option>
+         <option value="2">2 STEPS</option>
+         <option value="3">3 STEPS</option>
+         <option value="4">4 STEPS</option>
+         <option value="5">5 STEPS</option>
+         <option value="6">6 STEPS</option>
+         <option value="7">7 STEPS</option>
+         <option value="8">8 STEPS</option>
+         <option value="9">9 STEPS</option>
+       </select>
+     </fieldset>
+     <button  type="button" id="submit" class="button btn-submit " onclick="checkForm()"><div>SUBMIT GAME</div></button>
+    </div>
+    <div class="flip-card-back">
+          <span class="close" onclick="flipCardBack()">&times;</span>
+          <div id="modalContent" >
+            <fieldset class="fieldset-alignment2" style="margin-top:5px;">
+              <legend class="fieldset2">EXPANSIONS</legend>
+              <div id="modalExpansions" class="highlight"></div>
+            </fieldset>
+            <fieldset class="fieldset-alignment2">
+              <legend class="fieldset2">CORPORATION</legend>
+              <div id="modalCorporation" class="highlight"></div>
+            </fieldset>
+            <fieldset class="fieldset-alignment2">
+              <legend class="fieldset2">SCORE</legend>
+              <div id="modalScore" class="highlight"></div>
+            </fieldset>
+            <fieldset class="fieldset-alignment2" style="border-bottom: 2px groove threedface;">
+              <legend class="fieldset2">RESULT</legend>
+              <div id="modalResult" class="highlight"></div>
+            </fieldset>
+          </div>
+          <input id="confirm" type="submit" value="TERRAFORM" onclick="animateTakeOff();"></input>
+    </div>
+  </div>
 </div>
 
   <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
