@@ -27,8 +27,7 @@
   width: 261px;
   color: #eee;
   text-shadow: 0 0 1px black, 0 2px 1px black;
-  /*transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;*/
+  transform-style: preserve-3d;
 }
 
 #title2 {
@@ -505,34 +504,29 @@ input::-webkit-inner-spin-button {
 
 .flip-card-front, .flip-card-back {
   position: absolute;
+  border-top: 2px solid rgb(221,221,221);
+  border-left: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
   width: 100%;
   height: 100%;
+  border-radius: 20px;
+
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden; //for Safari/iOS
-  border-radius: 20px;
 }
 
 .flip-card-front {
-  border-top: 2px solid rgb(221,221,221);
-  border-left: 2px solid rgb(221,221,221);
-  border-bottom: 2px solid rgb(137,137,137);
-  border-right: 2px solid rgb(137,137,137);
   background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
-  color: black;
 }
 
 .flip-card-back {
-  border-top: 2px solid rgb(221,221,221);
-  border-left: 2px solid rgb(221,221,221);
-  border-bottom: 2px solid rgb(137,137,137);
-  border-right: 2px solid rgb(137,137,137);
   color: white;
   transform: rotateY(180deg);
   -webkit-transform: rotateY(180deg);
   background-image: url("images/mars2.png");
   background-repeat: no-repeat;
   background-size: 900px 600px;
-  transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;
-
 }
