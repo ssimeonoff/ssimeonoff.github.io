@@ -485,6 +485,7 @@ input::-webkit-inner-spin-button {
   border-radius: 20px;
   transform: perspective(700px) rotateX(0deg) scale(1);
   transition: 1s;
+  -webkit-transition: 1s;
 }
 
 .flip-card-inner {
