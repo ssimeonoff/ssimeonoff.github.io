@@ -90,8 +90,8 @@
   background: #eee;
   color: #222;
   font-family: Prototype;
-  width: 242px;
-  height: 60px;
+  width: 364px;
+  height: 50px;
   font-size: 20px;
   border-radius: 1px;
   border-top: 2px solid rgb(221,221,221);
@@ -103,15 +103,45 @@
   padding-left: 10px;
 }
 
+#winSection, #lossSection {
+  font-family: Prototype;
+  display: inline-block;
+  width: 177px;
+  height: 85px;
+  font-size: 30px;
+  line-height: 85px;
+  text-align: center;
+  background-color: #eee;
+  border-top: 2px solid rgb(221,221,221);
+  border-left: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
+  box-shadow: 0 1px 3px 1px rgba(0,0,0,.8);
+  transition: width 0.2s, background-position 0.2s;
+
+}
+
+#lossSection {
+  background-image: url("images/boy2.png");
+  background-repeat: no-repeat;
+  background-size: 155px 145px;
+  background-position: -23px 80px;
+}
+
+#winSection {
+  margin-left: -2px;
+  background-image: url("images/boy3.png");
+  background-repeat: no-repeat;
+  background-size: 90px 90px;
+  background-position: 130px 80px;
+}
+
 .drop-down2 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
   display: none;
   transform: scale(0);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
   cursor: pointer;
   outline: none;
   background: #eee;
@@ -138,6 +168,8 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
+  display: none;
+  transform: scale(0);
   cursor: pointer;
   background: #eee;
   outline: none;
@@ -154,6 +186,10 @@
   border-bottom: 2px solid rgb(137,137,137);
   border-right: 2px solid rgb(137,137,137);
   box-shadow: 0 1px 3px 1px rgba(0,0,0,.8);
+  transition: transform 0.3s;
+  -webkit-transition: transform 0.3s;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden; //for Safari/iOS
 }
 
 input::placeholder {
@@ -170,8 +206,8 @@ input::placeholder {
     -moz-appearance: none;
     -ms-appearance: none;
     width: 116px;
-    height: 56px;
-    line-height: 56px;
+    height: 46px;
+    line-height: 46px;
     display: inline-block;
     font-family: Prototype;
     outline: none;
@@ -191,6 +227,10 @@ input::placeholder {
     -webkit-backface-visibility: hidden; //for Safari/iOS
     backface-visibility: hidden;
     transition: box-shadow 0.3s;
+}
+
+.btn-result {
+  width: 177px;
 }
 
 #confirm {
@@ -275,14 +315,14 @@ input::-webkit-inner-spin-button {
 }
 
 .change-colours {
-  background: #444;
-  color: white;
+  background-color: #444 !important ;
+  color: white !important ;
   text-shadow: 0 3px 1px black;
   font-size: 20px;
-  box-shadow: inset 0 1px 3px 1px black;
-  border: 2px solid rgb(221,221,221);
-  border-top: 2px solid rgb(137,137,137);
-  border-left: 2px solid rgb(137,137,137);
+  box-shadow: inset 0 1px 3px 1px black !important;
+  border: 2px solid rgb(221,221,221) !important ;
+  border-top: 2px solid rgb(137,137,137) !important ;
+  border-left: 2px solid rgb(137,137,137) !important ;
 }
 
 .fieldset-alignment {
@@ -371,21 +411,6 @@ input::-webkit-inner-spin-button {
   border-left: 2px solid rgb(137,137,137);
 }
 
-.loss {
-  background-image: url("images/boy2.png");
-  background-repeat: no-repeat;
-  background-size: 150px 150px;
-  background-position: 16px 80px;
-  transition: width 0.2s, background-position 0.2s;
-}
-
-.win {
-  background-image: url("images/boy3.png");
-  background-repeat: no-repeat;
-  background-size: 90px 90px;
-  background-position: 144px 80px;
-  transition: background-position 0.2s, width 0.2s;
-}
 
 .box {
   position: relative;

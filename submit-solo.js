@@ -95,13 +95,15 @@ function generateConfirmationText () {
 }
 
 function enableSteps() {
-  document.querySelector(".win").style.backgroundPosition = "144px 80px";
+  document.querySelector(".win").style.backgroundPosition = "15px 80px";
+  document.querySelector("label[for='win']").innerHTML = "WIN";
+
   document.querySelector("label[for='win']").style.width = "118px";
-  document.getElementById("loss_text").style.marginLeft = "-50px";
+  document.getElementById("loss_text").innerHTML = "&nbsp;";
 
   setTimeout(function() {
       document.querySelector(".drop-down2").style.display ="inline-block";
-      document.querySelector(".loss").style.backgroundPosition = "16px -10px";
+      document.querySelector(".loss").style.backgroundPosition = "-23px -10px";
   },200);
   setTimeout(function() {
       document.querySelector(".drop-down2").style.transform ="scale(1)";
@@ -110,15 +112,20 @@ function enableSteps() {
 }
 
 function disableSteps() {
-
-  document.querySelector(".drop-down2").style.transform = "scale(0)";
+    document.querySelector("label[for='win']").style.width = "118px";
+    document.querySelector("label[for='win']").innerHTML = "&nbsp;";
+    document.querySelector(".drop-down2").style.transform = "scale(0)";
     document.querySelector(".drop-down2").style.display = "none";
-    document.querySelector(".loss").style.backgroundPosition = "16px 80px";
-    document.querySelector("label[for='win']").style.width = "238px";
+    document.querySelector(".corporation-score").style.display ="inline-block";
+    document.querySelector(".loss").style.backgroundPosition = "-23px 80px";
+    document.getElementById("loss_text").innerHTML = "LOSS";
     document.getElementById("loss_text").style.marginLeft = "";
   setTimeout(function() {
-    document.querySelector(".win").style.backgroundPosition = "144px 0px";
-  }, 200)
+      document.querySelector(".win").style.backgroundPosition = "15px 0px";
+  },200);
+  setTimeout(function() {
+      document.querySelector(".corporation-score").style.transform ="scale(1)";
+  },300);
 }
 
 function animateTakeOff() {
@@ -187,4 +194,37 @@ function flipCardBack () {
   document.querySelector(".flip-card-inner").style.transform = "rotateY(0deg)";
   document.querySelector(".flip-card-inner").style.webkitTransform = "rotateY(0deg)";
   document.getElementById("confirm").disabled = true;
+}
+
+function activateWin(id) {
+  el = document.getElementById(id);
+  el2 = document.getElementById("lossSection");
+
+  el.classList.add("change-colours");
+  el.innerHTML = "&nbsp;";
+  el.style.backgroundPositionY = "0px";
+  el.style.width = "233px";
+
+  el2.style.width = "120px";
+  el2.style.backgroundPositionY = "80px";
+  el2.classList.remove("change-colours");
+  el2.innerHTML = "LOSS";
+
+}
+
+
+function activateLoss(id) {
+  el = document.getElementById(id);
+  el2 = document.getElementById("winSection");
+
+
+  el.classList.add("change-colours");
+  el.innerHTML = "&nbsp;";
+  el.style.backgroundPositionY = "-9px";
+  el.style.width = "233px";
+
+  el2.style.width = "120px";
+  el2.style.backgroundPositionY = "80px";
+  el2.classList.remove("change-colours");
+  el2.innerHTML = "WIN";
 }
