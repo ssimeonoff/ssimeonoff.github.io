@@ -491,6 +491,7 @@ input::-webkit-inner-spin-button {
   position: absolute;
   width: 100%;
   height: 100%;
+  -webkit-backface-visibility: hidden; //for Safari/iOS
   backface-visibility: hidden;
   border-radius: 20px;
 }
