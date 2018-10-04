@@ -27,8 +27,8 @@
   width: 261px;
   color: #eee;
   text-shadow: 0 0 1px black, 0 2px 1px black;
-  transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;
+  /*transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;*/
 }
 
 #title2 {
