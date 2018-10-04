@@ -146,7 +146,7 @@ function animateTakeOff() {
     el.style.display = "block";
   },3100);
   setTimeout(function(){
-    el.style.marginTop = "150px";
+    el.style.marginTop = "100px";
   },3500);
 
 }
