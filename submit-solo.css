@@ -48,8 +48,6 @@
   color: #eee;
   text-shadow: 0 0 1px black, 0 2px 1px black;
   vertical-align: top;
-  -webkit-backface-visibility: hidden; //for Safari/iOS
-  backface-visibility: hidden;
 }
 
 #title3 {
