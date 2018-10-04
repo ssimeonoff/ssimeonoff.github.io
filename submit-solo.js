@@ -13,34 +13,14 @@ function checkForm () {
     enableSubmit = false;
     document.getElementById("corporation").classList.add("red-outline");
    };
-
-   if (document.querySelectorAll("input[name='map']:checked").length < 1 ) {
-     //if map is not selected
+   //if map is not selected
+  if (document.querySelectorAll("input[name='map']:checked").length < 1 ) {
      x = document.querySelectorAll(".map");
      for (i = 0; i < x.length; i++) {
        x[i].classList.add("red-outline");
      }
      enableSubmit = false;
    }
-  //if score is not selected
-  if (document.querySelectorAll("input[class*='change-colour']").length < 1) {
-    enableSubmit = false;
-    document.getElementById("corporation-score").classList.add("red-outline");
-  };
-  //if result is not selected
-  if (document.querySelectorAll("input[name='result']:checked").length < 1 ) {
-    x = document.querySelectorAll(".btn-result");
-    for (i = 0; i < x.length; i++) {
-      x[i].classList.add("red-outline");
-    }
-    enableSubmit = false;
-  };
-  //if steps is not selected, but loss is
-  if (document.querySelectorAll("select[class='drop-down2 change-colours']").length < 1 && document.getElementById("loss").checked ) {
-    enableSubmit = false;
-    console.log("hi");
-    document.getElementById("steps").classList.add("red-outline");
-   };
 
   //generates the modal text
   if (enableSubmit) {
@@ -132,8 +112,8 @@ function animateTakeOff() {
   el = document.querySelector(".flip-card")
 
   setTimeout(function(){
-    el.style.transform = "perspective(700px) rotateX(80deg) scale(1)";
-    el.style.webkitTransform = "perspective(700px) rotateX(80deg) scale(1)";
+    el.style.transform = "perspective(1500px) rotateX(80deg) scale(1)";
+    el.style.webkitTransform = "perspective(1500px) rotateX(80deg) scale(1)";
 
     el.style.boxShadow = "0 10px 50px darkorange";
   },100);
@@ -142,7 +122,7 @@ function animateTakeOff() {
     el.style.transform = "perspective(700px) rotateX(89deg) scale(0)";
     el.style.webkitTransform = "perspective(700px) rotateX(89deg) scale(0)";
 
-    el.style.marginTop = "-100px";
+    el.style.marginTop = "-150px";
   },1500);
   setTimeout(function(){
     el.style.transition = "1s";
@@ -201,15 +181,20 @@ function activateWin(id) {
   el2 = document.getElementById("lossSection");
 
   el.classList.add("change-colours");
-  el.innerHTML = "&nbsp;";
-  el.style.backgroundPositionY = "0px";
-  el.style.width = "233px";
+  document.getElementById("winLabel").innerHTML = "&nbsp;";
+  el.style.backgroundPositionX = "145px";
+  el.style.width = "253px";
 
-  el2.style.width = "120px";
-  el2.style.backgroundPositionY = "80px";
+  el2.style.width = "100px";
+  el2.style.backgroundPositionX = "-120px";
   el2.classList.remove("change-colours");
-  el2.innerHTML = "LOSS";
-
+  document.getElementById("lossLabel").innerHTML = "LOSS";
+  document.getElementById("steps").style.display ="none";
+  document.getElementById("steps").style.transform = "scale(0)";
+  document.getElementById("corporation-score").style.display = "block";
+  setTimeout(function() {
+    document.getElementById("corporation-score").style.transform = "scale(1)";
+  }, 200)
 }
 
 
@@ -217,14 +202,19 @@ function activateLoss(id) {
   el = document.getElementById(id);
   el2 = document.getElementById("winSection");
 
-
   el.classList.add("change-colours");
-  el.innerHTML = "&nbsp;";
-  el.style.backgroundPositionY = "-9px";
-  el.style.width = "233px";
+  document.getElementById("lossLabel").innerHTML = "&nbsp;";
+  el.style.backgroundPositionX = "-15px";
+  el.style.width = "253px";
 
-  el2.style.width = "120px";
-  el2.style.backgroundPositionY = "80px";
+  el2.style.width = "100px";
+  el2.style.backgroundPositionX = "250px";
   el2.classList.remove("change-colours");
-  el2.innerHTML = "WIN";
+  document.getElementById("winLabel").innerHTML = "WIN";
+  document.getElementById("steps").style.display ="block";
+  document.getElementById("corporation-score").style.display = "none";
+  document.getElementById("corporation-score").style.transform = "scale(0)";
+  setTimeout(function() {
+    document.getElementById("steps").style.transform = "scale(1)";
+  }, 200)
 }

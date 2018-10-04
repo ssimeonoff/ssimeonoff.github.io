@@ -100,11 +100,24 @@
        <legend class="fieldset2">RESULT</legend>
 
          <div id="lossSection" onclick="activateLoss(id)">
-           LOSS
+           <div id="lossLabel">LOSS</div>
+           <select id="steps" class="drop-down2" name="steps" size="1" onchange="changeColours(id)">
+             <option value="0" disabled selected class="selected-option"><div>BY</option>
+               <option value="1">1 STEP</option>
+               <option value="2">2 STEPS</option>
+               <option value="3">3 STEPS</option>
+               <option value="4">4 STEPS</option>
+               <option value="5">5 STEPS</option>
+               <option value="6">6 STEPS</option>
+               <option value="7">7 STEPS</option>
+               <option value="8">8 STEPS</option>
+               <option value="9">9 STEPS</option>
+          </select>
           </div>
 
           <div id="winSection" onclick="activateWin(id)">
-           WIN
+            <div id="winLabel">WIN</div>
+            <input id="corporation-score" class="corporation-score"  type="number" min="20" max ="200" step="1" name="score" placeholder="--" oninput="changeColours2(id)">
           </div>
 
      </fieldset>
