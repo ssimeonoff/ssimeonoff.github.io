@@ -92,7 +92,7 @@
   font-family: Prototype;
   width: 364px;
   height: 50px;
-  font-size: 20px;
+  font-size: 30px;
   border-radius: 1px;
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
@@ -146,13 +146,13 @@
   cursor: pointer;
   outline: none;
   position: absolute;
-  margin-top: -60px;
+  margin-top: -72px;
   margin-left: 120px;
   background: #eee;
   color: #222;
   font-family: Prototype;
   width: 120px;
-  height: 50px;
+  height: 60px;
   font-size: 20px;
   border-radius: 1px;
   border-top: 2px solid rgb(221,221,221);
@@ -181,11 +181,11 @@
   font-family: Prototype;
   text-align: center;
   width: 116px;
-  height: 46px;
+  height: 56px;
   padding: 0px;
   margin-left: 14px;
-  margin-top: -60px;
-  font-size: 20px;
+  margin-top: -72px;
+  font-size: 30px;
   border-radius: 1px;
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
@@ -199,7 +199,7 @@
 }
 
 input::placeholder {
-  color: #222;
+  color: #aaa;
 }
 
 .drop-down:disabled {
@@ -212,8 +212,8 @@ input::placeholder {
     -moz-appearance: none;
     -ms-appearance: none;
     width: 116px;
-    height: 46px;
-    line-height: 46px;
+    height: 36px;
+    line-height: 36px;
     display: inline-block;
     font-family: Prototype;
     outline: none;
@@ -233,6 +233,11 @@ input::placeholder {
     -webkit-backface-visibility: hidden; //for Safari/iOS
     backface-visibility: hidden;
     transition: box-shadow 0.3s;
+}
+
+.map {
+  height: 56px;
+  line-height: 56px;
 }
 
 .btn-result {
@@ -277,7 +282,7 @@ input::placeholder {
   font-family: Prototype;
   height: 60px;
   border-radius: 1px;
-  font-size: 20px;
+  font-size: 30px;
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
   border-bottom: 2px solid rgb(137,137,137);
@@ -324,7 +329,6 @@ input::-webkit-inner-spin-button {
   background-color: #444 !important ;
   color: white !important ;
   text-shadow: 0 3px 1px black;
-  font-size: 20px;
   box-shadow: inset 0 1px 3px 1px black !important;
   border: 2px solid rgb(221,221,221) !important ;
   border-top: 2px solid rgb(137,137,137) !important ;
@@ -355,7 +359,7 @@ input::-webkit-inner-spin-button {
   color: #eee;
   text-shadow: 0 0 1px black, 0 2px 1px black;
   margin-bottom: 10px;
-  height:60px;
+  height:80px;
   vertical-align: top;
   text-align: center;
   border-bottom: none;

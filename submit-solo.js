@@ -4,6 +4,7 @@ $("#form").keypress(function (event) {
     }
 });
 /////////////////////////////////////////////////////////////////////////////////////
+outcome = "";
 function checkForm () {
   //code executed when "submit" is clicked
 
@@ -21,6 +22,21 @@ function checkForm () {
      }
      enableSubmit = false;
    }
+   //if win/loss are not selected
+   if (outcome.length < 1){
+     document.getElementById("winLabel").classList.add("red-outline");
+     document.getElementById("lossLabel").classList.add("red-outline");
+     enableSubmit = false;
+   }
+   //if loss is selected but not steps
+   if (outcome == "loss" && document.querySelectorAll(".drop-down2.change-colours").length <1) {
+     document.getElementById("steps").classList.add("red-outline");
+   }
+   //if win is selected but no score
+   if (outcome == "win" && document.querySelectorAll(".corporation-score.change-colours").length <1) {
+     document.getElementById("corporation-score").classList.add("red-outline");
+   }
+
 
   //generates the modal text
   if (enableSubmit) {
@@ -57,55 +73,21 @@ function changeColours2 (id) {
 function generateConfirmationText () {
 
   var corporation = document.getElementById("corporation").value;
-  var score = document.getElementById("corporation-score").value;
   var expansions = arrayExpansions();
-  var result = document.querySelector("input[name='result']:checked").value;
   var map = document.querySelector('input[name="map"]:checked').value;
-  var steps = "";
+  var result = outcome.toUpperCase();
 
-  if (document.getElementById("loss").checked) {
-    steps = document.getElementById("steps").value;
-    result = result + " - by " + steps + " STEPS";}
+  if (outcome == "win") {
+    result = outcome.toUpperCase() + " - " + document.getElementById("corporation-score").value;
+  } else {
+    result = outcome.toUpperCase() + " by " + document.getElementById("steps").value + " STEPS";
+  }
+
 
   document.getElementById("modalResult").innerHTML = result;
   document.getElementById("modalCorporation").innerHTML = corporation;
-  document.getElementById("modalScore").innerHTML = score;
   document.getElementById("modalMap").innerHTML = map;
   document.getElementById("modalExpansions").innerHTML = expansions.toString().replace(/,/g, " - ");
-}
-
-function enableSteps() {
-  document.querySelector(".win").style.backgroundPosition = "15px 80px";
-  document.querySelector("label[for='win']").innerHTML = "WIN";
-
-  document.querySelector("label[for='win']").style.width = "118px";
-  document.getElementById("loss_text").innerHTML = "&nbsp;";
-
-  setTimeout(function() {
-      document.querySelector(".drop-down2").style.display ="inline-block";
-      document.querySelector(".loss").style.backgroundPosition = "-23px -10px";
-  },200);
-  setTimeout(function() {
-      document.querySelector(".drop-down2").style.transform ="scale(1)";
-  },300);
-
-}
-
-function disableSteps() {
-    document.querySelector("label[for='win']").style.width = "118px";
-    document.querySelector("label[for='win']").innerHTML = "&nbsp;";
-    document.querySelector(".drop-down2").style.transform = "scale(0)";
-    document.querySelector(".drop-down2").style.display = "none";
-    document.querySelector(".corporation-score").style.display ="inline-block";
-    document.querySelector(".loss").style.backgroundPosition = "-23px 80px";
-    document.getElementById("loss_text").innerHTML = "LOSS";
-    document.getElementById("loss_text").style.marginLeft = "";
-  setTimeout(function() {
-      document.querySelector(".win").style.backgroundPosition = "15px 0px";
-  },200);
-  setTimeout(function() {
-      document.querySelector(".corporation-score").style.transform ="scale(1)";
-  },300);
 }
 
 function animateTakeOff() {
@@ -153,12 +135,18 @@ function resetAll () {
   for (i=0; i < x.length; i++) {
     x[i].classList.remove("change-colours");
   }
-    document.querySelector(".win").style.backgroundPosition = "144px 80px";
-    document.querySelector(".loss").style.backgroundPosition = "16px 80px";
-    document.querySelector("label[for='win']").style.width = "238px";
-    document.getElementById("loss_text").style.marginLeft = "";
-    document.querySelector(".drop-down2").style.display = "none";
-    document.querySelector(".drop-down2").style.transform = "scale(0)";
+    document.getElementById("winSection").style.backgroundPosition = "250px 0px";
+    document.getElementById("winSection").style.width = "177px";
+    document.getElementById("winLabel").innerHTML = "WIN";
+
+    document.getElementById("lossSection").style.backgroundPosition = "-120px -9px";
+    document.getElementById("lossSection").style.width = "177px";
+    document.getElementById("lossLabel").innerHTML = "LOSS";
+
+    document.getElementById("corporation-score").style.display = "none";
+    document.getElementById("corporation-score").style.transform = "scale(0)";
+    document.getElementById("steps").style.display = "none";
+    document.getElementById("steps").style.transform = "scale(0)";
     flipCardBack ();
   }, 3000)
 }
@@ -177,8 +165,10 @@ function flipCardBack () {
 }
 
 function activateWin(id) {
+  outcome ="win";
   el = document.getElementById(id);
   el2 = document.getElementById("lossSection");
+
 
   el.classList.add("change-colours");
   document.getElementById("winLabel").innerHTML = "&nbsp;";
@@ -194,13 +184,16 @@ function activateWin(id) {
   document.getElementById("corporation-score").style.display = "block";
   setTimeout(function() {
     document.getElementById("corporation-score").style.transform = "scale(1)";
-  }, 200)
+    document.getElementById("corporation-score").focus();
+  }, 100)
 }
 
 
 function activateLoss(id) {
+  outcome = "loss";
   el = document.getElementById(id);
   el2 = document.getElementById("winSection");
+
 
   el.classList.add("change-colours");
   document.getElementById("lossLabel").innerHTML = "&nbsp;";
@@ -216,5 +209,5 @@ function activateLoss(id) {
   document.getElementById("corporation-score").style.transform = "scale(0)";
   setTimeout(function() {
     document.getElementById("steps").style.transform = "scale(1)";
-  }, 200)
+  }, 100)
 }

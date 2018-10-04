@@ -32,8 +32,8 @@ function submitForm(e) {
   var corporation = document.getElementById("corporation").value;
   var score = document.getElementById("corporation-score").value;
   var expansions = arrayExpansions();
-  var result = document.querySelector("input[name='result']:checked").value;
-  var steps = document.getElementById("steps").value;
+  var result = outcome;
+  var steps = "";
   var map = document.querySelector('input[name="map"]:checked').value;
   if (result == "WIN") { steps = 0}
 
