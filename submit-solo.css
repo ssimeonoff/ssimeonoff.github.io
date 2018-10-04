@@ -104,6 +104,9 @@
 }
 
 .drop-down2 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
   display: none;
   transform: scale(0);
   -webkit-appearance: none;
@@ -159,6 +162,9 @@ input::placeholder {
 }
 
 .btn-expansions {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
     width: 116px;
     height: 56px;
     line-height: 56px;
@@ -178,6 +184,8 @@ input::placeholder {
     background: #eee;
     margin-right: -2px;
     margin-bottom: 2px;
+    -webkit-backface-visibility: hidden; //for Safari/iOS
+    backface-visibility: hidden;
     transition: box-shadow 0.3s;
 }
 
@@ -212,6 +220,8 @@ input::placeholder {
 
 .btn-submit {
   -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
   outline: none;
   cursor: pointer;
   font-family: Prototype;
