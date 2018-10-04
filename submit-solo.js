@@ -170,8 +170,10 @@ function resetAll () {
 
 function flipCard () {
   document.querySelector(".flip-card-inner").style.transform = "rotateY(-180deg)";
+  document.getElementById("confirm").disabled = false;
 }
 
 function flipCardBack () {
   document.querySelector(".flip-card-inner").style.transform = "rotateY(0deg)";
+  document.getElementById("confirm").disabled = true;
 }
