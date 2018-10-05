@@ -184,7 +184,6 @@ function activateWin(id) {
   document.getElementById("corporation-score").style.display = "block";
   setTimeout(function() {
     document.getElementById("corporation-score").style.transform = "scale(1)";
-    document.getElementById("corporation-score").focus();
   }, 100)
 }
 

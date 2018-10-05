@@ -87,8 +87,9 @@
   -ms-appearance: none;
   cursor: pointer;
   outline: none;
-  background: #eee;
-  color: #222;
+  background: rgba(0,0,0,.1);
+  color: white;
+  text-shadow: 0 0 2px black;
   font-family: Prototype;
   width: 364px;
   height: 50px;
@@ -112,7 +113,9 @@
   font-size: 30px;
   line-height: 85px;
   text-align: center;
-  background-color: #eee;
+  background-color: rgba(0,0,0,0.1);
+  color:white;
+  text-shadow: 0 0 2px black;
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
   border-bottom: 2px solid rgb(137,137,137);
@@ -217,7 +220,8 @@ input::placeholder {
     display: inline-block;
     font-family: Prototype;
     outline: none;
-    color: #222;
+    color: white;
+    text-shadow: 0 0 2px black;
     text-align: center;
     cursor: pointer;
     font-size: 20px;
@@ -227,7 +231,7 @@ input::placeholder {
     border-bottom: 2px solid rgb(137,137,137);
     border-right: 2px solid rgb(137,137,137);
     box-shadow: 0 1px 3px 1px rgba(0,0,0,.8);
-    background: #eee;
+    background: rgba(0,0,0,.1);
     margin-right: -2px;
     margin-bottom: 2px;
     -webkit-backface-visibility: hidden; //for Safari/iOS
@@ -291,8 +295,9 @@ input::placeholder {
   width: 393px;
   margin-left: 23px;
   margin-bottom: 10px;
-  color: #222;
-  background: #eee;
+  background-color: rgba(0,0,0,0.5);
+  color:white;
+  text-shadow: 0 0 1px black;
   letter-spacing: 1px;
   transition: 0.3s ease-in-out;
 }
@@ -513,6 +518,12 @@ input::-webkit-inner-spin-button {
 
 .flip-card-front {
   background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
+  background-image: url("images/mars3.png");
+  background-position-x: -460px;
+  filter: grayscale(50%);
+  background-repeat: no-repeat;
+  background-size: 900px 600px;
+
 }
 
 .flip-card-back {
