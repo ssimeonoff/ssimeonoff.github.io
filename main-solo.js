@@ -30,16 +30,16 @@ function submitForm(e) {
 
   //Get values
   var corporation = document.getElementById("corporation").value;
-  var score = document.getElementById("corporation-score").value;
   var expansions = arrayExpansions();
-  var result = outcome;
-  var steps = "";
   var map = document.querySelector('input[name="map"]:checked').value;
-  if (result == "WIN") { steps = 0}
+  
+  if (outcome == "win") {
+    result = document.getElementById("corporation-score").value
+  } else { result = document.getElementById("steps").value }
 
 
   // Save Game
-  saveGame(score, corporation, expansions, result, steps, map);
+  saveGame(corporation, expansions, result, map);
 
   //clear form
   document.getElementById("form").reset();
@@ -47,14 +47,12 @@ function submitForm(e) {
 }
 
 // Save Game to firebasejs
-function saveGame(corporation, score, expansions, result, steps, map) {
+function saveGame(corporation, expansions, result, map) {
   var newGameRef = gamesRef.push();
   newGameRef.set({
     corporation: corporation,
-    score: score,
     expansions: expansions,
     result: result,
-    steps: steps,
     map: map
   })
 }

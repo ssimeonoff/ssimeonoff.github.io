@@ -31,10 +31,12 @@ function checkForm () {
    //if loss is selected but not steps
    if (outcome == "loss" && document.querySelectorAll(".drop-down2.change-colours").length <1) {
      document.getElementById("steps").classList.add("red-outline");
+     enableSubmit = false;
    }
    //if win is selected but no score
    if (outcome == "win" && document.querySelectorAll(".corporation-score.change-colours").length <1) {
      document.getElementById("corporation-score").classList.add("red-outline");
+     enableSubmit = false;
    }
 
 
@@ -131,9 +133,15 @@ function animateTakeOff() {
 function resetAll () {
   //clear the selected colour
   setTimeout(function(){
+  outcome = "";
+
   x = document.querySelectorAll(".change-colours");
   for (i=0; i < x.length; i++) {
     x[i].classList.remove("change-colours");
+  }
+  y = document.querySelectorAll(".change-colours3");
+  for (j=0; j < y.length; j++) {
+    y[j].classList.remove("change-colours3");
   }
     document.getElementById("winSection").style.backgroundPosition = "250px 0px";
     document.getElementById("winSection").style.width = "177px";
@@ -170,14 +178,14 @@ function activateWin(id) {
   el2 = document.getElementById("lossSection");
 
 
-  el.classList.add("change-colours");
+  el.classList.add("change-colours3");
   document.getElementById("winLabel").innerHTML = "&nbsp;";
   el.style.backgroundPositionX = "145px";
   el.style.width = "253px";
 
   el2.style.width = "100px";
   el2.style.backgroundPositionX = "-120px";
-  el2.classList.remove("change-colours");
+  el2.classList.remove("change-colours3");
   document.getElementById("lossLabel").innerHTML = "LOSS";
   document.getElementById("steps").style.display ="none";
   document.getElementById("steps").style.transform = "scale(0)";
@@ -194,14 +202,14 @@ function activateLoss(id) {
   el2 = document.getElementById("winSection");
 
 
-  el.classList.add("change-colours");
+  el.classList.add("change-colours3");
   document.getElementById("lossLabel").innerHTML = "&nbsp;";
   el.style.backgroundPositionX = "-15px";
   el.style.width = "253px";
 
   el2.style.width = "100px";
   el2.style.backgroundPositionX = "250px";
-  el2.classList.remove("change-colours");
+  el2.classList.remove("change-colours3");
   document.getElementById("winLabel").innerHTML = "WIN";
   document.getElementById("steps").style.display ="block";
   document.getElementById("corporation-score").style.display = "none";
