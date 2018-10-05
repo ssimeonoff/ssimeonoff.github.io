@@ -32,7 +32,8 @@ function submitForm(e) {
   var corporation = document.getElementById("corporation").value;
   var expansions = arrayExpansions();
   var map = document.querySelector('input[name="map"]:checked').value;
-  
+
+  //win and loss saves data in result - losses keeps values under 10
   if (outcome == "win") {
     result = document.getElementById("corporation-score").value
   } else { result = document.getElementById("steps").value }
