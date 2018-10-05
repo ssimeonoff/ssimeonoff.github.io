@@ -396,7 +396,7 @@ function histogram (players) {
       bar: {gap: 1},
       chartArea:{left:0,bottom:20,top:0,width:460},
       colors: ['#444444','#888888'],
-      histogram: {bucketSize: 10, minValue: 60, maxValue: 200}
+      histogram: {bucketSize: 10, minValue: 70, maxValue: 190}
     };}
 
     if (players == 3) {
