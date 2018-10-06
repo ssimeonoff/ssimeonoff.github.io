@@ -29,8 +29,8 @@
     <div class="column">
 
     <div class="generalStats">
-      <a class="grid-cell link button" href="https://ssimeonoff.github.io/submit" target="_blank"><div>SUBMIT GAME</div></a>
-      <div class="grid-cell title-cell" style="width:316px;"> <div>GAMES</div></div>
+      <a class="grid-cell link button" href="https://ssimeonoff.github.io/submit" target="_blank"><div>SUBMIT</div></a>
+      <div class="grid-cell title-cell" style="width:316px;height:58px;font-size:30px !important;line-height:58px"> <div>GAMES</div></div>
       <div></div>
       <div></div>
       <div></div>
@@ -45,16 +45,15 @@
 
   <div class="playerStats">
     <div class="grid5">
-      <select  disabled style="opacity:0.5" class="sort-menu" id="sorting"  size="1" name="sort types" onchange="">
-        <option disabled selected value>BY SCORE</option>
+      <select class="sort-menu" id="sorting"  size="1" name="sort types" onchange="">
+        <option selected value="winrate">WINRATE</option>
         <option value="score">SCORE</option>
-        <option value="winrate">WINRATE</option>
         <option value="games">GAMES</option>
       </select>
-    <button class="button btn-grid-cell" onclick="sortByPoints(2)">2P</button>
-    <button class="button btn-grid-cell" onclick="sortByPoints(3)">3P</button>
-    <button class="button btn-grid-cell" onclick="sortByPoints(4)">4P</button>
-    <button class="button btn-grid-cell" onclick="sortByPoints(5)">5P</button>
+    <button class="button btn-grid-cell" onclick="sortBy(2)">2P</button>
+    <button class="button btn-grid-cell" onclick="sortBy(3)">3P</button>
+    <button class="button btn-grid-cell" onclick="sortBy(4)">4P</button>
+    <button class="button btn-grid-cell" onclick="sortBy(5)">5P</button>
   </div>
   <div id="playerStats">
   <div class="grid5 corporation-row">
@@ -354,16 +353,6 @@
       <div class="grid-cell-stats stats-general"><div class="icon colonies-icon icon-align"></div><div id="colonies_games" style="  margin-top:32px;">0%</div></div>
     </div>
 
-      <div class="chartStats">
-        <div class="grid-cell title-cell"> <div>SCORES DISTRIBUTION AND MEAN VALUES</div></div>
-        <div><div class="chart-header">2P</div><div class="chart-div" id="histogram_2"></div><div class="chart-points" id="chart_scores_2">--</div></div>
-        <div><div class="chart-header">3P</div><div class="chart-div" id="histogram_3"></div><div class="chart-points" id="chart_scores_3">--</div></div>
-        <div><div class="chart-header">4P</div><div class="chart-div" id="histogram_4"></div><div class="chart-points" id="chart_scores_4">--</div></div>
-        <div><div class="chart-header">5P</div><div class="chart-div" id="histogram_5"></div><div class="chart-points" id="chart_scores_5">--</div></div>
-      </div>
-  </div>
-
-  <div class="column">
     <div class="generalStats">
       <div class="grid-cell title-cell"> <div>GENERATIONS</div></div>
       <div class="grid-cell title-cell"> <div>2P</div></div>
@@ -383,6 +372,17 @@
       <div class="grid-cell" style="font-size:20px;height:28px;line-height:28px;" id="generations_4_prelude"></div>
       <div class="grid-cell" style="font-size:20px;height:28px;line-height:28px;" id="generations_5_prelude"></div>
     </div>
+
+      <div class="chartStats">
+        <div class="grid-cell title-cell"> <div>SCORES DISTRIBUTION AND MEAN VALUES</div></div>
+        <div><div class="chart-header">2P</div><div class="chart-div" id="histogram_2"></div><div class="chart-points" id="chart_scores_2">--</div></div>
+        <div><div class="chart-header">3P</div><div class="chart-div" id="histogram_3"></div><div class="chart-points" id="chart_scores_3">--</div></div>
+        <div><div class="chart-header">4P</div><div class="chart-div" id="histogram_4"></div><div class="chart-points" id="chart_scores_4">--</div></div>
+        <div><div class="chart-header">5P</div><div class="chart-div" id="histogram_5"></div><div class="chart-points" id="chart_scores_5">--</div></div>
+      </div>
+  </div>
+
+  <div class="column">
 
     <div class="generalStats2">
         <div class="grid-cell title-cell"> <div>MAPS</div></div>

@@ -69,12 +69,12 @@ function generateGameStats (players, corporationName) {
 
   if (totalWins==0 && totalGames==0) {
     //capturing division by 0
-    return  "<div class='points'>--</div>"
+    return  "<div class='winrate'>--</div>"
             ;}
   else {
-    return  "<div class='points'>"+ Math.round(totalWins*100/totalGames) +"<span style='font-size:12px'>%</span></div>" +
-            "<div class='winrate'>"+ Math.round(avg) + "<span style='font-size:12px'>P</span></div>" +
-            "<div class='ratio'>" + " " + totalGames + "</div>"
+    return  "<div class='winrate'><span class='winrateValue'>"+ Math.round(totalWins*100/totalGames) +"</span><span style='font-size:12px'>%</span></div>" +
+            "<div class='points'><span class='scoreValue'>"+ Math.round(avg) + "</span><span style='font-size:12px'>P</span></div>" +
+            "<div class='ratio'><span class='gamesValue'>" + " " + totalGames + "</span></div>"
             ;}
 }
 
@@ -483,7 +483,13 @@ function getUTCtime() {
 
 }
 
-function sortByPoints(players) {
+function sortBy(players) {
+  var sortRule = document.getElementById("sorting").value;
+  sortByRule (players, sortRule);
+  }
+
+function sortByRule(players, sortRule) {
+   //get the sort rule
   // get array of elements
     var myArray = document.querySelectorAll('.corporation-row');
     var count = 0;
@@ -491,9 +497,10 @@ function sortByPoints(players) {
     myArray = [].slice.call(myArray);
     myArray.sort(function (a, b) {
     // convert to integers from strings
-    a = parseInt($(a).find("div[id*='games" + players +"p'] > div[class='points']").text(), 10);
+    a = parseInt($(a).find("div[id*='games" + players +"p'] >  > span[class='"+ sortRule +"Value']").text(), 10);
     if (a == null || isNaN(a)) {a = 0}
-    b = parseInt($(b).find("div[id*='games" + players +"p'] > div[class='points']").text(), 10);
+    b = parseInt($(b).find("div[id*='games" + players +"p'] >  > span[class='"+ sortRule +"Value']").text(), 10);
+    console.log(a + " " + b)
     if (b == null || isNaN(b)) {b = 0}
     count += 2;
     // compare
