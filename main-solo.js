@@ -33,7 +33,7 @@ function submitForm(e) {
   var expansions = arrayExpansions();
   var map = document.querySelector('input[name="map"]:checked').value;
   var timestamp = Math.floor((new Date()).getTime() / 1000);
-  
+
   //win and loss saves data in result - losses keeps values under 10
   if (outcome == "win") {
     result = document.getElementById("corporation-score").value
@@ -45,7 +45,7 @@ function submitForm(e) {
 
   //clear form
   document.getElementById("form").reset();
-  resetAll();
+  resetAll(); 
 }
 
 // Save Game to firebasejs
