@@ -497,12 +497,12 @@ function sortByRule(players, sortRule) {
     myArray = [].slice.call(myArray);
     myArray.sort(function (a, b) {
     // convert to integers from strings
-    a = parseInt($(a).find("div[id*='games" + players +"p'] >  > span[class='"+ sortRule +"Value']").text(), 10);
+    a = parseInt($(a).find("div[id*='games" + players +"p'] > div > span[class='"+ sortRule +"Value']").text(), 10);
     if (a == null || isNaN(a)) {a = 0}
-    b = parseInt($(b).find("div[id*='games" + players +"p'] >  > span[class='"+ sortRule +"Value']").text(), 10);
-    console.log(a + " " + b)
+    b = parseInt($(b).find("div[id*='games" + players +"p'] > div > span[class='"+ sortRule +"Value']").text(), 10);
     if (b == null || isNaN(b)) {b = 0}
     count += 2;
+    console.log (a + " " + b)
     // compare
     if(a < b) {
         return 1;
@@ -512,6 +512,20 @@ function sortByRule(players, sortRule) {
         return 0;
     }
   });
+  //highlight the criterion
+  var y = document.querySelectorAll(".highlighed-sorting");
+  for (j=0; j < y.length ; j++) {
+    y[j].classList.remove("highlighed-sorting");
+  }
+
+
+  //highlight the criterion
+  var x = document.querySelectorAll("div[id*='games" + players +"p'] > div > span[class='"+ sortRule +"Value']");
+  for (i=0; i < x.length ; i++) {
+    x[i].classList.add("highlighed-sorting");
+  }
+
+
   // put sorted results back on page
   $("#playerStats").append(myArray);
   var y = document.querySelectorAll(".corporation-stats");

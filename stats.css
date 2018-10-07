@@ -75,8 +75,14 @@
   border: 2px solid black;
 }
 
+.highlighed-sorting {
+  color: orange;
+  font-size: 23px;
+  text-shadow: 0 0 2px black, 0 2px 2px black;
+}
+
 .layout {
-  width: 2000px;
+  width: 1500px;
   margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
