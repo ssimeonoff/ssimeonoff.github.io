@@ -7,8 +7,6 @@
 @media screen and (max-width: 520px) {
     .layout {
       width: 460px !important;
-      margin-left: 0px;
-      margin-right: 0px;
     }
     .playerStats {
       width: 100%;

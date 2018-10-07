@@ -15,11 +15,13 @@ var gamesRef = firebase.database().ref("games-production");
 var r1 = firebase.database().ref('games-production')
 r1.on('value', (snap) => {
   const val = snap.val()
-  const asArray = Object.keys(val)
+  games = Object.keys(val)
     //.map(key => Object.assign({}, val[key], { key }))
     .map(key => val[key])
-    document.getElementById("title3").innerHTML = asArray.length; //for the odometer counter
+    document.getElementById("title3").innerHTML = games.length; //for the odometer counter
+    pushHistory();
 })
+
 
 
 //listen for form SUBMIT
@@ -177,4 +179,36 @@ function resetAll () {
       disabled[i].disabled = false;
     }
   }
+}
+
+///History functions
+function pushHistory() {
+  //current time in seconds
+  now = Math.floor((new Date()).getTime() / 1000);
+  gameSections = document.querySelectorAll(".grid-cell-history");
+
+  for(i=0; i < gameSections.length ; i++) {
+
+    //game timestamp in seconds
+    timestamp = games[games.length-1-i]["timestamp"];
+    time = now - timestamp;
+    gameSections[i].querySelector(".history-section-time").innerHTML = compareTime(time);
+
+    //the corporations array
+    corporationsSections = gameSections[i].querySelectorAll(".history-section-corporation");
+    scoresSections = gameSections[i].querySelectorAll(".history-section-score");
+    var corporationsArray =  games[games.length-1-i]["corporations"];
+    var scoresArray = games[games.length-1-i]["scores"];
+    for (j=0; j < scoresArray.length; j++) {
+      corporationsSections[j].innerHTML = corporationsArray[j];
+      scoresSections[j].innerHTML = scoresArray[j];
+    }
+  }
+
+}
+
+function compareTime(time) {
+  if (time < 120) {return "just now"}
+  if (time >= 120 && time < 3600) {return Math.floor(time/60) + " minutes ago"}
+  if (time >= 3600) {return Math.floor(time/3600) + " hours ago"}
 }

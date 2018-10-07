@@ -13,6 +13,9 @@
     .modal-window {
       margin-top: 100px !important;
     }
+    .layout {
+      width: 446px !important;
+    }
 
 }
 
@@ -53,7 +56,7 @@
   padding-top: 5px;
   text-align: center;
   border-radius: 1px;
-  font-size: 16px;
+  font-size: 18px;
   border-bottom: 2px solid rgb(221,221,221);
   border-right: 2px solid rgb(221,221,221);
   border-top: 2px solid rgb(137,137,137);
@@ -76,15 +79,14 @@
     background: #cccccc;
     position: relative;
     background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
-    border-top: 2px solid rgb(221,221,221);
-    border-left: 2px solid rgb(221,221,221);
-    border-bottom: 2px solid rgb(137,137,137);
-    border-right: 2px solid rgb(137,137,137);
+    border-top: 4px solid rgb(221,221,221);
+    border-left: 4px solid rgb(221,221,221);
+    border-bottom: 4px solid rgb(137,137,137);
+    border-right: 4px solid rgb(137,137,137);
     border-radius: 2px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
-    margin-bottom: 20px;
     padding: 20px;
     padding-bottom: 10px;
     width: 812px;
@@ -542,7 +544,8 @@ input::-webkit-inner-spin-button {
   background: #cc3333;
   box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
   position: absolute;
-  top: 17px; left: -23px;
+  top: 14px;
+  left: -26px;
   letter-spacing: 2px;
   text-shadow: 0 0 1px black;
 }
@@ -563,4 +566,96 @@ input::-webkit-inner-spin-button {
   border-right: 3px solid #808080;
   border-bottom: 3px solid transparent;
   border-top: 3px solid #808080;
+}
+
+/*History classes */
+.generalStats-history {
+    display: grid;
+    grid-template-columns: 222px 222px;
+    position: relative;
+    font-family: Prototype;
+    background: #ccc;
+    color: #222;
+    background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
+    border-radius: 2px;
+    width: 444px;
+    position: relative;
+    text-align: center;
+    margin-top: 10px;
+    border-top: 2px solid rgb(221,221,221);
+    border-left: 2px solid rgb(221,221,221);
+    border-bottom: 2px solid rgb(137,137,137);
+    border-right: 2px solid rgb(137,137,137);
+}
+
+.grid-cell-history {
+  display: grid;
+  grid-template-columns: 182px 36px;;
+  text-align: center;
+  color: #222;
+  font-size: 15px;
+  border-radius: 1px;
+  border-top: 2px solid rgb(221,221,221);
+  border-left: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
+}
+
+.history-section-corporation {
+  display: inline-block;
+  border-top: 1px solid rgb(221,221,221);
+  border-left: 1px solid rgb(221,221,221);
+  border-bottom: 1px solid rgb(137,137,137);
+  border-right: 1px solid rgb(137,137,137);
+  height: 25px;
+  line-height: 25px;
+}
+.history-section-score {
+  display: inline-block;
+  border-top: 1px solid rgb(221,221,221);
+  border-left: 1px solid rgb(221,221,221);
+  border-bottom: 1px solid rgb(137,137,137);
+  border-right: 1px solid rgb(137,137,137);
+  height: 25px;
+  line-height: 25px;
+}
+.history-section-time {
+  display: inline-block;
+  border-top: 1px solid rgb(221,221,221);
+  border-left: 1px solid rgb(221,221,221);
+  border-bottom: 1px solid rgb(137,137,137);
+  border-right: 1px solid rgb(137,137,137);
+  height: 20px;
+  line-height: 20px;
+  width: 212px;
+  color: white;
+  text-shadow: 0 0 1px black, 0 1px 1px black;
+  text-align: left;
+  padding-left: 4px;
+}
+
+.title-cell {
+  width: 440px;
+  color:white;
+  font-size: 18px;
+  line-height: 40px;
+  height: 40px;
+  text-shadow: 0 0 1px black, 0 2px 2px black;
+  border-top: 2px solid rgb(221,221,221);
+  border-left: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
+}
+
+.layout {
+  width: 1500px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.column {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 10px;
 }
