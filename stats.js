@@ -23,7 +23,7 @@ gamesRef.on('value', (snap) => {
   pushAwardsStats();
   pushAverageGenerations();
   pushHistograms();
-  getUTCtime();
+  pushHistory();
 });
 
 function generateGameStats (players, corporationName) {
@@ -479,10 +479,6 @@ function generateScoresArray (players) {
   return scores;
 }
 
-function getUTCtime() {
-
-}
-
 function sortBy(players) {
   var sortRule = document.getElementById("sorting").value;
   sortByRule (players, sortRule);
@@ -538,4 +534,35 @@ function sortByRule(players, sortRule) {
     for (i=0; i < x.length; i++) {
       x[i].style.opacity = 1;
     }
+}
+
+function pushHistory() {
+  //current time in seconds
+  now = Math.floor((new Date()).getTime() / 1000);
+  gameSections = document.querySelectorAll(".grid-cell-history");
+
+  for(i=0; i < gameSections.length ; i++) {
+
+    //game timestamp in seconds
+    timestamp = games[games.length-1-i]["timestamp"];
+    time = now - timestamp;
+    gameSections[i].querySelector(".history-section-time").innerHTML = compareTime(time);
+
+    //the corporations array
+    corporationsSections = gameSections[i].querySelectorAll(".history-section-corporation");
+    scoresSections = gameSections[i].querySelectorAll(".history-section-score");
+    var corporationsArray =  games[games.length-1-i]["corporations"];
+    var scoresArray = games[games.length-1-i]["scores"];
+    for (j=0; j < scoresArray.length; j++) {
+      corporationsSections[j].innerHTML = corporationsArray[j];
+      scoresSections[j].innerHTML = scoresArray[j];
+    }
+  }
+
+}
+
+function compareTime(time) {
+  if (time < 120) {return "just now"}
+  if (time >= 120 && time < 3600) {return Math.floor(time/60) + " minutes ago"}
+  if (time >= 3600) {return Math.floor(time/3600) + " hours ago"}
 }
