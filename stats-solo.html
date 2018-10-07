@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="description" content="TERRAFORMING MARS GAMES STATS">
+  <meta name="keywords" content="HTML,CSS,JavaScript">
+  <link rel="shortcut icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="stats.css">
+  <link rel="stylesheet" href="odometer.css">
+  <meta name="viewport" content='width=500, user-scalable=0'>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116626580-5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-116626580-5');
+</script>
+
+</head>
+
+<body background="images/mars.jpg" style="background-color:black;background-repeat:no-repeat; background-size:100%">
+  <div class="layout">
+    <div class="column">
+
+    <div class="generalStats">
+      <a class="link button" href="https://ssimeonoff.github.io/submit" target="_blank"><div>SUBMIT</div></a>
+      <div class="grid-cell title-cell" style="width:316px;height:58px;font-size:30px !important;line-height:58px"> <div>GAMES</div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+
+      <div class="grid-cell-stats stats-general"><div class="header-cell" style="margin-top: 3px;">TOTAL</div><div id="total_games" class="odometer header-cell" data-minintegerlen="3" style="font-size:26px"></div></div>
+      <div class="grid-cell-stats stats-general"><div class="header-cell" style="margin-top: 3px;">2P</div><div id="2p_games" class="odometer header-cell" data-minintegerlen="2" style="font-size:26px"></div></div>
+      <div class="grid-cell-stats stats-general"><div class="header-cell" style="margin-top: 3px;">3P</div><div id="3p_games" class="odometer header-cell" data-minintegerlen="2" style="font-size:26px"></div></div>
+      <div class="grid-cell-stats stats-general"><div class="header-cell" style="margin-top: 3px;">4P</div><div id="4p_games" class="odometer header-cell" data-minintegerlen="2" style="font-size:26px"></div></div>
+      <div class="grid-cell-stats stats-general"><div class="header-cell" style="margin-top: 3px;">5P</div><div id="5p_games" class="odometer header-cell" data-minintegerlen="2" style="font-size:26px"></div></div>
+    </div>
+
+
+    <div class="generalStats-history">
+      <div class="grid-cell title-cell" style="width:455px;">HISTORY</div>
+      <div></div>
+
+      <div class="grid-cell-history"></div>
+      <div class="grid-cell-history"></div>
+
+      <div class="grid-cell-history"></div>
+      <div class="grid-cell-history"></div>
+
+      <div class="grid-cell-history"></div>
+      <div class="grid-cell-history"></div>
+    </div>
+
+  </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="odometer.js"></script>
+  <script src="stats-solo.js"></script>
+
+</body>
+</html>

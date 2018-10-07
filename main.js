@@ -39,9 +39,11 @@ function submitForm(e) {
   var map = document.querySelector('input[name="map"]:checked').value;
   var milestones = arrayMilestones();
   var awards = arrayAwards();
+  var timestamp = Math.floor((new Date()).getTime() / 1000);
+
 
   // Save Game
-  saveGame(players, generations, corporations, scores, expansions, draft, map, milestones, awards);
+  saveGame(players, generations, corporations, scores, expansions, draft, map, milestones, awards, timestamp);
   clearInputs(); //to clear the drop-downs and inputs after the submission
 
   //Show aleart
@@ -81,7 +83,7 @@ function submitForm(e) {
 }
 
 // Save Game to firebasejs
-function saveGame(players, generations, corporations, scores, expansions, draft, map, milestones, awards) {
+function saveGame(players, generations, corporations, scores, expansions, draft, map, milestones, awards, timestamp) {
   var newGameRef = gamesRef.push();
   newGameRef.set({
     players: players,
@@ -92,7 +94,8 @@ function saveGame(players, generations, corporations, scores, expansions, draft,
     draft: draft,
     map: map,
     milestones: milestones,
-    awards: awards
+    awards: awards,
+    timestamp: timestamp
   })
 }
 
