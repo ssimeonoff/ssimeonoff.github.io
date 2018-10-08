@@ -255,8 +255,8 @@
   border-left: 1px solid rgb(221,221,221);
   border-bottom: 1px solid rgb(137,137,137);
   border-right: 1px solid rgb(137,137,137);
-  height: 20px;
-  line-height: 20px;
+  height: 25px;
+  line-height: 25px;
 }
 .history-section-score {
   display: inline-block;
@@ -264,8 +264,8 @@
   border-left: 1px solid rgb(221,221,221);
   border-bottom: 1px solid rgb(137,137,137);
   border-right: 1px solid rgb(137,137,137);
-  height: 20px;
-  line-height: 20px;
+  height: 25px;
+  line-height: 25px;
 }
 .history-section-time {
   display: inline-block;
@@ -273,14 +273,35 @@
   border-left: 1px solid rgb(221,221,221);
   border-bottom: 1px solid rgb(137,137,137);
   border-right: 1px solid rgb(137,137,137);
-  height: 20px;
-  line-height: 20px;
-  width: 220px;
+  height: 25px;
+  line-height: 25px;
   color: white;
   text-shadow: 0 0 1px black, 0 1px 1px black;
   text-align: left;
   padding-left: 4px;
 }
+
+.history-section-generation {
+  display: inline-block;
+  border-top: 1px solid rgb(221,221,221);
+  border-left: 1px solid rgb(221,221,221);
+  border-bottom: 1px solid rgb(137,137,137);
+  border-right: 1px solid rgb(137,137,137);
+  height: 25px;
+  line-height: 25px;
+}
+.history-section-generation-value {
+  position: absolute;
+  margin-left: 5px;
+  margin-top: 4px;
+  width: 22px;
+  border-radius: 2px;
+  height: 16px;
+  line-height: 16px;
+  background: #eee;
+  border: 1px solid #444;
+}
+
 
 .header-cell {
   color:white;

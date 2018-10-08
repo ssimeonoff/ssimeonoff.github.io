@@ -557,8 +557,10 @@ function pushHistory() {
       corporationsSections[j].innerHTML = corporationsArray[j];
       scoresSections[j].innerHTML = scoresArray[j];
     }
+    // the generations
+    var generations =  games[games.length-1-i]["generations"];
+    gameSections[i].querySelector(".history-section-generation").innerHTML = "<div class='history-section-generation-value'>" + generations + "</div>";
   }
-
 }
 
 function compareTime(time) {
