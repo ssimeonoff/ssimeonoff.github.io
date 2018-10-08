@@ -546,7 +546,7 @@ function pushHistory() {
     //game timestamp in seconds
     timestamp = games[games.length-1-i]["timestamp"];
     time = now - timestamp;
-    gameSections[i].querySelector(".history-section-time").innerHTML = compareTime(time);
+    gameSections[i].querySelector(".history-section-time-value").innerHTML = compareTime(time);
 
     //the corporations array
     corporationsSections = gameSections[i].querySelectorAll(".history-section-corporation");
