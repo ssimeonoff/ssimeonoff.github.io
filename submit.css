@@ -658,15 +658,19 @@ input::-webkit-inner-spin-button {
 
 .title-cell {
   width: 440px;
-  color:white;
-  font-size: 18px;
-  line-height: 40px;
-  height: 40px;
+  color: white;
+  font-size: 16px;
+  line-height: 25px;
+  height: 25px;
   text-shadow: 0 0 1px black, 0 2px 2px black;
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
   border-bottom: 2px solid rgb(137,137,137);
   border-right: 2px solid rgb(137,137,137);
+}
+
+.highlight-winner {
+  background-color: rgba(0,0,0,0.2);
 }
 
 .layout {
@@ -681,3 +685,58 @@ input::-webkit-inner-spin-button {
   vertical-align: top;
   margin-right: 10px;
 }
+
+.history-section-time-value {
+  display: inline-block;
+  width: 91px;
+}
+.history-section-expansions {
+  display: inline-block;
+  text-align: right;
+  width: 80px;
+}
+
+.history-section-expansion-ribbon {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.icon:after {
+        position: absolute;
+        font-size: 11px;
+        line-height: 15px;
+        width: 16px;
+        height:16px;
+        text-align: center;
+        color: white;
+        border-radius: 50%;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.7);
+        content: "";
+        background-size: 10px 10px !important;
+        background-position: bottom 4px right 3px !important;
+        background-repeat: no-repeat !important;
+  }
+  .icon-align2 {
+    margin-top:-13px;
+  }
+  .corporate-era-icon:after {
+    background-color: #cc3333;
+    background-image: url("images/triangle16.png");
+  }
+
+  .venus-icon:after {
+    background: rgb(84,150,201);
+    background-image: url("images/triangle16.png");
+    transform: rotate(180deg);
+  }
+
+  .prelude-icon:after {
+    background: rgb(235,118,171);
+    background-image: url("images/triangle16.png");
+    transform: rotate(-90deg);
+  }
+
+  .colonies-icon:after {
+    background-color: #444;
+    background-image: url("images/triangle16.png");
+  }

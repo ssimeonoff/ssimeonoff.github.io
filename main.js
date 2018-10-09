@@ -192,25 +192,70 @@ function pushHistory() {
     //game timestamp in seconds
     timestamp = games[games.length-1-i]["timestamp"];
     time = now - timestamp;
-    gameSections[i].querySelector(".history-section-time").innerHTML = compareTime(time);
+    gameSections[i].querySelector(".history-section-time-value").innerHTML = compareTime(time);
 
     //the corporations array
     corporationsSections = gameSections[i].querySelectorAll(".history-section-corporation");
     scoresSections = gameSections[i].querySelectorAll(".history-section-score");
     var corporationsArray =  games[games.length-1-i]["corporations"];
     var scoresArray = games[games.length-1-i]["scores"];
+    var winnerIndex = indexOfMax(scoresArray);
+    var winningScore = scoresArray[winnerIndex];
+
     for (j=0; j < scoresArray.length; j++) {
       corporationsSections[j].innerHTML = corporationsArray[j];
       scoresSections[j].innerHTML = scoresArray[j];
+      if (scoresArray[j] == winningScore) {
+        corporationsSections[j].classList.add("highlight-winner");
+        scoresSections[j].classList.add("highlight-winner");
+      }
     }
     // the generations
     var generations =  games[games.length-1-i]["generations"];
     gameSections[i].querySelector(".history-section-generation").innerHTML = "<div class='history-section-generation-value'>" + generations + "</div>";
+
+    // the generations
+    var generations =  games[games.length-1-i]["generations"];
+    gameSections[i].querySelector(".history-section-generation").innerHTML = "<div class='history-section-generation-value'>" + generations + "</div>";
+    //the expansions
+    var expansionsHTML = "";
+    expansionsArray = games[games.length-1-i]["expansions"];
+    if (expansionsArray == undefined) {expansionsArray = []}
+    if (expansionsArray.indexOf("CORPORATE") > -1) {
+      expansionsHTML = expansionsHTML + '<div class="history-section-expansion-ribbon"><div class="icon corporate-era-icon icon-align2"></div></div>'
+    }
+    if (expansionsArray.indexOf("VENUS") > -1) {
+      expansionsHTML = expansionsHTML + '<div class="history-section-expansion-ribbon"><div class="icon venus-icon icon-align2"></div></div>'
+    }
+    if (expansionsArray.indexOf("PRELUDE") > -1) {
+      expansionsHTML = expansionsHTML + '<div class="history-section-expansion-ribbon"><div class="icon prelude-icon icon-align2"></div></div>'
+    }
+    if (expansionsArray.indexOf("COLONIES") > -1) {
+      expansionsHTML = expansionsHTML + '<div class="history-section-expansion-ribbon"><div class="icon colonies-icon icon-align2"></div></div>'
+    }
+    console.log(gameSections[i])
+    gameSections[i].querySelector(".history-section-expansions").innerHTML = expansionsHTML;
   }
 }
 
 function compareTime(time) {
-  if (time < 120) {return "just now"}
-  if (time >= 120 && time < 3600) {return Math.floor(time/60) + " minutes ago"}
-  if (time >= 3600) {return Math.floor(time/3600) + " hours ago"}
+  if (time < 120) {return "Just now"}
+  if (time >= 120 && time < 3600) {return "&#x1F557" + Math.floor(time/60) + " minutes"}
+  if (time >= 3600) {return  Math.floor(time/3600) + " hours"}
+}
+
+function indexOfMax(arr) {
+    if (arr.length === 0) {
+        return -1;
+    }
+    var max = parseInt(arr[0]);
+    var maxIndex = 0;
+
+    for (var i = 1; i < arr.length; i++) {
+        if (parseInt(arr[i]) > max) {
+            maxIndex = i;
+            max = parseInt(arr[i]);
+        }
+    }
+    return maxIndex;
 }

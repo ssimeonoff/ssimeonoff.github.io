@@ -790,21 +790,6 @@
         background-repeat: no-repeat !important;
   }
 
-  .icon2:after {
-          position: absolute;
-          font-size: 11px;
-          line-height: 15px;
-          width: 10px;
-          height:13px;
-          text-align: center;
-          color: white;
-          box-shadow: 0 0 0 1px rgba(0,0,0,0.7);
-          content: "";
-          background-size: 10px 10px !important;
-          background-position: bottom 4px right 3px !important;
-          background-repeat: no-repeat !important;
-    }
-
   .icon-align {
     margin-left: -15px;
     margin-top: 9px;
