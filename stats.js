@@ -258,6 +258,8 @@ function pushGeneralStats() {
   document.getElementById("corporate_games").innerHTML =  Math.round(checkForElement("expansions", "CORPORATE")*100/games.length) + "%"
   document.getElementById("venus_games").innerHTML =  Math.round(checkForElement("expansions", "VENUS")*100/games.length) + "%"
   document.getElementById("prelude_games").innerHTML =  Math.round(checkForElement("expansions", "PRELUDE")*100/games.length) + "%"
+  document.getElementById("colonies_games").innerHTML =  Math.round(checkForElement("expansions", "COLONIES")*100/games.length) + "%"
+
 }
 
 function checkForElement (subArrayName, element) {
@@ -560,6 +562,30 @@ function pushHistory() {
     // the generations
     var generations =  games[games.length-1-i]["generations"];
     gameSections[i].querySelector(".history-section-generation").innerHTML = "<div class='history-section-generation-value'>" + generations + "</div>";
+    //the expansions
+    var expansionsHTML = "";
+    expansionsArray = games[games.length-1-i]["expansions"];
+    if (expansionsArray == undefined) {expansionsArray = []}
+    console.log(expansionsArray);
+    if (expansionsArray.indexOf("CORPORATE") > -1) {
+      expansionsHTML = expansionsHTML + '<div class="history-section-expansion-ribbon"><div class="icon corporate-era-icon icon-align2"></div></div>'
+    }
+    if (expansionsArray.indexOf("VENUS") > -1) {
+      expansionsHTML = expansionsHTML + '<div class="history-section-expansion-ribbon"><div class="icon venus-icon icon-align2"></div></div>'
+    }
+    if (expansionsArray.indexOf("PRELUDE") > -1) {
+      expansionsHTML = expansionsHTML + '<div class="history-section-expansion-ribbon"><div class="icon prelude-icon icon-align2"></div></div>'
+    }
+    if (expansionsArray.indexOf("COLONIES") > -1) {
+      expansionsHTML = expansionsHTML + '<div class="history-section-expansion-ribbon"><div class="icon colonies-icon icon-align2"></div></div>'
+    }
+    gameSections[i].querySelector(".history-section-expansions").innerHTML = expansionsHTML;
+    //highlight the winner corps
+    winnerIndex = indexOfMax(scoresArray);
+    corporationsSections[winnerIndex].classList.add("highlight-winner");
+    scoresSections[winnerIndex].classList.add("highlight-winner");
+
+
   }
 }
 

@@ -69,6 +69,10 @@
   height: 58px !important;
 }
 
+.highlight-winner {
+  background-color: rgba(0,0,0,0.1);
+}
+
 .highlighed-column {
   border: 2px solid black;
 }
@@ -284,13 +288,18 @@
 
 .history-section-time-value {
   display: inline-block;
-  width: 110px;
+  width: 99px;
 }
 
-.history-section-time-ribbons {
+.history-section-expansions {
   display: inline-block;
-  margin-right: 10px;
+  text-align: right;
+  width: 80px;
+}
 
+.history-section-expansion-ribbon {
+  display: inline-block;
+  margin-right: 20px;
 }
 
 
