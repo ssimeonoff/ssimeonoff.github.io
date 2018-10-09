@@ -284,12 +284,12 @@
 
 .history-section-time-value {
   display: inline-block;
-  width: 98px;
+  width: 110px;
 }
 
 .history-section-time-ribbons {
   display: inline-block;
-  width: 16px;
+  margin-right: 10px;
 
 }
 
@@ -308,7 +308,6 @@
   margin-left: 5px;
   margin-top: 3px;
   width: 22px;
-  border-radius: 2px;
   height: 17px;
   line-height: 17px;
   background: #eee;
@@ -782,6 +781,21 @@
         background-repeat: no-repeat !important;
   }
 
+  .icon2:after {
+          position: absolute;
+          font-size: 11px;
+          line-height: 15px;
+          width: 10px;
+          height:13px;
+          text-align: center;
+          color: white;
+          box-shadow: 0 0 0 1px rgba(0,0,0,0.7);
+          content: "";
+          background-size: 10px 10px !important;
+          background-position: bottom 4px right 3px !important;
+          background-repeat: no-repeat !important;
+    }
+
   .icon-align {
     margin-left: -15px;
     margin-top: 9px;
@@ -795,11 +809,18 @@
   background-color: #cc3333;
   background-image: url("images/triangle16.png");
 }
+.corporate-era-icon2:after {
+  background-color: #cc3333;
+}
+
 
 .venus-icon:after {
   background: rgb(84,150,201);
   background-image: url("images/triangle16.png");
   transform: rotate(180deg);
+}
+.venus-icon2:after {
+  background: rgb(84,150,201);
 }
 
 .prelude-icon:after {
@@ -807,11 +828,16 @@
   background-image: url("images/triangle16.png");
   transform: rotate(-90deg);
 }
+.prelude-icon2:after {
+  background: rgb(235,118,171);
+}
 
 .colonies-icon:after {
   background-color: #444;
   background-image: url("images/triangle16.png");
-
+}
+.colonies-icon2:after {
+  background-color: #444;
 }
 
 .promo-icon:after {
@@ -821,16 +847,4 @@
     height: 8px;
     color: white;
     content: "\0020";
-}
-
-.fanmade-icon:after {
-    background: #222;
-    border: 2px solid #eee;
-    width: 14px;
-    height: 14px;
-    color: #eee;
-    content: "F";
-    font-size: 12px;
-    line-height: 14px;
-    box-shadow: 0 0 0 1px rgba(0,0,0,0.8), 0 0 0 1px rgba(0,0,0,0.4);
 }
