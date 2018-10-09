@@ -57,8 +57,9 @@ function generateGameStats (players, corporationName) {
     corpIndex = corpsArray.indexOf(corporationName); //find the corporation index
     //findind the winning score index
     winnerIndex = indexOfMax(scoresArray);
+    winningScore = Math.max(...scoresArray);
     //counting a win if corporation and winning score indexes match
-    if (winnerIndex == corpIndex) {totalWins++;}
+    if (scoresArray[corpIndex] == winningScore) {totalWins++;}
     //calculating the average score
      if (parseInt(scoresArray[corpIndex])>0) {
      sum += parseInt(scoresArray[corpIndex]);
@@ -99,6 +100,11 @@ function indexOfMax(arr) {
 
 function pushTheData() {
   //standard
+  document.getElementById("games2p-beginner").innerHTML = generateGameStats(2, "BEGINNER");
+  document.getElementById("games3p-beginner").innerHTML = generateGameStats(3, "BEGINNER");
+  document.getElementById("games4p-beginner").innerHTML = generateGameStats(4, "BEGINNER");
+  document.getElementById("games5p-beginner").innerHTML = generateGameStats(5, "BEGINNER");
+
   document.getElementById("games2p-credicor").innerHTML = generateGameStats(2, "CREDICOR");
   document.getElementById("games3p-credicor").innerHTML = generateGameStats(3, "CREDICOR");
   document.getElementById("games4p-credicor").innerHTML = generateGameStats(4, "CREDICOR");
@@ -555,10 +561,18 @@ function pushHistory() {
     scoresSections = gameSections[i].querySelectorAll(".history-section-score");
     var corporationsArray =  games[games.length-1-i]["corporations"];
     var scoresArray = games[games.length-1-i]["scores"];
+    var winnerIndex = indexOfMax(scoresArray);
+    var winningScore = scoresArray[winnerIndex];
+
     for (j=0; j < scoresArray.length; j++) {
       corporationsSections[j].innerHTML = corporationsArray[j];
       scoresSections[j].innerHTML = scoresArray[j];
+      if (scoresArray[j] == winningScore) {
+        corporationsSections[j].classList.add("highlight-winner");
+        scoresSections[j].classList.add("highlight-winner");
+      }
     }
+
     // the generations
     var generations =  games[games.length-1-i]["generations"];
     gameSections[i].querySelector(".history-section-generation").innerHTML = "<div class='history-section-generation-value'>" + generations + "</div>";
@@ -566,7 +580,6 @@ function pushHistory() {
     var expansionsHTML = "";
     expansionsArray = games[games.length-1-i]["expansions"];
     if (expansionsArray == undefined) {expansionsArray = []}
-    console.log(expansionsArray);
     if (expansionsArray.indexOf("CORPORATE") > -1) {
       expansionsHTML = expansionsHTML + '<div class="history-section-expansion-ribbon"><div class="icon corporate-era-icon icon-align2"></div></div>'
     }
@@ -580,11 +593,6 @@ function pushHistory() {
       expansionsHTML = expansionsHTML + '<div class="history-section-expansion-ribbon"><div class="icon colonies-icon icon-align2"></div></div>'
     }
     gameSections[i].querySelector(".history-section-expansions").innerHTML = expansionsHTML;
-    //highlight the winner corps
-    winnerIndex = indexOfMax(scoresArray);
-    corporationsSections[winnerIndex].classList.add("highlight-winner");
-    scoresSections[winnerIndex].classList.add("highlight-winner");
-
 
   }
 }
