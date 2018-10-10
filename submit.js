@@ -203,18 +203,18 @@ function generateConfirmationText () {
   //Get values
   var players = document.querySelector('input[name="players"]:checked').value;
   var generations = document.getElementById("generations").value;
-  var corporations = arrayCorporations();
-  var scores = arrayScores();
   var expansions = arrayExpansions();
   var draft = document.querySelector('input[name="draft"]:checked').value;
   var map = document.querySelector('input[name="map"]:checked').value;
   var milestones = arrayMilestones();
   var awards = arrayAwards();
+  //ordering and obtaining the scores and corporations arrays
+  orderScoresandCorporations();
 
   document.getElementById("modalPlayers").innerHTML = players;
   document.getElementById("modalGeneraions").innerHTML = generations;
-  document.getElementById("modalCorporations").innerHTML = corporations.toString().replace(/,/g, "<br>");
-  document.getElementById("modalScores").innerHTML = scores.toString().replace(/,/g, "<br>");
+  document.getElementById("modalCorporations").innerHTML = newCorporations.toString().replace(/,/g, "<br>");
+  document.getElementById("modalScores").innerHTML = newScores.toString().replace(/,/g, "<br>");
   document.getElementById("modalExpansions").innerHTML = expansions.toString().replace(/,/g, " - ");
   document.getElementById("modalDraft").innerHTML = draft;
   document.getElementById("modalMap").innerHTML = map;

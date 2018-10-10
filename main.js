@@ -34,14 +34,16 @@ function submitForm(e) {
   //Get values
   var players = document.querySelector('input[name="players"]:checked').value;
   var generations = document.getElementById("generations").value;
-  var corporations = arrayCorporations();
-  var scores = arrayScores();
+
   var expansions = arrayExpansions();
   var draft = document.querySelector('input[name="draft"]:checked').value;
   var map = document.querySelector('input[name="map"]:checked').value;
   var milestones = arrayMilestones();
   var awards = arrayAwards();
   var timestamp = Math.floor((new Date()).getTime() / 1000);
+  //ordering the two arrays by the scores values
+  var corporations = newCorporations;
+  var scores = newScores;
 
 
   // Save Game
@@ -233,7 +235,6 @@ function pushHistory() {
     if (expansionsArray.indexOf("COLONIES") > -1) {
       expansionsHTML = expansionsHTML + '<div class="history-section-expansion-ribbon"><div class="icon colonies-icon icon-align2"></div></div>'
     }
-    console.log(gameSections[i])
     gameSections[i].querySelector(".history-section-expansions").innerHTML = expansionsHTML;
   }
 }
@@ -245,17 +246,40 @@ function compareTime(time) {
 }
 
 function indexOfMax(arr) {
-    if (arr.length === 0) {
-        return -1;
-    }
-    var max = parseInt(arr[0]);
-    var maxIndex = 0;
+    if (arr.length < 1) {
+        return 0;
+    } else {
 
-    for (var i = 1; i < arr.length; i++) {
-        if (parseInt(arr[i]) > max) {
-            maxIndex = i;
-            max = parseInt(arr[i]);
-        }
-    }
-    return maxIndex;
+      var max = parseInt(arr[0]);
+      var maxIndex = 0;
+
+      for (var i = 1; i < arr.length; i++) {
+          if (parseInt(arr[i]) > max) {
+              maxIndex = i;
+              max = parseInt(arr[i]);
+            }
+          }
+      return maxIndex;
+  }
+}
+
+function orderScoresandCorporations() {
+
+  //sorting scores and corporations and generating two new arrays
+  //newScores and newCorporations
+  oldScores = arrayScores();
+  oldCorporations = arrayCorporations();
+  newScores = [];
+  newCorporations = [];
+
+  for (var j = 0; j < oldScores.length;) {
+
+    var maxValueIndex = indexOfMax(oldScores);
+    //populating the new arrays
+    newScores.push(oldScores[maxValueIndex])
+    newCorporations.push(oldCorporations[maxValueIndex]);
+
+    oldScores.splice(maxValueIndex, 1);
+    oldCorporations.splice(maxValueIndex, 1);
+  }
 }

@@ -599,6 +599,6 @@ function pushHistory() {
 
 function compareTime(time) {
   if (time < 120) {return "just now"}
-  if (time >= 120 && time < 3600) {return Math.floor(time/60) + " minutes ago"}
-  if (time >= 3600) {return Math.floor(time/3600) + " hours ago"}
+  if (time >= 120 && time < 3600) {return Math.floor(time/60) + " minutes"}
+  if (time >= 3600) {return Math.floor(time/3600) + " hours"}
 }
