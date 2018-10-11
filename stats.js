@@ -18,7 +18,7 @@ gamesRef.on('value', (snap) => {
 
 //push data to the Players stats
   pushTheData();
-  pushGeneralStats();
+  setTimeout(function() {pushGeneralStats()},300); //for smoother animation
   pushMapStats();
   pushAwardsStats();
   pushAverageGenerations();
@@ -564,6 +564,7 @@ function pushHistory() {
     var winnerIndex = indexOfMax(scoresArray);
     var winningScore = scoresArray[winnerIndex];
 
+    //highlight the winner
     for (j=0; j < scoresArray.length; j++) {
       corporationsSections[j].innerHTML = corporationsArray[j];
       scoresSections[j].innerHTML = scoresArray[j];
