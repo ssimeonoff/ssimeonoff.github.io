@@ -1,3 +1,5 @@
+games = [];
+
 var config = {
   apiKey: "AIzaSyD6HEAHfcXGN-WrUxSaraO3TYNzGbAr8ts",
   authDomain: "tm-games1.firebaseapp.com",
@@ -21,13 +23,29 @@ gamesRef.on('value', (snap) => {
   pushData();
 });
 
-function pushData() {
-  //games = games.filter(function(el) {
-    //return  el.expansions == "PRELUDE"
-  //});
 
-  pushCorporationsData();
+function filterFunction(id) {
+
+  clickedElementID = document.getElementById(id);
+  if (clickedElementID != null) {clickedElementID.classList.toggle("active");}
+
+  filterString = "";
+  btnExpansions = document.querySelectorAll('button.active.btn-expansion');
+  for (i = 0; i < btnExpansions.length; i++) {
+    filterString = filterString + "||" + id;
+  }
+  games = games_all.filter(function(el) {
+    return  el.expansions == filterString
+  });
+
+  pushData();
+}
+
+
+function pushData() {
+
   setTimeout(function() {pushGeneralStats()},300); //for smoother animation
+  pushCorporationsData();
   pushMapStats();
   pushAwardsStats();
   pushAverageGenerations();
@@ -570,8 +588,10 @@ function pushHistory() {
   for(i=0; i < gameSections.length ; i++) {
 
     //game timestamp in seconds
-    timestamp = games[games.length-1-i]["timestamp"];
-    time = now - timestamp;
+    //timestamp = games[games.length-1-i]["timestamp"];
+    timestamp = 0;
+    if (timestamp == undefined) {time = "unknown"}
+    else {time = now - timestamp;}
     gameSections[i].querySelector(".history-section-time-value").innerHTML = compareTime(time);
 
     //the corporations array
