@@ -26,18 +26,21 @@ gamesRef.on('value', (snap) => {
 
 function filterFunction(id) {
 
+  //toggling active buttons state
   clickedElementID = document.getElementById(id);
   if (clickedElementID != null) {clickedElementID.classList.toggle("active");}
 
+  //generating the filtering string
   filterString = "";
   btnExpansions = document.querySelectorAll('button.active.btn-expansion');
   for (i = 0; i < btnExpansions.length; i++) {
     filterString = filterString + "||" + id;
   }
+  //applying the filtering string
   games = games_all.filter(function(el) {
     return  el.expansions == filterString
   });
-
+  //pushing the new filtered data
   pushData();
 }
 
