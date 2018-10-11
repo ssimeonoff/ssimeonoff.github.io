@@ -12,19 +12,28 @@ var gamesRef = firebase.database().ref("games-production");
 //get the games as an array
 gamesRef.on('value', (snap) => {
   const val = snap.val()
-  games = Object.keys(val)
+  games_all = Object.keys(val)
     .map(key => val[key])
 ///////////////////////////////////////////////////////////////////////////////
 
 //push data to the Players stats
-  pushTheData();
+  games = games_all;
+  pushData();
+});
+
+function pushData() {
+  //games = games.filter(function(el) {
+    //return  el.expansions == "PRELUDE"
+  //});
+
+  pushCorporationsData();
   setTimeout(function() {pushGeneralStats()},300); //for smoother animation
   pushMapStats();
   pushAwardsStats();
   pushAverageGenerations();
   pushHistograms();
   pushHistory();
-});
+}
 
 function generateGameStats (players, corporationName) {
   //returning html formatted text
@@ -98,7 +107,7 @@ function indexOfMax(arr) {
 
 
 
-function pushTheData() {
+function pushCorporationsData() {
   //standard
   document.getElementById("games2p-beginner").innerHTML = generateGameStats(2, "BEGINNER");
   document.getElementById("games3p-beginner").innerHTML = generateGameStats(3, "BEGINNER");
@@ -344,27 +353,36 @@ function generateAverageScores (players) {
     return el.players == players
   });
 
-  //calculating average generations
-  var preludeGames = 0;
-  var preludeSum = 0;
+  gamesWithoutPrelude = gamesPerPlayers.filter(function(el) {
+    return  el.expansions != "PRELUDE"
+  });
+
+  gamesWithPrelude = gamesPerPlayers.filter(function(el) {
+    return  el.expansions == "PRELUDE"
+  });
+
   var totalSum = 0;
+  var totalSumPrelude = 0;
 
-  for (i = 0; i < gamesPerPlayers.length; i++) {
-    var generationsValue = gamesPerPlayers[i]["generations"]; //getting the generations value
-    var expansionsArray = gamesPerPlayers[i]["expansions"]; //getting the generations value
-    if (expansionsArray == undefined) { var expansionsArray = [];} //capturing errors if there are no expansions selected
+  //calculating average generations
 
-
-    if (expansionsArray.indexOf("PRELUDE") > -1) {
-      //if the expansion PRELUDE is present
-      preludeGames++;   //add +1 to the counter
-      preludeSum = preludeSum + parseInt(generationsValue);
-    } else {totalSum = totalSum + parseInt(generationsValue);}
+  for (i = 0; i < gamesWithoutPrelude.length; i++) {
+    var generationsValue = gamesWithoutPrelude[i]["generations"]; //getting the generations value
+    totalSum = totalSum + parseInt(generationsValue);
   }
 
-  var totalGames = gamesPerPlayers.length - preludeGames;
-  document.getElementById("generations_" + players).innerHTML = (Math.round(totalSum*10/totalGames)/10).toFixed(1);
-  document.getElementById("generations_" + players + "_prelude").innerHTML = (Math.round(preludeSum*10/preludeGames)/10).toFixed(1);
+  for (j = 0; j < gamesWithPrelude.length; j++) {
+    var generationsValuePrelude = gamesWithPrelude[j]["generations"]; //getting the generations value
+    totalSumPrelude = totalSumPrelude + parseInt(generationsValuePrelude);
+  }
+  average = (Math.round(totalSum*10/gamesWithoutPrelude.length)/10).toFixed(1)
+  averagePrelude = (Math.round(totalSumPrelude*10/gamesWithPrelude.length)/10).toFixed(1)
+
+  if (average == "NaN") {average = "--"}
+  if (averagePrelude == "NaN") {averagePrelude = "--"}
+
+  document.getElementById("generations_" + players).innerHTML = average;
+  document.getElementById("generations_" + players + "_prelude").innerHTML = averagePrelude;
 
 }
 
