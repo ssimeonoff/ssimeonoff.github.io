@@ -15,20 +15,28 @@
 
 .buttons-container {
     display: grid;
-    grid-template: auto;
+    grid-template-columns: 140px 320px;
     position: relative;
     font-family: Prototype;
     background: #ccc;
     background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
     border-radius: 2px;
     width: 460px;
-    height: 209px;
     text-align: center;
     margin-bottom: 10px;
     border-top: 2px solid rgb(221,221,221);
     border-left: 2px solid rgb(221,221,221);
     border-bottom: 2px solid rgb(137,137,137);
     border-right: 2px solid rgb(137,137,137);
+}
+
+.buttons-container-div {
+  height: 58px;
+  line-height: 56px;
+  border-top: 2px solid rgb(221,221,221);
+  border-left: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
 }
 
 .sort-menu {
@@ -48,7 +56,7 @@
   height: 58px;
   margin-top: 2px;
   margin-left: 2px;
-  font-size: 22px;
+  font-size: 20px;
   padding-left: 10px;
   color:#222;
   background: transparent;

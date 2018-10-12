@@ -8,24 +8,28 @@ var config = {
   storageBucket: "tm-games1.appspot.com",
   messagingSenderId: "969120080569"
 };
+
 firebase.initializeApp(config);
 // Reference Games collection
 var gamesRef = firebase.database().ref("games-production");
 //get the games as an array
 gamesRef.on('value', (snap) => {
   const val = snap.val()
-  games_all = Object.keys(val)
+  GAMES_ALL = Object.keys(val)
     .map(key => val[key])
 ///////////////////////////////////////////////////////////////////////////////
 
 //push data to the Players stats
-  games = games_all;
+  games = GAMES_ALL;
   pushData();
 });
 
 
-function filterFunction(id) {
 
+
+function filterFunction(id) {
+  // getting the constant GAMES_ALL
+  // filter games from it and return/create new array "games"
   //toggling active buttons state
   clickedElementID = document.getElementById(id);
   if (clickedElementID != null) {clickedElementID.classList.toggle("active");}
@@ -47,7 +51,7 @@ function filterFunction(id) {
 
 function pushData() {
 
-  setTimeout(function() {pushGeneralStats()},300); //for smoother animation
+  setTimeout(function() {pushGeneralStats()}, 500); //for smoother animation
   pushCorporationsData();
   pushMapStats();
   pushAwardsStats();
