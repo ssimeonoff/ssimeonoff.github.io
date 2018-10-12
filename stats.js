@@ -591,8 +591,7 @@ function pushHistory() {
   for(i=0; i < gameSections.length ; i++) {
 
     //game timestamp in seconds
-    //timestamp = games[games.length-1-i]["timestamp"];
-    timestamp = 0;
+    timestamp = games[games.length-1-i]["timestamp"];
     if (timestamp == undefined) {time = "unknown"}
     else {time = now - timestamp;}
     gameSections[i].querySelector(".history-section-time-value").innerHTML = compareTime(time);
