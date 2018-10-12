@@ -393,12 +393,12 @@ function toggleContentDiv() {
 //toggle Footer
 function toggleFooterDiv() {
   if ($('#footer:visible').length == 0) {
-    containerHeight = containerHeight + 40;
+    containerHeight = containerHeight + 100;
     document.getElementById("buttonsContainer").style.height = containerHeight + "px";
     setTimeout(function(){$("#footer").fadeIn(200);}, 100);
   }
   else {
-    containerHeight = containerHeight - 40;
+    containerHeight = containerHeight - 100;
     document.getElementById("footer").style.display = "none";
     document.getElementById("buttonsContainer").style.height = containerHeight + "px";
   }

@@ -81,8 +81,14 @@
 
     </div>
 
-    <div id="myBtnContainer3" style="display:inline-block;line-height:30px;margin-bottom:10px;">
-      <button id="content"  class="button btn-content  " onclick="toggleContentDiv();" title="reveal Card Content filters">CONTENT</button>
+    <div id="myBtnContainer3">
+      <div class="onoffswitch">
+        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" onclick="toggleCardsDesign();" >
+        <label class="onoffswitch-label" for="myonoffswitch">
+          <span class="onoffswitch-inner"></span>
+          <span class="onoffswitch-switch"></span>
+        </label>
+      </div>
       <button id="standard" class="button btn3 standard-icon button-icon  " onclick="filterFunction(id)" title="filter Base game cards"></button>
       <button id="corporate" class="button btn3 corporate-icon button-icon  " onclick="filterFunction(id)" title="filter Corporate Era cards"></button>
       <button id="venusNext" class="button btn3 venus-icon button-icon  " onclick="filterFunction(id)" title="filter Venus Next cards"></button>
@@ -90,86 +96,77 @@
       <button id="colonies" class="button btn3 colonies-icon button-icon  " onclick="filterFunction(id)" title="filter Colonies cards"></button>
       <button id="promo" class="button btn3 promo-icon button-icon  " onclick="filterFunction(id)" title="filter Promo cards"></button>
       <a id="btn-selectedCards" class="button btn-selected-cards" title="open selected cards" href="https://ssimeonoff.github.io/" target="_blank">SELECTED<br> CARDS ONLY<div id="selectedCardsAmount">0</div></a>
-
-
-      <div class="onoffswitch">
-        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" onclick="toggleCardsDesign();" checked>
-        <label class="onoffswitch-label" for="myonoffswitch">
-          <span class="onoffswitch-inner"></span>
-          <span class="onoffswitch-switch"></span>
-        </label>
-      </div>
-      <div id="contentFilters">
-        <form id="sortButtons">
-          <fieldset>
-            <legend class="sort-title">SORT PROJECT CARDS BY</legend>
-            <input type="radio" name='radio' id="radio-choice-1" value="on" checked="checked" onclick="sortByID();"style="display:none;">
-            <label class= "btn-sort" for="radio-choice-1">ID</label>
-            <input type="radio" name='radio' id="radio-choice-2" value="off" onclick="sortByPriceUp();" style="display:none;">
-            <label class= "btn-sort" for="radio-choice-2" >MC UP</label>
-            <input type="radio" name='radio' id="radio-choice-3" value="other" onclick="sortByPriceDown();" style="display:none;">
-            <label class= "btn-sort" for="radio-choice-3">MC Down</label>
-          </fieldset>
-        </form>
-
-        <button title="decrease Price filter by 1" class="button2   btn-price" onclick="reduceOne()" title="decrease Price filter by 1">-</button>
-        <input  type="number" title="filter by Price" id="price" oninput="filterFunction(id);" value="0" min="0" max="50"></input>
-        <button class="button2   btn-price" style="margin-right:10px;" onclick="increaseOne()" title="increase Price filter by 1">+</button>
-
-        <button id=".production.money" class="button btn-production" onclick="filterFunction(id)" title="filter cards with money production" style="margin-left:6px;"><div class="production money">M</div></button>
-        <button id=".production.steel" class="button btn-production" onclick="filterFunction(id)" title="filter cards with steel production"><div class="production steel"></div></button>
-        <button id=".production.titanium" class="button btn-production" onclick="filterFunction(id)" title="filter cards with titanium production"><div class="production titanium"></div></button>
-        <button id=".production.plant" class="button btn-production" onclick="filterFunction(id)" title="filter cards with plant production"><div class="production plant"></div></button>
-        <button id=".production.energy" class="button btn-production" onclick="filterFunction(id)" title="filter cards with enery production"><div class="production energy"></div></button>
-        <button id=".production.heat" class="button btn-production" onclick="filterFunction(id)" title="filter cards with heat production"><div class="production heat"></div></button>
-        <br>
-
-        <button id="reqs" class="button btn-req" onclick="filterFunction(id);toggleRequirementsFilters();" title="filter cards having Requirements">REQUIREMENTS</button>
-        <button id="vp" class="button btn-vp" onclick="filterFunction(id)" title="filter cards with VP">VP</button>
-
-        <button id="temperature-tile" class="button btn-tile temperature-tile" onclick="filterFunction(id)" title="filter cards which increase Temperature"></button>
-        <button id="ocean-tile" class="button btn-tile ocean-tile" onclick="filterFunction(id)" title="filter cards which place Ocean tiles" style="padding:0px;"></button>
-        <button id="greenery-tile" class="button btn-tile greenery-tile" onclick="filterFunction(id)" title="filter cards which place Greenery tiles" style="padding:0px;"></button>
-        <button id="oxygen-tile" class="button btn-tile oxygen-tile" onclick="filterFunction(id)" title="filter cards which increase Oxygen" style="padding:0px;"></button>
-        <button id="venus-tile" class="button btn-tile venus-tile" onclick="filterFunction(id)" title="filter cards which increase Venus" style="padding:0px;">V</button>
-        <button id="rating" class="button btn-tile rating" onclick="filterFunction(id)" title="filter cards which increase TR" style="padding-left:7px;"></button>
-
-
-        <div id ="subfilterReqs" class="subfilterReqs-disabled">
-          <output id="output1" for="slider1" class="output-label" style="color:#f25540; margin-left: 210px;">-30</output> <!-- Just to display selected value -->
-          <input id="slider1" type="range" min="-30" max="8" value="-30" step="2" list="tickmarks" oninput="output1.value = slider1.value; filterFunction(id);" class="track-temp-background track-temp-thumb" style="width:200px;margin-right:70px;">
-
-          <output id="output3" for="slider3" class="output-label" style="margin-left: 110px;">0</output> <!-- Just to display selected value -->
-          <input id="slider3" type="range" min="0" max="9" value="-0" step="1" list="tickmarks" oninput="output3.value = slider3.value; filterFunction(id);" class=" track-oceans-thumb" style="width:100px;">
-
-          <output id="output2" for="slider2" class="output-label" style="color:rgb(246,241,175);">0</output> <!-- Just to display selected value -->
-          <input id="slider2" type="range" min="0" max="14" value="0" step="1" list="tickmarks" oninput="output2.value = slider2.value; filterFunction(id);" class="track-oxygen-background track-oxygen-thumb">
-
-          <output id="output4" for="slider4" class="output-label" style="color: #8bb8da">0</output> <!-- Just to display selected value -->
-          <input id="slider4" type="range" min="0" max="30" value="0" step="2" list="tickmarks" oninput="output4.value = slider4.value; filterFunction(id);" class="track-venus-background track-venus-thumb" style="margin-right:0px;">
-          <br>
-          <p></p>
-          <output id="output5" for="slider5" class="output-label" style="color: white;">0</output> <!-- Just to display selected value -->
-          <input id="slider5" type="range" min="0" max="7" value="0" step="1" list="tickmarks" oninput="output5.value = slider5.value; filterFunction(id);" class="track-science-background track-science-thumb">
-
-          <output id="output8" for="slider8" class="output-label" style="margin-left: 70px;color: rgb(15,96,151);">0</output> <!-- Just to display selected value -->
-          <input id="slider8" type="range" min="0" max="1" value="0" step="1" list="tickmarks" oninput="output8.value = slider8.value; filterFunction(id);" class="track-earth-background track-earth-thumb" style="width:60px;">
-
-          <output id="output6" for="slider6" class="output-label" style="margin-left: 70px;color:rgb(255,223,149)">0</output> <!-- Just to display selected value -->
-          <input id="slider6" type="range" min="0" max="1" value="0" step="1" list="tickmarks" oninput="output6.value = slider6.value; filterFunction(id);" class="track-jovian-background track-jovian-thumb" style="width:60px;">
-
-          <output id="output7" for="slider7" class="output-label" style="margin-left: 90px; color:rgb(84,150,201)">0</output> <!-- Just to display selected value -->
-          <input id="slider7" type="range" min="0" max="2" value="0" step="1" list="tickmarks" oninput="output7.value = slider7.value; filterFunction(id);" class="track-venusTag-background track-venusTag-thumb" style="width:80px;">
-        </div>
-      </div>
     </div>
 
     <div id="myBtnContainer4" style="display:inline-block;">
+      <button id="content"  class="button btn-content  " onclick="toggleContentDiv();" title="reveal Card Content filters">CONTENT</button>
       <input type="text" id="myInput" oninput="filterFunction(id);" placeholder="Search by text ..." title="Search by card's title, number or keywords">
       <button id="reset" class="button2 btn-reset" onclick="clearInput();showAll();" title="Reset all selected filters">RESET</button>
-      <a href="https://ssimeonoff.github.io/submit" target="_blank"><button class="button btn-submit" style="border-radius:20px 0 0 20px;" >SUBMIT GAME</button></a>
-      <a href="https://ssimeonoff.github.io/stats" target="_blank"><button class="button btn-submit" style="border-radius:0px 20px 20px 0px;">VIEW STATS</button></a>
-      <button id="about" onclick="toggleFooterDiv();" class="button2 btn4 " style="background:#444444;margin-left: 13px;height:30px; line-height: 19px;" title="shows external links">About</button>
+      <button id="about" onclick="toggleFooterDiv();" class="button2 btn4 " style="background:#444444;margin-left: 13px;" title="shows external links">EXTRAS</button>
+    </div>
+
+    <div id="contentFilters">
+      <form id="sortButtons">
+        <fieldset>
+          <legend class="sort-title">SORT PROJECT CARDS BY</legend>
+          <input type="radio" name='radio' id="radio-choice-1" value="on" checked="checked" onclick="sortByID();"style="display:none;">
+          <label class= "btn-sort" for="radio-choice-1">ID</label>
+          <input type="radio" name='radio' id="radio-choice-2" value="off" onclick="sortByPriceUp();" style="display:none;">
+          <label class= "btn-sort" for="radio-choice-2" >MC UP</label>
+          <input type="radio" name='radio' id="radio-choice-3" value="other" onclick="sortByPriceDown();" style="display:none;">
+          <label class= "btn-sort" for="radio-choice-3">MC Down</label>
+        </fieldset>
+      </form>
+
+      <button title="decrease Price filter by 1" class="button2   btn-price" onclick="reduceOne()" title="decrease Price filter by 1">-</button>
+      <input  type="number" title="filter by Price" id="price" oninput="filterFunction(id);" value="0" min="0" max="50"></input>
+      <button class="button2   btn-price" style="margin-right:10px;" onclick="increaseOne()" title="increase Price filter by 1">+</button>
+
+      <button id=".production.money" class="button btn-production" onclick="filterFunction(id)" title="filter cards with money production" style="margin-left:6px;"><div class="production money">M</div></button>
+      <button id=".production.steel" class="button btn-production" onclick="filterFunction(id)" title="filter cards with steel production"><div class="production steel"></div></button>
+      <button id=".production.titanium" class="button btn-production" onclick="filterFunction(id)" title="filter cards with titanium production"><div class="production titanium"></div></button>
+      <button id=".production.plant" class="button btn-production" onclick="filterFunction(id)" title="filter cards with plant production"><div class="production plant"></div></button>
+      <button id=".production.energy" class="button btn-production" onclick="filterFunction(id)" title="filter cards with enery production"><div class="production energy"></div></button>
+      <button id=".production.heat" class="button btn-production" onclick="filterFunction(id)" title="filter cards with heat production"><div class="production heat"></div></button>
+      <br>
+
+      <button id="reqs" class="button btn-req" onclick="filterFunction(id);toggleRequirementsFilters();" title="filter cards having Requirements">REQUIREMENTS</button>
+      <button id="vp" class="button btn-vp" onclick="filterFunction(id)" title="filter cards with VP">VP</button>
+
+      <button id="temperature-tile" class="button btn-tile temperature-tile" onclick="filterFunction(id)" title="filter cards which increase Temperature"></button>
+      <button id="ocean-tile" class="button btn-tile ocean-tile" onclick="filterFunction(id)" title="filter cards which place Ocean tiles" style="padding:0px;"></button>
+      <button id="greenery-tile" class="button btn-tile greenery-tile" onclick="filterFunction(id)" title="filter cards which place Greenery tiles" style="padding:0px;"></button>
+      <button id="oxygen-tile" class="button btn-tile oxygen-tile" onclick="filterFunction(id)" title="filter cards which increase Oxygen" style="padding:0px;"></button>
+      <button id="venus-tile" class="button btn-tile venus-tile" onclick="filterFunction(id)" title="filter cards which increase Venus" style="padding:0px;">V</button>
+      <button id="rating" class="button btn-tile rating" onclick="filterFunction(id)" title="filter cards which increase TR" style="padding-left:7px;"></button>
+
+
+      <div id ="subfilterReqs" class="subfilterReqs-disabled">
+        <output id="output1" for="slider1" class="output-label" style="color:#f25540; margin-left: 210px;">-30</output> <!-- Just to display selected value -->
+        <input id="slider1" type="range" min="-30" max="8" value="-30" step="2" list="tickmarks" oninput="output1.value = slider1.value; filterFunction(id);" class="track-temp-background track-temp-thumb" style="width:200px;margin-right:70px;">
+
+        <output id="output3" for="slider3" class="output-label" style="margin-left: 110px;">0</output> <!-- Just to display selected value -->
+        <input id="slider3" type="range" min="0" max="9" value="-0" step="1" list="tickmarks" oninput="output3.value = slider3.value; filterFunction(id);" class=" track-oceans-thumb" style="width:100px;">
+
+        <output id="output2" for="slider2" class="output-label" style="color:rgb(246,241,175);">0</output> <!-- Just to display selected value -->
+        <input id="slider2" type="range" min="0" max="14" value="0" step="1" list="tickmarks" oninput="output2.value = slider2.value; filterFunction(id);" class="track-oxygen-background track-oxygen-thumb">
+
+        <output id="output4" for="slider4" class="output-label" style="color: #8bb8da">0</output> <!-- Just to display selected value -->
+        <input id="slider4" type="range" min="0" max="30" value="0" step="2" list="tickmarks" oninput="output4.value = slider4.value; filterFunction(id);" class="track-venus-background track-venus-thumb" style="margin-right:0px;">
+        <br>
+        <p></p>
+        <output id="output5" for="slider5" class="output-label" style="color: white;">0</output> <!-- Just to display selected value -->
+        <input id="slider5" type="range" min="0" max="7" value="0" step="1" list="tickmarks" oninput="output5.value = slider5.value; filterFunction(id);" class="track-science-background track-science-thumb">
+
+        <output id="output8" for="slider8" class="output-label" style="margin-left: 70px;color: rgb(15,96,151);">0</output> <!-- Just to display selected value -->
+        <input id="slider8" type="range" min="0" max="1" value="0" step="1" list="tickmarks" oninput="output8.value = slider8.value; filterFunction(id);" class="track-earth-background track-earth-thumb" style="width:60px;">
+
+        <output id="output6" for="slider6" class="output-label" style="margin-left: 70px;color:rgb(255,223,149)">0</output> <!-- Just to display selected value -->
+        <input id="slider6" type="range" min="0" max="1" value="0" step="1" list="tickmarks" oninput="output6.value = slider6.value; filterFunction(id);" class="track-jovian-background track-jovian-thumb" style="width:60px;">
+
+        <output id="output7" for="slider7" class="output-label" style="margin-left: 90px; color:rgb(84,150,201)">0</output> <!-- Just to display selected value -->
+        <input id="slider7" type="range" min="0" max="2" value="0" step="1" list="tickmarks" oninput="output7.value = slider7.value; filterFunction(id);" class="track-venusTag-background track-venusTag-thumb" style="width:80px;">
+      </div>
     </div>
 
     <div id="footer">
@@ -181,6 +178,8 @@
       <a class="footer-links" href="https://ssimeonoff.github.io/solo-vn" style="background-color:rgb(84,150,201);text-shadow: 0 0 1px black;color:white;" target="_blank">SOLO VN</a>
       <a class="footer-links" href="https://ssimeonoff.github.io/solo-pl" style="background-color:rgb(235,118,171);text-shadow: 0 0 1px black;color:white;" target="_blank">SOLO PL</a>
       <br>
+      <a href="https://ssimeonoff.github.io/submit" target="_blank"><button class="button btn-submit">SUBMIT GAME</button></a>
+      <a href="https://ssimeonoff.github.io/stats" target="_blank"><button class="button btn-submit">VIEW STATS</button></a>
     </div>
   </div>
 
