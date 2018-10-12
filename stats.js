@@ -41,7 +41,7 @@ function filterFunction(id) {
     filterString = filterString + "||" + id;
   }
   //applying the filtering string
-  games = games_all.filter(function(el) {
+  games = games_all.filter(function(el) { //NOTE - rename to GAMES_ALL
     return  el.expansions == filterString
   });
   //pushing the new filtered data
