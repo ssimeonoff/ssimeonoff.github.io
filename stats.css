@@ -369,6 +369,12 @@
   text-shadow: 0 0 1px black, 0 2px 2px black;
 }
 
+.filter-label-cell {
+  color: #eee;
+  font-size: 18px;
+  text-shadow: 0 0 1px black, 0 1px 1px black;
+}
+
 .grid-cell {
       text-align: center;
       font-size: 16px;
@@ -890,27 +896,72 @@
   border-bottom: 2px solid rgb(137,137,137);
   border-right: 2px solid rgb(137,137,137);
   font-family: Prototype;
+  background: transparent;
 }
 
 .button.active {
-  border: 2px solid rgb(137,137,137);
+  border: 2px solid rgb(137,137,137) ;
   box-shadow: inset 0 0 2px 2px rgb(68,68,68);
   transform: translate(0,3px);
+  background: #eee;
+}
+
+.change-colours {
+  border: 2px solid rgb(137,137,137) !important;
+  box-shadow: inset 0 0 2px 2px rgb(68,68,68) !important;
+  background: #eee !important;
 }
 
 .btn-expansion {
     outline: none;
     height: 40px;
-    width: 40px;
+    width: 46px;
     cursor: pointer;
     font-weight: bold;
-    margin-right: 15px;
+    margin-right: 10px;
     color:white;
     font-size: 16px;
     line-height: 30px;
     vertical-align: middle;
     letter-spacing: 1px;
-    border-radius: 20px;
+}
+
+.btn-map {
+  text-align: center;
+  color: #222;
+  width: 86px;
+  margin-right: 10px;
+  font-size: 13px;
+  font-weight: normal;
+}
+
+.btn-map > div {
+  line-height: 22px;
+  background: #ee792b;
+  border:1px solid #444;
+  width: 68px;
+}
+
+.drop-down {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  cursor: pointer;
+  outline: none;
+  background: transparent;
+  color: #222;
+  font-family: Prototype;
+  width: 250px;
+  height: 40px;
+  font-size: 18px;
+  border-top: 2px solid rgb(221,221,221);
+  border-left: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
+  box-shadow: 0 1px 3px 1px rgba(0,0,0,.8);
+  margin-top: 5px;
+  padding-left: 20px;
+  transition: font-size 0.3s, box-shadow 0.3s;
 }
 
 .button-icon:after {

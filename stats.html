@@ -30,19 +30,66 @@
 
     <div class="buttons-container">
       <a class="link btn-submit" href="https://ssimeonoff.github.io/submit" target="_blank"><div>SUBMIT</div></a>
-      <div class="grid-cell title-cell" style="height:58px;line-height:58px;"><div>FILTERS (not working)</div></div>
+      <div class="grid-cell title-cell" style="height:58px;line-height:58px;"><div>FILTERS (NOT WORKING YET)</div></div>
 
-      <div class="buttons-container-div header-cell">EXPANSIONS</div>
+      <div class="buttons-container-div filter-label-cell">EXPANSIONS</div>
       <div class="buttons-container-div">
-        <button id="STANDARD" style="margin-left:15px;" class="button btn-expansion button-icon standard-icon icon " onclick="filterFunction(id)" title="filter Base game cards"></button>
-        <button id="CORPORATE" class="button btn-expansion button-icon corporate-era-icon icon  " onclick="filterFunction(id)" title="filter Corporate Era cards"></button>
-        <button id="VENUS" class="button btn-expansion button-icon venus-icon icon  " onclick="filterFunction(id)" title="filter Venus Next cards"></button>
-        <button id="PRELUDE" class="button btn-expansion button-icon prelude-icon icon  " onclick="filterFunction(id)" title="filter Prelude cards"></button>
-        <button id="COLONIES" class="button btn-expansion button-icon colonies-icon icon " onclick="filterFunction(id)" title="filter Colonies cards"></button>
+        <button id="STANDARD" style="margin-left:10px;" class="button btn-expansion button-icon standard-icon icon " onclick="filterFunction(id)" title="filter Base games"></button>
+        <button id="CORPORATE" class="button btn-expansion button-icon corporate-era-icon icon  " onclick="filterFunction(id)" title="filter Corporate Era games"></button>
+        <button id="VENUS" class="button btn-expansion button-icon venus-icon icon  " onclick="filterFunction(id)" title="filter Venus Next games"></button>
+        <button id="PRELUDE" class="button btn-expansion button-icon prelude-icon icon  " onclick="filterFunction(id)" title="filter Prelude games"></button>
+        <button id="COLONIES" class="button btn-expansion button-icon colonies-icon icon " onclick="filterFunction(id)" title="filter Colonies games"></button>
       </div>
+
+      <div class="buttons-container-div filter-label-cell">MAPS</div>
+      <div class="buttons-container-div">
+        <button id="THARSIS"  style="margin-left:10px;" class="button btn-expansion btn-map" onclick="filterFunction(id)" title="filter games played on THARSIS"><div>THARSIS</div></button>
+        <button id="HELLAS" class="button btn-expansion btn-map" onclick="filterFunction(id)" title="filter games played on HELLAS"><div style="background:#3b9ae3">HELLAS</div></button>
+        <button id="ELYSIUM" class="button btn-expansion btn-map" onclick="filterFunction(id)" title="filter games played on ELYSIUM"><div style="background:#09aa09">ELYSIUM</div></button>
+      </div>
+
+      <div class="buttons-container-div filter-label-cell">CORP</div>
+      <div class="buttons-container-div">
+        <div style="margin-top:2px;">
+        <select id="corporation1" class="drop-down" name="corporations" size="1" onchange="changeColours(id)">
+        <option value="NOT SELECTED" selected>NOT SELECTED</option>
+        <option value="BEGINNER">BEGINNER</option>
+        <option value="CREDICOR">CREDICOR</option>
+        <option value="ECOLINE">ECOLINE</option>
+        <option value="HELION">HELION</option>
+        <option value="MINING GUILD">MINING GUILD</option>
+        <option value="INTERPLAN. CINEMATICS">INTERPLAN. CINEMATICS</option>
+        <option value="INVENTRIX">INVENTRIX</option>
+        <option value="PHOBOLOG">PHOBOLOG</option>
+        <option value="THARSIS REPUBLIC">THARSIS REPUBLIC</option>
+        <option value="THORGATE">THORGATE</option>
+        <option value="UNMI">U.N.M.I.</option>
+        <option value="TERACTOR">TERACTOR</option>
+        <option value="SATURN SYSTEMS">SATURN SYSTEMS</option>
+        <option value="APHRODITE">APHRODITE</option>
+        <option value="CELESTIC">CELESTIC</option>
+        <option value="MANUTECH">MANUTECH</option>
+        <option value="MORNING STAR">MORNING STAR</option>
+        <option value="VIRON">VIRON</option>
+        <option value="CHEUNG SHING MARS">CHEUNG SHING MARS</option>
+        <option value="POINT LUNA">POINT LUNA</option>
+        <option value="ROBINSON INDUSTRIES">ROBINSON INDUSTRIES</option>
+        <option value="VALLEY TRUST">VALLEY TRUST</option>
+        <option value="VITOR">VITOR</option>
+        <option value="ARKLIGHT">ARKLIGHT</option>
+        <option value="ARCADIAN COMMUNITIES">ARCADIAN COMMUNITIES</option>
+        <option value="RECYCLON">RECYCLON</option>
+        <option value="SPLICE">SPLICE</option>
+        <option value="KUIPER BELT COOP.">KUIPER BELT COOP.</option>
+        </select>
+      </div>
+      </div>
+
+
+
+
       <div class="grid5">
       <div class="grid-cell-stats stats-general"><div class="header-cell" style="margin-top: 3px;">TOTAL</div><div id="total_games" class="odometer header-cell" data-minintegerlen="3" style="font-size:26px"></div></div>
-
         <div class="grid-cell-stats stats-general"><div class="header-cell" style="margin-top: 3px;">2P</div><div id="2p_games" class="odometer header-cell" data-minintegerlen="2" style="font-size:26px"></div></div>
         <div class="grid-cell-stats stats-general"><div class="header-cell" style="margin-top: 3px;">3P</div><div id="3p_games" class="odometer header-cell" data-minintegerlen="2" style="font-size:26px"></div></div>
         <div class="grid-cell-stats stats-general"><div class="header-cell" style="margin-top: 3px;">4P</div><div id="4p_games" class="odometer header-cell" data-minintegerlen="2" style="font-size:26px"></div></div>

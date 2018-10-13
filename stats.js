@@ -35,17 +35,17 @@ function filterFunction(id) {
   if (clickedElementID != null) {clickedElementID.classList.toggle("active");}
 
   //generating the filtering string
-  filterString = "";
-  btnExpansions = document.querySelectorAll('button.active.btn-expansion');
-  for (i = 0; i < btnExpansions.length; i++) {
-    filterString = filterString + "||" + id;
-  }
+  //filterString = "";
+  //btnExpansions = document.querySelectorAll('button.active.btn-expansion');
+  //for (i = 0; i < btnExpansions.length; i++) {
+    //filterString = filterString + "||" + id;
+  //}
   //applying the filtering string
-  games = games_all.filter(function(el) { //NOTE - rename to GAMES_ALL
-    return  el.expansions == filterString
-  });
+  //games = games_all.filter(function(el) { //NOTE - rename to GAMES_ALL
+    //return  el.expansions == filterString
+  //});
   //pushing the new filtered data
-  pushData();
+  //pushData();
 }
 
 
@@ -458,7 +458,7 @@ function histogram (players) {
         legend: { position: 'none' },
         fontSize: 12,
         backgroundColor: "transparent",
-        vAxis: { gridlines: { count: 5},maxValue:20 },
+        vAxis: { gridlines: { count: 5}},
         HAxis: {textStyle : {fontSize: 7, fontName: 'Prototype'}},
         bar: {gap: 1},
         chartArea:{left:0,bottom:20,top:0,width:460},
@@ -474,7 +474,7 @@ function histogram (players) {
           legend: { position: 'none' },
           fontSize: 12,
           backgroundColor: "transparent",
-          vAxis: { gridlines: { count: 5},maxValue:20 },
+          vAxis: { gridlines: { count: 5} },
           HAxis: {textStyle : {fontSize: 7, fontName: 'Prototype'}},
           bar: {gap: 1},
           chartArea:{left:0,bottom:20,top:0,width:460},
@@ -490,7 +490,7 @@ function histogram (players) {
             legend: { position: 'none' },
             fontSize: 12,
             backgroundColor: "transparent",
-            vAxis: { gridlines: { count: 5},maxValue:20 },
+            vAxis: { gridlines: { count: 5}},
             HAxis: {textStyle : {fontSize: 7, fontName: 'Prototype'}},
             bar: {gap: 1},
             chartArea:{left:0,bottom:20,top:0,width:460},
@@ -646,4 +646,10 @@ function compareTime(time) {
   if (time < 120) {return "just now"}
   if (time >= 120 && time < 3600) {return Math.floor(time/60) + " minutes"}
   if (time >= 3600) {return Math.floor(time/3600) + " hours"}
+}
+
+function changeColours (id) {
+  menu = document.getElementById(id);
+  if (document.querySelector("option[value='NOT SELECTED']").selected) {menu.classList.remove("change-colours");}
+  else {menu.classList.add("change-colours");}
 }
