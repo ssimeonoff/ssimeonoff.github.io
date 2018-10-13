@@ -50,12 +50,11 @@
   cursor: pointer;
   outline: none;
   line-height: 24px;
-  box-shadow: 0 0px 1px 1px #444;
+  box-shadow: 0 2px 4px 1px #444;
   color: white;
-  width: 136px;
-  height: 58px;
-  margin-top: 2px;
-  margin-left: 2px;
+  width: 132px;
+  height: 40px;
+  margin:4px;
   font-size: 20px;
   padding-left: 10px;
   color:#222;
@@ -69,13 +68,13 @@
   font-family: Prototype;
   cursor: pointer;
   outline: none;
-  line-height: 50px;
-  height: 50px;
-  margin: 2px;
-  box-shadow: 0 0px 1px 1px #444;
+  line-height: 44px;
+  height: 44px;
+  margin: 4px;
+  box-shadow: 0 2px 4px 1px #444;
   text-shadow: 0 0 1px black, 0 2px 2px black;
-  width: 128px;
-  font-size: 26px;
+  width: 123px;
+  font-size: 24px;
   color: white;
   background: transparent;
   border-top: 4px solid rgb(221,221,221);
@@ -94,19 +93,19 @@
   font-family: Prototype;
   cursor: pointer;
   outline: none;
-  line-height: 50px;
-  margin: 2px;
-  box-shadow: 0 0px 1px 1px #444;
-  text-shadow: 0 0 1px black, 0 2px 2px black;
-  font-size: 26px;
-  color: white;
+  line-height: 32px;
+  margin: 4px;
+  margin-bottom: 6px;
+  color:#222;
+  box-shadow: 0 2px 4px 1px #444;
+  font-size: 20px;
   background: transparent;
   border-top: 4px solid rgb(221,221,221);
   border-left: 4px solid rgb(221,221,221);
   border-bottom: 4px solid rgb(137,137,137);
   border-right: 4px solid rgb(137,137,137);
-  width:76px;
-  height: 58px;
+  width:72px;
+  height: 40px;
 }
 
 .highlight-winner {
