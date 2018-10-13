@@ -75,9 +75,7 @@ function pushHistory() {
     var expansionsHTML = "";
     expansionsArray = games[games.length-1-i]["expansions"];
     if (expansionsArray == undefined) {expansionsArray = []}
-    if (expansionsArray.indexOf("CORPORATE") > -1) {
-      expansionsHTML = expansionsHTML + '<div class="history-section-expansion-ribbon"><div class="icon corporate-era-icon icon-align2"></div></div>'
-    }
+    expansionsHTML = expansionsHTML + '<div class="history-section-expansion-ribbon"><div class="icon corporate-era-icon icon-align2"></div></div>'
     if (expansionsArray.indexOf("VENUS") > -1) {
       expansionsHTML = expansionsHTML + '<div class="history-section-expansion-ribbon"><div class="icon venus-icon icon-align2"></div></div>'
     }
