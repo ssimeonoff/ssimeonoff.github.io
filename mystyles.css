@@ -626,24 +626,38 @@ border-right: 2px solid rgb(137,137,137);
       vertical-align: middle;
       text-shadow: 0 0 1px black;
       margin-bottom: 5px;
-      margin-right: 65px;
+      margin-right: 55px;
 }
 
 .btn-submit {
   outline: none;
   height: 40px;
-  line-height: 16px;
-  width: 100px;
+  line-height: 34px;
+  width: 180px;
   cursor: pointer;
   border-radius: 20px;
   text-align: center;
-  font-size: 16px;
+  font-size: 17px;
   font-family: Prototype;
   background-color: #ccc;
-  color:#444;
-  vertical-align: middle;
+  color:#222;
   margin-top: 17px;
   margin-right: 15px;
+  text-align: left;
+}
+
+.icon-image {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  margin-left: 7px;
+  margin-top: 2px;
+}
+
+.submit-label {
+  display: inline-block;
+  margin-left:40px;
 }
 
 .btn-content {
@@ -674,7 +688,7 @@ border-right: 2px solid rgb(137,137,137);
    font-size: 14px;
    text-align: center;
    border-radius: 20px;
-   margin-left: 18px;
+   margin-left: 110px;
    margin-top: 20px;
    vertical-align: bottom;
    padding-right: 25px;
@@ -815,6 +829,10 @@ border-right: 2px solid rgb(137,137,137);
   margin-top: -3px;
 }
 
+.btn-icon {
+  background-image: url("multi.png");
+}
+
 /*-------------------------------*/
 #contentFilters {
     display: none;
@@ -822,8 +840,8 @@ border-right: 2px solid rgb(137,137,137);
     height: 125px;
     padding: 10px;
     border-radius: 10px;
-    margin-top: -5px;
-    margin-bottom: 15px;
+    margin-top: -10px;
+    margin-bottom: 20px;
     font-size: 18px;
     border-top: 2px solid rgb(221,221,221);
     border-left: 2px solid rgb(221,221,221);
@@ -852,10 +870,15 @@ border-right: 2px solid rgb(137,137,137);
   font-size: 14px;
   line-height: 30px;
   margin-top: -10px;
-  width: 100px;
+  width: 97px;
   margin-right: 14px;
-  border-radius: 15px;
+  border-radius: 20px;
   box-shadow: 0 0px 0px 1px rgba(0,0,0,.5), 0 2px 4px 1px rgba(0,0,0,.5);
+  box-shadow: 0 2px 4px 1px rgba(0,0,0,.8);
+  border-top: 2px solid rgb(221,221,221);
+  border-left: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
 }
 
 .footer-links:hover {
@@ -1491,7 +1514,7 @@ border-right: 2px solid rgb(137,137,137);
     outline: none;
     background-position: 10px 12px;
     background-repeat: no-repeat;
-    width: 280px;
+    width: 290px;
     height: 40px;
     line-height: 40px;
     font-size: 20px;
@@ -1499,7 +1522,7 @@ border-right: 2px solid rgb(137,137,137);
     margin-top: 10px;
     margin-bottom: 25px;
     margin-right: 30px;
-    border-radius: 20px;
+    border-radius: 24px;
     border-top: 2px solid rgb(221,221,221);
     border-left: 2px solid rgb(221,221,221);
     border-bottom: 2px solid rgb(137,137,137);
@@ -2113,7 +2136,7 @@ input[type=number]::-webkit-outer-spin-button {
 /* TOGGLE SWTICH*/
 .onoffswitch {
   display: inline-block;
-  margin-right:20px;
+  margin-right:29px;
   position: relative;
   width: 123px;
     -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
