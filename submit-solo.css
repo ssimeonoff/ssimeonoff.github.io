@@ -534,9 +534,8 @@ input::-webkit-inner-spin-button {
 .flip-card-front {
   background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
   background-image: url("images/mars3.png");
-  background-position-x: -460px;
   background-repeat: no-repeat;
-  background-size: 900px 600px;
+  background-size: 484px 570px;
 
 }
 
@@ -546,5 +545,5 @@ input::-webkit-inner-spin-button {
   -webkit-transform: rotateY(180deg);
   background-image: url("images/mars2.png");
   background-repeat: no-repeat;
-  background-size: 900px 600px;
+  background-size: 484px 570px;
 }
