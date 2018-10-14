@@ -22,6 +22,15 @@ function checkForm () {
      }
      enableSubmit = false;
    }
+
+   //if mode is not selected
+  if (document.querySelectorAll("input[name='mode']:checked").length < 1 ) {
+     x = document.querySelectorAll(".mode");
+     for (i = 0; i < x.length; i++) {
+       x[i].classList.add("red-outline");
+     }
+     enableSubmit = false;
+   }
    //if win/loss are not selected
    if (outcome.length < 1){
      document.getElementById("winLabel").classList.add("red-outline");
@@ -78,6 +87,8 @@ function generateConfirmationText () {
   var expansions = arrayExpansions();
   var map = document.querySelector('input[name="map"]:checked').value;
   var result = outcome.toUpperCase();
+  var mode = document.querySelector('input[name="mode"]:checked').value;
+
 
   if (outcome == "win") {
     result = outcome.toUpperCase() + " - " + document.getElementById("corporation-score").value;
@@ -89,6 +100,7 @@ function generateConfirmationText () {
   document.getElementById("modalResult").innerHTML = result;
   document.getElementById("modalCorporation").innerHTML = corporation;
   document.getElementById("modalMap").innerHTML = map;
+  document.getElementById("modalMode").innerHTML = mode;
   document.getElementById("modalExpansions").innerHTML = expansions.toString().replace(/,/g, " - ");
 }
 

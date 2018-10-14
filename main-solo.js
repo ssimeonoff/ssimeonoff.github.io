@@ -32,6 +32,7 @@ function submitForm(e) {
   var corporation = document.getElementById("corporation").value;
   var expansions = arrayExpansions();
   var map = document.querySelector('input[name="map"]:checked').value;
+  var mode = document.querySelector('input[name="mode"]:checked').value;
   var timestamp = Math.floor((new Date()).getTime() / 1000);
 
   //win and loss saves data in result - losses keeps values under 10
@@ -41,20 +42,21 @@ function submitForm(e) {
 
 
   // Save Game
-  saveGame(corporation, expansions, result, map, timestamp);
+  saveGame(corporation, expansions, result, mode, map, timestamp);
 
   //clear form
   document.getElementById("form").reset();
-  resetAll(); 
+  resetAll();
 }
 
 // Save Game to firebasejs
-function saveGame(corporation, expansions, result, map, timestamp) {
+function saveGame(corporation, expansions, result, mode, map, timestamp) {
   var newGameRef = gamesRef.push();
   newGameRef.set({
     corporation: corporation,
     expansions: expansions,
     result: result,
+    mode: mode,
     map: map,
     timestamp: timestamp
   })

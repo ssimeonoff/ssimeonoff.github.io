@@ -16,12 +16,14 @@ gamesRef.on('value', (snap) => {
     .map(key => val[key])
 ///////////////////////////////////////////////////////////////////////////////
   pushData();
+
 });
 
 function filterFunction(id) {
   clickedElementID = document.getElementById(id);
   if (clickedElementID != null) {clickedElementID.classList.toggle("active");}
-
+  console.log(navigator.geolocation.getCurrentPosition(success, error, options))
+  console.log("hi")
 
 
 

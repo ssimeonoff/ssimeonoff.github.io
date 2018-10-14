@@ -34,6 +34,14 @@
        <div id="title2">GAMES<br> <div id="title3" data-minintegerlen="3">0</div></div>
        <br>
       <form id="form" name="submit-to-google-sheet">
+        <fieldset class="fieldset-alignment" style="display:inline-block;width:366px;padding-bottom:15px; border-bottom:none">
+          <legend class="fieldset2">MODE</legend>
+          <input class="checkbox" type="radio" id="tf_all" value="TFALL" name="mode">
+          <label for="tf_all" class="mode btn-expansions" style="width:177px">TF ALL</label>
+          <input class="checkbox" type="radio" id="tr_63" value="TR63" name="mode">
+          <label for="tr_63" class="mode btn-expansions" style="width:177px">TR 63</label>
+       </fieldset>
+
          <fieldset class="fieldset-alignment" style="display:inline-block;width:366px;padding-bottom:15px; border-bottom:none">
            <legend class="fieldset2">EXPANSIONS</legend>
            <input class="checkbox" type="checkbox" id="venus" value="VENUS" name="expansions">
@@ -126,6 +134,10 @@
           <span class="close" onclick="flipCardBack()">&times;</span>
           <div id="modalContent" >
             <fieldset class="fieldset-alignment2" style="margin-top:5px;">
+              <legend class="fieldset2">MODE</legend>
+              <div id="modalMode" class="highlight"></div>
+            </fieldset>
+            <fieldset class="fieldset-alignment2">
               <legend class="fieldset2">EXPANSIONS</legend>
               <div id="modalExpansions" class="highlight"></div>
             </fieldset>

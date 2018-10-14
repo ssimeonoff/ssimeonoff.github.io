@@ -272,7 +272,6 @@ input::placeholder {
   text-shadow: 0 0 1px black, 0 2px 2px black;
   background: rgba(0,0,0,0.3);
   letter-spacing: 1px;
-  margin-top: 15px;
   width: 336px;
   margin-left: 52px;
   height: 90px;
@@ -497,7 +496,7 @@ input::-webkit-inner-spin-button {
   margin-left: auto;
   margin-right: auto;
   width: 440px;
-  height: 560px;
+  height: 630px;
   border-radius: 20px;
   transform: perspective(700px) rotateX(0deg) scale(1);
   -webkit-transform: perspective(700px) rotateX(0deg) scale(1);
@@ -535,7 +534,7 @@ input::-webkit-inner-spin-button {
   background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
   background-image: url("images/mars3.png");
   background-repeat: no-repeat;
-  background-size: 484px 570px;
+  background-size: 484px 630px;
 
 }
 
@@ -545,5 +544,5 @@ input::-webkit-inner-spin-button {
   -webkit-transform: rotateY(180deg);
   background-image: url("images/mars2.png");
   background-repeat: no-repeat;
-  background-size: 484px 570px;
+  background-size: 484px 630px;
 }
