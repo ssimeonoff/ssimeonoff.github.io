@@ -31,8 +31,7 @@
 }
 
 .buttons-container-div {
-  height: 58px;
-  line-height: 56px;
+  height: 50px;
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
   border-bottom: 2px solid rgb(137,137,137);
@@ -68,13 +67,13 @@
   font-family: Prototype;
   cursor: pointer;
   outline: none;
-  line-height: 44px;
-  height: 44px;
+  line-height: 32px;
+  height: 32px;
   margin: 4px;
   box-shadow: 0 2px 4px 1px #444;
   text-shadow: 0 0 1px black, 0 2px 2px black;
   width: 123px;
-  font-size: 24px;
+  font-size: 20px;
   color: white;
   background: transparent;
   border-top: 4px solid rgb(221,221,221);
@@ -152,7 +151,7 @@
 .chart-points {
   display: inline-block;
   position: absolute;
-  margin-top: -295px;
+  margin-top: -273px;
   margin-left: 155px;
   font-size: 18px;
   height: 27px;
@@ -237,7 +236,7 @@
   border-left: 2px solid rgb(221,221,221);
   border-bottom: 2px solid rgb(137,137,137);
   border-right: 2px solid rgb(137,137,137);
-  height: 300px;
+  height: 278px;
 }
 
 .generalStats2 {
@@ -431,6 +430,7 @@
 
 .filter-label-cell {
   color: #eee;
+  line-height: 50px;
   font-size: 18px;
   text-shadow: 0 0 1px black, 0 1px 1px black;
 }
@@ -608,6 +608,15 @@
 
 
 /* Corporations CSS */
+
+.beginner {
+  border-left: 5px solid orange;
+  border-right: 5px solid orange;
+  box-shadow: 0 0 1px black;
+  width: 110px;
+  margin-left: 8px;
+}
+
 .credicor {
       text-align: center;
       font-size: 22px;
@@ -982,7 +991,7 @@
     color:white;
     font-size: 16px;
     line-height: 30px;
-    vertical-align: middle;
+    margin-top: 3px;
     letter-spacing: 1px;
 }
 
@@ -1019,7 +1028,7 @@
   border-bottom: 2px solid rgb(137,137,137);
   border-right: 2px solid rgb(137,137,137);
   box-shadow: 0 1px 3px 1px rgba(0,0,0,.8);
-  margin-top: 5px;
+  margin-top: 3px;
   padding-left: 20px;
   transition: font-size 0.3s, box-shadow 0.3s;
 }
