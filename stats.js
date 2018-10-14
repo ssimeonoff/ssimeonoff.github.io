@@ -1,4 +1,3 @@
-games = [];
 
 var config = {
   apiKey: "AIzaSyD6HEAHfcXGN-WrUxSaraO3TYNzGbAr8ts",
@@ -11,19 +10,24 @@ var config = {
 
 firebase.initializeApp(config);
 // Reference Games collection
-var gamesRef = firebase.database().ref("games-production");
-console.log(gamesRef);
-//get the games as an array
-gamesRef.on('value', (snap) => {
-  const val = snap.val()
-  GAMES_ALL = Object.keys(val)
-    .map(key => val[key])
-///////////////////////////////////////////////////////////////////////////////
-
-//push data to the Players stats
-  games = GAMES_ALL;
-  pushData();
+firebase.database().ref("games-production").on('value', function(snapshot) {
+    GAMES_ALL = snapshotToArray(snapshot);
+    filterFunction();
+    pushData();
 });
+
+function snapshotToArray(snapshot) {
+    var returnArr = [];
+
+    snapshot.forEach(function(childSnapshot) {
+        var item = childSnapshot.val();
+        item.key = childSnapshot.key;
+
+        returnArr.push(item);
+    });
+    GAMES_ALL = returnArr;
+    return GAMES_ALL;
+};
 
 
 
@@ -35,24 +39,37 @@ function filterFunction(id) {
   clickedElementID = document.getElementById(id);
   if (clickedElementID != null) {clickedElementID.classList.toggle("active");}
 
-  //generating the filtering string
-  //filterString = "";
-  //btnExpansions = document.querySelectorAll('button.active.btn-expansion');
-  //for (i = 0; i < btnExpansions.length; i++) {
-    //filterString = filterString + "||" + id;
-  //}
-  //applying the filtering string
-  //games = games_all.filter(function(el) { //NOTE - rename to GAMES_ALL
-    //return  el.expansions == filterString
-  //});
+  //quering all active buttons
+  btnMap = document.querySelectorAll(".btn-map.active");
+  console.log(btnMap)
+
+  //obtaining the initial games array
+  games = GAMES_ALL;
+
+  console.log(games)
+
+  //filtering by MAPS
+  if (btnMap.length > 0) {
+    for (i = 0; i < games.length; i++) {
+      show = false;
+      for (j = 0; j < btnMap.length; j++) {
+        if (games[i]["map"] == btnMap[j].id) {
+          show = true;
+        }
+      }
+      if (show == false) {games.splice(i,1)}
+    }
+  }
+
+  console.log(GAMES_ALL)
   //pushing the new filtered data
-  //pushData();
+  pushData();
 }
 
 
 function pushData() {
 
-  setTimeout(function() {pushGeneralStats()}, 500); //for smoother animation
+  pushGeneralStats(); //for smoother animation
   pushCorporationsData();
   pushMapStats();
   pushAwardsStats();
