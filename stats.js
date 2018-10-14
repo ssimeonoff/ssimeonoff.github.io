@@ -12,6 +12,7 @@ var config = {
 firebase.initializeApp(config);
 // Reference Games collection
 var gamesRef = firebase.database().ref("games-production");
+console.log(gamesRef);
 //get the games as an array
 gamesRef.on('value', (snap) => {
   const val = snap.val()
@@ -495,7 +496,7 @@ function histogram (players) {
             bar: {gap: 1},
             chartArea:{left:0,bottom:20,top:0,width:460},
             colors: ['#444444','#888888'],
-            histogram: {bucketSize: 5, minValue: 35, maxValue: 90}
+            histogram: {bucketSize: 5, minValue: 40, maxValue: 90}
           };}
 
     var chart = new google.visualization.Histogram(document.getElementById('histogram_' + players));
