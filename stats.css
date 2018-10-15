@@ -38,6 +38,18 @@
   border-right: 2px solid rgb(137,137,137);
 }
 
+.filters-div {
+  width: 446px;
+  line-height: 40px;
+  height: 100px;
+  text-align: left;
+  border-top: 2px solid rgb(221,221,221);
+  border-left: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
+  padding: 5px;
+}
+
 .sort-menu {
   cursor: pointer;
   outline: none;
@@ -965,7 +977,7 @@
   border-bottom: 2px solid rgb(137,137,137);
   border-right: 2px solid rgb(137,137,137);
   font-family: Prototype;
-  background: transparent;
+  background: #ccc;
 }
 
 .button.active {
@@ -973,12 +985,13 @@
   box-shadow: inset 0 0 2px 2px rgb(68,68,68);
   transform: translate(0,3px);
   background: #eee;
+  filter: brightness(120%);
 }
 
 .change-colours {
   border: 2px solid rgb(137,137,137) !important;
   box-shadow: inset 0 0 2px 2px rgb(68,68,68) !important;
-  background: #eee !important;
+  filter: brightness(120%);
 }
 
 .btn-expansion {
@@ -986,34 +999,31 @@
     height: 40px;
     width: 46px;
     cursor: pointer;
-    font-weight: bold;
-    margin-right: 10px;
     color:white;
     font-size: 16px;
-    margin-top: 3px;
-    letter-spacing: 1px;
+    margin-left: -3px;
 }
 
 .btn-map {
   outline: none;
   height: 40px;
-  width: 86px;
+  width: 79px;
   cursor: pointer;
   color:white;
-  margin-top: 3px;
   letter-spacing: 1px;
   text-align: center;
   color: #222;
-  margin-right: 10px;
+  margin-left: -3px;
   font-size: 13px;
+  vertical-align: top;
   font-weight: normal;
 }
 
 .btn-map > div {
-  line-height: 20px;
+  line-height: 16px;
   background: #ee792b;
-  border:1px solid #444;
-  width: 68px;
+  border:1px solid #888;
+  width: 60px;
 }
 
 .drop-down {
@@ -1022,19 +1032,19 @@
   -ms-appearance: none;
   cursor: pointer;
   outline: none;
-  background: transparent;
+  background: #ccc;
   color: #222;
   font-family: Prototype;
-  width: 240px;
+  width: 189px;
   height: 40px;
-  font-size: 18px;
+  font-size: 15px;
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
   border-bottom: 2px solid rgb(137,137,137);
   border-right: 2px solid rgb(137,137,137);
-  box-shadow: 0 1px 3px 1px rgba(0,0,0,.8);
+  box-shadow: 0 2px 4px 1px rgba(0,0,0,.8);
   margin-top: 3px;
-  padding-left: 15px;
+  padding-left: 10px;
   transition: font-size 0.3s, box-shadow 0.3s;
 }
 
