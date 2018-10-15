@@ -745,5 +745,6 @@ function resetFilters() {
   }
   y = document.querySelectorAll(".change-colours");
   if (y.length > 0) { y[0].classList.remove("change-colours")}
+  document.querySelector("option[value='NOT SELECTED']").selected = true;
   filterFunction();
 }
