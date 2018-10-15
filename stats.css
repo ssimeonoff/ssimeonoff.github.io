@@ -990,15 +990,20 @@
     margin-right: 10px;
     color:white;
     font-size: 16px;
-    line-height: 30px;
     margin-top: 3px;
     letter-spacing: 1px;
 }
 
 .btn-map {
+  outline: none;
+  height: 40px;
+  width: 86px;
+  cursor: pointer;
+  color:white;
+  margin-top: 3px;
+  letter-spacing: 1px;
   text-align: center;
   color: #222;
-  width: 86px;
   margin-right: 10px;
   font-size: 13px;
   font-weight: normal;

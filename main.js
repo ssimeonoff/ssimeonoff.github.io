@@ -37,6 +37,7 @@ function submitForm(e) {
 
   var expansions = arrayExpansions();
   var draft = document.querySelector('input[name="draft"]:checked').value;
+  var wgt = document.querySelector('input[name="wgt"]:checked').value;
   var map = document.querySelector('input[name="map"]:checked').value;
   var milestones = arrayMilestones();
   var awards = arrayAwards();
@@ -47,7 +48,7 @@ function submitForm(e) {
 
 
   // Save Game
-  saveGame(players, generations, corporations, scores, expansions, draft, map, milestones, awards, timestamp);
+  saveGame(players, generations, corporations, scores, expansions, draft, wgt, map, milestones, awards, timestamp);
   clearInputs(); //to clear the drop-downs and inputs after the submission
 
   //Show aleart
@@ -87,7 +88,7 @@ function submitForm(e) {
 }
 
 // Save Game to firebasejs
-function saveGame(players, generations, corporations, scores, expansions, draft, map, milestones, awards, timestamp) {
+function saveGame(players, generations, corporations, scores, expansions, draft, wgt,  map, milestones, awards, timestamp) {
   var newGameRef = gamesRef.push();
   newGameRef.set({
     players: players,
@@ -96,6 +97,7 @@ function saveGame(players, generations, corporations, scores, expansions, draft,
     scores: scores,
     expansions: expansions,
     draft: draft,
+    wgt: wgt,
     map: map,
     milestones: milestones,
     awards: awards,
@@ -241,7 +243,7 @@ function pushHistory() {
 
 function compareTime(time) {
   if (time < 120) {return "Just now"}
-  if (time >= 120 && time < 3600) {return "&#x1F557" + Math.floor(time/60) + " minutes"}
+  if (time >= 120 && time < 3600) {return Math.floor(time/60) + " minutes"}
   if (time >= 3600) {return  Math.floor(time/3600) + " hours"}
 }
 

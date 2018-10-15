@@ -43,6 +43,16 @@ function filterFunction(id) {
   clickedElementID = document.getElementById(id);
   if (clickedElementID != null) {clickedElementID.classList.toggle("active");}
 
+  //filter by corporations
+  btnExpansion = document.querySelectorAll(".btn-expansion.active");
+  if (btnExpansion.length == 1 ) {
+    console.log(games)
+    games = games.filter(function(el) {
+      return el.expansions.indexOf("PRELUDE") > -1;
+    });
+  }
+
+
   //filtering by Maps
   btnMap = document.querySelectorAll(".btn-map.active");
   if (btnMap.length == 1 ) {
@@ -69,7 +79,7 @@ function filterFunction(id) {
 
   //pushing the new filtered data
   pushData();
-  //to keep the corporations sorting 
+  //to keep the corporations sorting
   if (playersButton > 1) {sortBy(playersButton)}
 }
 

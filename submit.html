@@ -416,17 +416,29 @@
           <label for="venuphile3" class="btn-awards awards-venus ">VENUPHILE</label><br>
         </fieldset>
 
-        <fieldset class="fieldset-alignment" style="width:90px;display:inline-block;margin-left:-8px;height:223px;">
+        <div  style="width:90px;display:inline-block;margin-left:-8px;height:223px;">
+
+        <fieldset class="fieldset-alignment" style="display:inline-block;margin-left: 0px; width:90px;border-bottom:none;padding-bottom:12px">
+         <legend class="fieldset2">WGT</legend>
+         <input class="checkbox" type="radio" id="wgt" value="YES" name="wgt">
+         <label for="wgt" class="btn-gametype btn-draft" title="Playing with World Government Terraforming">YES</label>
+         <input class="checkbox" type="radio" id="no-wgt"  value="NO" name="wgt">
+         <label for="no-wgt" class="btn-gametype btn-draft" title=" NOT Playing with World Government Terraforming">NO</label>
+       </fieldset>
+
+        <fieldset class="fieldset-alignment"  style="display:inline-block;margin-left: 0px; width:90px;">
          <legend class="fieldset2">EXPANSIONS</legend>
            <input class="checkbox" type="checkbox" id="corporate" value="CORPORATE" name="expansions">
-           <label for="corporate" class="btn-gametype btn-expansions" >CORPORATE</label>
+           <label for="corporate" class="btn-gametype btn-expansions" ><div class="icon corporate-era-icon icon-align"></div></label>
            <input class="checkbox" type="checkbox" id="venus" value="VENUS" name="expansions" onclick="displayVenusAwards()">
-           <label for="venus" class="btn-gametype btn-expansions">VENUS</label>
+           <label for="venus" class="btn-gametype btn-expansions"><div class="icon venus-icon icon-align"></div></label>
            <input class="checkbox" type="checkbox" id="prelude" value="PRELUDE" name="expansions">
-           <label for="prelude" class="btn-gametype btn-expansions" >PRELUDE</label>
+           <label for="prelude" class="btn-gametype btn-expansions" ><div class="icon prelude-icon icon-align"></div></label>
            <input class="checkbox" type="checkbox" id="colonies" value="COLONIES" name="expansions">
-           <label for="colonies" class="btn-gametype btn-expansions">COLONIES</label>
+           <label for="colonies" class="btn-gametype btn-expansions"><div class="icon colonies-icon icon-align"></div></label>
        </fieldset>
+      </div>
+
     </div>
     <div id="modalOne" class="modal">
       <div class="modal-window">

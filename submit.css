@@ -218,9 +218,10 @@ input::placeholder {
 }
 
 .btn-expansions {
-  width:86px;
-  height: 48px;
-  line-height: 48px;
+  width: 40px;
+  height: 60px;
+  line-height: 60px;
+  margin-bottom: -2px;
 
 }
 
@@ -716,6 +717,12 @@ input::-webkit-inner-spin-button {
         background-position: bottom 4px right 3px !important;
         background-repeat: no-repeat !important;
   }
+
+  .icon-align {
+    margin-top: 23px;
+    margin-left: -16px;
+  }
+
   .icon-align2 {
     margin-top:-13px;
   }
