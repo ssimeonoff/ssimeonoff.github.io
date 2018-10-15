@@ -36,8 +36,6 @@ function filterFunction(id) {
   // getting the constant GAMES_ALL
   // filter games from it and return/create new array "games"
   //toggling active buttons state
-
-
   games = GAMES_ALL;
 
   clickedElementID = document.getElementById(id);
@@ -92,6 +90,26 @@ function filterFunction(id) {
       el.expansions != undefined  && el.expansions.indexOf(btnExpansion[1].id) > -1 ||
       el.expansions != undefined  && el.expansions.indexOf(btnExpansion[2].id) > -1 ||
       el.expansions != undefined  && el.expansions.indexOf(btnExpansion[3].id) > -1
+    });
+  }
+
+  //filter by draft
+  btnDraft = document.querySelectorAll(".btn-draft.active")
+  if (btnDraft.length == 1) {
+    games = games.filter(function(el) {
+      return el.draft ==  btnDraft[0].value
+    });
+  }
+
+  //filter by WGT
+  btnWGT = document.querySelectorAll(".btn-wgt.active")
+  if (btnWGT.length == 1) {
+    games = games.filter(function(el) {
+      return el.wgt ==  btnWGT[0].value
+    });
+  } else if (btnDraft.length == 2) {
+    games = games.filter(function(el) {
+      return el.wgt ==  "YES" || el.wgt ==  "NO"
     });
   }
 
@@ -718,4 +736,14 @@ function changeColours (id) {
   menu = document.getElementById(id);
   if (document.querySelector("option[value='NOT SELECTED']").selected) {menu.classList.remove("change-colours");}
   else {menu.classList.add("change-colours");}
+}
+
+function resetFilters() {
+  var x = document.querySelectorAll(".active");
+  for (i = 0; i < x.length; i++) {
+    x[i].classList.remove("active")
+  }
+  y = document.querySelectorAll(".change-colours");
+  if (y.length > 0) { y[0].classList.remove("change-colours")}
+  filterFunction();
 }

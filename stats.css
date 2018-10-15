@@ -62,7 +62,6 @@
   outline: none;
   line-height: 24px;
   box-shadow: 0 2px 4px 1px #444;
-  color: white;
   width: 132px;
   height: 40px;
   margin:4px;
@@ -1004,10 +1003,38 @@
     margin-left: -3px;
 }
 
+.btn-draft {
+  outline: none;
+  height: 40px;
+  width: 60px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #222;
+  margin-left: -3px;
+  font-size: 13px;
+  vertical-align: top;
+  font-weight: normal;
+}
+
+.btn-wgt {
+  outline: none;
+  height: 40px;
+  width: 60px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #222;
+  margin-left: -3px;
+  font-size: 13px;
+  vertical-align: top;
+  font-weight: normal;
+}
+
 .btn-map {
   outline: none;
   height: 40px;
-  width: 79px;
+  width: 80px;
   cursor: pointer;
   color:white;
   letter-spacing: 1px;
@@ -1035,7 +1062,7 @@
   background: #ccc;
   color: #222;
   font-family: Prototype;
-  width: 189px;
+  width: 188px;
   height: 40px;
   font-size: 15px;
   border-top: 2px solid rgb(221,221,221);
@@ -1043,7 +1070,7 @@
   border-bottom: 2px solid rgb(137,137,137);
   border-right: 2px solid rgb(137,137,137);
   box-shadow: 0 2px 4px 1px rgba(0,0,0,.8);
-  margin-top: 3px;
+  margin-right: 10px;
   padding-left: 10px;
   transition: font-size 0.3s, box-shadow 0.3s;
 }
@@ -1051,4 +1078,28 @@
 .button-icon:after {
       margin-top: -8px;
       margin-left: -8px;
+}
+
+.btn-reset {
+  font-family: Prototype;
+  outline: none;
+  border-top: 2px solid rgb(221,221,221);
+  border-left: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
+  box-shadow: 0 2px 4px 1px rgba(0,0,0,.8);
+  height: 40px;
+  width: 130px;
+  margin-top: 10px;
+  cursor: pointer;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  background: #444;
+  text-shadow: 0 0 1px black;
+}
+
+.btn-reset:active {
+  box-shadow: 0 1px 1px 1px rgba(0,0,0,.8);
+  transform: translate(0,2px);
 }

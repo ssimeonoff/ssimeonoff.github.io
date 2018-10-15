@@ -37,7 +37,7 @@
         <button id="PRELUDE" class="button btn-expansion button-icon prelude-icon icon  " onclick="filterFunction(id)" title="filter Prelude games"></button>
         <button id="COLONIES" class="button btn-expansion button-icon colonies-icon icon " onclick="filterFunction(id)" title="filter Colonies games"></button>
 
-        <button id="THARSIS"  style="margin-left:10px;" class="button btn-map" onclick="filterFunction(id)" title="filter games played on THARSIS"><div>THARSIS</div></button>
+        <button id="THARSIS"  style="margin-left:8px;" class="button btn-map" onclick="filterFunction(id)" title="filter games played on THARSIS"><div>THARSIS</div></button>
         <button id="HELLAS" class="button btn-map" onclick="filterFunction(id)" title="filter games played on HELLAS"><div style="background:#3b9ae3">HELLAS</div></button>
         <button id="ELYSIUM" class="button  btn-map" onclick="filterFunction(id)" title="filter games played on ELYSIUM"><div style="background:#09aa09">ELYSIUM</div></button>
 
@@ -72,8 +72,16 @@
         <option value="SPLICE">SPLICE</option>
         <option value="KUIPER BELT COOP.">KUIPER BELT COOP.</option>
         </select>
-      </div>
 
+        <button id="DRAFT" class="button btn-draft" onclick="filterFunction(id)" title="filter Draft games" value="YES">DRAFT</button>
+        <button id="NO-DRAFT" class="button btn-draft" onclick="filterFunction(id)" title="filter No Draft games" value="NO"><s>DRAFT</s></button>
+        <button id="WGT" class="button btn-draft" onclick="filterFunction(id)" title="filter Draft games">WGT</button>
+        <button id="NO-WGT" class="button btn-draft" onclick="filterFunction(id)" title="filter No Draft games"><s>WGT</s></button>
+
+        <button id="reset" class="btn-reset" onclick="resetFilters()" title="reset all filters">RESET</button>
+
+
+    </div>
     <div></div>
 
       <div class="grid5">
