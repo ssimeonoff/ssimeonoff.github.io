@@ -1025,7 +1025,7 @@
   background: transparent;
   color: #222;
   font-family: Prototype;
-  width: 287px;
+  width: 240px;
   height: 40px;
   font-size: 18px;
   border-top: 2px solid rgb(221,221,221);
@@ -1034,7 +1034,7 @@
   border-right: 2px solid rgb(137,137,137);
   box-shadow: 0 1px 3px 1px rgba(0,0,0,.8);
   margin-top: 3px;
-  padding-left: 20px;
+  padding-left: 15px;
   transition: font-size 0.3s, box-shadow 0.3s;
 }
 

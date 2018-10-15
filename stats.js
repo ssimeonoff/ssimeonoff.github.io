@@ -43,16 +43,6 @@ function filterFunction(id) {
   clickedElementID = document.getElementById(id);
   if (clickedElementID != null) {clickedElementID.classList.toggle("active");}
 
-  //filter by corporations
-  btnExpansion = document.querySelectorAll(".btn-expansion.active");
-  if (btnExpansion.length == 1 ) {
-    console.log(games)
-    games = games.filter(function(el) {
-      return el.expansions.indexOf("PRELUDE") > -1;
-    });
-  }
-
-
   //filtering by Maps
   btnMap = document.querySelectorAll(".btn-map.active");
   if (btnMap.length == 1 ) {
@@ -74,6 +64,34 @@ function filterFunction(id) {
   if (selectedCorporation.length > 0) {
     games = games.filter(function(el) {
       return el.corporations.indexOf(selectedCorporation[0].value) > -1 ;
+    });
+  }
+
+  //filter by expansions
+  btnExpansion = document.querySelectorAll(".btn-expansion.active");
+  btnExpansion2 = document.querySelectorAll(".btn-expansion-standard.active");
+
+  if (btnExpansion.length == 1 ) {
+    games = games.filter(function(el) {
+      return el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[0].id) > -1
+    });
+  } else if (btnExpansion.length == 2 ){
+    games = games.filter(function(el) {
+      return el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[0].id) > -1 ||
+      el.expansions != undefined  && el.expansions.indexOf(btnExpansion[1].id) > -1
+    });
+  } else if (btnExpansion.length == 3 ){
+    games = games.filter(function(el) {
+      return el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[0].id) > -1 ||
+      el.expansions != undefined  && el.expansions.indexOf(btnExpansion[1].id) > -1 ||
+      el.expansions != undefined  && el.expansions.indexOf(btnExpansion[2].id) > -1
+    });
+  } else if (btnExpansion.length == 4 ){
+    games = games.filter(function(el) {
+      return el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[0].id) > -1 ||
+      el.expansions != undefined  && el.expansions.indexOf(btnExpansion[1].id) > -1 ||
+      el.expansions != undefined  && el.expansions.indexOf(btnExpansion[2].id) > -1 ||
+      el.expansions != undefined  && el.expansions.indexOf(btnExpansion[3].id) > -1
     });
   }
 
