@@ -1,3 +1,4 @@
+playersButton = 0;
 
 var config = {
   apiKey: "AIzaSyD6HEAHfcXGN-WrUxSaraO3TYNzGbAr8ts",
@@ -12,7 +13,7 @@ firebase.initializeApp(config);
 // Reference Games collection
 firebase.database().ref("games-production").on('value', function(snapshot) {
     GAMES_ALL = snapshotToArray(snapshot);
-    filterFunction();
+    games = snapshotToArray(snapshot);
     pushData();
 });
 
@@ -25,8 +26,7 @@ function snapshotToArray(snapshot) {
 
         returnArr.push(item);
     });
-    GAMES_ALL = returnArr;
-    return GAMES_ALL;
+    return returnArr;
 };
 
 
@@ -36,34 +36,32 @@ function filterFunction(id) {
   // getting the constant GAMES_ALL
   // filter games from it and return/create new array "games"
   //toggling active buttons state
+
+
+  games = GAMES_ALL;
+
   clickedElementID = document.getElementById(id);
   if (clickedElementID != null) {clickedElementID.classList.toggle("active");}
 
-  //quering all active buttons
+  //filtering by Maps
   btnMap = document.querySelectorAll(".btn-map.active");
-  console.log(btnMap)
-
-  //obtaining the initial games array
-  games = GAMES_ALL;
-
-  console.log(games)
-
-  //filtering by MAPS
-  if (btnMap.length > 0) {
-    for (i = 0; i < games.length; i++) {
-      show = false;
-      for (j = 0; j < btnMap.length; j++) {
-        if (games[i]["map"] == btnMap[j].id) {
-          show = true;
-        }
-      }
-      if (show == false) {games.splice(i,1)}
-    }
+  if (btnMap.length == 1 ) {
+    games = games.filter(function(el) {
+      return el.map == btnMap[0].id;
+    });
+  } else if (btnMap.length == 2 ){
+    games = games.filter(function(el) {
+      return el.map == btnMap[0].id || el.map == btnMap[1].id;
+    });
+  } else if (btnMap.length == 3 ){
+    games = games.filter(function(el) {
+      return el.map == btnMap[0].id || el.map == btnMap[1].id || el.map == btnMap[2].id;
+    });
   }
 
-  console.log(GAMES_ALL)
   //pushing the new filtered data
   pushData();
+  if (playersButton > 1) {sortBy(playersButton)}
 }
 
 
@@ -551,7 +549,8 @@ function generateScoresArray (players) {
 function sortBy(players) {
   var sortRule = document.getElementById("sorting").value;
   sortByRule (players, sortRule);
-  }
+  playersButton = players;
+}
 
 function sortByRule(players, sortRule) {
    //get the sort rule
@@ -606,6 +605,18 @@ function sortByRule(players, sortRule) {
 }
 
 function pushHistory() {
+
+  //clear the sections
+  var x = document.querySelectorAll(".history-section-time-value, .history-section-corporation, .history-section-score, .history-section-generation, .history-section-expansions")
+  for (i = 0; i < x.length; i++) {
+    x[i].innerHTML = "";
+  }
+  //remove the highlights
+  var y = document.querySelectorAll(".highlight-winner")
+  for (i = 0; i < y.length; i++) {
+    y[i].classList.remove("highlight-winner");
+  }
+
   //current time in seconds
   now = Math.floor((new Date()).getTime() / 1000);
   gameSections = document.querySelectorAll(".grid-cell-history");
