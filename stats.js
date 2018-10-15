@@ -59,8 +59,17 @@ function filterFunction(id) {
     });
   }
 
+  //filter by corporation
+  selectedCorporation = document.querySelectorAll(".drop-down.change-colours")
+  if (selectedCorporation.length > 0) {
+    games = games.filter(function(el) {
+      return el.corporations.indexOf(selectedCorporation[0].value) > -1 ;
+    });
+  }
+
   //pushing the new filtered data
   pushData();
+  //to keep the corporations sorting 
   if (playersButton > 1) {sortBy(playersButton)}
 }
 
