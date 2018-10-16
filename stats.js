@@ -73,11 +73,15 @@ function filterFunction(id) {
     if (generation1 == "NOT SELECTED") {generation1 = 4}
     if (generation2 == "NOT SELECTED") {generation2 = 16}
     if (parseInt(generation2) < parseInt(generation1)) {
-      generation2 = generation1;
-      document.querySelector("select[id='generation2'] > option[value='"+generation2+"']").selected = true
+      if (id == "generation2") {
+        generation1 = generation2;
+        document.querySelector("select[id='generation1'] > option[value='"+generation2+"']").selected = true
+      }
+      if (id == "generation1") {
+        generation2 = generation1;
+        document.querySelector("select[id='generation2'] > option[value='"+generation2+"']").selected = true
+      }
     }
-    console.log(generation1)
-    console.log(generation2)
     games = games.filter(function(el) {
       return el.generations >= parseInt(generation1) && el.generations <= parseInt(generation2)
     });
