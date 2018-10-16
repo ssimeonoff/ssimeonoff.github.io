@@ -65,6 +65,25 @@ function filterFunction(id) {
     });
   }
 
+  //filter by generations
+  selectedGenerations = document.querySelectorAll(".drop-down-generation.change-colours")
+  if (selectedGenerations.length > 0) {
+    generation1 = document.getElementById("generation1").value;
+    generation2 = document.getElementById("generation2").value;
+    if (generation1 == "NOT SELECTED") {generation1 = 4}
+    if (generation2 == "NOT SELECTED") {generation2 = 16}
+    if (parseInt(generation2) < parseInt(generation1)) {
+      generation2 = generation1;
+      document.querySelector("select[id='generation2'] > option[value='"+generation2+"']").selected = true
+    }
+    console.log(generation1)
+    console.log(generation2)
+    games = games.filter(function(el) {
+      return el.generations >= parseInt(generation1) && el.generations <= parseInt(generation2)
+    });
+  }
+
+
   //filter by expansions
   btnExpansion = document.querySelectorAll(".btn-expansion.active");
   btnExpansion2 = document.querySelectorAll(".btn-expansion-standard.active");
@@ -734,7 +753,7 @@ function compareTime(time) {
 
 function changeColours (id) {
   menu = document.getElementById(id);
-  if (document.querySelector("option[value='NOT SELECTED']").selected) {menu.classList.remove("change-colours");}
+  if (menu.querySelector("option[value='NOT SELECTED']").selected) {menu.classList.remove("change-colours");}
   else {menu.classList.add("change-colours");}
 }
 

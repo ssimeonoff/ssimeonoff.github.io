@@ -982,7 +982,7 @@
 .button.active {
   border: 2px solid rgb(137,137,137) ;
   box-shadow: inset 0 0 2px 2px rgb(68,68,68);
-  transform: translate(0,3px);
+  transform: translate(0,2px);
   background: #eee;
   filter: brightness(120%);
 }
@@ -990,6 +990,8 @@
 .change-colours {
   border: 2px solid rgb(137,137,137) !important;
   box-shadow: inset 0 0 2px 2px rgb(68,68,68) !important;
+  transform: translate(0,2px);
+  background: #eee !important;
   filter: brightness(120%);
 }
 
@@ -1075,6 +1077,28 @@
   transition: font-size 0.3s, box-shadow 0.3s;
 }
 
+.drop-down-generation {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  cursor: pointer;
+  outline: none;
+  background: #ccc;
+  color: #222;
+  font-family: Prototype;
+  width: 93px;
+  height: 40px;
+  font-size: 15px;
+  border-top: 2px solid rgb(221,221,221);
+  border-left: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
+  box-shadow: 0 2px 4px 1px rgba(0,0,0,.8);
+  margin-right: -3px;
+  padding-left: 10px;
+  transition: font-size 0.3s, box-shadow 0.3s;
+}
+
 .button-icon:after {
       margin-top: -8px;
       margin-left: -8px;
@@ -1090,7 +1114,8 @@
   box-shadow: 0 2px 4px 1px rgba(0,0,0,.8);
   height: 40px;
   width: 130px;
-  margin-top: 10px;
+  margin-top: 12px;
+  margin-left: 125px;
   cursor: pointer;
   text-align: center;
   color: white;
