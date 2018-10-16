@@ -1114,14 +1114,15 @@
   box-shadow: 0 2px 4px 1px rgba(0,0,0,.8);
   height: 40px;
   width: 130px;
-  margin-top: 12px;
+  margin-top: 10px;
   margin-left: 125px;
   cursor: pointer;
   text-align: center;
   color: white;
-  font-size: 16px;
-  background: #444;
-  text-shadow: 0 0 1px black;
+  font-size: 18px;
+  background: transparent;
+  color:white;
+  text-shadow: 0 0 1px black, 0 2px 2px black;
 }
 
 .btn-reset:active {
