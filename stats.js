@@ -75,20 +75,20 @@ function filterFunction(id) {
     });
   } else if (btnExpansion.length == 2 ){
     games = games.filter(function(el) {
-      return el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[0].id) > -1 ||
+      return el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[0].id) > -1 &&
       el.expansions != undefined  && el.expansions.indexOf(btnExpansion[1].id) > -1
     });
   } else if (btnExpansion.length == 3 ){
     games = games.filter(function(el) {
-      return el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[0].id) > -1 ||
-      el.expansions != undefined  && el.expansions.indexOf(btnExpansion[1].id) > -1 ||
+      return el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[0].id) > -1 &&
+      el.expansions != undefined  && el.expansions.indexOf(btnExpansion[1].id) > -1 &&
       el.expansions != undefined  && el.expansions.indexOf(btnExpansion[2].id) > -1
     });
   } else if (btnExpansion.length == 4 ){
     games = games.filter(function(el) {
-      return el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[0].id) > -1 ||
-      el.expansions != undefined  && el.expansions.indexOf(btnExpansion[1].id) > -1 ||
-      el.expansions != undefined  && el.expansions.indexOf(btnExpansion[2].id) > -1 ||
+      return el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[0].id) > -1 &&
+      el.expansions != undefined  && el.expansions.indexOf(btnExpansion[1].id) > -1 &&
+      el.expansions != undefined  && el.expansions.indexOf(btnExpansion[2].id) > -1 &&
       el.expansions != undefined  && el.expansions.indexOf(btnExpansion[3].id) > -1
     });
   }
@@ -105,7 +105,7 @@ function filterFunction(id) {
   btnWGT = document.querySelectorAll(".btn-wgt.active")
   if (btnWGT.length == 1) {
     games = games.filter(function(el) {
-      return el.wgt ==  btnWGT[0].value
+      return el.wgt != undefined && el.wgt ==  btnWGT[0].value
     });
   } else if (btnDraft.length == 2) {
     games = games.filter(function(el) {
