@@ -763,7 +763,10 @@ function resetFilters() {
     x[i].classList.remove("active")
   }
   y = document.querySelectorAll(".change-colours");
-  if (y.length > 0) { y[0].classList.remove("change-colours")}
-  document.querySelector("option[value='NOT SELECTED']").selected = true;
+  if (y.length > 0) {
+    for (i = 0; i < y.length; i++) {
+    y[i].classList.remove("change-colours");
+    }
+  }
   filterFunction();
 }
