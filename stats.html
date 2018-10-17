@@ -74,9 +74,9 @@
         </select>
 
         <button id="DRAFT" class="button btn-draft" onclick="filterFunction(id)" title="filter Draft games" value="YES">DRAFT</button>
-        <button id="NO-DRAFT" class="button btn-draft" onclick="filterFunction(id)" title="filter No Draft games" value="NO"><s>DRAFT</s></button>
+        <button id="NO-DRAFT" class="button btn-draft" onclick="filterFunction(id)" title="filter No Draft games" value="NO">DRAFT<div class="crossed"></div></button>
         <button id="WGT" class="button btn-wgt" onclick="filterFunction(id)" title="filter games with WGT" value="YES">WGT</button>
-        <button id="NO-WGT" class="button btn-wgt" onclick="filterFunction(id)" title="filter games without WGT" value="NO" ><s>WGT</s></button>
+        <button id="NO-WGT" class="button btn-wgt" onclick="filterFunction(id)" title="filter games without WGT" value="NO" >WGT<div class="crossed"></div></button>
 
         <select id="generation1" class="drop-down-generation" name="generations" size="1" onchange="changeColours(id); filterFunction(id)">
         <option disabled value="NOT SELECTED" selected>FROM</option>

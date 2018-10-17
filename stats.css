@@ -1006,6 +1006,7 @@
 }
 
 .btn-draft {
+  position: relative;
   outline: none;
   height: 40px;
   width: 60px;
@@ -1020,6 +1021,7 @@
 }
 
 .btn-wgt {
+  position: relative;
   outline: none;
   height: 40px;
   width: 60px;
@@ -1128,4 +1130,24 @@
 .btn-reset:active {
   box-shadow: 0 1px 1px 1px rgba(0,0,0,.8);
   transform: translate(0,2px);
+}
+
+.crossed::before {
+  position: absolute;
+  content: "";
+  border-bottom: 1px solid #444;
+  width: 100%;
+  transform: rotate(-30deg);
+  margin-top: -8px;
+  margin-left: -28px;
+}
+
+.crossed::after {
+  position: absolute;
+  content: "";
+  border-bottom: 1px solid #444;
+  width: 100%;
+  transform: rotate(30deg);
+  margin-top: -8px;
+  margin-left: -28px;
 }
