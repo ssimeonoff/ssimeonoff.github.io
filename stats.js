@@ -122,7 +122,7 @@ function filterFunction(id) {
     games = games.filter(function(el) {
       return el.draft ==  btnDraft[0].value
     });
-  }
+  } else {console.log("hi")}
 
   //filter by WGT
   btnWGT = document.querySelectorAll(".btn-wgt.active")
@@ -130,7 +130,7 @@ function filterFunction(id) {
     games = games.filter(function(el) {
       return el.wgt != undefined && el.wgt ==  btnWGT[0].value
     });
-  } else if (btnDraft.length == 2) {
+  } else if (btnWGT.length == 2) {
     games = games.filter(function(el) {
       return el.wgt ==  "YES" || el.wgt ==  "NO"
     });
