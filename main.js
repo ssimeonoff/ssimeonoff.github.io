@@ -187,6 +187,17 @@ function resetAll () {
 
 ///History functions
 function pushHistory() {
+  //clear the sections
+  var x = document.querySelectorAll(".history-section-time-value, .history-section-corporation, .history-section-score, .history-section-generation, .history-section-expansions")
+  for (i = 0; i < x.length; i++) {
+    x[i].innerHTML = "";
+  }
+  //remove the highlights
+  var y = document.querySelectorAll(".highlight-winner")
+  for (i = 0; i < y.length; i++) {
+    y[i].classList.remove("highlight-winner");
+  }
+
   //current time in seconds
   now = Math.floor((new Date()).getTime() / 1000);
   gameSections = document.querySelectorAll(".grid-cell-history");
