@@ -1,5 +1,6 @@
 playersButton = 0;
 
+
 var config = {
   apiKey: "AIzaSyD6HEAHfcXGN-WrUxSaraO3TYNzGbAr8ts",
   authDomain: "tm-games1.firebaseapp.com",
@@ -8,6 +9,7 @@ var config = {
   storageBucket: "tm-games1.appspot.com",
   messagingSenderId: "969120080569"
 };
+
 
 firebase.initializeApp(config);
 // Reference Games collection
@@ -28,8 +30,6 @@ function snapshotToArray(snapshot) {
     });
     return returnArr;
 };
-
-
 
 
 function filterFunction(id) {
@@ -751,7 +751,7 @@ function pushHistory() {
 
 function compareTime(time) {
   if (time < 120) {return "just now"}
-  if (time >= 120 && time < 3600) {return Math.floor(time/60) + " minutes"}
+  if (time >= 120 && time < 3600) {return Math.floor(time/60) + " mins"}
   if (time >= 3600) {return Math.floor(time/3600) + " hours"}
 }
 

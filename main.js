@@ -1,3 +1,6 @@
+countryValue = "";
+getCountry();
+
 // Initialize Firebase
 var config = {
   apiKey: "AIzaSyD6HEAHfcXGN-WrUxSaraO3TYNzGbAr8ts",
@@ -37,7 +40,7 @@ function submitForm(e) {
 
   var expansions = arrayExpansions();
   var draft = document.querySelector('input[name="draft"]:checked').value;
-  var wgt = document.querySelector('input[name="wgt"]:checked').value;
+  var wgt = getWGT();
   var map = document.querySelector('input[name="map"]:checked').value;
   var milestones = arrayMilestones();
   var awards = arrayAwards();
@@ -45,10 +48,10 @@ function submitForm(e) {
   //ordering the two arrays by the scores values
   var corporations = newCorporations;
   var scores = newScores;
-
+  var country = countryValue;
 
   // Save Game
-  saveGame(players, generations, corporations, scores, expansions, draft, wgt, map, milestones, awards, timestamp);
+  saveGame(players, generations, corporations, scores, expansions, draft, wgt, map, milestones, awards, timestamp, country);
   clearInputs(); //to clear the drop-downs and inputs after the submission
 
   //Show aleart
@@ -88,7 +91,7 @@ function submitForm(e) {
 }
 
 // Save Game to firebasejs
-function saveGame(players, generations, corporations, scores, expansions, draft, wgt,  map, milestones, awards, timestamp) {
+function saveGame(players, generations, corporations, scores, expansions, draft, wgt,  map, milestones, awards, timestamp, country) {
   var newGameRef = gamesRef.push();
   newGameRef.set({
     players: players,
@@ -101,7 +104,8 @@ function saveGame(players, generations, corporations, scores, expansions, draft,
     map: map,
     milestones: milestones,
     awards: awards,
-    timestamp: timestamp
+    timestamp: timestamp,
+    country: country
   })
 }
 
@@ -277,7 +281,6 @@ function indexOfMax(arr) {
 }
 
 function orderScoresandCorporations() {
-
   //sorting scores and corporations and generating two new arrays
   //newScores and newCorporations
   oldScores = arrayScores();
@@ -295,4 +298,21 @@ function orderScoresandCorporations() {
     oldScores.splice(maxValueIndex, 1);
     oldCorporations.splice(maxValueIndex, 1);
   }
+}
+
+function getWGT() {
+  try {
+    wgt = document.querySelector('input[name="wgt"]:checked').value
+  } catch {
+    wgt = [];
+  }
+  return wgt
+}
+
+function getCountry() {
+ $.getJSON('http://www.geoplugin.net/json.gp?jsoncallback=?', function(data) {
+    geo = JSON.stringify(data, null, 2)
+    geo = JSON.parse(geo)
+    countryValue = geo["geoplugin_countryCode"];
+  });
 }
