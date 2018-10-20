@@ -397,13 +397,19 @@
 
 .history-section-time-value {
   display: inline-block;
-  width: 68px;
+  width: 64px;
+  border-left: 1px solid rgb(221,221,221);
+  border-right: 1px solid rgb(137,137,137);
+  margin-left: -4px;
+  text-align: center;
 }
 
 .history-section-expansions {
   display: inline-block;
   text-align: right;
-  width: 80px;
+  width: 86px;
+  border-left: 1px solid rgb(221,221,221);
+  margin-left: -4px;
 }
 
 .history-section-expansion-ribbon {
@@ -997,7 +1003,8 @@
 
 .flag-div {
   display: inline-block;
-  width: 27px;
+  width: 29px;
+  border-right: 1px solid rgb(137,137,137);
 }
 
 .flag {

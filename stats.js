@@ -685,7 +685,7 @@ function sortByRule(players, sortRule) {
 function pushHistory() {
 
   //clear the sections
-  var x = document.querySelectorAll(".history-section-time-value, .history-section-corporation, .history-section-score, .history-section-generation, .history-section-expansions")
+  var x = document.querySelectorAll(".flag-div,.history-section-time-value, .history-section-corporation, .history-section-score, .history-section-generation, .history-section-expansions")
   for (i = 0; i < x.length; i++) {
     x[i].innerHTML = "";
   }
@@ -746,6 +746,12 @@ function pushHistory() {
     }
     gameSections[i].querySelector(".history-section-expansions").innerHTML = expansionsHTML;
 
+    //display the flag
+    country =  games[games.length-1-i]["country"];
+    if (country != undefined && country.length > 1) {
+      countryDivContent = '<img class="flag" src="images/flags/'+country+'.png" title="'+country+'">';
+      gameSections[i].querySelector(".flag-div").innerHTML = countryDivContent;
+    }
   }
 }
 
@@ -753,6 +759,7 @@ function compareTime(time) {
   if (time < 120) {return "just now"}
   if (time >= 120 && time < 3600) {return Math.floor(time/60) + " mins"}
   if (time >= 3600) {return Math.floor(time/3600) + " hours"}
+  if (time >= 3600*24) {return Math.floor(time/3600*24) + " days"}
 }
 
 function changeColours (id) {
