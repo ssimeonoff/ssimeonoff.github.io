@@ -749,7 +749,7 @@ function pushHistory() {
     //display the flag
     country =  games[games.length-1-i]["country"];
     if (country != undefined && country.length > 1) {
-      countryDivContent = '<img class="flag" src="images/flags/'+country+'.png" title="'+country+'">';
+      countryDivContent = '<img class="flag" src="flags/'+country+'.png" title="'+country+'">';
       gameSections[i].querySelector(".flag-div").innerHTML = countryDivContent;
     }
   }
