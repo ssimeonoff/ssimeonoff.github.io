@@ -995,8 +995,13 @@
   filter: brightness(120%);
 }
 
+.flag-div {
+  display: inline-block;
+  width: 27px;
+}
+
 .flag {
-  margin-right: 2px;
+  height: 25px;
   vertical-align: bottom;
 }
 

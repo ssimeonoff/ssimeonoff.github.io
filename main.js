@@ -310,9 +310,9 @@ function getWGT() {
 }
 
 function getCountry() {
- $.getJSON('http://www.geoplugin.net/json.gp?jsoncallback=?', function(data) {
+ $.getJSON('https://ipapi.co/json/', function(data) {
     geo = JSON.stringify(data, null, 2)
     geo = JSON.parse(geo)
-    countryValue = geo["geoplugin_countryCode"];
+    countryValue = geo["country"];
   });
 }
