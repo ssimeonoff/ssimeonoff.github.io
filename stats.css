@@ -406,7 +406,7 @@
 
 .history-section-expansions {
   display: inline-block;
-  text-align: right;
+  text-align: left;
   width: 86px;
   border-left: 1px solid rgb(221,221,221);
   margin-left: -4px;
@@ -414,7 +414,8 @@
 
 .history-section-expansion-ribbon {
   display: inline-block;
-  margin-right: 20px;
+  margin-right: 15px;
+  margin-left: 5px;
 }
 
 
