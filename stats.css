@@ -387,34 +387,29 @@
   border-left: 1px solid rgb(221,221,221);
   border-bottom: 1px solid rgb(137,137,137);
   border-right: 1px solid rgb(137,137,137);
-  height: 25px;
-  line-height: 25px;
-  color: white;
-  text-shadow: 0 0 3px black, 0 1px 1px black;
+  height: 32px;
+  line-height: 32px;
+  color: #eee;
+  text-shadow: 0 0 1px black;
   text-align: left;
   padding-left: 4px;
+  background: #444;
 }
 
 .history-section-time-value {
   display: inline-block;
   width: 64px;
-  border-left: 1px solid rgb(221,221,221);
-  border-right: 1px solid rgb(137,137,137);
-  margin-left: -4px;
-  text-align: center;
 }
 
 .history-section-expansions {
   display: inline-block;
   text-align: left;
-  width: 86px;
-  border-left: 1px solid rgb(221,221,221);
   margin-left: -4px;
 }
 
 .history-section-expansion-ribbon {
   display: inline-block;
-  margin-right: 15px;
+  margin-right: 13px;
   margin-left: 5px;
 }
 
@@ -425,16 +420,17 @@
   border-left: 1px solid rgb(221,221,221);
   border-bottom: 1px solid rgb(137,137,137);
   border-right: 1px solid rgb(137,137,137);
-  height: 25px;
-  line-height: 25px;
+  height: 32px;
+  line-height: 32px;
+  background: #444;
 }
 .history-section-generation-value {
   position: absolute;
-  margin-left: 3px;
-  margin-top: 3px;
-  width: 25px;
-  height: 17px;
-  line-height: 18px;
+  margin-left: 5px;
+  margin-top: 5px;
+  width: 22px;
+  height: 20px;
+  line-height: 20px;
   background: #eee;
   border: 1px solid rgba(0,0,0,.4);
 }
@@ -915,7 +911,7 @@
         text-align: center;
         color: white;
         border-radius: 50%;
-        box-shadow: 0 0 0 1px rgba(0,0,0,0.4);
+        box-shadow: 0 0 0 2px #eee;
         content: "";
         background-size: 10px 10px !important;
         background-position: bottom 4px right 3px !important;
@@ -1004,13 +1000,12 @@
 
 .flag-div {
   display: inline-block;
-  width: 29px;
-  border-right: 1px solid rgb(137,137,137);
+  width: 36px;
 }
 
 .flag {
   margin-top: -20px;
-  height: 25px;
+  height: 32px;
   vertical-align: bottom;
 }
 
