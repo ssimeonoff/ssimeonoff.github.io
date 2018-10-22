@@ -122,7 +122,7 @@ function filterFunction(id) {
     games = games.filter(function(el) {
       return el.draft ==  btnDraft[0].value
     });
-  } else {console.log("hi")}
+  }
 
   //filter by WGT
   btnWGT = document.querySelectorAll(".btn-wgt.active")
@@ -694,6 +694,11 @@ function pushHistory() {
   for (i = 0; i < y.length; i++) {
     y[i].classList.remove("highlight-winner");
   }
+  //remove dark background
+  var z = document.querySelectorAll(".dark-background")
+  for (i = 0; i < z.length; i++) {
+    z[i].classList.remove("dark-background");
+  }
 
   //current time in seconds
   now = Math.floor((new Date()).getTime() / 1000);
@@ -701,10 +706,18 @@ function pushHistory() {
 
   for(i=0; i < gameSections.length ; i++) {
 
+    if (games.length-i > 0) {
+      console.log("ok")
+      //add dark background to the headers
+      gameSections[i].querySelector(".history-section-time").classList.add("dark-background");
+      gameSections[i].querySelector(".history-section-generation").classList.add("dark-background");
+    }
     //game timestamp in seconds
     timestamp = games[games.length-1-i]["timestamp"];
     if (timestamp == undefined) {time = "unknown"}
-    else {time = now - timestamp;}
+    else {
+      time = now - timestamp;
+    }
     gameSections[i].querySelector(".history-section-time-value").innerHTML = compareTime(time);
 
     //the corporations array

@@ -603,66 +603,12 @@ input::-webkit-inner-spin-button {
   border-right: 2px solid rgb(137,137,137);
 }
 
-.history-section-corporation {
-  display: inline-block;
-  border-top: 1px solid rgb(221,221,221);
-  border-left: 1px solid rgb(221,221,221);
-  border-bottom: 1px solid rgb(137,137,137);
-  border-right: 1px solid rgb(137,137,137);
-  height: 25px;
-  line-height: 25px;
-}
-.history-section-score {
-  display: inline-block;
-  border-top: 1px solid rgb(221,221,221);
-  border-left: 1px solid rgb(221,221,221);
-  border-bottom: 1px solid rgb(137,137,137);
-  border-right: 1px solid rgb(137,137,137);
-  height: 25px;
-  line-height: 25px;
-}
-.history-section-time {
-  position: relative;
-  display: inline-block;
-  border-top: 1px solid rgb(221,221,221);
-  border-left: 1px solid rgb(221,221,221);
-  border-bottom: 1px solid rgb(137,137,137);
-  border-right: 1px solid rgb(137,137,137);
-  height: 25px;
-  line-height: 25px;
-  color: white;
-  text-shadow: 0 0 1px black, 0 1px 1px black;
-  text-align: left;
-  padding-left: 4px;
-}
-
-.history-section-generation {
-  display: inline-block;
-  border-top: 1px solid rgb(221,221,221);
-  border-left: 1px solid rgb(221,221,221);
-  border-bottom: 1px solid rgb(137,137,137);
-  border-right: 1px solid rgb(137,137,137);
-  height: 25px;
-  line-height: 25px;
-}
-.history-section-generation-value {
-  position: absolute;
-  margin-left: 5px;
-  margin-top: 4px;
-  width: 22px;
-  border-radius: 2px;
-  height: 16px;
-  line-height: 16px;
-  background: #eee;
-  border: 1px solid #444;
-}
-
 .title-cell {
   width: 440px;
   color: white;
   font-size: 16px;
-  line-height: 25px;
-  height: 25px;
+  line-height: 4px;
+  height: 4px;
   text-shadow: 0 0 1px black, 0 2px 2px black;
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
@@ -687,21 +633,6 @@ input::-webkit-inner-spin-button {
   margin-right: 10px;
 }
 
-.history-section-time-value {
-  display: inline-block;
-  width: 91px;
-}
-.history-section-expansions {
-  display: inline-block;
-  text-align: right;
-  width: 80px;
-}
-
-.history-section-expansion-ribbon {
-  display: inline-block;
-  margin-right: 20px;
-}
-
 .icon:after {
         position: absolute;
         font-size: 11px;
@@ -711,7 +642,7 @@ input::-webkit-inner-spin-button {
         text-align: center;
         color: white;
         border-radius: 50%;
-        box-shadow: 0 0 0 1px rgba(0,0,0,0.7);
+        box-shadow: 0 0 0 2px white;
         content: "";
         background-size: 10px 10px !important;
         background-position: bottom 4px right 3px !important;

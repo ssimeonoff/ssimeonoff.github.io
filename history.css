@@ -1,0 +1,107 @@
+.history-section-corporation {
+  display: inline-block;
+  border-top: 1px solid rgb(221,221,221);
+  border-left: 1px solid rgb(221,221,221);
+  border-bottom: 1px solid rgb(137,137,137);
+  border-right: 1px solid rgb(137,137,137);
+  height: 25px;
+  line-height: 25px;
+}
+.history-section-score {
+  display: inline-block;
+  border-top: 1px solid rgb(221,221,221);
+  border-left: 1px solid rgb(221,221,221);
+  border-bottom: 1px solid rgb(137,137,137);
+  border-right: 1px solid rgb(137,137,137);
+  height: 25px;
+  line-height: 25px;
+}
+.history-section-time {
+  position: relative;
+  display: inline-block;
+  border-top: 1px solid rgb(221,221,221);
+  border-left: 1px solid rgb(221,221,221);
+  border-bottom: 1px solid rgb(137,137,137);
+  border-right: 1px solid rgb(137,137,137);
+  height: 32px;
+  line-height: 32px;
+  color: #eee;
+  text-shadow: 0 0 1px black;
+  text-align: left;
+  padding-left: 4px;
+}
+
+.history-section-time-value {
+  display: inline-block;
+  width: 64px;
+}
+
+.history-section-expansions {
+  display: inline-block;
+  text-align: left;
+  margin-left: -4px;
+}
+
+.history-section-expansion-ribbon {
+  display: inline-block;
+  margin-right: 13px;
+  margin-left: 5px;
+}
+
+.history-section-generation {
+  display: inline-block;
+  border-top: 1px solid rgb(221,221,221);
+  border-left: 1px solid rgb(221,221,221);
+  border-bottom: 1px solid rgb(137,137,137);
+  border-right: 1px solid rgb(137,137,137);
+  height: 32px;
+  line-height: 32px;
+}
+
+.history-section-generation-value {
+  position: absolute;
+  margin-left: 5px;
+  margin-top: 5px;
+  width: 22px;
+  height: 20px;
+  line-height: 20px;
+  background: #eee;
+  border: 1px solid rgba(0,0,0,.4);
+}
+
+.dark-background {
+  background: #444;
+}
+
+.flag-div {
+  display: inline-block;
+  width: 36px;
+}
+
+.flag {
+  margin-top: -20px;
+  height: 32px;
+  vertical-align: bottom;
+}
+
+.grid-cell-history2 {
+  display: grid;
+  grid-template-columns: 190px 210px 56px;
+  text-align: center;
+  color: #222;
+  font-size: 15px;
+  border-radius: 1px;
+  border-top: 2px solid rgb(221,221,221);
+  border-left: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
+}
+
+.failed-number {
+  background: #cc3333;
+  padding: 0px 7px 0px 7px;
+  border-radius: 2px;
+  color: white;
+  border: 1px solid #444;
+  text-shadow: 0 0px 1px black;
+}

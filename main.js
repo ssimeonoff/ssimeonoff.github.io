@@ -201,12 +201,21 @@ function pushHistory() {
   for (i = 0; i < y.length; i++) {
     y[i].classList.remove("highlight-winner");
   }
+  //remove dark background
+  var z = document.querySelectorAll(".dark-background")
+  for (i = 0; i < z.length; i++) {
+    z[i].classList.remove("dark-background");
+  }
 
   //current time in seconds
   now = Math.floor((new Date()).getTime() / 1000);
   gameSections = document.querySelectorAll(".grid-cell-history");
 
   for(i=0; i < gameSections.length ; i++) {
+
+    //add dark background to the headers
+    gameSections[i].querySelector(".history-section-time").classList.add("dark-background");
+    gameSections[i].querySelector(".history-section-generation").classList.add("dark-background");
 
     //game timestamp in seconds
     timestamp = games[games.length-1-i]["timestamp"];
@@ -253,6 +262,13 @@ function pushHistory() {
       expansionsHTML = expansionsHTML + '<div class="history-section-expansion-ribbon"><div class="icon colonies-icon icon-align2"></div></div>'
     }
     gameSections[i].querySelector(".history-section-expansions").innerHTML = expansionsHTML;
+
+    //display the flag
+    country =  games[games.length-1-i]["country"];
+    if (country != undefined && country.length > 1) {
+      countryDivContent = '<img class="flag" src="flags/'+country+'.png" title="'+country+'">';
+      gameSections[i].querySelector(".flag-div").innerHTML = countryDivContent;
+    }
   }
 }
 
