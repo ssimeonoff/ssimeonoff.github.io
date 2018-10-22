@@ -1,5 +1,5 @@
 countryValue = "";
-getCountry();
+//getCountry();
 
 // Initialize Firebase
 var config = {
