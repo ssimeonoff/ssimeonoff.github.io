@@ -1,5 +1,5 @@
 countryValue = "";
-//getCountry();
+getCountry();
 
 // Initialize Firebase
 var config = {
@@ -26,9 +26,17 @@ r1.on('value', (snap) => {
 })
 
 
-
 //listen for form SUBMIT
 document.getElementById("form").addEventListener("submit", submitForm);
+
+//get user's country code
+function getCountry() {
+ $.getJSON('https://ipapi.co/json/', function(data) {
+    geo = JSON.stringify(data, null, 2)
+    geo = JSON.parse(geo)
+    countryValue = geo["country"];
+  });
+}
 
 // Submit form
 function submitForm(e) {
@@ -192,7 +200,7 @@ function resetAll () {
 ///History functions
 function pushHistory() {
   //clear the sections
-  var x = document.querySelectorAll(".history-section-time-value, .history-section-corporation, .history-section-score, .history-section-generation, .history-section-expansions")
+  var x = document.querySelectorAll(".flag-div, .history-section-time-value, .history-section-corporation, .history-section-score, .history-section-generation, .history-section-expansions")
   for (i = 0; i < x.length; i++) {
     x[i].innerHTML = "";
   }
@@ -273,9 +281,10 @@ function pushHistory() {
 }
 
 function compareTime(time) {
-  if (time < 120) {return "Just now"}
-  if (time >= 120 && time < 3600) {return Math.floor(time/60) + " minutes"}
-  if (time >= 3600) {return  Math.floor(time/3600) + " hours"}
+  if (time < 120) {return "now"}
+  if (time >= 120 && time < 3600) {return Math.floor(time/60) + " mins"}
+  if (time >= 3600 && time < 86400) {return Math.floor(time/3600) + " hours"}
+  if (time >= 86400) {return Math.floor(time/86400) + " days"}
 }
 
 function indexOfMax(arr) {
@@ -323,12 +332,4 @@ function getWGT() {
     wgt = [];
   }
   return wgt
-}
-
-function getCountry() {
- $.getJSON('https://ipapi.co/json/', function(data) {
-    geo = JSON.stringify(data, null, 2)
-    geo = JSON.parse(geo)
-    countryValue = geo["country"];
-  });
 }
