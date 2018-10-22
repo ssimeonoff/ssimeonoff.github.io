@@ -1,6 +1,5 @@
 
 
-
 //disable enter to submit the form
 $("#form").keypress(function (event) {
     if (event.keyCode == 13) {
