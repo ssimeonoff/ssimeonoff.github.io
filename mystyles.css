@@ -1887,8 +1887,6 @@ input[type=range]:focus {
   background: url("images/thumb2.png") !important;
   width: 46px !important;
   background-repeat: no-repeat;
-
-
 }
 
 .track-oceans-thumb::-webkit-slider-thumb {
