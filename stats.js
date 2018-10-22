@@ -714,11 +714,11 @@ function pushHistory() {
     }
     //game timestamp in seconds
     timestamp = games[games.length-1-i]["timestamp"];
-    if (timestamp == undefined) {time = "unknown"}
+    if (timestamp == undefined) {time = " "}
     else {
       time = now - timestamp;
     }
-    gameSections[i].querySelector(".history-section-time-value").innerHTML = compareTime(time);
+    gameSections[i].querySelector(".history-section-time-value").innerHTML =  '<img class="clock" src="images/clock.png">' + compareTime(time);
 
     //the corporations array
     corporationsSections = gameSections[i].querySelectorAll(".history-section-corporation");
@@ -769,10 +769,10 @@ function pushHistory() {
 }
 
 function compareTime(time) {
-  if (time < 120) {return "just now"}
-  if (time >= 120 && time < 3600) {return Math.floor(time/60) + " mins"}
-  if (time >= 3600 && time < 86400) {return Math.floor(time/3600) + " hours"}
-  if (time >= 86400) {return Math.floor(time/86400) + " days"}
+  if (time < 120) {return "now"}
+  if (time >= 120 && time < 3600) {return Math.floor(time/60) + "m"}
+  if (time >= 3600 && time < 86400) {return Math.floor(time/3600) + "h"}
+  if (time >= 86400) {return Math.floor(time/86400) + "d"}
 }
 
 function changeColours (id) {
