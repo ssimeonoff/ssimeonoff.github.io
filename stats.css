@@ -51,6 +51,9 @@
 }
 
 .sort-menu {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
   cursor: pointer;
   outline: none;
   font-family: Prototype;
@@ -1011,12 +1014,14 @@
 
 .btn-expansion {
     outline: none;
+    vertical-align: top;
     height: 40px;
     width: 46px;
     cursor: pointer;
     color:white;
     font-size: 16px;
     margin-left: -3px;
+    margin-bottom: 10px;
 }
 
 .btn-draft {
