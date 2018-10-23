@@ -1,5 +1,6 @@
 countryValue = "";
-getCountry();
+try {getCountry();}
+catch {console.log("cannot get country")}
 
 // Initialize Firebase
 var config = {
