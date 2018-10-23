@@ -36,6 +36,7 @@ function getCountry() {
     geo = JSON.stringify(data, null, 2)
     geo = JSON.parse(geo)
     countryValue = geo["country"];
+    console.log(countryValue);
   });
 }
 
