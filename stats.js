@@ -764,6 +764,8 @@ function pushHistory() {
     if (country != undefined && country.length > 1) {
       countryDivContent = '<img class="flag" src="flags/'+country+'.png" title="'+country+'">';
       gameSections[i].querySelector(".flag-div").innerHTML = countryDivContent;
+    } else {
+      gameSections[i].querySelector(".flag-div").innerHTML = "&nbsp;";
     }
   }
 }
@@ -772,7 +774,7 @@ function compareTime(time) {
   if (time >= 0 && time < 120) {return "now"}
   if (time >= 120 && time < 7200) {return Math.floor(time/60) + " mins"}
   if (time >= 7200 && time < 172800) {return Math.floor(time/3600) + " hours"}
-  if (time >= 86400) {return Math.floor(time/172800) + " days"}
+  if (time >= 172800) {return Math.floor(time/86400) + " days"}
 }
 
 function changeColours (id) {

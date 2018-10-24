@@ -32,19 +32,24 @@
 
 .history-section-time-value {
   display: inline-block;
-  width: 64px;
-
+  width: 63px;
+  margin-left: -4px;
+  text-align: center;
+  border-left: 1px solid rgb(221,221,221);
+  border-right: 1px solid rgb(137,137,137);
 }
 
 .history-section-expansions {
   display: inline-block;
   text-align: left;
   margin-left: -4px;
+  border-left: 1px solid rgb(221,221,221);
+
 }
 
 .history-section-expansion-ribbon {
   display: inline-block;
-  margin-right: 13px;
+  margin-right: 16px;
   margin-left: 5px;
 }
 
@@ -67,6 +72,7 @@
   line-height: 20px;
   background: #eee;
   border: 1px solid rgba(0,0,0,.4);
+  border-radius: 5px;
 }
 
 .dark-background {
@@ -83,12 +89,14 @@
 
 .flag-div {
   display: inline-block;
-  width: 36px;
+  border-right: 1px solid rgb(137,137,137);
+  width: 32px;
 }
 
 .flag {
   margin-top: -20px;
   height: 32px;
+  width: 32px;
   vertical-align: bottom;
 }
 
