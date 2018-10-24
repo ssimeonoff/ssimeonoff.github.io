@@ -28,7 +28,6 @@
   color: #eee;
   text-shadow: 0 0 1px black;
   text-align: left;
-  padding-left: 4px;
 }
 
 .history-section-time-value {
@@ -91,7 +90,6 @@
   margin-top: -20px;
   height: 32px;
   vertical-align: bottom;
-  border-radius: 20px;
 }
 
 .grid-cell-history2 {
