@@ -714,11 +714,12 @@ function pushHistory() {
     }
     //game timestamp in seconds
     timestamp = games[games.length-1-i]["timestamp"];
-    if (timestamp == undefined) {time = " "}
+    if (timestamp == undefined) {gameSections[i].querySelector(".history-section-time-value").innerHTML = "-- ----"}
     else {
       time = now - timestamp;
+      gameSections[i].querySelector(".history-section-time-value").innerHTML = compareTime(time);
+
     }
-    gameSections[i].querySelector(".history-section-time-value").innerHTML = compareTime(time);
 
     //the corporations array
     corporationsSections = gameSections[i].querySelectorAll(".history-section-corporation");

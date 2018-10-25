@@ -32,11 +32,9 @@
 
 .history-section-time-value {
   display: inline-block;
-  width: 63px;
+  width: 66px;
   margin-left: -4px;
   text-align: center;
-  border-left: 1px solid rgb(221,221,221);
-  border-right: 1px solid rgb(137,137,137);
 }
 
 .history-section-expansions {
@@ -44,13 +42,13 @@
   text-align: left;
   margin-left: -4px;
   border-left: 1px solid rgb(221,221,221);
-
+  width: 87px;
 }
 
 .history-section-expansion-ribbon {
   display: inline-block;
-  margin-right: 16px;
-  margin-left: 5px;
+  margin-right: 13px;
+  margin-left: 8px;
 }
 
 .history-section-generation {
