@@ -553,6 +553,7 @@ input::-webkit-inner-spin-button {
   display: none;
   text-align: center;
   background: #444;
+  text-shadow: 0 0 1px black, 0 2px 2px black;
   margin-top: 10px;
   font-family: Prototype;
   font-size: 22px;

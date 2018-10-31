@@ -49,8 +49,8 @@ function submitForm(e) {
   var generations = document.getElementById("generations").value;
 
   var expansions = arrayExpansions();
-  var draft = document.querySelector('input[name="draft"]:checked').value;
-  var wgt = getWGT();
+  try {var draft = document.querySelector('input[name="draft"]:checked').value;}
+  catch {draft = " "}  var wgt = getWGT();
   var map = document.querySelector('input[name="map"]:checked').value;
   var milestones = arrayMilestones();
   var awards = arrayAwards();
@@ -59,9 +59,11 @@ function submitForm(e) {
   var corporations = newCorporations;
   var scores = newScores;
   var country = countryValue;
+  var colonies = arrayColonies();
+
 
   // Save Game
-  saveGame(players, generations, corporations, scores, expansions, draft, wgt, map, milestones, awards, timestamp, country);
+  saveGame(players, generations, corporations, scores, expansions, draft, wgt, map, milestones, awards, timestamp, country, colonies);
   clearInputs(); //to clear the drop-downs and inputs after the submission
 
   //Show aleart
@@ -101,7 +103,7 @@ function submitForm(e) {
 }
 
 // Save Game to firebasejs
-function saveGame(players, generations, corporations, scores, expansions, draft, wgt,  map, milestones, awards, timestamp, country) {
+function saveGame(players, generations, corporations, scores, expansions, draft, wgt,  map, milestones, awards, timestamp, country, colonies) {
   var newGameRef = gamesRef.push();
   newGameRef.set({
     players: players,
@@ -115,7 +117,8 @@ function saveGame(players, generations, corporations, scores, expansions, draft,
     milestones: milestones,
     awards: awards,
     timestamp: timestamp,
-    country: country
+    country: country,
+    colonies: colonies
   })
 }
 
@@ -173,6 +176,16 @@ function arrayAwards() {
   return awards;
 }
 
+function arrayColonies() {
+  colonies = [];
+  x = document.querySelectorAll('input[name="colonies"]:checked');
+  for (i=0; i < x.length; i++) {
+      colonies.push(x[i].value);
+  }
+  console.log(colonies)
+  return colonies;
+}
+
 function resetAll () {
   //clear the selected colour
   x = document.querySelectorAll(".change-colours");
@@ -197,6 +210,9 @@ function resetAll () {
       disabled[i].disabled = false;
     }
   }
+  //recover from colonies selection
+  toggleColoniesDiv();
+  resizeDivs();
 }
 
 ///History functions

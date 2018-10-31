@@ -195,7 +195,8 @@ function generateConfirmationText () {
   var players = document.querySelector('input[name="players"]:checked').value;
   var generations = document.getElementById("generations").value;
   var expansions = arrayExpansions();
-  var draft = document.querySelector('input[name="draft"]:checked').value;
+  try {var draft = document.querySelector('input[name="draft"]:checked').value;}
+  catch {draft = " "}
   var map = document.querySelector('input[name="map"]:checked').value;
   var milestones = arrayMilestones();
   var awards = arrayAwards();
