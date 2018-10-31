@@ -707,7 +707,6 @@ function pushHistory() {
   for(i=0; i < gameSections.length ; i++) {
 
     if (games.length-i > 0) {
-      console.log("ok")
       //add dark background to the headers
       gameSections[i].querySelector(".history-section-time").classList.add("dark-background");
       gameSections[i].querySelector(".history-section-generation").classList.add("dark-background");
