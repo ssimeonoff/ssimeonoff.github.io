@@ -33,14 +33,6 @@ function checkForm () {
     document.querySelector(".btn-generations").classList.add("red-outline");
     enableSubmit = false;
   }
-  if (document.querySelectorAll("input[name='draft']:checked").length < 1 ) {
-    //if draft is selected
-    x = document.querySelectorAll("label[for*='draft']");
-    for (i = 0; i < x.length; i++) {
-      x[i].classList.add("red-outline");
-    }
-    enableSubmit = false;
-  }
   if (document.querySelectorAll("input[name='map']:checked").length < 1 ) {
     //if map is not selected
     x = document.querySelectorAll(".btn-map");
@@ -257,6 +249,13 @@ function limitAwards() {
     y[3].checked = false;}, 500);}
 }
 
+function limitColonies() {
+  const x = document.querySelectorAll("input[name='colonies']:checked");
+  if (x.length > 4) { setTimeout(function(){
+    x[4].checked = false;
+  }, 300);}
+}
+
 function disableSelectedCorporation() {
   //disabling corporations options when that corporation is alreaydy chosen
   //enabling all disabled options
@@ -278,4 +277,29 @@ function disableSelectedCorporation() {
       }
     }
   }
+}
+
+function toggleColoniesDiv() {
+  div = document.querySelector(".fieldset-colonies");
+  div.classList.toggle("checkbox");
+}
+
+function resizeDivs() {
+ mapsDiv = document.querySelector(".fieldset-maps");
+ mapsDiv.classList.toggle("fieldset-maps-resized");
+
+ btnMap = document.querySelectorAll(".btn-map");
+ for (i=0; i < btnMap.length; i++) {
+   btnMap[i].classList.toggle("btn-map-resized");
+ }
+
+ awardsDiv = document.querySelectorAll(".awards");
+ for (i=0; i < awardsDiv.length; i++) {
+   awardsDiv[i].classList.toggle("fieldset-awards-resized");
+ }
+
+ btnAwards = document.querySelectorAll(".btn-awards");
+ for (i=0; i < btnAwards.length; i++) {
+   btnAwards[i].classList.toggle("btn-awards-resized");
+ }
 }

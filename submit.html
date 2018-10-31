@@ -277,7 +277,7 @@
   <div class="column">
 
     <fieldset class="fieldset-alignment" style="display:inline-block;width:170px;border-bottom:14px;padding-bottom:14px;">
-     <legend class="fieldset2">DRAFT & WGT</legend>
+     <legend class="fieldset2">DRAFT <span style="color:#666">&#8210;&#8210;&#8210;&#8210;&#8210;&#8210;&#8210;</span> WGT</legend>
      <input class="checkbox" type="radio" id="draft" value="YES" name="draft">
      <label for="draft" class="btn-gametype btn-draft">YES</label>
      <input class="checkbox" type="radio" id="no-draft"  value="NO" name="draft">
@@ -296,143 +296,169 @@
      <label for="venus" class="btn-gametype btn-expansions"><div class="icon venus-icon icon-align"></div></label>
      <input class="checkbox" type="checkbox" id="prelude" value="PRELUDE" name="expansions">
      <label for="prelude" class="btn-gametype btn-expansions" ><div class="icon prelude-icon icon-align"></div></label>
-     <input class="checkbox" type="checkbox" id="colonies" value="COLONIES" name="expansions">
+     <input class="checkbox" type="checkbox" id="colonies" value="COLONIES" name="expansions" onclick = "toggleColoniesDiv();resizeDivs();">
      <label for="colonies" class="btn-gametype btn-expansions"><div class="icon colonies-icon icon-align"></div></label>
    </fieldset>
 
-   <fieldset class="fieldset-alignment" style="width:366px;display:inline-block;border-bottom:none;padding-bottom:12px">
+   <fieldset class="fieldset-alignment fieldset-maps" style="width:366px;display:inline-block;border-bottom:none;padding-bottom:12px">
     <legend class="fieldset2">MAP</legend>
     <input class="checkbox" type="radio" id="tharsis" value="THARSIS" name="map">
-    <label for="tharsis" class="btn-map"  onclick="tharsisAwards();" style="margin-top:0px;">THARSIS</label>
+    <label for="tharsis" class="btn-map  "  onclick="tharsisAwards();">THARSIS</label>
     <input class="checkbox" type="radio" id="hellas"  value="HELLAS" name="map">
-    <label for="hellas" class="btn-map"  onclick="hellasAwards();">HELLAS</label>
+    <label for="hellas" class="btn-map  "  onclick="hellasAwards();">HELLAS</label>
     <input class="checkbox" type="radio" id="elysium"  value="ELYSIUM" name="map">
-    <label for="elysium" class="btn-map" onclick="elysiumAwards();">ELYSIUM</label>
+    <label for="elysium" class="btn-map  " onclick="elysiumAwards();">ELYSIUM</label>
   </fieldset>
 
-   <fieldset class="fieldset-alignment awards" disabled id="no-milestones" class="awards" style="display:inline-block">
+   <fieldset class="fieldset-alignment awards  " disabled id="no-milestones"   style="display:inline-block">
     <legend class="fieldset2">MILESTONES</legend>
       <input class="checkbox" type="checkbox">
-      <label class="btn-awards" style="box-shadow:none;opacity:0.3;margin-bottom:1px;"></label><br>
+      <label class="btn-awards  " style="box-shadow:none;opacity:0.3;margin-bottom:1px;"></label><br>
       <input class="checkbox" type="checkbox" >
-      <label class="btn-awards" style="box-shadow:none;opacity:0.3;margin-bottom:1px;"></label><br>
+      <label class="btn-awards  " style="box-shadow:none;opacity:0.3;margin-bottom:1px;"></label><br>
       <input class="checkbox" type="checkbox" >
-      <label class="btn-awards" style="box-shadow:none;opacity:0.3;margin-bottom:1px;"></label><br>
+      <label class="btn-awards  " style="box-shadow:none;opacity:0.3;margin-bottom:1px;"></label><br>
       <input class="checkbox" type="checkbox" >
-      <label class="btn-awards" style="box-shadow:none;opacity:0.3;margin-bottom:1px;"></label><br>
+      <label class="btn-awards  " style="box-shadow:none;opacity:0.3;margin-bottom:1px;"></label><br>
       <input class="checkbox" type="checkbox" >
-      <label class="btn-awards" style="box-shadow:none;opacity:0.3;margin-bottom:1px;"></label><br>
+      <label class="btn-awards  " style="box-shadow:none;opacity:0.3;margin-bottom:1px;"></label><br>
       <input class="checkbox" type="checkbox" >
-      <label class="btn-awards awards-venus" style="box-shadow:none;opacity:0.3;margin-bottom:1px;"></label><br>
+      <label class="btn-awards   awards-venus" style="box-shadow:none;opacity:0.3;margin-bottom:1px;"></label><br>
   </fieldset>
-   <fieldset class="fieldset-alignment awards" disabled id="no-awards" class="awards" style="display:inline-block;;margin-left:-8px;">
+   <fieldset class="fieldset-alignment awards  " disabled id="no-awards"   style="display:inline-block;;margin-left:-8px;">
     <legend class="fieldset2">AWARDS</legend>
     <input class="checkbox" type="checkbox">
-    <label class="btn-awards" style="box-shadow:none;opacity:0.3;margin-bottom:1px;"></label><br>
+    <label class="btn-awards  " style="box-shadow:none;opacity:0.3;margin-bottom:1px;"></label><br>
     <input class="checkbox" type="checkbox" >
-    <label class="btn-awards" style="box-shadow:none;opacity:0.3;margin-bottom:1px;"></label><br>
+    <label class="btn-awards  " style="box-shadow:none;opacity:0.3;margin-bottom:1px;"></label><br>
     <input class="checkbox" type="checkbox" >
-    <label class="btn-awards" style="box-shadow:none;opacity:0.3;margin-bottom:1px;"></label><br>
+    <label class="btn-awards  " style="box-shadow:none;opacity:0.3;margin-bottom:1px;"></label><br>
     <input class="checkbox" type="checkbox" >
-    <label class="btn-awards" style="box-shadow:none;opacity:0.3;margin-bottom:1px;"></label><br>
+    <label class="btn-awards  " style="box-shadow:none;opacity:0.3;margin-bottom:1px;"></label><br>
     <input class="checkbox" type="checkbox" >
-    <label class="btn-awards" style="box-shadow:none;opacity:0.3;margin-bottom:1px;"></label><br>
+    <label class="btn-awards  " style="box-shadow:none;opacity:0.3;margin-bottom:1px;"></label><br>
     <input class="checkbox" type="checkbox" >
-    <label class="btn-awards awards-venus" style="box-shadow:none;opacity:0.3;margin-bottom:1px;"></label><br>
+    <label class="btn-awards   awards-venus" style="box-shadow:none;opacity:0.3;margin-bottom:1px;"></label><br>
   </fieldset>
 
-   <fieldset class="fieldset-alignment awards"  id="tharsis-milestones" class="awards">
+   <fieldset class="fieldset-alignment awards  "  id="tharsis-milestones"  >
     <legend class="fieldset2">MILESTONES</legend>
       <input class="checkbox" type="checkbox" id="terraformer" value="TERRAFORMER" name="milestones" onclick="limitAwards();">
-      <label for="terraformer" class="btn-awards">TERRAFORMER</label><br>
+      <label for="terraformer" class="btn-awards  ">TERRAFORMER</label><br>
       <input class="checkbox" type="checkbox" id="mayor" value="MAYOR" name="milestones" onclick="limitAwards();">
-      <label for="mayor" class="btn-awards">MAYOR</label><br>
+      <label for="mayor" class="btn-awards  ">MAYOR</label><br>
       <input class="checkbox" type="checkbox" id="gardener" value="GARDENER" name="milestones" onclick="limitAwards();">
-      <label for="gardener" class="btn-awards">GARDENER</label><br>
+      <label for="gardener" class="btn-awards  ">GARDENER</label><br>
       <input class="checkbox" type="checkbox" id="builder" value="BUILDER" name="milestones" onclick="limitAwards();">
-      <label for="builder" class="btn-awards">BUILDER</label><br>
+      <label for="builder" class="btn-awards  ">BUILDER</label><br>
       <input class="checkbox" type="checkbox" id="planner" value="PLANNER" name="milestones" onclick="limitAwards();">
-      <label for="planner" class="btn-awards">PLANNER</label><br>
+      <label for="planner" class="btn-awards  ">PLANNER</label><br>
       <input class="checkbox" type="checkbox" id="hoverlord" value="HOVERLORD" name="milestones" onclick="limitAwards();">
-      <label for="hoverlord" class="btn-awards  awards-venus">HOVERLORD</label><br>
+      <label for="hoverlord" class="btn-awards    awards-venus">HOVERLORD</label><br>
    </fieldset>
-    <fieldset class="fieldset-alignment awards"  id="tharsis-awards" class="awards" style="margin-left:-8px;">
+    <fieldset class="fieldset-alignment awards  "  id="tharsis-awards"   style="margin-left:-8px;">
      <legend class="fieldset2">AWARDS</legend>
       <input class="checkbox" type="checkbox" id="landlord" value="LANDLORD" name="awards" onclick="limitAwards();">
-      <label for="landlord" class="btn-awards">LANDLORD</label><br>
+      <label for="landlord" class="btn-awards  ">LANDLORD</label><br>
       <input class="checkbox" type="checkbox" id="banker" value="BANKER" name="awards" onclick="limitAwards();">
-      <label for="banker" class="btn-awards">BANKER</label><br>
+      <label for="banker" class="btn-awards  ">BANKER</label><br>
       <input class="checkbox" type="checkbox" id="scientist" value="SCIENTIST" name="awards" onclick="limitAwards();">
-      <label for="scientist" class="btn-awards">SCIENTIST</label><br>
+      <label for="scientist" class="btn-awards  ">SCIENTIST</label><br>
       <input class="checkbox" type="checkbox" id="thermalist" value="THERMALIST" name="awards" onclick="limitAwards();">
-      <label for="thermalist" class="btn-awards  ">THERMALIST</label><br>
+      <label for="thermalist" class="btn-awards    ">THERMALIST</label><br>
       <input class="checkbox" type="checkbox" id="miner" value="MINER" name="awards" onclick="limitAwards();">
-      <label for="miner" class="btn-awards">MINER</label><br>
+      <label for="miner" class="btn-awards  ">MINER</label><br>
       <input class="checkbox" type="checkbox" id="venuphile" value="VENUPHILE" name="awards" onclick="limitAwards();">
-      <label for="venuphile" class="btn-awards awards-venus ">VENUPHILE</label><br>
+      <label for="venuphile" class="btn-awards   awards-venus ">VENUPHILE</label><br>
     </fieldset>
 
-     <fieldset class="fieldset-alignment awards"  id="hellas-milestones" class="awards">
+     <fieldset class="fieldset-alignment awards  "  id="hellas-milestones"  >
       <legend class="fieldset2">MILESTONES</legend>
         <input class="checkbox" type="checkbox" id="diversifier" value="DIVERSIFIER" name="milestones" onclick="limitAwards();">
-        <label for="diversifier" class="btn-awards">DIVERSIFIER</label><br>
+        <label for="diversifier" class="btn-awards  ">DIVERSIFIER</label><br>
         <input class="checkbox" type="checkbox" id="tactician" value="TACTICIAN" name="milestones" onclick="limitAwards();">
-        <label for="tactician" class="btn-awards">TACTICIAN</label><br>
+        <label for="tactician" class="btn-awards  ">TACTICIAN</label><br>
         <input class="checkbox" type="checkbox" id="polar-explorer" value="POLAR EXPLORER" name="milestones" onclick="limitAwards();">
-        <label for="polar-explorer" class="btn-awards">POLAR EXPLORER</label><br>
+        <label for="polar-explorer" class="btn-awards  ">POLAR EXPLORER</label><br>
         <input class="checkbox" type="checkbox" id="energizer" value="ENERGIZER" name="milestones" onclick="limitAwards();">
-        <label for="energizer" class="btn-awards">ENERGIZER</label><br>
+        <label for="energizer" class="btn-awards  ">ENERGIZER</label><br>
         <input class="checkbox" type="checkbox" id="rim-settler" value="RIM SETTLER" name="milestones" onclick="limitAwards();">
-        <label for="rim-settler" class="btn-awards">RIM SETTLER</label><br>
+        <label for="rim-settler" class="btn-awards  ">RIM SETTLER</label><br>
         <input class="checkbox" type="checkbox" id="hoverlord2" value="HOVERLORD" name="milestones" onclick="limitAwards();">
-        <label for="hoverlord2" class="btn-awards  awards-venus">HOVERLORD</label><br>
+        <label for="hoverlord2" class="btn-awards    awards-venus">HOVERLORD</label><br>
     </fieldset>
-     <fieldset class="fieldset-alignment awards"  id="hellas-awards" class="awards" style="margin-left:-8px;">
+     <fieldset class="fieldset-alignment awards  "  id="hellas-awards"   style="margin-left:-8px;">
       <legend class="fieldset2">AWARDS</legend>
         <input class="checkbox" type="checkbox" id="cultivator" value="CULTIVATOR" name="awards" onclick="limitAwards();">
-        <label for="cultivator" class="btn-awards">CULTIVATOR</label><br>
+        <label for="cultivator" class="btn-awards  ">CULTIVATOR</label><br>
         <input class="checkbox" type="checkbox" id="magnate" value="MAGNATE" name="awards" onclick="limitAwards();">
-        <label for="magnate" class="btn-awards">MAGNATE</label><br>
+        <label for="magnate" class="btn-awards  ">MAGNATE</label><br>
         <input class="checkbox" type="checkbox" id="space-baron" value="SPACE BARON" name="awards" onclick="limitAwards();">
-        <label for="space-baron" class="btn-awards  ">SPACE BARON</label><br>
+        <label for="space-baron" class="btn-awards    ">SPACE BARON</label><br>
         <input class="checkbox" type="checkbox" id="excentric" value="EXCENTRIC" name="awards" onclick="limitAwards();">
-        <label for="excentric" class="btn-awards">EXCENTRIC</label><br>
+        <label for="excentric" class="btn-awards  ">EXCENTRIC</label><br>
         <input class="checkbox" type="checkbox" id="contractor" value="CONTRACTOR" name="awards" onclick="limitAwards();">
-        <label for="contractor" class="btn-awards  ">CONTRACTOR</label><br>
+        <label for="contractor" class="btn-awards    ">CONTRACTOR</label><br>
         <input class="checkbox" type="checkbox" id="venuphile2" value="VENUPHILE" name="awards" onclick="limitAwards();">
-        <label for="venuphile2" class="btn-awards awards-venus ">VENUPHILE</label><br>
+        <label for="venuphile2" class="btn-awards   awards-venus ">VENUPHILE</label><br>
       </fieldset>
 
-       <fieldset class="fieldset-alignment awards"  id="elysium-milestones" class="awards">
+       <fieldset class="fieldset-alignment awards  "  id="elysium-milestones"  >
         <legend class="fieldset2">MILESTONES</legend>
           <input class="checkbox" type="checkbox" id="generalist" value="GENERALIST" name="milestones" onclick="limitAwards();">
-          <label for="generalist" class="btn-awards">GENERALIST</label><br>
+          <label for="generalist" class="btn-awards  ">GENERALIST</label><br>
           <input class="checkbox" type="checkbox" id="specialist" value="SPECIALIST" name="milestones" onclick="limitAwards();">
-          <label for="specialist" class="btn-awards">SPECIALIST</label><br>
+          <label for="specialist" class="btn-awards  ">SPECIALIST</label><br>
           <input class="checkbox" type="checkbox" id="ecologist" value="ECOLOGIST" name="milestones" onclick="limitAwards();">
-          <label for="ecologist" class="btn-awards">ECOLOGIST</label><br>
+          <label for="ecologist" class="btn-awards  ">ECOLOGIST</label><br>
           <input class="checkbox" type="checkbox" id="tycoon" value="TYCOON" name="milestones" onclick="limitAwards();">
-          <label for="tycoon" class="btn-awards">TYCOON</label><br>
+          <label for="tycoon" class="btn-awards  ">TYCOON</label><br>
           <input class="checkbox" type="checkbox" id="legend" value="LEGEND" name="milestones" onclick="limitAwards();">
-          <label for="legend" class="btn-awards">LEGEND</label><br>
+          <label for="legend" class="btn-awards  ">LEGEND</label><br>
           <input class="checkbox" type="checkbox" id="hoverlord3" value="HOVERLORD" name="milestones" onclick="limitAwards();">
-          <label for="hoverlord3" class="btn-awards  awards-venus">HOVERLORD</label><br>
+          <label for="hoverlord3" class="btn-awards    awards-venus">HOVERLORD</label><br>
       </fieldset>
-       <fieldset class="fieldset-alignment awards"  id="elysium-awards" class="awards" style="margin-left:-8px;">
+       <fieldset class="fieldset-alignment awards  "  id="elysium-awards"   style="margin-left:-8px;">
         <legend class="fieldset2">AWARDS</legend>
           <input class="checkbox" type="checkbox" id="celebrity" value="CELEBRITY" name="awards" onclick="limitAwards();">
-          <label for="celebrity" class="btn-awards">CELEBRITY</label><br>
+          <label for="celebrity" class="btn-awards  ">CELEBRITY</label><br>
           <input class="checkbox" type="checkbox" id="industrialist" value="INDUSTRIALIST" name="awards" onclick="limitAwards();">
-          <label for="industrialist" class="btn-awards  ">INDUSTRIALIST</label><br>
+          <label for="industrialist" class="btn-awards    ">INDUSTRIALIST</label><br>
           <input class="checkbox" type="checkbox" id="desert-settler" value="DESERT SETTLER" name="awards" onclick="limitAwards();">
-          <label for="desert-settler" class="btn-awards  ">DESERT SETTLER</label><br>
+          <label for="desert-settler" class="btn-awards    ">DESERT SETTLER</label><br>
           <input class="checkbox" type="checkbox" id="estate-dealer" value="ESTATE DEALER" name="awards" onclick="limitAwards();">
-          <label for="estate-dealer" class="btn-awards  ">ESTATE DEALER</label><br>
+          <label for="estate-dealer" class="btn-awards    ">ESTATE DEALER</label><br>
           <input class="checkbox" type="checkbox" id="benefactor" value="BENEFACTOR" name="awards" onclick="limitAwards();">
-          <label for="benefactor" class="btn-awards  ">BENEFACTOR</label><br>
+          <label for="benefactor" class="btn-awards    ">BENEFACTOR</label><br>
           <input class="checkbox" type="checkbox" id="venuphile3" value="VENUPHILE" name="awards" onclick="limitAwards();">
-          <label for="venuphile3" class="btn-awards awards-venus ">VENUPHILE</label><br>
+          <label for="venuphile3" class="btn-awards   awards-venus ">VENUPHILE</label><br>
         </fieldset>
+
+        <fieldset class="fieldset-alignment fieldset-colonies checkbox">
+         <legend class="fieldset2">COLONIES</legend>
+          <input class="checkbox" type="checkbox" id="titan" value="TITAN" name="colonies" onclick="limitColonies();">
+          <label for="titan" class="btn-colonies">TITAN</label>
+          <input class="checkbox" type="checkbox" id="triton" value="TRITON" name="colonies" onclick="limitColonies();">
+          <label for="triton" class="btn-colonies">TRITON</label>
+          <input class="checkbox" type="checkbox" id="pluto" value="PLUTO" name="colonies" onclick="limitColonies();">
+          <label for="pluto" class="btn-colonies">PLUTO</label>
+          <input class="checkbox" type="checkbox" id="ceres" value="CERES" name="colonies" onclick="limitColonies();">
+          <label for="ceres" class="btn-colonies">CERES</label>
+          <input class="checkbox" type="checkbox" id="enceladus" value="ENCELADUS" name="colonies" onclick="limitColonies();">
+          <label for="enceladus" class="btn-colonies">ENCELADUS</label>
+          <input class="checkbox" type="checkbox" id="europa" value="EUROPA" name="colonies" onclick="limitColonies();">
+          <label for="europa" class="btn-colonies">EUROPA</label>
+          <input class="checkbox" type="checkbox" id="callisto" value="CALLISTO" name="colonies" onclick="limitColonies();">
+          <label for="callisto" class="btn-colonies">CALLISTO</label>
+          <input class="checkbox" type="checkbox" id="luna" value="LUNA" name="colonies" onclick="limitColonies();">
+          <label for="luna" class="btn-colonies">LUNA</label>
+          <input class="checkbox" type="checkbox" id="ganymede" value="GANYMEDE" name="colonies" onclick="limitColonies();">
+          <label for="ganymede" class="btn-colonies">GANYMEDE</label>
+          <input class="checkbox" type="checkbox" id="miranda" value="MIRANDA" name="colonies" onclick="limitColonies();">
+          <label for="miranda" class="btn-colonies">MIRANDA</label>
+          <input class="checkbox" type="checkbox" id="io" value="IO" name="colonies" onclick="limitColonies();">
+          <label for="io" class="btn-colonies">IO</label>
+       </fieldset>
 
     </div>
     <div id="modalOne" class="modal">

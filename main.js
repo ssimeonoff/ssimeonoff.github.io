@@ -278,6 +278,9 @@ function pushHistory() {
     if (country != undefined && country.length > 1) {
       countryDivContent = '<img class="flag" src="flags/'+country+'.png" title="'+country+'">';
       gameSections[i].querySelector(".flag-div").innerHTML = countryDivContent;
+    } else {
+      countryDivContent = '<img class="flag" src="flags/EU.png" title="EU">';
+      gameSections[i].querySelector(".flag-div").innerHTML = countryDivContent;
     }
   }
 }

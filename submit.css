@@ -243,7 +243,11 @@ input::placeholder {
     background: #eee;
     color: #222;
     margin-right: -2px;
-    transition: box-shadow 0.3s;
+    transition: box-shadow 0.3s, width 0.3s;
+}
+
+.btn-map-resized {
+  width: 80px;
 }
 
 .btn-awards {
@@ -253,6 +257,32 @@ input::placeholder {
     height: 37px;
     line-height: 37px;
     width: 166px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 1px;
+    border-top: 2px solid rgb(221,221,221);
+    border-left: 2px solid rgb(221,221,221);
+    border-bottom: 2px solid rgb(137,137,137);
+    border-right: 2px solid rgb(137,137,137);
+    box-shadow: 0 1px 3px 1px rgba(0,0,0,.8);
+    background: #eee;
+    color: #222;
+    margin-bottom: 2px;
+    transition: box-shadow 0.3s, width 0.3s;
+}
+
+.btn-awards-resized {
+  width: 111px;
+}
+
+.btn-colonies {
+    display: inline-block;
+    font-family: Prototype;
+    outline: none;
+    height: 19px;
+    line-height: 19px;
+    width: 80px;
     text-align: center;
     cursor: pointer;
     font-size: 12px;
@@ -346,8 +376,8 @@ input::placeholder {
 }
 
 
-.checkbox{
-  display: none;
+.checkbox {
+  display: none !important;
 }
 
 .checkbox:checked + label, input[type=radio]:checked + label {
@@ -366,6 +396,10 @@ input::placeholder {
   margin-left: -8px;
   width: 170px;
   height: 223px;
+}
+
+.awards-resized {
+  width: 115px;
 }
 
 .awards-venus {
@@ -393,6 +427,7 @@ input::-webkit-inner-spin-button {
   margin-bottom: -4px;
   margin-left: 2px;
   vertical-align: top;
+  transition:  0.3s;
 }
 
 .fieldset2 {
@@ -423,6 +458,24 @@ input::-webkit-inner-spin-button {
   padding-bottom: 12px;
   font-size: 15px;
   width: 309px;
+}
+
+.fieldset-colonies {
+  width: 84px;
+  height: 286px;
+  display: inline-block;
+  padding-bottom: 12px;
+  margin-left: -4px;
+  margin-top: -65px;
+  position: absolute;
+}
+
+.fieldset-maps-resized {
+  width:256px !important;
+}
+
+.fieldset-awards-resized {
+  width:115px !important;
 }
 
 .highlight {
