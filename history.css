@@ -32,7 +32,7 @@
 
 .history-section-time-value {
   display: inline-block;
-  width: 66px;
+  width: 60px;
   margin-left: -4px;
   text-align: center;
 }
@@ -42,12 +42,12 @@
   text-align: left;
   margin-left: -4px;
   border-left: 1px solid rgb(221,221,221);
-  width: 87px;
+  width: 80px;
 }
 
 .history-section-expansion-ribbon {
   display: inline-block;
-  margin-right: 13px;
+  margin-right: 8px;
   margin-left: 8px;
 }
 

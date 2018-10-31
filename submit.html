@@ -276,7 +276,31 @@
 
   <div class="column">
 
-   <fieldset class="fieldset-alignment" style="width:250px;display:inline-block;border-bottom:none;padding-bottom:12px">
+    <fieldset class="fieldset-alignment" style="display:inline-block;width:170px;border-bottom:14px;padding-bottom:14px;">
+     <legend class="fieldset2">DRAFT & WGT</legend>
+     <input class="checkbox" type="radio" id="draft" value="YES" name="draft">
+     <label for="draft" class="btn-gametype btn-draft">YES</label>
+     <input class="checkbox" type="radio" id="no-draft"  value="NO" name="draft">
+     <label for="no-draft" class="btn-gametype btn-draft">NO</label>
+     <input class="checkbox" type="radio" id="wgt" value="YES" name="wgt">
+     <label for="wgt" class="btn-gametype btn-draft" title="Playing with World Government Terraforming">YES</label>
+     <input class="checkbox" type="radio" id="no-wgt"  value="NO" name="wgt">
+     <label for="no-wgt" class="btn-gametype btn-draft" title=" NOT Playing with World Government Terraforming">NO</label>
+   </fieldset>
+
+  <fieldset class="fieldset-alignment"  style="display:inline-block;margin-left: -8px; width:170px;border-bottom:none;">
+   <legend class="fieldset2">EXPANSIONS</legend>
+     <input class="checkbox" type="checkbox" id="corporate" value="CORPORATE" name="expansions">
+     <label for="corporate" class="btn-gametype btn-expansions" ><div class="icon corporate-era-icon icon-align"></div></label>
+     <input class="checkbox" type="checkbox" id="venus" value="VENUS" name="expansions" onclick="displayVenusAwards()">
+     <label for="venus" class="btn-gametype btn-expansions"><div class="icon venus-icon icon-align"></div></label>
+     <input class="checkbox" type="checkbox" id="prelude" value="PRELUDE" name="expansions">
+     <label for="prelude" class="btn-gametype btn-expansions" ><div class="icon prelude-icon icon-align"></div></label>
+     <input class="checkbox" type="checkbox" id="colonies" value="COLONIES" name="expansions">
+     <label for="colonies" class="btn-gametype btn-expansions"><div class="icon colonies-icon icon-align"></div></label>
+   </fieldset>
+
+   <fieldset class="fieldset-alignment" style="width:366px;display:inline-block;border-bottom:none;padding-bottom:12px">
     <legend class="fieldset2">MAP</legend>
     <input class="checkbox" type="radio" id="tharsis" value="THARSIS" name="map">
     <label for="tharsis" class="btn-map"  onclick="tharsisAwards();" style="margin-top:0px;">THARSIS</label>
@@ -285,14 +309,6 @@
     <input class="checkbox" type="radio" id="elysium"  value="ELYSIUM" name="map">
     <label for="elysium" class="btn-map" onclick="elysiumAwards();">ELYSIUM</label>
   </fieldset>
-
-  <fieldset class="fieldset-alignment" style="display:inline-block;width:90px;margin-left:-8px;border-bottom:none;padding-bottom:12px">
-   <legend class="fieldset2">DRAFT</legend>
-   <input class="checkbox" type="radio" id="draft" value="YES" name="draft">
-   <label for="draft" class="btn-gametype btn-draft">YES</label>
-   <input class="checkbox" type="radio" id="no-draft"  value="NO" name="draft">
-   <label for="no-draft" class="btn-gametype btn-draft">NO</label>
- </fieldset>
 
    <fieldset class="fieldset-alignment awards" disabled id="no-milestones" class="awards" style="display:inline-block">
     <legend class="fieldset2">MILESTONES</legend>
@@ -418,29 +434,6 @@
           <label for="venuphile3" class="btn-awards awards-venus ">VENUPHILE</label><br>
         </fieldset>
 
-        <div  style="width:90px;display:inline-block;margin-left:-8px;height:223px;">
-
-        <fieldset class="fieldset-alignment" style="display:inline-block;margin-left: 0px; width:90px;border-bottom:none;padding-bottom:12px">
-         <legend class="fieldset2">WGT</legend>
-         <input class="checkbox" type="radio" id="wgt" value="YES" name="wgt">
-         <label for="wgt" class="btn-gametype btn-draft" title="Playing with World Government Terraforming">YES</label>
-         <input class="checkbox" type="radio" id="no-wgt"  value="NO" name="wgt">
-         <label for="no-wgt" class="btn-gametype btn-draft" title=" NOT Playing with World Government Terraforming">NO</label>
-       </fieldset>
-
-        <fieldset class="fieldset-alignment"  style="display:inline-block;margin-left: 0px; width:90px;">
-         <legend class="fieldset2">EXPANSIONS</legend>
-           <input class="checkbox" type="checkbox" id="corporate" value="CORPORATE" name="expansions">
-           <label for="corporate" class="btn-gametype btn-expansions" ><div class="icon corporate-era-icon icon-align"></div></label>
-           <input class="checkbox" type="checkbox" id="venus" value="VENUS" name="expansions" onclick="displayVenusAwards()">
-           <label for="venus" class="btn-gametype btn-expansions"><div class="icon venus-icon icon-align"></div></label>
-           <input class="checkbox" type="checkbox" id="prelude" value="PRELUDE" name="expansions">
-           <label for="prelude" class="btn-gametype btn-expansions" ><div class="icon prelude-icon icon-align"></div></label>
-           <input class="checkbox" type="checkbox" id="colonies" value="COLONIES" name="expansions">
-           <label for="colonies" class="btn-gametype btn-expansions"><div class="icon colonies-icon icon-align"></div></label>
-       </fieldset>
-      </div>
-
     </div>
     <div id="modalOne" class="modal">
       <div class="modal-window">
@@ -493,14 +486,14 @@
 </div>
 <div class="column">
 <div class="generalStats-history">
-  <div class="title-cell"></div><div></div>
+  <div class="title-cell">HISTORY</div><div></div>
 
   <div class="grid-cell-history">
     <div class="history-section-time">
       <div class="flag-div"></div>
-      <div class="history-section-time-value"></div>
       <div class="history-section-expansions">
       </div>
+      <div class="history-section-time-value"></div>
     </div>
     <div class="history-section-generation"></div>
     <div class="history-section-corporation"></div><div class="history-section-score"></div>
@@ -513,9 +506,9 @@
   <div class="grid-cell-history">
     <div class="history-section-time">
       <div class="flag-div"></div>
-      <div class="history-section-time-value"></div>
       <div class="history-section-expansions">
       </div>
+      <div class="history-section-time-value"></div>
     </div>
     <div class="history-section-generation"></div>
     <div class="history-section-corporation"></div><div class="history-section-score"></div>
@@ -528,9 +521,9 @@
   <div class="grid-cell-history">
     <div class="history-section-time">
       <div class="flag-div"></div>
-      <div class="history-section-time-value"></div>
       <div class="history-section-expansions">
       </div>
+      <div class="history-section-time-value"></div>
     </div>
     <div class="history-section-generation"></div>
     <div class="history-section-corporation"></div><div class="history-section-score"></div>
@@ -543,9 +536,9 @@
   <div class="grid-cell-history">
     <div class="history-section-time">
       <div class="flag-div"></div>
-      <div class="history-section-time-value"></div>
       <div class="history-section-expansions">
       </div>
+      <div class="history-section-time-value"></div>
     </div>
     <div class="history-section-generation"></div>
     <div class="history-section-corporation"></div><div class="history-section-score"></div>
@@ -558,9 +551,9 @@
   <div class="grid-cell-history">
     <div class="history-section-time">
       <div class="flag-div"></div>
-      <div class="history-section-time-value"></div>
       <div class="history-section-expansions">
       </div>
+      <div class="history-section-time-value"></div>
     </div>
     <div class="history-section-generation"></div>
     <div class="history-section-corporation"></div><div class="history-section-score"></div>
@@ -573,9 +566,9 @@
   <div class="grid-cell-history">
     <div class="history-section-time">
       <div class="flag-div"></div>
-      <div class="history-section-time-value"></div>
       <div class="history-section-expansions">
       </div>
+      <div class="history-section-time-value"></div>
     </div>
     <div class="history-section-generation"></div>
     <div class="history-section-corporation"></div><div class="history-section-score"></div>

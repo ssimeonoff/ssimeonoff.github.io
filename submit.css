@@ -118,8 +118,8 @@
   color: #222;
   font-family: Prototype;
   width: 100%;
-  height: 41px;
-  font-size: 16px;
+  height: 54px;
+  font-size: 20px;
   border-radius: 1px;
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
@@ -141,9 +141,9 @@
   font-family: Prototype;
   text-align: center;
   width: 86px;
-  height: 37px;
+  height: 50px;
   padding: 0px;
-  font-size: 20px;
+  font-size: 26px;
   border-radius: 1px;
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
@@ -206,23 +206,21 @@ input::placeholder {
     box-shadow: 0 1px 3px 1px rgba(0,0,0,.8);
     background: #eee;
     margin-right: -2px;
-    margin-bottom: 2px;
+    margin-bottom: -2px;
     transition: box-shadow 0.3s;
 }
 
 .btn-draft {
-  height: 49px;
-  line-height: 49px;
-  width: 40px;
+  height: 50px;
+  line-height: 50px;
+  width: 37px;
   transition: box-shadow 0.3s;
 }
 
 .btn-expansions {
-  width: 40px;
-  height: 60px;
-  line-height: 60px;
-  margin-bottom: -2px;
-
+  width: 37px;
+  height: 50px;
+  line-height: 50px;
 }
 
 .btn-map {
@@ -230,9 +228,9 @@ input::placeholder {
     font-family: Prototype;
     outline: none;
     color: black;
-    height: 50px;
-    line-height: 50px;
-    width: 78px;
+    height: 35px;
+    line-height: 35px;
+    width: 116px;
     text-align: center;
     cursor: pointer;
     font-size: 16px;
@@ -254,7 +252,7 @@ input::placeholder {
     outline: none;
     height: 37px;
     line-height: 37px;
-    width: 108px;
+    width: 166px;
     text-align: center;
     cursor: pointer;
     font-size: 12px;
@@ -366,6 +364,7 @@ input::placeholder {
   display:none;
   line-height: 13px;
   margin-left: -8px;
+  width: 170px;
   height: 223px;
 }
 
@@ -384,7 +383,6 @@ input::-webkit-inner-spin-button {
   background: #444;
   color: white;
   text-shadow: 0 3px 1px black;
-  font-size: 20px;
   box-shadow: inset 0 1px 3px 1px black;
   border: 2px solid rgb(221,221,221);
   border-top: 2px solid rgb(137,137,137);
@@ -607,8 +605,8 @@ input::-webkit-inner-spin-button {
   width: 440px;
   color: white;
   font-size: 16px;
-  line-height: 4px;
-  height: 4px;
+  line-height: 30px;
+  height: 30px;
   text-shadow: 0 0 1px black, 0 2px 2px black;
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
@@ -642,7 +640,7 @@ input::-webkit-inner-spin-button {
         text-align: center;
         color: white;
         border-radius: 50%;
-        box-shadow: 0 0 0 2px white;
+        box-shadow: 0 0 0 1px #eee, 0 0 0 2px #888;
         content: "";
         background-size: 10px 10px !important;
         background-position: bottom 4px right 3px !important;
@@ -650,8 +648,8 @@ input::-webkit-inner-spin-button {
   }
 
   .icon-align {
-    margin-top: 23px;
-    margin-left: -16px;
+    margin-top: 17px;
+    margin-left: -17px;
   }
 
   .icon-align2 {
