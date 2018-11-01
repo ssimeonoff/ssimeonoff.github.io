@@ -966,9 +966,9 @@ border-right: 2px solid rgb(137,137,137);
     width: 44px;
     display: inline-block;
     border-top: 2px solid rgb(221,221,221);
-border-left: 2px solid rgb(221,221,221);
-border-bottom: 2px solid rgb(137,137,137);
-border-right: 2px solid rgb(137,137,137);
+    border-left: 2px solid rgb(221,221,221);
+    border-bottom: 2px solid rgb(137,137,137);
+    border-right: 2px solid rgb(137,137,137);
     box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
     background-color: rgb(128, 87, 0);
     background: linear-gradient(to bottom left,rgb(162,113,71),rgb(128, 87, 0), rgb(162,113,71), rgb(128, 87, 0), rgb(162,113,71), rgb(128, 87, 0), rgb(162,113,71), rgb(128, 87, 0), rgb(162,113,71), rgb(128, 87, 0), rgb(162,113,71), rgb(128, 87, 0), rgb(162,113,71), rgb(128, 87, 0), rgb(162,113,71));
@@ -976,6 +976,7 @@ border-right: 2px solid rgb(137,137,137);
     padding-bottom: 4px;
     text-align: center;
     margin-bottom: 10px;
+    margin-top: 2px;
 }
 
 .production-box-size1a {
@@ -1754,13 +1755,13 @@ border-right: 2px solid rgb(137,137,137);
   text-align: center;
   font-size: 14px;
   font-weight: bold;
-  width: 50px;
+  width: 52px;
   height: 47px;
   vertical-align: middle;
   border-top: 2px solid rgb(221,221,221);
-border-left: 2px solid rgb(221,221,221);
-border-bottom: 2px solid rgb(137,137,137);
-border-right: 2px solid rgb(137,137,137);
+  border-left: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
 }
 
 .colony-grid-container2 {
@@ -1790,7 +1791,7 @@ border-right: 2px solid rgb(137,137,137);
 .ocean-tile-colony {
   padding: 10px;
   margin-top: 3px;
-  margin-left: 2px;
+  margin-left: 3px;
   width: 20px;
 }
 
