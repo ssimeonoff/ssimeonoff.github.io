@@ -21,7 +21,7 @@ function showAll() {
   displayedProjects = 275;
   displayedCorporations = 26;
   displayedPreludes = 35;
-  displayedColonies = 4;
+  displayedColonies = 11;
   document.getElementById("buttonsContainer").style.display = "block";
   var elements = document.querySelectorAll('.ul-title');
   for (i=0; i<elements.length; i++){elements[i].style.display = "block";}

@@ -1781,9 +1781,10 @@ border-right: 2px solid rgb(137,137,137);
   width: 50px;
   height: 47px;
   vertical-align: middle;
+  text-shadow: 0 0 5px black;
 }
 
-.microbe-stacked {
+.resource-stacked {
   min-width:20px;
   line-height: 18px;
 }
@@ -1809,6 +1810,13 @@ border-right: 2px solid rgb(137,137,137);
   font-weight: bold;
   margin-left: -38px;
   content: "X";
+}
+
+.white-char {
+  font-size: 20px;
+  font-weight: bold;
+  color:white;
+
 }
 
 
