@@ -49,8 +49,8 @@ function submitForm(e) {
   var generations = document.getElementById("generations").value;
 
   var expansions = arrayExpansions();
-  try {var draft = document.querySelector('input[name="draft"]:checked').value;}
-  catch (err) {draft = " "}  var wgt = getWGT();
+  var draft = getDraft();
+  var wgt = getWGT();
   var map = document.querySelector('input[name="map"]:checked').value;
   var milestones = arrayMilestones();
   var awards = arrayAwards();
@@ -59,7 +59,9 @@ function submitForm(e) {
   var corporations = newCorporations;
   var scores = newScores;
   var country = countryValue;
-  var colonies = arrayColonies();
+  var colonies = "";
+  if (expansions.indexOf("COLONIES")>-1){colonies = arrayColonies();}
+
 
 
   // Save Game
@@ -211,8 +213,26 @@ function resetAll () {
     }
   }
   //recover from colonies selection
-  toggleColoniesDiv();
-  resizeDivs();
+  div = document.querySelector(".fieldset-colonies");
+  div.classList.add("checkbox");
+
+  mapsDiv = document.querySelector(".fieldset-maps");
+  mapsDiv.classList.remove("fieldset-maps-resized");
+
+  btnMap = document.querySelectorAll(".btn-map");
+   for (i=0; i < btnMap.length; i++) {
+     btnMap[i].classList.remove("btn-map-resized");
+   }
+
+  awardsDiv = document.querySelectorAll(".awards");
+   for (i=0; i < awardsDiv.length; i++) {
+     awardsDiv[i].classList.remove("fieldset-awards-resized");
+   }
+
+   btnAwards = document.querySelectorAll(".btn-awards");
+   for (i=0; i < btnAwards.length; i++) {
+     btnAwards[i].classList.remove("btn-awards-resized");
+   }
 }
 
 ///History functions
@@ -344,6 +364,13 @@ function orderScoresandCorporations() {
     oldScores.splice(maxValueIndex, 1);
     oldCorporations.splice(maxValueIndex, 1);
   }
+}
+
+function getDraft() {
+  var draft = "";
+  try {draft = document.querySelector('input[name="draft"]:checked').value;}
+  catch (err) {}
+  return draft
 }
 
 function getWGT() {
