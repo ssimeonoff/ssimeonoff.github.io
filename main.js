@@ -1,6 +1,6 @@
 countryValue = "";
 try {getCountry();}
-catch {console.log("cannot get country")}
+catch (err) {console.log("cannot get country")}
 
 // Initialize Firebase
 var config = {
@@ -50,7 +50,7 @@ function submitForm(e) {
 
   var expansions = arrayExpansions();
   try {var draft = document.querySelector('input[name="draft"]:checked').value;}
-  catch {draft = " "}  var wgt = getWGT();
+  catch (err) {draft = " "}  var wgt = getWGT();
   var map = document.querySelector('input[name="map"]:checked').value;
   var milestones = arrayMilestones();
   var awards = arrayAwards();
@@ -349,7 +349,7 @@ function orderScoresandCorporations() {
 function getWGT() {
   try {
     wgt = document.querySelector('input[name="wgt"]:checked').value
-  } catch {
+  } catch (err) {
     wgt = [];
   }
   return wgt

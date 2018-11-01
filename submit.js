@@ -196,7 +196,7 @@ function generateConfirmationText () {
   var generations = document.getElementById("generations").value;
   var expansions = arrayExpansions();
   try {var draft = document.querySelector('input[name="draft"]:checked').value;}
-  catch {draft = " "}
+  catch (err) {draft = " "}
   var map = document.querySelector('input[name="map"]:checked').value;
   var milestones = arrayMilestones();
   var awards = arrayAwards();
@@ -251,9 +251,17 @@ function limitAwards() {
 }
 
 function limitColonies() {
+  //calculating the max colonies count
+  try {playersCount = parseInt(document.querySelector("input[name='players']:checked").value)}
+  catch (err) {playersCount = 0}
+  coloniesNum = 2 + playersCount;
+  if (document.querySelectorAll("option[value='ARIDOR']:checked").length > 0) {coloniesNum++}
+
   const x = document.querySelectorAll("input[name='colonies']:checked");
-  if (x.length > 4) { setTimeout(function(){
-    x[4].checked = false;
+  if (x.length > coloniesNum) { setTimeout(function(){
+    for (i=0; i < x.length - coloniesNum; i++) {
+      x[x.length-i-1].checked = false;
+    }
   }, 300);}
 }
 

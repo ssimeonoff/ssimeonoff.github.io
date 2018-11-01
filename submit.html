@@ -39,13 +39,13 @@
     <div class="column">
      <fieldset class="fieldset-alignment" style="display:inline-block;width:250px;border-bottom:none">
       <legend class="fieldset2">PLAYERS</legend>
-      <input type="radio" name='players' id="radio-choice-2" value="2" style="display:none;" onclick="enableCorporations()">
+      <input type="radio" name='players' id="radio-choice-2" value="2" style="display:none;" onclick="enableCorporations(); limitColonies()">
       <label class= "btn-players" for="radio-choice-2">2</label>
-      <input type="radio" name='players' id="radio-choice-3" value="3" style="display:none;" onclick="enableCorporations()">
+      <input type="radio" name='players' id="radio-choice-3" value="3" style="display:none;" onclick="enableCorporations(); limitColonies()">
       <label class= "btn-players" for="radio-choice-3">3</label>
-      <input type="radio" name='players' id="radio-choice-4" value="4" style="display:none;" onclick="enableCorporations()">
+      <input type="radio" name='players' id="radio-choice-4" value="4" style="display:none;" onclick="enableCorporations(); limitColonies()">
       <label class= "btn-players" for="radio-choice-4">4</label>
-      <input type="radio" name='players' id="radio-choice-5" value="5" style="display:none;" onclick="enableCorporations()">
+      <input type="radio" name='players' id="radio-choice-5" value="5" style="display:none;" onclick="enableCorporations(); limitColonies()">
       <label class= "btn-players" for="radio-choice-5">5</label>
     </fieldset>
 
@@ -73,7 +73,7 @@
 
      <fieldset class="fieldset-alignment" style="width:250px;display:inline-block;">
       <legend class="fieldset2">CORPORATIONS</legend>
-      <select disabled id="corporation1" class="drop-down" name="corporations" size="1" style="margin-top:0px;" onchange="disableSelectedCorporation();changeColours(id)">
+      <select disabled id="corporation1" class="drop-down" name="corporations" size="1" style="margin-top:0px;" onchange="disableSelectedCorporation();changeColours(id);limitColonies()">
       <option value disabled selected class="selected-option"></option>
       <option value="BEGINNER">BEGINNER</option>
       <option value="CREDICOR">CREDICOR</option>
@@ -108,7 +108,7 @@
       <option value="SPLICE">SPLICE</option>
       <option value="KUIPER BELT COOP.">KUIPER BELT COOP.</option>
     </select>
-    <select disabled id="corporation2" class="drop-down" name="corporations" size="1"   onchange="disableSelectedCorporation();changeColours(id)">
+    <select disabled id="corporation2" class="drop-down" name="corporations" size="1"   onchange="disableSelectedCorporation();changeColours(id);limitColonies()">
       <option value disabled selected class="selected-option"></option>
       <option value="BEGINNER">BEGINNER</option>
       <option value="CREDICOR">CREDICOR</option>
@@ -143,7 +143,7 @@
       <option value="SPLICE">SPLICE</option>
       <option value="KUIPER BELT COOP.">KUIPER BELT COOP.</option>
     </select>
-    <select disabled id="corporation3" class="drop-down" name="corporations" size="1"   onchange="disableSelectedCorporation();changeColours(id)">
+    <select disabled id="corporation3" class="drop-down" name="corporations" size="1"   onchange="disableSelectedCorporation();changeColours(id);limitColonies()">
       <option value disabled selected class="selected-option"></option>
       <option value="BEGINNER">BEGINNER</option>
       <option value="CREDICOR">CREDICOR</option>
@@ -178,7 +178,7 @@
       <option value="SPLICE">SPLICE</option>
       <option value="KUIPER BELT COOP.">KUIPER BELT COOP.</option>
     </select>
-    <select disabled id="corporation4" class="drop-down" name="corporations" size="1"   onchange="disableSelectedCorporation();changeColours(id)">
+    <select disabled id="corporation4" class="drop-down" name="corporations" size="1"   onchange="disableSelectedCorporation();changeColours(id);limitColonies()">
       <option value disabled selected class="selected-option"></option>
       <option value="BEGINNER">BEGINNER</option>
       <option value="CREDICOR">CREDICOR</option>
@@ -213,7 +213,7 @@
       <option value="SPLICE">SPLICE</option>
       <option value="KUIPER BELT COOP.">KUIPER BELT COOP.</option>
     </select>
-    <select disabled id="corporation5" class="drop-down" name="corporations" size="1"   onchange="disableSelectedCorporation();changeColours(id)">
+    <select disabled id="corporation5" class="drop-down" name="corporations" size="1"   onchange="disableSelectedCorporation();changeColours(id);limitColonies()">
       <option value disabled selected class="selected-option"></option>
       <option value="BEGINNER">BEGINNER</option>
       <option value="CREDICOR">CREDICOR</option>
