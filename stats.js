@@ -15,13 +15,13 @@ firebase.initializeApp(config);
 // Reference Games collection
 firebase.database().ref("games-production").on('value', function(snapshot) {
     GAMES_ALL = snapshotToArray(snapshot);
+    GAMES_ALL_JSON = JSON.stringify(snapshot)
     games = snapshotToArray(snapshot);
     pushData();
 });
 
 function snapshotToArray(snapshot) {
     var returnArr = [];
-
     snapshot.forEach(function(childSnapshot) {
         var item = childSnapshot.val();
         item.key = childSnapshot.key;
@@ -356,10 +356,30 @@ function pushCorporationsData() {
   document.getElementById("games5p-splice").innerHTML = generateGameStats(5, "SPLICE");
 
   //colonies
+  document.getElementById("games2p-aridor").innerHTML = generateGameStats(2, "ARIDOR");
+  document.getElementById("games3p-aridor").innerHTML = generateGameStats(3, "ARIDOR");
+  document.getElementById("games4p-aridor").innerHTML = generateGameStats(4, "ARIDOR");
+  document.getElementById("games5p-aridor").innerHTML = generateGameStats(5, "ARIDOR");
+
   document.getElementById("games2p-arklight").innerHTML = generateGameStats(2, "ARKLIGHT");
   document.getElementById("games3p-arklight").innerHTML = generateGameStats(3, "ARKLIGHT");
   document.getElementById("games4p-arklight").innerHTML = generateGameStats(4, "ARKLIGHT");
   document.getElementById("games5p-arklight").innerHTML = generateGameStats(5, "ARKLIGHT");
+
+  document.getElementById("games2p-polyphemos").innerHTML = generateGameStats(2, "POLYPHEMOS");
+  document.getElementById("games3p-polyphemos").innerHTML = generateGameStats(3, "POLYPHEMOS");
+  document.getElementById("games4p-polyphemos").innerHTML = generateGameStats(4, "POLYPHEMOS");
+  document.getElementById("games5p-polyphemos").innerHTML = generateGameStats(5, "POLYPHEMOS");
+
+  document.getElementById("games2p-poseidon").innerHTML = generateGameStats(2, "POSEIDON");
+  document.getElementById("games3p-poseidon").innerHTML = generateGameStats(3, "POSEIDON");
+  document.getElementById("games4p-poseidon").innerHTML = generateGameStats(4, "POSEIDON");
+  document.getElementById("games5p-poseidon").innerHTML = generateGameStats(5, "POSEIDON");
+
+  document.getElementById("games2p-stormcraft").innerHTML = generateGameStats(2, "STORMCRAFT");
+  document.getElementById("games3p-stormcraft").innerHTML = generateGameStats(3, "STORMCRAFT");
+  document.getElementById("games4p-stormcraft").innerHTML = generateGameStats(4, "STORMCRAFT");
+  document.getElementById("games5p-stormcraft").innerHTML = generateGameStats(5, "STORMCRAFT");
 
   //promo
   document.getElementById("games2p-arcadian").innerHTML = generateGameStats(2, "ARCADIAN COMMUNITIES");
@@ -796,4 +816,22 @@ function resetFilters() {
     }
   }
   filterFunction();
+}
+
+function download(data, filename, json) {
+    var file = new Blob([GAMES_ALL_JSON], {type: "text/plain;charset=utf-8"});
+    if (window.navigator.msSaveOrOpenBlob) // IE10+
+        window.navigator.msSaveOrOpenBlob(file, filename);
+    else { // Others
+        var a = document.createElement("a"),
+                url = URL.createObjectURL(file);
+        a.href = url;
+        a.download = "TM Games - " + GAMES_ALL.length;
+        document.body.appendChild(a);
+        a.click();
+        setTimeout(function() {
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        }, 0);
+    }
 }

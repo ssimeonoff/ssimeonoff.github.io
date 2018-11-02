@@ -15,7 +15,7 @@
 
 .buttons-container {
     display: grid;
-    grid-template-columns: 140px 320px;
+    grid-template-columns: 140px 274px 80px;
     position: relative;
     font-family: Prototype;
     background: #ccc;
@@ -804,6 +804,25 @@
   box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3), 3px 3px 3px #222;
 }
 
+.aridor {
+  font-family: Prototype;
+  font-weight: normal;
+  color: #c5c553;
+  letter-spacing: 3px;
+  background: #cc3333;
+  text-shadow: 0 0 1px black, 0 1px 1px black;
+  border: 2px solid #c5c553;
+  box-shadow: 1px 1px 5px 1px black;
+  width: 120px;
+  text-align: center;
+  font-size: 24px;
+  border-radius: 5px;
+  margin-left: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+}
+
 
 /* expansion icons */
 
@@ -913,6 +932,7 @@
     font-size: 16px;
     margin-left: -3px;
     margin-bottom: 10px;
+    margin-top: 5px;
 }
 
 .btn-draft {
@@ -928,6 +948,8 @@
   font-size: 13px;
   vertical-align: top;
   font-weight: normal;
+  margin-top: 5px;
+
 }
 
 .btn-wgt {
@@ -943,6 +965,8 @@
   font-size: 13px;
   vertical-align: top;
   font-weight: normal;
+  margin-top: 5px;
+
 }
 
 .btn-map {
@@ -958,6 +982,7 @@
   font-size: 13px;
   vertical-align: top;
   font-weight: normal;
+  margin-top: 5px;
 }
 
 .btn-map > div {
@@ -985,6 +1010,7 @@
   border-right: 2px solid rgb(137,137,137);
   box-shadow: 0 2px 4px 1px rgba(0,0,0,.8);
   margin-right: 10px;
+  margin-top: 5px;
   padding-left: 10px;
   transition: font-size 0.3s, box-shadow 0.3s;
 }
@@ -1007,7 +1033,8 @@
   border-right: 2px solid rgb(137,137,137);
   box-shadow: 0 2px 4px 1px rgba(0,0,0,.8);
   margin-right: -3px;
-  padding-left: 10px;
+  padding-left: 15px;
+  margin-top: 15px;
   transition: font-size 0.3s, box-shadow 0.3s;
 }
 
@@ -1025,9 +1052,9 @@
   border-right: 2px solid rgb(137,137,137);
   box-shadow: 0 2px 4px 1px rgba(0,0,0,.8);
   height: 40px;
-  width: 130px;
+  width: 100px;
   margin-top: 10px;
-  margin-left: 125px;
+  margin-left: 155px;
   cursor: pointer;
   text-align: center;
   color: white;
