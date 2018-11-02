@@ -19,7 +19,7 @@ else {
 function showAll() {
   var x, i;
   displayedProjects = 275;
-  displayedCorporations = 26;
+  displayedCorporations = 27;
   displayedPreludes = 35;
   displayedColonies = 11;
   document.getElementById("buttonsContainer").style.display = "block";

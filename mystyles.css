@@ -2256,3 +2256,20 @@ input[type=radio]:checked + label {
   margin-left:0px;
   margin-bottom: 0px;
 }
+
+.aridor {
+  font-family: Prototype;
+  font-weight: normal;
+  color: #c5c553;
+  letter-spacing: 4px;
+  background: #cc3333;
+  text-shadow: 0 0 1px black, 0 1px 1px black;
+  border: 2px solid #c5c553;
+  box-shadow: 1px 1px 5px 1px black;
+  width: 150px;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
