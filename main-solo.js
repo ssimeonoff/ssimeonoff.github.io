@@ -1,3 +1,6 @@
+countryValue = "";
+try {getCountry();}
+catch (err) {console.log("cannot get country")}
 
 // Initialize Firebase
 var config = {
@@ -25,6 +28,16 @@ r1.on('value', (snap) => {
 //listen for form SUBMIT
 document.getElementById("form").addEventListener("submit", submitForm);
 
+//get user's country code
+function getCountry() {
+ $.getJSON('https://ipapi.co/json/', function(data) {
+    geo = JSON.stringify(data, null, 2)
+    geo = JSON.parse(geo)
+    countryValue = geo["country"];
+    console.log(countryValue);
+  });
+}
+
 // Submit form
 function submitForm(e) {
   e.preventDefault();
@@ -35,6 +48,7 @@ function submitForm(e) {
   var map = document.querySelector('input[name="map"]:checked').value;
   var mode = document.querySelector('input[name="mode"]:checked').value;
   var timestamp = Math.floor((new Date()).getTime() / 1000);
+  var country = countryValue;
 
   //win and loss saves data in result - losses keeps values under 10
   if (outcome == "win") {
@@ -43,7 +57,7 @@ function submitForm(e) {
 
 
   // Save Game
-  saveGame(corporation, expansions, result, mode, map, timestamp);
+  saveGame(corporation, expansions, result, mode, map, timestamp, country);
 
   //clear form
   document.getElementById("form").reset();
@@ -51,7 +65,7 @@ function submitForm(e) {
 }
 
 // Save Game to firebasejs
-function saveGame(corporation, expansions, result, mode, map, timestamp) {
+function saveGame(corporation, expansions, result, mode, map, timestamp, country) {
   var newGameRef = gamesRef.push();
   newGameRef.set({
     corporation: corporation,
@@ -59,7 +73,8 @@ function saveGame(corporation, expansions, result, mode, map, timestamp) {
     result: result,
     mode: mode,
     map: map,
-    timestamp: timestamp
+    timestamp: timestamp,
+    country: country
   })
 }
 

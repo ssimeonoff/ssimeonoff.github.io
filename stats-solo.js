@@ -178,3 +178,21 @@ function compareTime(time) {
   if (time >= 7200 && time < 172800) {return Math.floor(time/3600) + " hours"}
   if (time >= 172800) {return Math.floor(time/86400) + " days"}
 }
+
+function download(data, filename, json) {
+    var file = new Blob([GAMES_ALL_JSON], {type: "text/plain;charset=utf-8"});
+    if (window.navigator.msSaveOrOpenBlob) // IE10+
+        window.navigator.msSaveOrOpenBlob(file, filename);
+    else { // Others
+        var a = document.createElement("a"),
+                url = URL.createObjectURL(file);
+        a.href = url;
+        a.download = "Solo Games - " + GAMES_ALL.length;
+        document.body.appendChild(a);
+        a.click();
+        setTimeout(function() {
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        }, 0);
+    }
+}
