@@ -7,6 +7,14 @@
   height: 25px;
   line-height: 25px;
 }
+
+.history-section-corporation2 {
+  display: inline-block;
+  border-left: 1px solid rgb(221,221,221);
+  border-right: 1px solid rgb(137,137,137);
+}
+
+
 .history-section-score {
   display: inline-block;
   border-top: 1px solid rgb(221,221,221);
@@ -16,6 +24,12 @@
   height: 25px;
   line-height: 25px;
 }
+
+.history-section-score2 {
+  display: inline-block;
+  border-left: 1px solid rgb(221,221,221);
+}
+
 .history-section-time {
   position: relative;
   display: inline-block;
@@ -30,11 +44,23 @@
   text-align: left;
 }
 
+.history-section-time2 {
+  position: relative;
+  display: inline-block;
+  border-left: 1px solid rgb(221,221,221);
+  border-right: 1px solid rgb(137,137,137);
+}
+
 .history-section-time-value {
   display: inline-block;
   width: 60px;
   margin-left: -4px;
   text-align: center;
+}
+
+.history-section-time-value2 {
+  border-right: 1px solid rgb(137,137,137);
+  display: inline-block;
 }
 
 .history-section-expansions {
@@ -44,6 +70,14 @@
   border-left: 1px solid rgb(221,221,221);
   width: 80px;
 }
+
+.history-section-expansions2 {
+  display: inline-block;
+  text-align: left;
+  border-left: 1px solid rgb(221,221,221);
+  border-right: 1px solid rgb(137,137,137);
+}
+
 
 .history-section-expansion-ribbon {
   display: inline-block;
@@ -100,7 +134,9 @@
 
 .grid-cell-history2 {
   display: grid;
-  grid-template-columns: 190px 210px 56px;
+  grid-template-columns: 100px 90px 210px 56px;
+  height: 34px;
+  line-height: 34px;
   text-align: center;
   color: #222;
   font-size: 15px;

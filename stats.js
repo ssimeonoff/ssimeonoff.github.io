@@ -90,7 +90,6 @@ function filterFunction(id) {
 
   //filter by expansions
   btnExpansion = document.querySelectorAll(".btn-expansion.active");
-  btnExpansion2 = document.querySelectorAll(".btn-expansion-standard.active");
 
   if (btnExpansion.length == 1 ) {
     games = games.filter(function(el) {

@@ -1,3 +1,4 @@
+
 // Initialize Firebase
 var config = {
   apiKey: "AIzaSyD6HEAHfcXGN-WrUxSaraO3TYNzGbAr8ts",
@@ -7,6 +8,7 @@ var config = {
   storageBucket: "tm-games1.appspot.com",
   messagingSenderId: "969120080569"
 };
+
 firebase.initializeApp(config);
 
 // Reference Games collection
@@ -16,7 +18,6 @@ var r1 = firebase.database().ref('games-solo')
 r1.on('value', (snap) => {
   const val = snap.val()
   const asArray = Object.keys(val)
-    //.map(key => Object.assign({}, val[key], { key }))
     .map(key => val[key])
     document.getElementById("title3").innerHTML = asArray.length; //for the odometer counter
 })
