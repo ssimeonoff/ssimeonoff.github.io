@@ -22,7 +22,6 @@ function filterFunction(id) {
   // filter games from it and return/create new array "games"
   //toggling active buttons state
   games = GAMES_ALL;
-  console.log(games.length)
 
   clickedElementID = document.getElementById(id);
   if (clickedElementID != null) {clickedElementID.classList.toggle("active");}
@@ -56,25 +55,24 @@ function filterFunction(id) {
 
   if (btnExpansion.length == 2 ){
     games = games.filter(function(el) {
-      return el.expansions != undefined
-       && el.expansions.indexOf(btnExpansion[1].id) > -1 && el.expansions.length == 1
+      return el.expansions != undefined &&
+       el.expansions.indexOf(btnExpansion[1].id) > -1 && el.expansions.length == 1
     });
   } else if (btnExpansion.length == 3 ){
     games = games.filter(function(el) {
-      return el.expansions != undefined
-        && el.expansions.indexOf(btnExpansion[1].id) > -1
-        && el.expansions.indexOf(btnExpansion[2].id) > -1 && el.expansions.length == 2
+      return el.expansions != undefined &&
+        el.expansions.indexOf(btnExpansion[1].id) > -1 &&
+        el.expansions.indexOf(btnExpansion[2].id) > -1 && el.expansions.length == 2
     });
   } else if (btnExpansion.length == 4 ){
-    games = games.filter(function(el) {
-      return el.expansions != undefined  &&
-      el.expansions.indexOf(btnExpansion[1].id) > -1 &&
-      el.expansions.indexOf(btnExpansion[2].id) > -1 &&
-      el.expansions.indexOf(btnExpansion[3].id) > -1 && el.expansions.length == 3
+      games = games.filter(function(el) {
+        return el.expansions != undefined  &&
+        el.expansions.indexOf(btnExpansion[1].id) > -1 &&
+        el.expansions.indexOf(btnExpansion[2].id) > -1 &&
+        el.expansions.indexOf(btnExpansion[3].id) > -1 && el.expansions.length == 3
     });
   }
 
-  console.log(games.length)
   //pushing the new filtered data
   pushData();
 }
@@ -111,9 +109,10 @@ function pushHistory() {
 
 
     //the corporations array
-    corporationsSection = gameSections[i].querySelector(".history-section-corporation2");
-    scoreSection = gameSections[i].querySelector(".history-section-score2");
-    try {corporationsSection.innerHTML = games[games.length-1-i]["corporation"];}
+    try {
+      corporationsSection = gameSections[i].querySelector(".history-section-corporation2");
+      scoreSection = gameSections[i].querySelector(".history-section-score2");
+      corporationsSection.innerHTML = games[games.length-1-i]["corporation"];}
     catch (err) {}
 
     try {result = games[games.length-1-i]["result"];
@@ -124,19 +123,21 @@ function pushHistory() {
 
     //the expansions
     var expansionsHTML = "";
-    expansionsArray = games[games.length-1-i]["expansions"];
-    if (expansionsArray == undefined) {expansionsArray = []}
-    expansionsHTML = expansionsHTML + '<div class="history-section-expansion-ribbon"><div class="icon corporate-era-icon icon-align2"></div></div>'
-    if (expansionsArray.indexOf("VENUS") > -1) {
-      expansionsHTML = expansionsHTML + '<div class="history-section-expansion-ribbon"><div class="icon venus-icon icon-align2"></div></div>'
-    }
-    if (expansionsArray.indexOf("PRELUDE") > -1) {
-      expansionsHTML = expansionsHTML + '<div class="history-section-expansion-ribbon"><div class="icon prelude-icon icon-align2"></div></div>'
-    }
-    if (expansionsArray.indexOf("COLONIES") > -1) {
-      expansionsHTML = expansionsHTML + '<div class="history-section-expansion-ribbon"><div class="icon colonies-icon icon-align2"></div></div>'
-    }
-    gameSections[i].querySelector(".history-section-expansions2").innerHTML = expansionsHTML;
+    try {
+      expansionsArray = games[games.length-1-i]["expansions"];
+      if (expansionsArray == undefined) {expansionsArray = []}
+      expansionsHTML = expansionsHTML + '<div class="history-section-expansion-ribbon"><div class="icon corporate-era-icon icon-align2"></div></div>'
+      if (expansionsArray.indexOf("VENUS") > -1) {
+        expansionsHTML = expansionsHTML + '<div class="history-section-expansion-ribbon"><div class="icon venus-icon icon-align2"></div></div>'
+      }
+      if (expansionsArray.indexOf("PRELUDE") > -1) {
+        expansionsHTML = expansionsHTML + '<div class="history-section-expansion-ribbon"><div class="icon prelude-icon icon-align2"></div></div>'
+      }
+      if (expansionsArray.indexOf("COLONIES") > -1) {
+        expansionsHTML = expansionsHTML + '<div class="history-section-expansion-ribbon"><div class="icon colonies-icon icon-align2"></div></div>'
+      }
+      gameSections[i].querySelector(".history-section-expansions2").innerHTML = expansionsHTML;
+    }   catch (err) {}
 
   }
 }
