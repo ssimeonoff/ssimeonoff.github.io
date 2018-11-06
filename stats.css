@@ -9,13 +9,12 @@
       width: 460px !important;
     }
     .playerStats {
-      width: 100%;
     }
 }
 
 .buttons-container {
     display: grid;
-    grid-template-columns: 140px 274px 80px;
+    grid-template-columns: 140px 274px 50px;
     position: relative;
     font-family: Prototype;
     background: #ccc;

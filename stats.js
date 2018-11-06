@@ -723,7 +723,7 @@ function pushHistory() {
   now = Math.floor((new Date()).getTime() / 1000);
   gameSections = document.querySelectorAll(".grid-cell-history");
 
-  for(i=0; i < gameSections.length ; i++) {
+  for(i=0; i < gameSections.length && i < games.length ; i++) {
 
     if (games.length-i > 0) {
       //add dark background to the headers

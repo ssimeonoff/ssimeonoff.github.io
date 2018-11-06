@@ -59,6 +59,7 @@
 }
 
 .history-section-time-value2 {
+  border-left: 1px solid rgb(221,221,221);
   border-right: 1px solid rgb(137,137,137);
   display: inline-block;
 }
@@ -134,9 +135,9 @@
 
 .grid-cell-history2 {
   display: grid;
-  grid-template-columns: 100px 90px 210px 56px;
-  height: 34px;
-  line-height: 34px;
+  grid-template-columns: 33px 90px 100px 193px 40px;
+  height: 32px;
+  line-height: 32px;
   text-align: center;
   color: #222;
   font-size: 15px;
@@ -148,10 +149,7 @@
 }
 
 .failed-number {
-  background: #cc3333;
-  padding: 0px 7px 0px 7px;
-  border-radius: 2px;
-  color: white;
-  border: 1px solid #444;
-  text-shadow: 0 0px 1px black;
+  padding: 1px 7px 1px 7px;
+  border-radius: 1px;
+  border: 2px solid #cc3333;
 }

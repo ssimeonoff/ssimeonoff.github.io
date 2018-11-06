@@ -98,7 +98,18 @@ function pushHistory() {
   now = Math.floor((new Date()).getTime() / 1000);
   gameSections = document.querySelectorAll(".grid-cell-history2");
 
-  for(i=0; i < gameSections.length ; i++) {
+  for(i=0; i < gameSections.length && i < games.length; i++) {
+
+    //display the flag
+    try {country =  games[games.length-1-i]["country"];}
+    catch (err) {}
+    if (country != undefined && country.length > 1) {
+      countryDivContent = '<img class="flag" src="flags/'+country+'.png" title="'+country+'">';
+      gameSections[i].querySelector(".flag-div").innerHTML = countryDivContent;
+    } else {
+      countryDivContent = '<img class="flag" src="flags/EU.png" title="EU">';
+      gameSections[i].querySelector(".flag-div").innerHTML = countryDivContent;
+    }
 
     //game timestamp in seconds
     try {
