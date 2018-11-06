@@ -56,21 +56,21 @@ function filterFunction(id) {
 
   if (btnExpansion.length == 2 ){
     games = games.filter(function(el) {
-      return el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[0].id) > -1 &&
-      el.expansions != undefined  && el.expansions.indexOf(btnExpansion[1].id) > -1 && el.expansions.length == 2
+      return el.expansions != undefined
+       && el.expansions.indexOf(btnExpansion[1].id) > -1 && el.expansions.length == 1
     });
   } else if (btnExpansion.length == 3 ){
     games = games.filter(function(el) {
-      return el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[0].id) > -1 &&
-      el.expansions != undefined  && el.expansions.indexOf(btnExpansion[1].id) > -1 &&
-      el.expansions != undefined  && el.expansions.indexOf(btnExpansion[2].id) > -1 && el.expansions.length == 3
+      return el.expansions != undefined
+        && el.expansions.indexOf(btnExpansion[1].id) > -1
+        && el.expansions.indexOf(btnExpansion[2].id) > -1 && el.expansions.length == 2
     });
   } else if (btnExpansion.length == 4 ){
     games = games.filter(function(el) {
-      return el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[0].id) > -1 &&
-      el.expansions != undefined  && el.expansions.indexOf(btnExpansion[1].id) > -1 &&
-      el.expansions != undefined  && el.expansions.indexOf(btnExpansion[2].id) > -1 &&
-      el.expansions != undefined  && el.expansions.indexOf(btnExpansion[3].id) > -1 && el.expansions.length == 4
+      return el.expansions != undefined  &&
+      el.expansions.indexOf(btnExpansion[1].id) > -1 &&
+      el.expansions.indexOf(btnExpansion[2].id) > -1 &&
+      el.expansions.indexOf(btnExpansion[3].id) > -1 && el.expansions.length == 3
     });
   }
 
@@ -116,9 +116,10 @@ function pushHistory() {
     try {corporationsSection.innerHTML = games[games.length-1-i]["corporation"];}
     catch (err) {}
 
-    result = games[games.length-1-i]["result"];
+    try {result = games[games.length-1-i]["result"];
     if (result > 20) {scoreSection.innerHTML = result}
-    else {scoreSection.innerHTML = "<span class='failed-number'>"+result+"</span>"}
+    else {scoreSection.innerHTML = "<span class='failed-number'>"+result+"</span>"}}
+    catch (err) {}
 
 
     //the expansions
