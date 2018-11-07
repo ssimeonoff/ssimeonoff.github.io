@@ -80,6 +80,7 @@ function filterFunction(id) {
 function pushData() {
   setTimeout(function() {pushGeneralStats()}, 500); //for smoother animation
   pushHistory();
+  pushCorporationsData();
 
 }
 
@@ -195,4 +196,35 @@ function download(data, filename, json) {
             window.URL.revokeObjectURL(url);
         }, 0);
     }
+}
+
+function corporationWinrate(corporationGamesArray) {
+  wins = 0;
+  for (i=0; i < corporationGamesArray.length; i++) {
+    result = parseInt(corporationGamesArray[i]["result"]);
+    if (result > 20) {wins++}
+  }
+  return Math.round(wins*100/corporationGamesArray.length) + "<span style='font-size:12px'>%</span>"
+}
+
+function corporationScore(corporationGamesArray) {
+  var corp_score = 0;
+  var corp_games = 0;
+  for (i=0; i < corporationGamesArray.length; i++) {
+    result = parseInt(corporationGamesArray[i]["result"]);
+    if (result > 20) {
+      corp_score = corp_score + result;
+      corp_games++;
+    }
+  }
+  return Math.round(corp_score/corp_games)
+}
+
+function pushCorporationsData(corporation) {
+  //CRIDICOR
+  games_credicor = games.filter(function(el) {return el.corporation == "CREDICOR"});
+  document.getElementById("games-credicor").innerHTML = games_credicor.length;
+  document.getElementById("winrate-credicor").innerHTML =  corporationWinrate(games_credicor);
+  document.getElementById("score-credicor").innerHTML =  corporationScore(games_credicor);
+
 }

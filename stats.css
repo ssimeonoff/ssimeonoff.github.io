@@ -452,6 +452,13 @@
     text-shadow: none;
 }
 
+.grid-corporations-title {
+  height:46px !important;
+  line-height:46px !important;
+  color: white !important;
+  text-shadow: 0 0 1px black, 0 2px 2px black !important;
+}
+
 .header {
   border-left: none;
   border-right:none;
