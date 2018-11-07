@@ -441,6 +441,7 @@
 
 .grid-corporations-solo > div {
     text-align: center;
+    font-size: 18px;
     height: 32px;
     line-height: 32px;
     border-top: 2px solid rgb(221,221,221);
@@ -450,6 +451,9 @@
     color: #222;
     font-weight: normal;
     text-shadow: none;
+}
+
+.corporations-font-size {
 }
 
 .grid-corporations-title {

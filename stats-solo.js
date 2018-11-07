@@ -221,10 +221,154 @@ function corporationScore(corporationGamesArray) {
 }
 
 function pushCorporationsData(corporation) {
-  //CRIDICOR
+
   games_credicor = games.filter(function(el) {return el.corporation == "CREDICOR"});
   document.getElementById("games-credicor").innerHTML = games_credicor.length;
   document.getElementById("winrate-credicor").innerHTML =  corporationWinrate(games_credicor);
   document.getElementById("score-credicor").innerHTML =  corporationScore(games_credicor);
 
+  games_ecoline = games.filter(function(el) {return el.corporation == "ECOLINE"});
+  document.getElementById("games-ecoline").innerHTML = games_ecoline.length;
+  document.getElementById("winrate-ecoline").innerHTML =  corporationWinrate(games_ecoline);
+  document.getElementById("score-ecoline").innerHTML =  corporationScore(games_ecoline);
+
+  games_helion = games.filter(function(el) {return el.corporation == "HELION"});
+  document.getElementById("games-helion").innerHTML = games_helion.length;
+  document.getElementById("winrate-helion").innerHTML =  corporationWinrate(games_helion);
+  document.getElementById("score-helion").innerHTML =  corporationScore(games_helion);
+
+  games_mining = games.filter(function(el) {return el.corporation == "MINING GUILD"});
+  document.getElementById("games-mining").innerHTML = games_mining.length;
+  document.getElementById("winrate-mining").innerHTML =  corporationWinrate(games_mining);
+  document.getElementById("score-mining").innerHTML =  corporationScore(games_mining);
+
+  games_interplan = games.filter(function(el) {return el.corporation == "INTERPLAN. CINEMATICS"});
+  document.getElementById("games-interplan").innerHTML = games_interplan.length;
+  document.getElementById("winrate-interplan").innerHTML =  corporationWinrate(games_interplan);
+  document.getElementById("score-interplan").innerHTML =  corporationScore(games_interplan);
+
+  games_inventrix = games.filter(function(el) {return el.corporation == "INVENTRIX"});
+  document.getElementById("games-inventrix").innerHTML = games_inventrix.length;
+  document.getElementById("winrate-inventrix").innerHTML =  corporationWinrate(games_inventrix);
+  document.getElementById("score-inventrix").innerHTML =  corporationScore(games_inventrix);
+
+  games_phobolog = games.filter(function(el) {return el.corporation == "PHOBOLOG"});
+  document.getElementById("games-phobolog").innerHTML = games_phobolog.length;
+  document.getElementById("winrate-phobolog").innerHTML =  corporationWinrate(games_phobolog);
+  document.getElementById("score-phobolog").innerHTML =  corporationScore(games_phobolog);
+
+  games_tharsis = games.filter(function(el) {return el.corporation == "THARSIS REPUBLIC"});
+  document.getElementById("games-tharsis").innerHTML = games_tharsis.length;
+  document.getElementById("winrate-tharsis").innerHTML =  corporationWinrate(games_tharsis);
+  document.getElementById("score-tharsis").innerHTML =  corporationScore(games_tharsis);
+
+  games_thorgate = games.filter(function(el) {return el.corporation == "THORGATE"});
+  document.getElementById("games-thorgate").innerHTML = games_thorgate.length;
+  document.getElementById("winrate-thorgate").innerHTML =  corporationWinrate(games_thorgate);
+  document.getElementById("score-thorgate").innerHTML =  corporationScore(games_thorgate);
+
+  games_unmi = games.filter(function(el) {return el.corporation == "UNMI"});
+  document.getElementById("games-unmi").innerHTML = games_unmi.length;
+  document.getElementById("winrate-unmi").innerHTML =  corporationWinrate(games_unmi);
+  document.getElementById("score-unmi").innerHTML =  corporationScore(games_unmi);
+
+  games_teractor = games.filter(function(el) {return el.corporation == "TERACTOR"});
+  document.getElementById("games-teractor").innerHTML = games_teractor.length;
+  document.getElementById("winrate-teractor").innerHTML =  corporationWinrate(games_teractor);
+  document.getElementById("score-teractor").innerHTML =  corporationScore(games_teractor);
+
+  games_saturn = games.filter(function(el) {return el.corporation == "SATURN SYSTEMS"});
+  document.getElementById("games-saturn").innerHTML = games_saturn.length;
+  document.getElementById("winrate-saturn").innerHTML =  corporationWinrate(games_saturn);
+  document.getElementById("score-saturn").innerHTML =  corporationScore(games_saturn);
+
+  games_aphrodite = games.filter(function(el) {return el.corporation == "APHRODITE"});
+  document.getElementById("games-aphrodite").innerHTML = games_aphrodite.length;
+  document.getElementById("winrate-aphrodite").innerHTML =  corporationWinrate(games_aphrodite);
+  document.getElementById("score-aphrodite").innerHTML =  corporationScore(games_aphrodite);
+
+  games_celestic = games.filter(function(el) {return el.corporation == "CELESTIC"});
+  document.getElementById("games-celestic").innerHTML = games_celestic.length;
+  document.getElementById("winrate-celestic").innerHTML =  corporationWinrate(games_celestic);
+  document.getElementById("score-celestic").innerHTML =  corporationScore(games_celestic);
+
+  games_manutech = games.filter(function(el) {return el.corporation == "MANUTECH"});
+  document.getElementById("games-manutech").innerHTML = games_manutech.length;
+  document.getElementById("winrate-manutech").innerHTML =  corporationWinrate(games_manutech);
+  document.getElementById("score-manutech").innerHTML =  corporationScore(games_manutech);
+
+  games_morning = games.filter(function(el) {return el.corporation == "MORNING STAR"});
+  document.getElementById("games-morning").innerHTML = games_morning.length;
+  document.getElementById("winrate-morning").innerHTML =  corporationWinrate(games_morning);
+  document.getElementById("score-morning").innerHTML =  corporationScore(games_morning);
+
+  games_viron = games.filter(function(el) {return el.corporation == "VIRON"});
+  document.getElementById("games-viron").innerHTML = games_viron.length;
+  document.getElementById("winrate-viron").innerHTML =  corporationWinrate(games_viron);
+  document.getElementById("score-viron").innerHTML =  corporationScore(games_viron);
+
+  games_cheung = games.filter(function(el) {return el.corporation == "CHEUNG SHING MARS"});
+  document.getElementById("games-cheung").innerHTML = games_cheung.length;
+  document.getElementById("winrate-cheung").innerHTML =  corporationWinrate(games_cheung);
+  document.getElementById("score-cheung").innerHTML =  corporationScore(games_cheung);
+
+  games_point = games.filter(function(el) {return el.corporation == "POINT LUNA"});
+  document.getElementById("games-point").innerHTML = games_point.length;
+  document.getElementById("winrate-point").innerHTML =  corporationWinrate(games_point);
+  document.getElementById("score-point").innerHTML =  corporationScore(games_point);
+
+  games_robinson = games.filter(function(el) {return el.corporation == "ROBINSON INDUSTRIES"});
+  document.getElementById("games-robinson").innerHTML = games_robinson.length;
+  document.getElementById("winrate-robinson").innerHTML =  corporationWinrate(games_robinson);
+  document.getElementById("score-robinson").innerHTML =  corporationScore(games_robinson);
+
+  games_valley = games.filter(function(el) {return el.corporation == "VALLEY TRUST"});
+  document.getElementById("games-valley").innerHTML = games_valley.length;
+  document.getElementById("winrate-valley").innerHTML =  corporationWinrate(games_valley);
+  document.getElementById("score-valley").innerHTML =  corporationScore(games_valley);
+
+  games_vitor = games.filter(function(el) {return el.corporation == "VITOR"});
+  document.getElementById("games-vitor").innerHTML = games_vitor.length;
+  document.getElementById("winrate-vitor").innerHTML =  corporationWinrate(games_vitor);
+  document.getElementById("score-vitor").innerHTML =  corporationScore(games_vitor);
+
+  games_aridor = games.filter(function(el) {return el.corporation == "ARIDOR"});
+  document.getElementById("games-aridor").innerHTML = games_aridor.length;
+  document.getElementById("winrate-aridor").innerHTML =  corporationWinrate(games_aridor);
+  document.getElementById("score-aridor").innerHTML =  corporationScore(games_aridor);
+
+  games_arklight = games.filter(function(el) {return el.corporation == "ARKLIGHT"});
+  document.getElementById("games-arklight").innerHTML = games_arklight.length;
+  document.getElementById("winrate-arklight").innerHTML =  corporationWinrate(games_arklight);
+  document.getElementById("score-arklight").innerHTML =  corporationScore(games_arklight);
+
+  games_polyphemos = games.filter(function(el) {return el.corporation == "POLYPHEMOS"});
+  document.getElementById("games-polyphemos").innerHTML = games_polyphemos.length;
+  document.getElementById("winrate-polyphemos").innerHTML =  corporationWinrate(games_polyphemos);
+  document.getElementById("score-polyphemos").innerHTML =  corporationScore(games_polyphemos);
+
+  games_poseidon = games.filter(function(el) {return el.corporation == "POSEIDON"});
+  document.getElementById("games-poseidon").innerHTML = games_poseidon.length;
+  document.getElementById("winrate-poseidon").innerHTML =  corporationWinrate(games_poseidon);
+  document.getElementById("score-poseidon").innerHTML =  corporationScore(games_poseidon);
+
+  games_stormcraft = games.filter(function(el) {return el.corporation == "STORMCRAFT"});
+  document.getElementById("games-stormcraft").innerHTML = games_stormcraft.length;
+  document.getElementById("winrate-stormcraft").innerHTML =  corporationWinrate(games_stormcraft);
+  document.getElementById("score-stormcraft").innerHTML =  corporationScore(games_stormcraft);
+
+  games_arcadian = games.filter(function(el) {return el.corporation == "ARCADIAN COMMUNITIES"});
+  document.getElementById("games-arcadian").innerHTML = games_arcadian.length;
+  document.getElementById("winrate-arcadian").innerHTML =  corporationWinrate(games_arcadian);
+  document.getElementById("score-arcadian").innerHTML =  corporationScore(games_arcadian);
+
+  games_recyclon = games.filter(function(el) {return el.corporation == "RECYCLON"});
+  document.getElementById("games-recyclon").innerHTML = games_recyclon.length;
+  document.getElementById("winrate-recyclon").innerHTML =  corporationWinrate(games_recyclon);
+  document.getElementById("score-recyclon").innerHTML =  corporationScore(games_recyclon);
+
+  games_splice = games.filter(function(el) {return el.corporation == "SPLICE"});
+  document.getElementById("games-splice").innerHTML = games_splice.length;
+  document.getElementById("winrate-splice").innerHTML =  corporationWinrate(games_splice);
+  document.getElementById("score-splice").innerHTML =  corporationScore(games_splice);
 }
