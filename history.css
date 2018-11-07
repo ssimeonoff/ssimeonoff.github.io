@@ -10,8 +10,6 @@
 
 .history-section-corporation2 {
   display: inline-block;
-  border-left: 1px solid rgb(221,221,221);
-  border-right: 1px solid rgb(137,137,137);
 }
 
 
@@ -27,7 +25,6 @@
 
 .history-section-score2 {
   display: inline-block;
-  border-left: 1px solid rgb(221,221,221);
 }
 
 .history-section-time {
@@ -59,8 +56,6 @@
 }
 
 .history-section-time-value2 {
-  border-left: 1px solid rgb(221,221,221);
-  border-right: 1px solid rgb(137,137,137);
   display: inline-block;
 }
 
@@ -75,8 +70,6 @@
 .history-section-expansions2 {
   display: inline-block;
   text-align: left;
-  border-left: 1px solid rgb(221,221,221);
-  border-right: 1px solid rgb(137,137,137);
 }
 
 
@@ -126,6 +119,11 @@
   width: 32px;
 }
 
+.flag-div2 {
+  display: inline-block;
+  width: 32px;
+}
+
 .flag {
   margin-top: -20px;
   height: 32px;
@@ -135,18 +133,20 @@
 
 .grid-cell-history2 {
   display: grid;
-  grid-template-columns: 33px 90px 100px 193px 40px;
-  height: 32px;
-  line-height: 32px;
+  grid-template-columns: 36px 90px 100px 194px 40px;
   text-align: center;
   color: #222;
   font-size: 15px;
   border-radius: 1px;
+}
+.grid-cell-history2 > div {
+  height: 32px;
+  line-height: 32px;
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
   border-bottom: 2px solid rgb(137,137,137);
   border-right: 2px solid rgb(137,137,137);
-}
+ }
 
 .failed-number {
   padding: 1px 7px 1px 7px;

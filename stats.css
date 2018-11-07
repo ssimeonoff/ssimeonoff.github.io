@@ -202,7 +202,11 @@
 .grid5 {
   display: grid;
   grid-template-columns: 140px 80px 80px 80px 80px;
+}
 
+.grid4 {
+  display: grid;
+  grid-template-columns: 220px  80px 80px 80px;
 }
 
 
@@ -423,6 +427,19 @@
       color:black;
       font-weight: normal;
       text-shadow: none;
+}
+
+.grid-cell-corporation-solo {
+    text-align: center;
+    height: 32px;
+    line-height: 32px;
+    border-top: 2px solid rgb(221,221,221);
+    border-left: 2px solid rgb(221,221,221);
+    border-bottom: 2px solid rgb(137,137,137);
+    border-right: 2px solid rgb(137,137,137);
+    color: #222;
+    font-weight: normal;
+    text-shadow: none;
 }
 
 .header {
