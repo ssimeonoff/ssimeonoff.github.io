@@ -166,6 +166,10 @@ input::placeholder {
   box-shadow: none;
 }
 
+.btn-players:hover, .drop-down:hover, .btn-generations:hover, .corporation-score:hover, .btn-gametype:hover, .btn-map:hover, .btn-awards:hover, .btn-colonies:hover {
+  filter: drop-shadow(0 0 5px white);
+}
+
 
 .btn-players {
     display: inline-block;
@@ -683,6 +687,10 @@ input::-webkit-inner-spin-button {
   display: inline-block;
   vertical-align: top;
   margin-right: 10px;
+}
+
+.button:hover {
+  background: #ccc;
 }
 
 .icon:after {

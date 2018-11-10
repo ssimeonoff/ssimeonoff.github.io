@@ -2263,13 +2263,25 @@ input[type=radio]:checked + label {
   color: #c5c553;
   letter-spacing: 4px;
   background: #cc3333;
-  text-shadow: 0 0 1px black, 0 1px 1px black;
   border: 2px solid #c5c553;
   box-shadow: 1px 1px 5px 1px black;
   width: 150px;
   text-align: center;
   font-size: 30px;
   border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.polyphemos {
+  font-family: Prototype;
+  width: 180px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  text-align: center;
+  font-size: 26px;
+  border-bottom: 3px solid #cc3333;
+  border-top: 3px solid #cc3333;
   margin-top: 10px;
   margin-bottom: 10px;
 }
