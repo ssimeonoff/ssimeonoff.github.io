@@ -1507,7 +1507,31 @@ border-right: 2px solid rgb(137,137,137);
         position: relative;
         color: red;
         content: "\27a1";
-    }
+}
+
+.triangle {
+  display: inline-block;
+  font-size: 20px;
+}
+
+.tringle {
+  display: inline-block;
+}
+
+.triangle-black::after {
+  font-size: 30px;
+  vertical-align: middle;
+  content: "\25b2";
+  text-shadow: -3px 2px 0px white, 3px 2px 0px white, 0px -4px 0px white, -5px 3px 0 black, 5px 3px 0 black, 0px -7px 0px black;
+}
+
+.triangle-red::after {
+  font-size: 30px;
+  vertical-align: middle;
+  content: "\25b2";
+  text-shadow: -3px 2px 0px white, 3px 2px 0px white, 0px -4px 0px white, -5px 3px 0 black, 5px 3px 0 black, 0px -7px 0px black, -7px 4px 0px red, 7px 4px 0px red, 0px -10px 0px red;
+}
+
 
 /************** Style the Input field************/
 #myInput {
@@ -2284,4 +2308,76 @@ input[type=radio]:checked + label {
   border-top: 3px solid #cc3333;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.poseidon {
+  display:inline-block;
+  font-family: "Times New Roman", Arial;
+  background: linear-gradient(rgba(0,0,0,0) 0%, #3633ff 20%, rgba(0,0,0,0) 22%, #3633ff 50%, rgba(0,0,0,0) 78%,  #3633ff 80%, rgba(0,0,0,0) 100%);
+  line-height: 50px;
+  color: #aaa;
+  text-shadow:  0 0 1px black, 0 0 3px black;
+  width: 180px;
+  font-weight: normal;
+  letter-spacing: 2px;
+  text-align: center;
+  font-size: 30px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  border-radius: 0% 100% 0% 75%;
+  box-shadow: 0 4px 10px 0px black;
+}
+
+.stormcraft1 {
+  display: inline-block;
+  color: white;
+  background: #ff9900;
+  line-height: 50px;
+  width: 83px;
+  text-align: center;
+  font-size: 24px;
+  margin-top: 10px;
+  margin-left: 0px;
+  margin-bottom: 10px;
+  border-radius: 100% 0 50% 0;
+  text-shadow: 0 0 6px black;
+  box-shadow: 0 3px 10px 0px black;
+}
+
+.stormcraft2 {
+  display: inline-block;
+  line-height: 50px;
+  width: 100px;
+  text-align: center;
+  font-size: 24px;
+  margin-top: 10px;
+  margin-left: -5px;
+  margin-bottom: 10px;
+  text-shadow: 0 5px 10px black;
+}
+
+.stormcraft3 {
+  position: absolute;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-shadow: 0 0 6px black;
+  color: white;
+  font-weight: normal;
+  margin-top: -23px;
+  margin-left:20px;
+  transform: scaleX(1.7);
+  font-family: Prototype;
+}
+
+.stormcraft4 {
+  position: absolute;
+  transform: scaleX(1.7);
+  font-family: Prototype;
+  letter-spacing: 2px;
+  font-size: 10px;
+  font-weight: normal;
+  text-shadow: 0 5px 10px black;
+  margin-top: -23px;
+  margin-left: 90px;
 }
