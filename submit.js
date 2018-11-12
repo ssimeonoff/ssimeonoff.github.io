@@ -255,7 +255,8 @@ function limitColonies() {
   try {playersCount = parseInt(document.querySelector("input[name='players']:checked").value)}
   catch (err) {playersCount = 0}
   coloniesNum = 2 + playersCount;
-  if (document.querySelectorAll("option[value='ARIDOR']:checked").length > 0) {coloniesNum++}
+  if (document.querySelectorAll("option[value='ARIDOR']:checked").length > 0) {coloniesNum++} //add 1 if Aridor is in play
+  if (playersCount == 2) {coloniesNum++}
 
   const x = document.querySelectorAll("input[name='colonies']:checked");
   if (x.length > coloniesNum) { setTimeout(function(){
