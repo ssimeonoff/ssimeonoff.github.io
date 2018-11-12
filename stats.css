@@ -872,6 +872,49 @@
   margin-left: 4px;
 }
 
+.poseidon {
+  display:inline-block;
+  font-family: "Times New Roman", Arial;
+  background: linear-gradient(rgba(0,0,0,0) 0%, #3633ff 20%, rgba(0,0,0,0) 22%, #3633ff 50%, rgba(0,0,0,0) 78%,  #3633ff 80%, rgba(0,0,0,0) 100%);
+  line-height: 34px;
+  color: #aaa;
+  text-shadow:  0 0 1px black, 0 0 3px black;
+  width: 124px;
+  font-weight: normal;
+  letter-spacing: 2px;
+  text-align: center;
+  font-size: 22px;
+  margin-left: 5px;
+  margin-top: -2px;
+  border-radius: 0% 100% 0% 75%;
+  box-shadow: 0 4px 10px 0px black;
+}
+
+.stormcraft1 {
+  display: inline-block;
+  color: white;
+  background: #ff9900;
+  line-height: 40px;
+  width: 60px;
+  text-align: center;
+  font-size: 18px;
+  margin-left: 10px;
+  margin-top: -7px;
+  border-radius: 100% 0 50% 0;
+  text-shadow: 0 0 6px black;
+  box-shadow: 0 3px 10px 0px black;
+}
+
+.stormcraft2 {
+  display: inline-block;
+  line-height: 50px;
+  width: 58px;
+  text-align: center;
+  font-size: 18px;
+  margin-top: -7px;
+  text-shadow: 0 5px 10px black;
+}
+
 
 /* expansion icons */
 
