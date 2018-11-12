@@ -857,7 +857,19 @@
   margin-left: 5px;
   padding-top: 5px;
   padding-bottom: 5px;
+}
 
+.polyphemos {
+  font-family: Prototype;
+  width: 128px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 23px;
+  border-bottom: 3px solid #cc3333;
+  border-top: 3px solid #cc3333;
+  margin-left: 4px;
 }
 
 
