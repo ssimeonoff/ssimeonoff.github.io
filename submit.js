@@ -254,14 +254,14 @@ function limitColonies() {
   //calculating the max colonies count
   try {playersCount = parseInt(document.querySelector("input[name='players']:checked").value)}
   catch (err) {playersCount = 0}
-  coloniesNum = 2 + playersCount;
-  if (document.querySelectorAll("option[value='ARIDOR']:checked").length > 0) {coloniesNum++} //add 1 if Aridor is in play
-  if (playersCount == 2) {coloniesNum++}
+  coloniesMax = 2 + playersCount;
+  if (document.querySelectorAll("option[value='ARIDOR']:checked").length > 0) {coloniesMax++} //add 1 if Aridor is in play
+  if (playersCount == 2) {coloniesMax++}
 
-  const x = document.querySelectorAll("input[name='colonies']:checked");
-  if (x.length > coloniesNum) { setTimeout(function(){
-    for (i=0; i < x.length - coloniesNum; i++) {
-      x[x.length-i-1].checked = false;
+  const coloniesChecked = document.querySelectorAll("input[name='colonies']:checked");
+  if (coloniesChecked.length > coloniesMax) { setTimeout(function(){
+    for (i=0; i < coloniesChecked.length - coloniesMax; i++) {
+      coloniesChecked[coloniesChecked.length-i-1].checked = false;
     }
   }, 300);}
 }

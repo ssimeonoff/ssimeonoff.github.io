@@ -6,6 +6,7 @@
 
 /*project card div*/
 .filterDiv {
+    display: none;
     cursor: pointer;
     float: left;
     position: relative;
@@ -13,15 +14,14 @@
     background: linear-gradient(to bottom right, #ffffff, #aaaaaa, #eeeeee, #cecece, #dddddd, #eeeeee, #cccccc);
     width: 240px;
     height: 310px;
-    display: none;
     font-family:  Arial,Helvetica,sans-serif;
-    margin: 15px;
+    margin: 10px;
     border-top: 2px solid rgb(221,221,221);
     border-left: 2px solid rgb(221,221,221);
     border-bottom: 2px solid rgb(137,137,137);
     border-right: 2px solid rgb(137,137,137);
     border-radius: 20px;
-    box-shadow: 0 0 2px 1px black;
+    box-shadow: 0 0px 1px 1px black, 0 2px 4px 0 black;
     transition: transform 200ms ease-in-out;
     will-change: transform;
 }
@@ -308,6 +308,16 @@ border-right: 2px solid rgb(137,137,137);
     text-align: center;
     font-size: 16px;
     text-align: center;
+}
+
+.titles {
+    text-transform: uppercase;
+    font-family: Prototype;
+    margin-top: 36px;
+    margin-left: 80px;
+    border-radius: 4px;
+    line-height: 20px;
+    font-size: 16px;
 }
 
 .show {
@@ -1575,6 +1585,7 @@ border-right: 2px solid rgb(137,137,137);
 }
 
 .myUL {
+    width: 1100px;
     list-style-type: none;
     margin: 15px 0px 0px 25px;
 }
@@ -1698,10 +1709,10 @@ border-right: 2px solid rgb(137,137,137);
     padding-top: 15px;
     padding-bottom: 17px;
     width: 845px;
-    height: 330px;
+    height: 100px;
     margin-top: 40px;
     transition: height 0.2s;
-    box-shadow: 0 0 10px 5px black;
+    box-shadow: 0 0 2px 1px black;
 }
 
 #titleContainer {
