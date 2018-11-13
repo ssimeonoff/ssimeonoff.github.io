@@ -4,6 +4,38 @@
     src: url(fonts/Prototype.ttf);
 }
 
+#titles_corporations {
+  margin-top: 50px;
+  margin-bottom: 100px;
+  color: #e28c22;
+
+}
+
+#titles_projects {
+  margin-bottom: 100px;
+  color: #888;
+}
+
+#titles_preludes {
+  color: rgb(235,118,171);
+}
+
+.titles {
+    display: inline-block;
+    width: 460px;
+    text-shadow: 0 0 1px black, 0 2px 2px black;
+    letter-spacing: 1px;
+    vertical-align: top;
+    text-transform: uppercase;
+    font-family: Prototype;
+    margin-top: 15px;
+    margin-left: 40px;
+    border-radius: 4px;
+    line-height: 50px;
+    font-size: 30px;
+    text-align: center;
+}
+
 /*project card div*/
 .filterDiv {
     display: none;
@@ -16,6 +48,7 @@
     height: 310px;
     font-family:  Arial,Helvetica,sans-serif;
     margin: 10px;
+    margin-bottom: 5px;
     border-top: 2px solid rgb(221,221,221);
     border-left: 2px solid rgb(221,221,221);
     border-bottom: 2px solid rgb(137,137,137);
@@ -310,15 +343,7 @@ border-right: 2px solid rgb(137,137,137);
     text-align: center;
 }
 
-.titles {
-    text-transform: uppercase;
-    font-family: Prototype;
-    margin-top: 36px;
-    margin-left: 80px;
-    border-radius: 4px;
-    line-height: 20px;
-    font-size: 16px;
-}
+
 
 .show {
     display: block;
@@ -852,20 +877,21 @@ border-right: 2px solid rgb(137,137,137);
 }
 
 .footer-links {
-  display: inline-block;
+  margin-top: 10px;
   font-family: Prototype;
   text-decoration: none;
+  text-shadow: none;
+  padding-left: 100px;
+  padding-right: 100px;
   text-align: center;
   background: #ddd;
-  color: #444444;
+  color: #222;
   outline: none;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 30px;
   line-height: 30px;
-  margin-top: -10px;
-  width: 97px;
-  margin-right: 14px;
-  border-radius: 20px;
+  width: 500px;
+  border-radius: 10px;
   box-shadow: 0 0px 0px 1px rgba(0,0,0,.5), 0 2px 4px 1px rgba(0,0,0,.5);
   box-shadow: 0 2px 4px 1px rgba(0,0,0,.8);
   border-top: 2px solid rgb(221,221,221);
@@ -1585,9 +1611,9 @@ border-right: 2px solid rgb(137,137,137);
 }
 
 .myUL {
+  display: inline-block;
     width: 1100px;
     list-style-type: none;
-    margin: 15px 0px 0px 25px;
 }
 
 .ul-title {
