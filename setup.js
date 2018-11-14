@@ -37,11 +37,12 @@ corporations_names = [
 url = "https://ssimeonoff.github.io/";
 
 function generateHand() {
-
+  //clear all cards
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
-  document.getElementById("link").classList.remove("disabled-link");
+
+  //document.getElementById("link").classList.remove("disabled-link");
 
   displayCards();
 }
