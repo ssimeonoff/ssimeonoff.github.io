@@ -22,18 +22,15 @@
 
 .titles {
     display: inline-block;
-    width: 460px;
+    width: 500px;
     text-shadow: 0 0 1px black, 0 2px 2px black;
     letter-spacing: 1px;
     vertical-align: top;
     text-transform: uppercase;
     font-family: Prototype;
-    margin-top: 15px;
-    margin-left: 40px;
-    border-radius: 4px;
+    margin-top: 0px;
     line-height: 50px;
     font-size: 30px;
-    text-align: center;
 }
 
 /*project card div*/
@@ -628,13 +625,14 @@ border-right: 2px solid rgb(137,137,137);
     font-size: 16px;
     line-height: 30px;
     letter-spacing: 1px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .btn4 {
     outline: none;
+    vertical-align: top;
     height: 40px;
-    width: 123px;
+    width: 200px;
     cursor: pointer;
     border-radius: 20px;
     text-align: center;
@@ -642,9 +640,10 @@ border-right: 2px solid rgb(137,137,137);
     letter-spacing: 1px;
     color:white;
     font-family: Prototype;
-    background-color: #cc3333;
-    vertical-align: middle;
-    margin-bottom: 5px;
+    background-color: #444;
+    margin-top: 10px;
+    margin-left: 12px;
+    margin-right: 20px;
 }
 
 .btn-reset {
@@ -876,28 +875,35 @@ border-right: 2px solid rgb(137,137,137);
   display: none;
 }
 
-.footer-links {
-  margin-top: 10px;
-  font-family: Prototype;
+#link {
   text-decoration: none;
   text-shadow: none;
-  padding-left: 100px;
-  padding-right: 100px;
+  color: #222;
+}
+
+.footer-links {
+  display: inline-block;
+  vertical-align: top;
+  font-family: Prototype;
   text-align: center;
   background: #ddd;
   color: #222;
   outline: none;
   cursor: pointer;
-  font-size: 30px;
-  line-height: 30px;
-  width: 500px;
-  border-radius: 10px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  height: 36px;
+  line-height: 36px;
+  width: 196px;
+  border-radius: 22px;
   box-shadow: 0 0px 0px 1px rgba(0,0,0,.5), 0 2px 4px 1px rgba(0,0,0,.5);
   box-shadow: 0 2px 4px 1px rgba(0,0,0,.8);
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
   border-bottom: 2px solid rgb(137,137,137);
   border-right: 2px solid rgb(137,137,137);
+  margin-left: 258px;
+  margin-top: 10px;
 }
 
 .footer-links2 {
@@ -1722,23 +1728,19 @@ border-right: 2px solid rgb(137,137,137);
 }
 
 #buttonsContainer {
-    display: none;
     background: #cccccc;
     background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
     border-top: 2px solid rgb(221,221,221);
     border-left: 2px solid rgb(221,221,221);
     border-bottom: 2px solid rgb(137,137,137);
     border-right: 2px solid rgb(137,137,137);
-    border-radius: 20px;
-    margin-left: 40px;
-    padding-left: 30px;
-    padding-top: 15px;
-    padding-bottom: 17px;
-    width: 845px;
-    height: 100px;
-    margin-top: 40px;
+    border-radius: 32px;
+    margin-left: 50px;
+    width: 1030px;
+    height: 60px;
+    margin-top: 20px;
     transition: height 0.2s;
-    box-shadow: 0 0 2px 1px black;
+    box-shadow: 0 0 1px 1px black;
 }
 
 #titleContainer {

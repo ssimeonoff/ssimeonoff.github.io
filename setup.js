@@ -36,8 +36,20 @@ corporations_names = [
 ];
 url = "https://ssimeonoff.github.io/";
 
-generateArray();
-displayCards();
+function generateHand() {
+
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+
+  generateArray();
+  displayCards();
+}
+
+function filterFunction(id) {
+  clickedElementID = document.getElementById(id);
+  if (clickedElementID != null) {clickedElementID.classList.toggle("active");}
+}
 
 function generateArray(length, max) {
   var arr = [];
@@ -58,36 +70,28 @@ function displayCards() {
   var titles_projects = "";
   var titles_preludes = "";
 
+  //appending the url
+  document.getElementById("link").href = url;
 
+  //corporations
   for (i=0; i < corporations.length; i++) {
     titles_corporations = titles_corporations + corporations_names[corporations[i]] + "<br>";
     if (corporations[i] < 10) {corporations[i] = "CORP0" + corporations[i].toString()}
     else  {corporations[i] = "CORP" + corporations[i].toString()}
     url = url + "#" + corporations[i];
   }
+  for (i=0; i < corporations.length; i++) {
+    document.getElementById(corporations[i]).style.display = "block";
+  }
   document.getElementById("titles_corporations").innerHTML = titles_corporations;
 
+  //projects
   for (i=0; i < projects.length; i++) {
     if (projects[i] < 10) {projects[i] = "00" + projects[i].toString()}
     else if (projects[i] < 100) {projects[i] = "0" + projects[i].toString()}
     else {projects[i] = projects[i].toString()}
     url = url + "#" + projects[i];
   }
-
-  for (i=0; i < preludes.length; i++) {
-    if (preludes[i] < 10) {preludes[i] = "P0" + preludes[i].toString()}
-    else {preludes[i] = "P" + preludes[i].toString()}
-    url = url + "#" + preludes[i];
-  }
-
-  //showing the url
-  document.getElementById("link").href = url;
-
-  //showing only the pointed cards
-  for (i=0; i < corporations.length; i++) {
-    document.getElementById(corporations[i]).style.display = "block";
-  }
-
   for (i = 0; i < x.length; i++) {
     if (x[i].querySelector(".number") != null) {
       if (projects.includes(x[i].querySelector(".number").textContent)) {
@@ -98,6 +102,12 @@ function displayCards() {
   }
   document.getElementById("titles_projects").innerHTML = titles_projects;
 
+  //preludes
+  for (i=0; i < preludes.length; i++) {
+    if (preludes[i] < 10) {preludes[i] = "P0" + preludes[i].toString()}
+    else {preludes[i] = "P" + preludes[i].toString()}
+    url = url + "#" + preludes[i];
+  }
   for (i = 0; i < x.length; i++) {
     if (x[i].querySelector(".number") != null) {
       if (preludes.includes(x[i].querySelector(".number").textContent)) {
@@ -107,6 +117,4 @@ function displayCards() {
     }
   }
   document.getElementById("titles_preludes").innerHTML = titles_preludes;
-
-
 }

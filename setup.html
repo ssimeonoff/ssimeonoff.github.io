@@ -23,14 +23,19 @@
 <html>
 
 <body  style="background-color:#F5F5FF;">
-  <div id="titles" class="titles">
-    <div style="margin-top:10px;"><a id="link" class="footer-links" target="_blank">LINK<a/></div>
-    <div id="titles_corporations"></div>
-    <div id="titles_projects"></div>
-    <div id="titles_preludes"></div>
-  </div>
-  <!---CARDS LIST----------------------->
 
+  <div id="buttonsContainer">
+    <button id="about" onclick="generateHand();" class="button2 btn4 " title="Generate starting hand">GENERATE HAND</button>
+    <button id="standard" class="button btn3 standard-icon button-icon  " onclick="filterFunction(id)" title="filter Base game cards"></button>
+    <button id="corporate" class="button btn3 corporate-icon button-icon  " onclick="filterFunction(id)" title="filter Corporate Era cards"></button>
+    <button id="venusNext" class="button btn3 venus-icon button-icon  " onclick="filterFunction(id)" title="filter Venus Next cards"></button>
+    <button id="prelude" class="button btn3 prelude-icon button-icon  " onclick="filterFunction(id)" title="filter Prelude cards"></button>
+    <button id="colonies" class="button btn3 colonies-icon button-icon  " onclick="filterFunction(id)" title="filter Colonies cards"></button>
+    <button id="promo" class="button btn3 promo-icon button-icon  " onclick="filterFunction(id)" title="filter Promo cards"></button>
+    <div class="footer-links"><a id="link" target="_blank">LINK<a/></div>
+  </div>
+
+    <!---CARDS LIST----------------------->
     <ul class="myUL">
       <div id="projectCards">
       <!--Project cards------------------------------------------------------>
@@ -6433,6 +6438,12 @@
           </div>
         </li>
   </ul>
+
+  <div id="titles" class="titles">
+    <div id="titles_corporations"></div>
+    <div id="titles_projects"></div>
+    <div id="titles_preludes"></div>
+  </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="setup.js"></script>
