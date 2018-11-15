@@ -962,6 +962,8 @@ border-right: 2px solid rgb(137,137,137);
 }
 
 .production-box {
+    font-family: Prototype;
+    font-weight: normal;
     font-size: 18px;
     width: 44px;
     display: inline-block;
@@ -1199,6 +1201,7 @@ border-right: 2px solid rgb(137,137,137);
 
 /**************Resources***********/
 .resource {
+    font-family: Prototype;
     position: relative;
     display: inline-block;
     text-align: center;
@@ -1405,7 +1408,7 @@ border-right: 2px solid rgb(137,137,137);
 .floater{
     background: rgb(255,204,100);
     color:white;
-    text-shadow: 0 0 1px black;
+    text-shadow: 0 1px 1px black, -1px 0 1px black, 1px 0 1px black, 0 -1px 1px black;
   }
 .floater:after {
     content: "\2601";
@@ -1518,18 +1521,25 @@ border-right: 2px solid rgb(137,137,137);
   display: inline-block;
 }
 
+.triangle-white::after {
+  font-size: 30px;
+  vertical-align: middle;
+  color: white;
+  content: "\25b2";
+  text-shadow: -5px 3px 0 black, 5px 3px 0 black, 0px -7px 0px black;
+}
 .triangle-black::after {
   font-size: 30px;
   vertical-align: middle;
   content: "\25b2";
-  text-shadow: -3px 2px 0px white, 3px 2px 0px white, 0px -4px 0px white, -5px 3px 0 black, 5px 3px 0 black, 0px -7px 0px black;
+  text-shadow: -3px 2px 0px #aaa, 3px 2px 0px #aaa, 0px -4px 0px #aaa, -5px 3px 0 black, 5px 3px 0 black, 0px -7px 0px black;
 }
 
 .triangle-red::after {
   font-size: 30px;
   vertical-align: middle;
   content: "\25b2";
-  text-shadow: -3px 2px 0px white, 3px 2px 0px white, 0px -4px 0px white, -5px 3px 0 black, 5px 3px 0 black, 0px -7px 0px black, -7px 4px 0px red, 7px 4px 0px red, 0px -10px 0px red;
+  text-shadow: -3px 2px 0px #aaa, 3px 2px 0px #aaa, 0px -4px 0px #aaa, -5px 3px 0 black, 5px 3px 0 black, 0px -7px 0px black, -7px 4px 0px red, 7px 4px 0px red, 0px -10px 0px red;
 }
 
 
@@ -2297,7 +2307,7 @@ input[type=radio]:checked + label {
   margin-bottom: 10px;
 }
 
-.polyphemos {
+.poliphemos {
   font-family: Prototype;
   width: 180px;
   font-weight: normal;

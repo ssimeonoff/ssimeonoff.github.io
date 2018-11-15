@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+
+<head>
+  <meta name="viewport" content="width=device-width">
+  <meta charset="UTF-8">
+  <meta name="description" content="TERRAFORMING MARS COMPLETE ANIMATED LIST">
+  <meta name="keywords" content="HTML,CSS,JavaScript">
+  <meta name="viewport" content='width=970'>
+  <link rel="shortcut icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" type="text/css" href="mystyles.css">
+  <link rel="stylesheet" href="odometer.css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116626580-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-116626580-1');
+</script>
+</head>
+<html>
+
+<body background="images/mars.jpg" style="background-color:black;background-repeat:no-repeat; background-size:100%">
+  <div id="buttonsContainer">
+    <div id="titleContainer">
+      <div style="transform:scale(2,1);margin-top:6px;">TERRAFORMING<br> <span style="font-size:26px;transform: scale(2,1);">MARS</span></div>
+  </div>
+    <div class="cardsContainer">
+      <div style="display:inline-block;width:150px;">
+      <div id="totalProjects" class="totalCardsCount odometer" data-minintegerlen="3"></div>
+      <div class="resource card" style="display:inline-block;transform: rotate(-5deg);"></div>
+      <div class="resource card" style="display:inline-block;transform: rotate(0deg);margin-left:-25px;"></div>
+      <div class="resource card" style="display:inline-block;transform: rotate(+5deg);margin-left:-25px;"></div>
+
+      </div>
+      <div style="display:inline-block; width:120px;">
+      <div id="totalCorporations" class="totalCardsCount odometer"></div>
+      <div class="resource card-corporation" style="display:inline-block;transform: rotate(-10deg)"><span style="background:linear-gradient(to right, rgb(255,204,100), #e28c22);padding-left:4px;padding-right:4px;border-radius:2px;">CORP</span></div>
+      <div class="resource card-corporation" style="display:inline-block;transform: rotate(10deg);margin-left:-52px"><span style="background:linear-gradient(to right, rgb(255,204,100), #e28c22);padding-left:4px;padding-right:4px;border-radius:2px;">CORP</span></div>
+      </div>
+      <div style="display:inline-block;width:120px;">
+      <div id="totalPreludes" class="totalCardsCount odometer"></div>
+      <div class="resource card-corporation" style="display:inline-block;transform: rotate(-10deg)"><span style="background:linear-gradient(to right, rgb(235,118,171), #e64d91);padding-left:4px;padding-right:4px;border-radius:2px;">PREL</span></div>
+      <div class="resource card-corporation" style="display:inline-block;transform: rotate(10deg);margin-left:-52px"><span style="background:linear-gradient(to right, rgb(235,118,171), #e64d91);padding-left:4px;padding-right:4px;border-radius:2px;">PREL</span></div>
+      </div>
+      <div style="display:inline-block;width:120px;">
+      <div id="totalColonies" class="totalCardsCount odometer"></div>
+      <div class="resource card-corporation" style="display:inline-block;transform: rotate(-10deg)"><span style="background:rgb(158,145,128);padding-left:4px;padding-right:4px;border-radius:2px;">COLO</span></div>
+      <div class="resource card-corporation" style="display:inline-block;transform: rotate(10deg);margin-left:-52px"><span style="    background: linear-gradient(to right, #b1a79a,#827564);padding-left:4px;padding-right:4px;border-radius:2px;">COLO</span></div>
+      </div>
+    </div>
+    <div id="myBtnContainer1" style="line-height:55px;margin-bottom:10px;">
+      <button id="automated" class="button btn1 background-color-automated  " onclick="filterFunction(id)" title="filter Automated Project Cards">AUTOMATED</button>
+      <button id="active" class="button btn1 background-color-active  " onclick="filterFunction(id)" title="filter Active Project Cards">ACTIVE</button>
+      <button id="events" class="button btn1 background-color-events  " onclick="filterFunction(id)" title="filter Events Project Cards">EVENTS</button>
+      <button id="corporation" class="button btn1 background-color-corporation  " onclick="filterFunction(id)" title="filter Corporations Cards">CORPORATIONS</button>
+      <button id="preludeCards" class="button btn1 background-color-prelude  " onclick="filterFunction(id)" title="filter Preludes Cards">PRELUDES</button>
+      <button id="colonyCards" class="button btn1 background-color-colony  " onclick="filterFunction(id)" style="margin-right:0px;" title="filter Colonies cards">COLONIES</button>
+    </div>
+
+    <div id="myBtnContainer2" style="line-height:55px;">
+      <button id="buildingTag" class="button btn2 tag-building  " style="line-height:40px;margin-left:-2px;" onclick="filterFunction(id)" title="filter by Building tag"></button>
+      <button id="spaceTag" class="button btn2 tag-space  " onclick="filterFunction(id)" title="filter by Space tag"></button>
+      <button id="scienceTag" class="button btn2 tag-science  " onclick="filterFunction(id)" title="filter by Science tag"></button>
+
+      <button id="plantTag" class="button btn2 tag-plant  " onclick="filterFunction(id)" title="filter by Plant tag"></button>
+      <button id="microbeTag" class="button btn2 tag-microbe  " onclick="filterFunction(id)" title="filter by Microbe tag"></button>
+      <button id="animalTag" class="button btn2 tag-animal  " onclick="filterFunction(id)" title="filter by Animal tag"></button>
+
+      <button id="powerTag" class="button btn2 tag-power  " onclick="filterFunction(id)" title="filter by Power tag"></button>
+      <button id="jovianTag" class="button btn2 tag-jovian  " onclick="filterFunction(id)" title="filter by Jovian tag"></button>
+      <button id="earthTag" class="button btn2 tag-earth  " style="font-size:40px;padding-top:3px;padding-left:1px;padding-right:1px;" onclick="filterFunction(id)" title="filter by Earth tag"></button>
+
+      <button id="cityTag" class="button btn2 tag-city  " style="font-size:22px;line-height:40px" onclick="filterFunction(id)" title="filter by City tag"></button>
+      <button id="eventTag" class="button btn2 tag-event  " style="line-height:40px;vertical-align:bottom;" onclick="filterFunction(id)" title="filter by Event tag"></button>
+      <button id="venusTag" class="button btn2 tag-venus  " onclick="filterFunction(id)" title="filter by Venus tag"></button>
+
+      <button id="wildTag" class="button btn2 tag-wild" onclick="filterFunction(id)" title="filter by Wild tag">?</button>
+
+    </div>
+
+    <div id="myBtnContainer3">
+      <div class="onoffswitch">
+        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" onclick="toggleCardsDesign();" >
+        <label class="onoffswitch-label" for="myonoffswitch">
+          <span class="onoffswitch-inner"></span>
+          <span class="onoffswitch-switch"></span>
+        </label>
+      </div>
+      <button id="standard" class="button btn3 standard-icon button-icon  " onclick="filterFunction(id)" title="filter Base game cards"></button>
+      <button id="corporate" class="button btn3 corporate-icon button-icon  " onclick="filterFunction(id)" title="filter Corporate Era cards"></button>
+      <button id="venusNext" class="button btn3 venus-icon button-icon  " onclick="filterFunction(id)" title="filter Venus Next cards"></button>
+      <button id="prelude" class="button btn3 prelude-icon button-icon  " onclick="filterFunction(id)" title="filter Prelude cards"></button>
+      <button id="colonies" class="button btn3 colonies-icon button-icon  " onclick="filterFunction(id)" title="filter Colonies cards"></button>
+      <button id="promo" class="button btn3 promo-icon button-icon  " onclick="filterFunction(id)" title="filter Promo cards"></button>
+      <a id="btn-selectedCards" class="button btn-selected-cards" title="open selected cards" href="https://ssimeonoff.github.io/" target="_blank">SELECTED<br> CARDS ONLY<div id="selectedCardsAmount">0</div></a>
+    </div>
+
+    <div id="myBtnContainer4" style="display:inline-block;">
+      <button id="content"  class="button btn-content  " onclick="toggleContentDiv();" title="reveal Card Content filters">CONTENT</button>
+      <input type="text" id="myInput" oninput="filterFunction(id);" placeholder="Search by text ..." title="Search by card's title, number or keywords">
+      <button id="reset" class="button2 btn-reset" onclick="clearInput();showAll();" title="Reset all selected filters">RESET</button>
+      <button id="about" onclick="toggleFooterDiv();" class="button2 btn4 " style="background:#444444;margin-left: 13px;" title="shows external links">EXTRAS</button>
+    </div>
+
+    <div id="contentFilters">
+      <form id="sortButtons">
+        <fieldset>
+          <legend class="sort-title">SORT PROJECT CARDS BY</legend>
+          <input type="radio" name='radio' id="radio-choice-1" value="on" checked="checked" onclick="sortByID();"style="display:none;">
+          <label class= "btn-sort" for="radio-choice-1">ID</label>
+          <input type="radio" name='radio' id="radio-choice-2" value="off" onclick="sortByPriceUp();" style="display:none;">
+          <label class= "btn-sort" for="radio-choice-2" >MC UP</label>
+          <input type="radio" name='radio' id="radio-choice-3" value="other" onclick="sortByPriceDown();" style="display:none;">
+          <label class= "btn-sort" for="radio-choice-3">MC Down</label>
+        </fieldset>
+      </form>
+
+      <button title="decrease Price filter by 1" class="button2   btn-price" onclick="reduceOne()" title="decrease Price filter by 1">-</button>
+      <input  type="number" title="filter by Price" id="price" oninput="filterFunction(id);" value="0" min="0" max="50"></input>
+      <button class="button2   btn-price" style="margin-right:10px;" onclick="increaseOne()" title="increase Price filter by 1">+</button>
+
+      <button id=".production.money" class="button btn-production" onclick="filterFunction(id)" title="filter cards with money production" style="margin-left:6px;"><div class="production money">M</div></button>
+      <button id=".production.steel" class="button btn-production" onclick="filterFunction(id)" title="filter cards with steel production"><div class="production steel"></div></button>
+      <button id=".production.titanium" class="button btn-production" onclick="filterFunction(id)" title="filter cards with titanium production"><div class="production titanium"></div></button>
+      <button id=".production.plant" class="button btn-production" onclick="filterFunction(id)" title="filter cards with plant production"><div class="production plant"></div></button>
+      <button id=".production.energy" class="button btn-production" onclick="filterFunction(id)" title="filter cards with enery production"><div class="production energy"></div></button>
+      <button id=".production.heat" class="button btn-production" onclick="filterFunction(id)" title="filter cards with heat production"><div class="production heat"></div></button>
+      <br>
+
+      <button id="reqs" class="button btn-req" onclick="filterFunction(id);toggleRequirementsFilters();" title="filter cards having Requirements">REQUIREMENTS</button>
+      <button id="vp" class="button btn-vp" onclick="filterFunction(id)" title="filter cards with VP">VP</button>
+
+      <button id="temperature-tile" class="button btn-tile temperature-tile" onclick="filterFunction(id)" title="filter cards which increase Temperature"></button>
+      <button id="ocean-tile" class="button btn-tile ocean-tile" onclick="filterFunction(id)" title="filter cards which place Ocean tiles" style="padding:0px;"></button>
+      <button id="greenery-tile" class="button btn-tile greenery-tile" onclick="filterFunction(id)" title="filter cards which place Greenery tiles" style="padding:0px;"></button>
+      <button id="oxygen-tile" class="button btn-tile oxygen-tile" onclick="filterFunction(id)" title="filter cards which increase Oxygen" style="padding:0px;"></button>
+      <button id="venus-tile" class="button btn-tile venus-tile" onclick="filterFunction(id)" title="filter cards which increase Venus" style="padding:0px;">V</button>
+      <button id="rating" class="button btn-tile rating" onclick="filterFunction(id)" title="filter cards which increase TR" style="padding-left:7px;"></button>
+
+
+      <div id ="subfilterReqs" class="subfilterReqs-disabled">
+        <output id="output1" for="slider1" class="output-label" style="color:#f25540; margin-left: 210px;">-30</output> <!-- Just to display selected value -->
+        <input id="slider1" type="range" min="-30" max="8" value="-30" step="2" list="tickmarks" oninput="output1.value = slider1.value; filterFunction(id);" class="track-temp-background track-temp-thumb" style="width:200px;margin-right:70px;">
+
+        <output id="output3" for="slider3" class="output-label" style="margin-left: 110px;">0</output> <!-- Just to display selected value -->
+        <input id="slider3" type="range" min="0" max="9" value="-0" step="1" list="tickmarks" oninput="output3.value = slider3.value; filterFunction(id);" class=" track-oceans-thumb" style="width:100px;">
+
+        <output id="output2" for="slider2" class="output-label" style="color:rgb(246,241,175);">0</output> <!-- Just to display selected value -->
+        <input id="slider2" type="range" min="0" max="14" value="0" step="1" list="tickmarks" oninput="output2.value = slider2.value; filterFunction(id);" class="track-oxygen-background track-oxygen-thumb">
+
+        <output id="output4" for="slider4" class="output-label" style="color: #8bb8da">0</output> <!-- Just to display selected value -->
+        <input id="slider4" type="range" min="0" max="30" value="0" step="2" list="tickmarks" oninput="output4.value = slider4.value; filterFunction(id);" class="track-venus-background track-venus-thumb" style="margin-right:0px;">
+        <br>
+        <p></p>
+        <output id="output5" for="slider5" class="output-label" style="color: white;">0</output> <!-- Just to display selected value -->
+        <input id="slider5" type="range" min="0" max="7" value="0" step="1" list="tickmarks" oninput="output5.value = slider5.value; filterFunction(id);" class="track-science-background track-science-thumb">
+
+        <output id="output8" for="slider8" class="output-label" style="margin-left: 70px;color: rgb(15,96,151);">0</output> <!-- Just to display selected value -->
+        <input id="slider8" type="range" min="0" max="1" value="0" step="1" list="tickmarks" oninput="output8.value = slider8.value; filterFunction(id);" class="track-earth-background track-earth-thumb" style="width:60px;">
+
+        <output id="output6" for="slider6" class="output-label" style="margin-left: 70px;color:rgb(255,223,149)">0</output> <!-- Just to display selected value -->
+        <input id="slider6" type="range" min="0" max="1" value="0" step="1" list="tickmarks" oninput="output6.value = slider6.value; filterFunction(id);" class="track-jovian-background track-jovian-thumb" style="width:60px;">
+
+        <output id="output7" for="slider7" class="output-label" style="margin-left: 90px; color:rgb(84,150,201)">0</output> <!-- Just to display selected value -->
+        <input id="slider7" type="range" min="0" max="2" value="0" step="1" list="tickmarks" oninput="output7.value = slider7.value; filterFunction(id);" class="track-venusTag-background track-venusTag-thumb" style="width:80px;">
+      </div>
+    </div>
+
+    <div id="footer">
+      <a class="footer-links" style="margin-left:1px" href="https://boardgamegeek.com/boardgame/167791/terraforming-mars" target="_blank">THE GAME</a>
+      <a class="footer-links" href="https://boardgamegeek.com/thread/1959389/terraforming-mars-complete-animated-cards-list" target="_blank">THE TOPIC</a>
+      <a class="footer-links" href="http://www.fryxgames.se/category/games/terraforming-mars/" target="_blank">FRYX NEWS</a>
+      <a class="footer-links" href="https://github.com/ssimeonoff/ssimeonoff.github.io" target="_blank">GitHub Repo</a>
+      <a class="footer-links" href="https://ssimeonoff.github.io/solo-ce" style="background-color: #cc3333;text-shadow: 0 0 1px black;color:white;" target="_blank">SOLO CE</a>
+      <a class="footer-links" href="https://ssimeonoff.github.io/solo-vn" style="background-color:rgb(84,150,201);text-shadow: 0 0 1px black;color:white;" target="_blank">SOLO VN</a>
+      <a class="footer-links" href="https://ssimeonoff.github.io/solo-pl" style="background-color:rgb(235,118,171);text-shadow: 0 0 1px black;color:white;" target="_blank">SOLO PL</a>
+      <br>
+      <a class="footer-links footer-links2" href="https://ssimeonoff.github.io/submit" target="_blank" style="margin-left:30px;">
+          <div class="icon-image"><img src="images/multi.png" alt="Smiley face" height="30" width="26"></div>
+          <div class="submit-label">SUBMIT GAME</div>
+      </a>
+      <a class="footer-links footer-links2" href="https://ssimeonoff.github.io/stats" target="_blank" >
+          <div class="icon-image" ><img src="images/stats.png" alt="Smiley face" height="26" width="26"></div>
+          <div class="submit-label">VIEW STATS</div>
+      </a>
+      <a class="footer-links footer-links2" href="https://ssimeonoff.github.io/submit-solo" target="_blank">
+          <div class="icon-image" style="margin-top:3px"><img src="images/solo2.png" alt="Smiley face" height="24" width="24"></div>
+          <div class="submit-label">SUBMIT SOLO</div>
+      </a>
+      <a class="footer-links footer-links2" href="https://ssimeonoff.github.io/stats-solo" target="_blank">
+          <div class="icon-image"><img src="images/stats2.png" alt="Smiley face" height="26" width="26"></div>
+          <div class="submit-label">VIEW SOLO</div>
+      </a>
+
+    </div>
+  </div>
+
+  <!---CARDS LIST----------------------->
+
+  <ul class="myUL" style="clear:both;">
+    <div class="ul-title">CORPORATIONS</div>
+
+
+      <!--Project Cards - Colonies ---------------------------------------->
+      <!--C01-->
+      <li onclick="getClickedCard();" class="filterDiv automated spaceTag earthTag colonies ">
+        <div class="title background-color-automated ">Lunar Exports</div>
+        <div class="price ">19</div>
+        <div class="tag tag1 tag-earth"></div>
+        <div class="tag tag2 tag-space"></div>
+        <div class="number">C01</div>
+        <div class="colonies-icon project-icon"></div>
+        <div class="content ">
+          <div class="production-box production-box-size4">
+            <div class="plant production"></div><div class="plant production"></div> OR <div class="money production">5</div>
+          </div>
+          <div class="description">
+            (Increase your plant production 2 steps, or your MC production 5 steps.)
+          </div>
+        </div>
+      </li>
+
+      <!--C01-->
+      <li onclick="getClickedCard();" class="filterDiv automated colonies reqs">
+        <div class="title background-color-automated ">Airliners</div>
+        <div class="price ">11</div>
+        <div class="number">C01</div>
+        <div class="colonies-icon project-icon"></div>
+        <div class="content ">
+          <div class="points points-big ">1</div>
+          <div class="requirements ">3 Floaters</div>
+          <div class="production-box">
+            <div class="money production">2</div>
+          </div><br>
+          <div class="floater resource "></div><div class="floater resource "></div>*
+          <div class="description">
+            (Requires that you have 3 floaters. Increase your MC production 2 steps. Add 2 floaters to ANY card.)
+          </div>
+        </div>
+      </li>
+
+      <!--C02-->
+      <li onclick="getClickedCard();" class="filterDiv events eventTag colonies">
+        <div class="title background-color-events">Air Raid</div>
+        <div class="price">0</div>
+        <div class="tag tag1 tag-event"></div>
+        <div class="number">C02</div>
+        <div class="colonies-icon project-icon"></div>
+        <div class="content">
+          - <div class="resource floater" style="margin-right:20px;"></div>
+          STEAL <div class="resource money red-outline">5</div>
+          <div class="description">
+            (Requires that you lose 1 floater. Steal 5 MC from any player.)
+          </div>
+        </div>
+      </li>
+
+      <!--C03-->
+      <li onclick="getClickedCard();" class="filterDiv active colonies ">
+        <div class="title background-color-active ">Atmo Collectors</div>
+        <div class="price ">15</div>
+        <div class="number">C03</div>
+        <div class="colonies-icon project-icon"></div>
+        <div class="content ">
+          <div class="red-arrow "></div> <div class="floater resource "></div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OR <br>
+          <div class="floater resource "></div> <div class="red-arrow "></div> 2<div class="titanium resource "></div> / 3<div class="energy resource "></div> / 4<div class="heat resource "></div>
+          <div class="description ">
+            (Action: Add 1 floater here, or spend 1 floater here to gain 2 titanium, or 3 energy, or 4 heat.)
+          </div>
+          <div class="resource floater"></div><div class="resource floater"></div>*
+          <br>
+          <div class="description ">
+            (Add 2 floaters to ANY card.)
+          </div>
+        </div>
+      </li>
+
+      <!--C04-->
+      <li onclick="getClickedCard();" class="filterDiv automated colonies">
+        <div class="title background-color-automated ">Community Services</div>
+        <div class="price">13</div>
+        <div class="number">C04</div>
+        <div class="colonies-icon project-icon"></div>
+        <div class="content ">
+          <div class="points points-big ">1</div>
+          <div class="production-box">
+            <div class="money production">1</div>
+          </div>  / <div class="resource-tag" style="font-size: 42px; vertical-align: middle;background:white">X</div>*
+          <div class="description">
+            (Increase your MC production 1 step per CARD WITH NO TAGS, including this.)
+          </div>
+        </div>
+      </li>
+
+      <!--C05-->
+      <li onclick="getClickedCard();" class="filterDiv events eventTag earthTag colonies reqs" data-earth= "2">
+          <div class="title background-color-events ">Conscription</div>
+          <div class="price ">5</div>
+          <div class="tag tag1 tag-event "></div>
+          <div class="tag tag2 tag-earth "></div>
+          <div class="colonies-icon project-icon"></div>
+          <div class="number">C05</div>
+          <div class="content ">
+            <div class="points points-big">-1</div>
+            <div class="requirements">Earth Earth</div>
+            <span style="font-size:14px;">NEXT CARD: </span> <div class="resource money">-16</div>
+              <div class="description ">
+                (Requires 2 Earth tags. The next card you play this generation costs 16 MC less.)
+              </div>
+          </div>
+      </li>
+
+      <!--C06-->
+      <li onclick="getClickedCard();" class="filterDiv automated powerTag spaceTag colonies reqs" data-science = "4">
+          <div class="title background-color-automated ">Corona Extractor</div>
+          <div class="price ">10</div>
+          <div class="tag tag1 tag-space"></div>
+          <div class="tag tag2 tag-power"></div>
+          <div class="number">C06</div>
+          <div class="colonies-icon project-icon"></div>
+          <div class="content ">
+            <div class="requirements">4 Science</div>
+              <div class="production-box production-box-size1a">
+                  4 <div class="energy production"></div>
+              </div>
+              <div class="description ">
+                  (Requires 4 science tags. Increase your energy production 4 steps.)
+              </div>
+          </div>
+      </li>
+
+      <!--C07-->
+      <li onclick="getClickedCard();" class="filterDiv active scienceTag colonies">
+          <div class="title background-color-active ">Cryo Sleep</div>
+          <div class="price ">10</div>
+          <div class="tag tag1 tag-science"></div>
+          <div class="number">C07</div>
+          <div class="colonies-icon project-icon"></div>
+          <div class="content ">
+            <div class="points points-big ">1</div>
+              <div class="triangle triangle-white"></div> : <div class="resource " style="background:white">-1</div>
+              <div class="description ">
+                  (Effect: When you trade, you pay 1 less resource for it.)
+              </div>
+          </div>
+      </li>
+
+      <!--C08-->
+      <li onclick="getClickedCard();" class="filterDiv automated spaceTag earthTag colonies">
+        <div class="title background-color-automated">Earth Elevator</div>
+        <div class="price">43</div>
+        <div class="tag tag1 tag-space"></div>
+        <div class="tag tag2 tag-earth"></div>
+        <div class="number">C08</div>
+        <div class="colonies-icon project-icon"></div>
+        <div class="content">
+          <div class="points points-big">4</div>
+          <div class="production-box production-box-size3">
+            <div class="production titanium"></div><div class="production titanium"></div><div class="production titanium"></div>
+          </div>
+          <div class="description">
+            (Increase your titanium production 3 steps.)
+          </div>
+        </div>
+      </li>
+
+      <!--C09-->
+      <li onclick="getClickedCard();" class="filterDiv automated colonies scienceTag animalTag microbeTag plantTag">
+        <div class="title background-color-automated ">Ecology Research</div>
+        <div class="price">21</div>
+        <div class="tag tag1 tag-plant"></div>
+        <div class="tag tag2 tag-microbe"></div>
+        <div class="tag tag3 tag-animal"></div>
+        <div class="tag tag-science" style="margin-left:50px;"></div>
+        <div class="number">C09</div>
+        <div class="colonies-icon project-icon"></div>
+        <div class="content ">
+          <div class="points points-big ">1</div>
+          <div class="production-box production-box-size2a">
+            <div class="plant production"></div> / <div class="triangle triangle-black"></div>
+          </div><br>
+          <div class="resource animal"></div>* <div class="resource microbe" style="margin-left:20px;"></div><div class="resource microbe"></div>*
+          <div class="description">
+            (Increase your plant production 1 step for each colony you own. Add 1 animal to ANOTHER card and 2 microbes to ANOTHER card.)
+          </div>
+        </div>
+      </li>
+
+      <!--C10-->
+      <li onclick="getClickedCard();" class="filterDiv automated colonies ">
+        <div class="title background-color-automated ">Floater Leasing</div>
+        <div class="price ">3</div>
+        <div class="number">C10</div>
+        <div class="colonies-icon project-icon"></div>
+        <div class="content ">
+          <div class="production-box">
+            <div class="money production">1</div>
+          </div> &nbsp;/ 3<div class="resource floater"></div>
+          <div class="description">
+            (Increase your MC production 1 step per 3 floaters you have.)
+          </div>
+        </div>
+      </li>
+
+      <!--C11-->
+      <li onclick="getClickedCard();" class="filterDiv events eventTag spaceTag colonies">
+          <div class="title background-color-events ">Floater Prototypes</div>
+          <div class="price ">2</div>
+          <div class="tag tag1 tag-event "></div>
+          <div class="tag tag2 tag-science "></div>
+          <div class="colonies-icon project-icon"></div>
+          <div class="number">C11</div>
+          <div class="content ">
+            <div class="resource floater"></div><div class="resource floater"></div>*
+              <div class="description ">
+                (Add two floaters to ANOTHER card.)
+              </div>
+          </div>
+      </li>
+
+      <!--C12-->
+      <li onclick="getClickedCard();" class="filterDiv active  spaceTag colonies ">
+          <div class="title background-color-active ">Floater Technology</div>
+          <div class="price ">7</div>
+          <div class="tag tag1 tag-science"></div>
+          <div class="number">C12</div>
+          <div class="colonies-icon project-icon"></div>
+          <div class="content ">
+              <div class="red-arrow "></div> <div class="floater resource "></div>*
+              <div class="description ">
+                (Action: Add 1 floater to ANOTHER card.)
+              </div>
+          </div>
+      </li>
+
+
+
+      <!--C13-->
+      <li onclick="getClickedCard();" class="filterDiv automated colonies spaceTag">
+        <div class="title background-color-automated ">Galilean Waystation</div>
+        <div class="price ">15</div>
+        <div class="tag tag1 tag-space "></div>
+        <div class="number">C13</div>
+        <div class="colonies-icon project-icon"></div>
+        <div class="content ">
+          <div class="points points-big ">1</div>
+          <div class="production-box production-box-size2a">
+            <div class="money production">1</div> / <div class="resource-tag jovian red-outline"></div>
+          </div>
+          <div class="description">
+            (Increase your MC production 1 step for every Jovian tag in play.)
+          </div>
+        </div>
+      </li>
+
+      <!--C18-->
+      <li onclick="getClickedCard();" class="filterDiv active colonies jovianTag spaceTag reqs" data-jovian = "1">
+        <div class="title background-color-active ">Jovian Lanterns</div>
+        <div class="price ">20</div>
+        <div class="tag tag1 tag-space "></div>
+        <div class="tag tag2 tag-jovian "></div>
+        <div class="number">C18</div>
+        <div class="colonies-icon project-icon"></div>
+        <div class="content ">
+            <div class="points">1/2<div class="resource floater"></div></div>
+            <div class="requirements">Jovian</div>
+            <div class="resource titanium"></div> <div class="red-arrow "></div> <div class="resource floater"></div><div class="resource floater"></div>
+            <div class="description ">
+              (Action: Spend 1 titanium to add 2 floaters here.)
+            </div>
+            <div class="tile rating"></div> <div class="resource floater"></div><div class="resource floater"></div>*
+            <div class="description " style="margin-top:-5px;text-align:left;">
+              (Requires 1 Jovian tag. Increase your TR 1 step. Add 2 floaters to ANY <br> card. 1VP per 2 floaters.)
+            </div>
+          </div>
+      </li>
+
+      <!--C49-->
+      <li onclick="getClickedCard();" class="filterDiv active scienceTag colonies reqs" data-science = "5">
+          <div class="title background-color-active ">Warp Drive</div>
+          <div class="price ">14</div>
+          <div class="tag tag1 tag-science"></div>
+          <div class="number">C49</div>
+          <div class="colonies-icon project-icon"></div>
+          <div class="content ">
+            <div class="points points-big ">2</div>
+            <div class="requirements">5 Science</div>
+              <div class="resource-tag space-resource"></div> : <div class="money resource ">-4</div>
+              <div class="description ">
+                  (Effect: When you play a Space card, you pay 4 MC less for it.)
+              </div><br>
+              <div class="description ">
+                  (Requires 5 Science tags.)
+              </div>
+          </div>
+      </li>
+
+
+    </div>
+</ul>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="odometer.js"></script>
+<script src="myscripts.js"></script>
+
+
+</body>
+</html>
