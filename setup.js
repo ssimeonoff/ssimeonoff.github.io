@@ -92,6 +92,7 @@ function displayCards() {
 
   for (i=0; i<10; i++) {
     //display the 10 projects
+    setTimeout() 
     projects[projects_numbers[i]].style.display = "block"
     //append the ids to the url
     url = url + "#" +  projects[projects_numbers[i]].querySelector(".number").textContent;
