@@ -53,9 +53,34 @@ function displayCards() {
   titles_projects = "";
   titles_preludes = "";
 
+
   //corporations
   query_corporations = ".corporation.standard"
-
+  if (document.querySelectorAll(".active.corporate-icon").length > 0) {
+    query_corporations = query_corporations + ", .corporation.corporate"
+  }
+  if (document.querySelectorAll(".active.venus-icon").length > 0) {
+    query_corporations = query_corporations + ", .corporation.venusNext"
+  }
+  if (document.querySelectorAll(".active.prelude-icon").length > 0) {
+    query_corporations = query_corporations + ", .corporation.prelude"
+  }
+  if (document.querySelectorAll(".active.colonies-icon").length > 0) {
+    query_corporations = query_corporations + ", .corporation.colonies"
+  }
+  if (document.querySelectorAll(".active.promo-icon").length > 0) {
+    query_corporations = query_corporations + ", .corporation.promo"
+  }
+  corporations = document.querySelectorAll(query_corporations);
+  corporations_numbers = generateArray(2, corporations.length)
+  for (i=0; i<2; i++) {
+    //display the 2 corporations
+    $(corporations[corporations_numbers[i]]).fadeIn(0);
+    //append the ids to the url
+    url = url + "#" +  corporations[corporations_numbers[i]].id;
+    corporation_id = corporations[corporations_numbers[i]].id.substring(4,6);
+    titles_corporations = titles_corporations + corporations_names[parseInt(corporation_id)] + "<br>";
+  }
 
   // projects
   query_projects = ".filterDiv.standard.automated, .filterDiv.standard.active, .filterDiv.standard.events";
@@ -72,10 +97,10 @@ function displayCards() {
     preludes_numbers = generateArray(4, preludes.length)
     for (i=0; i<4; i++) {
       //display the 4 preludes
-      preludes[preludes_numbers[i]].style.display = "block"
+      $(preludes[preludes_numbers[i]]).fadeIn(0);
       //append the ids to the url
       url = url + "#" +  preludes[preludes_numbers[i]].querySelector(".number").textContent;
-      titles_preludes = titles_preludes + preludes[preludes_numbers[i]].querySelector(".title").textContent + "<br>"
+      titles_preludes = titles_preludes + preludes[preludes_numbers[i]].querySelector(".title").textContent + "<br>";
     }
   }
   if (document.querySelectorAll(".active.colonies-icon").length > 0) {
@@ -86,13 +111,11 @@ function displayCards() {
   }
 
   projects = document.querySelectorAll(query_projects);
-  console.log(projects.length)
-
   projects_numbers = generateArray(10, projects.length)
 
   for (i=0; i<10; i++) {
     //display the 10 projects
-    projects[projects_numbers[i]].style.display = "block"
+    $(projects[projects_numbers[i]]).fadeIn(0);
     //append the ids to the url
     url = url + "#" +  projects[projects_numbers[i]].querySelector(".number").textContent;
     titles_projects = titles_projects + projects[projects_numbers[i]].querySelector(".title").textContent + "<br>"

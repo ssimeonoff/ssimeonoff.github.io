@@ -5,14 +5,14 @@
 }
 
 #titles_corporations {
-  margin-top: 50px;
-  margin-bottom: 100px;
+  margin-top: 30px;
+  margin-bottom: 50px;
   color: #e28c22;
 
 }
 
 #titles_projects {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   color: #888;
 }
 
@@ -29,7 +29,7 @@
     text-transform: uppercase;
     font-family: Prototype;
     margin-top: 0px;
-    line-height: 50px;
+    line-height: 45px;
     font-size: 30px;
     margin-left: 50px;
 }
@@ -1624,7 +1624,7 @@ border-right: 2px solid rgb(137,137,137);
 .myUL {
   display: inline-block;
     width: 1100px;
-    margin-right: -50px;
+    margin-right: -80px;
     list-style-type: none;
 }
 
