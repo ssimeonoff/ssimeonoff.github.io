@@ -787,6 +787,8 @@ function pushHistory() {
       countryDivContent = '<img class="flag" src="flags/EU.png" title="EU">';
       gameSections[i].querySelector(".flag-div").innerHTML = countryDivContent;
     }
+    //add the key as title
+    gameSections[i].title = games[games.length-1-i]["key"];
   }
 }
 
