@@ -34,7 +34,7 @@ corporations_names = [
   "RECYCLON",
   "SPLICE"
 ];
-url = "https://ssimeonoff.github.io/";
+
 
 function generateHand() {
   //clear all cards
@@ -49,6 +49,9 @@ function generateHand() {
 
 
 function displayCards() {
+
+  var url = "https://ssimeonoff.github.io/";
+
   titles_corporations = "";
   titles_projects = "";
   titles_preludes = "";
