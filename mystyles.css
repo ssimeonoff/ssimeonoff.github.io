@@ -411,7 +411,8 @@ border-right: 2px solid rgb(137,137,137);
 .tag-jovian {
     filter: saturate(200%);
     background-color: rgb(235,200,148);
-    background: linear-gradient(rgb(235,200,148),beige,rgb(235,200,148),beige,rosybrown,rgb(235,200,148),rgb(235,200,148),beige,beige,beige,rgb(235,200,148),beige,rosybrown,rgb(235,200,148),beige,rgb(235,200,148),rgb(235,200,148), beige,rgb(235,200,148),beige);
+    background: linear-gradient(rgb(235,200,148),beige,rgb(235,200,148),beige,rosybrown,rgb(235,200,148),rgb(235,200,148),beige,beige,beige,rgb(235,200,148),beige,rosybrown,rgb(235,200,148),beige,rgb(235,200,148),rgb(235,200,148),
+    beige,rgb(235,200,148),beige) !important;
 }
 
 
