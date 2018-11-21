@@ -966,6 +966,7 @@ border-right: 2px solid rgb(137,137,137);
     font-size: 18px;
     width: 44px;
     display: inline-block;
+    text-shadow: none;
     border-top: 2px solid rgb(221,221,221);
     border-left: 2px solid rgb(221,221,221);
     border-bottom: 2px solid rgb(137,137,137);
@@ -1270,6 +1271,7 @@ border-right: 2px solid rgb(137,137,137);
 .energy {
     background: linear-gradient(#cf66ff,rgb(174,0,255));
     color: white;
+    text-shadow: 0 0 3px black;
     font-weight: bold;
     font-size: 18px;
 }
