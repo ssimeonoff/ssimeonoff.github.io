@@ -1547,6 +1547,22 @@ border-right: 2px solid rgb(137,137,137);
   text-shadow: -3px 2px 0px #aaa, 3px 2px 0px #aaa, 0px -4px 0px #aaa, -5px 3px 0 black, 5px 3px 0 black, 0px -7px 0px black, -7px 4px 0px red, 7px 4px 0px red, 0px -10px 0px red;
 }
 
+.camp{
+    background-color: orange;
+}
+    .camp:after {
+        color: #593e27;
+        content: "\2617";
+        vertical-align: top;
+        font-size: 20px;
+        display: inline-block;
+        -webkit-transform: scale(1.5,1); /* Safari and Chrome */
+        -moz-transform: scale(1.5,1); /* Firefox */
+        -ms-transform: scale(1.5,1); /* IE 9 */
+        -o-transform: scale(1.5,1); /* Opera */
+        transform: scale(1.5,1); /* W3C */
+    }
+
 
 /************** Style the Input field************/
 #myInput {
