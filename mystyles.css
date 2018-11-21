@@ -1234,6 +1234,7 @@ border-right: 2px solid rgb(137,137,137);
     background: linear-gradient(rgb(255,208,4),rgb(255,255,104),rgb(255,208,4),rgb(255,208,4));
     font-weight: normal;
     font-size: 18px;
+    height: 26px;
     border-radius: 5px;
 }
 
@@ -1468,10 +1469,12 @@ border-right: 2px solid rgb(137,137,137);
 .earth-resource {
     background:rgb(15,96,151);
     color: white;
-    font-size: 21px;
+
     }
     .earth-resource:after {
         content: "\1f30f\FE0E";
+        font-size: 23px;
+        vertical-align: bottom;
     }
 
     .venus-resource {
