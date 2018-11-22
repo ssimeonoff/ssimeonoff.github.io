@@ -628,7 +628,7 @@
             <div class="description">
               (Effect: When you play an Earth tag, place an animal here.) <br><br>
               (Action: Gain 1MC per animal here.)<br><br>
-              <div style="margin-left:-75px;">(Requires 2 city tiles in play.)</div>
+              <div style="margin-left:-75px;">(Requires 2 city <br>tiles in play.)</div>
             </div>
           </div>
       </li>
@@ -836,7 +836,7 @@
           <div class="tag tag1 tag-space"></div>
           <div class="tag tag2 tag-earth"></div>
           <div class="number">C36</div>
-          <div class="corporate-icon project-icon"></div>
+          <div class="colonies-icon project-icon"></div>
           <div class="content ">
             <div class="points points-big">2</div>
             <div class="requirements">Earth Earth</div>
@@ -888,7 +888,7 @@
       </li>
 
       <!--C39-->
-      <li onclick="getClickedCard();" class="filterDiv automated cityTag buildingTag standard reqs">
+      <li onclick="getClickedCard();" class="filterDiv automated cityTag buildingTag colonies reqs">
           <div class="title background-color-automated ">Space Port</div>
           <div class="price ">22</div>
           <div class="tag tag1 tag-building "></div>
@@ -924,6 +924,164 @@
                   (Requires a colony. Place a colony.<br> MAY BE PLACED ON A COLONY TILE WHERE YOU ALREADY HAVE A COLONY.<br> Gain 1 Trade Fleet. 1VP per 2 colonies in play.)
               </div>
           </div>
+      </li>
+
+      <!--C41-->
+      <li onclick="getClickedCard();" class="filterDiv active buildingTag colonies ">
+        <div class="title background-color-active">Spin-off Department</div>
+        <div class="price ">10</div>
+        <div class="tag tag1 tag-building"></div>
+        <div class="number">C41</div>
+        <div class="colonies-icon project-icon"></div>
+        <div class="content ">
+          <div class="resource money">20</div>* : <div class="resource card"></div>
+          <div class="description" >
+            (Effect: WHEN PLAYING A CRD WITH A BASIC COST OF 20MC OR MORE, draw a card.)
+          </div><br>
+          <div class="production-box"><div class="production money">2</div></div>
+          <div class="description" >
+            (Increase your MC production 2 steps.)
+          </div>
+        </div>
+      </li>
+
+      <!--C42-->
+      <li onclick="getClickedCard();" class="filterDiv active animalTag colonies reqs" data-temperature ="-6">
+        <div class="title background-color-active">Sub-Zero Salt Fish</div>
+        <div class="price">5</div>
+        <div class="tag tag1 tag-animal"></div>
+        <div class="number">C42</div>
+        <div class="colonies-icon project-icon"></div>
+        <div class="content">
+          <div class="points">1/2<div class="animal resource"></div>
+          </div>
+          <div class="requirements">-6 C</div>
+          <span class="red-arrow"></span>
+          <div class="animal resource"></div>
+          <div class="description" style="margin-bottom:5px;">
+            (Action: Add 1 Animal to this card.)
+          </div>
+          <div class="production-box production-box-size1a">
+            <div class="production-prefix">&#x2796;&#xFE0E;</div><div class="plant production red-outline"></div>
+          </div>
+          <div class="description" style="text-align:left;">
+            (Requires -6 C. Decrease any Plant production 1 step. 1 VP per<br> 2 Animals on this card.)
+          </div>
+        </div>
+      </li>
+
+      <!--C43-->
+      <li onclick="getClickedCard();" class="filterDiv active colonies jovianTag " >
+        <div class="title background-color-active ">Titan Air-scrapping</div>
+        <div class="price ">21</div>
+        <div class="tag tag1 tag-jovian "></div>
+        <div class="number">C43</div>
+        <div class="colonies-icon project-icon"></div>
+        <div class="content ">
+            <div class="points points-big">2</div>
+            <div class="resource titanium"></div> <div class="red-arrow "></div> <div class="resource floater"></div><div class="resource floater"></div> <br>
+            OR <div class="resource floater"></div><div class="resource floater"></div> <div class="red-arrow "></div> <div class="tile rating"></div>
+            <div class="description ">
+              (Action: Spend 1 titanium to add 2 floaters here, or spend 2 floaters here to increase your TR 1 step.)
+            </div>
+          </div>
+      </li>
+
+      <!--C44-->
+      <li onclick="getClickedCard();" class="filterDiv active colonies jovianTag " >
+        <div class="title background-color-active ">Titan Floating Launch-Pad</div>
+        <div class="price ">18</div>
+        <div class="tag tag1 tag-jovian "></div>
+        <div class="number">C44</div>
+        <div class="colonies-icon project-icon"></div>
+        <div class="content ">
+            <div class="points points-big">1</div>
+            <div class="red-arrow "></div>
+            <div class="resource floater"><div class="card-icon card-icon-venus tag-jovian" style="box-shadow: 0 0px 2px 2px #444;"></div></div> <br>
+            OR <div class="resource floater"></div> <div class="red-arrow "></div> <div class="triangle triangle-black"></div>
+            <div class="description ">
+              (Action: Add 1 floater to ANY JOVIAN CARD, or spend 1 floater here to trade for free.)
+            </div>
+            <div class="resource floater" style="margin-left:-130px;"><div class="card-icon card-icon-venus tag-jovian" style="box-shadow: 0 0px 2px 2px #444;"></div></div>
+            <div class="resource floater"><div class="card-icon card-icon-venus tag-jovian" style="box-shadow: 0 0px 2px 2px #444;"></div></div>
+            <div class="description ">
+              (Add two floaters to ANY JOVIAN CARD.)
+            </div>
+          </div>
+      </li>
+
+      <!--C45-->
+      <li onclick="getClickedCard();" class="filterDiv active colonies jovianTag spaceTag " >
+        <div class="title background-color-active ">Titan Shuttles</div>
+        <div class="price ">18</div>
+        <div class="tag tag1 tag-space "></div>
+        <div class="tag tag2 tag-jovian "></div>
+        <div class="number">C45</div>
+        <div class="colonies-icon project-icon"></div>
+        <div class="content ">
+            <div class="points points-big">1</div>
+            <div class="red-arrow "></div>
+            <div class="resource floater"><div class="card-icon card-icon-venus tag-jovian" style="box-shadow: 0 0px 2px 2px #444;"></div></div>
+            <div class="resource floater"><div class="card-icon card-icon-venus tag-jovian" style="box-shadow: 0 0px 2px 2px #444;"></div></div> <br>
+            OR X<div class="resource floater"></div> <div class="red-arrow "></div> X<div class="resource titanium"></div>
+            <div class="description ">
+              (Action: Add 2 floaters to ANY JOVIAN CARD, or spend any number of floaters here to gain the same number of titanium.)
+            </div>
+          </div>
+      </li>
+
+      <!--C46-->
+      <li onclick="getClickedCard();" class="filterDiv active  colonies">
+          <div class="title background-color-active ">Trade Envoys</div>
+          <div class="price ">6</div>
+          <div class="number">C46</div>
+          <div class="colonies-icon project-icon"></div>
+          <div class="content ">
+              <div class="triangle triangle-white"></div> : <span style="font-family:Prototype;font-size:23px;font-weight:normal;vertical-align:middle">+1</span>
+              <div class="description " style="margin-top:5px">
+                  (Effect: When you trade, you may first increase that Colony Tile track 1 step.)
+              </div>
+          </div>
+      </li>
+
+      <!--C47-->
+      <li onclick="getClickedCard();" class="filterDiv active spaceTag colonies">
+          <div class="title background-color-active ">Trading Colony</div>
+          <div class="price ">18</div>
+          <div class="tag tag1 tag-space "></div>
+          <div class="number">C47</div>
+          <div class="colonies-icon project-icon"></div>
+          <div class="content ">
+            <div class="triangle triangle-white"></div> : <span style="font-family:Prototype;font-size:23px;font-weight:normal;vertical-align:middle">+1</span>
+              <br>
+              <div class="description " style="margin-top:5px;margin-bottom:5px">
+                  (Effect: When you trade, you may first increase that Colony Tile track 1 step.)
+              </div>
+              <div class="triangle triangle-black"></div>
+              <br>
+              <div class="description " style="margin-top:5px">
+                  (Place a colony.)
+              </div>
+          </div>
+      </li>
+
+      <!--C48-->
+      <li onclick="getClickedCard();" class="filterDiv automated microbeTag colonies reqs">
+        <div class="title background-color-automated">Urban Decomposers</div>
+        <div class="price">6</div>
+        <div class="tag tag1 tag-microbe"></div>
+        <div class="number">C48</div>
+        <div class="colonies-icon project-icon"></div>
+        <div class="content">
+          <div class="requirements">Colony City</div>
+          <div class="production-box">
+            <div class="production plant"></div>
+          </div>
+          <div class="resource microbe" style="margin-left:20px;"></div><div class="resource microbe"></div>*
+          <div class="description">
+            (Requires that you have 1 city tile and 1 colony in play. Increase your plant production 1 step, and add 2 microbes to ANOTHER card.)
+          </div>
+        </div>
       </li>
 
 
