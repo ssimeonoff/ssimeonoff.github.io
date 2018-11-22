@@ -287,11 +287,11 @@ border-right: 2px solid rgb(137,137,137);
 }
 
 .tag2 {
-    margin-left: 150px;
+    margin-left: 152px;
 }
 
 .tag3 {
-    margin-left: 100px;
+    margin-left: 104px;
 }
 
 
@@ -1520,6 +1520,7 @@ border-right: 2px solid rgb(137,137,137);
 .triangle {
   display: inline-block;
   font-size: 20px;
+  line-height: 30px;
 }
 
 .tringle {

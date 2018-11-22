@@ -203,7 +203,6 @@
   <ul class="myUL" style="clear:both;">
     <div class="ul-title">CORPORATIONS</div>
 
-
       <!--Project Cards - Colonies ---------------------------------------->
 
       <!--C01-->
@@ -357,7 +356,7 @@
         <div class="tag tag1 tag-plant"></div>
         <div class="tag tag2 tag-microbe"></div>
         <div class="tag tag3 tag-animal"></div>
-        <div class="tag tag-science" style="margin-left:50px;"></div>
+        <div class="tag tag-science" style="margin-left:56px;"></div>
         <div class="number">C09</div>
         <div class="colonies-icon project-icon"></div>
         <div class="content ">
@@ -826,6 +825,103 @@
               <div class="triangle triangle-white"></div> : <div class="resource " style="background:white">-1</div>
               <div class="description ">
                   (Effect: When you trade, you pay 1 less resource for it.)
+              </div>
+          </div>
+      </li>
+
+      <!--C36-->
+      <li onclick="getClickedCard();" class="filterDiv active earthTag spaceTag colonies reqs" data-earth="2">
+          <div class="title background-color-active ">Sky Docks</div>
+          <div class="price ">18</div>
+          <div class="tag tag1 tag-space"></div>
+          <div class="tag tag2 tag-earth"></div>
+          <div class="number">C36</div>
+          <div class="corporate-icon project-icon"></div>
+          <div class="content ">
+            <div class="points points-big">2</div>
+            <div class="requirements">Earth Earth</div>
+              : <span class="money resource ">-2</span>
+              <div class="description ">
+                  (Effect: When you play a card, you pay 1 MC less for it.)
+              </div><br>
+              <div class="triangle triangle-white"></div>
+              <div class="description ">
+                  (Requires 2 Earth tags. Gain 1 Trade Fleet.)
+              </div>
+          </div>
+      </li>
+
+      <!--C37-->
+      <li onclick="getClickedCard();" class="filterDiv eventTag scienceTag spaceTag colonies events ">
+          <div class="title background-color-events ">Solar Probe</div>
+          <div class="price ">9</div>
+          <div class="tag tag1 tag-event "></div>
+          <div class="tag tag2 tag-space "></div>
+          <div class="tag tag3 tag-science "></div>
+          <div class="number">C37</div>
+          <div class="colonies-icon project-icon"></div>
+          <div class="content ">
+            <div class="points points-big">1</div>
+              <div class="resource card"></div> /
+                <div class="resource-tag science"></div><div class="resource-tag science" style="margin-left:-10px"></div><div class="resource-tag science" style="margin-left:-10px"></div>
+              <div class="description ">
+                  (Draw 1 card for every 3 science tags you have, including this.)
+              </div>
+          </div>
+      </li>
+
+      <!--C38-->
+      <li onclick="getClickedCard();" class="filterDiv automated spaceTag colonies ">
+          <div class="title background-color-automated ">Solar Reflectors</div>
+          <div class="price ">23</div>
+          <div class="tag tag1 tag-space"></div>
+          <div class="number">C38</div>
+          <div class="colonies-icon project-icon"></div>
+          <div class="content ">
+            <div class="production-box production-box-size1a">
+                5 <div class="heat production"></div>
+            </div>
+            <div class="description">
+              (Increase your heat production 5 steps.)
+            </div>
+          </div>
+      </li>
+
+      <!--C39-->
+      <li onclick="getClickedCard();" class="filterDiv automated cityTag buildingTag standard reqs">
+          <div class="title background-color-automated ">Space Port</div>
+          <div class="price ">22</div>
+          <div class="tag tag1 tag-building "></div>
+          <div class="tag tag2 tag-city "></div>
+          <div class="number">C39</div>
+          <div class="colonies-icon project-icon"></div>
+          <div class="content ">
+            <div class="requirements">Colony</div>
+              <div class="production-box production-box-size1a ">
+                  <div class="production-prefix ">&#x2796;&#xFE0E;</div><div class="energy production "></div>
+                  <div class="production-prefix ">&#x2795;&#xFE0E;</div><div class="money production ">4</div>
+              </div>
+              <div class="tile city-tile " style="margin-left:10px "></div> <div class="triangle triangle-white" style="margin-left:10px "></div><br>
+              <div class="description ">
+                  (Requires 1 colony. Decrease your Energy production 1 step and increase your MC production 4 steps.
+                  Place a City tile.)
+              </div>
+          </div>
+      </li>
+
+      <!--C40-->
+      <li onclick="getClickedCard();" class="filterDiv automated spaceTag standard reqs">
+          <div class="title background-color-automated ">Space Port Colony</div>
+          <div class="price ">27</div>
+          <div class="tag tag1 tag-space "></div>
+          <div class="number">C40</div>
+          <div class="colonies-icon project-icon"></div>
+          <div class="content ">
+            <div class="points">1/2<div class="triangle triangle-red" style="vertical-align:middle;"></div></div>
+            <div class="requirements">Colony</div>
+              <div class="triangle triangle-black"></div>* <div class="triangle triangle-white" style="margin-left:20px "></div><br>
+              <div class="description ">
+                  (Requires a colony. Place a colony.<br> MAY BE PLACED ON A COLONY TILE WHERE YOU ALREADY HAVE A COLONY.<br> Gain 1 Trade Fleet. 1VP per 2 colonies in play.)
               </div>
           </div>
       </li>
