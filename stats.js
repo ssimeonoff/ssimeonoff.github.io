@@ -121,6 +121,10 @@ function filterFunction(id) {
     games = games.filter(function(el) {
       return el.draft ==  btnDraft[0].value
     });
+  } else if (btnDraft.length == 2) {
+    games = games.filter(function(el) {
+      return el.draft ==  "YES" || el.draft ==  "NO"
+    });
   }
 
   //filter by WGT
