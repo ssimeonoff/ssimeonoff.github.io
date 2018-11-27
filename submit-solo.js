@@ -10,7 +10,7 @@ function checkForm () {
 
   enableSubmit = true;
   //if corporation is not selected
-  if (document.querySelectorAll("select[class='drop-down3 change-colours']").length < 1) {
+  if (document.querySelectorAll("select[class='drop-down3 change-colours2']").length < 1) {
     enableSubmit = false;
     document.getElementById("corporation").classList.add("red-outline");
    };
@@ -38,12 +38,12 @@ function checkForm () {
      enableSubmit = false;
    }
    //if loss is selected but not steps
-   if (outcome == "loss" && document.querySelectorAll(".drop-down2.change-colours").length <1) {
+   if (outcome == "loss" && document.querySelectorAll(".drop-down2.change-colours2").length <1) {
      document.getElementById("steps").classList.add("red-outline");
      enableSubmit = false;
    }
    //if win is selected but no score
-   if (outcome == "win" && document.querySelectorAll(".corporation-score.change-colours").length <1) {
+   if (outcome == "win" && document.querySelectorAll(".corporation-score.change-colours2").length <1) {
      document.getElementById("corporation-score").classList.add("red-outline");
      enableSubmit = false;
    }
@@ -67,16 +67,16 @@ function checkForm () {
 /////////////////////////////////////////////////////////////////////////////////////
 
 function changeColours (id) {
-  document.getElementById(id).classList.add("change-colours");
+  document.getElementById(id).classList.add("change-colours2");
   document.getElementById(id).classList.remove("not-filled");
 }
 
 function changeColours2 (id) {
   if (document.getElementById(id).value < 20 || document.getElementById(id).value > 200) {
-    document.getElementById(id).classList.remove("change-colours");
+    document.getElementById(id).classList.remove("change-colours2");
   }
   else {
-    document.getElementById(id).classList.add("change-colours");
+    document.getElementById(id).classList.add("change-colours2");
   }
 }
 
@@ -107,7 +107,7 @@ function animateTakeOff() {
   console.log("hi")
   el = document.getElementById("submit-container")
   el.style.transform = "scale(0)";
-  
+
   setTimeout(function(){
   el.style.transform = "scale(1)";
   },1000)
@@ -118,9 +118,9 @@ function resetAll () {
   setTimeout(function(){
   outcome = "";
 
-  x = document.querySelectorAll(".change-colours");
+  x = document.querySelectorAll(".change-colours2");
   for (i=0; i < x.length; i++) {
-    x[i].classList.remove("change-colours");
+    x[i].classList.remove("change-colours2");
   }
   y = document.querySelectorAll(".change-colours3");
   for (j=0; j < y.length; j++) {

@@ -312,7 +312,7 @@ input::-webkit-inner-spin-button {
     margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 
-.change-colours {
+.change-colours2 {
   background-color: rgba(0,0,0,.7) !important ;
   color: white !important ;
   text-shadow: 0 3px 1px black;
