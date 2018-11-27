@@ -13,8 +13,6 @@
 }
 
 .buttons-container {
-    display: grid;
-    grid-template-columns: 140px 274px 50px;
     position: relative;
     font-family: Prototype;
     background: #ccc;
@@ -197,6 +195,11 @@
     border-left: 2px solid rgb(221,221,221);
     border-bottom: 2px solid rgb(137,137,137);
     border-right: 2px solid rgb(137,137,137);
+}
+
+.grid3 {
+  display: grid;
+  grid-template-columns: 140px 274px 50px;
 }
 
 .grid5 {
