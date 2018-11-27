@@ -83,7 +83,7 @@ function submitForm(e) {
 
 
   //clear form
-  document.getElementById("form").reset();
+  //document.getElementById("form").reset();
   resetAll();
 
   //hide alert after 3 seconds

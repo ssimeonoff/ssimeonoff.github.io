@@ -10,7 +10,7 @@ function checkForm () {
 
   enableSubmit = true;
   //if corporation is not selected
-  if (document.querySelectorAll("select[class='drop-down change-colours']").length < 1) {
+  if (document.querySelectorAll("select[class='drop-down3 change-colours']").length < 1) {
     enableSubmit = false;
     document.getElementById("corporation").classList.add("red-outline");
    };
@@ -51,8 +51,7 @@ function checkForm () {
 
   //generates the modal text
   if (enableSubmit) {
-    generateConfirmationText();
-    flipCard();
+    document.getElementById("confirm").style.display = "block";
     } else { document.getElementById("submit").disabled = true;}
 
   //remove the red outlines after 3 seconds
@@ -105,41 +104,13 @@ function generateConfirmationText () {
 }
 
 function animateTakeOff() {
-  el = document.querySelector(".flip-card")
-
+  console.log("hi")
+  el = document.getElementById("submit-container")
+  el.style.transform = "scale(0)";
+  
   setTimeout(function(){
-    el.style.transform = "perspective(1500px) rotateX(80deg) scale(1)";
-    el.style.webkitTransform = "perspective(1500px) rotateX(80deg) scale(1)";
-
-    el.style.boxShadow = "0 10px 50px darkorange";
-  },100);
-  setTimeout(function(){
-    el.style.transition = "0.3s";
-    el.style.transform = "perspective(700px) rotateX(89deg) scale(0)";
-    el.style.webkitTransform = "perspective(700px) rotateX(89deg) scale(0)";
-
-    el.style.marginTop = "-150px";
-  },1500);
-  setTimeout(function(){
-    el.style.transition = "1s";
-    el.style.webkitTransition = "1s";
-
-    el.style.display = "none";
-    el.style.boxShadow = "";
-  },2500);
-  setTimeout(function(){
-    el.style.marginTop = "-800px";
-    el.style.transform = "perspective(700px) rotateX(0deg) scale(1)";
-    el.style.webkitTransform = "perspective(700px) rotateX(0deg) scale(1)";
-
-  },3000);
-  setTimeout(function(){
-    el.style.display = "block";
-  },3100);
-  setTimeout(function(){
-    el.style.marginTop = "100px";
-  },3500);
-
+  el.style.transform = "scale(1)";
+  },1000)
 }
 
 function resetAll () {
@@ -167,21 +138,9 @@ function resetAll () {
     document.getElementById("corporation-score").style.transform = "scale(0)";
     document.getElementById("steps").style.display = "none";
     document.getElementById("steps").style.transform = "scale(0)";
-    flipCardBack ();
-  }, 3000)
-}
 
-function flipCard () {
-  document.querySelector(".flip-card-inner").style.transform = "rotateY(-180deg)";
-  document.querySelector(".flip-card-inner").style.webkitTransform = "rotateY(-180deg)";
-
-  document.getElementById("confirm").disabled = false;
-}
-
-function flipCardBack () {
-  document.querySelector(".flip-card-inner").style.transform = "rotateY(0deg)";
-  document.querySelector(".flip-card-inner").style.webkitTransform = "rotateY(0deg)";
-  document.getElementById("confirm").disabled = true;
+    document.getElementById("confirm").style.display = "none";
+  }, 500)
 }
 
 function activateWin(id) {

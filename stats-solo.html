@@ -9,6 +9,8 @@
   <link rel="shortcut icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="stats.css">
   <link rel="stylesheet" href="history.css">
+  <link rel="stylesheet" href="submit-solo.css">
+
   <link rel="stylesheet" href="odometer.css">
   <meta name="viewport" content='width=500, user-scalable=0'>
 
@@ -29,13 +31,119 @@
   <div class="layout">
     <div class="column">
 
+      <div id="submit-container" class="flip-card box">
+        <div class="ribbon"><span>SOLO</span></div>
+        <form id="form" name="submit-to-google-sheet">
+          <div id="title">
+            <div style="transform:scale(2,1);margin-top:6px;">TERRAFORMING<br> <span style="font-size:26px;transform: scale(2,1);">MARS</span></div>
+           </div>
+           <br>
+
+            <fieldset class="fieldset-alignment" style="display:inline-block;width:366px;padding-bottom:15px; border-bottom:none">
+              <legend class="fieldset2">MODE</legend>
+              <input class="checkbox" type="radio" id="tf_all" value="TFALL" name="mode">
+              <label for="tf_all" class="mode btn-expansions" style="width:177px">TF ALL</label>
+              <input class="checkbox" type="radio" id="tr_63" value="TR63" name="mode">
+              <label for="tr_63" class="mode btn-expansions" style="width:177px">TR 63</label>
+           </fieldset>
+
+             <fieldset class="fieldset-alignment" style="display:inline-block;width:366px;padding-bottom:15px; border-bottom:none">
+               <legend class="fieldset2">EXPANSIONS</legend>
+               <input class="checkbox" type="checkbox" id="venus" value="VENUS" name="expansions">
+               <label for="venus" class="expansion btn-expansions">VENUS</label>
+               <input class="checkbox" type="checkbox" id="prelude" value="PRELUDE" name="expansions">
+               <label for="prelude" class="expansion btn-expansions" >PRELUDE</label>
+               <input class="checkbox" type="checkbox" id="colonies" value="COLONIES" name="expansions">
+               <label for="colonies" class="expansion btn-expansions">COLONIES</label>
+            </fieldset>
+
+            <fieldset class="fieldset-alignment" style="display:inline-block;width:366px;padding-bottom:15px; border-bottom:none">
+              <legend class="fieldset2">MAPS</legend>
+              <input class="checkbox" type="radio" id="tharsis" value="THARSIS" name="map">
+              <label for="tharsis" class="map btn-expansions">THARSIS</label>
+              <input class="checkbox" type="radio" id="hellas" value="HELLAS" name="map">
+              <label for="hellas" class="map btn-expansions" >HELLAS</label>
+              <input class="checkbox" type="radio" id="elysium" value="ELYSIUM" name="map">
+              <label for="elysium" class="map btn-expansions">ELYSIUM</label>
+           </fieldset>
+
+             <fieldset class="fieldset-alignment" style="width:366px;padding-bottom: 15px;display:inline-block;border-bottom: none;padding-bottom:15px;">
+              <legend class="fieldset2">CORPORATION</legend>
+              <select  id="corporation" class="drop-down3" name="corporations" size="1" onchange="changeColours(id)">
+              <option value disabled selected class="selected-option">choose corporation</option>
+              <option value="BEGINNER">BEGINNER</option>
+              <option value="CREDICOR">CREDICOR</option>
+              <option value="ECOLINE">ECOLINE</option>
+              <option value="HELION">HELION</option>
+              <option value="MINING GUILD">MINING GUILD</option>
+              <option value="INTERPLAN. CINEMATICS">INTERPLAN. CINEMATICS</option>
+              <option value="INVENTRIX">INVENTRIX</option>
+              <option value="PHOBOLOG">PHOBOLOG</option>
+              <option value="THARSIS REPUBLIC">THARSIS REPUBLIC</option>
+              <option value="THORGATE">THORGATE</option>
+              <option value="UNMI">U.N.M.I.</option>
+              <option value="TERACTOR">TERACTOR</option>
+              <option value="SATURN SYSTEMS">SATURN SYSTEMS</option>
+              <option value="APHRODITE">APHRODITE</option>
+              <option value="CELESTIC">CELESTIC</option>
+              <option value="MANUTECH">MANUTECH</option>
+              <option value="MORNING STAR">MORNING STAR</option>
+              <option value="VIRON">VIRON</option>
+              <option value="CHEUNG SHING MARS">CHEUNG SHING MARS</option>
+              <option value="POINT LUNA">POINT LUNA</option>
+              <option value="ROBINSON INDUSTRIES">ROBINSON INDUSTRIES</option>
+              <option value="VALLEY TRUST">VALLEY TRUST</option>
+              <option value="VITOR">VITOR</option>
+              <option value="ARKLIGHT">ARKLIGHT</option>
+              <option value="ARCADIAN COMMUNITIES">ARCADIAN COMMUNITIES</option>
+              <option value="RECYCLON">RECYCLON</option>
+              <option value="SPLICE">SPLICE</option>
+              <option value="KUIPER BELT COOP.">KUIPER BELT COOP.</option>
+            </select>
+          </fieldset>
+
+          <fieldset class="fieldset-alignment" style="width:366px;display:inline-block;margin-bottom:15px;">
+           <legend class="fieldset2">RESULT</legend>
+
+             <div id="lossSection" class="section" onclick="activateLoss(id)">
+               <div id="lossLabel">LOSS</div>
+               <select id="steps" class="drop-down2" name="steps" size="1" onchange="changeColours(id)">
+                 <option value="0" disabled selected class="selected-option">&nbsp;FAILED</option>
+                   <option value="1">1 STEP</option>
+                   <option value="2">2 STEPS</option>
+                   <option value="3">3 STEPS</option>
+                   <option value="4">4 STEPS</option>
+                   <option value="5">5 STEPS</option>
+                   <option value="6">6 STEPS</option>
+                   <option value="7">7 STEPS</option>
+                   <option value="8">8 STEPS</option>
+                   <option value="9">9 STEPS</option>
+              </select>
+              </div>
+
+              <div id="winSection" class="section" onclick="activateWin(id)">
+                <div id="winLabel">WIN</div>
+                <input id="corporation-score" class="corporation-score"  type="number" min="20" max ="200" step="1" name="score" placeholder="SCORE" oninput="changeColours2(id)">
+              </div>
+
+         </fieldset>
+
+         <button  type="button" id="submit" class="button btn-submit2" onclick="checkForm()"><div>SUBMIT</div></button>
+         <input  id="confirm" type="submit" value="TERRAFORM" onclick="animateTakeOff();">
+
+      </form>
+      </div>
+    </div>
+
+    <div class="column">
+
       <div class="buttons-container">
-        <a class="link btn-submit" href="https://ssimeonoff.github.io/submit-solo" target="_blank"><div>SUBMIT</div></a>
-        <div class="grid-cell title-cell" style="height:46px;line-height:46px;font-size:22px !important"><div>FILTERS</div></div>
+        <div class="grid-cell title-cell grid-cell-stats" style=""><div>FILTERS</div></div>
+        <div class="grid-cell-stats"><div id="total_games" class="odometer header-cell" data-minintegerlen="3" style="font-size:26px;line-height:30px;">000</div></div>
         <div class="btn-grid-cell" onclick="download();" style="width:26px;height:32px;margin-left:6px;" title="Download the database">
           <img src="images/file.png" width="26" height="26" style="margin-top:3px;">
         </div>
-        <div class="filters-div" style="height:126px;">
+        <div class="filters-div" style="height: 138px;">
           <button id="CORPORATE" disabled style="margin-left:0px;opacity:0.5;" class=" active button btn-expansion button-icon corporate-era-icon icon  " onclick="filterFunction(id)" title="filter Corporate Era games"></button>
           <button id="VENUS" class="button btn-expansion button-icon venus-icon icon  " onclick="filterFunction(id)" title="filter Venus Next games"></button>
           <button id="PRELUDE" class="button btn-expansion button-icon prelude-icon icon  " onclick="filterFunction(id)" title="filter Prelude games"></button>
@@ -77,19 +185,24 @@
           <option value="KUIPER BELT COOP.">KUIPER BELT COOP.</option>
           </select>
           <button id="reset" class="btn-reset" onclick="resetFilters();" title="reset all filters" style="margin-left:140px;">RESET</button>
-      </div>
-      <div></div>
-      <div></div>
-
-      <div style="width:460px;">
-      <div class="grid-cell-stats stats-general"><div class="header-cell" style="margin-top: 3px;">TOTAL</div><div id="total_games" class="odometer header-cell" data-minintegerlen="3" style="font-size:26px">000</div></div>
-      </div>
+        </div>
+        <div></div>
+        <div></div>
 
       </div>
+
 
       <div class="generalStats-history-solo2">
-        <div class="grid-cell title-cell">HISTORY</div>
+        <div class="grid-cell grid-corporations-title title-cell">HISTORY</div>
 
+
+        <div class="grid-cell-history2">
+          <div class="flag-div"></div>
+          <div class="history-section-expansions2"></div>
+          <div class="history-section-time-value2"></div>
+          <div class="history-section-corporation2"></div>
+          <div class="history-section-score2"></div>
+        </div>
 
         <div class="grid-cell-history2">
           <div class="flag-div"></div>
@@ -439,12 +552,13 @@
 
     </div>
   </div>
-  </div>
 
   <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="odometer.js"></script>
   <script src="stats-solo.js"></script>
+  <script src="submit-solo.js"></script>
+  <script src="main-solo.js"></script>
 
 </body>
 </html>
