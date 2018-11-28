@@ -159,12 +159,12 @@
       legend: { position: 'none' },
       fontSize: 12,
       backgroundColor: "transparent",
-      vAxis: { gridlines: { count: 5},maxValue:20 },
+      vAxis: { textPosition: 'none', gridlines: { count: 1},maxValue:20 },
       HAxis: {textStyle : {fontSize: 7, fontName: 'Prototype'}},
       bar: {gap: 1},
-      chartArea:{left:200,bottom:20,top:5,width:436},
+      chartArea:{left:180,bottom:20,top:5,width:460},
       colors: ['#444444','#888888'],
-      histogram: {bucketSize: 5, minValue: 70, maxValue: 130},
+      histogram: {bucketSize: 5, minValue: 75, maxValue: 130},
     };
 
     var chart = new google.visualization.Histogram(document.getElementById('chart_div'));
