@@ -1,0 +1,42 @@
+.grid16 {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto;
+}
+
+.grid16 > div {
+  border-top: 2px solid rgb(221,221,221);
+  border-left: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
+  font-size: 16px;
+  height: 23px;
+  line-height: 25px;
+  width: 36px;
+  border-radius: 1px;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 140px auto ;
+}
+
+
+.background-failed {
+    background-color: #cc3333;
+    text-shadow: 0 0 1px black;
+    color:white !important;
+
+}
+
+.background-gold {
+  background-color: #e6e600;
+}
+
+.background-silver {
+  border: 1px solid #666;
+  background-color: white;
+}
+
+.background-bronze {
+  background-color: #aaa;
+}

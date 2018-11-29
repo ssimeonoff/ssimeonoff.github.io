@@ -43,7 +43,7 @@ function filterFunction(id) {
   }
 
   //filter by corporation
-  selectedCorporation = document.querySelectorAll(".drop-down.change-colours")
+  selectedCorporation = document.querySelectorAll(".drop-down.change-colours2")
   if (selectedCorporation.length > 0) {
     games = games.filter(function(el) {
       return el.corporation.indexOf(selectedCorporation[0].value) > -1 ;
@@ -218,6 +218,22 @@ function corporationScore(corporationGamesArray) {
     }
   }
   return Math.round(corp_score/corp_games)
+}
+
+function resetFilters() {
+  var x = document.querySelectorAll(".active");
+  for (i = 0; i < x.length; i++) {
+    if (x[i].id != "CORPORATE") {
+      x[i].classList.remove("active")
+    }
+  }
+  y = document.querySelectorAll(".change-colours");
+  if (y.length > 0) {
+    for (i = 0; i < y.length; i++) {
+    y[i].classList.remove("change-colours");
+    }
+  }
+  filterFunction();
 }
 
 function pushCorporationsData(corporation) {

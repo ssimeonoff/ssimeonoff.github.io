@@ -1003,17 +1003,20 @@
 
 .button.active {
   border: 2px solid rgb(137,137,137) ;
-  box-shadow: inset 0 0 2px 2px rgb(68,68,68);
+  box-shadow: inset 0 1px 3px 1px black;
   transform: translate(0,2px);
-  background: #eee;
-  filter: brightness(120%);
+  background: #444;
+  text-shadow: 0 2px 2px black;
+  color: white;
 }
 
 .change-colours {
   border: 2px solid rgb(137,137,137) !important;
-  box-shadow: inset 0 0 2px 2px rgb(68,68,68) !important;
+  box-shadow: inset 0 1px 3px 1px black !important;
   transform: translate(0,2px);
-  background: #eee !important;
+  background: #444 !important;
+  color:white !important;
+  text-shadow: 0 3px 1px black;
 }
 
 .btn-expansion {

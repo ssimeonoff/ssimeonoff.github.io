@@ -256,7 +256,7 @@ input::placeholder {
 }
 
 #confirm:hover {
-  background: rgba(0,0,0,0.6);
+  background: #444;
 }
 
 .btn-submit2 {

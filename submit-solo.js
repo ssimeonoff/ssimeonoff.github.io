@@ -66,12 +66,12 @@ function checkForm () {
 
 /////////////////////////////////////////////////////////////////////////////////////
 
-function changeColours (id) {
+function changeColours2 (id) {
   document.getElementById(id).classList.add("change-colours2");
   document.getElementById(id).classList.remove("not-filled");
 }
 
-function changeColours2 (id) {
+function changeColours2a (id) {
   if (document.getElementById(id).value < 20 || document.getElementById(id).value > 200) {
     document.getElementById(id).classList.remove("change-colours2");
   }
