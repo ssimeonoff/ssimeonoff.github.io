@@ -15,6 +15,20 @@
   border-radius: 1px;
 }
 
+.grid-cell-solo {
+      text-align: center;
+      font-size: 20px;
+      color: white;
+      text-shadow: 0 2px 2px black;
+      height: 30px;
+      line-height: 30px;
+      border-radius: 1px;
+      border-top: 2px solid rgb(221,221,221);
+      border-left: 2px solid rgb(221,221,221);
+      border-bottom: 2px solid rgb(137,137,137);
+      border-right: 2px solid rgb(137,137,137);
+}
+
 .grid2 {
   display: grid;
   grid-template-columns: 140px auto ;
