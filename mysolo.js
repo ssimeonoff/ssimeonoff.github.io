@@ -134,10 +134,10 @@ function histogramCorporate () {
         var winrate = Math.round(parseFloat(100*(games.length-1)/(games.length-1+fails)));
 
 
-        document.getElementById("wins_corporate").innerHTML = games.length -1;
-        document.getElementById("points_corporate").innerHTML = avg + "<span style='font-size:15px'>P</span>";
-        document.getElementById("losses_corporate").innerHTML = fails;
-        document.getElementById("windrate_corporate").innerHTML = winrate + "<span style='font-size:15px'>%</span>";
+        document.getElementById("wins_corporate").innerHTML = games.length -1 + " <span style='font-size:20px'>W</span>";
+        document.getElementById("points_corporate").innerHTML = avg + " <span style='font-size:20px'>P</span>";
+        document.getElementById("losses_corporate").innerHTML = fails + " <span style='font-size:20px'>L</span>";
+        document.getElementById("windrate_corporate").innerHTML = " " + winrate + " <span style='font-size:20px'>%</span>";
 
     var games = google.visualization.arrayToDataTable(games);
     var chart = new google.visualization.Histogram(document.getElementById('histogram_corporate'));

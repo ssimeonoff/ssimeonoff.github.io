@@ -1,26 +1,41 @@
 .grid16 {
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto auto;
-}
-
-.grid16 > div {
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
   border-bottom: 2px solid rgb(137,137,137);
   border-right: 2px solid rgb(137,137,137);
+}
+
+.grid16 > div {
+
   font-size: 18px;
   height: 23px;
   line-height: 23px;
   width: 36px;
   border-radius: 1px;
-  text-shadow: 0 0 1px #222, 0 2px 1px #222;
+  text-shadow: 0 0 2px #222, 0 2px 1px #222;
 }
 
 .grid-cell-solo {
       text-align: center;
       font-size: 18px;
       color: white;
-      text-shadow: 0 0px 1px black, 0 2px 2px black;
+      text-shadow: 0 0px 2px black, 0 2px 1px black;
+      height: 32px;
+      line-height: 32px;
+      border-radius: 1px;
+      border-top: 2px solid rgb(221,221,221);
+      border-left: 2px solid rgb(221,221,221);
+      border-bottom: 2px solid rgb(137,137,137);
+      border-right: 2px solid rgb(137,137,137);
+}
+
+.grid-cell-solo-title {
+      text-align: center;
+      font-size: 22px;
+      color: white;
+      text-shadow: 0 1px 1px black;
       height: 32px;
       line-height: 32px;
       border-radius: 1px;
