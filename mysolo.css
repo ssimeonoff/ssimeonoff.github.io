@@ -8,20 +8,21 @@
   border-left: 2px solid rgb(221,221,221);
   border-bottom: 2px solid rgb(137,137,137);
   border-right: 2px solid rgb(137,137,137);
-  font-size: 16px;
+  font-size: 18px;
   height: 23px;
-  line-height: 25px;
+  line-height: 23px;
   width: 36px;
   border-radius: 1px;
+  text-shadow: 0 0 1px #222, 0 2px 1px #222;
 }
 
 .grid-cell-solo {
       text-align: center;
-      font-size: 20px;
+      font-size: 18px;
       color: white;
-      text-shadow: 0 2px 2px black;
-      height: 30px;
-      line-height: 30px;
+      text-shadow: 0 0px 1px black, 0 2px 2px black;
+      height: 32px;
+      line-height: 32px;
       border-radius: 1px;
       border-top: 2px solid rgb(221,221,221);
       border-left: 2px solid rgb(221,221,221);
@@ -36,21 +37,18 @@
 
 
 .background-failed {
-    background-color: #cc3333;
-    text-shadow: 0 0 1px black;
-    color:white !important;
-
+    color: #cc3333;
+    font-size: 14px !important;
 }
 
 .background-gold {
-  background-color: #e6e600;
+  color: #e6e600;
 }
 
 .background-silver {
-  border: 1px solid #666;
-  background-color: white;
+  color: white;
 }
 
 .background-bronze {
-  background-color: #aaa;
+  color: #aaa;
 }
