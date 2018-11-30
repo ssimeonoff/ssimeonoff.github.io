@@ -1,3 +1,9 @@
+.column2 {
+  display: inline-block;
+  vertical-align: top;
+}
+
+
 .grid16 {
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto auto;

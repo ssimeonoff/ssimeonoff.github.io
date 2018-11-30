@@ -130,7 +130,8 @@ function histogramCorporate () {
           sum += parseInt(games[i][1]); //don't forget to add the base
         }
         var avg = Math.round(parseFloat(sum/(games.length-1)));
-        var fails = document.getElementsByClassName("background-failed").length;
+        div = document.getElementById("corporate_div")
+        var fails = div.querySelectorAll(".background-failed").length;
         var winrate = Math.round(parseFloat(100*(games.length-1)/(games.length-1+fails)));
 
 
