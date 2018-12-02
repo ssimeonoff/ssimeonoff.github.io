@@ -12,8 +12,11 @@
 
 
 .grid16 {
+  padding:2px;
+  padding-top: 3px;
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto auto;
+  grid-gap:2px;
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
   border-bottom: 2px solid rgb(137,137,137);
@@ -22,19 +25,19 @@
 
 .grid16 > div {
 
-  font-size: 18px;
-  height: 23px;
-  line-height: 23px;
+  font-size: 16px;
+  height: 20px;
+  line-height: 20px;
   width: 36px;
   border-radius: 1px;
-  text-shadow: 0 0 2px #222, 0 2px 1px #222;
+  text-shadow: 0 0 1px #222, 0 1px 1px #222;
 }
 
 .grid-cell-solo {
       text-align: center;
       font-size: 18px;
       color: white;
-      text-shadow: 0 0px 2px black, 0 2px 1px black;
+      text-shadow: 0 0px 1px black, 0 1px 1px black;
       height: 32px;
       line-height: 32px;
       border-radius: 1px;
@@ -48,7 +51,7 @@
       text-align: center;
       font-size: 22px;
       color: white;
-      text-shadow: 0 1px 1px black;
+      text-shadow: 0 0 0 black, 0 1px 1px black;
       height: 32px;
       line-height: 32px;
       border-radius: 1px;
@@ -64,19 +67,24 @@
 }
 
 
-.background-failed {
+.failed {
     color: #cc3333;
-    font-size: 14px !important;
+}
+.failed::after {
+  content: "\274c";
 }
 
 .background-gold {
-  color: #e6e600;
+  color: #c5c500;
+  background: #444;
 }
 
 .background-silver {
-  color: white;
+  color: #ddd;
+  background: #444;
 }
 
 .background-bronze {
   color: #aaa;
+  background: #444;
 }
