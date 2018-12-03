@@ -2,8 +2,14 @@ countryValue = "";
 try {getCountry();}
 catch (err) {console.log("cannot get country")}
 
+if(window.location.toString().indexOf("majk") > -1) {
+  majk = true;
+} else {majk = false;}
+
+
 // Reference Games collection
-var gamesRef = firebase.database().ref("games-solo");
+var gamesRef = app.database().ref("games-solo");
+if (majk) {var gamesRefMajk = appMajk.database().ref("majks-games");}
 //listen for form SUBMIT
 document.getElementById("form").addEventListener("submit", submitForm);
 
@@ -55,7 +61,20 @@ function saveGame(corporation, expansions, result, mode, map, timestamp, country
     timestamp: timestamp,
     country: country
   })
+  if (majk) {
+    var newGameRefMajk = gamesRefMajk.push();
+    newGameRefMajk.set({
+      corporation: corporation,
+      expansions: expansions,
+      result: result,
+      mode: mode,
+      map: map,
+      timestamp: timestamp,
+      country: country
+    })
+  }
 }
+
 
 //getting form values
 

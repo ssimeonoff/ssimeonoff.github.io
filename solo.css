@@ -445,7 +445,8 @@ input::-webkit-inner-spin-button {
   background: rgb(84,150,201);
   box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
   position: absolute;
-  top: 17px; left: -23px;
+  top: 15px;
+  left: -25px;
   letter-spacing: 2px;
   text-shadow: 0 0 1px black;
 }

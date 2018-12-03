@@ -1,3 +1,7 @@
+if(window.location.href.indexOf("majk") > -1) {
+  majk = true;
+} else {majk = false;}
+
 var config = {
   apiKey: "AIzaSyD6HEAHfcXGN-WrUxSaraO3TYNzGbAr8ts",
   authDomain: "tm-games1.firebaseapp.com",
@@ -7,14 +11,35 @@ var config = {
   messagingSenderId: "969120080569"
 };
 
-firebase.initializeApp(config);
+var configMajk = {
+  apiKey: "AIzaSyCMbA6dyAirKhUznhfMlw2qxLVb5NnqPA8",
+  authDomain: "majks-games.firebaseapp.com",
+  databaseURL: "https://majks-games.firebaseio.com/",
+  projectId: "majks-games",
+  storageBucket: "majks-games.appspot.com",
+  messagingSenderId: "163248462443"
+};
+
+app = firebase.initializeApp(config, "app");
+appMajk = firebase.initializeApp(configMajk, "appMajk");
+
 // Reference Games collection
-firebase.database().ref("games-solo").on('value', function(snapshot) {
-    GAMES_ALL = snapshotToArray(snapshot);
-    GAMES_ALL_JSON = JSON.stringify(snapshot)
-    games = snapshotToArray(snapshot);
-    pushData();
-});
+if (majk) {
+  appMajk.database().ref("majks-games").on('value', function(snapshot) {
+      GAMES_ALL = snapshotToArray(snapshot);
+      GAMES_ALL_JSON = JSON.stringify(snapshot)
+      games = snapshotToArray(snapshot);
+      pushData();
+  });
+} else {
+  app.database().ref("games-solo").on('value', function(snapshot) {
+      GAMES_ALL = snapshotToArray(snapshot);
+      GAMES_ALL_JSON = JSON.stringify(snapshot)
+      games = snapshotToArray(snapshot);
+      pushData();
+  });
+}
+
 $("#form").keypress(function (event) {
     if (event.keyCode == 13) {
         event.preventDefault();
@@ -392,24 +417,31 @@ function download(data, filename, json) {
 
 function corporationWinrate(corporationGamesArray) {
   wins = 0;
-  for (i=0; i < corporationGamesArray.length; i++) {
-    result = parseInt(corporationGamesArray[i]["result"]);
-    if (result > 20) {wins++}
-  }
+  if (corporationGamesArray.length > 0) {
+    for (i=0; i < corporationGamesArray.length; i++) {
+      result = parseInt(corporationGamesArray[i]["result"]);
+      if (result > 20) {wins++}
+    }
   return Math.round(wins*100/corporationGamesArray.length) + "<span style='font-size:12px'>%</span>"
+  }
+  else return 0 + "<span style='font-size:12px'>%</span>"
 }
 
 function corporationScore(corporationGamesArray) {
   var corp_score = 0;
   var corp_games = 0;
-  for (i=0; i < corporationGamesArray.length; i++) {
-    result = parseInt(corporationGamesArray[i]["result"]);
-    if (result > 20) {
-      corp_score = corp_score + result;
-      corp_games++;
+  if (corporationGamesArray.length > 0) {
+    for (i=0; i < corporationGamesArray.length; i++) {
+      result = parseInt(corporationGamesArray[i]["result"]);
+      if (result > 20) {
+        corp_score = corp_score + result;
+        corp_games++;
+      }
     }
+    if (corp_score > 0) {return Math.round(corp_score/corp_games)}
+    else return 0
   }
-  return Math.round(corp_score/corp_games)
+  else return 0
 }
 
 function resetFilters() {
