@@ -1085,7 +1085,7 @@
 .btn-map > div {
   line-height: 16px;
   background: #ee792b;
-  border:1px solid #888;
+  border:1px solid;
   width: 68px;
   border-radius: 20px;
   margin-left:-4px;
