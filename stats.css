@@ -1086,7 +1086,9 @@
   line-height: 16px;
   background: #ee792b;
   border:1px solid #888;
-  width: 60px;
+  width: 68px;
+  border-radius: 20px;
+  margin-left:-4px;
 }
 
 .drop-down {

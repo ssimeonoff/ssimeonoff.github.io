@@ -9,7 +9,7 @@
   <link rel="shortcut icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="stats.css">
   <link rel="stylesheet" href="history.css">
-  <link rel="stylesheet" href="submit-solo.css">
+  <link rel="stylesheet" href="solo.css">
 
   <link rel="stylesheet" href="odometer.css">
   <meta name="viewport" content='width=500, user-scalable=0'>
@@ -31,7 +31,7 @@
   <div class="layout">
     <div class="column">
 
-      <div id="submit-container" class="flip-card box">
+      <div id="submit-container" class="form box">
         <div class="ribbon"><span>SOLO</span></div>
         <form id="form" name="submit-to-google-sheet">
           <div id="title">
@@ -42,29 +42,31 @@
             <fieldset class="fieldset-alignment" style="display:inline-block;width:366px;padding-bottom:15px; border-bottom:none">
               <legend class="fieldset2">MODE</legend>
               <input class="checkbox" type="radio" id="tf_all" value="TFALL" name="mode">
-              <label for="tf_all" class="mode btn-expansions" style="width:177px">TF ALL</label>
+              <label for="tf_all" class="mode btn-expansions" style="width:178px">TF ALL</label>
               <input class="checkbox" type="radio" id="tr_63" value="TR63" name="mode">
-              <label for="tr_63" class="mode btn-expansions" style="width:177px">TR 63</label>
+              <label for="tr_63" class="mode btn-expansions" style="width:178px">TR 63</label>
            </fieldset>
 
              <fieldset class="fieldset-alignment" style="display:inline-block;width:366px;padding-bottom:15px; border-bottom:none">
                <legend class="fieldset2">EXPANSIONS</legend>
+               <input class="checkbox" checked disabled type="checkbox" id="corporate" value="corporate" name="expansions">
+               <label for="corporate" class="expansion btn-expansions"><div class="icon corporate-era-icon icon-align"></div></label>
                <input class="checkbox" type="checkbox" id="venus" value="VENUS" name="expansions">
-               <label for="venus" class="expansion btn-expansions">VENUS</label>
+               <label for="venus" class="expansion btn-expansions"><div class="icon venus-icon icon-align"></div></label>
                <input class="checkbox" type="checkbox" id="prelude" value="PRELUDE" name="expansions">
-               <label for="prelude" class="expansion btn-expansions" >PRELUDE</label>
+               <label for="prelude" class="expansion btn-expansions" ><div class="icon prelude-icon icon-align"></div></label>
                <input class="checkbox" type="checkbox" id="colonies" value="COLONIES" name="expansions">
-               <label for="colonies" class="expansion btn-expansions">COLONIES</label>
+               <label for="colonies" class="expansion btn-expansions"><div class="icon colonies-icon icon-align"></div></label>
             </fieldset>
 
             <fieldset class="fieldset-alignment" style="display:inline-block;width:366px;padding-bottom:15px; border-bottom:none">
               <legend class="fieldset2">MAPS</legend>
               <input class="checkbox" type="radio" id="tharsis" value="THARSIS" name="map">
-              <label for="tharsis" class="map btn-expansions">THARSIS</label>
+              <label for="tharsis" class="map btn-expansions" style="width:116px">THARSIS</label>
               <input class="checkbox" type="radio" id="hellas" value="HELLAS" name="map">
-              <label for="hellas" class="map btn-expansions" >HELLAS</label>
+              <label for="hellas" class="map btn-expansions" style="width:116px">HELLAS</label>
               <input class="checkbox" type="radio" id="elysium" value="ELYSIUM" name="map">
-              <label for="elysium" class="map btn-expansions">ELYSIUM</label>
+              <label for="elysium" class="map btn-expansions" style="width:116px">ELYSIUM</label>
            </fieldset>
 
              <fieldset class="fieldset-alignment" style="width:366px;padding-bottom: 15px;display:inline-block;border-bottom: none;padding-bottom:15px;">
@@ -139,8 +141,8 @@
 
       <div class="buttons-container">
         <div class="grid3">
-          <div class="grid-cell title-cell grid-cell-stats" style=""><div>FILTERS</div></div>
-          <div class="grid-cell-stats"><div id="total_games" class="odometer header-cell" data-minintegerlen="3" style="font-size:26px;line-height:30px;">000</div></div>
+          <div class="grid-cell grid-corporations-title" style="font-size:20px;"><div>FILTERS</div></div>
+          <div class="grid-cell grid-corporations-title"><div id="total_games" class="odometer header-cell" data-minintegerlen="3" style="font-size:26px;line-height:30px;">000</div></div>
           <div class="btn-grid-cell" onclick="download();" style="width:26px;height:32px;margin-left:6px;" title="Download the database">
             <img src="images/file.png" width="26" height="26" style="margin-top:3px;">
           </div>
@@ -558,8 +560,7 @@
   <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="odometer.js"></script>
-  <script src="stats-solo.js"></script>
-  <script src="submit-solo.js"></script>
+  <script src="solo.js"></script>
   <script src="main-solo.js"></script>
 
 </body>
