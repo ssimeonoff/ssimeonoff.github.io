@@ -298,7 +298,7 @@ function pushData() {
   setTimeout(function() {pushGeneralStats()}, 500); //for smoother animation
   pushHistory();
   pushCorporationsData();
-
+  histogram();
 }
 
 function pushGeneralStats() {
@@ -611,4 +611,47 @@ function pushCorporationsData(corporation) {
   document.getElementById("games-splice").innerHTML = games_splice.length;
   document.getElementById("winrate-splice").innerHTML =  corporationWinrate(games_splice);
   document.getElementById("score-splice").innerHTML =  corporationScore(games_splice);
+}
+
+function histogram () {
+  google.charts.load("current", {packages:["corechart"]});
+  google.charts.setOnLoadCallback(drawChart);
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable(generateScoresArray());
+    var options = {
+      animation: {"startup": true},
+      title: '',
+      titleTextStyle: {fontSize:20, color:"#444444", },
+      legend: { position: 'none' },
+      fontSize: 12,
+      backgroundColor: "transparent",
+      vAxis: { gridlines: { count: 0}, maxValue:100 },
+      HAxis: {textStyle : {fontSize: 7, fontName: 'Prototype'}},
+      bar: {gap: 1},
+      chartArea:{left:0,bottom:20,top:0,width:460},
+      colors: ['#444444','#888888'],
+      histogram: {bucketSize: 10, minValue: 80, maxValue: 140}
+    };
+    var chart = new google.visualization.Histogram(document.getElementById('histogram'));
+    chart.draw(data, options);
+  }
+}
+
+function generateScoresArray () {
+  //average scores calculation for the chart headers
+  var totalScores = 0
+  //Generating the array for the Google histograms
+  var scores = [['Corporation', 'Score']];
+
+  for (i = 0; i < games.length; i++) {
+    var score = games[i]["result"];
+    var corporation = games[i]["corporation"];
+    //['Ecoline', 88]
+    var arr = [corporation, parseInt(score)];
+    if (parseInt(score) > 20) {scores.push(arr);}
+    if (parseInt(score) > 20 && parseInt(score) < 60) {console.log(games[i]["key"])}
+
+    totalScores = totalScores + score;
+  }
+  return scores;
 }
