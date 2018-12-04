@@ -219,7 +219,7 @@ function histogramColonies () {
     games = [
           ['Corporation', 'Score'],
 
-          ['UNMI', 91],
+          ['UNMI', 90],
 
         ];
 

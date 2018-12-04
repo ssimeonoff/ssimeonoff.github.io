@@ -260,7 +260,7 @@ function filterFunction(id) {
   }
 
   //filter by corporation
-  selectedCorporation = document.querySelectorAll(".drop-down.change-colours2")
+  selectedCorporation = document.querySelectorAll(".drop-down.change-colours")
   if (selectedCorporation.length > 0) {
     games = games.filter(function(el) {
       return el.corporation.indexOf(selectedCorporation[0].value) > -1 ;
@@ -616,8 +616,18 @@ function pushCorporationsData(corporation) {
 function histogram () {
   google.charts.load("current", {packages:["corechart"]});
   google.charts.setOnLoadCallback(drawChart);
+
+  winsTotal = 0;
+  lossesTotal = 0;
+  totalScore = 0
+  wins = [];
+  losses = [];
+  generateScoresArray();
+
   function drawChart() {
-    var data = google.visualization.arrayToDataTable(generateScoresArray());
+    var data = google.visualization.arrayToDataTable(wins);
+    var dataLosses = google.visualization.arrayToDataTable(losses);
+
     var options = {
       animation: {"startup": true},
       title: '',
@@ -626,32 +636,65 @@ function histogram () {
       fontSize: 12,
       backgroundColor: "transparent",
       vAxis: { gridlines: { count: 0}, maxValue:100 },
-      HAxis: {textStyle : {fontSize: 7, fontName: 'Prototype'}},
+      hAxis: {textStyle : {fontSize: 8, fontName: 'Prototype'}},
       bar: {gap: 1},
       chartArea:{left:0,bottom:20,top:0,width:460},
       colors: ['#444444','#888888'],
-      histogram: {bucketSize: 10, minValue: 80, maxValue: 140}
+      histogram: {bucketSize: 5, minValue: 80, maxValue: 140}
     };
+
+    var options2 = {
+      animation: {"startup": true},
+      title: '',
+      titleTextStyle: {fontSize:20, color:"#444", },
+      legend: { position: 'none' },
+      fontSize: 12,
+      backgroundColor: "transparent",
+      hAxis: { gridlines: { count: 0}, maxValue:20 , textPosition: 'none'},
+      vAxis: {textStyle : {fontSize: 10, fontName: 'Prototype'}, direction: -1, minValue:1, maxValue:9},
+      bar: {gap: 1},
+      chartArea:{left:25,bottom:10,top:10,width:460},
+      colors: ['#661919','#888888'],
+      histogram: {bucketSize: 1, minValue: 0, maxValue: 10},
+      orientation: 'vertical'
+    };
+
     var chart = new google.visualization.Histogram(document.getElementById('histogram'));
     chart.draw(data, options);
+    var chartLosses = new google.visualization.Histogram(document.getElementById('histogram-losses'));
+    chartLosses.draw(dataLosses, options2);
+
+    console.log(totalScore)
+    avg = Math.round(parseFloat(totalScore/(winsTotal)))
+    winrate = Math.round(parseFloat(winsTotal*100/(winsTotal+lossesTotal)))
+
+    document.getElementById("wins").innerHTML = winsTotal + " <span style='font-size:20px;font-weight:bold'>&#x2713;</span>";
+    document.getElementById("losses").innerHTML = lossesTotal + " <span style='font-size:16px;'>&#x274c;</span>";
+    document.getElementById("average").innerHTML = avg + " <span style='font-size:16px;'>P</span>";
+    document.getElementById("winrate").innerHTML = winrate + " <span style='font-size:16px;'>%</span>";
   }
 }
 
 function generateScoresArray () {
   //average scores calculation for the chart headers
-  var totalScores = 0
+
   //Generating the array for the Google histograms
-  var scores = [['Corporation', 'Score']];
+  wins = [['Corporation', 'Score']];
+  losses = [['Corporation', 'Failed Steps']];
+
 
   for (i = 0; i < games.length; i++) {
     var score = games[i]["result"];
     var corporation = games[i]["corporation"];
     //['Ecoline', 88]
     var arr = [corporation, parseInt(score)];
-    if (parseInt(score) > 20) {scores.push(arr);}
-    if (parseInt(score) > 20 && parseInt(score) < 60) {console.log(games[i]["key"])}
-
-    totalScores = totalScores + score;
+    if (parseInt(score) > 20) {
+      wins.push(arr);
+      totalScore = totalScore + parseInt(score);
+      winsTotal++;
+    } else {
+      losses.push(arr);
+      lossesTotal++;
+    }
   }
-  return scores;
 }

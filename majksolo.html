@@ -32,7 +32,7 @@
     <div class="column">
 
       <div id="submit-container" class="form box">
-        <div class="ribbon"><span style="background: #444;">MAJK</span></div>
+        <div class="ribbon"><span style="background:#444">MAJK</span></div>
         <form id="form" name="submit-to-google-sheet">
           <div id="title">
             <div style="transform:scale(2,1);margin-top:6px;width:100px;margin-left:130px;">TERRAFORMING<br> <span style="font-size:26px;transform: scale(2,1);margin-left:15px;">MARS</span></div>
@@ -125,7 +125,7 @@
 
               <div id="winSection" class="section" onclick="activateWin(id)">
                 <div id="winLabel">WIN</div>
-                <input id="corporation-score" class="corporation-score"  type="number" min="20" max ="200" step="1" name="score" placeholder="SCORE" oninput="changeColours2a(id)">
+                <input id="corporation-score" class="corporation-score"  type="number" min="60" max ="200" step="1" name="score" placeholder="SCORE" oninput="changeColours2a(id)">
               </div>
 
          </fieldset>
@@ -320,11 +320,78 @@
           <div class="history-section-score2"></div>
         </div>
 
-    </div>
+        <div class="grid-cell-history2">
+          <div class="flag-div"></div>
+          <div class="history-section-expansions2"></div>
+          <div class="history-section-time-value2"></div>
+          <div class="history-section-corporation2"></div>
+          <div class="history-section-score2"></div>
+        </div>
 
-    <div class="chartStats">
-      <div class="grid-cell title-cell"> <div>SCORES DISTRIBUTION</div></div>
-      <div><div class="chart-div" id="histogram"></div></div>
+        <div class="grid-cell-history2">
+          <div class="flag-div"></div>
+          <div class="history-section-expansions2"></div>
+          <div class="history-section-time-value2"></div>
+          <div class="history-section-corporation2"></div>
+          <div class="history-section-score2"></div>
+        </div>
+
+        <div class="grid-cell-history2">
+          <div class="flag-div"></div>
+          <div class="history-section-expansions2"></div>
+          <div class="history-section-time-value2"></div>
+          <div class="history-section-corporation2"></div>
+          <div class="history-section-score2"></div>
+        </div>
+
+        <div class="grid-cell-history2">
+          <div class="flag-div"></div>
+          <div class="history-section-expansions2"></div>
+          <div class="history-section-time-value2"></div>
+          <div class="history-section-corporation2"></div>
+          <div class="history-section-score2"></div>
+        </div>
+
+        <div class="grid-cell-history2">
+          <div class="flag-div"></div>
+          <div class="history-section-expansions2"></div>
+          <div class="history-section-time-value2"></div>
+          <div class="history-section-corporation2"></div>
+          <div class="history-section-score2"></div>
+        </div>
+
+        <div class="grid-cell-history2">
+          <div class="flag-div"></div>
+          <div class="history-section-expansions2"></div>
+          <div class="history-section-time-value2"></div>
+          <div class="history-section-corporation2"></div>
+          <div class="history-section-score2"></div>
+        </div>
+
+        <div class="grid-cell-history2">
+          <div class="flag-div"></div>
+          <div class="history-section-expansions2"></div>
+          <div class="history-section-time-value2"></div>
+          <div class="history-section-corporation2"></div>
+          <div class="history-section-score2"></div>
+        </div>
+
+        <div class="grid-cell-history2">
+          <div class="flag-div"></div>
+          <div class="history-section-expansions2"></div>
+          <div class="history-section-time-value2"></div>
+          <div class="history-section-corporation2"></div>
+          <div class="history-section-score2"></div>
+        </div>
+
+        <div class="grid-cell-history2">
+          <div class="flag-div"></div>
+          <div class="history-section-expansions2"></div>
+          <div class="history-section-time-value2"></div>
+          <div class="history-section-corporation2"></div>
+          <div class="history-section-score2"></div>
+        </div>
+
     </div>
 
   </div>
@@ -489,6 +556,24 @@
 
     </div>
   </div>
+
+  <div class="column">
+
+    <div class="chartStats">
+      <div class="grid-cell grid-corporations-title" style="font-size:18px"> <div>WINS/LOSSES/SCORES DISTRIBUTION</div></div>
+      <div class="grid4">
+        <div id="wins" class="grid-cell-solo"></div>
+        <div id="losses" class="grid-cell-solo" style="color:#661919"></div>
+        <div id="winrate" class="grid-cell-solo"></div>
+        <div id="average" class="grid-cell-solo"></div>
+      </div>
+      <div><div class="chart-div-solo" id="histogram"></div></div>
+      <div><div class="chart-div-solo chart-div-solo2" id="histogram-losses"></div></div>
+
+    </div>
+  </div>
+
+</div>
 
   <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>

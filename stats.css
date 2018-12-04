@@ -133,7 +133,7 @@
 }
 
 .layout {
-  width: 1500px;
+  width: 2000px;
   margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
@@ -202,6 +202,11 @@
   grid-template-columns: 140px 274px 50px;
 }
 
+.grid4 {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
 .grid5 {
   display: grid;
   grid-template-columns: 140px 80px 80px 80px 80px;
@@ -252,6 +257,16 @@
   border-right: 2px solid rgb(137,137,137);
   height: 275px;
 }
+
+.chart-div-solo {
+  border-top: 2px solid rgb(221,221,221);
+  border-left: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
+  height: 860px;
+}
+
+.chart-div-solo2 {height:176px;}
 
 .generalStats2 {
     display: grid;
