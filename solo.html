@@ -150,16 +150,17 @@
           <div class="btn-grid-cell" onclick="download();" style="width:26px;height:32px;margin-left:6px;" title="Download the database">
             <img src="images/file.png" width="26" height="26" style="margin-top:3px;">
           </div>
-      </div>
-        <div class="filters-div" style="height: 138px;">
-          <button id="CORPORATE" disabled style="margin-left:0px;" class=" active button btn-expansion button-icon corporate-era-icon icon  " onclick="filterFunction(id)" title="filter Corporate Era games"></button>
+        </div>
+        <div class="filters-div" style="height: 175px;">
+          <button id="CORPORATE" disabled style="margin-left:13px;" class=" active button btn-expansion button-icon corporate-era-icon icon  " onclick="filterFunction(id)" title="filter Corporate Era games"></button>
           <button id="VENUS" class="button btn-expansion button-icon venus-icon icon  " onclick="filterFunction(id)" title="filter Venus Next games"></button>
           <button id="PRELUDE" class="button btn-expansion button-icon prelude-icon icon  " onclick="filterFunction(id)" title="filter Prelude games"></button>
           <button id="COLONIES" class="button btn-expansion button-icon colonies-icon icon " onclick="filterFunction(id)" title="filter Colonies games"></button>
-
-          <button id="THARSIS"  style="margin-left:8px;" class="button btn-map" onclick="filterFunction(id)" title="filter games played on THARSIS"><div>THARSIS</div></button>
+          <br>
+          <button id="THARSIS"  style="margin-left:15px;" class="button btn-map" onclick="filterFunction(id)" title="filter games played on THARSIS"><div>THARSIS</div></button>
           <button id="HELLAS" class="button btn-map" onclick="filterFunction(id)" title="filter games played on HELLAS"><div style="background:#3b9ae3">HELLAS</div></button>
           <button id="ELYSIUM" class="button  btn-map" onclick="filterFunction(id)" title="filter games played on ELYSIUM"><div style="background:#09aa09">ELYSIUM</div></button>
+
 
           <select id="corporation1" class="drop-down" name="corporations" size="1" onchange="changeColours(id); filterFunction(id)">
           <option value="NOT SELECTED" selected>NOT SELECTED</option>
@@ -192,7 +193,8 @@
           <option value="SPLICE">SPLICE</option>
           <option value="KUIPER BELT COOP.">KUIPER BELT COOP.</option>
           </select>
-          <button id="reset" class="btn-reset" onclick="resetFilters();" title="reset all filters" style="margin-left:140px;">RESET</button>
+          <button id="reset" class="btn-reset" onclick="resetFilters();" title="reset all filters">RESET</button>
+
         </div>
         <div></div>
         <div></div>
@@ -202,15 +204,6 @@
 
       <div class="generalStats-history-solo2">
         <div class="grid-cell grid-corporations-title title-cell">HISTORY</div>
-
-
-        <div class="grid-cell-history2">
-          <div class="flag-div"></div>
-          <div class="history-section-expansions2"></div>
-          <div class="history-section-time-value2"></div>
-          <div class="history-section-corporation2"></div>
-          <div class="history-section-score2"></div>
-        </div>
 
         <div class="grid-cell-history2">
           <div class="flag-div"></div>
