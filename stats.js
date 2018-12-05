@@ -30,6 +30,9 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
 });
 
+var user = firebase.auth.currentUser;
+console.log(user)
+
 
 function snapshotToArray(snapshot) {
     var returnArr = [];
