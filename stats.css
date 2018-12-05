@@ -1038,7 +1038,7 @@
     outline: none;
     vertical-align: top;
     height: 40px;
-    width: 46px;
+    width: 72px;
     cursor: pointer;
     color:white;
     font-size: 16px;
@@ -1060,7 +1060,6 @@
   font-size: 13px;
   vertical-align: top;
   font-weight: normal;
-  margin-top: 5px;
 
 }
 
@@ -1074,27 +1073,27 @@
   text-align: center;
   color: #222;
   margin-left: -3px;
+  margin-bottom: 15px;
   font-size: 13px;
   vertical-align: top;
   font-weight: normal;
-  margin-top: 5px;
 
 }
 
 .btn-map {
   outline: none;
   height: 40px;
-  width: 80px;
+  width: 96px;
   cursor: pointer;
   color:white;
   letter-spacing: 1px;
   text-align: center;
   color: #222;
   margin-left: -3px;
+  margin-bottom: 15px;
   font-size: 13px;
   vertical-align: top;
   font-weight: normal;
-  margin-top: 5px;
 }
 
 .btn-map > div {
@@ -1103,7 +1102,7 @@
   border:1px solid;
   width: 68px;
   border-radius: 20px;
-  margin-left:-4px;
+  margin-left: 4px;
 }
 
 .drop-down {
@@ -1115,17 +1114,17 @@
   background: #ccc;
   color: #222;
   font-family: Prototype;
-  width: 188px;
+  width: 292px;
   height: 40px;
-  font-size: 15px;
+  font-size: 16px;
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
   border-bottom: 2px solid rgb(137,137,137);
   border-right: 2px solid rgb(137,137,137);
   box-shadow: 0 2px 4px 1px rgba(0,0,0,.8);
-  margin-right: 10px;
-  margin-top: 5px;
+  margin-left: 15px;
   padding-left: 10px;
+  vertical-align: top;
   transition: font-size 0.3s, box-shadow 0.3s;
 }
 
@@ -1138,9 +1137,9 @@
   background: #ccc;
   color: #222;
   font-family: Prototype;
-  width: 93px;
+  width: 145px;
   height: 40px;
-  font-size: 15px;
+  font-size: 16px;
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
   border-bottom: 2px solid rgb(137,137,137);
@@ -1148,7 +1147,6 @@
   box-shadow: 0 2px 4px 1px rgba(0,0,0,.8);
   margin-right: -3px;
   padding-left: 15px;
-  margin-top: 15px;
   transition: font-size 0.3s, box-shadow 0.3s;
 }
 
@@ -1166,9 +1164,8 @@
   border-right: 2px solid rgb(137,137,137);
   box-shadow: 0 2px 4px 1px rgba(0,0,0,.8);
   height: 40px;
-  width: 100px;
-  margin-top: 10px;
-  margin-left: 155px;
+  width: 122px;
+  margin-left: 5px;
   cursor: pointer;
   text-align: center;
   color: white;
@@ -1201,4 +1198,79 @@
   transform: rotate(30deg);
   margin-top: -8px;
   margin-left: -28px;
+}
+
+/* TOGGLE SWTICH*/
+.onoffswitch {
+  display: inline-block;
+  margin-right: 15px;
+  margin-left: 5px;
+  position: relative;
+  width: 123px;
+  margin-top: 7px;
+  -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border-style: inset;
+    border-radius: 1px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.2s ease-in-out 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    box-sizing: border-box;
+    font-family: Prototype;
+    font-weight: normal;
+    line-height: 32px;
+    font-size: 16px;
+    box-shadow: inset 0px 1px 2px 1px rgba(0,0,0,.5);
+    border-radius: 1px;
+}
+.onoffswitch-inner:before {
+    content: "EXCLUDE";
+    padding-left: 15px;
+    background: #444;
+    color: white;
+
+}
+.onoffswitch-inner:after {
+    content: "INCLUDE";
+    padding-right: 15px;
+    background: #ccc;
+    color: #222;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block;
+    width: 26px;
+    height: 36px;
+    margin: -5px;
+    border-top: 2px solid rgb(221,221,221);
+    border-left: 2px solid rgb(221,221,221);
+    border-bottom: 2px solid rgb(137,137,137);
+    border-right: 2px solid rgb(137,137,137);
+    border-radius: 2px;
+    background: #ccc;
+    position: absolute;
+    top: 3px;
+    bottom: 0;
+    right: 99px;
+    box-shadow: 0 2px 4px 2px rgb(58,58,58);
+    transition: all 0.2s ease-in-out 0s;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px;
+}
+
+.onoffswitch-switch:hover, .btn-map:hover, .drop-down:hover, .btn-wgt:hover, .btn-draft:hover, .btn-expansion:hover, .drop-down-generation:hover, .btn-reset:hover {
+  filter: brightness(120%);
 }

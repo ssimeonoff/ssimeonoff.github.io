@@ -38,17 +38,70 @@
         </div>
       </div>
       <div class="filters-div">
+
+        <div class="onoffswitch">
+          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="expansions_switch" onclick="filterFunction(id)" >
+          <label class="onoffswitch-label" for="expansions_switch">
+            <span class="onoffswitch-inner"></span>
+            <span class="onoffswitch-switch"></span>
+          </label>
+        </div>
+
         <button id="CORPORATE" style="margin-left:0px;" class="button btn-expansion button-icon corporate-era-icon icon  " onclick="filterFunction(id)" title="filter Corporate Era games"></button>
         <button id="VENUS" class="button btn-expansion button-icon venus-icon icon  " onclick="filterFunction(id)" title="filter Venus Next games"></button>
         <button id="PRELUDE" class="button btn-expansion button-icon prelude-icon icon  " onclick="filterFunction(id)" title="filter Prelude games"></button>
         <button id="COLONIES" class="button btn-expansion button-icon colonies-icon icon " onclick="filterFunction(id)" title="filter Colonies games"></button>
 
-        <button id="THARSIS"  style="margin-left:8px;" class="button btn-map" onclick="filterFunction(id)" title="filter games played on THARSIS"><div>THARSIS</div></button>
+        <br>
+
+        <button style="margin-left:6px;" id="DRAFT" class="button btn-draft" onclick="filterFunction(id)" title="filter Draft games" value="YES">DRAFT</button>
+        <button id="NO-DRAFT" class="button btn-draft" onclick="filterFunction(id)" title="filter No Draft games" value="NO">DRAFT<div class="crossed"></div></button>
+
+        <button id="THARSIS"  style="margin-left:15px;" class="button btn-map" onclick="filterFunction(id)" title="filter games played on THARSIS"><div>THARSIS</div></button>
         <button id="HELLAS" class="button btn-map" onclick="filterFunction(id)" title="filter games played on HELLAS"><div style="background:#3b9ae3">HELLAS</div></button>
         <button id="ELYSIUM" class="button  btn-map" onclick="filterFunction(id)" title="filter games played on ELYSIUM"><div style="background:#09aa09">ELYSIUM</div></button>
+        <br>
+
+        <button style="margin-left:6px;" id="WGT" class="button btn-wgt" onclick="filterFunction(id)" title="filter games with World Government Terraforming" value="YES">WGT</button>
+        <button id="NO-WGT" class="button btn-wgt" onclick="filterFunction(id)" title="filter games without World Government Terraforming" value="NO" >WGT<div class="crossed"></div></button>
+
+        <select style="margin-left:15px;" id="generation1" class="drop-down-generation" name="generations" size="1" onchange="changeColours(id); filterFunction(id)">
+        <option disabled value="NOT SELECTED" selected>GEN FROM</option>
+        <option value="4">GEN 4</option>
+        <option value="5">GEN 5</option>
+        <option value="6">GEN 6</option>
+        <option value="7">GEN 7</option>
+        <option value="8">GEN 8</option>
+        <option value="9">GEN 9</option>
+        <option value="10">GEN 10</option>
+        <option value="11">GEN 11</option>
+        <option value="12">GEN 12</option>
+        <option value="13">GEN 13</option>
+        <option value="14">GEN 14</option>
+        <option value="15">GEN 15</option>
+        <option value="16">GEN 16</option>
+        </select>
+        <select id="generation2" class="drop-down-generation" name="generations" size="1" onchange="changeColours(id); filterFunction(id)">
+        <option disabled value="NOT SELECTED" selected>GEN TO</option>
+        <option value="4">GEN 4</option>
+        <option value="5">GEN 5</option>
+        <option value="6">GEN 6</option>
+        <option value="7">GEN 7</option>
+        <option value="8">GEN 8</option>
+        <option value="9">GEN 9</option>
+        <option value="10">GEN 10</option>
+        <option value="11">GEN 11</option>
+        <option value="12">GEN 12</option>
+        <option value="13">GEN 13</option>
+        <option value="14">GEN 14</option>
+        <option value="15">GEN 15</option>
+        <option value="16">GEN 16</option>
+        </select>
+        <br>
+        <button id="reset" class="btn-reset" onclick="resetFilters();" title="reset all filters">RESET</button>
 
         <select id="corporation1" class="drop-down" name="corporations" size="1" onchange="changeColours(id); filterFunction(id)">
-        <option value="NOT SELECTED" selected>NOT SELECTED</option>
+        <option value="NOT SELECTED" selected>SELECT CORPORATION</option>
         <option value="BEGINNER">BEGINNER</option>
         <option value="CREDICOR">CREDICOR</option>
         <option value="ECOLINE">ECOLINE</option>
@@ -83,46 +136,6 @@
         <option value="KUIPER BELT COOP.">KUIPER BELT COOP.</option>
         </select>
 
-        <button id="DRAFT" class="button btn-draft" onclick="filterFunction(id)" title="filter Draft games" value="YES">DRAFT</button>
-        <button id="NO-DRAFT" class="button btn-draft" onclick="filterFunction(id)" title="filter No Draft games" value="NO">DRAFT<div class="crossed"></div></button>
-        <button id="WGT" class="button btn-wgt" onclick="filterFunction(id)" title="filter games with World Government Terraforming" value="YES">WGT</button>
-        <button id="NO-WGT" class="button btn-wgt" onclick="filterFunction(id)" title="filter games without World Government Terraforming" value="NO" >WGT<div class="crossed"></div></button>
-
-        <select id="generation1" class="drop-down-generation" name="generations" size="1" onchange="changeColours(id); filterFunction(id)">
-        <option disabled value="NOT SELECTED" selected>FROM</option>
-        <option value="4">GEN 4</option>
-        <option value="5">GEN 5</option>
-        <option value="6">GEN 6</option>
-        <option value="7">GEN 7</option>
-        <option value="8">GEN 8</option>
-        <option value="9">GEN 9</option>
-        <option value="10">GEN 10</option>
-        <option value="11">GEN 11</option>
-        <option value="12">GEN 12</option>
-        <option value="13">GEN 13</option>
-        <option value="14">GEN 14</option>
-        <option value="15">GEN 15</option>
-        <option value="16">GEN 16</option>
-        </select>
-
-        <select id="generation2" class="drop-down-generation" name="generations" size="1" onchange="changeColours(id); filterFunction(id)">
-        <option disabled value="NOT SELECTED" selected>TO</option>
-        <option value="4">GEN 4</option>
-        <option value="5">GEN 5</option>
-        <option value="6">GEN 6</option>
-        <option value="7">GEN 7</option>
-        <option value="8">GEN 8</option>
-        <option value="9">GEN 9</option>
-        <option value="10">GEN 10</option>
-        <option value="11">GEN 11</option>
-        <option value="12">GEN 12</option>
-        <option value="13">GEN 13</option>
-        <option value="14">GEN 14</option>
-        <option value="15">GEN 15</option>
-        <option value="16">GEN 16</option>
-        </select>
-
-        <button id="reset" class="btn-reset" onclick="resetFilters();" title="reset all filters">RESET</button>
     </div>
     <div></div>
     <div></div>
