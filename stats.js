@@ -20,12 +20,20 @@ firebase.database().ref("games-production").on('value', function(snapshot) {
     pushData();
 });
 
-
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+    console.log(user.displayName)
+    console.log(user.email)
+    console.log("logged")
+  } else {
+    // No user is signed in.
+    console.log("not logged")
+  }
+});
 
 var user = firebase.auth.currentUser;
 console.log(user)
-console.log(user.displayName)
-console.log(user.email)
 
 
 function snapshotToArray(snapshot) {
