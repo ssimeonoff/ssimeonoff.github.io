@@ -18,10 +18,8 @@ firebase.initializeApp(config);
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
-    email = user.email;
-    name = user.displayName;
-    console.log("name")
-    document.getElementById("title-auth").innerHTML = name + " - " + email
+    console.log("logged")
+    document.getElementById("title-auth").innerHTML = user.displayName + " - " + user.email
   } else {
     // No user is signed in.
     console.log("not logged")
@@ -29,7 +27,6 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
 });
 
-user = firebase.auth().currentUser;
 
 
 // Reference Games collection
@@ -70,7 +67,6 @@ function submitForm(e) {
     console.log(user.displayName)
     name = user.displayName;
     email = user.email;
-    console.log(name)
   }
   var players = document.querySelector('input[name="players"]:checked').value;
   var generations = document.getElementById("generations").value;
