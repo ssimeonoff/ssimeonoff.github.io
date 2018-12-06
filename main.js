@@ -1,4 +1,6 @@
 countryValue = "";
+email = "";
+user = "";
 try {getCountry();}
 catch (err) {console.log("cannot get country")}
 
@@ -16,8 +18,8 @@ firebase.initializeApp(config);
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
-    console.log(user.displayName)
-    console.log(user.email)
+    email = user.email;
+    user = user.displayName;
     console.log("logged")
     document.getElementById("title-auth").innerHTML = user.displayName + " - " + user.email
   } else {
@@ -61,8 +63,6 @@ function submitForm(e) {
   e.preventDefault();
 
   //Get values
-  var name = "";
-  var email = "";
   if (user != null) {
     console.log(user.displayName)
     name = user.displayName;
