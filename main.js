@@ -19,9 +19,12 @@ firebase.auth().onAuthStateChanged(function(user) {
     console.log(user.displayName)
     console.log(user.email)
     console.log("logged")
+    document.getElementById("div_auth").innerHTML = "Hello, " + user.displayName;
+
   } else {
     // No user is signed in.
     console.log("not logged")
+    document.getElementById("div_auth").innerHTML = '<a class="link" href="https://ssimeonoff.github.io/login">LOG IN</a>'
   }
 });
 

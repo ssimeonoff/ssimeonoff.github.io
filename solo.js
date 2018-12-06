@@ -146,7 +146,6 @@ function generateConfirmationText () {
 }
 
 function animateTakeOff() {
-  console.log("hi")
   el = document.getElementById("submit-container")
   el.style.transform = "scale(0)";
 
@@ -269,7 +268,7 @@ function filterFunction(id) {
 
   //filter by expansions
   btnExpansion = document.querySelectorAll(".btn-expansion.active");
-
+  
   if (btnExpansion.length == 2 ){
     games = games.filter(function(el) {
       return el.expansions != undefined &&
@@ -286,7 +285,7 @@ function filterFunction(id) {
         return el.expansions != undefined  &&
         el.expansions.indexOf(btnExpansion[1].id) > -1 &&
         el.expansions.indexOf(btnExpansion[2].id) > -1 &&
-        el.expansions.indexOf(btnExpansion[3].id) > -1 && el.expansions.length == 3
+        el.expansions.indexOf(btnExpansion[3].id) > -1
     });
   }
 
@@ -664,7 +663,6 @@ function histogram () {
     var chartLosses = new google.visualization.Histogram(document.getElementById('histogram-losses'));
     chartLosses.draw(dataLosses, options2);
 
-    console.log(totalScore)
     avg = Math.round(parseFloat(totalScore/(winsTotal)))
     winrate = Math.round(parseFloat(winsTotal*100/(winsTotal+lossesTotal)))
 
