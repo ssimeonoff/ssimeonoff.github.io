@@ -14,6 +14,9 @@ var config = {
 };
 firebase.initializeApp(config);
 
+//get the signed user
+user = firebase.auth().currentUser;
+
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
@@ -28,8 +31,7 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
 });
 
-//get the signed user
-user = firebase.auth().currentUser;
+
 
 // Reference Games collection
 var gamesRef = firebase.database().ref("games-production");
