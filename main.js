@@ -17,10 +17,9 @@ firebase.initializeApp(config);
 //get the signed user
 user = firebase.auth().currentUser;
 
-  if (user != null) {
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
     // User is signed in.
-    email = user.email;
-    user = user.displayName;
     console.log("logged")
     document.getElementById("title-auth").innerHTML = user.displayName + " - " + user.email
   } else {
@@ -28,7 +27,7 @@ user = firebase.auth().currentUser;
     console.log("not logged")
     document.getElementById("title-auth").innerHTML = "NOT SIGNED - " + '<a class="link" href="https://ssimeonoff.github.io/login">SIGN IN HERE</a>'
   }
-
+});
 
 
 
