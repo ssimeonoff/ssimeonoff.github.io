@@ -28,7 +28,8 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
 });
 
-
+//get the signed user
+user = firebase.auth().currentUser;
 
 // Reference Games collection
 var gamesRef = firebase.database().ref("games-production");
@@ -61,7 +62,6 @@ function getCountry() {
 function submitForm(e) {
   e.preventDefault();
 
-  user = firebase.auth().currentUser;
   email = "";
   name = "";
   //Get values
