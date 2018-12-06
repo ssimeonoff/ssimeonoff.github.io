@@ -63,6 +63,7 @@ function submitForm(e) {
   email = "";
   name = "";
   //Get values
+  user = firebase.auth().currentUser;
   if (user != null) {
     console.log(user.displayName)
     name = user.displayName;
