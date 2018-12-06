@@ -13,15 +13,16 @@ var config = {
   messagingSenderId: "969120080569"
 };
 firebase.initializeApp(config);
-
 //get the signed user
 user = firebase.auth().currentUser;
 
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
+    email = user.email;
+    name = user.displayName;
     console.log("logged")
-    document.getElementById("title-auth").innerHTML = user.displayName + " - " + user.email
+    document.getElementById("title-auth").innerHTML = name + " - " + email
   } else {
     // No user is signed in.
     console.log("not logged")
