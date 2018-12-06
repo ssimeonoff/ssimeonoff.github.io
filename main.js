@@ -1,6 +1,5 @@
 countryValue = "";
-email = "";
-name = "";
+
 try {getCountry();}
 catch (err) {console.log("cannot get country")}
 
@@ -62,6 +61,9 @@ function getCountry() {
 function submitForm(e) {
   e.preventDefault();
 
+  user = firebase.auth().currentUser;
+  email = "";
+  name = "";
   //Get values
   if (user != null) {
     console.log(user.displayName)
