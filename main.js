@@ -29,6 +29,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 //get the signed user
 user = firebase.auth().currentUser;
+console.log(user.displayName)
 
 // Reference Games collection
 var gamesRef = firebase.database().ref("games-production");
@@ -65,6 +66,7 @@ function submitForm(e) {
   var name = "";
   var email = "";
   if (user != null) {
+    console.log(user.displayName)
     name = user.displayName;
     email = user.email;
   }
