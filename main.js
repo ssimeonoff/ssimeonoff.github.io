@@ -19,14 +19,16 @@ firebase.auth().onAuthStateChanged(function(user) {
     console.log(user.displayName)
     console.log(user.email)
     console.log("logged")
-    document.getElementById("div_auth").innerHTML = "Hello, " + user.displayName;
-
+    document.getElementById("title-auth").innerHTML = user.displayName + " - " + user.email
   } else {
     // No user is signed in.
     console.log("not logged")
-    document.getElementById("div_auth").innerHTML = '<a class="link" href="https://ssimeonoff.github.io/login">LOG IN</a>'
+    document.getElementById("title-auth").innerHTML = "NOT SIGNED - " + '<a class="link" href="https://ssimeonoff.github.io/login">SIGN IN HERE</a>'
   }
 });
+
+//get the signed user
+var user = firebase.auth().currentUser;
 
 // Reference Games collection
 var gamesRef = firebase.database().ref("games-production");
@@ -60,6 +62,12 @@ function submitForm(e) {
   e.preventDefault();
 
   //Get values
+  var name = "";
+  var email = "";
+  if (user != null) {
+    name = user.displayName;
+    email = user.email;
+  }
   var players = document.querySelector('input[name="players"]:checked').value;
   var generations = document.getElementById("generations").value;
 
@@ -80,7 +88,7 @@ function submitForm(e) {
 
 
   // Save Game
-  saveGame(players, generations, corporations, scores, expansions, draft, wgt, map, milestones, awards, timestamp, country, colonies);
+  saveGame(name, email, players, generations, corporations, scores, expansions, draft, wgt, map, milestones, awards, timestamp, country, colonies);
   clearInputs(); //to clear the drop-downs and inputs after the submission
 
   //Show aleart
@@ -98,7 +106,7 @@ function submitForm(e) {
 
 
   //clear form
-  //document.getElementById("form").reset();
+  document.getElementById("form").reset();
   resetAll();
 
   //hide alert after 3 seconds
@@ -120,9 +128,11 @@ function submitForm(e) {
 }
 
 // Save Game to firebasejs
-function saveGame(players, generations, corporations, scores, expansions, draft, wgt,  map, milestones, awards, timestamp, country, colonies) {
+function saveGame(name, email, players, generations, corporations, scores, expansions, draft, wgt,  map, milestones, awards, timestamp, country, colonies) {
   var newGameRef = gamesRef.push();
   newGameRef.set({
+    name: name,
+    email: email,
     players: players,
     generations: generations,
     corporations: corporations,

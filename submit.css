@@ -29,6 +29,14 @@
   grid-template-columns: 412px 412px;
 }
 
+#title-auth {
+  font-family: Prototype;
+  padding-left: 30px;
+  color: #222;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
 #title {
   display: inline-block;
   font-family: Prototype;
@@ -78,8 +86,6 @@
   text-decoration: none;
   outline: none;
   cursor: pointer;
-  color: orange;
-  font-size: 20px;
 }
 
 .link:hover {
@@ -99,8 +105,10 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
-    padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
     padding-bottom: 10px;
+    padding-top: 5px;
     width: 812px;
     position: relative;
 }

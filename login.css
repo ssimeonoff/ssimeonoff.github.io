@@ -1,0 +1,28 @@
+/* fonts */
+@font-face {
+    font-family: Prototype;
+    src: url(fonts/Prototype.ttf);
+}
+
+.login-container{
+  width: 456px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  background: #ccc;
+  background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
+  border-top: 4px solid rgb(221,221,221);
+  border-left: 4px solid rgb(221,221,221);
+  border-bottom: 4px solid rgb(137,137,137);
+  border-right: 4px solid rgb(137,137,137);
+  border-radius: 1px;
+}
+
+.title {
+  margin-top: 20px;
+  font-family: Prototype;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  text-shadow: 0 2px 2px black;
+}

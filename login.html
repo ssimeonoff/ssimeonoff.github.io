@@ -2,22 +2,26 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Sample FirebaseUI App</title>
+    <title>Login</title>
     <!-- *******************************************************************************************
        * TODO(DEVELOPER): Paste the initialization snippet from:
        * Firebase Console > Overview > Add Firebase to your web app. *
        ***************************************************************************************** -->
     <script src="https://cdn.firebase.com/libs/firebaseui/3.4.1/firebaseui.js"></script>
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.4.1/firebaseui.css" />
+    <link type="text/css" rel="stylesheet" href="login.css" />
+
     <script type="text/javascript">
 
     </script>
   </head>
-  <body>
+  <body background="images/mars.jpg" style="background-color:black;background-repeat:no-repeat; background-size:100%">
     <!-- The surrounding HTML is left untouched by FirebaseUI.
          Your app may use that space for branding, controls and other customizations.-->
-    <h1>login</h1>
-    <div id="firebaseui-auth-container"></div>
+    <div class="login-container">
+      <div class="title">SIGN IN</div>
+      <div id="firebaseui-auth-container"></div>
+    </div>
 
     <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
     <script src="login.js"></script>
