@@ -91,7 +91,7 @@ function changeColours (id) {
 }
 
 function changeColours2 (id) {
-  if (document.getElementById(id).value < 20 || document.getElementById(id).value > 200) {
+  if (document.getElementById(id).value < 20 || document.getElementById(id).value > 300) {
     document.getElementById(id).classList.remove("change-colours");
   }
   else {

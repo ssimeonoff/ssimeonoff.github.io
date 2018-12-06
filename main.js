@@ -13,6 +13,18 @@ var config = {
 };
 firebase.initializeApp(config);
 
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+    console.log(user.displayName)
+    console.log(user.email)
+    console.log("logged")
+  } else {
+    // No user is signed in.
+    console.log("not logged")
+  }
+});
+
 // Reference Games collection
 var gamesRef = firebase.database().ref("games-production");
 //get the games as an array
