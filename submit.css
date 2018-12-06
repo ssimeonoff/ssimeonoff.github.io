@@ -51,7 +51,7 @@
   border-left: 2px solid rgb(137,137,137);
   margin-left: 2px;
   width: 261px;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   color: #eee;
   text-shadow: 0 0 1px black, 0 2px 1px black;
   margin-right: 5px;
@@ -71,7 +71,7 @@
   border-left: 2px solid rgb(137,137,137);
   margin-left: 2px;
   width: calc(100% - 286px);
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   line-height: 22px;
   color: #eee;
   text-shadow: 0 0 1px black, 0 2px 1px black;
