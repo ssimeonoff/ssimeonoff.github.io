@@ -28,7 +28,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 });
 
 //get the signed user
-var user = firebase.auth().currentUser;
+user = firebase.auth().currentUser;
 
 // Reference Games collection
 var gamesRef = firebase.database().ref("games-production");
