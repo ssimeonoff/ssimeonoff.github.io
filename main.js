@@ -1,6 +1,6 @@
 countryValue = "";
 email = "";
-user = "";
+name = "";
 try {getCountry();}
 catch (err) {console.log("cannot get country")}
 
@@ -67,6 +67,7 @@ function submitForm(e) {
     console.log(user.displayName)
     name = user.displayName;
     email = user.email;
+    console.log(name)
   }
   var players = document.querySelector('input[name="players"]:checked').value;
   var generations = document.getElementById("generations").value;
