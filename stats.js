@@ -1,6 +1,5 @@
 playersButton = 0;
 
-
 var config = {
   apiKey: "AIzaSyD6HEAHfcXGN-WrUxSaraO3TYNzGbAr8ts",
   authDomain: "tm-games1.firebaseapp.com",
@@ -23,12 +22,12 @@ firebase.database().ref("games-production").on('value', function(snapshot) {
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
-    console.log(user.displayName)
-    console.log(user.email)
     console.log("logged")
+    document.getElementById("title-auth").innerHTML = user.displayName + " - " + user.email
   } else {
     // No user is signed in.
     console.log("not logged")
+    document.getElementById("title-auth").innerHTML = "NOT SIGNED - " + '<a class="link-auth" href="https://ssimeonoff.github.io/login">SIGN IN HERE</a>'
   }
 });
 

@@ -46,7 +46,7 @@ firebase.auth().onAuthStateChanged(function(user) {
   } else {
     // No user is signed in.
     console.log("not logged")
-    document.getElementById("title-auth").innerHTML = "NOT SIGNED - " + '<a class="link-solo" href="https://ssimeonoff.github.io/login">SIGN IN HERE</a>'
+    document.getElementById("title-auth").innerHTML = "NOT SIGNED - " + '<a class="link-auth" href="https://ssimeonoff.github.io/login">SIGN IN HERE</a>'
   }
 });
 
