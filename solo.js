@@ -490,6 +490,8 @@ function pushHistory() {
       gameSections[i].querySelector(".history-section-expansions2").innerHTML = expansionsHTML;
     }   catch (err) {}
 
+    //add the key as title
+    gameSections[i].title = games[games.length-1-i]["key"];
   }
 }
 
