@@ -2,6 +2,15 @@ if(window.location.href.indexOf("majk") > -1) {
   majk = true;
 } else {majk = false;}
 
+countryValue = "";
+try {getCountry();}
+catch (err) {console.log("cannot get country")}
+
+if(window.location.toString().indexOf("majk") > -1) {
+  majk = true;
+} else {majk = false;}
+
+
 var config = {
   apiKey: "AIzaSyD6HEAHfcXGN-WrUxSaraO3TYNzGbAr8ts",
   authDomain: "tm-games1.firebaseapp.com",
@@ -20,8 +29,122 @@ var configMajk = {
   messagingSenderId: "163248462443"
 };
 
-app = firebase.initializeApp(config, "app");
+
+
+firebase.initializeApp(config);
 appMajk = firebase.initializeApp(configMajk, "appMajk");
+
+// Reference Games collection
+firebase.database().ref("games-solo");
+if (majk) {var gamesRefMajk = appMajk.database().ref("majks-games");}
+
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+    console.log("logged")
+    document.getElementById("title-auth").innerHTML = user.displayName + " - " + user.email
+  } else {
+    // No user is signed in.
+    console.log("not logged")
+    document.getElementById("title-auth").innerHTML = "NOT SIGNED - " + '<a class="link-solo" href="https://ssimeonoff.github.io/login">SIGN IN HERE</a>'
+  }
+});
+
+
+//listen for form SUBMIT
+document.getElementById("form").addEventListener("submit", submitForm);
+
+//get user's country code
+function getCountry() {
+ $.getJSON('https://ipapi.co/json/', function(data) {
+    geo = JSON.stringify(data, null, 2)
+    geo = JSON.parse(geo)
+    countryValue = geo["country"];
+    console.log(countryValue);
+  });
+}
+
+// Submit form
+function submitForm(e) {
+  e.preventDefault();
+
+  email = "";
+  name = "";
+  //Get values
+  user = firebase.auth().currentUser;
+  if (user != null) {
+    console.log(user.displayName)
+    name = user.displayName;
+    email = user.email;
+  }
+
+  //Get values
+  var corporation = document.getElementById("corporation").value;
+  var expansions = arrayExpansions();
+  var map = document.querySelector('input[name="map"]:checked').value;
+  var mode = document.querySelector('input[name="mode"]:checked').value;
+  var timestamp = Math.floor((new Date()).getTime() / 1000);
+  var country = countryValue;
+
+  //win and loss saves data in result - losses keeps values under 10
+  if (outcome == "win") {
+    result = document.getElementById("corporation-score").value
+  } else { result = document.getElementById("steps").value }
+
+
+  // Save Game
+  saveGame(name, email, corporation, expansions, result, mode, map, timestamp, country);
+
+  //clear form
+  document.getElementById("form").reset();
+  resetAll();
+}
+
+// Save Game to firebasejs
+function saveGame(name, email, corporation, expansions, result, mode, map, timestamp, country) {
+  var newGameRef = gamesRef.push();
+  newGameRef.set({
+    name: name,
+    email: email,
+    corporation: corporation,
+    expansions: expansions,
+    result: result,
+    mode: mode,
+    map: map,
+    timestamp: timestamp,
+    country: country
+  })
+  if (majk) {
+    var newGameRefMajk = gamesRefMajk.push();
+    newGameRefMajk.set({
+      name: name,
+      email: email,
+      corporation: corporation,
+      expansions: expansions,
+      result: result,
+      mode: mode,
+      map: map,
+      timestamp: timestamp,
+      country: country
+    })
+  }
+}
+
+
+//getting form values
+
+function arrayExpansions() {
+  expansions = [];
+  x = document.querySelectorAll('input[name="expansions"]:checked');
+  for (i=0; i < x.length; i++) {
+      expansions.push(x[i].value);
+  }
+  return expansions;
+}
+
+
+
+
 
 // Reference Games collection
 if (majk) {
@@ -32,7 +155,7 @@ if (majk) {
       pushData();
   });
 } else {
-  app.database().ref("games-solo").on('value', function(snapshot) {
+  firebase.database().ref("games-solo").on('value', function(snapshot) {
       GAMES_ALL = snapshotToArray(snapshot);
       GAMES_ALL_JSON = JSON.stringify(snapshot)
       games = snapshotToArray(snapshot);
@@ -268,7 +391,7 @@ function filterFunction(id) {
 
   //filter by expansions
   btnExpansion = document.querySelectorAll(".btn-expansion.active");
-  
+
   if (btnExpansion.length == 2 ){
     games = games.filter(function(el) {
       return el.expansions != undefined &&
@@ -610,6 +733,11 @@ function pushCorporationsData(corporation) {
   document.getElementById("games-splice").innerHTML = games_splice.length;
   document.getElementById("winrate-splice").innerHTML =  corporationWinrate(games_splice);
   document.getElementById("score-splice").innerHTML =  corporationScore(games_splice);
+
+  games_kuiper = games.filter(function(el) {return el.corporation == "KUIPER BELT COOP."});
+  document.getElementById("games-kuiper").innerHTML = games_kuiper.length;
+  document.getElementById("winrate-kuiper").innerHTML =  corporationWinrate(games_kuiper);
+  document.getElementById("score-kuiper").innerHTML =  corporationScore(games_kuiper);
 }
 
 function histogram () {

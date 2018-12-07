@@ -3,6 +3,27 @@
     src: url(fonts/Prototype.ttf);
 }
 
+#title-auth {
+  font-family: Prototype;
+  font-size:18px;
+  height: 46px;
+  line-height: 46px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  border-radius: 2px;
+  border-top: 4px solid rgb(221,221,221);
+  border-left: 4px solid rgb(221,221,221);
+  border-bottom: 4px solid rgb(137,137,137);
+  border-right: 4px solid rgb(137,137,137);
+  background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
+}
+
+.link-solo:hover {
+  color: white;
+  text-shadow: 0 0 1px black, 0 0px 3px orange;
+
+}
+
 #form {
   display: grid;
   grid-template-columns: 412px;
