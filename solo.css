@@ -5,9 +5,11 @@
 
 #title-auth {
   font-family: Prototype;
-  font-size:18px;
+  color: white;
+  text-shadow: 0 0 1px black, 0 2px 2px black;
+  font-size: 18px;
   height: 46px;
-  line-height: 46px;
+  line-height: 44px;
   padding-left: 10px;
   margin-bottom: 10px;
   border-radius: 2px;
@@ -17,11 +19,16 @@
   border-right: 4px solid rgb(137,137,137);
   background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
 }
+.link-solo {
+  text-shadow: none;
+  text-decoration: none;
+  vertical-align: top;
+  font-size:24px;
+}
 
 .link-solo:hover {
   color: white;
   text-shadow: 0 0 1px black, 0 0px 3px orange;
-
 }
 
 #form {
