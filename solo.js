@@ -35,7 +35,7 @@ firebase.initializeApp(config);
 appMajk = firebase.initializeApp(configMajk, "appMajk");
 
 // Reference Games collection
-firebase.database().ref("games-solo");
+var gamesRef = firebase.database().ref("games-solo");
 if (majk) {var gamesRefMajk = appMajk.database().ref("majks-games");}
 
 firebase.auth().onAuthStateChanged(function(user) {
