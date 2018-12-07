@@ -120,8 +120,11 @@ function enableCorporations() {
   for (i = 0; i < players; i++) {
     corps[i].disabled = false;
     corps[i].classList.add("not-filled");
-    options[i].innerHTML = "SELECT CORPORATION";
-
+    if (i==0) {
+      options[i].innerHTML = "PLAYER 1 (YOU)";
+    } else {
+      options[i].innerHTML = "PLAYER " + parseInt(i+1);
+    }
     scores[i].disabled = false;
     scores[i].classList.add("not-filled");
     scores[i].placeholder = "--";
