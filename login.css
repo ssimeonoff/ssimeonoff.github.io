@@ -16,6 +16,7 @@
   border-bottom: 4px solid rgb(137,137,137);
   border-right: 4px solid rgb(137,137,137);
   border-radius: 1px;
+  padding-bottom: 20px;
 }
 
 .title {
@@ -24,5 +25,5 @@
   text-align: center;
   color: white;
   font-size: 30px;
-  text-shadow: 0 2px 2px black;
+  text-shadow: 0 0px 1px black, 0 2px 2px black;
 }
