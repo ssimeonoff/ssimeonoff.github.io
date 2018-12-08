@@ -836,10 +836,10 @@ function pushHistory() {
     gameSections[i].title = games[games.length-1-i]["key"];
 
     //add name of the submitter
-    if (user != null) {
-      gameSections[i].querySelector(".submitter").innerHTML = "submitted by " + user.displayName;
-    } else {
-      gameSections[i].querySelector(".submitter").innerHTML = "submitted by Guest"
+    var el = gameSections[i].querySelector(".history-section-submitted")
+    if (games[games.length-1-i]["name"] != undefined) {
+      if (games[games.length-1-i]["name"].length < 2) {el.innerHTML = "by Guest"}
+      else {el.innerHTML = "by " + games[games.length-1-i]["name"]}
     }
 
   }

@@ -101,6 +101,18 @@
   border-radius: 5px;
 }
 
+.history-section-submitted {
+  border-top: 1px solid rgb(221,221,221);
+  border-left: 1px solid rgb(221,221,221);
+  border-bottom: 1px solid rgb(137,137,137);
+  border-right: 1px solid rgb(137,137,137);
+  height: 18px;
+  line-height: 18px;
+  padding-left: 5px;
+  width: 219px;
+  text-align: left;
+}
+
 .dark-background {
   background: #444;
 }
