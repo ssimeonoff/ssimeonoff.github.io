@@ -31,7 +31,8 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
 });
 
-
+//getting the user
+user = firebase.auth().currentUser;
 
 function snapshotToArray(snapshot) {
     var returnArr = [];
@@ -833,6 +834,14 @@ function pushHistory() {
     }
     //add the key as title
     gameSections[i].title = games[games.length-1-i]["key"];
+
+    //add name of the submitter
+    if (user != null) {
+      gameSections[i].querySelector(".submitter").innerHTML = "submitted by " + user.displayName;
+    } else {
+      gameSections[i].querySelector(".submitter").innerHTML = "submitted by Guest"
+    }
+
   }
 }
 

@@ -412,6 +412,11 @@ function filterFunction(id) {
     });
   }
 
+  //filter by email
+  games = games.filter(function(el) {
+    return el.email !=undefined && el.email == "s.simeonoff@gmail.com"
+  });
+
   //pushing the new filtered data
   pushData();
 }
