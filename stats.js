@@ -838,8 +838,8 @@ function pushHistory() {
     //add name of the submitter
     var el = gameSections[i].querySelector(".history-section-submitted")
     if (games[games.length-1-i]["name"] != undefined) {
-      if (games[games.length-1-i]["name"].length < 2) {el.innerHTML = "by Guest"}
-      else {el.innerHTML = "by " + games[games.length-1-i]["name"]}
+      if (games[games.length-1-i]["name"].length < 2) {el.innerHTML = ""}
+      else {el.innerHTML = games[games.length-1-i]["name"]}
     }
 
   }
