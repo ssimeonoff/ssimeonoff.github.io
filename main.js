@@ -212,7 +212,6 @@ function arrayColonies() {
   for (i=0; i < x.length; i++) {
       colonies.push(x[i].value);
   }
-  console.log(colonies)
   return colonies;
 }
 
