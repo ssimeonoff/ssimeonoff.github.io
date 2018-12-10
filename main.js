@@ -70,6 +70,7 @@ function submitForm(e) {
     email = user.email;
   }
   var players = document.querySelector('input[name="players"]:checked').value;
+  var rank = player1Rank;
   var generations = document.getElementById("generations").value;
 
   var expansions = arrayExpansions();
@@ -89,7 +90,7 @@ function submitForm(e) {
 
 
   // Save Game
-  saveGame(name, email, players, generations, corporations, scores, expansions, draft, wgt, map, milestones, awards, timestamp, country, colonies);
+  saveGame(name, email, players, rank,  generations, corporations, scores, expansions, draft, wgt, map, milestones, awards, timestamp, country, colonies);
   clearInputs(); //to clear the drop-downs and inputs after the submission
 
   //Show aleart
@@ -129,12 +130,13 @@ function submitForm(e) {
 }
 
 // Save Game to firebasejs
-function saveGame(name, email, players, generations, corporations, scores, expansions, draft, wgt,  map, milestones, awards, timestamp, country, colonies) {
+function saveGame(name, email, players, rank, generations, corporations, scores, expansions, draft, wgt,  map, milestones, awards, timestamp, country, colonies) {
   var newGameRef = gamesRef.push();
   newGameRef.set({
     name: name,
     email: email,
     players: players,
+    rank: rank,
     generations: generations,
     corporations: corporations,
     scores: scores,
@@ -380,6 +382,8 @@ function orderScoresandCorporations() {
   newScores = [];
   newCorporations = [];
 
+  player1Corporation = oldCorporations[0];
+
   for (var j = 0; j < oldScores.length;) {
 
     var maxValueIndex = indexOfMax(oldScores);
@@ -390,6 +394,8 @@ function orderScoresandCorporations() {
     oldScores.splice(maxValueIndex, 1);
     oldCorporations.splice(maxValueIndex, 1);
   }
+
+  player1Rank = newCorporations.indexOf(player1Corporation);
 }
 
 function getDraft() {
