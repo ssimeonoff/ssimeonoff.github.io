@@ -493,3 +493,42 @@ input::-webkit-inner-spin-button {
   transition: 0.5s;
   -webkit-transition: 0.5s;
 }
+
+.corporations-solo {
+  position: relative;
+  font-family: Prototype;
+  background: #ccc;
+  background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
+  border-radius: 2px;
+  width: 460px;
+  text-align: center;
+  margin-bottom: 10px;
+  border-top: 2px solid rgb(221,221,221);
+  border-left: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
+}
+
+.corporation-row > div {
+    text-align: center;
+    font-size: 18px;
+    height: 32px;
+    line-height: 32px;
+    color: #222;
+    font-weight: normal;
+    text-shadow: none;
+    border-top: 2px solid rgb(221,221,221);
+    border-left: 2px solid rgb(221,221,221);
+    border-bottom: 2px solid rgb(137,137,137);
+    border-right: 2px solid rgb(137,137,137);
+}
+
+.corporation-row, .corporations-header {
+  display: grid;
+  grid-template-columns: 220px  80px 80px 80px;
+}
+
+.corporation-name {
+  color: #ffd27f !important;
+  text-shadow: 0 0 1px black,  0 2px 2px black !important;
+}

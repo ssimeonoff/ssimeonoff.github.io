@@ -718,13 +718,12 @@ function sortByRule(players, sortRule) {
       }
     });
 
-    //highlight the criterion
+    //remove highlight of previous criterion
 
     var y = document.querySelectorAll(".highlighed-sorting");
     for (j=0; j < y.length ; j++) {
       y[j].classList.remove("highlighed-sorting");
     }
-
 
     //highlight the criterion
     var x = document.querySelectorAll("div[id*='games" + players +"p'] > div > span[class='"+ sortRule +"Value']");

@@ -127,9 +127,9 @@
 }
 
 .highlighed-sorting {
-  color: orange;
-  font-size: 23px;
-  text-shadow: 0 0 2px black, 0 2px 2px black;
+  color: orange !important;
+  font-size: 23px !important;
+  text-shadow: 0 0 2px black, 0 2px 2px black !important;
 }
 
 .layout {
@@ -439,36 +439,6 @@
       color:black;
       font-weight: normal;
       text-shadow: none;
-}
-.grid-corporations-solo {
-  display: grid;
-  position: relative;
-  font-family: Prototype;
-  background: #ccc;
-  background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
-  border-radius: 2px;
-  width: 460px;
-  text-align: center;
-  margin-bottom: 10px;
-  grid-template-columns: 220px  80px 80px 80px;
-  border-top: 2px solid rgb(221,221,221);
-  border-left: 2px solid rgb(221,221,221);
-  border-bottom: 2px solid rgb(137,137,137);
-  border-right: 2px solid rgb(137,137,137);
-}
-
-.grid-corporations-solo > div {
-    text-align: center;
-    font-size: 18px;
-    height: 32px;
-    line-height: 32px;
-    border-top: 2px solid rgb(221,221,221);
-    border-left: 2px solid rgb(221,221,221);
-    border-bottom: 2px solid rgb(137,137,137);
-    border-right: 2px solid rgb(137,137,137);
-    color: #222;
-    font-weight: normal;
-    text-shadow: none;
 }
 
 .corporations-font-size {
@@ -1204,8 +1174,8 @@
   text-shadow: 0 0 1px black, 0 2px 2px black;
 }
 
-.btn-reset:active {
-  box-shadow: 0 1px 1px 1px rgba(0,0,0,.8);
+.btn-reset:active, .btn-grid-cell:active {
+  box-shadow: 0 1px 1px 0px rgba(0,0,0,.8) !important;
   transform: translate(0,2px);
 }
 

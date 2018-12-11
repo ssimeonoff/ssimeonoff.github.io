@@ -413,9 +413,9 @@ function filterFunction(id) {
   }
 
   //filter by email
-  games = games.filter(function(el) {
-    return el.email !=undefined && el.email == "s.simeonoff@gmail.com"
-  });
+  //games = games.filter(function(el) {
+    //return el.email !=undefined && el.email == "s.simeonoff@gmail.com"
+  //});
 
   //pushing the new filtered data
   pushData();
@@ -830,4 +830,52 @@ function generateScoresArray () {
       lossesTotal++;
     }
   }
+}
+
+
+function sortBy(sortRule) {
+   //get the sort rule
+  // get array of elements
+    var myArray = document.querySelectorAll('.corporation-row');
+    console.log(myArray)
+    var count = 0;
+    // sort based on timestamp attribute
+    myArray = [].slice.call(myArray);
+    myArray.sort(function (a, b) {
+    // convert to integers from strings
+      a = parseInt($(a).find("div[id*=" + sortRule + "-]").text(), 10);
+      if (a == null || isNaN(a)) {a = 0}
+      b = parseInt($(b).find("div[id*=" + sortRule + "-]").text(), 10);
+      console.log(b)
+      if (b == null || isNaN(b)) {b = 0}
+      count += 2;
+      // compare
+      if(a < b) {
+          return 1;
+      } else if(a > b) {
+          return -1;
+      } else {
+          return 0;
+      }
+    });
+
+    //remove highlight of previous criterion
+    var y = document.querySelectorAll(".highlighed-sorting");
+    for (j=0; j < y.length ; j++) {
+      y[j].classList.remove("highlighed-sorting");
+    }
+
+    //highlight the criterion
+    var x = document.querySelectorAll("div[id*=" + sortRule + "-]");
+    for (i=0; i < x.length ; i++) {
+      x[i].classList.add("highlighed-sorting");
+    }
+
+
+    // put sorted results back on page
+    $("#playerStats").append(myArray);
+    var y = document.querySelectorAll(".corporation-stats");
+    for (j=0; j < y.length; j++) {
+      y[j].style.opacity = 0.3;
+    }
 }

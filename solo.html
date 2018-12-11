@@ -408,168 +408,234 @@
   </div>
   <div class="column">
 
-    <div class="grid-corporations-solo">
+    <div class="corporations-solo">
 
-      <div class="grid-corporations-title">CORPORATION</div>
-      <div class="grid-corporations-title">SCORE</div>
-      <div class="grid-corporations-title">WINS%</div>
-      <div class="grid-corporations-title">GAMES</div>
+      <div class="corporations-header">
+        <div class="grid-cell grid-corporations-title" style="font-size:20px">CORPORATION</div>
+        <button class="btn-grid-cell" onclick="sortBy('score')" style="font-size:16px">SCORE</button>
+        <button class="btn-grid-cell" onclick="sortBy('winrate')" style="font-size:16px">WINS%</button>
+        <button class="btn-grid-cell" onclick="sortBy('games')" style="font-size:16px">GAMES</button>
+      </div>
+      <div id="playerStats">
 
-      <div>CREDICOR</div>
-      <div id="score-credicor"></div>
-      <div id="winrate-credicor"></div>
-      <div id="games-credicor"></div>
+      <div class="corporation-row">
+        <div class="corporation-name">CREDICOR</div>
+        <div id="score-credicor"></div>
+        <div id="winrate-credicor"></div>
+        <div id="games-credicor"></div>
+      </div>
 
-      <div>ECOLINE</div>
-      <div id="score-ecoline"></div>
-      <div id="winrate-ecoline"></div>
-      <div id="games-ecoline"></div>
+      <div class="corporation-row">
+        <div class="corporation-name">ECOLINE</div>
+        <div id="score-ecoline"></div>
+        <div id="winrate-ecoline"></div>
+        <div id="games-ecoline"></div>
+      </div>
 
-      <div>HELION</div>
-      <div id="score-helion"></div>
-      <div id="winrate-helion"></div>
-      <div id="games-helion"></div>
+      <div class="corporation-row">
+        <div class="corporation-name">HELION</div>
+        <div id="score-helion"></div>
+        <div id="winrate-helion"></div>
+        <div id="games-helion"></div>
+      </div>
 
-      <div>MINING GUILD</div>
-      <div id="score-mining"></div>
-      <div id="winrate-mining"></div>
-      <div id="games-mining"></div>
+      <div class="corporation-row">
+        <div class="corporation-name">MINING GUILD</div>
+        <div id="score-mining"></div>
+        <div id="winrate-mining"></div>
+        <div id="games-mining"></div>
+      </div>
 
-      <div>INTERPLAN. CINEMATICS</div>
-      <div id="score-interplan"></div>
-      <div id="winrate-interplan"></div>
-      <div id="games-interplan"></div>
+      <div class="corporation-row">
+        <div class="corporation-name">INTERPLAN. CINEMATICS</div>
+        <div id="score-interplan"></div>
+        <div id="winrate-interplan"></div>
+        <div id="games-interplan"></div>
+      </div>
 
-      <div>INVENTRIX</div>
-      <div id="score-inventrix"></div>
-      <div id="winrate-inventrix"></div>
-      <div id="games-inventrix"></div>
+      <div class="corporation-row">
+        <div class="corporation-name">INVENTRIX</div>
+        <div id="score-inventrix"></div>
+        <div id="winrate-inventrix"></div>
+        <div id="games-inventrix"></div>
+      </div>
 
-      <div>PHOBOLOG</div>
-      <div id="score-phobolog"></div>
-      <div id="winrate-phobolog"></div>
-      <div id="games-phobolog"></div>
+      <div class="corporation-row">
+        <div class="corporation-name">PHOBOLOG</div>
+        <div id="score-phobolog"></div>
+        <div id="winrate-phobolog"></div>
+        <div id="games-phobolog"></div>
+      </div>
 
-      <div>THARSIS REPUBLIC</div>
-      <div id="score-tharsis"></div>
-      <div id="winrate-tharsis"></div>
-      <div id="games-tharsis"></div>
+      <div class="corporation-row">
+        <div class="corporation-name">THARSIS REPUBLIC</div>
+        <div id="score-tharsis"></div>
+        <div id="winrate-tharsis"></div>
+        <div id="games-tharsis"></div>
+      </div>
 
-      <div>THORGATE</div>
-      <div id="score-thorgate"></div>
-      <div id="winrate-thorgate"></div>
-      <div id="games-thorgate"></div>
+      <div class="corporation-row">
+        <div class="corporation-name">THORGATE</div>
+        <div id="score-thorgate"></div>
+        <div id="winrate-thorgate"></div>
+        <div id="games-thorgate"></div>
+      </div>
 
-      <div>U.N.M.I.</div>
-      <div id="score-unmi"></div>
-      <div id="winrate-unmi"></div>
-      <div id="games-unmi"></div>
+      <div class="corporation-row">
+        <div class="corporation-name">U.N.M.I.</div>
+        <div id="score-unmi"></div>
+        <div id="winrate-unmi"></div>
+        <div id="games-unmi"></div>
+      </div>
 
-      <div>TERACTOR</div>
-      <div id="score-teractor"></div>
-      <div id="winrate-teractor"></div>
-      <div id="games-teractor"></div>
+      <div class="corporation-row">
+        <div class="corporation-name">TERACTOR</div>
+        <div id="score-teractor"></div>
+        <div id="winrate-teractor"></div>
+        <div id="games-teractor"></div>
+      </div>
 
-      <div>SATURN SYSTEMS</div>
-      <div id="score-saturn"></div>
-      <div id="winrate-saturn"></div>
-      <div id="games-saturn"></div>
+      <div class="corporation-row">
+        <div class="corporation-name">SATURN SYSTEMS</div>
+        <div id="score-saturn"></div>
+        <div id="winrate-saturn"></div>
+        <div id="games-saturn"></div>
+      </div>
 
-      <div>APHRODITE</div>
-      <div id="score-aphrodite"></div>
-      <div id="winrate-aphrodite"></div>
-      <div id="games-aphrodite"></div>
+      <div class="corporation-row">
+        <div class="corporation-name">APHRODITE</div>
+        <div id="score-aphrodite"></div>
+        <div id="winrate-aphrodite"></div>
+        <div id="games-aphrodite"></div>
+      </div>
 
-      <div>CELESTIC</div>
-      <div id="score-celestic"></div>
-      <div id="winrate-celestic"></div>
-      <div id="games-celestic"></div>
+      <div class="corporation-row">
+        <div class="corporation-name">CELESTIC</div>
+        <div id="score-celestic"></div>
+        <div id="winrate-celestic"></div>
+        <div id="games-celestic"></div>
+      </div>
 
-      <div>MANUTECH</div>
-      <div id="score-manutech"></div>
-      <div id="winrate-manutech"></div>
-      <div id="games-manutech"></div>
+      <div class="corporation-row">
+        <div class="corporation-name">MANUTECH</div>
+        <div id="score-manutech"></div>
+        <div id="winrate-manutech"></div>
+        <div id="games-manutech"></div>
+      </div>
 
-      <div>MORNING STAR INC.</div>
-      <div id="score-morning"></div>
-      <div id="winrate-morning"></div>
-      <div id="games-morning"></div>
+      <div class="corporation-row">
+        <div class="corporation-name">MORNING STAR INC.</div>
+        <div id="score-morning"></div>
+        <div id="winrate-morning"></div>
+        <div id="games-morning"></div>
+      </div>
 
-      <div>VIRON</div>
-      <div id="score-viron"></div>
-      <div id="winrate-viron"></div>
-      <div id="games-viron"></div>
+      <div class="corporation-row">
+        <div class="corporation-name">VIRON</div>
+        <div id="score-viron"></div>
+        <div id="winrate-viron"></div>
+        <div id="games-viron"></div>
+      </div>
 
-      <div>CHEUNG SHING MARS</div>
-      <div id="score-cheung"></div>
-      <div id="winrate-cheung"></div>
-      <div id="games-cheung"></div>
+      <div class="corporation-row">
+        <div class="corporation-name">CHEUNG SHING MARS</div>
+        <div id="score-cheung"></div>
+        <div id="winrate-cheung"></div>
+        <div id="games-cheung"></div>
+      </div>
 
-      <div>POINT LUNA</div>
-      <div id="score-point"></div>
-      <div id="winrate-point"></div>
-      <div id="games-point"></div>
+      <div class="corporation-row">
+        <div class="corporation-name">POINT LUNA</div>
+        <div id="score-point"></div>
+        <div id="winrate-point"></div>
+        <div id="games-point"></div>
+      </div>
 
-      <div>ROBINSON INDUSTRIES</div>
-      <div id="score-robinson"></div>
-      <div id="winrate-robinson"></div>
-      <div id="games-robinson"></div>
+      <div class="corporation-row">
+        <div class="corporation-name">ROBINSON INDUSTRIES</div>
+        <div id="score-robinson"></div>
+        <div id="winrate-robinson"></div>
+        <div id="games-robinson"></div>
+      </div>
 
-      <div>VALLEY TRUST</div>
-      <div id="score-valley"></div>
-      <div id="winrate-valley"></div>
-      <div id="games-valley"></div>
+      <div class="corporation-row">
+        <div class="corporation-name">VALLEY TRUST</div>
+        <div id="score-valley"></div>
+        <div id="winrate-valley"></div>
+        <div id="games-valley"></div>
+      </div>
 
-      <div>VITOR</div>
-      <div id="score-vitor"></div>
-      <div id="winrate-vitor"></div>
-      <div id="games-vitor"></div>
+      <div class="corporation-row">
+        <div class="corporation-name">VITOR</div>
+        <div id="score-vitor"></div>
+        <div id="winrate-vitor"></div>
+        <div id="games-vitor"></div>
+      </div>
 
-      <div>ARIDOR</div>
-      <div id="score-aridor"></div>
-      <div id="winrate-aridor"></div>
-      <div id="games-aridor"></div>
+      <div class="corporation-row">
+        <div class="corporation-name">ARIDOR</div>
+        <div id="score-aridor"></div>
+        <div id="winrate-aridor"></div>
+        <div id="games-aridor"></div>
+      </div>
 
-      <div>ARKLIGHT</div>
-      <div id="score-arklight"></div>
-      <div id="winrate-arklight"></div>
-      <div id="games-arklight"></div>
+      <div class="corporation-row">
+        <div class="corporation-name">ARKLIGHT</div>
+        <div id="score-arklight"></div>
+        <div id="winrate-arklight"></div>
+        <div id="games-arklight"></div>
+      </div>
 
-      <div>POLYPHEMOS</div>
-      <div id="score-polyphemos"></div>
-      <div id="winrate-polyphemos"></div>
-      <div id="games-polyphemos"></div>
+      <div class="corporation-row">
+        <div class="corporation-name">POLYPHEMOS</div>
+        <div id="score-polyphemos"></div>
+        <div id="winrate-polyphemos"></div>
+        <div id="games-polyphemos"></div>
+      </div>
 
-      <div>POSEIDON</div>
-      <div id="score-poseidon"></div>
-      <div id="winrate-poseidon"></div>
-      <div id="games-poseidon"></div>
+      <div class="corporation-row">
+        <div class="corporation-name">POSEIDON</div>
+        <div id="score-poseidon"></div>
+        <div id="winrate-poseidon"></div>
+        <div id="games-poseidon"></div>
+      </div>
 
-      <div>STORMCRAFT</div>
-      <div id="score-stormcraft"></div>
-      <div id="winrate-stormcraft"></div>
-      <div id="games-stormcraft"></div>
+      <div class="corporation-row">
+        <div class="corporation-name">STORMCRAFT</div>
+        <div id="score-stormcraft"></div>
+        <div id="winrate-stormcraft"></div>
+        <div id="games-stormcraft"></div>
+      </div>
 
-      <div>ARCADIAN COMMUNITIES</div>
-      <div id="score-arcadian"></div>
-      <div id="winrate-arcadian"></div>
-      <div id="games-arcadian"></div>
+      <div class="corporation-row">
+        <div class="corporation-name">ARCADIAN COMMUNITIES</div>
+        <div id="score-arcadian"></div>
+        <div id="winrate-arcadian"></div>
+        <div id="games-arcadian"></div>
+      </div>
 
-      <div>RECYCLON</div>
-      <div id="score-recyclon"></div>
-      <div id="winrate-recyclon"></div>
-      <div id="games-recyclon"></div>
 
-      <div>SPLICE</div>
-      <div id="score-splice"></div>
-      <div id="winrate-splice"></div>
-      <div id="games-splice"></div>
+      <div class="corporation-row">
+        <div class="corporation-name">RECYCLON</div>
+        <div id="score-recyclon"></div>
+        <div id="winrate-recyclon"></div>
+        <div id="games-recyclon"></div>
+      </div>
 
-      <div>KUIPER BELT COOP.</div>
-      <div id="score-kuiper"></div>
-      <div id="winrate-kuiper"></div>
-      <div id="games-kuiper"></div>
+      <div class="corporation-row">
+        <div class="corporation-name">SPLICE</div>
+        <div id="score-splice"></div>
+        <div id="winrate-splice"></div>
+        <div id="games-splice"></div>
+      </div>
 
+      <div class="corporation-row">
+        <div class="corporation-name">KUIPER BELT COOP.</div>
+        <div id="score-kuiper"></div>
+        <div id="winrate-kuiper"></div>
+        <div id="games-kuiper"></div>
+      </div>
+    </div>
     </div>
   </div>
 
