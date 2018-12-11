@@ -339,7 +339,7 @@ input::-webkit-inner-spin-button {
   color: white !important ;
   text-shadow: 0 3px 1px black;
   box-shadow: none !important;
-  border: none!important ;
+  border: none !important;
   background-color: transparent !important;
 }
 

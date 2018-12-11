@@ -113,7 +113,7 @@
           <fieldset class="fieldset-alignment" style="width:366px;display:inline-block;margin-bottom:15px;">
            <legend class="fieldset2">RESULT</legend>
 
-             <div id="lossSection" class="section" onclick="activateLoss(id)">
+             <div id="lossSection" class="section" onclick="activateLoss()">
                <div id="lossLabel">LOSS</div>
                <select id="steps" class="drop-down2" name="steps" size="1" onchange="changeColours2(id)">
                  <option value="0" disabled selected class="selected-option">&nbsp;FAILED</option>
@@ -129,7 +129,7 @@
               </select>
               </div>
 
-              <div id="winSection" class="section" onclick="activateWin(id)">
+              <div id="winSection" class="section" onclick="activateWin()">
                 <div id="winLabel">WIN</div>
                 <input id="corporation-score" class="corporation-score"  type="number" min="60" max ="200" step="1" name="score" placeholder="SCORE" oninput="changeColours2a(id)">
               </div>

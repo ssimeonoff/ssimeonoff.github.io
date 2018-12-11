@@ -307,9 +307,9 @@ function resetAll () {
   }, 500)
 }
 
-function activateWin(id) {
+function activateWin() {
   outcome ="win";
-  el = document.getElementById(id);
+  el = document.getElementById("winSection");
   el2 = document.getElementById("lossSection");
 
 
@@ -331,9 +331,9 @@ function activateWin(id) {
 }
 
 
-function activateLoss(id) {
+function activateLoss() {
   outcome = "loss";
-  el = document.getElementById(id);
+  el = document.getElementById("lossSection");
   el2 = document.getElementById("winSection");
 
 
