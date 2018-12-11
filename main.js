@@ -26,8 +26,8 @@ firebase.auth().onAuthStateChanged(function(user) {
     document.getElementById("title-auth").innerHTML = "NOT SIGNED - " + '<a class="link-auth" href="https://ssimeonoff.github.io/login">SIGN IN HERE</a>'
   }
 });
-
-
+user2 = firebase.auth().currentUser;
+console.log(user2)
 
 // Reference Games collection
 var gamesRef = firebase.database().ref("games-production");
