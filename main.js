@@ -27,6 +27,7 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
 });
 user2 = firebase.auth().currentUser;
+console.log("user2")
 console.log(user2)
 
 // Reference Games collection
