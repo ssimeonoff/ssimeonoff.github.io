@@ -15,19 +15,6 @@ var config = {
 firebase.initializeApp(config);
 //get the signed user
 
-firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-    // User is signed in.
-    console.log("logged")
-    document.getElementById("title-auth").innerHTML = user.displayName + " - " + user.email
-    pushHistory(user.email);
-  } else {
-    // No user is signed in.
-    console.log("not logged")
-    document.getElementById("title-auth").innerHTML = "NOT SIGNED - " + '<a class="link-auth" href="https://ssimeonoff.github.io/login">SIGN IN HERE</a>'
-  }
-});
-
 // Reference Games collection
 var gamesRef = firebase.database().ref("games-production");
 //get the games as an array
@@ -36,7 +23,22 @@ r1.on('value', (snap) => {
   const val = snap.val()
   games = Object.keys(val)
     .map(key => val[key])
-    document.getElementById("title3").innerHTML = games.length; //for the odometer counter
+  document.getElementById("title3").innerHTML = games.length; //for the odometer counter
+
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      // User is signed in.
+      console.log("logged")
+      document.getElementById("title-auth").innerHTML = user.displayName + " - " + user.email
+      pushHistory(user.email);
+    } else {
+      // No user is signed in.
+      console.log("not logged")
+      document.getElementById("title-auth").innerHTML = "NOT SIGNED - " + '<a class="link-auth" href="https://ssimeonoff.github.io/login">SIGN IN HERE</a>'
+      //pushHistory("s.simeonoff@gmail.com");
+    }
+  });
+
 })
 
 
@@ -263,9 +265,9 @@ function resetAll () {
 function pushHistory(email) {
 
   //filter only user's games
-  /*games = games.filter(function(el) {
+  games = games.filter(function(el) {
     return el.email == email;
-  }); */
+  });
 
   //clear the sections
   var x = document.querySelectorAll(".flag-div, .history-section-time-value, .history-section-corporation, .history-section-score, .history-section-generation, .history-section-expansions")
