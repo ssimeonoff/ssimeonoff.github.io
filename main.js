@@ -20,16 +20,13 @@ firebase.auth().onAuthStateChanged(function(user) {
     // User is signed in.
     console.log("logged")
     document.getElementById("title-auth").innerHTML = user.displayName + " - " + user.email
+    pushHistory(user.email);
   } else {
     // No user is signed in.
     console.log("not logged")
     document.getElementById("title-auth").innerHTML = "NOT SIGNED - " + '<a class="link-auth" href="https://ssimeonoff.github.io/login">SIGN IN HERE</a>'
   }
 });
-
-//user2 = firebase.auth().currentUser;
-console.log("user2")
-//console.log(user2)
 
 // Reference Games collection
 var gamesRef = firebase.database().ref("games-production");
@@ -38,10 +35,8 @@ var r1 = firebase.database().ref('games-production')
 r1.on('value', (snap) => {
   const val = snap.val()
   games = Object.keys(val)
-    //.map(key => Object.assign({}, val[key], { key }))
     .map(key => val[key])
     document.getElementById("title3").innerHTML = games.length; //for the odometer counter
-    pushHistory();
 })
 
 
@@ -265,7 +260,13 @@ function resetAll () {
 }
 
 ///History functions
-function pushHistory() {
+function pushHistory(email) {
+
+  //filter only user's games
+  games = games.filter(function(el) {
+    return el.email == email;
+  });
+
   //clear the sections
   var x = document.querySelectorAll(".flag-div, .history-section-time-value, .history-section-corporation, .history-section-score, .history-section-generation, .history-section-expansions")
   for (i = 0; i < x.length; i++) {
@@ -286,7 +287,7 @@ function pushHistory() {
   now = Math.floor((new Date()).getTime() / 1000);
   gameSections = document.querySelectorAll(".grid-cell-history");
 
-  for(i=0; i < gameSections.length ; i++) {
+  for(i=0; i < gameSections.length && i < games.length ; i++) {
 
     //add dark background to the headers
     gameSections[i].querySelector(".history-section-time").classList.add("dark-background");
