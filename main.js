@@ -263,9 +263,9 @@ function resetAll () {
 function pushHistory(email) {
 
   //filter only user's games
-  games = games.filter(function(el) {
+  /*games = games.filter(function(el) {
     return el.email == email;
-  });
+  }); */
 
   //clear the sections
   var x = document.querySelectorAll(".flag-div, .history-section-time-value, .history-section-corporation, .history-section-score, .history-section-generation, .history-section-expansions")
