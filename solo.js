@@ -368,7 +368,7 @@ function filterFunction(id) {
   if (clickedElementID != null) {clickedElementID.classList.toggle("active");}
 
   //filter by user email (my games only)
-  btnMyGames = document.querySelectorAll(".btn-mygames-solo");
+  btnMyGames = document.querySelectorAll(".btn-mygames-solo.active");
   if (btnMyGames.length == 1 ) {
     games = games.filter(function(el) {
       return el.email == user.email;
