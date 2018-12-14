@@ -416,6 +416,8 @@ function filterFunction(id) {
   //games = games.filter(function(el) {
     //return el.email !=undefined && el.email == "s.simeonoff@gmail.com"
   //});
+  user = firebase.auth().currentUser;
+  console.log(user.email);
 
   //pushing the new filtered data
   pushData();
@@ -802,7 +804,7 @@ function histogram () {
     winrate = Math.round(parseFloat(winsTotal*100/(winsTotal+lossesTotal)))
 
     document.getElementById("wins").innerHTML = winsTotal + " <span style='font-size:20px;font-weight:bold'>&#x2713;</span>";
-    document.getElementById("losses").innerHTML = lossesTotal + " <span style='font-size:16px;'>&#x274c;</span>";
+    document.getElementById("losses").innerHTML = lossesTotal + " <span style='font-size:20px;font-weight:bold'>&#x2717;</span>";
     document.getElementById("average").innerHTML = avg + " <span style='font-size:16px;'>P</span>";
     document.getElementById("winrate").innerHTML = winrate + " <span style='font-size:16px;'>%</span>";
   }

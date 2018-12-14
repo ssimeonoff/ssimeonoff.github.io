@@ -233,6 +233,17 @@ input::placeholder {
   filter: brightness(120%);
 }
 
+.btn-mygames-solo {
+  position: absolute;
+  width: 120px;
+  height: 90px;
+  font-size: 18px;
+  line-height: 22px;
+  margin-left: 7px;
+  margin-top: -50px;
+  color:#222;
+}
+
 .map {
   height: 56px;
   line-height: 56px;
