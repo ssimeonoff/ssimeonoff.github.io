@@ -244,6 +244,11 @@ input::placeholder {
   color:#222;
 }
 
+.btn-mygames-solo:disabled {
+  opacity: 0.5;
+  box-shadow: none;
+}
+
 .map {
   height: 56px;
   line-height: 56px;
