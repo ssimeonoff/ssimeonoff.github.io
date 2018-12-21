@@ -52,7 +52,7 @@
              <fieldset class="fieldset-alignment" style="display:inline-block;width:366px;padding-bottom:15px; border-bottom:none">
                <legend class="fieldset2">EXPANSIONS</legend>
                <input class="checkbox" checked disabled type="checkbox" id="corporate" value="corporate" name="expansions">
-               <label for="corporate" class="expansion btn-expansions"><div class="icon corporate-era-icon icon-align"></div></label>
+               <label style="cursor:not-allowed;filter:none;" for="corporate" class="expansion btn-expansions"><div class="icon corporate-era-icon icon-align"></div></label>
                <input class="checkbox" type="checkbox" id="venus" value="VENUS" name="expansions">
                <label for="venus" class="expansion btn-expansions"><div class="icon venus-icon icon-align"></div></label>
                <input class="checkbox" type="checkbox" id="prelude" value="PRELUDE" name="expansions">
@@ -166,7 +166,7 @@
             </label>
           </div>
 
-          <button id="CORPORATE" style="margin-left:0px;" class="button btn-expansion button-icon corporate-era-icon icon  " onclick="filterFunction(id)" title="filter Corporate Era games"></button>
+          <button disabled id="CORPORATE" style="margin-left:0px;" class="active button btn-expansion button-icon corporate-era-icon icon  " onclick="filterFunction(id)" title="filter Corporate Era games"></button>
           <button id="VENUS" class="button btn-expansion button-icon venus-icon icon  " onclick="filterFunction(id)" title="filter Venus Next games"></button>
           <button id="PRELUDE" class="button btn-expansion button-icon prelude-icon icon  " onclick="filterFunction(id)" title="filter Prelude games"></button>
           <button id="COLONIES" class="button btn-expansion button-icon colonies-icon icon " onclick="filterFunction(id)" title="filter Colonies games"></button>
