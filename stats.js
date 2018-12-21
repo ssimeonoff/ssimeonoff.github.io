@@ -23,6 +23,7 @@ firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
     console.log("logged")
+    document.getElementById("mygames").disabled = false;
     document.getElementById("title-auth").innerHTML = user.displayName + " - " + user.email
   } else {
     // No user is signed in.
@@ -51,6 +52,20 @@ function filterFunction(id) {
   // filter games from it and return/create new array "games"
   //toggling active buttons state
   games = GAMES_ALL;
+  //get the authed user
+  user = firebase.auth().currentUser;
+
+  //toggling active buttons state
+  clickedElementID = document.getElementById(id);
+  if (clickedElementID != null) {clickedElementID.classList.toggle("active");}
+
+  //filter by user email (my games only)
+  btnMyGames = document.querySelectorAll(".btn-mygames-solo.active");
+  if (btnMyGames.length == 1 ) {
+    games = games.filter(function(el) {
+      return el.email == user.email;
+    });
+  }
 
   clickedElementID = document.getElementById(id);
   if (clickedElementID != null) {clickedElementID.classList.toggle("active");}

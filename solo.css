@@ -199,6 +199,7 @@ input::placeholder {
 .drop-down:disabled {
   opacity: 0.3;
   box-shadow: none;
+  cursor: not-allowed;
 }
 
 .btn-expansions {
@@ -231,20 +232,6 @@ input::placeholder {
 
 .btn-expansions:hover {
   filter: brightness(120%);
-}
-
-.btn-mygames-solo {
-  width: 120px;
-  height: 40px;
-  font-size: 16px;
-  line-height: 36px;
-  margin-left: 6px;
-  color:#222;
-}
-
-.btn-mygames-solo:disabled {
-  opacity: 0.5;
-  box-shadow: none;
 }
 
 .map {
@@ -314,7 +301,9 @@ input::placeholder {
 #submit:disabled {
   box-shadow: none;
   opacity: 0.6;
+  cursor: not-allowed;
 }
+
 
 
 .checkbox{

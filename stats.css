@@ -38,7 +38,7 @@
 .filters-div {
   width: 446px;
   line-height: 40px;
-  height: 218px;
+  height: 270px;
   text-align: left;
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
@@ -1024,6 +1024,11 @@
   color: white;
 }
 
+.button:disabled {
+  cursor: not-allowed;
+  filter: none !important;
+}
+
 .change-colours {
   border: 2px solid rgb(137,137,137) !important;
   box-shadow: inset 0 1px 3px 1px black !important;
@@ -1163,7 +1168,7 @@
   border-right: 2px solid rgb(137,137,137);
   box-shadow: 0 2px 4px 1px rgba(0,0,0,.8);
   height: 40px;
-  width: 120px;
+  width: 123px;
   margin-left: 5px;
   cursor: pointer;
   text-align: center;
@@ -1178,6 +1183,28 @@
 .btn-reset:active, .btn-grid-cell:active {
   box-shadow: 0 1px 1px 0px rgba(0,0,0,.8) !important;
   transform: translate(0,2px);
+}
+
+.btn-mygames-solo {
+  width: 433px;
+  height: 40px;
+  font-size: 16px;
+  line-height: 36px;
+  margin-left: 7px;
+  margin-top: 5px;
+  margin-bottom: 7px;
+  color:#222;
+}
+
+.btn-mygames-solo:hover {
+  cursor: pointer;
+  filter: brightness(120%);
+}
+
+.btn-mygames-solo:disabled {
+  opacity: 0.5;
+  box-shadow: none;
+  cursor: not-allowed;
 }
 
 .crossed::before {

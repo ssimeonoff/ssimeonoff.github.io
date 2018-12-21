@@ -39,7 +39,11 @@
           <img src="images/file.png" width="26" height="26" style="margin-top:3px;">
         </div>
       </div>
+
       <div class="filters-div">
+
+        <button disabled id="mygames" class="button btn-mygames-solo" onclick="filterFunction(id)" title="filter my games"><div>MY GAMES ONLY</div></button>
+        <br>
 
         <div class="onoffswitch">
           <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="expansions_switch" onclick="filterFunction(id)" >
@@ -59,7 +63,7 @@
         <button style="margin-left:6px;" id="DRAFT" class="button btn-draft" onclick="filterFunction(id)" title="filter Draft games" value="YES">DRAFT</button>
         <button id="NO-DRAFT" class="button btn-draft" onclick="filterFunction(id)" title="filter No Draft games" value="NO">DRAFT<div class="crossed"></div></button>
 
-        <button id="THARSIS"  style="margin-left:15px;" class="button btn-map" onclick="filterFunction(id)" title="filter games played on THARSIS"><div>THARSIS</div></button>
+        <button id="THARSIS"  style="margin-left:16px;" class="button btn-map" onclick="filterFunction(id)" title="filter games played on THARSIS"><div>THARSIS</div></button>
         <button id="HELLAS" class="button btn-map" onclick="filterFunction(id)" title="filter games played on HELLAS"><div style="background:#3b9ae3">HELLAS</div></button>
         <button id="ELYSIUM" class="button  btn-map" onclick="filterFunction(id)" title="filter games played on ELYSIUM"><div style="background:#09aa09">ELYSIUM</div></button>
         <br>
@@ -67,7 +71,7 @@
         <button style="margin-left:6px;" id="WGT" class="button btn-wgt" onclick="filterFunction(id)" title="filter games with World Government Terraforming" value="YES">WGT</button>
         <button id="NO-WGT" class="button btn-wgt" onclick="filterFunction(id)" title="filter games without World Government Terraforming" value="NO" >WGT<div class="crossed"></div></button>
 
-        <select style="margin-left:15px;" id="generation1" class="drop-down-generation" name="generations" size="1" onchange="changeColours(id); filterFunction(id)">
+        <select style="margin-left:16px;" id="generation1" class="drop-down-generation" name="generations" size="1" onchange="changeColours(id); filterFunction(id)">
         <option disabled value="NOT SELECTED" selected>GEN FROM</option>
         <option value="4">GEN 4</option>
         <option value="5">GEN 5</option>
@@ -155,37 +159,6 @@
 
     <div class="generalStats-history">
       <div class="grid-cell title-cell" style="width:456px;">HISTORY</div><div></div>
-      <div class="grid-cell-history">
-        <div class="history-section-time">
-          <div class="flag-div"></div>
-          <div class="history-section-expansions">
-          </div>
-          <div class="history-section-time-value"></div>
-        </div>
-        <div class="history-section-generation"></div>
-        <div class="history-section-corporation"></div><div class="history-section-score"></div>
-        <div class="history-section-corporation"></div><div class="history-section-score"></div>
-        <div class="history-section-corporation"></div><div class="history-section-score"></div>
-        <div class="history-section-corporation"></div><div class="history-section-score"></div>
-        <div class="history-section-corporation"></div><div class="history-section-score"></div>
-        <div class="history-section-submitted"></div>
-      </div>
-
-      <div class="grid-cell-history">
-        <div class="history-section-time">
-          <div class="flag-div"></div>
-          <div class="history-section-expansions">
-          </div>
-          <div class="history-section-time-value"></div>
-        </div>
-        <div class="history-section-generation"></div>
-        <div class="history-section-corporation"></div><div class="history-section-score"></div>
-        <div class="history-section-corporation"></div><div class="history-section-score"></div>
-        <div class="history-section-corporation"></div><div class="history-section-score"></div>
-        <div class="history-section-corporation"></div><div class="history-section-score"></div>
-        <div class="history-section-corporation"></div><div class="history-section-score"></div>
-        <div class="history-section-submitted"></div>
-      </div>
 
       <div class="grid-cell-history">
         <div class="history-section-time">
