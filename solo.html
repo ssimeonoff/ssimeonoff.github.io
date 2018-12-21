@@ -154,16 +154,25 @@
           </div>
         </div>
         <div class="filters-div" style="height: 175px;">
-          <button id="CORPORATE" disabled style="margin-left:13px;" class=" active button btn-expansion button-icon corporate-era-icon icon  " onclick="filterFunction(id)" title="filter Corporate Era games"></button>
+
+          <div class="onoffswitch">
+            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="expansions_switch" onclick="filterFunction(id)" >
+            <label class="onoffswitch-label" for="expansions_switch">
+              <span class="onoffswitch-inner"></span>
+              <span class="onoffswitch-switch"></span>
+            </label>
+          </div>
+
+          <button id="CORPORATE" disabled class=" active button btn-expansion button-icon corporate-era-icon icon  " onclick="filterFunction(id)" title="filter Corporate Era games"></button>
           <button id="VENUS" class="button btn-expansion button-icon venus-icon icon  " onclick="filterFunction(id)" title="filter Venus Next games"></button>
           <button id="PRELUDE" class="button btn-expansion button-icon prelude-icon icon  " onclick="filterFunction(id)" title="filter Prelude games"></button>
           <button id="COLONIES" class="button btn-expansion button-icon colonies-icon icon " onclick="filterFunction(id)" title="filter Colonies games"></button>
           <br>
-          <button id="THARSIS"  style="margin-left:15px;" class="button btn-map" onclick="filterFunction(id)" title="filter games played on THARSIS"><div>THARSIS</div></button>
+          <button id="THARSIS"  style="margin-left:16px;" class="button btn-map" onclick="filterFunction(id)" title="filter games played on THARSIS"><div>THARSIS</div></button>
           <button id="HELLAS" class="button btn-map" onclick="filterFunction(id)" title="filter games played on HELLAS"><div style="background:#3b9ae3">HELLAS</div></button>
           <button id="ELYSIUM" class="button  btn-map" onclick="filterFunction(id)" title="filter games played on ELYSIUM"><div style="background:#09aa09">ELYSIUM</div></button>
 
-          <button disabled id="mygames" class="button btn-mygames-solo" onclick="filterFunction(id)" title="filter my games"><div>MY<br>GAMES</div></button>
+          <button disabled id="mygames" class="button btn-mygames-solo" onclick="filterFunction(id)" title="filter my games"><div>MY GAMES</div></button>
           <br>
           <select id="corporation1" class="drop-down" name="corporations" size="1" onchange="changeColours(id); filterFunction(id)">
           <option value="NOT SELECTED" selected>NOT SELECTED</option>
