@@ -50,26 +50,11 @@ function snapshotToArray(snapshot) {
 function filterFunction(id) {
   // getting the constant GAMES_ALL
   // filter games from it and return/create new array "games"
-  //toggling active buttons state
   games = GAMES_ALL;
-
-  user = firebase.auth().currentUser;
 
   //toggling active buttons state
   clickedElementID = document.getElementById(id);
   if (clickedElementID != null) {clickedElementID.classList.toggle("active");}
-
-  //filter by user email (my games only)
-  btnMyGames = document.querySelectorAll(".btn-mygames-solo.active");
-  if (btnMyGames.length == 1 ) {
-    games = games.filter(function(el) {
-      return el.email == user.email;
-    });
-  }
-
-
-
-
 
   //filtering by Maps
   btnMap = document.querySelectorAll(".btn-map.active");
@@ -193,6 +178,15 @@ function filterFunction(id) {
   } else if (btnWGT.length == 2) {
     games = games.filter(function(el) {
       return el.wgt ==  "YES" || el.wgt ==  "NO"
+    });
+  }
+
+  user = firebase.auth().currentUser;
+  //filter by user email (my games only)
+  btnMyGames = document.querySelectorAll(".btn-mygames-solo.active");
+  if (btnMyGames.length == 1 ) {
+    games = games.filter(function(el) {
+      return el.email == user.email;
     });
   }
 
