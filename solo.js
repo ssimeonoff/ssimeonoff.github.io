@@ -45,6 +45,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     document.getElementById("title-auth").innerHTML = user.displayName + " - " + user.email
     document.getElementById("mygames").disabled = false;
     if (user.email == "s.ssimeonoff@gmail.com") {
+      console.log("majk")
       document.getElementById("lossSection").classList.add("boyMajk");
     }
   } else {
