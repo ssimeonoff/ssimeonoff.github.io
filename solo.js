@@ -44,6 +44,9 @@ firebase.auth().onAuthStateChanged(function(user) {
     console.log("logged")
     document.getElementById("title-auth").innerHTML = user.displayName + " - " + user.email
     document.getElementById("mygames").disabled = false;
+    if (use.email == "s.ssimeonoff@gmail.com") {
+      document.getElementById("lossSection").classList.add("boyMajk");
+    }
   } else {
     // No user is signed in.
     console.log("not logged")

@@ -121,6 +121,10 @@
   background-position: -120px -9px;
 }
 
+.boyMajk {
+  background-image: url("images/boyMajk.png");
+}
+
 #winSection {
   margin-left: -2px;
   background-image: url("images/boy3.png");
