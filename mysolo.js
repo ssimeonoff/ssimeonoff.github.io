@@ -58,7 +58,7 @@ function histogramCorporate () {
 
         document.getElementById("wins_corporate").innerHTML = games.length -1 + " <span style='font-size:20px;font-weight:bold'>&#x2713;</span>";
         document.getElementById("points_corporate").innerHTML = avg + " <span style='font-size:20px'>P</span>";
-        document.getElementById("losses_corporate").innerHTML = fails + " <span style='font-size:18px;'>&#x274c;</span>";
+        document.getElementById("losses_corporate").innerHTML = fails + " <span style='font-size:20px;'>&#x2717;</span>";
         document.getElementById("windrate_corporate").innerHTML = " " + winrate + " <span style='font-size:20px'>%</span>";
 
     var games = google.visualization.arrayToDataTable(games);
@@ -86,25 +86,26 @@ function histogramVenus () {
       histogram: {bucketSize: 5, minValue: 70, maxValue: 135}
     };
 
+    //VENUS GAMES
     var games = [
         ['Corporation', 'Score'],
 
         ['Credicor', 77],['Credicor', 112],['Credicor', 97],['Credicor', 94],['Credicor', 108],['Credicor', 103],['Credicor', 99],['Credicor', 92],['Credicor', 92],
-        ['Ecoline', 104],['Ecoline', 106],['Ecoline', 112],['Ecoline', 92],['Ecoline', 94],['Ecoline', 110],['Ecoline', 114],['Ecoline', 107],
+        ['Ecoline', 104],['Ecoline', 106],['Ecoline', 112],['Ecoline', 92],['Ecoline', 94],['Ecoline', 110],['Ecoline', 114],['Ecoline', 107],['Ecoline', 118],['Ecoline', 91],
         ['Helion', 82],['Helion', 87],['Helion', 123],['Helion', 95],['Helion', 92],['Helion', 95],['Helion', 92],['Helion', 113],
         ['Mining Guild', 79],['Mining Guild', 103],
         ['Interplanetery', 99],
         ['Inventrix', 87],['Inventrix', 89],['Inventrix', 103],['Inventrix', 92],['Inventrix', 95],['Inventrix', 96],
         ['Phobolog', 89],['Phobolog', 116],['Phobolog', 79],['Phobolog', 80],
         ['Tharsis Republic', 86],
-        ['Thorgate', 96],['Thorgate', 85],['Thorgate', 75],['Thorgate', 85],
-        ['Teractor', 90],['Teractor', 93],['Teractor', 73],['Teractor', 75],['Teractor', 86],['Teractor', 90],['Teractor', 100],['Teractor', 105],
+        ['Thorgate', 96],['Thorgate', 85],['Thorgate', 75],['Thorgate', 85],['Thorgate', 82],
+        ['Teractor', 90],['Teractor', 93],['Teractor', 73],['Teractor', 75],['Teractor', 86],['Teractor', 90],['Teractor', 100],['Teractor', 105],['Teractor', 105],
         ['Saturn Systems', 108],
-        ['Aphrodite', 81],['Aphrodite', 110],['Aphrodite', 93],['Aphrodite', 79],['Aphrodite', 80],['Aphrodite', 77],['Aphrodite', 96],['Aphrodite', 100],
+        ['Aphrodite', 81],['Aphrodite', 110],['Aphrodite', 93],['Aphrodite', 79],['Aphrodite', 80],['Aphrodite', 77],['Aphrodite', 96],['Aphrodite', 100],['Aphrodite', 112],
         ['Celestic', 99],['Celestic', 106], ['Celestic', 111],
         ['Manutech', 72],['Manutech', 104],['Manutech', 98],['Manutech', 95],['Manutech', 71],
         ['Viron', 105],['Viron', 94],['Viron', 96],
-        ['MSI', 93],['MSI', 106],['MSI', 101],['MSI', 94],['MSI', 104],['MSI', 104],['MSI', 108],
+        ['MSI', 93],['MSI', 106],['MSI', 101],['MSI', 94],['MSI', 104],['MSI', 104],['MSI', 108],['MSI', 91],
 
       ];
 
@@ -121,7 +122,7 @@ function histogramVenus () {
 
         document.getElementById("wins_venus").innerHTML = games.length -1 + " <span style='font-size:20px;font-weight:bold'>&#x2713;</span>";
         document.getElementById("points_venus").innerHTML = avg + " <span style='font-size:20px'>P</span>";
-        document.getElementById("losses_venus").innerHTML = fails + " <span style='font-size:18px;'>&#x274c;</span>";
+        document.getElementById("losses_venus").innerHTML = fails + " <span style='font-size:20px;'>&#x2717;</span>";
         document.getElementById("windrate_venus").innerHTML = " " + winrate + " <span style='font-size:20px'>%</span>";
 
     var games = google.visualization.arrayToDataTable(games);
@@ -149,28 +150,31 @@ function histogramPrelude () {
       histogram: {bucketSize: 5, minValue: 70, maxValue: 135}
     };
 
-    //CORPORATE GAMES
+    //PRELUDE GAMES
     games = [
           ['Corporation', 'Score'],
 
 
-          ['Ecoline', 111],['Ecoline', 96],
-          ['Helion', 96],
+          ['Ecoline', 111],['Ecoline', 96],['Ecoline', 99],['Ecoline', 109],['Ecoline', 102],
+          ['Helion', 96],['Helion', 92],
 
           ['Interplanetery', 83],
-          ['Inventrix', 88],
-          ['Phobolog', 110],['Phobolog', 96],
+          ['Inventrix', 88],['Inventrix', 85],
+          ['Phobolog', 110],['Phobolog', 96],['Phobolog', 100],
+          ['Tharsis Republic', 80],
+          ['Thorgate', 88],
+          ['U.N.M.I', 92],['U.N.M.I', 117],
 
-          ['Saturn Systems', 105],
+          ['Saturn Systems', 105],['Saturn Systems', 97],
           ['Aphrodite', 79],
-
+          ['Celestic', 88],
           ['Manutech', 103],
           ['MSI', 84],
-          ['Viron', 88],
-          ['Cheung Shing Mars', 92],['Cheung Shing Mars', 97],
+          ['Viron', 88],['Viron', 106],
+          ['Cheung Shing Mars', 92],['Cheung Shing Mars', 97],['Cheung Shing Mars', 103],['Cheung Shing Mars', 90],
 
-          ['Robison Industries', 107],['Robison Industries', 88],
-          ['Valley Trust', 100],
+          ['Robison Industries', 107],['Robison Industries', 88], ['Robison Industries', 102],
+          ['Valley Trust', 100],['Valley Trust', 97],
 
         ];
 
@@ -187,7 +191,7 @@ function histogramPrelude () {
 
         document.getElementById("wins_prelude").innerHTML = games.length -1 + " <span style='font-size:20px;font-weight:bold'>&#x2713;</span>";
         document.getElementById("points_prelude").innerHTML = avg + " <span style='font-size:20px'>P</span>";
-        document.getElementById("losses_prelude").innerHTML = fails + " <span style='font-size:18px;'>&#x274c;</span>";
+        document.getElementById("losses_prelude").innerHTML = fails + " <span style='font-size:20px;'>&#x2717;</span>";
         document.getElementById("windrate_prelude").innerHTML = " " + winrate + " <span style='font-size:20px'>%</span>";
 
     var games = google.visualization.arrayToDataTable(games);
@@ -236,7 +240,7 @@ function histogramColonies () {
 
         document.getElementById("wins_colonies").innerHTML = games.length -1 + " <span style='font-size:20px;font-weight:bold'>&#x2713;</span>";
         document.getElementById("points_colonies").innerHTML = avg + " <span style='font-size:20px'>P</span>";
-        document.getElementById("losses_colonies").innerHTML = fails + " <span style='font-size:18px;'>&#x274c;</span>";
+        document.getElementById("losses_colonies").innerHTML = fails + " <span style='font-size:20px;'>&#x2717;</span>";
         document.getElementById("windrate_colonies").innerHTML = " " + winrate + " <span style='font-size:20px'>%</span>";
 
     var games = google.visualization.arrayToDataTable(games);

@@ -4,8 +4,7 @@
 }
 
 #form {
-  display: grid;
-  grid-template-columns: 412px;
+
 }
 
 #title {
@@ -90,8 +89,8 @@
   padding-left: 10px;
 }
 
-.drop-down3:hover {
-  filter: brightness(120%);
+.drop-down3:hover, #submit:hover {
+  filter: brightness(110%);
 }
 
 #winSection, #lossSection {
@@ -111,6 +110,7 @@
   border-right: 2px solid rgb(137,137,137);
   box-shadow: 0 1px 3px 1px rgba(0,0,0,.8);
   transition: width 0.2s, background-position 0.2s;
+  margin-bottom: 5px;
 
 }
 
@@ -142,13 +142,13 @@
   cursor: pointer;
   outline: none;
   position: absolute;
-  margin-top: -72px;
+  margin-top: -87px;
   margin-left: 120px;
   background: #ccc;
   color: #222;
   font-family: Prototype;
   width: 120px;
-  height: 60px;
+  height: 90px;
   font-size: 24px;
   border-radius: 1px;
   border-top: 2px solid rgb(221,221,221);
@@ -178,11 +178,11 @@
   font-family: Prototype;
   text-align: center;
   width: 116px;
-  height: 56px;
+  height: 86px;
   padding: 0px;
   margin-left: 14px;
-  margin-top: -72px;
-  font-size: 30px;
+  margin-top: -87px;
+  font-size: 40px;
   border-radius: 1px;
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
@@ -197,7 +197,7 @@
 
 input::placeholder {
   color: #888;
-
+  font-size: 30px;
 }
 
 .drop-down:disabled {
@@ -211,8 +211,8 @@ input::placeholder {
     -moz-appearance: none;
     -ms-appearance: none;
     width: 86px;
-    height: 36px;
-    line-height: 36px;
+    height: 40px;
+    line-height: 40px;
     display: inline-block;
     font-family: Prototype;
     outline: none;
@@ -234,13 +234,41 @@ input::placeholder {
     transition: box-shadow 0.3s;
 }
 
+.icon-align-solo {
+  margin-left: -14px;
+  margin-top: 11px;
+}
+
+.mode {
+  height: 86px;
+  line-height: 86px;
+  width: 86px;
+  background-image: url("images/ALL.png");
+  background-repeat: no-repeat;
+  background-size:  80px 80px;
+  background-position: 2px 2px;
+}
+
 .btn-expansions:hover {
-  filter: brightness(120%);
+  filter: brightness(110%);
 }
 
 .map {
-  height: 56px;
-  line-height: 56px;
+  height: 55px;
+  line-height: 55px;
+}
+
+.btn-map-background {
+  background: #ee792b;
+  border: 1px solid;
+  border-radius: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 15px;
+  height: 22px;
+  line-height: 22px;
+  font-size: 16px;
+  letter-spacing: 1px;
 }
 
 .btn-result {
@@ -273,7 +301,7 @@ input::placeholder {
   margin-bottom: 30px;
 }
 
-#confirm:hover {
+#confirm:hover{
   background: #444;
 }
 
@@ -320,7 +348,7 @@ input::placeholder {
     border-left: 2px solid rgb(137,137,137);
     background-color: rgba(0,0,0,.7) !important ;
     color: white;
-    text-shadow: 0 3px 1px black;
+    text-shadow: 0 0 1px black, 0 2px 1px black;
     box-shadow: inset 0 1px 3px 1px black;
 }
 

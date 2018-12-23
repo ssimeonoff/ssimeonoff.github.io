@@ -163,7 +163,6 @@
  }
 
 .failed-number {
-  color: white;
-  text-shadow: 0 0 2px black, 0 1px 1px black;
-  filter: drop-shadow( 0 0 5px red);
+  color: #cc3333;
+  font-size: 24px;
 }

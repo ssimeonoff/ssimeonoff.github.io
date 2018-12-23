@@ -71,7 +71,8 @@
     color: #cc3333;
 }
 .failed::after {
-  content: "\274c";
+  content: "\2717";
+  font-size: 20px !important;
 }
 
 .background-gold {

@@ -325,7 +325,7 @@ function activateWin() {
   el2.style.width = "100px";
   el2.style.backgroundPositionX = "-120px";
   el2.classList.remove("change-colours3");
-  document.getElementById("lossLabel").innerHTML = "LOSS";
+  document.getElementById("lossLabel").innerHTML = "&#x2717;";
   document.getElementById("steps").style.display ="none";
   document.getElementById("steps").style.transform = "scale(0)";
   document.getElementById("corporation-score").style.display = "block";
@@ -349,7 +349,7 @@ function activateLoss() {
   el2.style.width = "100px";
   el2.style.backgroundPositionX = "250px";
   el2.classList.remove("change-colours3");
-  document.getElementById("winLabel").innerHTML = "WIN";
+  document.getElementById("winLabel").innerHTML = "&#x2713;";
   document.getElementById("steps").style.display ="block";
   document.getElementById("corporation-score").style.display = "none";
   document.getElementById("corporation-score").style.transform = "scale(0)";
@@ -816,7 +816,7 @@ function histogram () {
       legend: { position: 'none' },
       fontSize: 12,
       backgroundColor: "transparent",
-      vAxis: { gridlines: { count: 0}, maxValue:100 },
+      vAxis: { gridlines: { count: 0}, maxValue:30},
       hAxis: {textStyle : {fontSize: 8, fontName: 'Prototype'}},
       bar: {gap: 1},
       chartArea:{left:0,bottom:20,top:0,width:460},
@@ -831,13 +831,12 @@ function histogram () {
       legend: { position: 'none' },
       fontSize: 12,
       backgroundColor: "transparent",
-      hAxis: { gridlines: { count: 0}, maxValue:20 , textPosition: 'none'},
-      vAxis: {textStyle : {fontSize: 10, fontName: 'Prototype'}, direction: -1, minValue:1, maxValue:9},
+      vAxis: { gridlines: { count: 0}, maxValue:20 , textPosition: 'none'},
+      hAxis: {textStyle : {fontSize: 10, fontName: 'Prototype'},minValue:1, maxValue:9},
       bar: {gap: 1},
-      chartArea:{left:25,bottom:10,top:10,width:460},
+      chartArea:{left:0,bottom:20,top:00,width:220, height:170},
       colors: ['#661919','#888888'],
       histogram: {bucketSize: 1, minValue: 0, maxValue: 10},
-      orientation: 'vertical'
     };
 
     var chart = new google.visualization.Histogram(document.getElementById('histogram'));
