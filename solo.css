@@ -245,8 +245,8 @@ input::placeholder {
   width: 86px;
   background-image: url("images/ALL.png");
   background-repeat: no-repeat;
-  background-size:  80px 80px;
-  background-position: 2px 2px;
+  background-size:  70px 70px;
+  background-position: 8px 8px;
 }
 
 .btn-expansions:hover {

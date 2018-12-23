@@ -296,11 +296,11 @@ function resetAll () {
   }
     document.getElementById("winSection").style.backgroundPosition = "250px 0px";
     document.getElementById("winSection").style.width = "177px";
-    document.getElementById("winLabel").innerHTML = "WIN";
+    document.getElementById("winLabel").innerHTML = "&#x2713;";
 
     document.getElementById("lossSection").style.backgroundPosition = "-120px -9px";
     document.getElementById("lossSection").style.width = "177px";
-    document.getElementById("lossLabel").innerHTML = "LOSS";
+    document.getElementById("lossLabel").innerHTML = "&#x2717;";
 
     document.getElementById("corporation-score").style.display = "none";
     document.getElementById("corporation-score").style.transform = "scale(0)";
