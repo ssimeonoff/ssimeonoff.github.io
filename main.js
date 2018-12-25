@@ -270,7 +270,7 @@ function pushHistory(email) {
   });
 
   //clear the sections
-  var x = document.querySelectorAll(".flag-div, .history-section-time-value, .history-section-corporation, .history-section-score, .history-section-generation, .history-section-expansions")
+  var x = document.querySelectorAll(".flag-div,.history-section-submitted,.history-section-map-value, .history-section-corporation, .history-section-time, .history-section-score, .history-section-generation, .history-section-expansions")
   for (i = 0; i < x.length; i++) {
     x[i].innerHTML = "";
   }
@@ -291,14 +291,19 @@ function pushHistory(email) {
 
   for(i=0; i < gameSections.length && i < games.length ; i++) {
 
-    //add dark background to the headers
-    gameSections[i].querySelector(".history-section-time").classList.add("dark-background");
-    gameSections[i].querySelector(".history-section-generation").classList.add("dark-background");
-
+    if (games.length-i > 0) {
+      //add dark background to the headers
+      gameSections[i].querySelector(".history-section-header").classList.add("dark-background");
+      gameSections[i].querySelector(".history-section-generation").classList.add("dark-background");
+    }
     //game timestamp in seconds
     timestamp = games[games.length-1-i]["timestamp"];
-    time = now - timestamp;
-    gameSections[i].querySelector(".history-section-time-value").innerHTML = compareTime(time);
+    if (timestamp == undefined) {gameSections[i].querySelector(".history-section-time").innerHTML = "-- ----"}
+    else {
+      time = now - timestamp;
+      gameSections[i].querySelector(".history-section-time").innerHTML = compareTime(time);
+
+    }
 
     //the corporations array
     corporationsSections = gameSections[i].querySelectorAll(".history-section-corporation");
@@ -308,6 +313,7 @@ function pushHistory(email) {
     var winnerIndex = indexOfMax(scoresArray);
     var winningScore = scoresArray[winnerIndex];
 
+    //highlight the winner
     for (j=0; j < scoresArray.length; j++) {
       corporationsSections[j].innerHTML = corporationsArray[j];
       scoresSections[j].innerHTML = scoresArray[j];
@@ -316,9 +322,6 @@ function pushHistory(email) {
         scoresSections[j].classList.add("highlight-winner");
       }
     }
-    // the generations
-    var generations =  games[games.length-1-i]["generations"];
-    gameSections[i].querySelector(".history-section-generation").innerHTML = "<div class='history-section-generation-value'>" + generations + "</div>";
 
     // the generations
     var generations =  games[games.length-1-i]["generations"];
@@ -341,6 +344,13 @@ function pushHistory(email) {
     }
     gameSections[i].querySelector(".history-section-expansions").innerHTML = expansionsHTML;
 
+    //the map
+    var map = games[games.length-1-i]["map"]
+    var el = gameSections[i].querySelector(".history-section-map")
+    if (map == "THARSIS") {el.innerHTML = "<div class='history-section-map-value' style='background:#ee792b'>"+map+"</div>"}
+    if (map == "HELLAS") {el.innerHTML = "<div class='history-section-map-value' style='background:#3b9ae3'>"+map+"</div>"}
+    if (map == "ELYSIUM") {el.innerHTML = "<div class='history-section-map-value' style='background:#09aa09'>"+map+"</div>"}
+
     //display the flag
     country =  games[games.length-1-i]["country"];
     if (country != undefined && country.length > 1) {
@@ -350,14 +360,24 @@ function pushHistory(email) {
       countryDivContent = '<img class="flag" src="flags/EU.png" title="EU">';
       gameSections[i].querySelector(".flag-div").innerHTML = countryDivContent;
     }
+    //add the key as title
+    gameSections[i].title = games[games.length-1-i]["key"];
+
+    //add name of the submitter
+    var el = gameSections[i].querySelector(".history-section-submitted")
+    if (games[games.length-1-i]["name"] != undefined) {
+      if (games[games.length-1-i]["name"].length < 2) {el.innerHTML = ""}
+      else {el.innerHTML = games[games.length-1-i]["name"]}
+    }
+
   }
 }
 
 function compareTime(time) {
   if (time >= 0 && time < 120) {return "now"}
-  if (time >= 120 && time < 7200) {return Math.floor(time/60) + " mins"}
-  if (time >= 7200 && time < 172800) {return Math.floor(time/3600) + " hours"}
-  if (time >= 172800) {return Math.floor(time/86400) + " days"}
+  if (time >= 120 && time < 7200) {return Math.floor(time/60) + " m"}
+  if (time >= 7200 && time < 172800) {return Math.floor(time/3600) + " h"}
+  if (time >= 172800) {return Math.floor(time/86400) + " d"}
 }
 
 function indexOfMax(arr) {

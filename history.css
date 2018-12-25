@@ -4,8 +4,8 @@
   border-left: 1px solid rgb(221,221,221);
   border-bottom: 1px solid rgb(137,137,137);
   border-right: 1px solid rgb(137,137,137);
-  height: 25px;
-  line-height: 25px;
+  height: 18px;
+  line-height: 18px;
 }
 
 .history-section-corporation2 {
@@ -19,8 +19,8 @@
   border-left: 1px solid rgb(221,221,221);
   border-bottom: 1px solid rgb(137,137,137);
   border-right: 1px solid rgb(137,137,137);
-  height: 25px;
-  line-height: 25px;
+  height: 18px;
+  line-height: 18px;
 }
 
 .history-section-score2 {
@@ -85,8 +85,8 @@
 }
 .history-section-map {
   display: inline-block;
-  margin-left: -5px;
-  width: 70px;
+  margin-left: -4px;
+  width: 66px;
   line-height: 16px;
   text-align: center;
   font-size: 14px;
@@ -96,6 +96,7 @@
 
 .history-section-map-value {
   border-radius: 10px;
+  width: 66px;
 }
 
 .history-section-generation {
