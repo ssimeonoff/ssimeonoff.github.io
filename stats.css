@@ -721,7 +721,7 @@
   margin-left:4px;
   font-weight:bold;
   margin-top:6px;
-  text-shadow: 0 0 1px black, 6px 3px 5px  grey;
+  text-shadow: 0 0 2px black, 6px 3px 5px  grey;
 }
 
 .celestic {
@@ -1096,7 +1096,6 @@
   width: 96px;
   cursor: pointer;
   color:white;
-  letter-spacing: 1px;
   text-align: center;
   color: #222;
   margin-left: -3px;
@@ -1108,6 +1107,7 @@
 
 .btn-map > div {
   line-height: 16px;
+  font-size: 14px;
   background: #ee792b;
   border:1px solid;
   width: 68px;

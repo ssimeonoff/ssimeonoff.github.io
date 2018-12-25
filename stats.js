@@ -758,7 +758,7 @@ function sortByRule(players, sortRule) {
 function pushHistory() {
 
   //clear the sections
-  var x = document.querySelectorAll(".flag-div,.history-section-time-value, .history-section-corporation, .history-section-score, .history-section-generation, .history-section-expansions")
+  var x = document.querySelectorAll(".flag-div,.history-section-submitted,.history-section-map-value, .history-section-corporation, .history-section-time, .history-section-score, .history-section-generation, .history-section-expansions")
   for (i = 0; i < x.length; i++) {
     x[i].innerHTML = "";
   }
@@ -781,15 +781,15 @@ function pushHistory() {
 
     if (games.length-i > 0) {
       //add dark background to the headers
-      gameSections[i].querySelector(".history-section-time").classList.add("dark-background");
+      gameSections[i].querySelector(".history-section-header").classList.add("dark-background");
       gameSections[i].querySelector(".history-section-generation").classList.add("dark-background");
     }
     //game timestamp in seconds
     timestamp = games[games.length-1-i]["timestamp"];
-    if (timestamp == undefined) {gameSections[i].querySelector(".history-section-time-value").innerHTML = "-- ----"}
+    if (timestamp == undefined) {gameSections[i].querySelector(".history-section-time").innerHTML = "-- ----"}
     else {
       time = now - timestamp;
-      gameSections[i].querySelector(".history-section-time-value").innerHTML = compareTime(time);
+      gameSections[i].querySelector(".history-section-time").innerHTML = compareTime(time);
 
     }
 
@@ -832,6 +832,13 @@ function pushHistory() {
     }
     gameSections[i].querySelector(".history-section-expansions").innerHTML = expansionsHTML;
 
+    //the map
+    var map = games[games.length-1-i]["map"]
+    var el = gameSections[i].querySelector(".history-section-map")
+    if (map == "THARSIS") {el.innerHTML = "<div class='history-section-map-value' style='background:#ee792b'>"+map+"</div>"}
+    if (map == "HELLAS") {el.innerHTML = "<div class='history-section-map-value' style='background:#3b9ae3'>"+map+"</div>"}
+    if (map == "ELYSIUM") {el.innerHTML = "<div class='history-section-map-value' style='background:#09aa09'>"+map+"</div>"}
+
     //display the flag
     country =  games[games.length-1-i]["country"];
     if (country != undefined && country.length > 1) {
@@ -856,9 +863,9 @@ function pushHistory() {
 
 function compareTime(time) {
   if (time >= 0 && time < 120) {return "now"}
-  if (time >= 120 && time < 7200) {return Math.floor(time/60) + " mins"}
-  if (time >= 7200 && time < 172800) {return Math.floor(time/3600) + " hours"}
-  if (time >= 172800) {return Math.floor(time/86400) + " days"}
+  if (time >= 120 && time < 7200) {return Math.floor(time/60) + " m"}
+  if (time >= 7200 && time < 172800) {return Math.floor(time/3600) + " h"}
+  if (time >= 172800) {return Math.floor(time/86400) + " d"}
 }
 
 function changeColours (id) {
