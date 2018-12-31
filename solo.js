@@ -239,7 +239,7 @@ function changeColours2 (id) {
 }
 
 function changeColours2a (id) {
-  if (document.getElementById(id).value < 20 || document.getElementById(id).value > 200) {
+  if (document.getElementById(id).value < 60 || document.getElementById(id).value > 200) {
     document.getElementById(id).classList.remove("change-colours2");
   }
   else {
