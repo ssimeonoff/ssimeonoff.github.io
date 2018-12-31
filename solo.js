@@ -367,7 +367,7 @@ function filterFunction(id) {
 
   //toggling active buttons state
   clickedElementID = document.getElementById(id);
-  if (clickedElementID != null) {clickedElementID.classList.toggle("active");}
+  if (clickedElementID != null) {clickedElementID.classList.toggle("active");clickedElementID.classList.toggle("inactive");}
 
   //filter by user email (my games only)
   btnMyGames = document.querySelectorAll(".btn-mygames-solo.active");
@@ -402,11 +402,12 @@ function filterFunction(id) {
   }
 
   //filter by expansions
-  btnExpansion = document.querySelectorAll(".btn-expansion.active");
 
   if (document.getElementById("expansions_switch").checked) {
     //if the toggle EXCLUDE is on
     document.getElementById("CORPORATE").classList.remove("active");
+    btnExpansion = document.querySelectorAll(".btn-expansion.active");
+
     if (btnExpansion.length == 1 ) {
       games = games.filter(function(el) {
         return el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[0].id) == -1 ||
@@ -433,16 +434,21 @@ function filterFunction(id) {
   } else {
     //if the toggle INCLUDE is on
     document.getElementById("CORPORATE").classList.add("active");
+    btnExpansion = document.querySelectorAll(".btn-expansion.active");
+    btnExpansionInactive = document.querySelectorAll(".btn-expansion.inactive");
     if (btnExpansion.length == 2 ){
       games = games.filter(function(el) {
         return el.expansions != undefined &&
-         el.expansions.indexOf(btnExpansion[1].id) > -1 && el.expansions.length == 2
+         el.expansions.indexOf(btnExpansion[1].id) > -1
+         && el.expansions.indexOf(btnExpansionInactive[0].id) == -1
+         && el.expansions.indexOf(btnExpansionInactive[1].id) == -1
       });
     } else if (btnExpansion.length == 3 ){
       games = games.filter(function(el) {
         return el.expansions != undefined &&
           el.expansions.indexOf(btnExpansion[1].id) > -1 &&
-          el.expansions.indexOf(btnExpansion[2].id) > -1 && el.expansions.length == 3
+          el.expansions.indexOf(btnExpansion[2].id) > -1 &&
+          el.expansions.indexOf(btnExpansionInactive[0].id) == -1
       });
     } else if (btnExpansion.length == 4 ){
         games = games.filter(function(el) {

@@ -692,7 +692,7 @@ function generateScoresArray (players) {
   var gamesPerPlayers = games.filter(function(el) {
     return el.players == players
   });
-  
+
   for (i = 0; i < gamesPerPlayers.length; i++) {
     var scoresArray = gamesPerPlayers[i]["scores"];
     var corporationsArray = gamesPerPlayers[i]["corporations"];
