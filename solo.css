@@ -234,6 +234,25 @@ input::placeholder {
     transition: box-shadow 0.3s;
 }
 
+.btn-grid-cell-solo {
+  font-family: Prototype;
+  cursor: pointer;
+  outline: none;
+  line-height: 32px;
+  margin: 4px;
+  margin-bottom: 6px;
+  color:#222;
+  box-shadow: 0 2px 4px 1px #444;
+  font-size: 16px;
+  background: transparent;
+  border-top: 4px solid rgb(221,221,221);
+  border-left: 4px solid rgb(221,221,221);
+  border-bottom: 4px solid rgb(137,137,137);
+  border-right: 4px solid rgb(137,137,137);
+  width:72px;
+  height: 40px;
+}
+
 .icon-align-solo {
   margin-left: -14px;
   margin-top: 11px;

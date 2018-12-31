@@ -29,8 +29,6 @@ var configMajk = {
   messagingSenderId: "163248462443"
 };
 
-
-
 firebase.initializeApp(config);
 appMajk = firebase.initializeApp(configMajk, "appMajk");
 

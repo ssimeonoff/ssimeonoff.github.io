@@ -692,7 +692,7 @@ function generateScoresArray (players) {
   var gamesPerPlayers = games.filter(function(el) {
     return el.players == players
   });
-
+  
   for (i = 0; i < gamesPerPlayers.length; i++) {
     var scoresArray = gamesPerPlayers[i]["scores"];
     var corporationsArray = gamesPerPlayers[i]["corporations"];
@@ -705,6 +705,7 @@ function generateScoresArray (players) {
       totalScores = totalScores + parseInt(scoresArray[j]);
     }
   }
+
   //pushing the AVERAGE
   document.getElementById("chart_scores_" + players).innerHTML = Math.round(totalScores/totalGames);
   return scores;
