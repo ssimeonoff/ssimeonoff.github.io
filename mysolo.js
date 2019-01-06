@@ -154,27 +154,27 @@ function histogramPrelude () {
     games = [
           ['Corporation', 'Score'],
 
-
-          ['Ecoline', 111],['Ecoline', 96],['Ecoline', 99],['Ecoline', 109],['Ecoline', 102],
-          ['Helion', 96],['Helion', 92],
+          ['Credicor', 82],
+          ['Ecoline', 111],['Ecoline', 96],['Ecoline', 99],['Ecoline', 109],['Ecoline', 102],['Ecoline', 96],['Ecoline', 114],['Ecoline', 93],
+          ['Helion', 96],['Helion', 92],['Helion', 85],
 
           ['Interplanetery', 83],
           ['Inventrix', 88],['Inventrix', 85],
-          ['Phobolog', 110],['Phobolog', 96],['Phobolog', 100],
-          ['Tharsis Republic', 80],
+          ['Phobolog', 110],['Phobolog', 96],['Phobolog', 100],['Phobolog', 73],
+          ['Tharsis Republic', 80],['Tharsis Republic', 112],
           ['Thorgate', 88],
-          ['U.N.M.I', 92],['U.N.M.I', 117],
+          ['U.N.M.I', 92],['U.N.M.I', 117],['U.N.M.I', 98],['U.N.M.I', 95],
 
-          ['Saturn Systems', 105],['Saturn Systems', 97],
-          ['Aphrodite', 79],
-          ['Celestic', 88],
+          ['Saturn Systems', 105],['Saturn Systems', 97],['Saturn Systems', 111],
+          ['Aphrodite', 79],['Aphrodite', 96],
+          ['Celestic', 88],['Celestic', 89],
           ['Manutech', 103],
-          ['MSI', 84],
+          ['MSI', 84],['MSI', 95],['MSI', 119],
           ['Viron', 88],['Viron', 106],
-          ['Cheung Shing Mars', 92],['Cheung Shing Mars', 97],['Cheung Shing Mars', 103],['Cheung Shing Mars', 90],
-
+          ['Cheung Shing Mars', 92],['Cheung Shing Mars', 97],['Cheung Shing Mars', 103],['Cheung Shing Mars', 90],['Cheung Shing Mars', 87],
+          ['Point Luna', 106],
           ['Robison Industries', 107],['Robison Industries', 88], ['Robison Industries', 102],
-          ['Valley Trust', 100],['Valley Trust', 97],
+          ['Valley Trust', 100],['Valley Trust', 97],['Valley Trust', 118],
 
         ];
 
