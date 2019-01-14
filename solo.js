@@ -544,7 +544,6 @@ function pushHistory() {
     //the mode
     var mode = games[games.length-1-i]["mode"]
     var el_mode = gameSections[i].querySelector(".mode-solo")
-    console.log(el_mode)
     if (mode == "TFALL") {el_mode.innerHTML = "<div class='history-section-mode mode-all'>ALL</div>"}
     if (mode == "TR63") {el_mode.innerHTML = "<div class='history-section-mode mode-63'>63</div>"}
 
