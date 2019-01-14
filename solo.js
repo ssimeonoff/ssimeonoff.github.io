@@ -486,7 +486,7 @@ function pushGeneralStats() {
 
 function pushHistory() {
   //clear the sections
-  var x = document.querySelectorAll(".flag-div,.history-section-time-value2, .history-section-corporation2, .history-section-score2, .history-section-generation2, .history-section-expansions2")
+  var x = document.querySelectorAll(".flag-div-solo,.history-section-time-value2, .history-section-corporation2, .history-section-score2, .history-section-generation2, .history-section-expansions2")
   for (i = 0; i < x.length; i++) {
     x[i].innerHTML = "";
   }
@@ -500,19 +500,26 @@ function pushHistory() {
     try {country =  games[games.length-1-i]["country"];}
     catch (err) {}
     if (country != undefined && country.length > 1) {
-      countryDivContent = '<img class="flag" src="flags/'+country+'.png" title="'+country+'">';
-      gameSections[i].querySelector(".flag-div").innerHTML = countryDivContent;
+      countryDivContent = '<img class="flag-solo" src="flags/'+country+'.png" title="'+country+'">';
+      gameSections[i].querySelector(".flag-div-solo").innerHTML = countryDivContent;
     } else {
-      countryDivContent = '<img class="flag" src="flags/EU.png" title="EU">';
-      gameSections[i].querySelector(".flag-div").innerHTML = countryDivContent;
+      countryDivContent = '<img class="flag-solo" src="flags/EU.png" title="EU">';
+      gameSections[i].querySelector(".flag-div-solo").innerHTML = countryDivContent;
     }
 
     //game timestamp in seconds
     try {
       timestamp = games[games.length-1-i]["timestamp"];
       time = now - timestamp;
-      gameSections[i].querySelector(".history-section-time-value2").innerHTML = compareTime(time);
     } catch (err) {}
+
+    //the name
+    var el_name = gameSections[i].querySelector(".history-section-submitted-solo")
+    if (games[games.length-1-i]["name"] != undefined) {
+      if (games[games.length-1-i]["name"].length < 2) {el_name.innerHTML = compareTime(time)}
+      else {el_name.innerHTML = compareTime(time) + " ago by " + games[games.length-1-i]["name"]}
+    }
+
 
 
     //the corporations array
@@ -527,21 +534,37 @@ function pushHistory() {
     else {scoreSection.innerHTML = "<span class='failed-number'>"+result+"</span>"}}
     catch (err) {}
 
+    //the map
+    var map = games[games.length-1-i]["map"]
+    var el = gameSections[i].querySelector(".history-section-map-solo")
+    if (map == "THARSIS") {el.innerHTML = "<div class='history-section-map-value-solo' style='background:#ee792b'>"+map+"</div>"}
+    if (map == "HELLAS") {el.innerHTML = "<div class='history-section-map-value-solo' style='background:#3b9ae3'>"+map+"</div>"}
+    if (map == "ELYSIUM") {el.innerHTML = "<div class='history-section-map-value-solo' style='background:#09aa09'>"+map+"</div>"}
+
+    //the mode
+    var mode = games[games.length-1-i]["mode"]
+    var el_mode = gameSections[i].querySelector(".mode-solo")
+    console.log(el_mode)
+    if (mode == "TFALL") {el_mode.innerHTML = "<div class='history-section-mode mode-all'>ALL</div>"}
+    if (mode == "TR63") {el_mode.innerHTML = "<div class='history-section-mode mode-63'>63</div>"}
+
+
+
 
     //the expansions
     var expansionsHTML = "";
     try {
       expansionsArray = games[games.length-1-i]["expansions"];
       if (expansionsArray == undefined) {expansionsArray = []}
-      expansionsHTML = expansionsHTML + '<div class="history-section-expansion-ribbon"><div class="icon corporate-era-icon icon-align2"></div></div>'
+      expansionsHTML = expansionsHTML + '<div class="history-section-expansion-ribbon-solo"><div class="icon corporate-era-icon icon-align2"></div></div>'
       if (expansionsArray.indexOf("VENUS") > -1) {
-        expansionsHTML = expansionsHTML + '<div class="history-section-expansion-ribbon"><div class="icon venus-icon icon-align2"></div></div>'
+        expansionsHTML = expansionsHTML + '<div class="history-section-expansion-ribbon-solo"><div class="icon venus-icon icon-align2"></div></div>'
       }
       if (expansionsArray.indexOf("PRELUDE") > -1) {
-        expansionsHTML = expansionsHTML + '<div class="history-section-expansion-ribbon"><div class="icon prelude-icon icon-align2"></div></div>'
+        expansionsHTML = expansionsHTML + '<div class="history-section-expansion-ribbon-solo"><div class="icon prelude-icon icon-align2"></div></div>'
       }
       if (expansionsArray.indexOf("COLONIES") > -1) {
-        expansionsHTML = expansionsHTML + '<div class="history-section-expansion-ribbon"><div class="icon colonies-icon icon-align2"></div></div>'
+        expansionsHTML = expansionsHTML + '<div class="history-section-expansion-ribbon-solo"><div class="icon colonies-icon icon-align2"></div></div>'
       }
       gameSections[i].querySelector(".history-section-expansions2").innerHTML = expansionsHTML;
     }   catch (err) {}
@@ -572,9 +595,9 @@ function snapshotToArray(snapshot) {
 
 function compareTime(time) {
   if (time >= 0 && time < 120) {return "now"}
-  if (time >= 120 && time < 7200) {return Math.floor(time/60) + " mins"}
-  if (time >= 7200 && time < 172800) {return Math.floor(time/3600) + " hours"}
-  if (time >= 172800) {return Math.floor(time/86400) + " days"}
+  if (time >= 120 && time < 7200) {return Math.floor(time/60) + " m"}
+  if (time >= 7200 && time < 172800) {return Math.floor(time/3600) + " h"}
+  if (time >= 172800) {return Math.floor(time/86400) + " d"}
 }
 
 function download(data, filename, json) {

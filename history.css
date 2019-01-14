@@ -10,6 +10,13 @@
 
 .history-section-corporation2 {
   display: inline-block;
+  width: 220px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  color: #ffd27f !important;
+  text-shadow: 0 0 1px black, 0 2px 2px black;
+  font-size: 18px;
 }
 
 
@@ -25,6 +32,10 @@
 
 .history-section-score2 {
   display: inline-block;
+  text-align: center;
+  width: 37px;
+  font-size: 18px;
+  line-height: 50px;
 }
 
 .history-section-header {
@@ -41,12 +52,6 @@
   text-align: left;
 }
 
-.history-section-time2 {
-  position: relative;
-  display: inline-block;
-  border-left: 1px solid rgb(221,221,221);
-  border-right: 1px solid rgb(137,137,137);
-}
 
 .history-section-time {
   border-top: 1px solid rgb(221,221,221);
@@ -62,6 +67,9 @@
 
 .history-section-time-value2 {
   display: inline-block;
+  width: 220px;
+  height: 21px;
+  line-height: 21px;
 }
 
 .history-section-expansions {
@@ -74,7 +82,7 @@
 
 .history-section-expansions2 {
   display: inline-block;
-  text-align: left;
+  margin-left: -20px;
 }
 
 
@@ -83,6 +91,14 @@
   margin-right: 8px;
   margin-left: 8px;
 }
+
+.history-section-expansion-ribbon-solo {
+  display: inline-block;
+  margin-right: 8px;
+  margin-left: 11px;
+}
+
+
 .history-section-map {
   display: inline-block;
   margin-left: -4px;
@@ -94,9 +110,28 @@
   text-shadow: none;
 }
 
+.history-section-map-solo {
+  display: inline-block;
+  margin-left: -6px;
+  margin-top: 6px;
+  width: 66px;
+  line-height: 16px;
+  text-align: center;
+  font-size: 14px;
+  color:#222;
+  text-shadow: none;
+}
+
 .history-section-map-value {
   border-radius: 10px;
   width: 66px;
+}
+
+.history-section-map-value-solo {
+  border-radius: 10px;
+  width: 70px;
+  box-shadow: 0 0 0 1px #222;
+  border-radius: 20px;
 }
 
 .history-section-generation {
@@ -134,6 +169,10 @@
   text-shadow: 0 0 1px black, 0 1px 1px black;
 }
 
+.history-section-submitted-solo {
+  line-height: 22px;
+}
+
 .dark-background {
   background: #444;
 }
@@ -154,7 +193,7 @@
 
 .flag-div2 {
   display: inline-block;
-  width: 32px;
+  width: 50px;
 }
 
 .flag {
@@ -164,21 +203,48 @@
   vertical-align: bottom;
 }
 
+.flag-div-solo {
+  line-height: 50px;
+}
+
+.flag-solo {
+  margin-top: -20px;
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  vertical-align: bottom;
+}
+
+.history-section-mode {
+  background-repeat: no-repeat;
+  background-size: 44px 44px;
+  background-position: 3px 3px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 16px;
+}
+.mode-all {
+  background-image: url("images/ALL.png");
+}
+.mode-63 {
+  background-image: url("images/63.png");
+}
+
 .grid-cell-history2 {
   display: grid;
-  grid-template-columns: 36px 90px 100px 194px 40px;
+  grid-template-columns: 54px 54px 90px 222px 40px;
   text-align: center;
   color: #222;
   font-size: 15px;
   border-radius: 1px;
 }
 .grid-cell-history2 > div {
-  height: 32px;
-  line-height: 32px;
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
   border-bottom: 2px solid rgb(137,137,137);
   border-right: 2px solid rgb(137,137,137);
+  height: 50px;
  }
 
 .failed-number {
