@@ -553,18 +553,22 @@ function pushAwardsStats() {
   document.getElementById("venuphile").innerHTML =  Math.round(checkForElement("awards", "VENUPHILE")*100/(1+Math.round(checkForElement("expansions", "VENUS")))) + "%";
 }
 
-function generateAverageScores (players) {
+function generateAverageGenerations (players) {
   gamesPerPlayers = games.filter(function(el) {
     return el.players == players
   });
 
   gamesWithoutPrelude = gamesPerPlayers.filter(function(el) {
-    return  el.expansions != "PRELUDE"
+    if (el.expansions == undefined) {el.expansions =""}
+    return  el.expansions.indexOf("PRELUDE") < 0
   });
+  console.log(gamesWithoutPrelude.length)
 
   gamesWithPrelude = gamesPerPlayers.filter(function(el) {
-    return  el.expansions == "PRELUDE"
+    if (el.expansions == undefined) {el.expansions =""}
+    return  el.expansions.indexOf("PRELUDE") > -1
   });
+  console.log(gamesWithPrelude.length)
 
   var totalSum = 0;
   var totalSumPrelude = 0;
@@ -592,10 +596,10 @@ function generateAverageScores (players) {
 }
 
 function pushAverageGenerations () {
-  generateAverageScores(2);
-  generateAverageScores(3);
-  generateAverageScores(4);
-  generateAverageScores(5);
+  generateAverageGenerations(2);
+  generateAverageGenerations(3);
+  generateAverageGenerations(4);
+  generateAverageGenerations(5);
 }
 
 function pushHistograms() {
