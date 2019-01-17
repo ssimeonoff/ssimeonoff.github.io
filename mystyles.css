@@ -27,7 +27,7 @@
 }
 
 .clicked-card {
-  box-shadow: 0 0 1px 1px #444, 0 0 25px 10px white;
+  box-shadow: 0 0 1px 1px #444, 0 0 25px 10px white !important;
 }
 
 .filterDiv3 {
