@@ -11,12 +11,12 @@
 .history-section-corporation2 {
   display: inline-block;
   width: 220px;
-  height: 25px;
-  line-height: 25px;
+  height: 40px;
+  line-height: 40px;
   text-align: center;
   color: #ffd27f !important;
   text-shadow: 0 0 1px black, 0 2px 2px black;
-  font-size: 18px;
+  font-size: 19px;
 }
 
 
@@ -34,8 +34,8 @@
   display: inline-block;
   text-align: center;
   width: 37px;
-  font-size: 18px;
-  line-height: 50px;
+  font-size: 20px;
+  line-height: 68px;
 }
 
 .history-section-header {
@@ -113,7 +113,7 @@
 .history-section-map-solo {
   display: inline-block;
   margin-left: -6px;
-  margin-top: 6px;
+  margin-top: 13px;
   width: 66px;
   line-height: 16px;
   text-align: center;
@@ -204,25 +204,25 @@
 }
 
 .flag-div-solo {
-  line-height: 50px;
+  line-height: 14px;
 }
 
 .flag-solo {
   margin-top: -20px;
-  height: 50px;
-  width: 50px;
-  line-height: 50px;
-  vertical-align: bottom;
+  height: 32px;
+  width: 32px;
+  line-height: 32px;
+  margin-top: 1px;
 }
 
 .history-section-mode {
   background-repeat: no-repeat;
-  background-size: 44px 44px;
-  background-position: 3px 3px;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  font-size: 16px;
+  background-size: 28px 28px;
+  background-position: 2px 2px;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 12px;
 }
 .mode-all {
   background-image: url("images/ALL.png");
@@ -233,7 +233,7 @@
 
 .grid-cell-history2 {
   display: grid;
-  grid-template-columns: 54px 54px 90px 222px 40px;
+  grid-template-columns: 36px 90px 262px 72px;
   text-align: center;
   color: #222;
   font-size: 15px;
@@ -244,7 +244,7 @@
   border-left: 2px solid rgb(221,221,221);
   border-bottom: 2px solid rgb(137,137,137);
   border-right: 2px solid rgb(137,137,137);
-  height: 50px;
+  height: 68px;
  }
 
 .failed-number {
