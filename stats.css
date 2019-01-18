@@ -1216,7 +1216,7 @@
 .crossed::before {
   position: absolute;
   content: "";
-  border-bottom: 1px solid #444;
+  border-bottom: 2px solid;
   width: 100%;
   transform: rotate(-30deg);
   margin-top: -8px;
@@ -1226,7 +1226,7 @@
 .crossed::after {
   position: absolute;
   content: "";
-  border-bottom: 1px solid #444;
+  border-bottom: 2px solid;
   width: 100%;
   transform: rotate(30deg);
   margin-top: -8px;
