@@ -118,10 +118,6 @@
   height: 40px;
 }
 
-.highlight-winner {
-  background-color: rgba(0,0,0,0.2);
-}
-
 .highlighed-column {
   border: 2px solid black;
 }
@@ -316,25 +312,6 @@
 .generalStats-history-solo {
     display: grid;
     grid-template-columns: 230px 230px;
-    position: relative;
-    font-family: Prototype;
-    background: #ccc;
-    color: #222;
-    background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
-    border-radius: 2px;
-    width: 460px;
-    position: relative;
-    text-align: center;
-    margin-bottom: 10px;
-    border-top: 2px solid rgb(221,221,221);
-    border-left: 2px solid rgb(221,221,221);
-    border-bottom: 2px solid rgb(137,137,137);
-    border-right: 2px solid rgb(137,137,137);
-}
-
-.generalStats-history-solo2 {
-    display: grid;
-    grid-template-columns: 460px;
     position: relative;
     font-family: Prototype;
     background: #ccc;

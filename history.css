@@ -8,16 +8,7 @@
   line-height: 18px;
 }
 
-.history-section-corporation2 {
-  display: inline-block;
-  width: 220px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  color: #ffd27f !important;
-  text-shadow: 0 0 1px black, 0 2px 2px black;
-  font-size: 19px;
-}
+
 
 
 .history-section-score {
@@ -30,12 +21,12 @@
   line-height: 18px;
 }
 
-.history-section-score2 {
-  display: inline-block;
-  text-align: center;
-  width: 37px;
-  font-size: 20px;
-  line-height: 68px;
+.highlight-winner {
+  background-color: rgba(0,0,0,0.2);
+}
+
+.highlight-loser {
+  background-color: #cc333388;
 }
 
 .history-section-header {
@@ -60,9 +51,8 @@
   border-right: 1px solid rgb(137,137,137);
   display: inline-block;
   text-align: center;
-  font-size: 14px;
-  color: white;
-  text-shadow: 0 0 1px black, 0 1px 1px black;
+  font-size: 12px;
+  line-height: 18px;
 }
 
 .history-section-time-value2 {
@@ -129,7 +119,7 @@
 
 .history-section-map-value-solo {
   border-radius: 10px;
-  width: 70px;
+  width: 66px;
   box-shadow: 0 0 0 1px #222;
   border-radius: 20px;
 }
@@ -163,10 +153,9 @@
   border-right: 1px solid rgb(137,137,137);
   height: 18px;
   line-height: 18px;
+  font-size: 15px;
+  text-align: left;
   padding-left: 5px;
-  text-align: center;
-  color: rgb(251,192,137);
-  text-shadow: 0 0 1px black, 0 1px 1px black;
 }
 
 .history-section-submitted-solo {
@@ -217,12 +206,13 @@
 
 .history-section-mode {
   background-repeat: no-repeat;
-  background-size: 28px 28px;
-  background-position: 2px 2px;
+  background-size: 23px 23px;
+  background-position: 5px 4px;
   width: 32px;
   height: 32px;
   line-height: 32px;
-  font-size: 12px;
+  font-size: 11px;
+  margin-left: 1px;
 }
 .mode-all {
   background-image: url("images/ALL.png");

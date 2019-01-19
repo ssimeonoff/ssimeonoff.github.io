@@ -485,65 +485,91 @@ function pushGeneralStats() {
 }
 
 function pushHistory() {
+
+  //remove dark background
+  var z = document.querySelectorAll(".dark-background")
+  for (i = 0; i < z.length; i++) {
+    z[i].classList.remove("dark-background");
+  }
+
   //clear the sections
-  var x = document.querySelectorAll(".flag-div-solo,.history-section-time-value2, .history-section-corporation2, .history-section-score2, .history-section-generation2, .history-section-expansions2")
+  var x = document.querySelectorAll(".flag-div,.history-section-submitted,.history-section-map, .history-section-corporation, .history-section-time, .history-section-score, .history-section-generation, .history-section-expansions")
   for (i = 0; i < x.length; i++) {
     x[i].innerHTML = "";
   }
+
+  //remove the highlights
+  var y = document.querySelectorAll(".highlight-winner, .highlight-loser")
+  for (i = 0; i < y.length; i++) {
+    y[i].classList.remove("highlight-winner");
+    y[i].classList.remove("highlight-loser");
+  }
+
   //current time in seconds
   now = Math.floor((new Date()).getTime() / 1000);
-  gameSections = document.querySelectorAll(".grid-cell-history2");
+  gameSections = document.querySelectorAll(".grid-cell-history");
 
   for(i=0; i < gameSections.length && i < games.length; i++) {
 
+    //add dark background to the headers
+    if (games.length-i > 0) {
+      //add dark background to the headers
+      gameSections[i].querySelector(".history-section-header").classList.add("dark-background");
+      gameSections[i].querySelector(".history-section-generation").classList.add("dark-background");
+    }
+
     //display the flag
-    try {country =  games[games.length-1-i]["country"];}
-    catch (err) {}
+    country =  games[games.length-1-i]["country"];
     if (country != undefined && country.length > 1) {
-      countryDivContent = '<img class="flag-solo" src="flags/'+country+'.png" title="'+country+'">';
-      gameSections[i].querySelector(".flag-div-solo").innerHTML = countryDivContent;
+      countryDivContent = '<img class="flag" src="flags/'+country+'.png" title="'+country+'">';
+      gameSections[i].querySelector(".flag-div").innerHTML = countryDivContent;
     } else {
-      countryDivContent = '<img class="flag-solo" src="flags/EU.png" title="EU">';
-      gameSections[i].querySelector(".flag-div-solo").innerHTML = countryDivContent;
+      countryDivContent = '<img class="flag" src="flags/EU.png" title="EU">';
+      gameSections[i].querySelector(".flag-div").innerHTML = countryDivContent;
     }
 
     //game timestamp in seconds
-    try {
-      timestamp = games[games.length-1-i]["timestamp"];
+    timestamp = games[games.length-1-i]["timestamp"];
+    if (timestamp == undefined) {gameSections[i].querySelector(".history-section-time").innerHTML = "-- ----"}
+    else {
       time = now - timestamp;
-    } catch (err) {}
+      gameSections[i].querySelector(".history-section-time").innerHTML = compareTime(time);
 
-    //the name
-    var el_name = gameSections[i].querySelector(".history-section-submitted-solo")
-    if (games[games.length-1-i]["name"] != undefined) {
-      if (games[games.length-1-i]["name"].length < 2) {el_name.innerHTML = compareTime(time)}
-      else {el_name.innerHTML = compareTime(time) + " ago by " + games[games.length-1-i]["name"]}
     }
 
+    //the name
+    var el_name = gameSections[i].querySelector(".history-section-submitted")
+    if (games[games.length-1-i]["name"] != undefined) {
+      el_name.innerHTML = games[games.length-1-i]["name"]
+    }
 
-
-    //the corporations array
+    //the corporations name
+    corporationSection = gameSections[i].querySelector(".history-section-corporation");
+    scoreSection = gameSections[i].querySelector(".history-section-score");
+    corporationSection.innerHTML = games[games.length-1-i]["corporation"];
+    //the score and coulour highlight
     try {
-      corporationsSection = gameSections[i].querySelector(".history-section-corporation2");
-      scoreSection = gameSections[i].querySelector(".history-section-score2");
-      corporationsSection.innerHTML = games[games.length-1-i]["corporation"];}
-    catch (err) {}
-
-    try {result = games[games.length-1-i]["result"];
-    if (result > 20) {scoreSection.innerHTML = result}
-    else {scoreSection.innerHTML = "<span class='failed-number'>"+result+"</span>"}}
+      result = games[games.length-1-i]["result"];
+      scoreSection.innerHTML = result;
+      if (result > 20) {
+        corporationSection.classList.add("highlight-winner");
+        scoreSection.classList.add("highlight-winner");}
+      else {
+        corporationSection.classList.add("highlight-loser");
+        scoreSection.classList.add("highlight-loser");}
+      }
     catch (err) {}
 
     //the map
     var map = games[games.length-1-i]["map"]
-    var el = gameSections[i].querySelector(".history-section-map-solo")
+    var el = gameSections[i].querySelector(".history-section-map")
     if (map == "THARSIS") {el.innerHTML = "<div class='history-section-map-value-solo' style='background:#ee792b'>"+map+"</div>"}
     if (map == "HELLAS") {el.innerHTML = "<div class='history-section-map-value-solo' style='background:#3b9ae3'>"+map+"</div>"}
     if (map == "ELYSIUM") {el.innerHTML = "<div class='history-section-map-value-solo' style='background:#09aa09'>"+map+"</div>"}
 
     //the mode
     var mode = games[games.length-1-i]["mode"]
-    var el_mode = gameSections[i].querySelector(".mode-solo")
+    var el_mode = gameSections[i].querySelector(".history-section-generation")
     if (mode == "TFALL") {el_mode.innerHTML = "<div class='history-section-mode mode-all'>ALL</div>"}
     if (mode == "TR63") {el_mode.innerHTML = "<div class='history-section-mode mode-63'>63</div>"}
 
@@ -555,17 +581,17 @@ function pushHistory() {
     try {
       expansionsArray = games[games.length-1-i]["expansions"];
       if (expansionsArray == undefined) {expansionsArray = []}
-      expansionsHTML = expansionsHTML + '<div class="history-section-expansion-ribbon-solo"><div class="icon corporate-era-icon icon-align2"></div></div>'
+      expansionsHTML = expansionsHTML + '<div class="history-section-expansion-ribbon"><div class="icon corporate-era-icon icon-align2"></div></div>'
       if (expansionsArray.indexOf("VENUS") > -1) {
-        expansionsHTML = expansionsHTML + '<div class="history-section-expansion-ribbon-solo"><div class="icon venus-icon icon-align2"></div></div>'
+        expansionsHTML = expansionsHTML + '<div class="history-section-expansion-ribbon"><div class="icon venus-icon icon-align2"></div></div>'
       }
       if (expansionsArray.indexOf("PRELUDE") > -1) {
-        expansionsHTML = expansionsHTML + '<div class="history-section-expansion-ribbon-solo"><div class="icon prelude-icon icon-align2"></div></div>'
+        expansionsHTML = expansionsHTML + '<div class="history-section-expansion-ribbon"><div class="icon prelude-icon icon-align2"></div></div>'
       }
       if (expansionsArray.indexOf("COLONIES") > -1) {
-        expansionsHTML = expansionsHTML + '<div class="history-section-expansion-ribbon-solo"><div class="icon colonies-icon icon-align2"></div></div>'
+        expansionsHTML = expansionsHTML + '<div class="history-section-expansion-ribbon"><div class="icon colonies-icon icon-align2"></div></div>'
       }
-      gameSections[i].querySelector(".history-section-expansions2").innerHTML = expansionsHTML;
+      gameSections[i].querySelector(".history-section-expansions").innerHTML = expansionsHTML;
     }   catch (err) {}
 
     //add the key as title
@@ -594,9 +620,9 @@ function snapshotToArray(snapshot) {
 
 function compareTime(time) {
   if (time >= 0 && time < 120) {return "now"}
-  if (time >= 120 && time < 7200) {return Math.floor(time/60) + " m"}
-  if (time >= 7200 && time < 172800) {return Math.floor(time/3600) + " h"}
-  if (time >= 172800) {return Math.floor(time/86400) + " d"}
+  if (time >= 120 && time < 7200) {return Math.floor(time/60) + "'"}
+  if (time >= 7200 && time < 172800) {return Math.floor(time/3600) + "h"}
+  if (time >= 172800) {return Math.floor(time/86400) + "d"}
 }
 
 function download(data, filename, json) {
