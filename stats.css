@@ -1002,7 +1002,7 @@
   border: 2px solid rgb(137,137,137) ;
   box-shadow: inset 0 1px 3px 1px black;
   transform: translate(0,2px);
-  background: #444;
+  background-color: #444;
   text-shadow: 0 2px 2px black;
   color: white;
 }

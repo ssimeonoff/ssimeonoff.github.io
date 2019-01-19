@@ -290,6 +290,15 @@ input::placeholder {
   letter-spacing: 1px;
 }
 
+.btn-filter-mode {
+  background-image: url(images/63.png);
+  background-repeat: no-repeat;
+  background-size: 27px 27px;
+  background-position: 14px 4px;
+  line-height: 34px;
+  font-size: 12px;
+}
+
 .btn-result {
   width: 177px;
 }
