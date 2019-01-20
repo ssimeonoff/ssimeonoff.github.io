@@ -976,7 +976,7 @@ function pushHistory() {
 }
 
 function pushRanking () {
-
+  var user = firebase.auth().currentUser;
   if (user) {
     email = user.email;
     console.log(email)
