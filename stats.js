@@ -127,7 +127,11 @@ function filterFunction(id) {
       });
     } else if (btnExpansion.length == 4 ){
       games = games.filter(function(el) {
-        return el.expansions == undefined
+        return el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[0].id) == -1 &&
+               el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[1].id) == -1 &&
+               el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[2].id) == -1 &&
+               el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[3].id) == -1 ||
+               el.expansions == undefined
       });
     }
   } else {
@@ -181,7 +185,7 @@ function filterFunction(id) {
     });
   }
 
-  user = firebase.auth().currentUser;
+  var user = firebase.auth().currentUser;
   //filter by user email (my games only)
   btnMyGames = document.querySelectorAll(".btn-mygames-solo.active");
   if (btnMyGames.length == 1 ) {
@@ -198,14 +202,14 @@ function filterFunction(id) {
 
 
 function pushData() {
-
-  pushGeneralStats(); //for smoother animation
+  pushGeneralStats();
   pushCorporationsData();
   pushMapStats();
   pushAwardsStats();
   pushAverageGenerations();
   pushHistograms();
   pushHistory();
+  pushRanking();
 }
 
 function generateGameStats (players, corporationName) {
@@ -222,16 +226,29 @@ function generateGameStats (players, corporationName) {
     var corpsArray = gamesPerPlayers[i]["corporations"]; //getting the corporations array
     if (corpsArray == undefined) {} //to chatch firebase errors if the array is undefined
     else {
-      if (corpsArray.indexOf(corporationName) > -1) {
-        //if the corporation is present in the corporations' arrayAwards
-        //add this game to the played games
-        playedGames.push(gamesPerPlayers[i]);
+      //check if onlyplayers button filter is clicked
+      btnMyGames = document.querySelectorAll(".btn-mygames-solo.active");
+      if (btnMyGames.length == 1 ) {
+        try {var position = gamesPerPlayers[i]["rank"]} catch(er) {}
+        if (corpsArray.indexOf(corporationName) == position) {
+            //if the corporation is present in the corporations' arrayAwards
+            //add this game to the played games
+            playedGames.push(gamesPerPlayers[i]);
+          }
+      } else {
+        if (corpsArray.indexOf(corporationName) > -1) {
+            //if the corporation is present in the corporations' arrayAwards
+            //add this game to the played games
+            playedGames.push(gamesPerPlayers[i]);
+          }
         }
       }
   }
   var totalGames = playedGames.length;
   var totalWins = 0;
   var sum = 0;
+
+
   for (i = 0; i < totalGames; i++) {
     //checking if that corporation is the winner
     var corpsArray = playedGames[i]["corporations"];
@@ -247,6 +264,12 @@ function generateGameStats (players, corporationName) {
      sum += parseInt(scoresArray[corpIndex]);
    }
   }
+
+
+
+
+
+
   //calculating the average score
   avg = sum/totalGames;
 
@@ -447,6 +470,14 @@ function pushCorporationsData() {
   document.getElementById("games4p-kuiper").innerHTML = generateGameStats(4, "KUIPER BELT COOP.");
   document.getElementById("games5p-kuiper").innerHTML = generateGameStats(5, "KUIPER BELT COOP.");
 
+  //hide cells with no games
+  winrate_cells = document.querySelectorAll(".winrate")
+  for (i=0; i < winrate_cells.length; i++) {
+    if (winrate_cells[i].innerHTML == "--") {
+      winrate_cells[i].style.opacity = 0;
+    } else {winrate_cells[i].style.opacity = 1;}
+  }
+
 }
 
 function pushGeneralStats() {
@@ -558,41 +589,92 @@ function generateAverageGenerations (players) {
     return el.players == players
   });
 
-  gamesWithoutPrelude = gamesPerPlayers.filter(function(el) {
+  games_ce = gamesPerPlayers.filter(function(el) {
     if (el.expansions == undefined) {el.expansions =""}
-    return  el.expansions.indexOf("PRELUDE") < 0
+    return  el.expansions.indexOf("CORPORATE") > -1 &&
+            el.expansions.indexOf("VENUS") < 0 &&
+            el.expansions.indexOf("PRELUDE") < 0 &&
+            el.expansions.indexOf("COLONIES") < 0
   });
-  console.log(gamesWithoutPrelude.length)
+  generateAverageGenerationsValue(players, games_ce, "_ce")
 
-  gamesWithPrelude = gamesPerPlayers.filter(function(el) {
+  games_ce_vn = gamesPerPlayers.filter(function(el) {
     if (el.expansions == undefined) {el.expansions =""}
-    return  el.expansions.indexOf("PRELUDE") > -1
+    return  el.expansions.indexOf("CORPORATE") > -1 &&
+            el.expansions.indexOf("VENUS") > -1 &&
+            el.expansions.indexOf("PRELUDE") < 0 &&
+            el.expansions.indexOf("COLONIES") < 0
   });
-  console.log(gamesWithPrelude.length)
+  generateAverageGenerationsValue(players, games_ce_vn, "_ce_vn")
+
+  games_ce_pl = gamesPerPlayers.filter(function(el) {
+    if (el.expansions == undefined) {el.expansions =""}
+    return  el.expansions.indexOf("CORPORATE") > -1 &&
+            el.expansions.indexOf("VENUS") < 0 &&
+            el.expansions.indexOf("PRELUDE") > -1 &&
+            el.expansions.indexOf("COLONIES") < 0
+  });
+  generateAverageGenerationsValue(players, games_ce_pl, "_ce_pl")
+
+  games_ce_vn_pl = gamesPerPlayers.filter(function(el) {
+    if (el.expansions == undefined) {el.expansions =""}
+    return  el.expansions.indexOf("CORPORATE") > -1 &&
+            el.expansions.indexOf("VENUS") > -1 &&
+            el.expansions.indexOf("PRELUDE") > -1 &&
+            el.expansions.indexOf("COLONIES") < 0
+  });
+  generateAverageGenerationsValue(players, games_ce_vn_pl, "_ce_vn_pl")
+
+  games_ce_pl_co = gamesPerPlayers.filter(function(el) {
+    if (el.expansions == undefined) {el.expansions =""}
+    return  el.expansions.indexOf("CORPORATE") > -1 &&
+            el.expansions.indexOf("VENUS") < 0 &&
+            el.expansions.indexOf("PRELUDE") > -1 &&
+            el.expansions.indexOf("COLONIES") > -1
+  });
+  generateAverageGenerationsValue(players, games_ce_pl_co, "_ce_pl_co")
+
+  games_ce_vn_pl_co = gamesPerPlayers.filter(function(el) {
+    if (el.expansions == undefined) {el.expansions =""}
+    return  el.expansions.indexOf("CORPORATE") > -1 &&
+            el.expansions.indexOf("VENUS") > -1 &&
+            el.expansions.indexOf("PRELUDE") > -1 &&
+            el.expansions.indexOf("COLONIES") > -1
+  });
+  generateAverageGenerationsValue(players, games_ce_vn_pl_co, "_ce_vn_pl_co")
+
+}
+
+function generateAverageGenerationsValue (players, games, id) {
+  games_NO = games.filter(function(el) {return el.wgt == "NO" });
+  games_YES = games.filter(function(el) {return el.wgt == "YES" });
+
 
   var totalSum = 0;
-  var totalSumPrelude = 0;
+  var totalSumYes = 0;
 
   //calculating average generations
-
-  for (i = 0; i < gamesWithoutPrelude.length; i++) {
-    var generationsValue = gamesWithoutPrelude[i]["generations"]; //getting the generations value
+  for (i = 0; i < games_NO.length; i++) {
+    var generationsValue = games_NO[i]["generations"]; //getting the generations value
     totalSum = totalSum + parseInt(generationsValue);
   }
-
-  for (j = 0; j < gamesWithPrelude.length; j++) {
-    var generationsValuePrelude = gamesWithPrelude[j]["generations"]; //getting the generations value
-    totalSumPrelude = totalSumPrelude + parseInt(generationsValuePrelude);
+  for (i = 0; i < games_YES.length; i++) {
+    var generationsValue = games_YES[i]["generations"]; //getting the generations value
+    totalSumYes = totalSumYes + parseInt(generationsValue);
   }
-  average = (Math.round(totalSum*10/gamesWithoutPrelude.length)/10).toFixed(1)
-  averagePrelude = (Math.round(totalSumPrelude*10/gamesWithPrelude.length)/10).toFixed(1)
 
-  if (average == "NaN") {average = "--"}
-  if (averagePrelude == "NaN") {averagePrelude = "--"}
+  if (games_NO.length > 0) {
+    averageNO = (Math.round(totalSum*10/games_NO.length)/10).toFixed(1)
+  } else {
+    averageNO = "--"
+  }
 
-  document.getElementById("generations_" + players).innerHTML = average;
-  document.getElementById("generations_" + players + "_prelude").innerHTML = averagePrelude;
-
+  if (games_YES.length > 0) {
+    averageYES = (Math.round(totalSumYes*10/games_YES.length)/10).toFixed(1)
+  } else {
+    averageYES = "--"
+  }
+  document.getElementById("generations_" + players + id).innerHTML = averageNO + " <span style='font-size:14px;'>[" + averageYES + "]</span>";
 }
 
 function pushAverageGenerations () {
@@ -626,7 +708,7 @@ function histogram (players) {
       legend: { position: 'none' },
       fontSize: 12,
       backgroundColor: "transparent",
-      vAxis: { gridlines: { count: 5},maxValue:20 },
+      vAxis: { gridlines: { count: 1},maxValue:15 },
       hAxis: {textStyle : {fontSize: 10, fontName: 'Prototype'}},
       bar: {gap: 1},
       chartArea:{left:0,bottom:20,top:0,width:460},
@@ -642,7 +724,7 @@ function histogram (players) {
         legend: { position: 'none' },
         fontSize: 12,
         backgroundColor: "transparent",
-        vAxis: { gridlines: { count: 5}},
+        vAxis: { gridlines: { count: 1},maxValue:15 },
         hAxis: {textStyle : {fontSize: 10, fontName: 'Prototype'}},
         bar: {gap: 1},
         chartArea:{left:0,bottom:20,top:0,width:460},
@@ -658,7 +740,7 @@ function histogram (players) {
           legend: { position: 'none' },
           fontSize: 12,
           backgroundColor: "transparent",
-          vAxis: { gridlines: { count: 5} },
+          vAxis: { gridlines: { count: 1}, maxValue:15 },
           hAxis: {textStyle : {fontSize: 10, fontName: 'Prototype'}},
           bar: {gap: 1},
           chartArea:{left:0,bottom:20,top:0,width:460},
@@ -674,7 +756,7 @@ function histogram (players) {
             legend: { position: 'none' },
             fontSize: 12,
             backgroundColor: "transparent",
-            vAxis: { gridlines: { count: 5}},
+            vAxis: { gridlines: { count: 1},maxValue:15 },
             hAxis: {textStyle : {fontSize: 10, fontName: 'Prototype'}},
             bar: {gap: 1},
             chartArea:{left:0,bottom:20,top:0,width:460},
@@ -697,20 +779,35 @@ function generateScoresArray (players) {
     return el.players == players
   });
 
-  for (i = 0; i < gamesPerPlayers.length; i++) {
-    var scoresArray = gamesPerPlayers[i]["scores"];
-    var corporationsArray = gamesPerPlayers[i]["corporations"];
-    for (j = 0; j < scoresArray.length; j++) {
+  btnMyGames = document.querySelectorAll(".btn-mygames-solo.active");
+  if (btnMyGames.length == 1 ) {
+    for (i = 0; i < gamesPerPlayers.length; i++) {
+      try {var position = gamesPerPlayers[i]["rank"]} catch(er) {}
+      var scoresArray = gamesPerPlayers[i]["scores"];
+      var corporationsArray = gamesPerPlayers[i]["corporations"];
       //['Ecoline', 88]
-      var arr = [corporationsArray[j], parseInt(scoresArray[j])];
+      var arr = [corporationsArray[position], parseInt(scoresArray[position])];
       scores.push(arr);
       //average scores calculation for the chart headers
       totalGames++;
       totalScores = totalScores + parseInt(scoresArray[j]);
     }
+  } else {
+    for (i = 0; i < gamesPerPlayers.length; i++) {
+      var scoresArray = gamesPerPlayers[i]["scores"];
+      var corporationsArray = gamesPerPlayers[i]["corporations"];
+      for (j = 0; j < scoresArray.length; j++) {
+        //['Ecoline', 88]
+        var arr = [corporationsArray[j], parseInt(scoresArray[j])];
+        scores.push(arr);
+        //average scores calculation for the chart headers
+        totalGames++;
+        totalScores = totalScores + parseInt(scoresArray[j]);
+      }
+    }
   }
-
   //pushing the AVERAGE
+  if (totalGames == 0) {totalGames++}
   document.getElementById("chart_scores_" + players).innerHTML = Math.round(totalScores/totalGames);
   return scores;
 }
@@ -877,6 +974,49 @@ function pushHistory() {
 
   }
 }
+
+function pushRanking () {
+
+  if (user) {email = user.email}
+  else {email = "choi.kirin@gmail.com"}
+  games_player = games.filter(function(el) {
+    return el.email == email;
+  });
+
+ pushRankingPerPlayers(2, games_player);
+ pushRankingPerPlayers(3, games_player);
+ pushRankingPerPlayers(4, games_player);
+ pushRankingPerPlayers(5, games_player);
+
+}
+
+function pushRankingPerPlayers (players, games_players) {
+  games_per_player_count = games_player.filter(function(el) {
+    return el.players == players;
+  });
+  var first = 0;
+  var second = 0;
+  var third = 0;
+  var fourth = 0;
+  var fifth = 0;
+
+  for (i=0; i < games_per_player_count.length; i++) {
+    var position = games_per_player_count[i]["rank"]
+    if (position == 0) {first++}
+    if (position == 1) {second++}
+    if (position == 2) {third++}
+    if (position == 3) {fourth++}
+    if (position == 4) {fifth++}
+  }
+
+  document.getElementById("rank_" + players + "_1").innerHTML = first;
+  document.getElementById("rank_" + players + "_2").innerHTML = second;
+  document.getElementById("rank_" + players + "_3").innerHTML = third;
+  document.getElementById("rank_" + players + "_4").innerHTML = fourth;
+  document.getElementById("rank_" + players + "_5").innerHTML = fifth;
+
+}
+
 
 function compareTime(time) {
   if (time >= 0 && time < 120) {return "now"}
