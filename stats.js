@@ -978,7 +978,7 @@ function pushHistory() {
 function pushRanking () {
 
   if (user) {email = user.email}
-  else {email = "choi.kirin@gmail.com"}
+  else {email = ""}
   games_player = games.filter(function(el) {
     return el.email == email;
   });
