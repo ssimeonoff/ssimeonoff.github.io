@@ -979,6 +979,7 @@ function pushRanking () {
 
   if (user) {
     email = user.email;
+    console.log(email)
     games_player = games.filter(function(el) {
       return el.email == email;
     });
@@ -987,7 +988,7 @@ function pushRanking () {
    pushRankingPerPlayers(4, games_player);
    pushRankingPerPlayers(5, games_player);
  }
- 
+
 }
 
 function pushRankingPerPlayers (players, games_players) {
