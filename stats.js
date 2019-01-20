@@ -977,17 +977,17 @@ function pushHistory() {
 
 function pushRanking () {
 
-  if (user) {email = user.email}
-  else {email = ""}
-  games_player = games.filter(function(el) {
-    return el.email == email;
-  });
-
- pushRankingPerPlayers(2, games_player);
- pushRankingPerPlayers(3, games_player);
- pushRankingPerPlayers(4, games_player);
- pushRankingPerPlayers(5, games_player);
-
+  if (user) {
+    email = user.email;
+    games_player = games.filter(function(el) {
+      return el.email == email;
+    });
+   pushRankingPerPlayers(2, games_player);
+   pushRankingPerPlayers(3, games_player);
+   pushRankingPerPlayers(4, games_player);
+   pushRankingPerPlayers(5, games_player);
+ }
+ 
 }
 
 function pushRankingPerPlayers (players, games_players) {
