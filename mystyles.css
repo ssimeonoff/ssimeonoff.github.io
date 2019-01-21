@@ -272,6 +272,7 @@ border-right: 2px solid rgb(137,137,137);
     position: absolute;
     width: 40px;
     height: 40px;
+    background-size: 40px 40px;
     text-align: center;
     border-radius: 50%;
     border-top: 2px solid rgb(221,221,221);
