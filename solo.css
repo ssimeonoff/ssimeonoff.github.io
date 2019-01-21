@@ -76,8 +76,8 @@
   background: #ccc;
   color: #222;
   font-family: Prototype;
-  width: 364px;
-  height: 50px;
+  width: 365px;
+  height: 60px;
   font-size: 24px;
   border-radius: 1px;
   border-top: 2px solid rgb(221,221,221);
@@ -109,7 +109,7 @@
   border-bottom: 2px solid rgb(137,137,137);
   border-right: 2px solid rgb(137,137,137);
   box-shadow: 0 1px 3px 1px rgba(0,0,0,.8);
-  transition: width 0.2s, background-position 0.2s;
+  transition: width 0.3s, background-position 0.3s;
   margin-bottom: 5px;
 
 }

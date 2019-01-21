@@ -318,9 +318,8 @@ function activateWin() {
   el.classList.add("change-colours3");
   document.getElementById("winLabel").innerHTML = "&nbsp;";
   el.style.backgroundPositionX = "145px";
-  el.style.width = "253px";
-
   el2.style.width = "100px";
+  el.style.width = "253px";
   el2.style.backgroundPositionX = "-120px";
   el2.classList.remove("change-colours3");
   document.getElementById("lossLabel").innerHTML = "&#x2717;";
@@ -329,7 +328,7 @@ function activateWin() {
   document.getElementById("corporation-score").style.display = "block";
   setTimeout(function() {
     document.getElementById("corporation-score").style.transform = "scale(1)";
-  }, 100)
+  }, 300)
 }
 
 
@@ -342,9 +341,9 @@ function activateLoss() {
   el.classList.add("change-colours3");
   document.getElementById("lossLabel").innerHTML = "&nbsp;";
   el.style.backgroundPositionX = "-15px";
+  el2.style.width = "100px";
   el.style.width = "253px";
 
-  el2.style.width = "100px";
   el2.style.backgroundPositionX = "250px";
   el2.classList.remove("change-colours3");
   document.getElementById("winLabel").innerHTML = "&#x2713;";
@@ -353,7 +352,7 @@ function activateLoss() {
   document.getElementById("corporation-score").style.transform = "scale(0)";
   setTimeout(function() {
     document.getElementById("steps").style.transform = "scale(1)";
-  }, 100)
+  }, 300)
 }
 
 
