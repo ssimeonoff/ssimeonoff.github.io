@@ -222,14 +222,27 @@ function histogramColonies () {
     //COLONIES GAMES
     games = [
           ['Corporation', 'Score'],
-          ['Credicor', 85],
-          ['UNMI', 90],
+
+          ['Credicor', 85],['Credicor', 104],['Credicor', 103],
+
+          ['UNMI', 90],['UNMI', 109],
           ['Helion', 102],
           ['Interplanetery', 97],
-          ['Inventrix', 70],['UNMI', 109],
+          ['Inventrix', 70],
+
+          ['Celestic', 99],
           ['Manutech', 97],
-          ['Valley Trust', 90],
+
+          ['Viron', 104],
+          ['Cheung', 99],
+
+          ['Robison', 90],
+          ['Valley', 90], ['Valley', 107],
+
+          ['Aridor', 114],
           ['Polyphemos', 99],['Polyphemos', 100],
+
+          ['Stormcraft', 90]
         ];
 
 
