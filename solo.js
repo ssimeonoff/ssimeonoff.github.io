@@ -864,6 +864,7 @@ function histogram () {
   function drawChart() {
     var data = google.visualization.arrayToDataTable(wins);
     var dataLosses = google.visualization.arrayToDataTable(losses);
+    console.log(dataLosses)
 
     var options = {
       animation: {"startup": true},

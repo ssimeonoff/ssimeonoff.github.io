@@ -254,6 +254,14 @@
   height: 231px;
 }
 
+.chart-div2 {
+  height: 100px;
+  width: 300px;
+  position: absolute;
+  margin-top: -200px;
+  margin-left: 220px;
+}
+
 .chart-div-solo {
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);

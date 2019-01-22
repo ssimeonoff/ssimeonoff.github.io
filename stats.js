@@ -689,6 +689,11 @@ function pushHistograms() {
   histogram(3);
   histogram(4);
   histogram(5);
+  histogram_generations(2);
+  histogram_generations(3);
+  histogram_generations(4);
+  histogram_generations(5);
+
 }
 
 
@@ -769,6 +774,31 @@ function histogram (players) {
   }
 }
 
+function histogram_generations (players) {
+  google.charts.load("current", {packages:["corechart"]});
+  google.charts.setOnLoadCallback(drawChart);
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable(generateGenerationsArray(players));
+    console.log(generateGenerationsArray(players))
+    var options = {
+        animation: {"startup": true},
+        title: '',
+        titleTextStyle: {fontSize:20, color:"#444444"},
+        legend: { position: 'none' },
+        fontSize: 12,
+        backgroundColor: "transparent",
+        vAxis: { gridlines: { count: 1},maxValue:15 },
+        hAxis: {textStyle : {fontSize: 7, fontName: 'Prototype'}},
+        bar: {gap: 1},
+        chartArea:{left:0,bottom:20,top:0,width:230},
+        colors: ['#eee','#888888'],
+        histogram: {bucketSize: 1, minValue: 4, maxValue: 16}
+      };
+    var chart = new google.visualization.Histogram(document.getElementById('histogram_' + players + '_generations'));
+    chart.draw(data, options);
+  }
+}
+
 function generateScoresArray (players) {
   //average scores calculation for the chart headers
   var totalScores = 0
@@ -810,6 +840,22 @@ function generateScoresArray (players) {
   if (totalGames == 0) {totalGames++}
   document.getElementById("chart_scores_" + players).innerHTML = Math.round(totalScores/totalGames);
   return scores;
+}
+
+function generateGenerationsArray (players) {
+
+  //Generating the array for the Google histograms
+  var generationsArr = [["Generations", "GenerationsValue"]]
+  var gamesPerPlayers = games.filter(function(el) {
+    return el.players == players
+  });
+  for (i = 0; i < gamesPerPlayers.length; i++) {
+      var generations = gamesPerPlayers[i]["generations"];
+      var arr = ["Generations", parseInt(generations)];
+      generationsArr.push(arr);
+  }
+  console.log(generationsArr)
+  return generationsArr;
 }
 
 function sortBy(players) {
