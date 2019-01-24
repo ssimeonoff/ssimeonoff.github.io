@@ -714,7 +714,7 @@ function histogram (players) {
       fontSize: 12,
       backgroundColor: "transparent",
       vAxis: { gridlines: { count: 1},maxValue:15 },
-      hAxis: {textStyle : {fontSize: 10, fontName: 'Prototype'}},
+      hAxis: {textStyle : {fontSize: 8, fontName: 'Prototype'}},
       bar: {gap: 1},
       chartArea:{left:0,bottom:20,top:0,width:460},
       colors: ['#444444','#888888'],
@@ -730,7 +730,7 @@ function histogram (players) {
         fontSize: 12,
         backgroundColor: "transparent",
         vAxis: { gridlines: { count: 1},maxValue:15 },
-        hAxis: {textStyle : {fontSize: 10, fontName: 'Prototype'}},
+        hAxis: {textStyle : {fontSize: 8, fontName: 'Prototype'}},
         bar: {gap: 1},
         chartArea:{left:0,bottom:20,top:0,width:460},
         colors: ['#444444','#888888'],
@@ -746,7 +746,7 @@ function histogram (players) {
           fontSize: 12,
           backgroundColor: "transparent",
           vAxis: { gridlines: { count: 1}, maxValue:15 },
-          hAxis: {textStyle : {fontSize: 10, fontName: 'Prototype'}},
+          hAxis: {textStyle : {fontSize: 8, fontName: 'Prototype'}},
           bar: {gap: 1},
           chartArea:{left:0,bottom:20,top:0,width:460},
           colors: ['#444444','#888888'],
@@ -762,7 +762,7 @@ function histogram (players) {
             fontSize: 12,
             backgroundColor: "transparent",
             vAxis: { gridlines: { count: 1},maxValue:15 },
-            hAxis: {textStyle : {fontSize: 10, fontName: 'Prototype'}},
+            hAxis: {textStyle : {fontSize: 8, fontName: 'Prototype'}},
             bar: {gap: 1},
             chartArea:{left:0,bottom:20,top:0,width:460},
             colors: ['#444444','#888888'],
@@ -788,11 +788,11 @@ function histogram_generations (players) {
         fontSize: 12,
         backgroundColor: "transparent",
         vAxis: { gridlines: { count: 1},maxValue:15 },
-        hAxis: {textStyle : {fontSize: 7, fontName: 'Prototype'}},
+        hAxis: {textStyle : {fontSize: 8, fontName: 'Prototype'}},
         bar: {gap: 1},
-        chartArea:{left:0,bottom:20,top:0,width:230},
+        chartArea:{left:0,bottom:20,top:0,width:220},
         colors: ['#eee','#888888'],
-        histogram: {bucketSize: 1, minValue: 4, maxValue: 16}
+        histogram: {bucketSize: 1}
       };
     var chart = new google.visualization.Histogram(document.getElementById('histogram_' + players + '_generations'));
     chart.draw(data, options);
