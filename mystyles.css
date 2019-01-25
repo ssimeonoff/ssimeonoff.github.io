@@ -1234,10 +1234,19 @@ border-right: 2px solid rgb(137,137,137);
 
 .card-icon-building {
   background: linear-gradient(rgb(162,113,71),#593e27);
+  background-size: 20px 20px;
   color: rgb(73,54,40);
   font-size: 12px;
   border-radius: 50%;
   text-shadow: 0 0 1px black;
+}
+
+.card-icon-jovian {
+  background: url("images/tag-jovian.png");
+  border-radius: 50%;
+  margin-top: -10px;
+  box-shadow: 0 0 1px black;
+  border: 1px solid #444;
 }
 
 .floater{
