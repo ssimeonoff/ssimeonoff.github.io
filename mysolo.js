@@ -224,26 +224,26 @@ function histogramColonies () {
           ['Corporation', 'Score'],
 
           ['Credicor', 85],['Credicor', 104],['Credicor', 103],['Credicor', 105],
+          ['Interplanetery', 97],['Interplanetery', 99],['Interplanetery', 98],['Interplanetery', 114],
 
-          ['UNMI', 90],
+          ['UNMI', 90],['UNMI', 108],['UNMI', 101],
           ['Helion', 102],
-          ['Interplanetery', 97],['Interplanetery', 99],
           ['Inventrix', 70],['Inventrix', 109],
 
-          ['Celestic', 80],['Celestic', 99],
+          ['Celestic', 80],['Celestic', 99],['Celestic', 106],
           ['Manutech', 97],
-          ['MSI', 95], ['MSI', 99],
+          ['MSI', 95], ['MSI', 99],['MSI', 97],
           ['Viron', 104],
           ['Cheung', 99],
 
-          ['Robison', 88], ['Robison', 90],
-          ['Valley', 90], ['Valley', 107],
-
-          ['Aridor', 114], ['Aridor', 116],
+          ['Robison', 88], ['Robison', 90],['Robison', 90],
+          ['Valley', 90], ['Valley', 107],['Valley', 110],
+          ['Vitor', 91],
+          ['Aridor', 114], ['Aridor', 116],['Aridor', 110],
           ['Polyphemos', 99],['Polyphemos', 80],['Polyphemos', 100],
           ['Poseidon', 87], ['Poseidon', 108],
 
-          ['Stormcraft', 90]
+          ['Stormcraft', 90],['Stormcraft', 113]
         ];
 
 
