@@ -149,7 +149,7 @@
 .chart-header {
   position: absolute;
   font-size:18px;
-  margin-left: 10px;
+  margin-left: 425px;
   margin-top: 10px;
   color:white;
   text-shadow: 0 0 1px black, 0 2px 2px black;
@@ -159,10 +159,10 @@
   display: inline-block;
   position: absolute;
   margin-top: -225px;
-  margin-left: 155px;
+  margin-left: -220px;
   font-size: 18px;
   height: 27px;
-  width: 62px;
+  width: 50px;
   line-height: 27px;
   text-shadow: 0 0 5px darkorange;
   border-radius: 1px;
@@ -258,7 +258,7 @@
   height: 100px;
   width: 300px;
   position: absolute;
-  margin-top: -200px;
+  margin-top: -230px;
   margin-left: 232px;
 }
 
