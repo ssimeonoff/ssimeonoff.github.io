@@ -779,7 +779,6 @@ function histogram_generations (players) {
   google.charts.setOnLoadCallback(drawChart);
   function drawChart() {
     var data = google.visualization.arrayToDataTable(generateGenerationsArray(players));
-    console.log(generateGenerationsArray(players))
     var options = {
         animation: {"startup": true},
         title: '',
@@ -792,7 +791,7 @@ function histogram_generations (players) {
         bar: {gap: 1},
         chartArea:{left:0,bottom:20,top:0,width:220},
         colors: ['#eee','#888888'],
-        histogram: {bucketSize: 1}
+        histogram: {bucketSize: 1, minValue: 8, maxValue: 14}
       };
     var chart = new google.visualization.Histogram(document.getElementById('histogram_' + players + '_generations'));
     chart.draw(data, options);
@@ -854,7 +853,6 @@ function generateGenerationsArray (players) {
       var arr = ["Generations", parseInt(generations)];
       generationsArr.push(arr);
   }
-  console.log(generationsArr)
   return generationsArr;
 }
 
