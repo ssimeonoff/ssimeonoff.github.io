@@ -253,9 +253,9 @@ function generateGameStats (players, corporationName) {
     //checking if that corporation is the winner
     var corpsArray = playedGames[i]["corporations"];
     var scoresArray = playedGames[i]["scores"];
+
     corpIndex = corpsArray.indexOf(corporationName); //find the corporation index
     //findind the winning score index
-    winnerIndex = indexOfMax(scoresArray);
     winningScore = Math.max(...scoresArray);
     //counting a win if corporation and winning score indexes match
     if (scoresArray[corpIndex] == winningScore) {totalWins++;}
