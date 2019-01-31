@@ -1159,11 +1159,10 @@ border-right: 2px solid rgb(137,137,137);
 
 
 }
-
-    .science:after {
-        content: "\269b";
-        text-shadow: none;
-    }
+.science:after {
+    content: "\269b";
+    text-shadow: none;
+  }
 
 .card {
   position: relative;
@@ -1284,12 +1283,21 @@ border-right: 2px solid rgb(137,137,137);
         content: "\2734";
     }
 
+.building-resource {
+  background-image: url("images/tag-building.png");
+  background-size: 32px 32px;
+  background-position: -2px;
+}
+.building-resource:before {
+    content: ".";
+}
+
 
 .event-resource {
     background-color: rgb(255,230,35);
     font-size: 18px;
 }
-    .event-resource:after {
+  .event-resource:after {
         content: "\2B07\FE0E";
         vertical-align: bottom;
         display: inline-block;

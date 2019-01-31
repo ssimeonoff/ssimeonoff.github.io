@@ -1003,7 +1003,7 @@ function pushHistory() {
       countryDivContent = '<img class="flag" src="flags/'+country+'.png" title="'+country+'">';
       gameSections[i].querySelector(".flag-div").innerHTML = countryDivContent;
     } else {
-      countryDivContent = '<img class="flag" src="flags/EU.png" title="EU">';
+      countryDivContent = '<img class="flag" src="flags/TM.png" title="TM">';
       gameSections[i].querySelector(".flag-div").innerHTML = countryDivContent;
     }
     //add the key as title
