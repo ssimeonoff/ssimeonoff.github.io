@@ -1,4 +1,4 @@
-# A webpage about the popular board game "Terraforming Mars"
+# A webpage about the board game "Terraforming Mars"
 
 * The main page shows a list of all the game's cards.
 * The Stats page shows games data, submitted the players.
