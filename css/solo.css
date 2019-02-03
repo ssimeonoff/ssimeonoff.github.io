@@ -1,6 +1,6 @@
 @font-face {
     font-family: Prototype;
-    src: url(fonts/Prototype.ttf);
+    src: url(../fonts/Prototype.ttf);
 }
 
 #form {
@@ -115,19 +115,19 @@
 }
 
 #lossSection {
-  background-image: url("images/boy2.png");
+  background-image: url("../images/boy2.png");
   background-repeat: no-repeat;
   background-size: 155px 145px;
   background-position: -120px -9px;
 }
 
 .boyMajk {
-  background-image: url("images/boyMajk.png") !important;
+  background-image: url("../images/boyMajk.png") !important;
 }
 
 #winSection {
   margin-left: -2px;
-  background-image: url("images/boy3.png");
+  background-image: url("../images/boy3.png");
   background-repeat: no-repeat;
   background-size: 90px 90px;
   background-position: 250px 0px;
@@ -262,7 +262,7 @@ input::placeholder {
   height: 86px;
   line-height: 86px;
   width: 86px;
-  background-image: url("images/ALL.png");
+  background-image: url("../images/ALL.png");
   background-repeat: no-repeat;
   background-size:  70px 70px;
   background-position: 8px 8px;

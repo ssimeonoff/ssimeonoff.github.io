@@ -1,7 +1,7 @@
 /* fonts */
 @font-face {
     font-family: Prototype;
-    src: url(fonts/Prototype.ttf);
+    src: url(../fonts/Prototype.ttf);
 }
 
 @media screen and (max-width: 520px) {
@@ -953,7 +953,7 @@
 
 .corporate-era-icon:after {
   background-color: #cc3333;
-  background-image: url("images/triangle16.png");
+  background-image: url("../images/triangle16.png");
 }
 .corporate-era-icon2:after {
   background-color: #cc3333;
@@ -962,7 +962,7 @@
 
 .venus-icon:after {
   background: rgb(84,150,201);
-  background-image: url("images/triangle16.png");
+  background-image: url("../images/triangle16.png");
   transform: rotate(180deg);
 }
 .venus-icon2:after {
@@ -971,7 +971,7 @@
 
 .prelude-icon:after {
   background: rgb(235,118,171);
-  background-image: url("images/triangle16.png");
+  background-image: url("../images/triangle16.png");
   transform: rotate(-90deg);
 }
 .prelude-icon2:after {
@@ -980,7 +980,7 @@
 
 .colonies-icon:after {
   background-color: #444;
-  background-image: url("images/triangle16.png");
+  background-image: url("../images/triangle16.png");
 }
 .colonies-icon2:after {
   background-color: #444;

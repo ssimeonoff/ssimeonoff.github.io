@@ -1,7 +1,7 @@
 /* fonts */
 @font-face {
     font-family: Prototype;
-    src: url(fonts/Prototype.ttf);
+    src: url(../fonts/Prototype.ttf);
 }
 
 .login-container{

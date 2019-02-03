@@ -21,7 +21,7 @@
 
 @font-face {
     font-family: Prototype;
-    src: url(fonts/Prototype.ttf);
+    src: url(../fonts/Prototype.ttf);
 }
 
 #form {
@@ -617,7 +617,7 @@ input::-webkit-inner-spin-button {
   border-top: 2px solid rgb(137,137,137);
   border-left: 2px solid rgb(137,137,137);
   transition: 0.3s ease-in-out;
-  background-image: url("images/boy.png");
+  background-image: url("../images/boy.png");
   background-repeat: no-repeat;
   background-size: 90px 54px;
   filter: grayscale(100%);
@@ -766,22 +766,22 @@ input::-webkit-inner-spin-button {
   }
   .corporate-era-icon:after {
     background-color: #cc3333;
-    background-image: url("images/triangle16.png");
+    background-image: url("../images/triangle16.png");
   }
 
   .venus-icon:after {
     background: rgb(84,150,201);
-    background-image: url("images/triangle16.png");
+    background-image: url("../images/triangle16.png");
     transform: rotate(180deg);
   }
 
   .prelude-icon:after {
     background: rgb(235,118,171);
-    background-image: url("images/triangle16.png");
+    background-image: url("../images/triangle16.png");
     transform: rotate(-90deg);
   }
 
   .colonies-icon:after {
     background-color: #444;
-    background-image: url("images/triangle16.png");
+    background-image: url("../images/triangle16.png");
   }

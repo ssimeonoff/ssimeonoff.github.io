@@ -8,9 +8,6 @@
   line-height: 18px;
 }
 
-
-
-
 .history-section-score {
   display: inline-block;
   border-top: 1px solid rgb(221,221,221);
@@ -215,10 +212,10 @@
   margin-left: 1px;
 }
 .mode-all {
-  background-image: url("images/ALL.png");
+  background-image: url("../images/ALL.png");
 }
 .mode-63 {
-  background-image: url("images/63.png");
+  background-image: url("../images/63.png");
 }
 
 .history-corporation-solo-cell {

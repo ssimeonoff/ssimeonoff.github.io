@@ -1,7 +1,7 @@
 /* fonts */
 @font-face {
     font-family: Prototype;
-    src: url(fonts/Prototype.ttf);
+    src: url(../fonts/Prototype.ttf);
 }
 
 /*project card div*/
@@ -168,7 +168,7 @@ border-right: 2px solid rgb(137,137,137);
         border-radius: 50%;
         box-shadow: 0 0 0 1px rgba(0,0,0,0.4);
         content: "";
-        background-image: url("images/triangle16.png");
+        background-image: url("../images/triangle16.png");
         background-size: 10px 10px;
         background-position: bottom 4px right 3px;
         background-repeat: no-repeat;
@@ -187,7 +187,7 @@ border-right: 2px solid rgb(137,137,137);
           border-radius: 50%;
           box-shadow: 0 0 0 1px rgba(0,0,0,0.4);
           content: "";
-          background-image: url("images/triangle16.png");
+          background-image: url("../images/triangle16.png");
           background-size: 10px 10px;
           background-position: bottom 4px right 3px;
           background-repeat: no-repeat;
@@ -208,7 +208,7 @@ border-right: 2px solid rgb(137,137,137);
             border-radius: 50%;
             box-shadow: 0 0 0 1px rgba(0,0,0,0.4);
             content: "";
-            background-image: url("images/triangle16.png");
+            background-image: url("../images/triangle16.png");
             background-size: 10px 10px;
             background-position: bottom 4px right 3px;
             background-repeat: no-repeat;
@@ -343,19 +343,19 @@ border-right: 2px solid rgb(137,137,137);
 .background-color-colony { background-color: rgb(158,145,128);}
 
 /*********** Style the tags ************/
-.tag-wild {background-image: url("images/tag-wild.png")}
-.tag-building {background-image: url("images/tag-building.png")}
-.tag-space {background-image: url("images/tag-space.png")}
-.tag-power {background-image: url("images/tag-power.png")}
-.tag-jovian {background-image: url("images/tag-jovian.png")}
-.tag-venus {background-image: url("images/tag-venus.png")}
-.tag-earth { background-image: url("images/tag-earth.png");}
-.tag-city { background-image: url("images/tag-city.png");}
-.tag-microbe {background-image: url("images/tag-microbe.png")}
-.tag-plant {background-image: url("images/tag-plant.png")}
-.tag-animal {background-image: url("images/tag-animal.png")}
-.tag-event {background-image: url("images/tag-event.png")}
-.tag-science {background-image: url("images/tag-science.png")}
+.tag-wild {background-image: url("../images/tag-wild.png")}
+.tag-building {background-image: url("../images/tag-building.png")}
+.tag-space {background-image: url("../images/tag-space.png")}
+.tag-power {background-image: url("../images/tag-power.png")}
+.tag-jovian {background-image: url("../images/tag-jovian.png")}
+.tag-venus {background-image: url("../images/tag-venus.png")}
+.tag-earth { background-image: url("../images/tag-earth.png");}
+.tag-city { background-image: url("../images/tag-city.png");}
+.tag-microbe {background-image: url("../images/tag-microbe.png")}
+.tag-plant {background-image: url("../images/tag-plant.png")}
+.tag-animal {background-image: url("../images/tag-animal.png")}
+.tag-event {background-image: url("../images/tag-event.png")}
+.tag-science {background-image: url("../images/tag-science.png")}
 
 /************** Style the buttons ************/
 .button, .button2 {
@@ -645,7 +645,7 @@ border-right: 2px solid rgb(137,137,137);
 }
 
 .btn-icon {
-  background-image: url("multi.png");
+  background-image: url("../multi.png");
 }
 
 /*-------------------------------*/
@@ -1284,7 +1284,7 @@ border-right: 2px solid rgb(137,137,137);
     }
 
 .building-resource {
-  background-image: url("images/tag-building.png");
+  background-image: url("../images/tag-building.png");
   background-size: 32px 32px;
   background-position: -2px;
 }
