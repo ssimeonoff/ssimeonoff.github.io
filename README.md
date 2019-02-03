@@ -4,8 +4,8 @@
 * The Stats page shows games data, submitted by the players.
 * The Submit page contains the submit form for the data displayed on the State page.
 * The Solo page contains the submit form and shows data from solo games only.
-* The Setup page generates random starting hand, used for quiz polls in the forum
-* The Mysolo page is the author's private detailed solo play results
+* The Setup page generates random starting hand, used for quiz polls in the forum.
+* The Mysolo page is the author's private detailed solo play results.
 
 ## Features
 
