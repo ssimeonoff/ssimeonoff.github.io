@@ -370,7 +370,7 @@ border-right: 2px solid rgb(137,137,137);
 
 .button.active {
   border: 2px solid rgb(137,137,137);
-  box-shadow: inset 0 0 2px 2px rgb(68,68,68);
+  box-shadow: inset 0 1px 2px 2px rgb(68,68,68);
   filter: brightness(120%)  drop-shadow(0 0 5px white);
   transform: translate(0,3px);
 }
@@ -1776,14 +1776,14 @@ input[type=range]:focus {
 }
 
 .track-temp-thumb::-webkit-slider-thumb {
-  background: url("images/thumb1.png") !important;
+  background: url("../images/thumb1.png") !important;
   height: 48px !important;
   margin-top: -18px !important;
   background-repeat: no-repeat;
 
 }
 .track-temp-thumb::-moz-range-thumb {
-  background: url("images/thumb1.png") !important;
+  background: url("../images/thumb1.png") !important;
   height: 44px !important;
   margin-top: -18px !important;
   background-repeat: no-repeat;
@@ -1791,20 +1791,20 @@ input[type=range]:focus {
 }
 
 .track-oxygen-thumb::-webkit-slider-thumb {
-  background: url("images/thumb2.png") !important;
+  background: url("../images/thumb2.png") !important;
   width: 50px !important;
   background-repeat: no-repeat;
 
 
 }
 .track-oxygen-thumb::-moz-range-thumb {
-  background: url("images/thumb2.png") !important;
+  background: url("../images/thumb2.png") !important;
   width: 46px !important;
   background-repeat: no-repeat;
 }
 
 .track-oceans-thumb::-webkit-slider-thumb {
-  background: url("images/thumb3.png") !important;
+  background: url("../images/thumb3.png") !important;
   height: 48px !important;
   width: 52px !important;
   margin-top: -18px !important;
@@ -1812,7 +1812,7 @@ input[type=range]:focus {
 
 }
 .track-oceans-thumb::-moz-range-thumb {
-  background: url("images/thumb3.png") !important;
+  background: url("../images/thumb3.png") !important;
   height: 44px !important;
   width: 48px !important;
   margin-top: -18px !important;
@@ -1821,57 +1821,57 @@ input[type=range]:focus {
 }
 
 .track-venus-thumb::-webkit-slider-thumb {
-  background: url("images/thumb4.png") !important;
+  background: url("../images/thumb4.png") !important;
   width: 50px !important;
   background-repeat: no-repeat;
 
 }
 .track-venus-thumb::-moz-range-thumb {
-  background: url("images/thumb4.png") !important;
+  background: url("../images/thumb4.png") !important;
   width: 46px !important;
   background-repeat: no-repeat;
 }
 
 .track-science-thumb::-webkit-slider-thumb {
-  background: url("images/thumb5.png") !important;
+  background: url("../images/thumb5.png") !important;
   border-radius: 50% !important;
   background-repeat: no-repeat;
 }
 .track-science-thumb::-moz-range-thumb {
-  background: url("images/thumb5.png") !important;
+  background: url("../images/thumb5.png") !important;
   border-radius: 50% !important;
   background-repeat: no-repeat;
 }
 
 .track-jovian-thumb::-webkit-slider-thumb {
-  background: url("images/thumb6.png") !important;
+  background: url("../images/thumb6.png") !important;
   border-radius: 50% !important;
   background-repeat: no-repeat;
 }
 .track-jovian-thumb::-moz-range-thumb {
-  background: url("images/thumb6.png") !important;
+  background: url("../images/thumb6.png") !important;
   border-radius: 50% !important;
   background-repeat: no-repeat;
 }
 
 .track-venusTag-thumb::-webkit-slider-thumb {
-  background: url("images/thumb7.png") !important;
+  background: url("../images/thumb7.png") !important;
   border-radius: 50% !important;
   background-repeat: no-repeat;
 }
 .track-venusTag-thumb::-moz-range-thumb {
-  background: url("images/thumb7.png") !important;
+  background: url("../images/thumb7.png") !important;
   border-radius: 50% !important;
   background-repeat: no-repeat;
 }
 
 .track-earth-thumb::-webkit-slider-thumb {
-  background: url("images/thumb8.png") !important;
+  background: url("../images/thumb8.png") !important;
   border-radius: 50% !important;
   background-repeat: no-repeat;
 }
 .track-earth-thumb::-moz-range-thumb {
-  background: url("images/thumb8.png") !important;
+  background: url("../images/thumb8.png") !important;
   border-radius: 50% !important;
   background-repeat: no-repeat;
 }
