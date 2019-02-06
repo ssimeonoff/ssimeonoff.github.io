@@ -227,6 +227,25 @@
     border-right: 2px solid rgb(137,137,137);
 }
 
+.stats-ranking {
+  display: grid;
+  grid-template-columns: 90px 110px 120px 140px;
+  position: relative;
+  font-family: Prototype;
+  background: #ccc;
+  color: #222;
+  background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
+  border-radius: 2px;
+  width: 460px;
+  position: relative;
+  text-align: center;
+  margin-bottom: 10px;
+  border-top: 2px solid rgb(221,221,221);
+  border-left: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
+}
+
 .chartStats {
     display: grid;
     grid-template-columns: 460px;
@@ -399,6 +418,19 @@
       border-right: 2px solid rgb(137,137,137);
       transition: 0.3s;
 
+}
+
+.grid-cell-rank {
+      text-align: center;
+      font-size: 20px;
+      color: #222;
+      height: 60px;
+      line-height: 60px;
+      border-radius: 1px;
+      border-top: 2px solid rgb(221,221,221);
+      border-left: 2px solid rgb(221,221,221);
+      border-bottom: 2px solid rgb(137,137,137);
+      border-right: 2px solid rgb(137,137,137);
 }
 
 .stats-general {

@@ -1032,7 +1032,6 @@ function pushRanking () {
    pushRankingPerPlayers(4, games_player);
    pushRankingPerPlayers(5, games_player);
  }
-
 }
 
 function pushRankingPerPlayers (players, games_players) {
@@ -1053,13 +1052,10 @@ function pushRankingPerPlayers (players, games_players) {
     if (position == 3) {fourth++}
     if (position == 4) {fifth++}
   }
-
-  document.getElementById("rank_" + players + "_1").innerHTML = first;
-  document.getElementById("rank_" + players + "_2").innerHTML = second;
-  document.getElementById("rank_" + players + "_3").innerHTML = third;
-  document.getElementById("rank_" + players + "_4").innerHTML = fourth;
-  document.getElementById("rank_" + players + "_5").innerHTML = fifth;
-
+  if (players == 2) {document.getElementById("rank_2").innerHTML = "<span style='font-size:30px;'>" + first +"</span> " + second}
+  if (players == 3) {document.getElementById("rank_3").innerHTML = first + " " + second + " " + third}
+  if (players == 4) {document.getElementById("rank_4").innerHTML = first + " " + second + " " + third + " " + fourth}
+  if (players == 5) {document.getElementById("rank_5").innerHTML = first + " " + second + " " + third + " " + fourth + " " + fifth}
 }
 
 
