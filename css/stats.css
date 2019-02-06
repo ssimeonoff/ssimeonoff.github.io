@@ -246,6 +246,12 @@
   border-right: 2px solid rgb(137,137,137);
 }
 
+.ranking-winner {
+  font-size: 30px;
+  color: white;
+  text-shadow: 0 0 1px black, 0 2px 2px black;
+}
+
 .chartStats {
     display: grid;
     grid-template-columns: 460px;

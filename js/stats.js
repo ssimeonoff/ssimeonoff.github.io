@@ -1052,10 +1052,10 @@ function pushRankingPerPlayers (players, games_players) {
     if (position == 3) {fourth++}
     if (position == 4) {fifth++}
   }
-  if (players == 2) {document.getElementById("rank_2").innerHTML = "<span style='font-size:30px;'>" + first +"</span> / " + second}
-  if (players == 3) {document.getElementById("rank_3").innerHTML = "<span style='font-size:30px;'>" + first + " / " + second + " / " + third}
-  if (players == 4) {document.getElementById("rank_4").innerHTML = "<span style='font-size:30px;'>" + first + " / " + second + " / " + third + " / " + fourth}
-  if (players == 5) {document.getElementById("rank_5").innerHTML = "<span style='font-size:30px;'>" + first + " / " + second + " / " + third + " / " + fourth + " / " + fifth}
+  if (players == 2) {document.getElementById("rank_2").innerHTML = "<span class='ranking-winner'>" + first +"</span> / " + second}
+  if (players == 3) {document.getElementById("rank_3").innerHTML = "<span class='ranking-winner'>" + first + " / " + second + " / " + third}
+  if (players == 4) {document.getElementById("rank_4").innerHTML = "<span class='ranking-winner'>" + first + " / " + second + " / " + third + " / " + fourth}
+  if (players == 5) {document.getElementById("rank_5").innerHTML = "<span class='ranking-winner'>" + first + " / " + second + " / " + third + " / " + fourth + " / " + fifth}
 }
 
 
