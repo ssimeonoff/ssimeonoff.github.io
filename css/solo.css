@@ -291,7 +291,7 @@ input::placeholder {
 }
 
 .btn-filter-mode {
-  background-image: url(images/63.png);
+  background-image: url(../images/63.png);
   background-repeat: no-repeat;
   background-size: 27px 27px;
   background-position: 14px 4px;

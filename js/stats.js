@@ -16,19 +16,31 @@ firebase.database().ref("games-production").on('value', function(snapshot) {
     GAMES_ALL = snapshotToArray(snapshot);
     GAMES_ALL_JSON = JSON.stringify(snapshot)
     games = snapshotToArray(snapshot);
+    if (email_guest != "ALL")  {
+      console.log(email_guest[0])
+      document.getElementById("title-auth").innerHTML = "games from " + email_guest + "****"
+      GAMES_ALL = games.filter(function(el) {
+        return el.email != undefined && el.email.search(email_guest) > -1;
+      });
+      games = GAMES_ALL;
+    }
     pushData();
 });
 
 firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-    // User is signed in.
-    console.log("logged")
-    document.getElementById("title-auth").innerHTML = user.displayName + " - " + user.email
-    document.getElementById("mygames").disabled = false;
-  } else {
-    // No user is signed in.
-    console.log("not logged")
-    document.getElementById("title-auth").innerHTML = "NOT SIGNED - " + '<a class="link-auth" href="https://ssimeonoff.github.io/login">SIGN IN HERE</a>'
+  urlString = window.location.href;
+  email_guest = parseURLParams(urlString);
+  if (email_guest == "ALL") {
+    if (user) {
+      // User is signed in.
+      console.log("logged")
+      document.getElementById("title-auth").innerHTML = user.displayName + " - " + user.email
+      document.getElementById("mygames").disabled = false;
+    } else {
+      // No user is signed in.
+      console.log("not logged")
+      document.getElementById("title-auth").innerHTML = "NOT SIGNED - " + '<a class="link-auth" href="https://ssimeonoff.github.io/login">SIGN IN HERE</a>'
+    }
   }
 });
 
@@ -1102,4 +1114,13 @@ function download(data, filename, json) {
             window.URL.revokeObjectURL(url);
         }, 0);
     }
+}
+
+function parseURLParams(url) {
+    var queryStart = url.indexOf("#") + 1,
+        queryEnd   = url.indexOf("%") + 1 || url.length + 1,
+        query = url.slice(queryStart, queryEnd - 1)
+    cards = query.replace(/\#/g, " ").split(" ");
+    if (query === url || query === "") return "ALL";
+    return cards;
 }

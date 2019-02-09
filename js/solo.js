@@ -1,15 +1,7 @@
-if(window.location.href.indexOf("majk") > -1) {
-  majk = true;
-} else {majk = false;}
 
 countryValue = "";
 try {getCountry();}
 catch (err) {console.log("cannot get country")}
-
-if(window.location.toString().indexOf("majk") > -1) {
-  majk = true;
-} else {majk = false;}
-
 
 var config = {
   apiKey: "AIzaSyD6HEAHfcXGN-WrUxSaraO3TYNzGbAr8ts",
@@ -20,35 +12,25 @@ var config = {
   messagingSenderId: "969120080569"
 };
 
-var configMajk = {
-  apiKey: "AIzaSyCMbA6dyAirKhUznhfMlw2qxLVb5NnqPA8",
-  authDomain: "majks-games.firebaseapp.com",
-  databaseURL: "https://majks-games.firebaseio.com/",
-  projectId: "majks-games",
-  storageBucket: "majks-games.appspot.com",
-  messagingSenderId: "163248462443"
-};
-
 firebase.initializeApp(config);
-appMajk = firebase.initializeApp(configMajk, "appMajk");
 
 // Reference Games collection
 var gamesRef = firebase.database().ref("games-solo");
-if (majk) {var gamesRefMajk = appMajk.database().ref("majks-games");}
 
 firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-    // User is signed in.
-    console.log("logged")
-    document.getElementById("title-auth").innerHTML = user.displayName + " - " + user.email
-    document.getElementById("mygames").disabled = false;
-    if (user.email == "majkkruszewski@gmail.com") {
-      document.getElementById("lossSection").classList.add("boyMajk");
+  urlString = window.location.href;
+  email_guest = parseURLParams(urlString);
+  if (email_guest == "ALL") {
+    if (user) {
+      // User is signed in.
+      console.log("logged")
+      document.getElementById("title-auth").innerHTML = user.displayName + " - " + user.email
+      document.getElementById("mygames").disabled = false;
+    } else {
+      // No user is signed in.
+      console.log("not logged")
+      document.getElementById("title-auth").innerHTML = "NOT SIGNED - " + '<a class="link-auth" href="https://ssimeonoff.github.io/login">SIGN IN HERE</a>'
     }
-  } else {
-    // No user is signed in.
-    console.log("not logged")
-    document.getElementById("title-auth").innerHTML = "NOT SIGNED - " + '<a class="link-auth" href="https://ssimeonoff.github.io/login">SIGN IN HERE</a>'
   }
 });
 
@@ -116,20 +98,6 @@ function saveGame(name, email, corporation, expansions, result, mode, map, times
     timestamp: timestamp,
     country: country
   })
-  if (majk) {
-    var newGameRefMajk = gamesRefMajk.push();
-    newGameRefMajk.set({
-      name: name,
-      email: email,
-      corporation: corporation,
-      expansions: expansions,
-      result: result,
-      mode: mode,
-      map: map,
-      timestamp: timestamp,
-      country: country
-    })
-  }
 }
 
 
@@ -144,26 +112,22 @@ function arrayExpansions() {
   return expansions;
 }
 
-
-
-
-
 // Reference Games collection
-if (majk) {
-  appMajk.database().ref("majks-games").on('value', function(snapshot) {
-      GAMES_ALL = snapshotToArray(snapshot);
-      GAMES_ALL_JSON = JSON.stringify(snapshot)
-      games = snapshotToArray(snapshot);
-      pushData();
-  });
-} else {
   firebase.database().ref("games-solo").on('value', function(snapshot) {
-      GAMES_ALL = snapshotToArray(snapshot);
-      GAMES_ALL_JSON = JSON.stringify(snapshot)
-      games = snapshotToArray(snapshot);
-      pushData();
+    GAMES_ALL = snapshotToArray(snapshot);
+    GAMES_ALL_JSON = JSON.stringify(snapshot)
+    games = snapshotToArray(snapshot);
+    if (email_guest != "ALL")  {
+      console.log(email_guest[0])
+      document.getElementById("title-auth").innerHTML = "games from " + email_guest + "****"
+      document.getElementById("submit-container").style.display = "none";
+      GAMES_ALL = games.filter(function(el) {
+        return el.email != undefined && el.email.search(email_guest) > -1;
+      });
+      games = GAMES_ALL;
+    }
+    pushData();
   });
-}
 
 $("#form").keypress(function (event) {
     if (event.keyCode == 13) {
@@ -864,7 +828,6 @@ function histogram () {
   function drawChart() {
     var data = google.visualization.arrayToDataTable(wins);
     var dataLosses = google.visualization.arrayToDataTable(losses);
-    console.log(dataLosses)
 
     var options = {
       animation: {"startup": true},
@@ -981,4 +944,13 @@ function sortBy(sortRule) {
     for (j=0; j < y.length; j++) {
       y[j].style.opacity = 0.3;
     }
+}
+
+function parseURLParams(url) {
+    var queryStart = url.indexOf("#") + 1,
+        queryEnd   = url.indexOf("%") + 1 || url.length + 1,
+        query = url.slice(queryStart, queryEnd - 1)
+    cards = query.replace(/\#/g, " ").split(" ");
+    if (query === url || query === "") return "ALL";
+    return cards;
 }
