@@ -121,7 +121,7 @@ function enableCorporations() {
     corps[i].disabled = false;
     corps[i].classList.add("not-filled");
     if (i==0) {
-      options[i].innerHTML = "PLAYER 1 (YOU)";
+      options[i].innerHTML = "PLAYER 1 < that is you";
     } else {
       options[i].innerHTML = "PLAYER " + parseInt(i+1);
     }
