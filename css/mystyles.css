@@ -1056,9 +1056,13 @@ border-right: 2px solid rgb(137,137,137);
     border-radius: 50%;
     width: 28px;
     height: 28px;
-    background-size: 28px 28px;
+    background-size: 30px 30px;
+    background-position: -1px -1px;
     line-height: 28px;
     box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
+}
+.resource-tag::after {
+    content: "\00A0";
 }
 
 .money {
