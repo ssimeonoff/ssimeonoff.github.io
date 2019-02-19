@@ -877,7 +877,7 @@ border-right: 2px solid rgb(137,137,137);
 }
 
 .red-outline {
-    border: 2px solid red;
+    border: 2px solid red !important;
     box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3), inset 0 0 0px 1px #444 !important;
 }
 
@@ -1060,6 +1060,10 @@ border-right: 2px solid rgb(137,137,137);
     background-position: -1px -1px;
     line-height: 28px;
     box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
+    border-top: 1px solid rgb(221,221,221);
+    border-left: 1px solid rgb(221,221,221);
+    border-bottom: 1px solid rgb(137,137,137);
+    border-right: 1px solid rgb(137,137,137);
 }
 .resource-tag::after {
     content: "\00A0";
@@ -1199,6 +1203,7 @@ border-right: 2px solid rgb(137,137,137);
   box-shadow: 0 0 0 1px rgba(0,0,0,0.6);
 }
 
+
 .card-icon-venus {
   background: rgb(84,150,201);
   border-radius: 50%;
@@ -1264,7 +1269,6 @@ border-right: 2px solid rgb(137,137,137);
     content: "\2601";
   }
 
-
 .card-corporation {
   background-color: rgb(44,44,44);
   background: linear-gradient(to right bottom, black, rgb(60,60,60), rgb(150,150,150), rgb(60,60,60), rgb(60,60,60),black);
@@ -1278,74 +1282,6 @@ border-right: 2px solid rgb(137,137,137);
   border-radius: 3px;
   box-shadow: 0 2px 2px 1px rgba(0,0,0,.8);
 }
-
-.space-resource {
-    background-color: black;
-    background: linear-gradient(rgb(100,100,100),black,black);
-    color: yellow;
-    font-weight: normal;
-    font-size: 20px;
-}
-    .space-resource:after {
-        content: "\2734";
-    }
-
-.building-resource {
-  background-image: url("../images/tag-building.png");
-  background-size: 32px 32px;
-  background-position: -2px;
-}
-.building-resource:before {
-    content: ".";
-}
-
-
-.event-resource {
-    background-color: rgb(255,230,35);
-    font-size: 18px;
-}
-  .event-resource:after {
-        content: "\2B07\FE0E";
-        vertical-align: bottom;
-        display: inline-block;
-        -webkit-transform: scale(2,1); /* Safari and Chrome */
-        -moz-transform: scale(2,1); /* Firefox */
-        -ms-transform: scale(2,1); /* IE 9 */
-        -o-transform: scale(2,1); /* Opera */
-        transform: scale(2,1); /* W3C */
-    }
-
-.jovian {
-    background-color: rgb(235,200,148);
-    background: linear-gradient(rgb(235,200,148),beige,rgb(235,200,148),beige,rosybrown,rgb(235,200,148),beige,beige,rgb(235,200,148),rosybrown,rgb(235,200,148),beige,rgb(235,200,148),rgb(235,200,148), rgb(235,200,148));
-}
-.jovian:after {
-  content: "\00a0";
-}
-
-.earth-resource {
-    background:rgb(15,96,151);
-    color: white;
-
-    }
-    .earth-resource:after {
-        content: "\1f30f\FE0E";
-        font-size: 23px;
-        vertical-align: bottom;
-    }
-
-    .venus-resource {
-        background: rgb(84,150,201);
-    }
-
-        .venus-resource:after {
-            content: "V";
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            text-shadow: 0 0 1px black;
-        }
-
 
 .rating {
     background-color: rgb(240,100,00);
