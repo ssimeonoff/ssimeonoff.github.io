@@ -114,7 +114,6 @@ body {
 #slot-frame, #slot-frame2 {
     background: #1b1b1b;
     background: -moz-linear-gradient(top, #1b1b1b 0%, #383838 8%, #3a3a3a 20%, #0a0a0a 47%, #010101 50%, #0d0d0d 54%, #444444 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1b1b1b), color-stop(8%,#383838), color-stop(20%,#3a3a3a), color-stop(47%,#0a0a0a), color-stop(50%,#010101), color-stop(54%,#0d0d0d), color-stop(100%,#444444));
     background: -webkit-linear-gradient(top, #1b1b1b 0%,#383838 8%,#3a3a3a 20%,#0a0a0a 47%,#010101 50%,#0d0d0d 54%,#444444 100%);
     background: -o-linear-gradient(top, #1b1b1b 0%,#383838 8%,#3a3a3a 20%,#0a0a0a 47%,#010101 50%,#0d0d0d 54%,#444444 100%);
     background: -ms-linear-gradient(top, #1b1b1b 0%,#383838 8%,#3a3a3a 20%,#0a0a0a 47%,#010101 50%,#0d0d0d 54%,#444444 100%);
@@ -184,7 +183,6 @@ body {
 
 #slot-wheels .wheel .overlay, #slot-wheels-2 .wheel .overlay {
     background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.25) 25%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.25) 80%, rgba(0,0,0,1) 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,1)), color-stop(25%,rgba(0,0,0,0.25)), color-stop(50%,rgba(0,0,0,0)), color-stop(80%,rgba(0,0,0,0.25)), color-stop(100%,rgba(0,0,0,1)));
     background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,0.25) 25%,rgba(0,0,0,0) 50%,rgba(0,0,0,0.25) 80%,rgba(0,0,0,1) 100%);
     background: -o-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,0.25) 25%,rgba(0,0,0,0) 50%,rgba(0,0,0,0.25) 80%,rgba(0,0,0,1) 100%);
     background: -ms-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,0.25) 25%,rgba(0,0,0,0) 50%,rgba(0,0,0,0.25) 80%,rgba(0,0,0,1) 100%);
@@ -211,7 +209,6 @@ body {
 #slot-display {
     background: #1b1b1b;
     background: -moz-linear-gradient(top, #1b1b1b 0%, #383838 8%, #3a3a3a 20%, #0a0a0a 47%, #010101 50%, #0d0d0d 54%, #444444 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1b1b1b), color-stop(8%,#383838), color-stop(20%,#3a3a3a), color-stop(47%,#0a0a0a), color-stop(50%,#010101), color-stop(54%,#0d0d0d), color-stop(100%,#444444));
     background: -webkit-linear-gradient(top, #1b1b1b 0%,#383838 8%,#3a3a3a 20%,#0a0a0a 47%,#010101 50%,#0d0d0d 54%,#444444 100%);
     background: -o-linear-gradient(top, #1b1b1b 0%,#383838 8%,#3a3a3a 20%,#0a0a0a 47%,#010101 50%,#0d0d0d 54%,#444444 100%);
     background: -ms-linear-gradient(top, #1b1b1b 0%,#383838 8%,#3a3a3a 20%,#0a0a0a 47%,#010101 50%,#0d0d0d 54%,#444444 100%);
@@ -259,7 +256,6 @@ body {
 
 #slot-overlay {
     background: -moz-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.15) 50%, rgba(0,0,0,0) 51%, rgba(0,0,0,0) 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.1)), color-stop(50%,rgba(0,0,0,0.15)), color-stop(51%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0)));
     background: -webkit-linear-gradient(top, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.15) 50%,rgba(0,0,0,0) 51%,rgba(0,0,0,0) 100%);
     background: -o-linear-gradient(top, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.15) 50%,rgba(0,0,0,0) 51%,rgba(0,0,0,0) 100%);
     background: -ms-linear-gradient(top, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.15) 50%,rgba(0,0,0,0) 51%,rgba(0,0,0,0) 100%);
@@ -286,7 +282,7 @@ body {
     cursor: pointer;
     height: 85px;
     right: -59px;
-    top: 175px;
+    top: 185px;
     position: absolute;
     width: 37px;
     transform: scale(2);
@@ -300,7 +296,6 @@ body {
 #slot-trigger .ring1 {
     background: #282828;
     background: -moz-linear-gradient(top, #282828 0%, #959595 14%, #d1d1d1 37%, #bababa 49%, #959595 67%, #212121 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#282828), color-stop(14%,#959595), color-stop(37%,#d1d1d1), color-stop(49%,#bababa), color-stop(67%,#959595), color-stop(100%,#212121));
     background: -webkit-linear-gradient(top, #282828 0%,#959595 14%,#d1d1d1 37%,#bababa 49%,#959595 67%,#212121 100%);
     background: -o-linear-gradient(top, #282828 0%,#959595 14%,#d1d1d1 37%,#bababa 49%,#959595 67%,#212121 100%);
     background: -ms-linear-gradient(top, #282828 0%,#959595 14%,#d1d1d1 37%,#bababa 49%,#959595 67%,#212121 100%);
@@ -319,7 +314,6 @@ body {
 
 #slot-trigger .ring1 .shadow {
     background: -moz-linear-gradient(top,  rgba(149,149,149,0.2) 0%, rgba(13,13,13,0.18) 46%, rgba(1,1,1,0.18) 50%, rgba(10,10,10,0.18) 53%, rgba(78,78,78,0.17) 76%, rgba(56,56,56,0.16) 87%, rgba(27,27,27,0.15) 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(149,149,149,0.2)), color-stop(46%,rgba(13,13,13,0.18)), color-stop(50%,rgba(1,1,1,0.18)), color-stop(53%,rgba(10,10,10,0.18)), color-stop(76%,rgba(78,78,78,0.17)), color-stop(87%,rgba(56,56,56,0.16)), color-stop(100%,rgba(27,27,27,0.15)));
     background: -webkit-linear-gradient(top,  rgba(149,149,149,0.2) 0%,rgba(13,13,13,0.18) 46%,rgba(1,1,1,0.18) 50%,rgba(10,10,10,0.18) 53%,rgba(78,78,78,0.17) 76%,rgba(56,56,56,0.16) 87%,rgba(27,27,27,0.15) 100%);
     background: -o-linear-gradient(top,  rgba(149,149,149,0.2) 0%,rgba(13,13,13,0.18) 46%,rgba(1,1,1,0.18) 50%,rgba(10,10,10,0.18) 53%,rgba(78,78,78,0.17) 76%,rgba(56,56,56,0.16) 87%,rgba(27,27,27,0.15) 100%);
     background: -ms-linear-gradient(top,  rgba(149,149,149,0.2) 0%,rgba(13,13,13,0.18) 46%,rgba(1,1,1,0.18) 50%,rgba(10,10,10,0.18) 53%,rgba(78,78,78,0.17) 76%,rgba(56,56,56,0.16) 87%,rgba(27,27,27,0.15) 100%);
@@ -339,7 +333,6 @@ body {
 #slot-trigger .ring2 {
     background: #282828;
     background: -moz-linear-gradient(top, #282828 0%, #959595 14%, #d1d1d1 37%, #bababa 49%, #959595 67%, #212121 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#282828), color-stop(14%,#959595), color-stop(37%,#d1d1d1), color-stop(49%,#bababa), color-stop(67%,#959595), color-stop(100%,#212121));
     background: -webkit-linear-gradient(top, #282828 0%,#959595 14%,#d1d1d1 37%,#bababa 49%,#959595 67%,#212121 100%);
     background: -o-linear-gradient(top, #282828 0%,#959595 14%,#d1d1d1 37%,#bababa 49%,#959595 67%,#212121 100%);
     background: -ms-linear-gradient(top, #282828 0%,#959595 14%,#d1d1d1 37%,#bababa 49%,#959595 67%,#212121 100%);
@@ -360,7 +353,6 @@ body {
 
 #slot-trigger .ring2 .shadow {
     background: -moz-linear-gradient(top,  rgba(149,149,149,0.15) 0%, rgba(13,13,13,0.15) 46%, rgba(1,1,1,0.15) 50%, rgba(10,10,10,0.15) 53%, rgba(78,78,78,0.15) 76%, rgba(56,56,56,0.15) 87%, rgba(27,27,27,0.15) 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(149,149,149,0.15)), color-stop(46%,rgba(13,13,13,0.15)), color-stop(50%,rgba(1,1,1,0.15)), color-stop(53%,rgba(10,10,10,0.15)), color-stop(76%,rgba(78,78,78,0.15)), color-stop(87%,rgba(56,56,56,0.15)), color-stop(100%,rgba(27,27,27,0.15)));
     background: -webkit-linear-gradient(top,  rgba(149,149,149,0.15) 0%,rgba(13,13,13,0.15) 46%,rgba(1,1,1,0.15) 50%,rgba(10,10,10,0.15) 53%,rgba(78,78,78,0.15) 76%,rgba(56,56,56,0.15) 87%,rgba(27,27,27,0.15) 100%);
     background: -o-linear-gradient(top,  rgba(149,149,149,0.15) 0%,rgba(13,13,13,0.15) 46%,rgba(1,1,1,0.15) 50%,rgba(10,10,10,0.15) 53%,rgba(78,78,78,0.15) 76%,rgba(56,56,56,0.15) 87%,rgba(27,27,27,0.15) 100%);
     background: -ms-linear-gradient(top,  rgba(149,149,149,0.15) 0%,rgba(13,13,13,0.15) 46%,rgba(1,1,1,0.15) 50%,rgba(10,10,10,0.15) 53%,rgba(78,78,78,0.15) 76%,rgba(56,56,56,0.15) 87%,rgba(27,27,27,0.15) 100%);
@@ -380,7 +372,6 @@ body {
 #slot-trigger .arm {
     background: #0d0d0d;
     background: -moz-linear-gradient(left, #0d0d0d 0%, #4e4e4e 47%, #383838 87%, #1b1b1b 100%);
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#0d0d0d), color-stop(47%,#4e4e4e), color-stop(87%,#383838), color-stop(100%,#1b1b1b));
     background: -webkit-linear-gradient(left, #0d0d0d 0%,#4e4e4e 47%,#383838 87%,#1b1b1b 100%);
     background: -o-linear-gradient(left, #0d0d0d 0%,#4e4e4e 47%,#383838 87%,#1b1b1b 100%);
     background: -ms-linear-gradient(left, #0d0d0d 0%,#4e4e4e 47%,#383838 87%,#1b1b1b 100%);
@@ -399,12 +390,11 @@ body {
 
 #slot-trigger .arm .knob {
     background: #ff6363;
-    background: -moz-radial-gradient(center, ellipse cover, #FF9800 0%, #831f00);
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#ff6363), color-stop(100%,#cf0404));
-    background: -webkit-radial-gradient(center, ellipse cover, #FF9800 0%, #831f00);
-    background: -o-radial-gradient(center, ellipse cover, #FF9800 0%, #831f00);
-    background: -ms-radial-gradient(center, ellipse cover, #FF9800 0%, #831f00);
-    background: radial-gradient(ellipse at center, #FF9800 0%, #831f00);
+    background: -moz-radial-gradient(center, ellipse cover, #cc3333 0%, #1a0000);
+    background: -webkit-radial-gradient(center, ellipse cover, #cc3333 0%, #1a0000);
+    background: -o-radial-gradient(center, ellipse cover, #cc3333 0%, #1a0000);
+    background: -ms-radial-gradient(center, ellipse cover, #cc3333 0%, #1a0000);
+    background: radial-gradient(ellipse, #cc3333 0%, #1a0000);
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
