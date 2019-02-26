@@ -104,7 +104,7 @@ body {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     box-shadow: inset 0 0 25px rgba(255, 255, 255, 0.6);
-    height: 485px;
+    height: 495px;
     margin: 50px auto;
     position: relative;
     width: 900px;
@@ -130,11 +130,11 @@ body {
     box-sizing: border-box;
     border: 2px solid #444;
     height: 202px;
-    left: 11%;
+    left: 12%;
     margin-left: -85px;
     position: absolute;
-    top: 10px;
-    width: 867px;
+    top: 20px;
+    width: 852px;
     z-index: 1;
 }
 
@@ -143,8 +143,8 @@ body {
     left: 15px;
     overflow: hidden;
     position: absolute;
-    top: 12px;
-    width: 865px;
+    top: 22px;
+    width: 852px;
     z-index: 2;
 }
 
@@ -167,19 +167,19 @@ body {
 }
 
 #wheel1, #wheel6 {
-    left: 11px;
+    left: 25px;
 }
 #wheel2, #wheel7 {
-    left: 183px;
+    left: 190px;
 }
 #wheel3, #wheel8 {
     left: 355px;
 }
 #wheel4, #wheel9 {
-    left: 522px;
+    left: 520px;
 }
 #wheel5, #wheel10 {
-    left: 694px;
+    left: 685px;
 }
 
 #slot-wheels .wheel .overlay, #slot-wheels-2 .wheel .overlay {
