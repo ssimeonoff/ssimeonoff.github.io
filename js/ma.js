@@ -100,17 +100,17 @@
 
                     $('#slot-credits').html(credits);
 
-                    spin[0] = parseInt(Math.random() * 23);
-                    spin[1] = parseInt(Math.random() * 23);
-                    spin[2] = parseInt(Math.random() * 23);
-                    spin[3] = parseInt(Math.random() * 23);
-                    spin[4] = parseInt(Math.random() * 23);
+                    spin[0] = parseInt(Math.random() * 16);
+                    spin[1] = parseInt(Math.random() * 16);
+                    spin[2] = parseInt(Math.random() * 16);
+                    spin[3] = parseInt(Math.random() * 16);
+                    spin[4] = parseInt(Math.random() * 16);
 
-                    spin[5] = parseInt(Math.random() * 23);
-                    spin[6] = parseInt(Math.random() * 23);
-                    spin[7] = parseInt(Math.random() * 23);
-                    spin[8] = parseInt(Math.random() * 23);
-                    spin[9] = parseInt(Math.random() * 23);
+                    spin[5] = parseInt(Math.random() * 16);
+                    spin[6] = parseInt(Math.random() * 16);
+                    spin[7] = parseInt(Math.random() * 16);
+                    spin[8] = parseInt(Math.random() * 16);
+                    spin[9] = parseInt(Math.random() * 16);
 
 
 
@@ -118,17 +118,17 @@
 
                     $('img.slotSpinAnimation').show();
 
-                    $('#wheel1 img:first').css('top', - (spin[0] * 44 + 16) + 'px');
-                    $('#wheel2 img:first').css('top', - (spin[1] * 44 + 16) + 'px');
-                    $('#wheel3 img:first').css('top', - (spin[2] * 44 + 16) + 'px');
-                    $('#wheel4 img:first').css('top', - (spin[3] * 44 + 16) + 'px');
-                    $('#wheel5 img:first').css('top', - (spin[4] * 44 + 16) + 'px');
+                    $('#wheel1 img:first').css('top', - (spin[0] * 100 + 16) + 'px');
+                    $('#wheel2 img:first').css('top', - (spin[1] * 100 + 16) + 'px');
+                    $('#wheel3 img:first').css('top', - (spin[2] * 100 + 16) + 'px');
+                    $('#wheel4 img:first').css('top', - (spin[3] * 100 + 16) + 'px');
+                    $('#wheel5 img:first').css('top', - (spin[4] * 100 + 16) + 'px');
 
-                    $('#wheel6 img:first').css('top', - (spin[5] * 44 + 16) + 'px');
-                    $('#wheel7 img:first').css('top', - (spin[6] * 44 + 16) + 'px');
-                    $('#wheel8 img:first').css('top', - (spin[7] * 44 + 16) + 'px');
-                    $('#wheel9 img:first').css('top', - (spin[8] * 44 + 16) + 'px');
-                    $('#wheel10 img:first').css('top', - (spin[9] * 44 + 16) + 'px');
+                    $('#wheel6 img:first').css('top', - (spin[5] * 100 + 16) + 'px');
+                    $('#wheel7 img:first').css('top', - (spin[6] * 100 + 16) + 'px');
+                    $('#wheel8 img:first').css('top', - (spin[7] * 100 + 16) + 'px');
+                    $('#wheel9 img:first').css('top', - (spin[8] * 100 + 16) + 'px');
+                    $('#wheel10 img:first').css('top', - (spin[9] * 100 + 16) + 'px');
 
                     setTimeout(function(){
                         $('#slot-machine .arm').animate({ top: '-25px', height: '50%', overflow: 'visible' });
@@ -190,7 +190,7 @@
                     .end()
                     .find('img:first')
                     .animate({
-                        top: - spin[slot - 1] * 44
+                        top: - spin[slot - 1] * 100
                     },{
                         duration: 500,
                         easing: 'elasticOut',
@@ -272,17 +272,17 @@
                     $('#slot-trigger').removeClass('slot-triggerDown');
                 });
 
-                $('#wheel1 img:first').css('top', - (parseInt(Math.random() * 23) * 44) + 'px');
-                $('#wheel2 img:first').css('top', - (parseInt(Math.random() * 23) * 44) + 'px');
-                $('#wheel3 img:first').css('top', - (parseInt(Math.random() * 23) * 44) + 'px');
-                $('#wheel4 img:first').css('top', - (parseInt(Math.random() * 23) * 44) + 'px');
-                $('#wheel5 img:first').css('top', - (parseInt(Math.random() * 23) * 44) + 'px');
+                $('#wheel1 img:first').css('top', - (16 * 100) + 'px');
+                $('#wheel2 img:first').css('top', - (16 * 100) + 'px');
+                $('#wheel3 img:first').css('top', - (16 * 100) + 'px');
+                $('#wheel4 img:first').css('top', - (16 * 100) + 'px');
+                $('#wheel5 img:first').css('top', - (16 * 100) + 'px');
 
-                $('#wheel6 img:first').css('top', - (parseInt(Math.random() * 23) * 44) + 'px');
-                $('#wheel7 img:first').css('top', - (parseInt(Math.random() * 23) * 44) + 'px');
-                $('#wheel8 img:first').css('top', - (parseInt(Math.random() * 23) * 44) + 'px');
-                $('#wheel9 img:first').css('top', - (parseInt(Math.random() * 23) * 44) + 'px');
-                $('#wheel10 img:first').css('top', - (parseInt(Math.random() * 23) * 44) + 'px');
+                $('#wheel6 img:first').css('top', - (16 * 100) + 'px');
+                $('#wheel7 img:first').css('top', - (16 * 100) + 'px');
+                $('#wheel8 img:first').css('top', - (16 * 100) + 'px');
+                $('#wheel9 img:first').css('top', - (16 * 100) + 'px');
+                $('#wheel10 img:first').css('top', - (16 * 100) + 'px');
             }
 
         };

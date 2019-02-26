@@ -87,10 +87,11 @@ body {
     border-radius: 10px;
     box-shadow: 0 1px 100px rgba(0, 0, 0, 0.6), 0 1px 2px rgba(0, 0, 0, 0.8);
     height: 150px;
-    margin: 100px auto;
+    margin: auto;
+    margin-top: 100px;
     position: relative;
-    width: 300px;
-    transform: scale(2);
+    width: 900px;
+    transform: scale(1);
 }
 
 #slot-body {
@@ -103,10 +104,10 @@ body {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     box-shadow: inset 0 0 25px rgba(255, 255, 255, 0.6);
-    height: 253px;
+    height: 485px;
     margin: 50px auto;
     position: relative;
-    width: 300px;
+    width: 900px;
     z-index: 2;
 }
 
@@ -128,40 +129,40 @@ body {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border: 2px solid #444;
-    height: 90px;
-    left: 33%;
+    height: 202px;
+    left: 11%;
     margin-left: -85px;
     position: absolute;
     top: 10px;
-    width: 271px;
+    width: 867px;
     z-index: 1;
 }
 
 #slot-wheels, #slot-wheels-2 {
-    height: 86px;
+    height: 196px;
     left: 15px;
     overflow: hidden;
     position: absolute;
     top: 12px;
-    width: 267px;
+    width: 865px;
     z-index: 2;
 }
 
 #slot-wheels .wheel, #slot-wheels-2 .wheel {
     background: #FFF;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
-    height: 86px;
+    height: 200px;
     overflow: hidden;
     position: absolute;
     top: 0;
-    width: 44px;
+    width: 156px;
 }
 
 #slot-wheels .wheel img, #slot-wheels-2 .wheel img {
-    left: 0;
+    left: 1px;
     position: absolute;
     top: -4px;
-    width: 44px;
+    width: 156px;
     z-index: 1;
 }
 
@@ -169,16 +170,16 @@ body {
     left: 11px;
 }
 #wheel2, #wheel7 {
-    left: 61px;
+    left: 183px;
 }
 #wheel3, #wheel8 {
-    left: 111px;
+    left: 355px;
 }
 #wheel4, #wheel9 {
-    left: 161px;
+    left: 522px;
 }
 #wheel5, #wheel10 {
-    left: 211px;
+    left: 694px;
 }
 
 #slot-wheels .wheel .overlay, #slot-wheels-2 .wheel .overlay {
@@ -284,10 +285,11 @@ body {
 #slot-trigger {
     cursor: pointer;
     height: 85px;
-    right: -40px;
-    top: 60px;
+    right: -59px;
+    top: 175px;
     position: absolute;
     width: 37px;
+    transform: scale(2);
 }
 
 #slot-trigger div {
@@ -480,7 +482,7 @@ body {
     margin-left: -98px;
     position: absolute;
     top: -3px;
-    width: 296px;
+    width: 896px;
 }
 
 #slot-bottom {
@@ -495,6 +497,6 @@ body {
     left: 50%;
     margin-left: -98px;
     position: absolute;
-    bottom: -3px;
-    width: 296px;
+    bottom: -338px;
+    width: 896px;
 }
