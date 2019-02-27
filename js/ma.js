@@ -9,34 +9,6 @@
 
     var slotMachine = function(){
 
-        var credits = 15,
-            spinning = 3,
-            spin = [0,0,0],
-            slotsTypes = {
-                'cherry': [2,5,10],
-                'orange': [0,15,30],
-                'prune': [0,40,50],
-                'bell': [0,50,80],
-                'bar1': [0,0,100],
-                'bar2': [0,0,150],
-                'bar3': [0,0,250],
-                'seven': [0,0,500],
-                'anybar': [0,0,80]
-            },
-            slots = [
-                ['orange','bell','orange','bar2','prune','orange',
-                    'bar3','prune','orange','bar1','bell','cherry','orange',
-                    'prune','bell','bar1','cherry','seven','orange','prune',
-                    'orange','bell','orange'],
-                ['cherry','prune','orange','bell','bar1','cherry','prune',
-                    'bar3','cherry','bell','orange','bar1','seven','cherry',
-                    'bar2','cherry','bell','prune','cherry','orange','cherry',
-                    'prune','orange'],
-                ['cherry','orange','bell','prune','bar2','cherry','prune',
-                    'orange','bar3','cherry','bell','orange','cherry','orange',
-                    'cherry','prune','bar1','seven','bell','cherry','cherry',
-                    'orange','bell'],
-            ],
             startSlot = function(){
 
                 spinning = false;
@@ -56,34 +28,6 @@
                 setInterval(blink($('#slot-credits')), 1000);
 
             },
-            addCredit = function(incrementCredits){
-
-                var currentCredits = credits;
-                    credits += incrementCredits;
-
-                blink($('#slot-credits'));
-
-                $('#slot-credits')
-                    .css('credit', 0)
-                    .animate({
-                        credit: incrementCredits
-                    },{
-                        duration: 400 + incrementCredits,
-                        easing: 'easeOut',
-                        step: function (now){
-
-                            $(this).html(parseInt(currentCredits + now, 10));
-
-                        },
-                        complete: function(){
-
-                            $(this).html(credits);
-                            blink($('#slot-credits'));
-
-                        }
-                    });
-
-            },
             spin = function(){
 
                 this.blur();
@@ -94,11 +38,6 @@
                     $('#slot-machine .arm .knob').animate({ top: '-20px', height: '20px' });
                     $('#slot-machine .arm-shadow').animate({ top: '40px' }, 380);
                     $('#slot-machine .ring1 .shadow, #slot-machine .ring2 .shadow').animate({ top: '50%', opacity: 1 });
-
-                    spinning = 3;
-                    credits --;
-
-                    $('#slot-credits').html(credits);
 
                     spin_m = [];
 
@@ -235,54 +174,12 @@
             },
             endSpin = function(){
 
-                var slotType = slots[0][spin[0]],
-                    matches = 1,
-                    barMatch = /bar/.test(slotType) ? 1 : 0,
-                    winnedCredits = 0,
-                    waitToSpin = 10;
-
-                if(slotType == slots[1][spin[1]]){
-
-                    matches ++;
-
-                    if(slotType == slots[2][spin[2]]){
-                        matches ++;
-                    } else if(barMatch !=0 && /bar/.test(slots[2][spin[2]])){
-                        barMatch ++;
-                    }
-
-                } else if(barMatch != 0 && /bar/.test(slots[1][spin[1]])){
-
-                    barMatch ++;
-
-                    if(/bar/.test(slots[2][spin[2]])){
-                        barMatch ++;
-                    }
-
-                }
-
-                if(matches != 3 && barMatch == 3){
-                    slotType = 'anybar';
-                    matches = 3;
-                }
-
-                var winnedCredits = slotsTypes[slotType][matches-1];
-
-                if(winnedCredits > 0){
-                    addCredit(winnedCredits);
-                    waitToSpin = 410 + winnedCredits;
-                }
-
                 setTimeout(function(){
 
-                    if(credits == 0){
-                        endSlot();
-                    } else {
                         $('#slot-trigger').removeClass('slot-triggerDisabled');
                         spinning = false;
-                    }
 
-                }, waitToSpin);
+                }, 10);
             };
         return {
 
