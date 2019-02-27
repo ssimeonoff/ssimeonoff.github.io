@@ -100,19 +100,47 @@
 
                     $('#slot-credits').html(credits);
 
+                    spin_m = [];
+
                     spin[0] = parseInt(Math.random() * 16);
+                    spin_m.push(spin[0]);
+
                     spin[1] = parseInt(Math.random() * 16);
+                    while (spin_m.indexOf(spin[1]) > -1) { spin[1] = parseInt(Math.random() * 16);}
+                    spin_m.push(spin[1]);
+
                     spin[2] = parseInt(Math.random() * 16);
+                    while (spin_m.indexOf(spin[2]) > -1) { spin[2] = parseInt(Math.random() * 16);}
+                    spin_m.push(spin[2]);
+
                     spin[3] = parseInt(Math.random() * 16);
+                    while (spin_m.indexOf(spin[3]) > -1) { spin[3] = parseInt(Math.random() * 16);}
+                    spin_m.push(spin[3]);
+
                     spin[4] = parseInt(Math.random() * 16);
+                    while (spin_m.indexOf(spin[4]) > -1) { spin[4] = parseInt(Math.random() * 16);}
+                    spin_m.push(spin[4]);
+
+                    spin_a = [];
 
                     spin[5] = parseInt(Math.random() * 16);
+                    spin_a.push(spin[5]);
+
                     spin[6] = parseInt(Math.random() * 16);
+                    while (spin_a.indexOf(spin[6]) > -1) { spin[6] = parseInt(Math.random() * 16);}
+                    spin_a.push(spin[6]);
+
                     spin[7] = parseInt(Math.random() * 16);
+                    while (spin_a.indexOf(spin[7]) > -1) { spin[7] = parseInt(Math.random() * 16);}
+                    spin_a.push(spin[7]);
+
                     spin[8] = parseInt(Math.random() * 16);
+                    while (spin_a.indexOf(spin[8]) > -1) { spin[8] = parseInt(Math.random() * 16);}
+                    spin_a.push(spin[8]);
+
                     spin[9] = parseInt(Math.random() * 16);
-
-
+                    while (spin_a.indexOf(spin[9]) > -1) { spin[9] = parseInt(Math.random() * 16);}
+                    spin_a.push(spin[9]);
 
                     $('#slot-trigger').addClass('slot-triggerDisabled');
 
