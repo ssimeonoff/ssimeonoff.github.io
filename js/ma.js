@@ -23,10 +23,6 @@
             endSlot = function(){
 
                 $('#slot-block').show();
-                $('#slot-credits').text('VERLOREN!!!');
-
-                setInterval(blink($('#slot-credits')), 1000);
-
             },
             spin = function(){
 
@@ -80,6 +76,168 @@
                     spin[9] = parseInt(Math.random() * 16);
                     while (spin_a.indexOf(spin[9]) > -1) { spin[9] = parseInt(Math.random() * 16);}
                     spin_a.push(spin[9]);
+
+                    //////// Calculating the conflict SUM /////////////
+                    conflictSUM = 0;
+                    //TERRAFORMER and GARDENER
+                    if (spin_m.indexOf(0) > -1 && spin_m.indexOf(2) > -1 ) {conflictSUM += 2}
+                    //TERRAFORMER and LANDLORD
+                    if (spin_m.indexOf(0) > -1 && spin_a.indexOf(0) > -1 ) {conflictSUM += 1}
+                    //TERRAFORMER and THERMALIST
+                    if (spin_m.indexOf(0) > -1 && spin_a.indexOf(3) > -1 ) {conflictSUM += 1}
+                    //TERRAFORMER and DESERT SETTLER
+                    if (spin_m.indexOf(0) > -1 && spin_a.indexOf(7) > -1 ) {conflictSUM += 1}
+                    //TERRAFORMER and ESTATE DEALER
+                    if (spin_m.indexOf(0) > -1 && spin_a.indexOf(8) > -1 ) {conflictSUM += 1}
+                    //TERRAFORMER and BENEFACTOR
+                    if (spin_m.indexOf(0) > -1 && spin_a.indexOf(9) > -1 ) {conflictSUM += 9}
+                    //TERRAFORMER and CULTIVATOR
+                    if (spin_m.indexOf(0) > -1 && spin_a.indexOf(10) > -1 ) {conflictSUM += 2}
+                    //MAYOR and GARDENER
+                    if (spin_m.indexOf(1) > -1 && spin_m.indexOf(2) > -1 ) {conflictSUM += 3}
+                    //MAYOR and POLAR EXPLORER
+                    if (spin_m.indexOf(1) > -1 && spin_m.indexOf(12) > -1 ) {conflictSUM += 4}
+                    //MAYOR and LANDLORD
+                    if (spin_m.indexOf(1) > -1 && spin_a.indexOf(0) > -1 ) {conflictSUM += 6}
+                    //MAYOR and DESERT SETTLER
+                    if (spin_m.indexOf(1) > -1 && spin_a.indexOf(7) > -1 ) {conflictSUM += 4}
+                    //MAYOR and ESTATE DEALER
+                    if (spin_m.indexOf(1) > -1 && spin_a.indexOf(8) > -1 ) {conflictSUM += 4}
+                    //MAYOR and CULTIVATOR
+                    if (spin_m.indexOf(1) > -1 && spin_a.indexOf(10) > -1 ) {conflictSUM += 6}
+                    //GARDENER and ECOLOGIST
+                    if (spin_m.indexOf(2) > -1 && spin_m.indexOf(7) > -1 ) {conflictSUM += 1}
+                    //GARDENER and POLAR EXPLORER
+                    if (spin_m.indexOf(2) > -1 && spin_m.indexOf(12) > -1 ) {conflictSUM += 4}
+                    //GARDENER and LANDLORD
+                    if (spin_m.indexOf(2) > -1 && spin_a.indexOf(0) > -1 ) {conflictSUM += 6}
+                    //GARDENER and DESERT SETTLER
+                    if (spin_m.indexOf(2) > -1 && spin_a.indexOf(7) > -1 ) {conflictSUM += 4}
+                    //GARDENER and ESTATE DEALER
+                    if (spin_m.indexOf(2) > -1 && spin_a.indexOf(8) > -1 ) {conflictSUM += 5}
+                    //GARDENER and BENEFACTOR
+                    if (spin_m.indexOf(2) > -1 && spin_a.indexOf(9) > -1 ) {conflictSUM += 2}
+                    //GARDENER and CULTIVATOR
+                    if (spin_m.indexOf(2) > -1 && spin_a.indexOf(10) > -1 ) {conflictSUM += 9}
+                    //BUILDER and TYCOON
+                    if (spin_m.indexOf(3) > -1 && spin_m.indexOf(8) > -1 ) {conflictSUM += 4}
+                    //BUILDER and MINER
+                    if (spin_m.indexOf(3) > -1 && spin_a.indexOf(4) > -1 ) {conflictSUM += 1}
+                    //BUILDER and INDUSTRIALIST
+                    if (spin_m.indexOf(3) > -1 && spin_a.indexOf(6) > -1 ) {conflictSUM += 1}
+                    //BUILDER and MAGNATE
+                    if (spin_m.indexOf(3) > -1 && spin_a.indexOf(11) > -1 ) {conflictSUM += 5}
+                    //BUILDER and CONTRACTOR
+                    if (spin_m.indexOf(3) > -1 && spin_a.indexOf(14) > -1 ) {conflictSUM += 9}
+                    //PLANNER and SCIENTIST
+                    if (spin_m.indexOf(4) > -1 && spin_a.indexOf(1) > -1 ) {conflictSUM += 1}
+                    //GENERALIST and MINER
+                    if (spin_m.indexOf(5) > -1 && spin_a.indexOf(4) > -1 ) {conflictSUM += 1}
+                    //SPECIALIST and ENERGIZER
+                    if (spin_m.indexOf(6) > -1 && spin_m.indexOf(13) > -1 ) {conflictSUM += 4}
+                    //SPECIALIST and BANKER
+                    if (spin_m.indexOf(6) > -1 && spin_a.indexOf(2) > -1 ) {conflictSUM += 2}
+                    //SPECIALIST and THERMALIST
+                    if (spin_m.indexOf(6) > -1 && spin_a.indexOf(3) > -1 ) {conflictSUM += 1}
+                    //SPECIALIST and MINER
+                    if (spin_m.indexOf(6) > -1 && spin_a.indexOf(4) > -1 ) {conflictSUM += 1}
+                    //SPECIALIST and INDUSTRIALIST
+                    if (spin_m.indexOf(6) > -1 && spin_a.indexOf(6) > -1 ) {conflictSUM += 1}
+                    //ECOLOGIST and TYCOON
+                    if (spin_m.indexOf(7) > -1 && spin_m.indexOf(8) > -1 ) {conflictSUM += 2}
+                    //ECOLOGIST and DIVERSIFIER
+                    if (spin_m.indexOf(7) > -1 && spin_m.indexOf(10) > -1 ) {conflictSUM += 2}
+                    //ECOLOGIST and CULTIVATOR
+                    if (spin_m.indexOf(7) > -1 && spin_a.indexOf(10) > -1 ) {conflictSUM += 1}
+                    //ECOLOGIST and MAGNATE
+                    if (spin_m.indexOf(7) > -1 && spin_a.indexOf(11) > -1 ) {conflictSUM += 1}
+                    //ECOLOGIST and EXCENTRIC
+                    if (spin_m.indexOf(7) > -1 && spin_a.indexOf(13) > -1 ) {conflictSUM += 4}
+                    //TYCOON and DIVERSIFIER
+                    if (spin_m.indexOf(8) > -1 && spin_m.indexOf(10) > -1 ) {conflictSUM += 1}
+                    //TYCOON and TACTICIAN
+                    if (spin_m.indexOf(8) > -1 && spin_m.indexOf(11) > -1 ) {conflictSUM += 1}
+                    //TYCOON and RIM SETTLER
+                    if (spin_m.indexOf(8) > -1 && spin_m.indexOf(14) > -1 ) {conflictSUM += 1}
+                    //TYCOON and SCIENTIST
+                    if (spin_m.indexOf(8) > -1 && spin_a.indexOf(1) > -1 ) {conflictSUM += 2}
+                    //TYCOON and MAGNATE
+                    if (spin_m.indexOf(8) > -1 && spin_a.indexOf(11) > -1 ) {conflictSUM += 5}
+                    //TYCOON and SPACE BARON
+                    if (spin_m.indexOf(8) > -1 && spin_a.indexOf(12) > -1 ) {conflictSUM += 1}
+                    //TYCOON and EXCENTRIC
+                    if (spin_m.indexOf(8) > -1 && spin_a.indexOf(13) > -1 ) {conflictSUM += 3}
+                    //TYCOON and CONTRACTOR
+                    if (spin_m.indexOf(8) > -1 && spin_a.indexOf(14) > -1 ) {conflictSUM += 2}
+                    //TYCOON and VENUPHILE
+                    if (spin_m.indexOf(8) > -1 && spin_a.indexOf(15) > -1 ) {conflictSUM += 2}
+                    //DIVERSIFIER and MAGNATE
+                    if (spin_m.indexOf(10) > -1 && spin_a.indexOf(11) > -1 ) {conflictSUM += 1}
+                    //TACTICIAN and SCIENTIST
+                    if (spin_m.indexOf(11) > -1 && spin_a.indexOf(1) > -1 ) {conflictSUM += 1}
+                    //TACTICIAN and MAGNATE
+                    if (spin_m.indexOf(11) > -1 && spin_a.indexOf(11) > -1 ) {conflictSUM += 1}
+                    //POLAR EXPLORER and LANDLORD
+                    if (spin_m.indexOf(12) > -1 && spin_a.indexOf(0) > -1 ) {conflictSUM += 4}
+                    //POLAR EXPLORER and DESERT SETTLER
+                    if (spin_m.indexOf(12) > -1 && spin_a.indexOf(7) > -1 ) {conflictSUM += 5}
+                    //POLAR EXPLORER and ESTATE DEALER
+                    if (spin_m.indexOf(12) > -1 && spin_a.indexOf(8) > -1 ) {conflictSUM += 2}
+                    //POLAR EXPLORER and CULTIVATOR
+                    if (spin_m.indexOf(12) > -1 && spin_a.indexOf(10) > -1 ) {conflictSUM += 3}
+                    //ENERGIZER and THERMALIST
+                    if (spin_m.indexOf(13) > -1 && spin_a.indexOf(3) > -1 ) {conflictSUM += 3}
+                    //ENERGIZER and INDUSTRIALIST
+                    if (spin_m.indexOf(13) > -1 && spin_a.indexOf(6) > -1 ) {conflictSUM += 6}
+                    //RIM SETTLER and CELEBRITY
+                    if (spin_m.indexOf(14) > -1 && spin_a.indexOf(5) > -1 ) {conflictSUM += 2}
+                    //RIM SETTLER and MAGNATE
+                    if (spin_m.indexOf(14) > -1 && spin_a.indexOf(11) > -1 ) {conflictSUM += 1}
+                    //RIM SETTLER and SPACE BARON
+                    if (spin_m.indexOf(14) > -1 && spin_a.indexOf(12) > -1 ) {conflictSUM += 3}
+                    //HOVERLORD and EXCENTRIC
+                    if (spin_m.indexOf(15) > -1 && spin_a.indexOf(13) > -1 ) {conflictSUM += 5}
+                    //HOVERLORD and VENUPHILE
+                    if (spin_m.indexOf(15) > -1 && spin_a.indexOf(15) > -1 ) {conflictSUM += 5}
+                    //LANDLORD and DESERT SETTLER
+                    if (spin_a.indexOf(0) > -1 && spin_a.indexOf(7) > -1 ) {conflictSUM += 7}
+                    //LANDLORD and ESTATE DEALER
+                    if (spin_a.indexOf(0) > -1 && spin_a.indexOf(8) > -1 ) {conflictSUM += 7}
+                    //LANDLORD and CULTIVATOR
+                    if (spin_a.indexOf(0) > -1 && spin_a.indexOf(10) > -1 ) {conflictSUM += 8}
+                    //SCIENTIST and MAGNATE
+                    if (spin_a.indexOf(1) > -1 && spin_a.indexOf(11) > -1 ) {conflictSUM += 2}
+                    //THERMALIST and BENEFACTOR
+                    if (spin_a.indexOf(3) > -1 && spin_a.indexOf(9) > -1 ) {conflictSUM += 1}
+                    //MINER and INDUSTRIALIST
+                    if (spin_a.indexOf(4) > -1 && spin_a.indexOf(6) > -1 ) {conflictSUM += 7}
+                    //CELEBRITY and MAGNATE
+                    if (spin_a.indexOf(5) > -1 && spin_a.indexOf(11) > -1 ) {conflictSUM += 1}
+                    //CELEBRITY and SPACE BARON
+                    if (spin_a.indexOf(5) > -1 && spin_a.indexOf(12) > -1 ) {conflictSUM += 3}
+                    //DESERT SETTLER and ESTATE DEALER
+                    if (spin_a.indexOf(7) > -1 && spin_a.indexOf(8) > -1 ) {conflictSUM += 5}
+                    //DESERT SETTLER and BENEFACTOR
+                    if (spin_a.indexOf(7) > -1 && spin_a.indexOf(9) > -1 ) {conflictSUM += 1}
+                    //DESERT SETTLER and CULTIVATOR
+                    if (spin_a.indexOf(7) > -1 && spin_a.indexOf(10) > -1 ) {conflictSUM += 7}
+                    //ESTATE DEALER and BENEFACTOR
+                    if (spin_a.indexOf(8) > -1 && spin_a.indexOf(9) > -1 ) {conflictSUM += 1}
+                    //ESTATE DEALER and CULTIVATOR
+                    if (spin_a.indexOf(8) > -1 && spin_a.indexOf(10) > -1 ) {conflictSUM += 8}
+                    //BENEFACTOR and CULTIVATOR
+                    if (spin_a.indexOf(9) > -1 && spin_a.indexOf(10) > -1 ) {conflictSUM += 3}
+                    //MAGNATE and SPACE BARON
+                    if (spin_a.indexOf(11) > -1 && spin_a.indexOf(12) > -1 ) {conflictSUM += 2}
+                    //EXCENTRIC and VENUPHILE
+                    if (spin_a.indexOf(13) > -1 && spin_a.indexOf(15) > -1 ) {conflictSUM += 2}
+
+                    //display the conflict SUM
+                    setTimeout(function(){
+                        console.log(conflictSUM)
+                        document.getElementById("slot-credits").innerHTML = conflictSUM;
+                    }, 3000);
+
 
                     $('#slot-trigger').addClass('slot-triggerDisabled');
 
@@ -240,11 +398,3 @@
     $(document).ready(slotMachine.init);
 
 })(jQuery);
-
-function blink(element){
-
-    element.animate({ opacity: 0 }, 200, 'linear', function(){
-        $(this).animate({ opacity: 1 }, 200);
-    });
-
-}

@@ -182,11 +182,11 @@ body {
 }
 
 #slot-wheels .wheel .overlay, #slot-wheels-2 .wheel .overlay {
-    background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 25%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.7) 80%, rgba(0,0,0,1) 100%);
-    background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,0.7) 25%,rgba(0,0,0,0) 50%,rgba(0,0,0,0.7) 80%,rgba(0,0,0,1) 100%);
-    background: -o-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,0.7) 25%,rgba(0,0,0,0) 50%,rgba(0,0,0,0.7) 80%,rgba(0,0,0,1) 100%);
-    background: -ms-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,0.7) 25%,rgba(0,0,0,0) 50%,rgba(0,0,0,0.7) 80%,rgba(0,0,0,1) 100%);
-    background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0.7) 25%,rgba(0,0,0,0) 50%,rgba(0,0,0,0.7) 80%,rgba(0,0,0,1) 100%);
+    background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 20%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.7) f, rgba(0,0,0,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,0.7) 20%,rgba(0,0,0,0) 50%,rgba(0,0,0,0.7) 80%,rgba(0,0,0,1) 100%);
+    background: -o-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,0.7) 20%,rgba(0,0,0,0) 50%,rgba(0,0,0,0.7) 80%,rgba(0,0,0,1) 100%);
+    background: -ms-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,0.7) 20%,rgba(0,0,0,0) 50%,rgba(0,0,0,0.7) 80%,rgba(0,0,0,1) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0.7) 20%,rgba(0,0,0,0) 50%,rgba(0,0,0,0.7) 80%,rgba(0,0,0,1) 100%);
     border: 1px solid #000;
     height: 100%;
     left: 0;
@@ -238,7 +238,6 @@ body {
 }
 
 #slot-display div {
-    position: absolute;
     right: 10px;
     top: 1px;
 }
@@ -246,12 +245,12 @@ body {
 #slot-credits {
     color: #aaa;
     font-weight: bold;
-    z-index: 2;
+    width: 50px;
 }
 
 #slot-zeros {
+    position: absolute;
     color: rgba(255, 255, 255, 0.3);
-    z-index: 1;
 }
 
 #slot-overlay {

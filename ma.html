@@ -7,6 +7,7 @@
     <title>MA Generator</title>
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.4.1/firebaseui.css" />
     <link type="text/css" rel="stylesheet" href="css/ma.css" />
+    <link rel="stylesheet" href="css/odometer.css">
     <meta name="viewport" content='width=1200, user-scalable=0'>
 
     <script type="text/javascript">
@@ -30,9 +31,8 @@
 
                 <div id="slot-display">
                     <div id="slot-overlay"></div>
-                    <div id="slot-overlay-line"></div>
-                    <div id="slot-credits">0</div>
-                    <div id="slot-zeros">CONFLICT SUM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                    <div id="slot-credits" class="odometer" data-minintegerlen="2">0</div>
+                    <div id="slot-zeros" >SYNERGY SCORE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
                 </div>
 
                 <div id="slot-wheels">
@@ -117,6 +117,7 @@
 
   </div>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="js/odometer.js"></script>
   <script src="js/ma.js"></script>
 
   </body>
