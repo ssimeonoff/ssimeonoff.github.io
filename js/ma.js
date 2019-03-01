@@ -4,7 +4,8 @@
  *
  * Modified.
  */
-
+previousSUM = 0;
+gauge(0,0);
 (function($){
 
     var slotMachine = function(){
@@ -234,9 +235,9 @@
 
                     //display the conflict SUM
                     setTimeout(function(){
-                        console.log(conflictSUM)
-                        document.getElementById("slot-credits").innerHTML = conflictSUM;
-                    }, 3000);
+                        gauge(previousSUM, conflictSUM);
+                        previousSUM = conflictSUM;
+                    }, 2500);
 
 
                     $('#slot-trigger').addClass('slot-triggerDisabled');
@@ -398,3 +399,32 @@
     $(document).ready(slotMachine.init);
 
 })(jQuery);
+
+function gauge (previousSUM, conflictSUM) {
+  google.charts.load('current', {'packages':['gauge']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Label', 'Value'],
+          ['SUM', previousSUM]
+        ]);
+
+        var options = {
+          width: 600, height: 180,
+          redFrom: 40, redTo: 50, min: 0, max: 50,
+          yellowFrom:25, yellowTo: 40,
+          minorTicks: 5
+        };
+
+        var chart = new google.visualization.Gauge(document.getElementById('chart_div'));
+
+        chart.draw(data, options);
+
+        setInterval(function() {
+          data.setValue(0, 1, conflictSUM);
+          chart.draw(data, options);
+        }, 1000);
+      }
+}
