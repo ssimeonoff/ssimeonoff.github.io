@@ -31,6 +31,11 @@ gauge(0,0);
 
                 if(spinning == false){
 
+                    setTimeout(function(){
+                      document.getElementById("note").style.display = "none"
+                    },1500)
+
+
                     $('#slot-machine .arm').animate({ top: '45px', height: '2%' });
                     $('#slot-machine .arm .knob').animate({ top: '-20px', height: '20px' });
                     $('#slot-machine .arm-shadow').animate({ top: '40px' }, 380);
@@ -80,164 +85,180 @@ gauge(0,0);
 
                     //////// Calculating the conflict SUM /////////////
                     conflictSUM = 0;
+                    combinationsText = "";
+                    sumsText = "";
                     //TERRAFORMER and GARDENER
-                    if (spin_m.indexOf(0) > -1 && spin_m.indexOf(2) > -1 ) {conflictSUM += 2}
+                    if (spin_m.indexOf(0) > -1 && spin_m.indexOf(2) > -1 ) {conflictSUM += 2; sumsText += "2<br>"; combinationsText += "TERRAFORMER and GARDENER<br>"; }
                     //TERRAFORMER and LANDLORD
-                    if (spin_m.indexOf(0) > -1 && spin_a.indexOf(0) > -1 ) {conflictSUM += 1}
+                    if (spin_m.indexOf(0) > -1 && spin_a.indexOf(0) > -1 ) {conflictSUM += 1; sumsText += "1<br>"; combinationsText += "TERRAFORMER and LANDLORD<br>"; }
                     //TERRAFORMER and THERMALIST
-                    if (spin_m.indexOf(0) > -1 && spin_a.indexOf(3) > -1 ) {conflictSUM += 1}
+                    if (spin_m.indexOf(0) > -1 && spin_a.indexOf(3) > -1 ) {conflictSUM += 1; sumsText += "1<br>"; combinationsText += "TERRAFORMER and THERMALIST<br>"; }
                     //TERRAFORMER and DESERT SETTLER
-                    if (spin_m.indexOf(0) > -1 && spin_a.indexOf(7) > -1 ) {conflictSUM += 1}
+                    if (spin_m.indexOf(0) > -1 && spin_a.indexOf(7) > -1 ) {conflictSUM += 1; sumsText += "1<br>"; combinationsText += "TERRAFORMER and DESERT SETTLER<br>"; }
                     //TERRAFORMER and ESTATE DEALER
-                    if (spin_m.indexOf(0) > -1 && spin_a.indexOf(8) > -1 ) {conflictSUM += 1}
+                    if (spin_m.indexOf(0) > -1 && spin_a.indexOf(8) > -1 ) {conflictSUM += 1; sumsText += "1<br>"; combinationsText += "TERRAFORMER and ESTATE DEALER<br>"; }
                     //TERRAFORMER and BENEFACTOR
-                    if (spin_m.indexOf(0) > -1 && spin_a.indexOf(9) > -1 ) {conflictSUM += 9}
+                    if (spin_m.indexOf(0) > -1 && spin_a.indexOf(9) > -1 ) {conflictSUM += 9; sumsText += "9<br>"; combinationsText += "TERRAFORMER and BENEFACTOR<br>"; }
                     //TERRAFORMER and CULTIVATOR
-                    if (spin_m.indexOf(0) > -1 && spin_a.indexOf(10) > -1 ) {conflictSUM += 2}
+                    if (spin_m.indexOf(0) > -1 && spin_a.indexOf(10) > -1 ) {conflictSUM += 2; sumsText += "2<br>"; combinationsText += "TERRAFORMER and CULTIVATOR<br>"; }
                     //MAYOR and GARDENER
-                    if (spin_m.indexOf(1) > -1 && spin_m.indexOf(2) > -1 ) {conflictSUM += 3}
+                    if (spin_m.indexOf(1) > -1 && spin_m.indexOf(2) > -1 ) {conflictSUM += 3; sumsText += "3<br>"; combinationsText += "MAYOR and GARDENER<br>"; }
                     //MAYOR and POLAR EXPLORER
-                    if (spin_m.indexOf(1) > -1 && spin_m.indexOf(12) > -1 ) {conflictSUM += 4}
+                    if (spin_m.indexOf(1) > -1 && spin_m.indexOf(12) > -1 ) {conflictSUM += 4; sumsText += "4<br>"; combinationsText += "MAYOR and POLAR EXPLORER<br>"; }
                     //MAYOR and LANDLORD
-                    if (spin_m.indexOf(1) > -1 && spin_a.indexOf(0) > -1 ) {conflictSUM += 6}
+                    if (spin_m.indexOf(1) > -1 && spin_a.indexOf(0) > -1 ) {conflictSUM += 6; sumsText += "6<br>"; combinationsText += "MAYOR and LANDLORD<br>"; }
                     //MAYOR and DESERT SETTLER
-                    if (spin_m.indexOf(1) > -1 && spin_a.indexOf(7) > -1 ) {conflictSUM += 4}
+                    if (spin_m.indexOf(1) > -1 && spin_a.indexOf(7) > -1 ) {conflictSUM += 4; sumsText += "4<br>"; combinationsText += "MAYOR and DESERT SETTLER<br>"; }
                     //MAYOR and ESTATE DEALER
-                    if (spin_m.indexOf(1) > -1 && spin_a.indexOf(8) > -1 ) {conflictSUM += 4}
+                    if (spin_m.indexOf(1) > -1 && spin_a.indexOf(8) > -1 ) {conflictSUM += 4; sumsText += "4<br>"; combinationsText += "MAYOR and ESTATE DEALER<br>"; }
                     //MAYOR and CULTIVATOR
-                    if (spin_m.indexOf(1) > -1 && spin_a.indexOf(10) > -1 ) {conflictSUM += 6}
+                    if (spin_m.indexOf(1) > -1 && spin_a.indexOf(10) > -1 ) {conflictSUM += 6; sumsText += "6<br>"; combinationsText += "MAYOR and CULTIVATOR<br>"; }
                     //GARDENER and ECOLOGIST
-                    if (spin_m.indexOf(2) > -1 && spin_m.indexOf(7) > -1 ) {conflictSUM += 1}
+                    if (spin_m.indexOf(2) > -1 && spin_m.indexOf(7) > -1 ) {conflictSUM += 1; sumsText += "1<br>"; combinationsText += "GARDENER and ECOLOGIST<br>"; }
                     //GARDENER and POLAR EXPLORER
-                    if (spin_m.indexOf(2) > -1 && spin_m.indexOf(12) > -1 ) {conflictSUM += 4}
+                    if (spin_m.indexOf(2) > -1 && spin_m.indexOf(12) > -1 ) {conflictSUM += 4; sumsText += "4<br>"; combinationsText += "GARDENER and POLAR EXPLORER<br>"; }
                     //GARDENER and LANDLORD
-                    if (spin_m.indexOf(2) > -1 && spin_a.indexOf(0) > -1 ) {conflictSUM += 6}
+                    if (spin_m.indexOf(2) > -1 && spin_a.indexOf(0) > -1 ) {conflictSUM += 6; sumsText += "6<br>"; combinationsText += "GARDENER and LANDLORD<br>"; }
                     //GARDENER and DESERT SETTLER
-                    if (spin_m.indexOf(2) > -1 && spin_a.indexOf(7) > -1 ) {conflictSUM += 4}
+                    if (spin_m.indexOf(2) > -1 && spin_a.indexOf(7) > -1 ) {conflictSUM += 4; sumsText += "4<br>"; combinationsText += "GARDENER and DESERT SETTLER<br>"; }
                     //GARDENER and ESTATE DEALER
-                    if (spin_m.indexOf(2) > -1 && spin_a.indexOf(8) > -1 ) {conflictSUM += 5}
+                    if (spin_m.indexOf(2) > -1 && spin_a.indexOf(8) > -1 ) {conflictSUM += 5; sumsText += "5<br>"; combinationsText += "GARDENER and ESTATE DEALER<br>"; }
                     //GARDENER and BENEFACTOR
-                    if (spin_m.indexOf(2) > -1 && spin_a.indexOf(9) > -1 ) {conflictSUM += 2}
+                    if (spin_m.indexOf(2) > -1 && spin_a.indexOf(9) > -1 ) {conflictSUM += 2; sumsText += "2<br>"; combinationsText += "GARDENER and BENEFACTOR<br>"; }
                     //GARDENER and CULTIVATOR
-                    if (spin_m.indexOf(2) > -1 && spin_a.indexOf(10) > -1 ) {conflictSUM += 9}
+                    if (spin_m.indexOf(2) > -1 && spin_a.indexOf(10) > -1 ) {conflictSUM += 9; sumsText += "9<br>"; combinationsText += "GARDENER and CULTIVATOR<br>"; }
                     //BUILDER and TYCOON
-                    if (spin_m.indexOf(3) > -1 && spin_m.indexOf(8) > -1 ) {conflictSUM += 4}
+                    if (spin_m.indexOf(3) > -1 && spin_m.indexOf(8) > -1 ) {conflictSUM += 4; sumsText += "4<br>"; combinationsText += "BUILDER and TYCOON<br>"; }
                     //BUILDER and MINER
-                    if (spin_m.indexOf(3) > -1 && spin_a.indexOf(4) > -1 ) {conflictSUM += 1}
+                    if (spin_m.indexOf(3) > -1 && spin_a.indexOf(4) > -1 ) {conflictSUM += 1; sumsText += "1<br>"; combinationsText += "BUILDER and MINER<br>"; }
                     //BUILDER and INDUSTRIALIST
-                    if (spin_m.indexOf(3) > -1 && spin_a.indexOf(6) > -1 ) {conflictSUM += 1}
+                    if (spin_m.indexOf(3) > -1 && spin_a.indexOf(6) > -1 ) {conflictSUM += 1; sumsText += "1<br>"; combinationsText += "BUILDER and INDUSTRIALIST<br>"; }
                     //BUILDER and MAGNATE
-                    if (spin_m.indexOf(3) > -1 && spin_a.indexOf(11) > -1 ) {conflictSUM += 5}
+                    if (spin_m.indexOf(3) > -1 && spin_a.indexOf(11) > -1 ) {conflictSUM += 5; sumsText += "5<br>"; combinationsText += "BUILDER and MAGNATE<br>"; }
                     //BUILDER and CONTRACTOR
-                    if (spin_m.indexOf(3) > -1 && spin_a.indexOf(14) > -1 ) {conflictSUM += 9}
+                    if (spin_m.indexOf(3) > -1 && spin_a.indexOf(14) > -1 ) {conflictSUM += 9; sumsText += "9<br>"; combinationsText += "BUILDER and CONTRACTOR<br>"; }
                     //PLANNER and SCIENTIST
-                    if (spin_m.indexOf(4) > -1 && spin_a.indexOf(1) > -1 ) {conflictSUM += 1}
+                    if (spin_m.indexOf(4) > -1 && spin_a.indexOf(1) > -1 ) {conflictSUM += 1; sumsText += "1<br>"; combinationsText += "PLANNER and SCIENTIST<br>"; }
                     //GENERALIST and MINER
-                    if (spin_m.indexOf(5) > -1 && spin_a.indexOf(4) > -1 ) {conflictSUM += 1}
+                    if (spin_m.indexOf(5) > -1 && spin_a.indexOf(4) > -1 ) {conflictSUM += 1; sumsText += "1<br>"; combinationsText += "GENERALIST and MINER<br>"; }
                     //SPECIALIST and ENERGIZER
-                    if (spin_m.indexOf(6) > -1 && spin_m.indexOf(13) > -1 ) {conflictSUM += 4}
+                    if (spin_m.indexOf(6) > -1 && spin_m.indexOf(13) > -1 ) {conflictSUM += 4; sumsText += "4<br>"; combinationsText += "SPECIALIST and ENERGIZER<br>"; }
                     //SPECIALIST and BANKER
-                    if (spin_m.indexOf(6) > -1 && spin_a.indexOf(2) > -1 ) {conflictSUM += 2}
+                    if (spin_m.indexOf(6) > -1 && spin_a.indexOf(2) > -1 ) {conflictSUM += 2; sumsText += "2<br>"; combinationsText += "SPECIALIST and BANKER<br>"; }
                     //SPECIALIST and THERMALIST
-                    if (spin_m.indexOf(6) > -1 && spin_a.indexOf(3) > -1 ) {conflictSUM += 1}
+                    if (spin_m.indexOf(6) > -1 && spin_a.indexOf(3) > -1 ) {conflictSUM += 1; sumsText += "1<br>"; combinationsText += "SPECIALIST and THERMALIST<br>"; }
                     //SPECIALIST and MINER
-                    if (spin_m.indexOf(6) > -1 && spin_a.indexOf(4) > -1 ) {conflictSUM += 1}
+                    if (spin_m.indexOf(6) > -1 && spin_a.indexOf(4) > -1 ) {conflictSUM += 1; sumsText += "1<br>"; combinationsText += "SPECIALIST and MINER<br>"; }
                     //SPECIALIST and INDUSTRIALIST
-                    if (spin_m.indexOf(6) > -1 && spin_a.indexOf(6) > -1 ) {conflictSUM += 1}
+                    if (spin_m.indexOf(6) > -1 && spin_a.indexOf(6) > -1 ) {conflictSUM += 1; sumsText += "1<br>"; combinationsText += "SPECIALIST and INDUSTRIALIST<br>"; }
                     //ECOLOGIST and TYCOON
-                    if (spin_m.indexOf(7) > -1 && spin_m.indexOf(8) > -1 ) {conflictSUM += 2}
+                    if (spin_m.indexOf(7) > -1 && spin_m.indexOf(8) > -1 ) {conflictSUM += 2; sumsText += "2<br>"; combinationsText += "ECOLOGIST and TYCOON<br>"; }
                     //ECOLOGIST and DIVERSIFIER
-                    if (spin_m.indexOf(7) > -1 && spin_m.indexOf(10) > -1 ) {conflictSUM += 2}
+                    if (spin_m.indexOf(7) > -1 && spin_m.indexOf(10) > -1 ) {conflictSUM += 2; sumsText += "2<br>"; combinationsText += "ECOLOGIST and DIVERSIFIER<br>"; }
                     //ECOLOGIST and CULTIVATOR
-                    if (spin_m.indexOf(7) > -1 && spin_a.indexOf(10) > -1 ) {conflictSUM += 1}
+                    if (spin_m.indexOf(7) > -1 && spin_a.indexOf(10) > -1 ) {conflictSUM += 1; sumsText += "1<br>"; combinationsText += "ECOLOGIST and CULTIVATOR<br>"; }
                     //ECOLOGIST and MAGNATE
-                    if (spin_m.indexOf(7) > -1 && spin_a.indexOf(11) > -1 ) {conflictSUM += 1}
+                    if (spin_m.indexOf(7) > -1 && spin_a.indexOf(11) > -1 ) {conflictSUM += 1; sumsText += "1<br>"; combinationsText += "ECOLOGIST and MAGNATE<br>"; }
                     //ECOLOGIST and EXCENTRIC
-                    if (spin_m.indexOf(7) > -1 && spin_a.indexOf(13) > -1 ) {conflictSUM += 4}
+                    if (spin_m.indexOf(7) > -1 && spin_a.indexOf(13) > -1 ) {conflictSUM += 4; sumsText += "4<br>"; combinationsText += "ECOLOGIST and EXCENTRIC<br>"; }
                     //TYCOON and DIVERSIFIER
-                    if (spin_m.indexOf(8) > -1 && spin_m.indexOf(10) > -1 ) {conflictSUM += 1}
+                    if (spin_m.indexOf(8) > -1 && spin_m.indexOf(10) > -1 ) {conflictSUM += 1; sumsText += "1<br>"; combinationsText += "TYCOON and DIVERSIFIER<br>"; }
                     //TYCOON and TACTICIAN
-                    if (spin_m.indexOf(8) > -1 && spin_m.indexOf(11) > -1 ) {conflictSUM += 1}
+                    if (spin_m.indexOf(8) > -1 && spin_m.indexOf(11) > -1 ) {conflictSUM += 1; sumsText += "1<br>"; combinationsText += "TYCOON and TACTICIAN<br>"; }
                     //TYCOON and RIM SETTLER
-                    if (spin_m.indexOf(8) > -1 && spin_m.indexOf(14) > -1 ) {conflictSUM += 1}
+                    if (spin_m.indexOf(8) > -1 && spin_m.indexOf(14) > -1 ) {conflictSUM += 1; sumsText += "1<br>"; combinationsText += "TYCOON and RIM SETTLER<br>"; }
                     //TYCOON and SCIENTIST
-                    if (spin_m.indexOf(8) > -1 && spin_a.indexOf(1) > -1 ) {conflictSUM += 2}
+                    if (spin_m.indexOf(8) > -1 && spin_a.indexOf(1) > -1 ) {conflictSUM += 2; sumsText += "2<br>"; combinationsText += "TYCOON and SCIENTIST<br>"; }
                     //TYCOON and MAGNATE
-                    if (spin_m.indexOf(8) > -1 && spin_a.indexOf(11) > -1 ) {conflictSUM += 5}
+                    if (spin_m.indexOf(8) > -1 && spin_a.indexOf(11) > -1 ) {conflictSUM += 5; sumsText += "5<br>"; combinationsText += "TYCOON and MAGNATE<br>"; }
                     //TYCOON and SPACE BARON
-                    if (spin_m.indexOf(8) > -1 && spin_a.indexOf(12) > -1 ) {conflictSUM += 1}
+                    if (spin_m.indexOf(8) > -1 && spin_a.indexOf(12) > -1 ) {conflictSUM += 1; sumsText += "1<br>"; combinationsText += "TYCOON and SPACE BARON<br>"; }
                     //TYCOON and EXCENTRIC
-                    if (spin_m.indexOf(8) > -1 && spin_a.indexOf(13) > -1 ) {conflictSUM += 3}
+                    if (spin_m.indexOf(8) > -1 && spin_a.indexOf(13) > -1 ) {conflictSUM += 3; sumsText += "3<br>"; combinationsText += "TYCOON and EXCENTRIC<br>"; }
                     //TYCOON and CONTRACTOR
-                    if (spin_m.indexOf(8) > -1 && spin_a.indexOf(14) > -1 ) {conflictSUM += 2}
+                    if (spin_m.indexOf(8) > -1 && spin_a.indexOf(14) > -1 ) {conflictSUM += 2; sumsText += "2<br>"; combinationsText += "TYCOON and CONTRACTOR<br>"; }
                     //TYCOON and VENUPHILE
-                    if (spin_m.indexOf(8) > -1 && spin_a.indexOf(15) > -1 ) {conflictSUM += 2}
+                    if (spin_m.indexOf(8) > -1 && spin_a.indexOf(15) > -1 ) {conflictSUM += 2; sumsText += "2<br>"; combinationsText += "TYCOON and VENUPHILE<br>"; }
                     //DIVERSIFIER and MAGNATE
-                    if (spin_m.indexOf(10) > -1 && spin_a.indexOf(11) > -1 ) {conflictSUM += 1}
+                    if (spin_m.indexOf(10) > -1 && spin_a.indexOf(11) > -1 ) {conflictSUM += 1; sumsText += "1<br>"; combinationsText += "DIVERSIFIER and MAGNATE<br>"; }
                     //TACTICIAN and SCIENTIST
-                    if (spin_m.indexOf(11) > -1 && spin_a.indexOf(1) > -1 ) {conflictSUM += 1}
+                    if (spin_m.indexOf(11) > -1 && spin_a.indexOf(1) > -1 ) {conflictSUM += 1; sumsText += "1<br>"; combinationsText += "TACTICIAN and SCIENTIST<br>"; }
                     //TACTICIAN and MAGNATE
-                    if (spin_m.indexOf(11) > -1 && spin_a.indexOf(11) > -1 ) {conflictSUM += 1}
+                    if (spin_m.indexOf(11) > -1 && spin_a.indexOf(11) > -1 ) {conflictSUM += 1; sumsText += "1<br>"; combinationsText += "TACTICIAN and MAGNATE<br>"; }
                     //POLAR EXPLORER and LANDLORD
-                    if (spin_m.indexOf(12) > -1 && spin_a.indexOf(0) > -1 ) {conflictSUM += 4}
+                    if (spin_m.indexOf(12) > -1 && spin_a.indexOf(0) > -1 ) {conflictSUM += 4; sumsText += "4<br>"; combinationsText += "POLAR EXPLORER and LANDLORD<br>"; }
                     //POLAR EXPLORER and DESERT SETTLER
-                    if (spin_m.indexOf(12) > -1 && spin_a.indexOf(7) > -1 ) {conflictSUM += 5}
+                    if (spin_m.indexOf(12) > -1 && spin_a.indexOf(7) > -1 ) {conflictSUM += 5; sumsText += "5<br>"; combinationsText += "POLAR EXPLORER and DESERT SETTLER<br>"; }
                     //POLAR EXPLORER and ESTATE DEALER
-                    if (spin_m.indexOf(12) > -1 && spin_a.indexOf(8) > -1 ) {conflictSUM += 2}
+                    if (spin_m.indexOf(12) > -1 && spin_a.indexOf(8) > -1 ) {conflictSUM += 2; sumsText += "2<br>"; combinationsText += "POLAR EXPLORER and ESTATE DEALER<br>"; }
                     //POLAR EXPLORER and CULTIVATOR
-                    if (spin_m.indexOf(12) > -1 && spin_a.indexOf(10) > -1 ) {conflictSUM += 3}
+                    if (spin_m.indexOf(12) > -1 && spin_a.indexOf(10) > -1 ) {conflictSUM += 3; sumsText += "3<br>"; combinationsText += "POLAR EXPLORER and CULTIVATOR<br>"; }
                     //ENERGIZER and THERMALIST
-                    if (spin_m.indexOf(13) > -1 && spin_a.indexOf(3) > -1 ) {conflictSUM += 3}
+                    if (spin_m.indexOf(13) > -1 && spin_a.indexOf(3) > -1 ) {conflictSUM += 3; sumsText += "3<br>"; combinationsText += "ENERGIZER and THERMALIST<br>"; }
                     //ENERGIZER and INDUSTRIALIST
-                    if (spin_m.indexOf(13) > -1 && spin_a.indexOf(6) > -1 ) {conflictSUM += 6}
+                    if (spin_m.indexOf(13) > -1 && spin_a.indexOf(6) > -1 ) {conflictSUM += 6; sumsText += "6<br>"; combinationsText += "ENERGIZER and INDUSTRIALIST<br>"; }
                     //RIM SETTLER and CELEBRITY
-                    if (spin_m.indexOf(14) > -1 && spin_a.indexOf(5) > -1 ) {conflictSUM += 2}
+                    if (spin_m.indexOf(14) > -1 && spin_a.indexOf(5) > -1 ) {conflictSUM += 2; sumsText += "2<br>"; combinationsText += "RIM SETTLER and CELEBRITY<br>"; }
                     //RIM SETTLER and MAGNATE
-                    if (spin_m.indexOf(14) > -1 && spin_a.indexOf(11) > -1 ) {conflictSUM += 1}
+                    if (spin_m.indexOf(14) > -1 && spin_a.indexOf(11) > -1 ) {conflictSUM += 1; sumsText += "1<br>"; combinationsText += "RIM SETTLER and MAGNATE<br>"; }
                     //RIM SETTLER and SPACE BARON
-                    if (spin_m.indexOf(14) > -1 && spin_a.indexOf(12) > -1 ) {conflictSUM += 3}
+                    if (spin_m.indexOf(14) > -1 && spin_a.indexOf(12) > -1 ) {conflictSUM += 3; sumsText += "3<br>"; combinationsText += "RIM SETTLER and SPACE BARON<br>"; }
                     //HOVERLORD and EXCENTRIC
-                    if (spin_m.indexOf(15) > -1 && spin_a.indexOf(13) > -1 ) {conflictSUM += 5}
+                    if (spin_m.indexOf(15) > -1 && spin_a.indexOf(13) > -1 ) {conflictSUM += 5; sumsText += "5<br>"; combinationsText += "HOVERLORD and EXCENTRIC<br>"; }
                     //HOVERLORD and VENUPHILE
-                    if (spin_m.indexOf(15) > -1 && spin_a.indexOf(15) > -1 ) {conflictSUM += 5}
+                    if (spin_m.indexOf(15) > -1 && spin_a.indexOf(15) > -1 ) {conflictSUM += 5; sumsText += "5<br>"; combinationsText += "HOVERLORD and VENUPHILE<br>"; }
                     //LANDLORD and DESERT SETTLER
-                    if (spin_a.indexOf(0) > -1 && spin_a.indexOf(7) > -1 ) {conflictSUM += 7}
+                    if (spin_a.indexOf(0) > -1 && spin_a.indexOf(7) > -1 ) {conflictSUM += 7; sumsText += "7<br>"; combinationsText += "LANDLORD and DESERT SETTLER<br>"; }
                     //LANDLORD and ESTATE DEALER
-                    if (spin_a.indexOf(0) > -1 && spin_a.indexOf(8) > -1 ) {conflictSUM += 7}
+                    if (spin_a.indexOf(0) > -1 && spin_a.indexOf(8) > -1 ) {conflictSUM += 7; sumsText += "7<br>"; combinationsText += "LANDLORD and ESTATE DEALER<br>"; }
                     //LANDLORD and CULTIVATOR
-                    if (spin_a.indexOf(0) > -1 && spin_a.indexOf(10) > -1 ) {conflictSUM += 8}
+                    if (spin_a.indexOf(0) > -1 && spin_a.indexOf(10) > -1 ) {conflictSUM += 8; sumsText += "8<br>"; combinationsText += "LANDLORD and CULTIVATOR<br>"; }
                     //SCIENTIST and MAGNATE
-                    if (spin_a.indexOf(1) > -1 && spin_a.indexOf(11) > -1 ) {conflictSUM += 2}
+                    if (spin_a.indexOf(1) > -1 && spin_a.indexOf(11) > -1 ) {conflictSUM += 2; sumsText += "2<br>"; combinationsText += "SCIENTIST and MAGNATE<br>"; }
                     //THERMALIST and BENEFACTOR
-                    if (spin_a.indexOf(3) > -1 && spin_a.indexOf(9) > -1 ) {conflictSUM += 1}
+                    if (spin_a.indexOf(3) > -1 && spin_a.indexOf(9) > -1 ) {conflictSUM += 1; sumsText += "1<br>"; combinationsText += "THERMALIST and BENEFACTOR<br>"; }
                     //MINER and INDUSTRIALIST
-                    if (spin_a.indexOf(4) > -1 && spin_a.indexOf(6) > -1 ) {conflictSUM += 7}
+                    if (spin_a.indexOf(4) > -1 && spin_a.indexOf(6) > -1 ) {conflictSUM += 7; sumsText += "7<br>"; combinationsText += "MINER and INDUSTRIALIST<br>"; }
                     //CELEBRITY and MAGNATE
-                    if (spin_a.indexOf(5) > -1 && spin_a.indexOf(11) > -1 ) {conflictSUM += 1}
+                    if (spin_a.indexOf(5) > -1 && spin_a.indexOf(11) > -1 ) {conflictSUM += 1; sumsText += "1<br>"; combinationsText += "CELEBRITY and MAGNATE<br>"; }
                     //CELEBRITY and SPACE BARON
-                    if (spin_a.indexOf(5) > -1 && spin_a.indexOf(12) > -1 ) {conflictSUM += 3}
+                    if (spin_a.indexOf(5) > -1 && spin_a.indexOf(12) > -1 ) {conflictSUM += 3; sumsText += "3<br>"; combinationsText += "CELEBRITY and SPACE BARON<br>"; }
                     //DESERT SETTLER and ESTATE DEALER
-                    if (spin_a.indexOf(7) > -1 && spin_a.indexOf(8) > -1 ) {conflictSUM += 5}
+                    if (spin_a.indexOf(7) > -1 && spin_a.indexOf(8) > -1 ) {conflictSUM += 5; sumsText += "5<br>"; combinationsText += "DESERT SETTLER and ESTATE DEALER<br>"; }
                     //DESERT SETTLER and BENEFACTOR
-                    if (spin_a.indexOf(7) > -1 && spin_a.indexOf(9) > -1 ) {conflictSUM += 1}
+                    if (spin_a.indexOf(7) > -1 && spin_a.indexOf(9) > -1 ) {conflictSUM += 1; sumsText += "1<br>"; combinationsText += "DESERT SETTLER and BENEFACTOR<br>"; }
                     //DESERT SETTLER and CULTIVATOR
-                    if (spin_a.indexOf(7) > -1 && spin_a.indexOf(10) > -1 ) {conflictSUM += 7}
+                    if (spin_a.indexOf(7) > -1 && spin_a.indexOf(10) > -1 ) {conflictSUM += 7; sumsText += "7<br>"; combinationsText += "DESERT SETTLER and CULTIVATOR<br>"; }
                     //ESTATE DEALER and BENEFACTOR
-                    if (spin_a.indexOf(8) > -1 && spin_a.indexOf(9) > -1 ) {conflictSUM += 1}
+                    if (spin_a.indexOf(8) > -1 && spin_a.indexOf(9) > -1 ) {conflictSUM += 1; sumsText += "1<br>"; combinationsText += "ESTATE DEALER and BENEFACTOR<br>"; }
                     //ESTATE DEALER and CULTIVATOR
-                    if (spin_a.indexOf(8) > -1 && spin_a.indexOf(10) > -1 ) {conflictSUM += 8}
+                    if (spin_a.indexOf(8) > -1 && spin_a.indexOf(10) > -1 ) {conflictSUM += 8; sumsText += "8<br>"; combinationsText += "ESTATE DEALER and CULTIVATOR<br>"; }
                     //BENEFACTOR and CULTIVATOR
-                    if (spin_a.indexOf(9) > -1 && spin_a.indexOf(10) > -1 ) {conflictSUM += 3}
+                    if (spin_a.indexOf(9) > -1 && spin_a.indexOf(10) > -1 ) {conflictSUM += 3; sumsText += "3<br>"; combinationsText += "BENEFACTOR and CULTIVATOR<br>"; }
                     //MAGNATE and SPACE BARON
-                    if (spin_a.indexOf(11) > -1 && spin_a.indexOf(12) > -1 ) {conflictSUM += 2}
+                    if (spin_a.indexOf(11) > -1 && spin_a.indexOf(12) > -1 ) {conflictSUM += 2; sumsText += "2<br>"; combinationsText += "MAGNATE and SPACE BARON<br>"; }
                     //EXCENTRIC and VENUPHILE
-                    if (spin_a.indexOf(13) > -1 && spin_a.indexOf(15) > -1 ) {conflictSUM += 2}
+                    if (spin_a.indexOf(13) > -1 && spin_a.indexOf(15) > -1 ) {conflictSUM += 2; sumsText += "2<br>"; combinationsText += "EXCENTRIC and VENUPHILE<br>"; }
 
                     //display the conflict SUM
                     setTimeout(function(){
                         gauge(previousSUM, conflictSUM);
                         previousSUM = conflictSUM;
                     }, 2500);
+                    //trigger the red lamp
+                    setTimeout(function(){
+                      if (conflictSUM > 45 ) {document.getElementById("lamp-body").classList.add("red-light");}
+                      else if (conflictSUM > 29 && conflictSUM < 45) {document.getElementById("lamp-body").classList.add("orange-light");}
+                      else {document.getElementById("lamp-body").classList.remove("red-light", "orange-light");}
+
+                      document.getElementById("total-sum").innerHTML = conflictSUM;
+                      document.getElementById("combinations").innerHTML = combinationsText;
+                      document.getElementById("sums").innerHTML = sumsText;
+
+                      document.getElementById("note").style.display = "block";
+
+                    },3500)
+
 
 
                     $('#slot-trigger').addClass('slot-triggerDisabled');
@@ -408,13 +429,13 @@ function gauge (previousSUM, conflictSUM) {
 
         var data = google.visualization.arrayToDataTable([
           ['Label', 'Value'],
-          ['SUM', previousSUM]
+          ['SYNERGY', previousSUM]
         ]);
 
         var options = {
           width: 600, height: 180,
-          redFrom: 40, redTo: 50, min: 0, max: 50,
-          yellowFrom:25, yellowTo: 40,
+          redFrom: 45, redTo: 60, min: 0, max: 60,
+          yellowFrom:30, yellowTo: 45,
           minorTicks: 5
         };
 
