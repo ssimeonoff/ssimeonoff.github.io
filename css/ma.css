@@ -113,7 +113,7 @@ body {
     box-sizing: border-box;
     border: 2px solid #444;
     height: 210px;
-    margin-left: 72px;
+    margin-left: 24px;
     position: absolute;
     top: 20px;
     width: 852px;
@@ -126,7 +126,7 @@ body {
 
 #slot-wheels, #slot-wheels-2 {
     height: 196px;
-    left: 64px;
+    left: 27px;
     overflow: hidden;
     position: absolute;
     top: 27px;
@@ -184,14 +184,12 @@ body {
 #slot-body {
     background: #444;
     background: linear-gradient(to bottom right, #666 6%, #aaa 19%, #666 41%, #aaa 54%, #666 100%);
-    border-top: 6px solid #ccc;
-    border-left: 6px solid #bbb;
-    border-right: 6px solid #888;
-    border-bottom: 6px solid #999;
+    border-left: 50px solid #bbb;
+    border-right: 50px solid #bbb;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    box-shadow: inset 0 0 1px 1px #666;
+    box-shadow: inset 5px 3px 5px 0px #222, inset -5px 3px 5px 0px #222;
     height: 485px;
     margin: 50px auto;
     position: relative;
@@ -284,7 +282,7 @@ body {
   box-shadow: inset 0 0 1px 1px #222;
   height: 60px;
   margin: 0px auto;
-  margin-bottom: -50px;
+  margin-bottom: -49px;
   position: relative;
   width: 1000px;
   z-index: 2;
@@ -292,7 +290,8 @@ body {
 
 #slot-belly {
   background: #444;
-  background: linear-gradient(to right, #222, #888, #222);  border-top: 20px solid #aaa;
+  background: linear-gradient(to right, #222, #888, #222);
+  border-top: 20px solid #bbb;
   border-left: 20px solid #999;
   border-right: 20px solid #666;
   border-bottom: 20px solid #777;
@@ -303,8 +302,8 @@ body {
   height: 294px;
   margin: -1px auto;
   margin-bottom: 40px;
-  top: 480px;
-  left: -6px;
+  top: 486px;
+  left: -50px;
   position: relative;
   width: 1000px;
   borde-radius:20px;
@@ -536,8 +535,8 @@ body {
 #slot-trigger {
     cursor: pointer;
     height: 85px;
-    right: -81px;
-    top: 583px;
+    right: -125px;
+    top: 590px;
     position: absolute;
     width: 37px;
     transform: scale(3);
