@@ -249,7 +249,6 @@ input::placeholder {
     color: #222;
     text-align: center;
     cursor: pointer;
-    font-size: 14px;
     border-radius: 1px;
     border-top: 2px solid rgb(221,221,221);
     border-left: 2px solid rgb(221,221,221);
@@ -265,12 +264,14 @@ input::placeholder {
 .btn-draft {
   height: 50px;
   line-height: 50px;
-  width: 37px;
+  width: 39px;
   transition: box-shadow 0.3s;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .btn-expansions {
-  width: 37px;
+  width: 44px;
   height: 50px;
   line-height: 50px;
 }
@@ -784,4 +785,10 @@ input::-webkit-inner-spin-button {
   .colonies-icon:after {
     background-color: #444;
     background-image: url("../images/triangle16.png");
+  }
+
+  .turmoil-icon:after {
+    background: darkorange;
+    background-image: url("../images/triangle16.png");
+    transform: rotate(180deg);
   }

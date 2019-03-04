@@ -269,28 +269,26 @@
 
   <div class="column">
 
-    <fieldset class="fieldset-alignment" style="display:inline-block;width:170px;border-bottom:14px;padding-bottom:14px;">
-     <legend class="fieldset2">DRAFT <span style="color:#666">&#8210;&#8210;&#8210;&#8210;&#8210;&#8210;&#8210;</span> WGT</legend>
-     <input class="checkbox" type="radio" id="draft" value="YES" name="draft">
-     <label for="draft" class="btn-gametype btn-draft" title="Playing with draft">YES</label>
-     <input class="checkbox" type="radio" id="no-draft"  value="NO" name="draft">
-     <label for="no-draft" class="btn-gametype btn-draft" title="Not playing with Draft">NO</label>
-     <input class="checkbox" type="radio" id="wgt" value="YES" name="wgt">
-     <label for="wgt" class="btn-gametype btn-draft" title="Playing with World Government Terraforming">YES</label>
-     <input class="checkbox" type="radio" id="no-wgt"  value="NO" name="wgt">
-     <label for="no-wgt" class="btn-gametype btn-draft" title=" NOT Playing with World Government Terraforming">NO</label>
-   </fieldset>
+    <fieldset class="fieldset-alignment"  style="display:inline-block; width:250px;border-bottom:none;">
+     <legend class="fieldset2">EXPANSIONS</legend>
+       <input class="checkbox" type="checkbox" id="corporate" value="CORPORATE" name="expansions">
+       <label for="corporate" class="btn-gametype btn-expansions" title="Corporate Era expansion"><div class="icon corporate-era-icon icon-align"></div></label>
+       <input class="checkbox" type="checkbox" id="venus" value="VENUS" name="expansions" onclick="displayVenusAwards()">
+       <label for="venus" class="btn-gametype btn-expansions" title="Venus Next expansion"><div class="icon venus-icon icon-align"></div></label>
+       <input class="checkbox" type="checkbox" id="prelude" value="PRELUDE" name="expansions">
+       <label for="prelude" class="btn-gametype btn-expansions" title="Prelude expansion"><div class="icon prelude-icon icon-align"></div></label>
+       <input class="checkbox" type="checkbox" id="colonies" value="COLONIES" name="expansions" onclick = "toggleColoniesDiv();resizeDivs();">
+       <label for="colonies" class="btn-gametype btn-expansions" title="Colonies expansion"><div class="icon colonies-icon icon-align"></div></label>
+       <input class="checkbox" type="checkbox" id="turmoil" value="TURMOIL" name="expansions" onclick="displayVenusAwards()">
+       <label for="turmoil" class="btn-gametype btn-expansions" title="TURMOIL expansion"><div class="icon turmoil-icon icon-align"></div></label>
+     </fieldset>
 
-  <fieldset class="fieldset-alignment"  style="display:inline-block;margin-left: -8px; width:170px;border-bottom:none;">
-   <legend class="fieldset2">EXPANSIONS</legend>
-     <input class="checkbox" type="checkbox" id="corporate" value="CORPORATE" name="expansions">
-     <label for="corporate" class="btn-gametype btn-expansions" title="Corporate Era expansion"><div class="icon corporate-era-icon icon-align"></div></label>
-     <input class="checkbox" type="checkbox" id="venus" value="VENUS" name="expansions" onclick="displayVenusAwards()">
-     <label for="venus" class="btn-gametype btn-expansions" title="Venus Next expansion"><div class="icon venus-icon icon-align"></div></label>
-     <input class="checkbox" type="checkbox" id="prelude" value="PRELUDE" name="expansions">
-     <label for="prelude" class="btn-gametype btn-expansions" title="Prelude expansion"><div class="icon prelude-icon icon-align"></div></label>
-     <input class="checkbox" type="checkbox" id="colonies" value="COLONIES" name="expansions" onclick = "toggleColoniesDiv();resizeDivs();">
-     <label for="colonies" class="btn-gametype btn-expansions" title="Colonies expansion"><div class="icon colonies-icon icon-align"></div></label>
+    <fieldset class="fieldset-alignment" style="display:inline-block;width:90px;border-bottom:14px;padding-bottom:14px;margin-left: -8px;">
+     <legend class="fieldset2">DRAFT / WGT</legend>
+     <input class="checkbox" type="checkbox" id="draft" value="YES" name="draft">
+     <label for="draft" class="btn-gametype btn-draft" title="Playing with draft">&#x2713;</label>
+     <input class="checkbox" type="checkbox" id="wgt" value="YES" name="wgt">
+     <label for="wgt" class="btn-gametype btn-draft" title="Playing with World Government Terraforming">&#x2713;</label>
    </fieldset>
 
    <fieldset class="fieldset-alignment fieldset-maps" style="width:366px;display:inline-block;border-bottom:none;padding-bottom:12px">

@@ -423,17 +423,15 @@ function orderScoresandCorporations() {
 }
 
 function getDraft() {
-  var draft = "";
+  var draft = "NO";
   try {draft = document.querySelector('input[name="draft"]:checked').value;}
   catch (err) {}
   return draft
 }
 
 function getWGT() {
-  try {
-    wgt = document.querySelector('input[name="wgt"]:checked').value
-  } catch (err) {
-    wgt = [];
-  }
+  var wgt = "NO";
+  try {wgt = document.querySelector('input[name="wgt"]:checked').value;}
+  catch (err) {}
   return wgt
 }
