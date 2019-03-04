@@ -300,7 +300,7 @@ input::placeholder {
 }
 
 .btn-map-resized {
-  width: 80px;
+  width: 77px;
 }
 
 .btn-awards {
@@ -326,7 +326,7 @@ input::placeholder {
 }
 
 .btn-awards-resized {
-  width: 111px;
+  width: 108px;
 }
 
 .btn-colonies {
@@ -335,7 +335,7 @@ input::placeholder {
     outline: none;
     height: 19px;
     line-height: 19px;
-    width: 80px;
+    width: 86px;
     text-align: center;
     cursor: pointer;
     font-size: 12px;
@@ -452,7 +452,7 @@ input::placeholder {
 }
 
 .awards-resized {
-  width: 115px;
+  width: 112px;
 }
 
 .awards-venus {
@@ -514,7 +514,7 @@ input::-webkit-inner-spin-button {
 }
 
 .fieldset-colonies {
-  width: 84px;
+  width: 90px;
   height: 286px;
   display: inline-block;
   padding-bottom: 12px;
@@ -524,11 +524,11 @@ input::-webkit-inner-spin-button {
 }
 
 .fieldset-maps-resized {
-  width:256px !important;
+  width:250px !important;
 }
 
 .fieldset-awards-resized {
-  width:115px !important;
+  width:112px !important;
 }
 
 .highlight {
