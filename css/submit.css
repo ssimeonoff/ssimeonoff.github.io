@@ -249,7 +249,6 @@ input::placeholder {
     color: #222;
     text-align: center;
     cursor: pointer;
-    font-size: 14px;
     border-radius: 1px;
     border-top: 2px solid rgb(221,221,221);
     border-left: 2px solid rgb(221,221,221);
@@ -265,12 +264,14 @@ input::placeholder {
 .btn-draft {
   height: 50px;
   line-height: 50px;
-  width: 37px;
+  width: 39px;
   transition: box-shadow 0.3s;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .btn-expansions {
-  width: 37px;
+  width: 44px;
   height: 50px;
   line-height: 50px;
 }
@@ -299,7 +300,7 @@ input::placeholder {
 }
 
 .btn-map-resized {
-  width: 80px;
+  width: 77px;
 }
 
 .btn-awards {
@@ -325,7 +326,7 @@ input::placeholder {
 }
 
 .btn-awards-resized {
-  width: 111px;
+  width: 108px;
 }
 
 .btn-colonies {
@@ -334,7 +335,7 @@ input::placeholder {
     outline: none;
     height: 19px;
     line-height: 19px;
-    width: 80px;
+    width: 86px;
     text-align: center;
     cursor: pointer;
     font-size: 12px;
@@ -451,7 +452,7 @@ input::placeholder {
 }
 
 .awards-resized {
-  width: 115px;
+  width: 112px;
 }
 
 .awards-venus {
@@ -513,7 +514,7 @@ input::-webkit-inner-spin-button {
 }
 
 .fieldset-colonies {
-  width: 84px;
+  width: 90px;
   height: 286px;
   display: inline-block;
   padding-bottom: 12px;
@@ -523,11 +524,11 @@ input::-webkit-inner-spin-button {
 }
 
 .fieldset-maps-resized {
-  width:256px !important;
+  width:250px !important;
 }
 
 .fieldset-awards-resized {
-  width:115px !important;
+  width:112px !important;
 }
 
 .highlight {
@@ -784,4 +785,10 @@ input::-webkit-inner-spin-button {
   .colonies-icon:after {
     background-color: #444;
     background-image: url("../images/triangle16.png");
+  }
+
+  .turmoil-icon:after {
+    background: darkorange;
+    background-image: url("../images/triangle16.png");
+    transform: rotate(180deg);
   }
