@@ -32,8 +32,8 @@ gauge(0,0);
                 if(spinning == false){
 
                     setTimeout(function(){
-                      document.getElementById("note").style.display = "none"
-                    },1500)
+                      document.getElementById("note").style.transform = "scaleY(0)"
+                    },1000)
 
 
                     $('#slot-machine .arm').animate({ top: '45px', height: '2%' });
@@ -119,7 +119,7 @@ gauge(0,0);
                       document.getElementById("total-sum").innerHTML = conflictSUM;
                       document.getElementById("combinations").innerHTML = combinationsText;
                       document.getElementById("sums").innerHTML = sumsText;
-                      document.getElementById("note").style.display = "block";
+                      document.getElementById("note").style.transform = "scaleY(1)";
 
                     },3500);
 

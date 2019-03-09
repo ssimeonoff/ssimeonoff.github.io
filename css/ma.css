@@ -385,7 +385,8 @@ body {
 }
 
 #note {
-  display: none;
+  transform: scaleY(0);
+  transform-origin: top;
   font-family: Prototype;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -398,7 +399,7 @@ body {
   background: linear-gradient(to bottom, #444 1%, #eee 5%);  margin-left: 5px;
   margin-top: 5px;
   border: 1px solid black;
-  transition: 0.3s ease-out;
+  transition: 0.2s;
   box-shadow: 0 10px 10px 2px black;
 }
 
