@@ -138,9 +138,9 @@ body {
     margin-left: 24px;
     position: absolute;
     top: 250px;
-    left: 747px;
+    left: 745px;
     width: 102px;
-    height: 52px;
+    height: 53px;
     z-index: 1;
     border: 6px solid #444;
     border-bottom: 6px solid #888;
@@ -150,7 +150,7 @@ body {
 
 #limit-wheels {
     height: 50px;
-    left: 778px;
+    left: 776px;
     overflow: hidden;
     position: absolute;
     top: 258px;
@@ -180,6 +180,17 @@ body {
     top: 0;
     width: 100%;
     z-index: 2;
+}
+
+
+#limit-wheels .wheel img {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    position: absolute;
+    z-index: 1;
+    margin-left: -400px;
+    transition: 0.2s ease-in-out;
 }
 
 #slot-wheels .wheel img {
@@ -397,7 +408,7 @@ body {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   box-shadow: inset 0 0 0px 1px #222;
-  height: 400px;
+  height: 375px;
   margin: -1px auto;
   margin-bottom: 40px;
   top: 486px;
@@ -413,22 +424,57 @@ body {
   text-decoration: none;
   text-align: center;
   width: 180px;
-  height: 50px;
-  line-height: 50px;
-  border-radius: 20px;
+  height: 56px;
+  line-height: 56px;
+  border-radius: 60px;
   border-top: 6px solid #bbb;
   border-left: 6px solid #bbb;
   border-right: 6px solid #666;
   border-bottom: 6px solid #666;
   background: linear-gradient(to bottom right, #fff, #bbb, #fff,#fff);
   margin-left: 30px;
-  margin-top: 10px;
+  margin-top: 30px;
   box-shadow: 0 0 2px 1px black, inset 0 0 0px 1px #222;
   color: #222;
   font-size: 20px;
 }
 
-.button:hover {
+.button2 {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  position: absolute;
+  font-family: Prototype;
+  text-decoration: none;
+  text-align: center;
+  width: 30px;
+  height: 53px;
+  line-height: 53px;
+  border-radius: 40px 2px 2px 40px;
+  border-top: 6px solid #bbb;
+  border-left: 6px solid #bbb;
+  border-right: 6px solid #666;
+  border-bottom: 6px solid #666;
+  background: linear-gradient(to bottom right, #fff, #bbb, #fff,#fff);
+  margin-left: 726px;
+  margin-top: 250px;
+  box-shadow: 0 0 2px 1px black, inset 0 0 0px 1px #222;
+  color: #222;
+  font-size: 20px;
+}
+
+.button-circle {
+  height: 56px;
+  line-height: 56px;
+  margin-top: 20px;
+  border-radius: 60px;
+}
+
+.button2:active {
+  transform: translate(0,1px);
+}
+
+.button:hover, .button2:hover {
   filter: brightness(110%);
 }
 
@@ -445,7 +491,7 @@ body {
   border-right: 6px solid #888;
   background: black;
   margin-left: 250px;
-  margin-top: -202px;
+  margin-top: 30px;
   box-shadow: 0 0 2px 1px black;
 }
 
@@ -533,8 +579,8 @@ body {
   width: 180px;
   height: 180px;
   border-radius: 50%;
-  margin-top: -203px;
-  margin-left: 727px;
+  margin-top: 30px;
+  margin-left: 726px;
   border:6px solid red;
   position: absolute;
   z-index: 2;

@@ -4,7 +4,53 @@
  *
  * Modified.
  */
+
+ NAMES = ["TERRAFORMER", "MAYOR", "GARDENER", "BUILDER", "PLANNER",
+         "GENERALIST", "SPECIALIST", "ECOLOGIST", "TYCOON", "LEGEND",
+         "DIVERSIFIER", "TACTICIAN", "POLAR EXPLORER", "ENERGIZER", "RIM SETTLER",
+         "HOVERLORD",
+         "LANDLORD", "SCIENTIST", "BANKER", "THERMALIST", "MINER",
+         "CELEBRITY", "INDUSTRIALIST", "DESERT SETTLER", "ESTATE DEALER", "BENEFACTOR",
+         "CULTIVATOR", "MAGNATE", "SPACE BARON", "EXCENTRIC", "CONTRACTOR",
+         "VENUPHILE"]
+
+ SYNERGIES = [
+   [0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,  1,0,0,1,0,0,0,1,1,9,2,0,0,0,0,0],
+   [0,0,3,0,0,0,0,0,0,0,0,0,4,0,0,0,  6,0,0,0,0,0,0,4,4,0,6,0,0,0,0,0],
+   [0,0,0,0,0,0,0,1,0,0,0,0,4,0,0,0,  6,0,0,0,0,0,0,4,5,2,9,0,0,0,0,0],
+   [0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,  0,0,0,0,1,0,1,0,0,0,0,5,0,0,9,0],
+   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0],
+   [0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,  0,0,2,1,1,0,1,0,0,0,0,0,0,0,0,0],
+   [0,0,0,0,0,0,0,0,2,0,2,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,1,1,0,4,0,0],
+   [0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,0,  0,2,0,0,0,0,0,0,0,0,0,5,1,3,2,2],
+   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0],
+   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0],
+   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  4,0,0,0,0,0,0,5,2,0,3,0,0,0,0,0],
+   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,3,0,0,6,0,0,0,0,0,0,0,0,0],
+   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,2,0,0,0,0,0,1,3,0,0,0],
+   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,5],
+   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,7,7,0,8,0,0,0,0,0],
+   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0],
+   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0],
+   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,7,0,0,0,0,0,0,0,0,0],
+   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,0,1,3,0,0,0],
+   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,5,1,7,0,0,0,0,0],
+   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,1,8,0,0,0,0,0],
+   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0],
+   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0],
+   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2],
+   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+ ];
+
 previousSUM = 0;
+limit = 60;
 gauge(0,0);
 (function($){
 
@@ -41,68 +87,12 @@ gauge(0,0);
                     $('#slot-machine .arm-shadow').animate({ top: '40px' }, 380);
                     $('#slot-machine .ring1 .shadow, #slot-machine .ring2 .shadow').animate({ top: '50%', opacity: 1 });
 
-
-                    //////// Calculating the conflict SUM /////////////
                     conflictSUM = 0;
+                    spinsArray = [];
                     combinationsText = "";
                     sumsText = "";
-                    names = ["TERRAFORMER", "MAYOR", "GARDENER", "BUILDER", "PLANNER",
-                            "GENERALIST", "SPECIALIST", "ECOLOGIST", "TYCOON", "LEGEND",
-                            "DIVERSIFIER", "TACTICIAN", "POLAR EXPLORER", "ENERGIZER", "RIM SETTLER",
-                            "HOVERLORD",
-                            "LANDLORD", "SCIENTIST", "BANKER", "THERMALIST", "MINER",
-                            "CELEBRITY", "INDUSTRIALIST", "DESERT SETTLER", "ESTATE DEALER", "BENEFACTOR",
-                            "CULTIVATOR", "MAGNATE", "SPACE BARON", "EXCENTRIC", "CONTRACTOR",
-                            "VENUPHILE"]
-
-                    synergies = [
-                      [0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,  1,0,0,1,0,0,0,1,1,9,2,0,0,0,0,0],
-                      [0,0,3,0,0,0,0,0,0,0,0,0,4,0,0,0,  6,0,0,0,0,0,0,4,4,0,6,0,0,0,0,0],
-                      [0,0,0,0,0,0,0,1,0,0,0,0,4,0,0,0,  6,0,0,0,0,0,0,4,5,2,9,0,0,0,0,0],
-                      [0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,  0,0,0,0,1,0,1,0,0,0,0,5,0,0,9,0],
-                      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-                      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0],
-                      [0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,  0,0,2,1,1,0,1,0,0,0,0,0,0,0,0,0],
-                      [0,0,0,0,0,0,0,0,2,0,2,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,1,1,0,4,0,0],
-                      [0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,0,  0,2,0,0,0,0,0,0,0,0,0,5,1,3,2,2],
-                      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-                      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0],
-                      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0],
-                      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  4,0,0,0,0,0,0,5,2,0,3,0,0,0,0,0],
-                      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,3,0,0,6,0,0,0,0,0,0,0,0,0],
-                      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,2,0,0,0,0,0,1,3,0,0,0],
-                      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,5],
-                      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,7,7,0,8,0,0,0,0,0],
-                      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0],
-                      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0],
-                      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-                      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,7,0,0,0,0,0,0,0,0,0],
-                      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,0,1,3,0,0,0],
-                      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,5,1,7,0,0,0,0,0],
-                      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,1,8,0,0,0,0,0],
-                      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0],
-                      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-                      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0],
-                      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-                      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2],
-                      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-                      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
-                    ];
-
                     //generate the spins
                     spinsArray = generateSpins();
-                    console.log(spinsArray)
-                    //loop through the matrix interconnections
-                    for (i=0; i<9; i++) {
-                      console.log(spinsArray[i] + "---------------------------")
-                      for (j=i+1; j<10; j++) {
-                        console.log(spinsArray[j])
-                        if (synergies[spinsArray[i]][spinsArray[j]] > 0) {
-                          conflictSUM += synergies[spinsArray[i]][spinsArray[j]];
-                          sumsText += synergies[spinsArray[i]][spinsArray[j]] + "<br>";
-                          combinationsText += names[i] + " & " + names[j] + "<br>"; }
-                      }
-                    }
 
                     //display the conflict SUM
                     setTimeout(function(){
@@ -338,46 +328,75 @@ function gauge (previousSUM, conflictSUM) {
 }
 
 function generateSpins() {
-  var spinsArray = [];
 
-  spin[0] = parseInt(Math.random() * 16);
-  spinsArray.push(spin[0]);
+  while(conflictSUM == 0 || conflictSUM > limit) {
+    conflictSUM = 0;
+    spinsArray = [];
+    combinationsText = "";
+    sumsText = "";
+    //////// Calculating the conflict SUM /////////////
 
-  spin[1] = parseInt(Math.random() * 16);
-  while (spinsArray.indexOf(spin[1]) > -1) { spin[1] = parseInt(Math.random() * 16);}
-  spinsArray.push(spin[1]);
+    spin[0] = parseInt(Math.random() * 16);
+    spinsArray.push(spin[0]);
 
-  spin[2] = parseInt(Math.random() * 16);
-  while (spinsArray.indexOf(spin[2]) > -1) { spin[2] = parseInt(Math.random() * 16);}
-  spinsArray.push(spin[2]);
+    spin[1] = parseInt(Math.random() * 16);
+    while (spinsArray.indexOf(spin[1]) > -1) { spin[1] = parseInt(Math.random() * 16);}
+    spinsArray.push(spin[1]);
 
-  spin[3] = parseInt(Math.random() * 16);
-  while (spinsArray.indexOf(spin[3]) > -1) { spin[3] = parseInt(Math.random() * 16);}
-  spinsArray.push(spin[3]);
+    spin[2] = parseInt(Math.random() * 16);
+    while (spinsArray.indexOf(spin[2]) > -1) { spin[2] = parseInt(Math.random() * 16);}
+    spinsArray.push(spin[2]);
 
-  spin[4] = parseInt(Math.random() * 16);
-  while (spinsArray.indexOf(spin[4]) > -1) { spin[4] = parseInt(Math.random() * 16);}
-  spinsArray.push(spin[4]);
+    spin[3] = parseInt(Math.random() * 16);
+    while (spinsArray.indexOf(spin[3]) > -1) { spin[3] = parseInt(Math.random() * 16);}
+    spinsArray.push(spin[3]);
 
-  //adding offset of 16 for the awards
-  spin[5] = parseInt(Math.random() * 16) + 16;
-  spinsArray.push(spin[5]);
+    spin[4] = parseInt(Math.random() * 16);
+    while (spinsArray.indexOf(spin[4]) > -1) { spin[4] = parseInt(Math.random() * 16);}
+    spinsArray.push(spin[4]);
 
-  spin[6] = parseInt(Math.random() * 16) + 16;
-  while (spinsArray.indexOf(spin[6]) > -1) { spin[6] = parseInt(Math.random() * 16) + 16;}
-  spinsArray.push(spin[6]);
+    //adding offset of 16 for the awards
+    spin[5] = parseInt(Math.random() * 16) + 16;
+    spinsArray.push(spin[5]);
 
-  spin[7] = parseInt(Math.random() * 16) + 16;
-  while (spinsArray.indexOf(spin[7]) > -1) { spin[7] = parseInt(Math.random() * 16) + 16;}
-  spinsArray.push(spin[7]);
+    spin[6] = parseInt(Math.random() * 16) + 16;
+    while (spinsArray.indexOf(spin[6]) > -1) { spin[6] = parseInt(Math.random() * 16) + 16;}
+    spinsArray.push(spin[6]);
 
-  spin[8] = parseInt(Math.random() * 16) + 16;
-  while (spinsArray.indexOf(spin[8]) > -1) { spin[8] = parseInt(Math.random() * 16) + 16;}
-  spinsArray.push(spin[8]);
+    spin[7] = parseInt(Math.random() * 16) + 16;
+    while (spinsArray.indexOf(spin[7]) > -1) { spin[7] = parseInt(Math.random() * 16) + 16;}
+    spinsArray.push(spin[7]);
 
-  spin[9] = parseInt(Math.random() * 16) + 16;
-  while (spinsArray.indexOf(spin[9]) > -1) { spin[9] = parseInt(Math.random() * 16) + 16;}
-  spinsArray.push(spin[9]);
+    spin[8] = parseInt(Math.random() * 16) + 16;
+    while (spinsArray.indexOf(spin[8]) > -1) { spin[8] = parseInt(Math.random() * 16) + 16;}
+    spinsArray.push(spin[8]);
+
+    spin[9] = parseInt(Math.random() * 16) + 16;
+    while (spinsArray.indexOf(spin[9]) > -1) { spin[9] = parseInt(Math.random() * 16) + 16;}
+    spinsArray.push(spin[9]);
+
+    //loop through the matrix interconnections
+    for (i=0; i<9; i++) {
+      for (j=i+1; j<10; j++) {
+        if (SYNERGIES[spinsArray[i]][spinsArray[j]] > 0) {
+          conflictSUM += SYNERGIES[spinsArray[i]][spinsArray[j]];
+          sumsText += SYNERGIES[spinsArray[i]][spinsArray[j]] + "<br>";
+          combinationsText += NAMES[i] + " & " + NAMES[j] + "<br>"; }
+      }
+    }
+    console.log(conflictSUM)
+  }
 
   return spinsArray.sort(function(a, b){return a - b});
+}
+
+function changeLimit (x) {
+  if (x < 0 && limit > 20) {
+    limit -=5;
+    document.getElementById("limit-image").style.marginLeft = 200 + (-10 * limit) + "px";
+  }
+  if (x > 0 && limit < 60) {
+    limit +=5;
+    document.getElementById("limit-image").style.marginLeft = 200 + (-10 * limit) + "px";
+  }
 }
