@@ -206,8 +206,8 @@ gauge(0,0);
                         }
                     });
             },
-            stopSpin2 = function(slot){
 
+            stopSpin2 = function(slot){
                 $('#wheel' + slot)
                     .find('img:last')
                     .hide()
@@ -332,6 +332,7 @@ function generateSpins() {
   while(conflictSUM == 0 || conflictSUM > limit) {
     conflictSUM = 0;
     spinsArray = [];
+    spin = [];
     combinationsText = "";
     sumsText = "";
     //////// Calculating the conflict SUM /////////////
@@ -381,10 +382,9 @@ function generateSpins() {
         if (SYNERGIES[spinsArray[i]][spinsArray[j]] > 0) {
           conflictSUM += SYNERGIES[spinsArray[i]][spinsArray[j]];
           sumsText += SYNERGIES[spinsArray[i]][spinsArray[j]] + "<br>";
-          combinationsText += NAMES[i] + " & " + NAMES[j] + "<br>"; }
+          combinationsText += NAMES[spinsArray[i]] + " & " + NAMES[spinsArray[j]] + "<br>"; }
       }
     }
-    console.log(conflictSUM)
   }
 
   return spinsArray.sort(function(a, b){return a - b});
