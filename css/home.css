@@ -9,14 +9,14 @@
   font-family: Prototype;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 0px;
+  margin-top: 20px;
   margin-bottom: 20px;
   display: grid;
   width: 369px;
   grid-template-columns: auto;
   grid-gap: 5px;
-  font-size: 24px;
-  text-align: right;
+  font-size: 26px;
+  text-align: left;
 }
 
 .grid > a {
@@ -29,8 +29,8 @@
   border-radius: 10px;
   background-size: 369px 90px;
   color: #eee;
-  text-shadow: 0 2px 1px black;
-  padding-right: 15px;
+  text-shadow: 0 0 2px black, 0 2px 1px black;
+  padding-left: 17px;
 }
 .grid > a:hover {
   filter: brightness(120%);
@@ -45,8 +45,7 @@
 
 .title-top {
   transform:scale(2,1);
-  margin-top:6px;
-  margin-left: 94px;
+  margin-left: 93px;
   font-size:18px;
   width: 100px;
   line-height: 30px;
