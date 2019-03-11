@@ -605,7 +605,7 @@ function selectCard (clickedCard) {
 
     //showing or removing the CTA button and updating its url
     if (selectedCards.length > 0) {
-      document.getElementById("btn-selectedCards").href = "https://ssimeonoff.github.io/" + selectedCards;
+      document.getElementById("btn-selectedCards").href = "https://ssimeonoff.github.io/cards-list" + selectedCards;
       document.getElementById("selectedCardsAmount").innerHTML = selectedCardsAmount;
       $("#btn-selectedCards").fadeIn(300);
     }
