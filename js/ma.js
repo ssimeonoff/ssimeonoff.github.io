@@ -184,7 +184,6 @@ gauge(0,0);
 
             },
             stopSpin = function(slot){
-
                 $('#wheel' + slot)
                     .find('img:last')
                     .hide()
@@ -332,7 +331,6 @@ function generateSpins() {
   while(conflictSUM == 0 || conflictSUM > limit) {
     conflictSUM = 0;
     spinsArray = [];
-    spin = [];
     combinationsText = "";
     sumsText = "";
     //////// Calculating the conflict SUM /////////////
