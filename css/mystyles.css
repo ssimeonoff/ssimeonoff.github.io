@@ -214,6 +214,26 @@ border-right: 2px solid rgb(137,137,137);
             background-repeat: no-repeat;
             transform: rotate(180deg);
       }
+      .globals-icon:after {
+              position: absolute;
+              border: 1px solid black;
+              background: darkorange;
+              font-weight: bold;
+              font-size: 11px;
+              line-height: 15px;
+              width: 16px;
+              height:16px;
+              text-align: center;
+              color: white;
+              border-radius: 50%;
+              box-shadow: 0 0 0 1px rgba(0,0,0,0.4);
+              content: "";
+              background-image: url("../images/triangle16.png");
+              background-size: 10px 10px;
+              background-position: bottom 4px right 3px;
+              background-repeat: no-repeat;
+              transform: rotate(180deg);
+        }
 
       .promo-icon:after {
               position: absolute;
@@ -392,11 +412,11 @@ border-right: 2px solid rgb(137,137,137);
     outline: none;
     font-family: Prototype;
     height: 40px;
-    width: 122px;
+    width: 106px;
     cursor: pointer;
     font-size: 14px;
     border-radius: 8px;
-    margin-right: 12px;
+    margin-right: 8px;
     margin-bottom: 10px;
     margin-top: 15px;
 }
@@ -408,9 +428,8 @@ border-right: 2px solid rgb(137,137,137);
     cursor: pointer;
     border-radius: 50%;
     text-align: center;
-    vertical-align: middle;
     font-weight: normal;
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 .btn3 {
@@ -420,12 +439,12 @@ border-right: 2px solid rgb(137,137,137);
     cursor: pointer;
     font-weight: bold;
     border-radius: 20px;
-    margin-right: 10px;
+    margin-right: 8px;
     color:white;
     font-size: 16px;
     line-height: 30px;
     letter-spacing: 1px;
-    margin-top: 20px;
+    vertical-align: middle;
 }
 
 .btn4 {
@@ -457,8 +476,8 @@ border-right: 2px solid rgb(137,137,137);
       background-color: #cc3333;
       vertical-align: middle;
       text-shadow: 0 0 1px black;
-      margin-bottom: 5px;
-      margin-right: 55px;
+      vertical-align: top;
+      margin-left: 195px;
 }
 
 .icon-image {
@@ -485,7 +504,7 @@ border-right: 2px solid rgb(137,137,137);
     font-size: 16px;
     border-radius: 20px;
     margin-right: 28px;
-    margin-top: 20px;
+    vertical-align: top;
 }
 
 .btn-selected-cards{
@@ -503,8 +522,7 @@ border-right: 2px solid rgb(137,137,137);
    font-size: 14px;
    text-align: center;
    border-radius: 20px;
-   margin-left: 110px;
-   margin-top: 20px;
+   margin-left: 10px;
    vertical-align: bottom;
    padding-right: 25px;
 }
@@ -655,7 +673,7 @@ border-right: 2px solid rgb(137,137,137);
     height: 125px;
     padding: 10px;
     border-radius: 10px;
-    margin-top: -10px;
+    margin-top: 10px;
     margin-bottom: 20px;
     font-size: 18px;
     border-top: 2px solid rgb(221,221,221);
@@ -1364,11 +1382,10 @@ border-right: 2px solid rgb(137,137,137);
     background-position: 10px 12px;
     background-repeat: no-repeat;
     width: 290px;
-    height: 40px;
-    line-height: 40px;
+    height: 36px;
+    line-height: 36px;
     font-size: 20px;
     padding: 0px 2px 0px 15px;
-    margin-top: 10px;
     margin-bottom: 25px;
     margin-right: 30px;
     border-radius: 24px;
@@ -1529,16 +1546,16 @@ border-right: 2px solid rgb(137,137,137);
 }
 
 #titleContainer {
-    height: 60px;
-    line-height: 22px;
+    height: 40px;
+    line-height: 40px;
     display: inline-block;
     font-family: Prototype;
     font-size: 16px;
     border-style: inset;
     background: #eeeeee;
-    border-radius: 10px;
-    width: 258px;
-    margin-right: 6px;
+    border-radius: 30px;
+    width: 200px;
+    margin-right: 21px;
     margin-bottom: 5px;
     background: linear-gradient(to right, rgb(128, 87, 0), rgb(205,162, 130), rgb(205,162, 130), rgb(128, 87, 0));
     box-shadow: inset 0px 1px 3px 1px rgba(0,0,0,.5);
@@ -1553,10 +1570,11 @@ border-right: 2px solid rgb(137,137,137);
     text-align: right;
     display: inline-block;
     border-style: inset;
-    border-radius: 10px;
+    border-radius:60px;
+    padding-left: 145px;
+    padding-right: 145px;
     padding-top: 3px;
     height:57px;
-    padding-right: 12px;
     background: linear-gradient(to right, rgb(128, 87, 0), rgb(205,162, 130), rgb(205,162, 130), rgb(128, 87, 0));
     box-shadow: inset 0px 1px 3px 1px rgba(0,0,0,.5);
 }
@@ -1991,7 +2009,7 @@ input[type=number]::-webkit-outer-spin-button {
 /* TOGGLE SWTICH*/
 .onoffswitch {
   display: inline-block;
-  margin-right:29px;
+  margin-left:100px;
   position: relative;
   vertical-align: bottom;
   width: 123px;
