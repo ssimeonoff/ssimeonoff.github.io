@@ -1,5 +1,5 @@
 
-CONTAINER = 330; //the default height of the buttons container
+CONTAINER = 230; //the default height of the buttons container
 CONTENT_FILTERS = 125 //the default height of the Content filters area
 var containerHeight = CONTAINER; //the current height of the buttons container
 var contentFiltersCurrent = CONTENT_FILTERS;
@@ -23,6 +23,8 @@ function showAll() {
   displayedPreludes = 35;
   displayedColonies = 11;
   document.getElementById("buttonsContainer").style.display = "block";
+  document.getElementById("grid-numbers").style.display = "grid";
+
   var elements = document.querySelectorAll('.ul-title');
   for (i=0; i<elements.length; i++){elements[i].style.display = "block";}
   document.getElementById("totalProjects").innerHTML = displayedProjects;

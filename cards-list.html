@@ -82,32 +82,9 @@
       <input type="text" id="myInput" oninput="filterFunction(id);" placeholder="Search by text ..." title="Search by card's title, number or keywords">
       <a id="btn-selectedCards" class="button btn-selected-cards" title="open selected cards" href="https://ssimeonoff.github.io/" target="_blank">
         SELECTED<br> CARDS ONLY<div id="selectedCardsAmount">0</div></a>
-      <button id="reset" class="button2 btn-reset" onclick="clearInput();showAll();" title="Reset all selected filters">RESET</button>
     </div>
 
-    <div class="cardsContainer">
-      <div style="display:inline-block;width:150px;">
-      <div id="totalProjects" class="totalCardsCount odometer" data-minintegerlen="3"></div>
-      <div class="resource card" style="display:inline-block;transform: rotate(-5deg);"></div>
-      <div class="resource card" style="display:inline-block;transform: rotate(0deg);margin-left:-25px;"></div>
-      <div class="resource card" style="display:inline-block;transform: rotate(+5deg);margin-left:-25px;"></div>
-      </div>
-      <div style="display:inline-block; width:120px;">
-      <div id="totalCorporations" class="totalCardsCount odometer"></div>
-      <div class="resource card-corporation" style="display:inline-block;transform: rotate(-10deg)"><span style="background:linear-gradient(to right, rgb(255,204,100), #e28c22);padding-left:4px;padding-right:4px;border-radius:2px;">CORP</span></div>
-      <div class="resource card-corporation" style="display:inline-block;transform: rotate(10deg);margin-left:-52px"><span style="background:linear-gradient(to right, rgb(255,204,100), #e28c22);padding-left:4px;padding-right:4px;border-radius:2px;">CORP</span></div>
-      </div>
-      <div style="display:inline-block;width:120px;">
-      <div id="totalPreludes" class="totalCardsCount odometer"></div>
-      <div class="resource card-corporation" style="display:inline-block;transform: rotate(-10deg)"><span style="background:linear-gradient(to right, rgb(235,118,171), #e64d91);padding-left:4px;padding-right:4px;border-radius:2px;">PREL</span></div>
-      <div class="resource card-corporation" style="display:inline-block;transform: rotate(10deg);margin-left:-52px"><span style="background:linear-gradient(to right, rgb(235,118,171), #e64d91);padding-left:4px;padding-right:4px;border-radius:2px;">PREL</span></div>
-      </div>
-      <div style="display:inline-block;width:120px;">
-      <div id="totalColonies" class="totalCardsCount odometer"></div>
-      <div class="resource card-corporation" style="display:inline-block;transform: rotate(-10deg)"><span style="background:rgb(158,145,128);padding-left:4px;padding-right:4px;border-radius:2px;">COLO</span></div>
-      <div class="resource card-corporation" style="display:inline-block;transform: rotate(10deg);margin-left:-52px"><span style="    background: linear-gradient(to right, #b1a79a,#827564);padding-left:4px;padding-right:4px;border-radius:2px;">COLO</span></div>
-      </div>
-    </div>
+
 
     <div id="contentFilters">
       <form id="sortButtons">
@@ -198,6 +175,42 @@
           <div class="submit-label" style="margin-left:50px;">MY SOLO</div>
       </a>
 
+    </div>
+  </div>
+
+  <div id="grid-numbers">
+    <div style="border-radius: 0 0 0 20px">
+      <div id="totalProjects" class="totalCardsCount odometer" data-minintegerlen="3"></div>
+      <div class="resource card" style="display:inline-block;transform: rotate(-10deg);"></div>
+      <div class="resource card" style="display:inline-block;transform: rotate(-1deg);margin-left:-30px;"></div>
+      <div class="resource card" style="display:inline-block;transform: rotate(10deg);margin-left:-30px;"></div>
+      <div class="resource card" style="display:inline-block;transform: rotate(20deg);margin-left:-30px;"></div>
+      <div class="resource card" style="display:inline-block;transform: rotate(30deg);margin-left:-30px;"></div>
+
+    </div>
+    <div>
+      <div id="totalCorporations" class="totalCardsCount odometer"></div>
+      <div class="resource card-corporation" style="display:inline-block;transform: rotate(-10deg)"><span style="background:linear-gradient(to right, rgb(255,204,100), #e28c22);padding-left:4px;padding-right:4px;border-radius:2px;">CORP</span></div>
+      <div class="resource card-corporation" style="display:inline-block;transform: rotate(10deg);margin-left:-52px"><span style="background:linear-gradient(to right, rgb(255,204,100), #e28c22);padding-left:4px;padding-right:4px;border-radius:2px;">CORP</span></div>
+    </div>
+    <div>
+      <div id="totalPreludes" class="totalCardsCount odometer"></div>
+      <div class="resource card-corporation" style="display:inline-block;transform: rotate(-10deg)"><span style="background:linear-gradient(to right, rgb(235,118,171), #e64d91);padding-left:4px;padding-right:4px;border-radius:2px;">PREL</span></div>
+      <div class="resource card-corporation" style="display:inline-block;transform: rotate(10deg);margin-left:-52px"><span style="background:linear-gradient(to right, rgb(235,118,171), #e64d91);padding-left:4px;padding-right:4px;border-radius:2px;">PREL</span></div>
+    </div>
+    <div>
+      <div id="totalColonies" class="totalCardsCount odometer"></div>
+      <div class="resource card-colony" style="display:inline-block;transform: rotate(-25deg);margin-left:-5px;"><span style="background:rgb(158,145,128);padding-left:4px;padding-right:4px;border-radius:2px;">COLO</span></div>
+      <div class="resource card-colony" style="display:inline-block;transform: rotate(-15deg);margin-left:-50px"><span style="    background: linear-gradient(to right, #b1a79a,#827564);padding-left:4px;padding-right:4px;border-radius:2px;">COLO</span></div>
+    </div>
+    <div>
+      <div id="totalGlobals" class="totalCardsCount odometer">00</div>
+      <div class="resource card-corporation" style="display:inline-block;transform: rotate(-10deg)"><span style="background:white ;padding-left:4px;padding-right:4px;border-radius:2px;">GLOB</span></div>
+      <div class="resource card-corporation" style="display:inline-block;transform: rotate(-10deg);margin-left:-52px"><span style="    background: #ccc;padding-left:4px;padding-right:4px;border-radius:2px;">GLOB</span></div>
+      <div class="resource card-corporation" style="display:inline-block;transform: rotate(-10deg);margin-left:-52px"><span style="    background: #ccc;padding-left:4px;padding-right:4px;border-radius:2px;">GLOB</span></div>
+    </div>
+    <div style="border-radius: 0 0 20px 0">
+      <button id="reset" class="button2 btn-reset" onclick="clearInput();showAll();" title="Reset all selected filters">RESET</button>
     </div>
   </div>
 

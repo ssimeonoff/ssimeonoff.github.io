@@ -465,19 +465,18 @@ border-right: 2px solid rgb(137,137,137);
 
 .btn-reset {
       outline: none;
-      height: 40px;
-      width: 123px;
+      height: 30px;
+      width: 100px;
       cursor: pointer;
       border-radius: 20px;
       text-align: center;
-      font-size: 18px;
+      font-size: 16px;
       color:white;
       font-family: Prototype;
       background-color: #cc3333;
       vertical-align: middle;
       text-shadow: 0 0 1px black;
-      vertical-align: top;
-      margin-left: 195px;
+      margin-left: 5px;
 }
 
 .icon-image {
@@ -522,7 +521,8 @@ border-right: 2px solid rgb(137,137,137);
    font-size: 14px;
    text-align: center;
    border-radius: 20px;
-   margin-left: 10px;
+   margin-left: 628px;
+   margin-top: -65px;
    vertical-align: bottom;
    padding-right: 25px;
 }
@@ -673,7 +673,7 @@ border-right: 2px solid rgb(137,137,137);
     height: 125px;
     padding: 10px;
     border-radius: 10px;
-    margin-top: 10px;
+    margin-top: -13px;
     margin-bottom: 20px;
     font-size: 18px;
     border-top: 2px solid rgb(221,221,221);
@@ -1293,11 +1293,25 @@ border-right: 2px solid rgb(137,137,137);
   color: black;
   font-size:12px;
   width: 38px;
-  padding-top: 3px;
-  padding-bottom: 3px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   padding-left: 7px;
   padding-right: 7px;
   border-radius: 3px;
+  box-shadow: 0 2px 2px 1px rgba(0,0,0,.8);
+}
+
+.card-colony {
+  background-color: rgb(44,44,44);
+  background: linear-gradient(to right bottom, black, rgb(60,60,60), rgb(150,150,150), rgb(60,60,60), rgb(60,60,60),black);
+  color: black;
+  font-size:12px;
+  width: 44px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 7px;
+  padding-right: 7px;
+  border-radius: 13px;
   box-shadow: 0 2px 2px 1px rgba(0,0,0,.8);
 }
 
@@ -1441,7 +1455,8 @@ border-right: 2px solid rgb(137,137,137);
     font-size: 30px;
     vertical-align: middle;
     text-shadow:  0 3px 2px black;
-    color:   #ffebcc;
+    color:  white;
+    margin-right: 5px;
 }
 
 .corporationLabel {
@@ -1533,17 +1548,36 @@ border-right: 2px solid rgb(137,137,137);
     border-left: 2px solid rgb(221,221,221);
     border-bottom: 2px solid rgb(137,137,137);
     border-right: 2px solid rgb(137,137,137);
-    border-radius: 20px;
+    border-radius: 20px 20px 0 0;
     margin-left: 40px;
     padding-left: 30px;
     padding-top: 15px;
     padding-bottom: 17px;
     width: 845px;
-    height: 330px;
+    height: 230px;
     margin-top: 40px;
     transition: height 0.2s;
     box-shadow: 0 0 10px 5px black;
 }
+
+#grid-numbers {
+  height: 50px;
+  line-height: 50px;
+  display: none;
+  margin-left: 40px;
+  grid-template-columns: 184px 139px 139px 139px 139px 139px;
+  margin-bottom: 20px;
+}
+#grid-numbers > div{
+  background: #cccccc;
+  background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
+  border-top: 2px solid rgb(221,221,221);
+  border-left: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
+  padding-left: 10px;
+}
+
 
 #titleContainer {
     height: 40px;
