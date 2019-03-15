@@ -23,29 +23,26 @@
 <html>
 
 <body background="images/mars.jpg" style="background-color:black;background-repeat:no-repeat; background-size:100%">
+
+
   <div id="buttonsContainer">
-    <div id="titleContainer">
-      <div style="transform:scale(1.5,1);">CARDS LIST</div>
+    <div id="buttonsContainer-header">
+      <div id="titleContainer">
+        <div class="title-style">TERRAFORMING MARS CARDS LIST</div>
+      </div>
+      <div id="myBtnContainer3" style="display:inline-block">
+        <div class="onoffswitch">
+          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" onclick="toggleCardsDesign();" >
+          <label class="onoffswitch-label" for="myonoffswitch">
+            <span class="onoffswitch-inner"></span>
+            <span class="onoffswitch-switch"></span>
+          </label>
+        </div>
+      </div>
   </div>
 
-  <div id="myBtnContainer3" style="display:inline-block">
-    <button id="standard" class="button btn3 standard-icon button-icon  " onclick="filterFunction(id)" title="filter Base game cards"></button>
-    <button id="corporate" class="button btn3 corporate-icon button-icon  " onclick="filterFunction(id)" title="filter Corporate Era cards"></button>
-    <button id="venusNext" class="button btn3 venus-icon button-icon  " onclick="filterFunction(id)" title="filter Venus Next cards"></button>
-    <button id="prelude" class="button btn3 prelude-icon button-icon  " onclick="filterFunction(id)" title="filter Prelude cards"></button>
-    <button id="colonies" class="button btn3 colonies-icon button-icon  " onclick="filterFunction(id)" title="filter Colonies cards"></button>
-    <button id="promo" class="button btn3 promo-icon button-icon  " onclick="filterFunction(id)" title="filter Promo cards"></button>
-    <button id="globals" class="button btn3 globals-icon button-icon  " onclick="filterFunction(id)" title="filter Global Events cards"></button>
 
-    <div class="onoffswitch">
-      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" onclick="toggleCardsDesign();" >
-      <label class="onoffswitch-label" for="myonoffswitch">
-        <span class="onoffswitch-inner"></span>
-        <span class="onoffswitch-switch"></span>
-      </label>
-    </div>
-  </div>
-
+  <div id="buttonsContainer-body">
     <div id="myBtnContainer1" style="line-height:55px;margin-bottom:10px;">
       <button id="automated" class="button btn1 background-color-automated  " onclick="filterFunction(id)" title="filter Automated Project Cards">AUTOMATED</button>
       <button id="active" class="button btn1 background-color-active  " onclick="filterFunction(id)" title="filter Active Project Cards">ACTIVE</button>
@@ -57,7 +54,7 @@
     </div>
 
     <div id="myBtnContainer2" style="line-height:55px;">
-      <button id="buildingTag" style="margin-left:29px;" class="button btn2 tag-building  "  onclick="filterFunction(id)" title="filter by Building tag"></button>
+      <button id="buildingTag" class="button btn2 tag-building  "  onclick="filterFunction(id)" title="filter by Building tag"></button>
       <button id="spaceTag" class="button btn2 tag-space  " onclick="filterFunction(id)" title="filter by Space tag"></button>
       <button id="scienceTag" class="button btn2 tag-science  " onclick="filterFunction(id)" title="filter by Science tag"></button>
 
@@ -80,6 +77,13 @@
     <div id="myBtnContainer4" style="display:inline-block;">
       <button id="content"  class="button btn-content  " onclick="toggleContentDiv();" title="reveal Card Content filters">CONTENT</button>
       <input type="text" id="myInput" oninput="filterFunction(id);" placeholder="Search by text ..." title="Search by card's title, number or keywords">
+      <button id="standard" class="button btn3 standard-icon button-icon  " onclick="filterFunction(id)" title="filter Base game cards"></button>
+      <button id="corporate" class="button btn3 corporate-icon button-icon  " onclick="filterFunction(id)" title="filter Corporate Era cards"></button>
+      <button id="venusNext" class="button btn3 venus-icon button-icon  " onclick="filterFunction(id)" title="filter Venus Next cards"></button>
+      <button id="prelude" class="button btn3 prelude-icon button-icon  " onclick="filterFunction(id)" title="filter Prelude cards"></button>
+      <button id="colonies" class="button btn3 colonies-icon button-icon  " onclick="filterFunction(id)" title="filter Colonies cards"></button>
+      <button id="promo" class="button btn3 promo-icon button-icon  " onclick="filterFunction(id)" title="filter Promo cards"></button>
+      <button id="globals" class="button btn3 globals-icon button-icon  " onclick="filterFunction(id)" title="filter Global Events cards"></button>
       <a id="btn-selectedCards" class="button btn-selected-cards" title="open selected cards" href="https://ssimeonoff.github.io/" target="_blank">
         SELECTED<br> CARDS ONLY<div id="selectedCardsAmount">0</div></a>
     </div>
@@ -149,70 +153,35 @@
         <input id="slider7" type="range" min="0" max="2" value="0" step="1" list="tickmarks" oninput="output7.value = slider7.value; filterFunction(id);" class="track-venusTag-background track-venusTag-thumb" style="width:60px;">
       </div>
     </div>
-
-    <div id="footer">
-      <a class="footer-links" href="https://boardgamegeek.com/boardgame/167791/terraforming-mars" target="_blank">THE GAME</a>
-      <a class="footer-links" href="https://boardgamegeek.com/thread/1959389/terraforming-mars-complete-animated-cards-list" target="_blank">THE TOPIC</a>
-      <a class="footer-links" href="http://www.fryxgames.se/category/games/terraforming-mars/" target="_blank">FRYX NEWS</a>
-      <a class="footer-links" href="https://github.com/ssimeonoff/ssimeonoff.github.io" target="_blank">GitHub Repo</a>
-      <a class="footer-links" href="https://ssimeonoff.github.io/setup" target="_blank">HAND SETUP</a>
-
-      <br>
-      <a class="footer-links footer-links2" href="https://ssimeonoff.github.io/submit" target="_blank" style="margin-left:40px;">
-          <div class="icon-image"><img src="images/multi.png" alt="Smiley face" height="30" width="26"></div>
-          <div class="submit-label">SUBMIT GAME</div>
-      </a>
-      <a class="footer-links footer-links2" href="https://ssimeonoff.github.io/stats" target="_blank" >
-          <div class="icon-image" ><img src="images/stats.png" alt="Smiley face" height="26" width="26"></div>
-          <div class="submit-label" style="margin-left:45px;">VIEW STATS</div>
-      </a>
-      <a class="footer-links footer-links2" href="https://ssimeonoff.github.io/solo" target="_blank">
-          <div class="icon-image"><img src="images/stats2.png" alt="Smiley face" height="26" width="26"></div>
-          <div class="submit-label" style="margin-left:50px;">VIEW SOLO</div>
-      </a>
-      <a class="footer-links footer-links2" href="https://ssimeonoff.github.io/mysolo" target="_blank">
-          <div class="icon-image" style="margin-top:3px"><img src="images/solo2.png" alt="Smiley face" height="24" width="24"></div>
-          <div class="submit-label" style="margin-left:50px;">MY SOLO</div>
-      </a>
-
-    </div>
   </div>
-
-  <div id="grid-numbers">
-    <div style="border-radius: 0 0 0 20px">
-      <div id="totalProjects" class="totalCardsCount odometer" data-minintegerlen="3"></div>
-      <div class="resource card" style="display:inline-block;transform: rotate(-10deg);"></div>
+    <div id="buttonsContainer-footer">
+      <div class="resource card" style="display:inline-block;transform: rotate(-10deg);margin-left:25px;"></div>
       <div class="resource card" style="display:inline-block;transform: rotate(-1deg);margin-left:-30px;"></div>
       <div class="resource card" style="display:inline-block;transform: rotate(10deg);margin-left:-30px;"></div>
-      <div class="resource card" style="display:inline-block;transform: rotate(20deg);margin-left:-30px;"></div>
-      <div class="resource card" style="display:inline-block;transform: rotate(30deg);margin-left:-30px;"></div>
+      <div id="totalProjects" class="totalCardsCount odometer" data-minintegerlen="3"></div>
 
-    </div>
-    <div>
-      <div id="totalCorporations" class="totalCardsCount odometer"></div>
       <div class="resource card-corporation" style="display:inline-block;transform: rotate(-10deg)"><span style="background:linear-gradient(to right, rgb(255,204,100), #e28c22);padding-left:4px;padding-right:4px;border-radius:2px;">CORP</span></div>
       <div class="resource card-corporation" style="display:inline-block;transform: rotate(10deg);margin-left:-52px"><span style="background:linear-gradient(to right, rgb(255,204,100), #e28c22);padding-left:4px;padding-right:4px;border-radius:2px;">CORP</span></div>
-    </div>
-    <div>
-      <div id="totalPreludes" class="totalCardsCount odometer"></div>
+      <div id="totalCorporations" class="totalCardsCount odometer"></div>
+
       <div class="resource card-corporation" style="display:inline-block;transform: rotate(-10deg)"><span style="background:linear-gradient(to right, rgb(235,118,171), #e64d91);padding-left:4px;padding-right:4px;border-radius:2px;">PREL</span></div>
       <div class="resource card-corporation" style="display:inline-block;transform: rotate(10deg);margin-left:-52px"><span style="background:linear-gradient(to right, rgb(235,118,171), #e64d91);padding-left:4px;padding-right:4px;border-radius:2px;">PREL</span></div>
-    </div>
-    <div>
-      <div id="totalColonies" class="totalCardsCount odometer"></div>
+      <div id="totalPreludes" class="totalCardsCount odometer"></div>
+
       <div class="resource card-colony" style="display:inline-block;transform: rotate(-25deg);margin-left:-5px;"><span style="background:rgb(158,145,128);padding-left:4px;padding-right:4px;border-radius:2px;">COLO</span></div>
       <div class="resource card-colony" style="display:inline-block;transform: rotate(-15deg);margin-left:-50px"><span style="    background: linear-gradient(to right, #b1a79a,#827564);padding-left:4px;padding-right:4px;border-radius:2px;">COLO</span></div>
-    </div>
-    <div>
-      <div id="totalGlobals" class="totalCardsCount odometer">00</div>
+      <div id="totalColonies" class="totalCardsCount odometer"></div>
+
       <div class="resource card-corporation" style="display:inline-block;transform: rotate(-10deg)"><span style="background:white ;padding-left:4px;padding-right:4px;border-radius:2px;">GLOB</span></div>
       <div class="resource card-corporation" style="display:inline-block;transform: rotate(-10deg);margin-left:-52px"><span style="    background: #ccc;padding-left:4px;padding-right:4px;border-radius:2px;">GLOB</span></div>
       <div class="resource card-corporation" style="display:inline-block;transform: rotate(-10deg);margin-left:-52px"><span style="    background: #ccc;padding-left:4px;padding-right:4px;border-radius:2px;">GLOB</span></div>
-    </div>
-    <div style="border-radius: 0 0 20px 0">
+      <div id="totalGlobals" class="totalCardsCount odometer" style="margin-right:0px;">00</div>
       <button id="reset" class="button2 btn-reset" onclick="clearInput();showAll();" title="Reset all selected filters">RESET</button>
     </div>
+
   </div>
+
+
 
   <!---CARDS LIST----------------------->
 

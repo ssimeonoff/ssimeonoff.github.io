@@ -1,5 +1,5 @@
 
-CONTAINER = 230; //the default height of the buttons container
+CONTAINER = 200; //the default height of the buttons container
 CONTENT_FILTERS = 125 //the default height of the Content filters area
 var containerHeight = CONTAINER; //the current height of the buttons container
 var contentFiltersCurrent = CONTENT_FILTERS;
@@ -23,7 +23,6 @@ function showAll() {
   displayedPreludes = 35;
   displayedColonies = 11;
   document.getElementById("buttonsContainer").style.display = "block";
-  document.getElementById("grid-numbers").style.display = "grid";
 
   var elements = document.querySelectorAll('.ul-title');
   for (i=0; i<elements.length; i++){elements[i].style.display = "block";}
@@ -319,7 +318,6 @@ function clearInput() {
   document.getElementById("price").value = 0;
   document.getElementById("contentFilters").style.display = "none"; //hides the range inputs div
   document.getElementById("subfilterReqs").style.display = "none"; //hides the range inputs div
-  document.getElementById("footer").style.display = "none"; //hide the footer
   document.getElementById("btn-selectedCards").style.display = "none"; //hide the selected cards button
 
 
@@ -342,7 +340,7 @@ function clearInput() {
   document.getElementById("output8").innerHTML = 0;
 
   //shrinks any expanded AREAS
-  document.getElementById("buttonsContainer").style.height = CONTAINER + "px";
+  document.getElementById("buttonsContainer-body").style.height = CONTAINER + "px";
   document.getElementById("contentFilters").style.height = CONTENT_FILTERS + "px";
   containerHeight = CONTAINER;
   contentFiltersCurrent = CONTENT_FILTERS;
@@ -383,26 +381,25 @@ function toggleContentDiv() {
   document.getElementById("content").classList.toggle("active");
   if (document.getElementById("content").classList.contains("active")) {
     containerHeight = containerHeight + contentFiltersCurrent +30; //30 for the margins
-    document.getElementById("buttonsContainer").style.height = containerHeight + "px";
+    document.getElementById("buttonsContainer-body").style.height = containerHeight + "px";
     setTimeout(function(){$("#contentFilters").fadeIn(200);}, 100);
   }
   else {
     containerHeight = containerHeight - contentFiltersCurrent -30;
     document.getElementById("contentFilters").style.display = "none"; //hides the range inputs div
-    document.getElementById("buttonsContainer").style.height = containerHeight + "px";
+    document.getElementById("buttonsContainer-body").style.height = containerHeight + "px";
   }
 }
 //toggle Footer
 function toggleFooterDiv() {
   if ($('#footer:visible').length == 0) {
     containerHeight = containerHeight + 100;
-    document.getElementById("buttonsContainer").style.height = containerHeight + "px";
+    document.getElementById("buttonsContainer-body").style.height = containerHeight + "px";
     setTimeout(function(){$("#footer").fadeIn(200);}, 100);
   }
   else {
     containerHeight = containerHeight - 100;
-    document.getElementById("footer").style.display = "none";
-    document.getElementById("buttonsContainer").style.height = containerHeight + "px";
+    document.getElementById("buttonsContainer-body").style.height = containerHeight + "px";
   }
 }
 
@@ -412,7 +409,7 @@ function toggleRequirementsFilters() {
   if ($('#subfilterReqs:visible').length == 0) {
     contentFiltersCurrent = contentFiltersCurrent + 105;
     containerHeight = containerHeight + 105;
-    document.getElementById("buttonsContainer").style.height = containerHeight + "px";
+    document.getElementById("buttonsContainer-body").style.height = containerHeight + "px";
     document.getElementById("contentFilters").style.height = contentFiltersCurrent + "px";
     setTimeout(function(){$("#subfilterReqs").fadeIn(200);}, 100);
   }
@@ -421,7 +418,7 @@ function toggleRequirementsFilters() {
     contentFiltersCurrent = contentFiltersCurrent -105;
     document.getElementById("subfilterReqs").style.display = "none";
     document.getElementById("contentFilters").style.height = CONTENT_FILTERS + "px";
-    document.getElementById("buttonsContainer").style.height = containerHeight + "px";
+    document.getElementById("buttonsContainer-body").style.height = containerHeight + "px";
   }
 }
 

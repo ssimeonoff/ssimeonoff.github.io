@@ -439,12 +439,12 @@ border-right: 2px solid rgb(137,137,137);
     cursor: pointer;
     font-weight: bold;
     border-radius: 20px;
-    margin-right: 8px;
+    margin-right: 6px;
     color:white;
     font-size: 16px;
     line-height: 30px;
     letter-spacing: 1px;
-    vertical-align: middle;
+    vertical-align: top;
 }
 
 .btn4 {
@@ -465,8 +465,9 @@ border-right: 2px solid rgb(137,137,137);
 
 .btn-reset {
       outline: none;
+      display: inline-block;
       height: 30px;
-      width: 100px;
+      width: 90px;
       cursor: pointer;
       border-radius: 20px;
       text-align: center;
@@ -498,11 +499,11 @@ border-right: 2px solid rgb(137,137,137);
     outline: none;
     color: rgb(48,48,48);
     height: 40px;
-    width: 123px;
+    width: 106px;
     cursor: pointer;
     font-size: 16px;
-    border-radius: 20px;
-    margin-right: 28px;
+    border-radius: 8px;
+    margin-right: 8px;
     vertical-align: top;
 }
 
@@ -513,7 +514,8 @@ border-right: 2px solid rgb(137,137,137);
    background: white;
    position: absolute;
    outline: none;
-   color: rgb(48,48,48);
+   color: white;
+   background: #444;
    height: 36px;
    line-height: 17px;
    width: 123px;
@@ -521,7 +523,7 @@ border-right: 2px solid rgb(137,137,137);
    font-size: 14px;
    text-align: center;
    border-radius: 20px;
-   margin-left: 628px;
+   margin-left: 708px;
    margin-top: -65px;
    vertical-align: bottom;
    padding-right: 25px;
@@ -540,7 +542,7 @@ border-right: 2px solid rgb(137,137,137);
   background: white;
   margin-top: -13px;
   margin-left: 12px;
-  box-shadow: 0 0px 1px 1px rgba(0,0,0,.8);
+  box-shadow: 0 0px 0px 1px white;
   background: #cc3333;
   color: white;
   text-shadow: 0 0 1px black;
@@ -1395,14 +1397,14 @@ border-right: 2px solid rgb(137,137,137);
     outline: none;
     background-position: 10px 12px;
     background-repeat: no-repeat;
-    width: 290px;
+    width: 206px;
     height: 36px;
     line-height: 36px;
     font-size: 20px;
     padding: 0px 2px 0px 15px;
     margin-bottom: 25px;
-    margin-right: 30px;
-    border-radius: 24px;
+    margin-right: 8px;
+    border-radius: 8px;
     border-top: 2px solid rgb(221,221,221);
     border-left: 2px solid rgb(221,221,221);
     border-bottom: 2px solid rgb(137,137,137);
@@ -1452,10 +1454,10 @@ border-right: 2px solid rgb(137,137,137);
 
 .totalCardsCount {
     display: inline-block;
+    position: absolute;
     font-size: 30px;
     vertical-align: middle;
-    text-shadow:  0 3px 2px black;
-    color:  white;
+    color:  #222;
     margin-right: 5px;
 }
 
@@ -1541,61 +1543,74 @@ border-right: 2px solid rgb(137,137,137);
 }
 
 #buttonsContainer {
-    display: none;
-    background: #cccccc;
-    background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
-    border-top: 2px solid rgb(221,221,221);
-    border-left: 2px solid rgb(221,221,221);
-    border-bottom: 2px solid rgb(137,137,137);
-    border-right: 2px solid rgb(137,137,137);
-    border-radius: 20px 20px 0 0;
-    margin-left: 40px;
-    padding-left: 30px;
-    padding-top: 15px;
-    padding-bottom: 17px;
-    width: 845px;
-    height: 230px;
-    margin-top: 40px;
-    transition: height 0.2s;
-    box-shadow: 0 0 10px 5px black;
-}
-
-#grid-numbers {
-  height: 50px;
-  line-height: 50px;
-  display: none;
-  margin-left: 40px;
-  grid-template-columns: 184px 139px 139px 139px 139px 139px;
-  margin-bottom: 20px;
-}
-#grid-numbers > div{
-  background: #cccccc;
-  background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
   border-bottom: 2px solid rgb(137,137,137);
   border-right: 2px solid rgb(137,137,137);
-  padding-left: 10px;
+  display: none;
+  background: #cccccc;
+  background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
+  box-shadow: 0 0 10px 5px black;
+  width: 879px;
+  margin-top: 40px;
+  margin-left: 40px;
+  border-radius: 20px;
+
 }
+
+#buttonsContainer-body {
+  border-top: 2px solid rgb(221,221,221);
+  border-left: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
+  height: 200px;
+  width: 845px;
+  transition: height 0.2s;
+  padding-left: 30px;
+}
+
+#buttonsContainer-header{
+  height: 60px;
+  border-top: 2px solid rgb(221,221,221);
+  border-left: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
+  border-radius: 18px 18px 0 0;
+}
+
+#buttonsContainer-footer {
+  height: 60px;
+  border-top: 2px solid rgb(221,221,221);
+  border-left: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
+  border-radius: 0 0 18px 18px;
+}
+
 
 
 #titleContainer {
     height: 40px;
     line-height: 40px;
     display: inline-block;
-    font-family: Prototype;
-    font-size: 16px;
-    border-style: inset;
-    background: #eeeeee;
-    border-radius: 30px;
-    width: 200px;
-    margin-right: 21px;
-    margin-bottom: 5px;
-    background: linear-gradient(to right, rgb(128, 87, 0), rgb(205,162, 130), rgb(205,162, 130), rgb(128, 87, 0));
-    box-shadow: inset 0px 1px 3px 1px rgba(0,0,0,.5);
-    text-shadow:  0 3px 2px black;
-    color:   #ffebcc;
+    width: 650px;
+    margin-top: 6px;
+    margin-left: 5px;
     text-align: center;
+}
+
+.title-style {
+  font-family: Prototype;
+  font-size: 26px;
+  margin-left: 60px;
+  margin-top: 5px;
+  transform:scale(1.5,1);
+  background:#222;
+  letter-spacing: 1px;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  text-shadow: 0px 2px 1px rgba(245,245,245,0.5);
+  color: transparent;
 }
 
 .cardsContainer {
@@ -2043,9 +2058,10 @@ input[type=number]::-webkit-outer-spin-button {
 /* TOGGLE SWTICH*/
 .onoffswitch {
   display: inline-block;
-  margin-left:100px;
+  margin-left:74px;
   position: relative;
   vertical-align: bottom;
+  margin-bottom: -4px;
   width: 123px;
     -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
 }
