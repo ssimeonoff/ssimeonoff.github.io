@@ -514,7 +514,7 @@ border-right: 2px solid rgb(137,137,137);
    background: white;
    position: absolute;
    outline: none;
-   color: white;
+   color: #eee;
    background: #444;
    height: 35px;
    padding-top: 1px;
@@ -522,11 +522,13 @@ border-right: 2px solid rgb(137,137,137);
    width: 102px;
    cursor: pointer;
    font-size: 14px;
+   letter-spacing: 1px;
    text-align: center;
    border-radius: 8px;
    margin-left: 708px;
    margin-top: -65px;
    vertical-align: bottom;
+   text-shadow: 0 0 1px black;
 }
 
 .btn-selectedCards-top {
@@ -1471,7 +1473,8 @@ border-right: 2px solid rgb(137,137,137);
     font-size: 24px;
     vertical-align: middle;
     color:  #222;
-    margin-right: 15px;
+    margin-right: 25px;
+    margin-top: 2px;
 }
 
 .corporationLabel {

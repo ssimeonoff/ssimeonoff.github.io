@@ -208,6 +208,11 @@
   grid-template-columns: 140px 80px 80px 80px 80px;
 }
 
+.grid5b {
+  display: grid;
+  grid-template-columns: 100px 90px 90px 90px 86px;
+}
+
 .generalStats {
     display: grid;
     grid-template-columns: 140px 80px 80px 80px 80px;
