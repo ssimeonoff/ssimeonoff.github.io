@@ -516,17 +516,30 @@ border-right: 2px solid rgb(137,137,137);
    outline: none;
    color: white;
    background: #444;
-   height: 36px;
+   height: 35px;
+   padding-top: 1px;
    line-height: 17px;
-   width: 123px;
+   width: 102px;
    cursor: pointer;
    font-size: 14px;
    text-align: center;
-   border-radius: 20px;
+   border-radius: 8px;
    margin-left: 708px;
    margin-top: -65px;
    vertical-align: bottom;
-   padding-right: 25px;
+}
+
+.btn-selectedCards-top {
+  border-top: 2px solid rgb(221,221,221);
+  border-left: 2px solid rgb(221,221,221);
+  border-right: 2px solid rgb(137,137,137);
+  border-radius: 30px 30px 0px 0px;
+  background: #444;
+  width:40px;
+  height: 38px;
+  margin-left: 50px;
+  margin-top: -77px;
+  box-shadow: 1px 0px 5px 0px rgba(0,0,0,.8);
 }
 
 #selectedCardsAmount {
@@ -540,8 +553,8 @@ border-right: 2px solid rgb(137,137,137);
   text-align: center;
   border-radius: 20px;
   background: white;
-  margin-top: -13px;
-  margin-left: 12px;
+  margin-top: 6px;
+  margin-left: -14px;
   box-shadow: 0 0px 0px 1px white;
   background: #cc3333;
   color: white;
