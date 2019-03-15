@@ -477,7 +477,7 @@ border-right: 2px solid rgb(137,137,137);
       background-color: #cc3333;
       vertical-align: middle;
       text-shadow: 0 0 1px black;
-      margin-left: 5px;
+      margin-left: 13px;
 }
 
 .icon-image {
@@ -1468,10 +1468,10 @@ border-right: 2px solid rgb(137,137,137);
 .totalCardsCount {
     display: inline-block;
     position: absolute;
-    font-size: 30px;
+    font-size: 24px;
     vertical-align: middle;
     color:  #222;
-    margin-right: 5px;
+    margin-right: 15px;
 }
 
 .corporationLabel {
@@ -1583,7 +1583,7 @@ border-right: 2px solid rgb(137,137,137);
 }
 
 #buttonsContainer-header{
-  height: 60px;
+  height: 48px;
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
   border-bottom: 2px solid rgb(137,137,137);
@@ -1607,7 +1607,6 @@ border-right: 2px solid rgb(137,137,137);
     line-height: 40px;
     display: inline-block;
     width: 650px;
-    margin-top: 6px;
     margin-left: 5px;
     text-align: center;
 }

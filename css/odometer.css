@@ -23,7 +23,7 @@
   background: linear-gradient(#666,#fff,#fff,#666);
   box-shadow: inset 0px 1px 3px 1px rgba(0,0,0,.5);
   padding-right: 1px;
-  width: 25px;
+  width: 20px;
 }
 
 .odometer.odometer-auto-theme .odometer-digit .odometer-digit-spacer, .odometer.odometer-theme-minimal .odometer-digit .odometer-digit-spacer {
