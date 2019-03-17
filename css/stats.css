@@ -128,7 +128,7 @@
 }
 
 .layout {
-  width: 1910px;
+  width: 1440px;
   margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
@@ -205,7 +205,7 @@
 
 .grid5b {
   display: grid;
-  grid-template-columns: 100px 90px 90px 90px 86px;
+  grid-template-columns: auto auto auto auto auto;
 }
 
 .generalStats {
@@ -476,8 +476,6 @@
 .grid-corporations-title {
   height:46px !important;
   line-height:46px !important;
-  color: white !important;
-  text-shadow: 0 0 1px black, 0 2px 2px black !important;
 }
 
 .header {
@@ -1201,11 +1199,9 @@
   margin-left: 5px;
   cursor: pointer;
   text-align: center;
-  color: white;
   font-size: 18px;
   background: transparent;
-  color:white;
-  text-shadow: 0 0 1px black, 0 2px 2px black;
+  color: #222;
 }
 
 
