@@ -467,18 +467,17 @@ border-right: 2px solid rgb(137,137,137);
 .btn-reset {
       outline: none;
       display: inline-block;
-      height: 30px;
-      width: 90px;
+      height: 36px;
+      width: 102px;
+      margin-right: 106px;
       cursor: pointer;
-      border-radius: 20px;
+      border-radius: 8px;
       text-align: center;
       font-size: 16px;
       color:white;
       font-family: Prototype;
       background-color: #cc3333;
-      vertical-align: middle;
       text-shadow: 0 0 1px black;
-      margin-left: 13px;
 }
 
 .icon-image {
@@ -539,7 +538,7 @@ border-right: 2px solid rgb(137,137,137);
   border-bottom: 2px solid rgb(137,137,137);
   border-radius: 2px 30px 30px 2px;
   background: #444;
-  width:40px;
+  width: 36px;
   height: 36px;
   margin-left: 106px;
   margin-top: -37px;
@@ -558,7 +557,7 @@ border-right: 2px solid rgb(137,137,137);
   border-radius: 20px;
   background: white;
   margin-top: 6px;
-  margin-left: -12px;
+  margin-left: -13px;
   box-shadow: 0 0px 0px 1px white;
   background: #cc3333;
   color: white;
@@ -1223,7 +1222,7 @@ border-right: 2px solid rgb(137,137,137);
     border-radius: 2px;
     box-shadow: 0 1px 1px 1px rgba(0,0,0,1);
 }
-.card:after {
+.card:after, .card-footer:after {
     content: "\1F30F\FE0E";
     font-size: 20px;
 }
@@ -1295,6 +1294,76 @@ border-right: 2px solid rgb(137,137,137);
   margin-top: -10px;
   box-shadow: 0 0 1px black;
   border: 1px solid #444;
+}
+
+.card-footer {
+  display: inline-block;
+  font-family: Prototype;
+  vertical-align: middle;
+  background-color: rgb(44,44,44);
+  border-top: 2px solid rgb(221,221,221);
+  border-left: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
+  border-radius: 5px;
+  background: linear-gradient(to bottom, black, rgb(60,60,60), rgb(150,150,150), rgb(60,60,60), black);
+  color: white;
+  font-weight: bold;
+  width: 40px;
+  height: 34px;
+  line-height: 34px;
+  padding-left: 10px;
+  margin-right: 8px;
+  margin-left: 5px;
+  box-shadow: 0 0 1px #222;
+}
+
+.card-footer-corp:after {
+  content: "C";
+  color:black;
+  background: rgb(255,204,100);
+  margin-left: 3px;
+  padding: 1px 5px 1px 5px;
+  border-radius: 50%;
+  border: 2px solid #222;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.card-footer-prelude:after {
+  content: "P";
+  color:black;
+  background: rgb(235,118,171);
+  margin-left: 3px;
+  padding: 1px 5px 1px 5px;
+  border-radius: 50%;
+  border: 2px solid #222;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.card-footer-colony:after {
+  content: "C";
+  color:black;
+  background: rgb(158,145,128);
+  margin-left: 3px;
+  padding: 1px 5px 1px 5px;
+  border-radius: 50%;
+  border: 2px solid #222;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.card-footer-globals:after {
+  content: "G";
+  color:#222;
+  background: #eee;
+  margin-left: 3px;
+  padding: 1px 5px 1px 5px;
+  border-radius: 50%;
+  border: 2px solid #222;
+  font-size: 14px;
+  font-weight: normal;
 }
 
 .floater{
@@ -1475,8 +1544,7 @@ border-right: 2px solid rgb(137,137,137);
     font-size: 24px;
     vertical-align: middle;
     color:  #222;
-    margin-right: 25px;
-    margin-top: 2px;
+    margin-right: -4px;
 }
 
 .corporationLabel {
@@ -1597,7 +1665,9 @@ border-right: 2px solid rgb(137,137,137);
 }
 
 #buttonsContainer-footer {
-  height: 60px;
+  height: 45px;
+  padding-top: 5px;
+  padding-left: 30px;
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
   border-bottom: 2px solid rgb(137,137,137);
@@ -2079,7 +2149,7 @@ input[type=number]::-webkit-outer-spin-button {
   position: relative;
   vertical-align: bottom;
   margin-bottom: -4px;
-  width: 123px;
+  width: 113px;
     -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
 }
 .onoffswitch-checkbox {
@@ -2100,20 +2170,20 @@ input[type=number]::-webkit-outer-spin-button {
     font-family: Prototype;
     font-weight: normal;
     line-height: 32px;
-    font-size: 16px;
+    font-size: 14px;
     box-shadow: inset 0px 1px 3px 1px rgba(0,0,0,.5);
     border-radius: 30px;
 }
 .onoffswitch-inner:before {
     content: "STACKED";
-    padding-left: 10px;
+    padding-left: 11px;
     background: #444;
-    color: white;
+    color: #ccc;
 
 }
 .onoffswitch-inner:after {
     content: "CASUAL";
-    padding-right: 13px;
+    padding-right: 12px;
     background: #ccc;
     color: #444;
     text-align: right;
@@ -2133,7 +2203,7 @@ input[type=number]::-webkit-outer-spin-button {
     position: absolute;
     top: 2px;
     bottom: 0;
-    right: 89px;
+    right: 79px;
     box-shadow: 0 2px 4px 2px rgb(58,58,58);
     transition: all 0.2s ease-in-out 0s;
 }
@@ -2165,7 +2235,7 @@ input[type=number]::-webkit-outer-spin-button {
   color: #444;
   font-weight: normal;
   line-height: 10px;
-  font-size:13px;
+  font-size: 13px;
   margin-left:0px;
   margin-bottom: 0px;
 }
