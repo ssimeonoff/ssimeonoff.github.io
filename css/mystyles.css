@@ -590,7 +590,6 @@ border-right: 2px solid rgb(137,137,137);
     width: 280px;
     cursor: pointer;
     font-size: 18px;
-    margin-right: 29px;
     margin-bottom: 20px;
     margin-left:3px;
 }
@@ -615,9 +614,9 @@ border-right: 2px solid rgb(137,137,137);
     height: 44px;
     width: 84px;
     cursor: pointer;
-    border-radius: 12px;
-    margin-right: 30px;
-    margin-left: 12px;
+    border-radius: 8px;
+    margin-right: 14px;
+    margin-left: 14px;
     margin-bottom: 20px;
     font-size: 29px;
     text-shadow: 0 0 5px darkorange;
@@ -674,6 +673,7 @@ border-right: 2px solid rgb(137,137,137);
   vertical-align: middle;
   border-radius: 8px;
   margin-top: -3px;
+  margin-right: 8px;
 }
 
 .btn-icon {
@@ -686,15 +686,16 @@ border-right: 2px solid rgb(137,137,137);
     width: 790px;
     height: 125px;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 8px;
     margin-top: -13px;
     margin-bottom: 20px;
     font-size: 18px;
-    border-top: 2px solid rgb(221,221,221);
-    border-left: 2px solid rgb(221,221,221);
-    border-bottom: 2px solid rgb(137,137,137);
-    border-right: 2px solid rgb(137,137,137);
-    box-shadow: 0 0 4px 1px rgb(58,58,58);
+    background: #ccc;
+    border-bottom: 2px solid rgb(221,221,221);
+    border-right: 2px solid rgb(221,221,221);
+    border-top: 2px solid rgb(137,137,137);
+    border-left: 2px solid rgb(137,137,137);
+    box-shadow: 0 0 1px 0px #444, inset 0 1px 3px 1px #444;
 }
 
 #subfilterReqs {
