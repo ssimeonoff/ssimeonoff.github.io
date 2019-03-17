@@ -82,10 +82,9 @@
   height: 32px;
   margin: 4px;
   box-shadow: 0 2px 4px 1px #444;
-  text-shadow: 0 0 1px black, 0 2px 2px black;
   width: 123px;
   font-size: 20px;
-  color: white;
+  color: #222;
   background: transparent;
   border-top: 4px solid rgb(221,221,221);
   border-left: 4px solid rgb(221,221,221);
@@ -136,11 +135,8 @@
 }
 
 .title-cell {
-  color: white !important;
-  text-shadow: 0 0 1px black, 0 2px 2px black;
-  font-size:18px !important;
-  background: transparent !important;
-
+  letter-spacing: 1px;
+  font-size: 18px !important;
 }
 .chart {
   position: relative;
@@ -151,8 +147,7 @@
   font-size:18px;
   margin-left: 425px;
   margin-top: 10px;
-  color:white;
-  text-shadow: 0 0 1px black, 0 2px 2px black;
+  color: #222;
 }
 
 .chart-points {
@@ -380,9 +375,9 @@
 }
 
 .header-cell {
-  color:white;
-  font-size: 20px;
-  text-shadow: 0 0 1px black, 0 2px 2px black;
+  color: #222;
+  font-size: 16px;
+  line-height: 18px;
 }
 
 .filter-label-cell {
