@@ -13,7 +13,6 @@
   background: #444;
   padding-left: 3px;
   padding-right: 3px;
-  box-shadow: 0 0px 0px 1px #666, 0 1px 1px 1px #666;
 }
 .odometer.odometer-auto-theme .odometer-digit, .odometer.odometer-theme-minimal .odometer-digit {
   display: inline-block;
@@ -30,7 +29,7 @@
   text-shadow: none;
   color: #444;
   font-size:20px;
-  line-height: 26px;
+  line-height: 30px;
 }
 
 .odometer.odometer-auto-theme .odometer-digit .odometer-digit-spacer, .odometer.odometer-theme-minimal .odometer-digit .odometer-digit-spacer {

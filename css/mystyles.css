@@ -376,6 +376,7 @@ border-right: 2px solid rgb(137,137,137);
 .tag-animal {background-image: url("../images/tag-animal.png")}
 .tag-event {background-image: url("../images/tag-event.png")}
 .tag-science {background-image: url("../images/tag-science.png")}
+.tag-none {background-image: url("../images/tag-none.png")}
 
 /************** Style the buttons ************/
 .button, .button2 {
@@ -524,7 +525,7 @@ border-right: 2px solid rgb(137,137,137);
    font-size: 14px;
    letter-spacing: 1px;
    text-align: center;
-   border-radius: 8px;
+   border-radius: 8px 0 0 8px;
    margin-left: 708px;
    margin-top: -65px;
    vertical-align: bottom;
@@ -535,28 +536,29 @@ border-right: 2px solid rgb(137,137,137);
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
   border-right: 2px solid rgb(137,137,137);
-  border-radius: 30px 30px 0px 0px;
+  border-bottom: 2px solid rgb(137,137,137);
+  border-radius: 2px 30px 30px 2px;
   background: #444;
   width:40px;
-  height: 38px;
-  margin-left: 50px;
-  margin-top: -77px;
-  box-shadow: 1px 0px 5px 0px rgba(0,0,0,.8);
+  height: 36px;
+  margin-left: 106px;
+  margin-top: -37px;
+  box-shadow: 0 2px 4px 1px rgba(0,0,0,.8);
 }
 
 #selectedCardsAmount {
   position: absolute;
   display: inline-block;
   font-family: Prototype;
-  width: 28px;
-  height: 28px;
-  line-height: 28px;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
   font-size: 18px;
   text-align: center;
   border-radius: 20px;
   background: white;
   margin-top: 6px;
-  margin-left: -14px;
+  margin-left: -12px;
   box-shadow: 0 0px 0px 1px white;
   background: #cc3333;
   color: white;
