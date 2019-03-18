@@ -1,0 +1,34 @@
+/* odomer used for the cards list */
+
+.odometer.odometer-auto-theme, .odometer.odometer-theme-minimal {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  position: relative;
+  border-top: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
+  border-radius: 0 5px 5px 0;
+  background: #222;
+  padding-left: 1px;
+  padding-right: 1px;
+  box-shadow: 1px 1px 1px #666;
+}
+.odometer.odometer-auto-theme .odometer-digit, .odometer.odometer-theme-minimal .odometer-digit {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  position: relative;
+  margin: 1px;
+  background: linear-gradient(#444,#fff,#444);
+  padding-right: 1px;
+  width: 20px;
+  text-shadow: none;
+  color: #222;
+  font-size: 24px;
+  line-height: 30px;
+}
