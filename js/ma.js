@@ -380,7 +380,7 @@ function generateSpins() {
         if (SYNERGIES[spinsArray[i]][spinsArray[j]] > 0) {
           conflictSUM += SYNERGIES[spinsArray[i]][spinsArray[j]];
           sumsText += SYNERGIES[spinsArray[i]][spinsArray[j]] + "<br>";
-          combinationsText += NAMES[spinsArray[i]] + " & " + NAMES[spinsArray[j]] + "<br>"; }
+          combinationsText += NAMES[spinsArray[i]] + "&nbsp; + &nbsp;" + NAMES[spinsArray[j]] + "<br>"; }
       }
     }
   }
