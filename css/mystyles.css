@@ -214,7 +214,7 @@ border-right: 2px solid rgb(137,137,137);
             background-repeat: no-repeat;
             transform: rotate(180deg);
       }
-      .globals-icon:after {
+      .turmoil-icon:after {
               position: absolute;
               color:#222;
               border: 1px solid black;
@@ -464,8 +464,8 @@ border-right: 2px solid rgb(137,137,137);
       outline: none;
       display: inline-block;
       height: 36px;
-      width: 102px;
-      margin-right: 108px;
+      width: 106px;
+      margin-right: 104px;
       cursor: pointer;
       border-radius: 8px;
       text-align: center;
@@ -1533,7 +1533,6 @@ border-right: 2px solid rgb(137,137,137);
   width: 880px;
 }
 
-
 .totalCardsCount {
     display: inline-block;
     position: absolute;
@@ -1590,38 +1589,6 @@ border-right: 2px solid rgb(137,137,137);
     font-size: 10px;
     padding-top:2px;
     box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
-}
-
-.corporation-venusNext-icon {
-    display: inline-block;
-    position: absolute;
-    color: white;
-    font-size:10px;
-    margin-left: 217px;
-    margin-top: 48px;
-    padding-top:2px;
-    padding-bottom:1px;
-    padding-left: 4px;
-    padding-right: 4px;
-    background: rgb(44,132,196);
-    border-radius: 3px;
-    box-shadow: 0 0 0 1px rgba(0,0,0,0.6),0 0 0 2px rgba(0,0,0,0.3);
-}
-
-.corporation-prelude-icon {
-    display: inline-block;
-    position: absolute;
-    color: white;
-    font-size:10px;
-    margin-left: 217px;
-    margin-top: 48px;
-    padding-top:2px;
-    padding-bottom:1px;
-    padding-left: 4px;
-    padding-right: 4px;
-    background: rgb(235,118,171);
-    border-radius: 3px;
-    box-shadow: 0 0 0 1px rgba(0,0,0,0.6),0 0 0 2px rgba(0,0,0,0.3);
 }
 
 #buttonsContainer {
