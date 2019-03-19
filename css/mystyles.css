@@ -28,7 +28,8 @@
 }
 
 .clicked-card {
-  box-shadow: 0 0 1px 1px #444, 0 0 25px 10px white !important;
+  box-shadow: 0 0 1px 1px #444, 0 0 15px 5px white !important;
+  filter: grayscale(1);
 }
 
 .filterDiv3 {
@@ -68,11 +69,11 @@
   z-index: 99;
 }
 
-.preludeCards {
+.prelude-card {
   height: 240px;
 }
 
-.colonyCards {
+.colony-card {
   height: 275px;
   width: 418px;
   background-color: black;
@@ -87,9 +88,9 @@
     font-family: Prototype;
     font-size: 26px;
     border-top: 2px solid rgb(221,221,221);
-border-left: 2px solid rgb(221,221,221);
-border-bottom: 2px solid rgb(137,137,137);
-border-right: 2px solid rgb(137,137,137);
+    border-left: 2px solid rgb(221,221,221);
+    border-bottom: 2px solid rgb(137,137,137);
+    border-right: 2px solid rgb(137,137,137);
     background: rgb(255,228,4);
     background: linear-gradient(rgb(255,208,4),rgb(255,255,104),rgb(255,208,4),rgb(255,208,4));
     width: 44px;
@@ -359,6 +360,9 @@ border-right: 2px solid rgb(137,137,137);
 
 .background-color-colony { background-color: rgb(158,145,128);}
 
+.background-color-global { background-color: #fff;}
+
+
 /*********** Style the tags ************/
 .tag-wild {background-image: url("../images/tag-wild.png")}
 .tag-building {background-image: url("../images/tag-building.png")}
@@ -404,6 +408,14 @@ border-right: 2px solid rgb(137,137,137);
 
 .button2:hover {
   filter: brightness(120%)  drop-shadow(0 0 5px white);
+}
+
+.disabled {
+  opacity: 0.2;
+  cursor: not-allowed !important;
+}
+.disabled:hover {
+  filter: none !important;
 }
 
 .btn1 {
@@ -505,7 +517,6 @@ border-right: 2px solid rgb(137,137,137);
 }
 
 .btn-selected-cards{
-   display: none;
    text-decoration: none;
    font-family: Prototype;
    background: white;
@@ -516,49 +527,35 @@ border-right: 2px solid rgb(137,137,137);
    height: 35px;
    padding-top: 1px;
    line-height: 17px;
-   width: 102px;
+   width: 87px;
+   padding-left: 15px;
    cursor: pointer;
    font-size: 14px;
    letter-spacing: 1px;
-   text-align: center;
-   border-radius: 8px 0 0 8px;
+   text-align: left;
+   border-radius: 8px;
    margin-left: 708px;
    margin-top: -65px;
    vertical-align: bottom;
    text-shadow: 0 0 1px black;
 }
 
-.btn-selectedCards-top {
-  border-top: 2px solid rgb(221,221,221);
-  border-left: 2px solid rgb(221,221,221);
-  border-right: 2px solid rgb(137,137,137);
-  border-bottom: 2px solid rgb(137,137,137);
-  border-radius: 2px 30px 30px 2px;
-  background: #444;
-  width: 36px;
-  height: 36px;
-  margin-left: 106px;
-  margin-top: -37px;
-  box-shadow: 0 2px 4px 1px rgba(0,0,0,.8);
-}
-
 #selectedCardsAmount {
   position: absolute;
   display: inline-block;
   font-family: Prototype;
-  width: 25px;
-  height: 25px;
-  line-height: 25px;
-  font-size: 18px;
+  width: 19px;
+  height: 12px;
+  line-height: 12px;
+  font-size: 14px;
   text-align: center;
-  border-radius: 20px;
+  border-radius: 3px;
   background: white;
-  margin-top: 6px;
-  margin-left: -13px;
-  box-shadow: 0 0px 0px 1px white;
-  background: #cc3333;
-  color: white;
-  text-shadow: 0 0 1px black;
+  margin-top: 2px;
+  margin-left: 4px;
+  background: #eee;
+  color: #222;
+  text-shadow: none;
 }
 
 .btn-sort {

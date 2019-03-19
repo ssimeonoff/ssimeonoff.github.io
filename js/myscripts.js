@@ -19,9 +19,11 @@ else {
 function showAll() {
   var x, i;
   displayedProjects = 317;
-  displayedCorporations = 30;
+  displayedCorporations = 32;
   displayedPreludes = 35;
   displayedColonies = 11;
+  displayedGlobals = 1;
+
   document.getElementById("buttonsContainer").style.display = "block";
 
   var elements = document.querySelectorAll('.ul-title');
@@ -30,6 +32,8 @@ function showAll() {
   document.getElementById("totalCorporations").innerHTML = displayedCorporations;
   document.getElementById("totalPreludes").innerHTML = displayedPreludes;
   document.getElementById("totalColonies").innerHTML = displayedColonies;
+  document.getElementById("totalGlobals").innerHTML = displayedGlobals;
+
 
   //making all buttons inactive
   y = document.querySelectorAll('button.active');
@@ -303,13 +307,17 @@ function filterFunction(id) {
   //Display Cards Numbers
   displayedCards = document.querySelectorAll('li.show').length;
   displayedCorporations = document.querySelectorAll('li.show.corporation').length;
-  displayedPreludes = document.querySelectorAll('li.show.preludeCards').length;
-  displayedColonies = document.querySelectorAll('li.show.colonyCards').length;
+  displayedPreludes = document.querySelectorAll('li.show.prelude-card').length;
+  displayedColonies = document.querySelectorAll('li.show.colony-card').length;
+  displayedGlobals = document.querySelectorAll('li.show.global-card').length;
+
   displayedProjects = displayedCards - displayedCorporations - displayedPreludes - displayedColonies;
   document.getElementById("totalProjects").innerHTML = displayedProjects;
   document.getElementById("totalCorporations").innerHTML = displayedCorporations;
   document.getElementById("totalPreludes").innerHTML = displayedPreludes;
   document.getElementById("totalColonies").innerHTML = displayedColonies;
+  document.getElementById("totalGlobals").innerHTML = displayedGlobals;
+
 }
 
 
@@ -318,7 +326,7 @@ function clearInput() {
   document.getElementById("price").value = 0;
   document.getElementById("contentFilters").style.display = "none"; //hides the range inputs div
   document.getElementById("subfilterReqs").style.display = "none"; //hides the range inputs div
-  document.getElementById("btn-selectedCards").style.display = "none"; //hide the selected cards button
+  document.getElementById("btn-selectedCards").classList.toggle("disabled") //hide the selected cards button
 
 
   //resets the range inputs
@@ -606,10 +614,13 @@ function selectCard (clickedCard) {
     if (selectedCards.length > 0) {
       document.getElementById("btn-selectedCards").href = "https://ssimeonoff.github.io/cards-list" + selectedCards;
       document.getElementById("selectedCardsAmount").innerHTML = selectedCardsAmount;
-      $("#btn-selectedCards").fadeIn(300);
+      document.getElementById("btn-selectedCards").classList.remove("disabled");
+      document.getElementById("btn-selectedCards").disabled = false;
     }
     else {
-      $("#btn-selectedCards").fadeOut(300);
+      document.getElementById("btn-selectedCards").classList.add("disabled");
+      document.getElementById("btn-selectedCards").disabled = true;
+      document.getElementById("selectedCardsAmount").innerHTML = selectedCardsAmount;
     }
 
   }

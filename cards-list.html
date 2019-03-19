@@ -49,9 +49,9 @@
       <button id="active" class="button btn1 background-color-active  " onclick="filterFunction(id)" title="filter Active Project Cards">ACTIVE</button>
       <button id="events" class="button btn1 background-color-events  " onclick="filterFunction(id)" title="filter Space Events Project Cards">EVENTS</button>
       <button id="corporation" class="button btn1 background-color-corporation  " onclick="filterFunction(id)" title="filter Corporations Cards">CORPS</button>
-      <button id="preludeCards" class="button btn1 background-color-prelude  " onclick="filterFunction(id)" title="filter Preludes Cards">PRELUDES</button>
-      <button id="colonyCards" class="button btn1 background-color-colony  " onclick="filterFunction(id)" title="filter Colonies cards">COLONIES</button>
-      <button id="eventCards" class="button btn1 " onclick="filterFunction(id)" style="margin-right:0px;" title="filter Global Events cards">GLOBALS</button>
+      <button id="prelude-card" class="button btn1 background-color-prelude  " onclick="filterFunction(id)" title="filter Preludes Cards">PRELUDES</button>
+      <button id="colony-card" class="button btn1 background-color-colony  " onclick="filterFunction(id)" title="filter Colonies cards">COLONIES</button>
+      <button id="global-card" class="button btn1 " onclick="filterFunction(id)" style="margin-right:0px;" title="filter Global Events cards">GLOBALS</button>
     </div>
 
     <div id="myBtnContainer2" style="line-height:55px;">
@@ -87,9 +87,9 @@
       <button id="colonies" class="button btn3 colonies-icon button-icon  " onclick="filterFunction(id)" title="filter Colonies cards"></button>
       <button id="turmoil" class="button btn3 turmoil-icon button-icon  " onclick="filterFunction(id)" title="filter Turmoil cards"></button>
       <button id="promo" class="button btn3 promo-icon button-icon  " onclick="filterFunction(id)" title="filter Promo cards"></button>
-      <a id="btn-selectedCards" class="button btn-selected-cards" title="open selected cards" href="https://ssimeonoff.github.io/" target="_blank">
-        SELECTED<br> CARDS ONLY
-        <div class="btn-selectedCards-top"><div id="selectedCardsAmount">0</div></div></a>
+      <a disabled id="btn-selectedCards" class="button btn-selected-cards disabled" title="open selected cards" href="no-selected-card.html" target="_blank">SELECTED<br>CARDS
+        <div id="selectedCardsAmount">0</div>
+      </a>
     </div>
 
 
@@ -6812,12 +6812,35 @@
                         (Effect: When any ocean tile is placed, increase your MC production 1 step. Your bonus for placing adjacent to oceans in 3MC instead of 2MC.)
                     </div>
                 </div>
-                <div style="font-size:30px;font-style: italic;margin-top:10px;margin-left:30px;font-family:Times;">
+                <div style="font-size:30px;font-style: italic;margin-top:10px;margin-left:30px;font-family:Times;color:#222;">
                   Lakefront <br> &nbsp;&nbsp;Resorts
                   </div>
                 <div class="resource money " style="margin-left:75px;">52</div>
                 <div class="description " style="text-align:center;margin-left:15px;">
                     (You start with 52 MC.)
+                </div>
+            </div>
+        </li>
+
+        <li id="CORP31" onclick="getClickedCard();" class="filterDiv corporation earthTag scienceTag turmoil">
+          <div class="tag tag1 tag-earth"></div>
+          <div class="tag tag2 tag-science"></div>
+            <div class="corporationLabel ">CORPORATION</div>
+            <div class="turmoil-icon corporation-icon"></div>
+            <div class="contentCorporation ">
+                <div class="corporationEffectBox ">
+                    <div class="corporationEffectBoxLabel">EFFECT</div>
+                      <div class="resource card"></div> : <div class="resource money">1</div>
+                    <div class="description " style="text-align:center;margin-top:0px; ">
+                        (Effect: Buying cards to hand costs 1MC.)
+                    </div>
+                </div>
+                <div style="font-size:24px;margin-top:33px;margin-left:5px;margin-bottom:5px; font-family:Prototype;letter-spacing:5px;color:#222;">
+                  TERRALABS
+                  </div>
+                <div class="resource money " style="margin-left:25px;margin-right:20px;">20</div> -1 <div class="tile rating"></div>
+                <div class="description " style="text-align:center;">
+                    (You start with 20 MC. Lower your TR 1 step.)
                 </div>
             </div>
         </li>
@@ -6864,7 +6887,7 @@
     <!--PRELUDES------------------------------------------->
     <div class="ul-title">PRELUDES</div>
 
-        <li onclick="getClickedCard();" class="filterDiv prelude preludeCards earthTag">
+        <li onclick="getClickedCard();" class="filterDiv prelude prelude-card earthTag">
           <div class="title background-color-prelude">Allied Banks</div>
           <div class="tag tag1 tag-earth"></div>
           <div class="prelude-label">PRELUDE</div>
@@ -6881,7 +6904,7 @@
           </div>
         </li>
 
-        <li onclick="getClickedCard();" class="filterDiv prelude preludeCards powerTag">
+        <li onclick="getClickedCard();" class="filterDiv prelude prelude-card powerTag">
           <div class="title background-color-prelude">Aquifer Turbines</div>
           <div class="tag tag1 tag-power"></div>
           <div class="prelude-label">PRELUDE</div>
@@ -6899,7 +6922,7 @@
           </div>
         </li>
 
-        <li onclick="getClickedCard();" class="filterDiv prelude preludeCards microbeTag">
+        <li onclick="getClickedCard();" class="filterDiv prelude prelude-card microbeTag">
           <div class="title background-color-prelude">Biofuels</div>
           <div class="tag tag1 tag-microbe"></div>
           <div class="prelude-label">PRELUDE</div>
@@ -6916,7 +6939,7 @@
           </div>
         </li>
 
-        <li onclick="getClickedCard();" class="filterDiv prelude preludeCards scienceTag">
+        <li onclick="getClickedCard();" class="filterDiv prelude prelude-card scienceTag">
           <div class="title background-color-prelude">Biolab</div>
           <div class="tag tag1 tag-science"></div>
           <div class="prelude-label">PRELUDE</div>
@@ -6933,7 +6956,7 @@
           </div>
         </li>
 
-        <li onclick="getClickedCard();" class="filterDiv prelude preludeCards plantTag">
+        <li onclick="getClickedCard();" class="filterDiv prelude prelude-card plantTag">
           <div class="title background-color-prelude">Biosphere Support</div>
           <div class="tag tag1 tag-plant"></div>
           <div class="prelude-label">PRELUDE</div>
@@ -6950,7 +6973,7 @@
           </div>
         </li>
 
-        <li onclick="getClickedCard();" class="filterDiv prelude preludeCards earthTag">
+        <li onclick="getClickedCard();" class="filterDiv prelude prelude-card earthTag">
           <div class="title background-color-prelude">Business Empire</div>
           <div class="tag tag1 tag-earth"></div>
           <div class="prelude-label">PRELUDE</div>
@@ -6967,7 +6990,7 @@
           </div>
         </li>
 
-        <li onclick="getClickedCard();" class="filterDiv prelude preludeCards buildingTag plantTag">
+        <li onclick="getClickedCard();" class="filterDiv prelude prelude-card buildingTag plantTag">
           <div class="title background-color-prelude">Dome Farming</div>
           <div class="prelude-label">PRELUDE</div>
           <div class="number" style="margin-left:99px;">P07</div>
@@ -6984,7 +7007,7 @@
           </div>
         </li>
 
-        <li onclick="getClickedCard();" class="filterDiv prelude preludeCards noneTag">
+        <li onclick="getClickedCard();" class="filterDiv prelude prelude-card noneTag">
           <div class="title background-color-prelude">Donation</div>
           <div class="prelude-label">PRELUDE</div>
           <div class="number" style="margin-left:99px;">P08</div>
@@ -6997,7 +7020,7 @@
           </div>
         </li>
 
-        <li onclick="getClickedCard();" class="filterDiv prelude preludeCards buildingTag cityTag">
+        <li onclick="getClickedCard();" class="filterDiv prelude prelude-card buildingTag cityTag">
           <div class="title background-color-prelude">Early Settlement</div>
           <div class="prelude-label">PRELUDE</div>
           <div class="number" style="margin-left:99px;">P09</div>
@@ -7014,7 +7037,7 @@
           </div>
         </li>
 
-        <li onclick="getClickedCard();" class="filterDiv prelude preludeCards plantTag microbeTag">
+        <li onclick="getClickedCard();" class="filterDiv prelude prelude-card plantTag microbeTag">
           <div class="title background-color-prelude">Ecology Experts</div>
           <div class="prelude-label">PRELUDE</div>
           <div class="number" style="margin-left:99px;">P10</div>
@@ -7032,7 +7055,7 @@
           </div>
         </li>
 
-        <li onclick="getClickedCard();" class="filterDiv prelude preludeCards noneTag">
+        <li onclick="getClickedCard();" class="filterDiv prelude prelude-card noneTag">
           <div class="title background-color-prelude">Eccentric Sponsor</div>
           <div class="prelude-label">PRELUDE</div>
           <div class="number" style="margin-left:99px;">P11</div>
@@ -7045,7 +7068,7 @@
           </div>
         </li>
 
-        <li onclick="getClickedCard();" class="filterDiv prelude preludeCards plantTag">
+        <li onclick="getClickedCard();" class="filterDiv prelude prelude-card plantTag">
           <div class="title background-color-prelude">Experimental Forest</div>
           <div class="prelude-label">PRELUDE</div>
           <div class="number" style="margin-left:99px;">P12</div>
@@ -7060,7 +7083,7 @@
           </div>
         </li>
 
-        <li onclick="getClickedCard();" class="filterDiv prelude preludeCards jovianTag">
+        <li onclick="getClickedCard();" class="filterDiv prelude prelude-card jovianTag">
           <div class="title background-color-prelude">Galilean Mining</div>
           <div class="prelude-label">PRELUDE</div>
           <div class="number" style="margin-left:99px;">P13</div>
@@ -7077,7 +7100,7 @@
           </div>
         </li>
 
-        <li onclick="getClickedCard();" class="filterDiv prelude preludeCards noneTag">
+        <li onclick="getClickedCard();" class="filterDiv prelude prelude-card noneTag">
           <div class="title background-color-prelude">Great Aquifer</div>
           <div class="prelude-label">PRELUDE</div>
           <div class="number" style="margin-left:99px;">P14</div>
@@ -7090,7 +7113,7 @@
           </div>
         </li>
 
-        <li onclick="getClickedCard();" class="filterDiv prelude preludeCards noneTag">
+        <li onclick="getClickedCard();" class="filterDiv prelude prelude-card noneTag">
           <div class="title background-color-prelude">Huge Asteroid</div>
           <div class="prelude-label">PRELUDE</div>
           <div class="number" style="margin-left:99px;">P15</div>
@@ -7104,7 +7127,7 @@
           </div>
         </li>
 
-        <li onclick="getClickedCard();" class="filterDiv prelude preludeCards jovianTag scienceTag">
+        <li onclick="getClickedCard();" class="filterDiv prelude prelude-card jovianTag scienceTag">
           <div class="title background-color-prelude">IO Research Outpost</div>
           <div class="prelude-label">PRELUDE</div>
           <div class="number" style="margin-left:99px;">P16</div>
@@ -7120,7 +7143,7 @@
           </div>
         </li>
 
-        <li onclick="getClickedCard();" class="filterDiv prelude preludeCards noneTag">
+        <li onclick="getClickedCard();" class="filterDiv prelude prelude-card noneTag">
           <div class="title background-color-prelude">Loan</div>
           <div class="prelude-label">PRELUDE</div>
           <div class="number" style="margin-left:99px;">P17</div>
@@ -7136,7 +7159,7 @@
           </div>
         </li>
 
-        <li onclick="getClickedCard();" class="filterDiv prelude preludeCards buildingTag">
+        <li onclick="getClickedCard();" class="filterDiv prelude prelude-card buildingTag">
           <div class="title background-color-prelude">Martian Industries</div>
           <div class="tag tag1 tag-building"></div>
           <div class="prelude-label">PRELUDE</div>
@@ -7153,7 +7176,7 @@
           </div>
         </li>
 
-        <li onclick="getClickedCard();" class="filterDiv prelude preludeCards noneTag">
+        <li onclick="getClickedCard();" class="filterDiv prelude prelude-card noneTag">
           <div class="title background-color-prelude">Metal-rich Asteroid</div>
           <div class="prelude-label">PRELUDE</div>
           <div class="number" style="margin-left:99px;">P19</div>
@@ -7168,7 +7191,7 @@
           </div>
         </li>
 
-        <li onclick="getClickedCard();" class="filterDiv prelude preludeCards noneTag">
+        <li onclick="getClickedCard();" class="filterDiv prelude prelude-card noneTag">
           <div class="title background-color-prelude">Metals Company</div>
           <div class="prelude-label">PRELUDE</div>
           <div class="number" style="margin-left:99px;">P20</div>
@@ -7183,7 +7206,7 @@
           </div>
         </li>
 
-        <li onclick="getClickedCard();" class="filterDiv prelude preludeCards">
+        <li onclick="getClickedCard();" class="filterDiv prelude prelude-card">
           <div class="title background-color-prelude">Mining Operations</div>
           <div class="tag tag1 tag-building"></div>
           <div class="prelude-label">PRELUDE</div>
@@ -7200,7 +7223,7 @@
           </div>
         </li>
 
-        <li onclick="getClickedCard();" class="filterDiv prelude preludeCards buildingTag">
+        <li onclick="getClickedCard();" class="filterDiv prelude prelude-card buildingTag">
           <div class="title background-color-prelude">Mohole</div>
           <div class="prelude-label">PRELUDE</div>
           <div class="number" style="margin-left:99px;">P22</div>
@@ -7217,7 +7240,7 @@
           </div>
         </li>
 
-        <li onclick="getClickedCard();" class="filterDiv prelude preludeCards buildingTag">
+        <li onclick="getClickedCard();" class="filterDiv prelude prelude-card buildingTag">
           <div class="title background-color-prelude">Mohole Excavation</div>
           <div class="prelude-label">PRELUDE</div>
           <div class="number" style="margin-left:99px;">P23</div>
@@ -7235,7 +7258,7 @@
           </div>
         </li>
 
-        <li onclick="getClickedCard();" class="filterDiv prelude preludeCards noneTag">
+        <li onclick="getClickedCard();" class="filterDiv prelude prelude-card noneTag">
           <div class="title background-color-prelude">Nitrogen Shipment</div>
           <div class="prelude-label">PRELUDE</div>
           <div class="number" style="margin-left:99px;">P24</div>
@@ -7251,7 +7274,7 @@
           </div>
         </li>
 
-        <li onclick="getClickedCard();" class="filterDiv prelude preludeCards spaceTag">
+        <li onclick="getClickedCard();" class="filterDiv prelude prelude-card spaceTag">
           <div class="title background-color-prelude">Orbital Construction Yard</div>
           <div class="tag tag1 tag-space"></div>
           <div class="prelude-label">PRELUDE</div>
@@ -7266,7 +7289,7 @@
           </div>
         </li>
 
-        <li onclick="getClickedCard();" class="filterDiv prelude preludeCards buildingTag">
+        <li onclick="getClickedCard();" class="filterDiv prelude prelude-card buildingTag">
           <div class="title background-color-prelude">Polar Industries</div>
           <div class="prelude-label">PRELUDE</div>
           <div class="number" style="margin-left:99px;">P26</div>
@@ -7282,7 +7305,7 @@
           </div>
         </li>
 
-        <li onclick="getClickedCard();" class="filterDiv prelude preludeCards powerTag">
+        <li onclick="getClickedCard();" class="filterDiv prelude prelude-card powerTag">
           <div class="title background-color-prelude">Power Generation</div>
           <div class="prelude-label">PRELUDE</div>
           <div class="number" style="margin-left:99px;">P27</div>
@@ -7298,7 +7321,7 @@
           </div>
         </li>
 
-        <li onclick="getClickedCard();" class="filterDiv prelude preludeCards wildTag">
+        <li onclick="getClickedCard();" class="filterDiv prelude prelude-card wildTag">
           <div class="title background-color-prelude">Research Network</div>
           <div class="prelude-label">PRELUDE</div>
           <div class="number" style="margin-left:99px;">P28</div>
@@ -7315,7 +7338,7 @@
           </div>
         </li>
 
-        <li onclick="getClickedCard();" class="filterDiv prelude preludeCards cityTag buildingTag">
+        <li onclick="getClickedCard();" class="filterDiv prelude prelude-card cityTag buildingTag">
           <div class="title background-color-prelude">Self-Sufficient Settlement</div>
           <div class="prelude-label">PRELUDE</div>
           <div class="number" style="margin-left:99px;">P29</div>
@@ -7333,7 +7356,7 @@
           </div>
         </li>
 
-        <li onclick="getClickedCard();" class="filterDiv prelude preludeCards buildingTag">
+        <li onclick="getClickedCard();" class="filterDiv prelude prelude-card buildingTag">
           <div class="title background-color-prelude">Smelting Plant</div>
           <div class="tag tag1 tag-building"></div>
           <div class="prelude-label">PRELUDE</div>
@@ -7348,7 +7371,7 @@
           </div>
         </li>
 
-        <li onclick="getClickedCard();" class="filterDiv prelude preludeCards noneTag">
+        <li onclick="getClickedCard();" class="filterDiv prelude prelude-card noneTag">
           <div class="title background-color-prelude">Society Support</div>
           <div class="prelude-label">PRELUDE</div>
           <div class="number" style="margin-left:99px;">P31</div>
@@ -7364,7 +7387,7 @@
           </div>
         </li>
 
-        <li onclick="getClickedCard();" class="filterDiv prelude preludeCards powerTag">
+        <li onclick="getClickedCard();" class="filterDiv prelude prelude-card powerTag">
           <div class="title background-color-prelude">Supplier</div>
           <div class="tag tag1 tag-power"></div>
           <div class="prelude-label">PRELUDE</div>
@@ -7381,7 +7404,7 @@
           </div>
         </li>
 
-        <li onclick="getClickedCard();" class="filterDiv prelude preludeCards  noneTag">
+        <li onclick="getClickedCard();" class="filterDiv prelude prelude-card  noneTag">
           <div class="title background-color-prelude">Supply Drop</div>
           <div class="prelude-label">PRELUDE</div>
           <div class="number" style="margin-left:99px;">P33</div>
@@ -7394,7 +7417,7 @@
           </div>
         </li>
 
-        <li onclick="getClickedCard();" class="filterDiv prelude preludeCards earthTag">
+        <li onclick="getClickedCard();" class="filterDiv prelude prelude-card earthTag">
           <div class="title background-color-prelude">UNMI Contractor</div>
           <div class="tag tag1 tag-earth"></div>
           <div class="prelude-label">PRELUDE</div>
@@ -7408,7 +7431,7 @@
           </div>
         </li>
 
-        <li onclick="getClickedCard();" class="filterDiv prelude preludeCards noneTag">
+        <li onclick="getClickedCard();" class="filterDiv prelude prelude-card noneTag">
           <div class="title background-color-prelude">Acquired Space Agency</div>
           <div class="prelude-label">PRELUDE</div>
           <div class="number" style="margin-left:99px;">P35</div>
@@ -7423,12 +7446,12 @@
         </li>
   </ul>
 
-    <!--COLONIES------------------------------------------->
+  <!--COLONIES------------------------------------------->
   <ul class="myUL" style="clear:both;">
     <div class="ul-title">COLONIES</div>
 
       <!--EUROPA-->
-      <li id="EUROPA" onclick="getClickedCard();" class="filterDiv colonyCards colonies" style="
+      <li id="EUROPA" onclick="getClickedCard();" class="filterDiv colony-card colonies" style="
       background-image:url('images/europa.png');
       background-size: 220px 220px;
       background-position: bottom 65px right -5px;
@@ -7468,7 +7491,7 @@
     </li>
 
     <!--TRITON-->
-    <li id="TRITON" onclick="getClickedCard();" class="filterDiv colonyCards colonies" style="
+    <li id="TRITON" onclick="getClickedCard();" class="filterDiv colony-card colonies" style="
     background-image:url('images/triton.jpg');
     background-size: 150px 150px;
     background-position: bottom 90px right 35px;
@@ -7511,7 +7534,7 @@
     </li>
 
       <!--CALLISTO-->
-      <li id="CALLISTO" onclick="getClickedCard();" class="filterDiv colonyCards colonies" style="
+      <li id="CALLISTO" onclick="getClickedCard();" class="filterDiv colony-card colonies" style="
         background-image:url('images/callisto.png');
         background-size: 300px 300px;
         background-position: bottom -11px right -55px;
@@ -7550,7 +7573,7 @@
         </li>
 
         <!--CERES-->
-        <li id="CERES" onclick="getClickedCard();" class="filterDiv colonyCards colonies" style="
+        <li id="CERES" onclick="getClickedCard();" class="filterDiv colony-card colonies" style="
         background-image:url('images/ceres.jpg');
         background-size: 100px 100px;
         background-position: bottom 150px right 60px;
@@ -7589,7 +7612,7 @@
       </li>
 
         <!--ENCELADUS-->
-        <li id="ENCELADUS" onclick="getClickedCard();" class="filterDiv colonyCards colonies" style="
+        <li id="ENCELADUS" onclick="getClickedCard();" class="filterDiv colony-card colonies" style="
         background-image:url('images/enceladus.png');
         background-size: 150px 150px;
         background-position: bottom 120px right -15px;
@@ -7632,7 +7655,7 @@
         </li>
 
         <!--TITAN-->
-        <li id="TITAN" onclick="getClickedCard();" class="filterDiv colonyCards colonies" style="
+        <li id="TITAN" onclick="getClickedCard();" class="filterDiv colony-card colonies" style="
         background-image:url('images/titan.jpg');
         background-size: 250px 250px;
         background-position: bottom 30px right -8px;
@@ -7675,7 +7698,7 @@
         </li>
 
         <!--MIRANDA-->
-        <li id="MIRANDA" onclick="getClickedCard();" class="filterDiv colonyCards colonies" style="
+        <li id="MIRANDA" onclick="getClickedCard();" class="filterDiv colony-card colonies" style="
         background-image:url('images/miranda.jpg');
         background-size: 100px 100px;
         background-position: bottom 145px right 55px;
@@ -7716,7 +7739,7 @@
 
 
         <!--GANYMEDE-->
-        <li id="GANYMEDE" onclick="getClickedCard();" class="filterDiv colonyCards colonies" style="
+        <li id="GANYMEDE" onclick="getClickedCard();" class="filterDiv colony-card colonies" style="
         background-image:url('images/ganymede.jpg');
         background-position: bottom 5px right 10px;
         box-shadow: inset 0 0 1px 3px rgb(150,150,150), 0 0 30px 15px black;
@@ -7754,7 +7777,7 @@
       </li>
 
         <!--LUNA-->
-        <li id="LUNA" onclick="getClickedCard();" class="filterDiv colonyCards colonies" style="
+        <li id="LUNA" onclick="getClickedCard();" class="filterDiv colony-card colonies" style="
         background-image:url('images/luna.jpg');
         background-position: bottom -5px right 0px;
         box-shadow: inset 0 0 1px 3px rgb(106,185,244), 0 0 30px 15px black;
@@ -7792,7 +7815,7 @@
       </li>
 
     <!--IO-->
-    <li id="IO" onclick="getClickedCard();" class="filterDiv colonyCards colonies" style="
+    <li id="IO" onclick="getClickedCard();" class="filterDiv colony-card colonies" style="
     background-image:url('images/io.jpg');
     background-size: 200px 200px;
     background-position: bottom 60px right -20px;
@@ -7831,7 +7854,7 @@
   </li>
 
   <!--PLUTO-->
-  <li id="PLUTO" onclick="getClickedCard();" class="filterDiv colonyCards colonies" style="
+  <li id="PLUTO" onclick="getClickedCard();" class="filterDiv colony-card colonies" style="
   background-image:url('images/pluto.jpg');
   background-size: 150px 150px;
   background-position: bottom 117px right 7px;
@@ -7872,6 +7895,23 @@
     <div>4</div>
   </div>
   </li>
+
+  </ul>
+
+  <!--GLOBAL EVENTS------------------------------------------->
+  <ul class="myUL" style="clear:both;">
+    <div class="ul-title">GLOBAL EVENTS</div>
+
+    <!--G01-->
+    <li onclick="getClickedCard();" class="filterDiv global-card turmoil">
+        <div class="title background-color-global">Gloabal Event</div>
+        <div class="tag tag1 "></div>
+        <div class="tag tag2 "></div>
+        <div class="number">G01</div>
+        <div class="content">
+          TEST
+        </div>
+    </li>
 
 
 
