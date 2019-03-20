@@ -26,39 +26,40 @@ function histogramCorporate () {
     };
 
     //CORPORATE GAMES
-    games = [
+          var games = [
           ['Corporation', 'Score'],
-
+          ['Credicor', 108],['Credicor', 94],['Credicor', 87],['Credicor', 89],['Credicor', 0],['Credicor', 95],['Credicor', 82],['Credicor', 89],['Credicor', 107],['Credicor', 106],['Credicor', 106],['Credicor', 113],['Credicor', 110],
           ['Ecoline', 88],['Ecoline', 91],['Ecoline', 99],['Ecoline', 104],['Ecoline', 108],['Ecoline', 107],['Ecoline', 77],['Ecoline', 101],
           ['Ecoline', 106],['Ecoline', 102],['Ecoline', 94],['Ecoline', 81],['Ecoline', 99],['Ecoline', 99],['Ecoline', 97],['Ecoline', 91],
           ['Helion', 97],['Helion', 101],['Helion', 94],['Helion', 81],['Helion', 91],['Helion', 104],['Helion', 98],['Helion', 92],['Helion', 96],
-          ['Helion', 95],['Helion', 96],['Helion', 94],['Helion', 89],['Helion', 91],['Helion', 82],
-          ['Credicor', 108],['Credicor', 94],['Credicor', 87],['Credicor', 89],['Credicor', 95],['Credicor', 82],['Credicor', 89],['Credicor', 107],['Credicor', 106],['Credicor', 106],['Credicor', 113],['Credicor', 110],
+          ['Helion', 95],['Helion', 96],['Helion', 94],['Helion', 89],['Helion', 91],['Helion', 0],['Helion', 82],
+          ['Mining Guild', 84],['Mining Guild', 92],['Mining Guild', 0],['Mining Guild', 85],['Mining Guild', 80],
           ['Teractor', 96],['Teractor', 77],['Teractor', 102],['Teractor', 84],['Teractor', 122],['Teractor', 101],
-          ['Mining Guild', 84],['Mining Guild', 92],['Mining Guild', 85],['Mining Guild', 80],
           ['Tharsis Republic', 108],['Tharsis Republic', 96],['Tharsis Republic', 94],
           ['Thorgate', 101],['Thorgate', 91],['Thorgate', 102],['Thorgate', 104],
-          ['Phobolog', 104],['Phobolog', 106],['Phobolog', 70],['Phobolog', 78],['Phobolog', 80],['Phobolog', 105],['Phobolog', 103],['Phobolog', 76],
-          ['Inventrix', 95],['Inventrix', 87],['Inventrix', 77],['Inventrix', 75],['Inventrix', 89],['Inventrix', 83],
-          ['Saturn Systems', 79],['Saturn Systems', 94],['Saturn Systems', 91],['Saturn Systems', 89],['Saturn Systems', 132],['Saturn Systems', 99],['Saturn Systems', 88],
-          ['Saturn Systems', 91],['Saturn Systems', 95],['Saturn Systems', 81],
-          ['Interplanetery', 102],['Interplanetery', 99],['Interplanetery', 97],['Interplanetery', 107],['Interplanetery', 97]
+          ['Phobolog', 104],['Phobolog', 106],['Phobolog', 0],['Phobolog', 70],['Phobolog', 0],['Phobolog', 78],['Phobolog', 80],['Phobolog', 105],['Phobolog', 103],['Phobolog', 76],
+          ['Inventrix', 95],['Inventrix', 87],['Inventrix', 77],['Inventrix', 75],['Inventrix', 0],['Inventrix', 89],['Inventrix', 0],['Inventrix', 83],
+          ['Saturn Systems', 79],['Saturn Systems', 94],['Saturn Systems', 0],['Saturn Systems', 91],['Saturn Systems', 89],['Saturn Systems', 132],['Saturn Systems', 99],['Saturn Systems', 88],
+          ['Saturn Systems', 91],['Saturn Systems', 0],['Saturn Systems', 0],['Saturn Systems', 95],['Saturn Systems', 81],
+          ['Interplanetary', 102],['Interplanetary', 99],['Interplanetary', 97],['Interplanetary', 107],['Interplanetary', 0],['Interplanetary', 97]
+
         ];
 
+        generateHTML(games);
 
+        var losses = removeZeros(games);
         var sum = 0;
         for( var i = 1; i < games.length; i++ ){
           sum += parseInt(games[i][1]); //don't forget to add the base
         }
         var avg = Math.round(parseFloat(sum/(games.length-1)));
         div = document.getElementById("corporate_div")
-        var fails = div.querySelectorAll(".failed").length;
-        var winrate = Math.round(parseFloat(100*(games.length-1)/(games.length-1+fails)));
+        var winrate = Math.round(parseFloat(100*(games.length-1)/(games.length-1+losses)));
 
 
         document.getElementById("wins_corporate").innerHTML = games.length -1 + " <span style='font-size:20px;font-weight:bold'>&#x2713;</span>";
         document.getElementById("points_corporate").innerHTML = avg + " <span style='font-size:20px'>P</span>";
-        document.getElementById("losses_corporate").innerHTML = fails + " <span style='font-size:20px;'>&#x2717;</span>";
+        document.getElementById("losses_corporate").innerHTML = losses + " <span style='font-size:20px;'>&#x2717;</span>";
         document.getElementById("windrate_corporate").innerHTML = " " + winrate + " <span style='font-size:20px'>%</span>";
 
     var games = google.visualization.arrayToDataTable(games);
@@ -94,7 +95,7 @@ function histogramVenus () {
         ['Ecoline', 104],['Ecoline', 106],['Ecoline', 112],['Ecoline', 92],['Ecoline', 94],['Ecoline', 110],['Ecoline', 114],['Ecoline', 107],['Ecoline', 118],['Ecoline', 91],
         ['Helion', 82],['Helion', 87],['Helion', 123],['Helion', 95],['Helion', 92],['Helion', 95],['Helion', 92],['Helion', 113],
         ['Mining Guild', 79],['Mining Guild', 103],
-        ['Interplanetery', 99],
+        ['Interplanetary', 99],
         ['Inventrix', 87],['Inventrix', 89],['Inventrix', 103],['Inventrix', 92],['Inventrix', 95],['Inventrix', 96],
         ['Phobolog', 89],['Phobolog', 116],['Phobolog', 79],['Phobolog', 80],
         ['Tharsis Republic', 86],
@@ -158,7 +159,7 @@ function histogramPrelude () {
           ['Ecoline', 111],['Ecoline', 96],['Ecoline', 99],['Ecoline', 109],['Ecoline', 102],['Ecoline', 96],['Ecoline', 114],['Ecoline', 93],['Ecoline', 98],['Ecoline', 117],
           ['Helion', 96],['Helion', 92],['Helion', 85],['Helion', 87],['Helion', 101],['Helion', 98],
 
-          ['Interplanetery', 83],
+          ['Interplanetary', 83],
           ['Inventrix', 88],['Inventrix', 85],['Inventrix', 88],['Inventrix', 105],
           ['Phobolog', 110],['Phobolog', 96],['Phobolog', 100],['Phobolog', 73],['Phobolog', 101],['Phobolog', 107],['Phobolog', 87],['Phobolog', 97],
           ['Tharsis Republic', 80],['Tharsis Republic', 112],['Tharsis Republic', 89],
@@ -224,7 +225,7 @@ function histogramColonies () {
           ['Corporation', 'Score'],
 
           ['Credicor', 85],['Credicor', 104],['Credicor', 103],['Credicor', 105],
-          ['Interplanetery', 97],['Interplanetery', 99],['Interplanetery', 98],['Interplanetery', 114],
+          ['Interplanetary', 97],['Interplanetary', 99],['Interplanetary', 98],['Interplanetary', 114],
 
           ['UNMI', 90],['UNMI', 108],['UNMI', 101],
           ['Helion', 102],
@@ -245,7 +246,6 @@ function histogramColonies () {
 
           ['Stormcraft', 90],['Stormcraft', 113]
         ];
-
 
         var sum = 0;
         for( var i = 1; i < games.length; i++ ){
@@ -274,5 +274,26 @@ function addResultColours() {
     if (parseInt(divs[i].textContent) > 99) {divs[i].classList.add("background-gold")}
     if (parseInt(divs[i].textContent)  > 79 && parseInt(divs[i].textContent) < 100) {divs[i].classList.add("background-silver")}
     if (parseInt(divs[i].textContent) < 80) {divs[i].classList.add("background-bronze")}
+  }
+}
+
+function removeZeros(games) {
+  var losses = 0
+  for (i=0; i < games.length;i++ ) {
+    if (parseInt(games[i][1]) == 0) {
+      games.splice(i,1);
+      i--;
+      losses++;
+    }
+  }
+  return losses
+}
+
+function generateHTML(games) {
+  for (i=1; i < games.length; i++ ) {
+    var el = document.querySelector("div[title='"+games[ i][0]+"'] > div[class='empty']")
+    if(games[ i][1] > 0) {el.innerHTML = games[i][1]; el.classList.add("result");}
+    else {el.classList.add("failed");}
+    el.classList.remove("empty");
   }
 }
