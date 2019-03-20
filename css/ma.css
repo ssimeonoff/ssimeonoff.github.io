@@ -400,7 +400,7 @@ body {
 #slot-belly {
   background: #444;
   background: linear-gradient(to right, #222, #888, #222);
-  border-top: 20px solid #bbb;
+  border-top: 60px solid #bbb;
   border-left: 20px solid #999;
   border-right: 20px solid #666;
   border-bottom: 10px solid #777;
@@ -408,7 +408,7 @@ body {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   box-shadow: inset 0 0 0px 1px #222;
-  height: 375px;
+  height: 400px;
   margin: -1px auto;
   margin-bottom: 40px;
   top: 486px;
@@ -418,23 +418,29 @@ body {
   border-radius: 0 0 20px 20px;
 }
 
+#main-buttons-div {
+  position: absolute;
+  margin-top: -64px;
+  margin-left: 130px;
+}
+
 .button {
   display: inline-block;
   font-family: Prototype;
   text-decoration: none;
   text-align: center;
   width: 180px;
-  height: 56px;
-  line-height: 56px;
-  border-radius: 60px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 20px;
+  transform: perspective(500px) rotateX(45deg);
   border-top: 6px solid #bbb;
   border-left: 6px solid #bbb;
   border-right: 6px solid #666;
   border-bottom: 6px solid #666;
   background: linear-gradient(to bottom right, #fff, #bbb, #fff,#fff);
   margin-left: 30px;
-  margin-top: 55px;
-  box-shadow: 0 0 2px 1px black, inset 0 0 0px 1px #222;
+  box-shadow: 0 1px 1px 1px black, inset 0 2px 2px 1px #222;
   color: #222;
   font-size: 20px;
 }
@@ -463,13 +469,6 @@ body {
   font-size: 20px;
 }
 
-.button-circle {
-  height: 56px;
-  line-height: 56px;
-  margin-top: 20px;
-  border-radius: 60px;
-}
-
 .button2:active {
   transform: translate(0,1px);
 }
@@ -478,20 +477,46 @@ body {
   filter: brightness(110%);
 }
 
+.grib-button-exclusion {
+  display: grid;
+  position: absolute;
+  margin: 70px 0 20px 20px;
+  width: 600px;
+  grid-template-columns: 150px 150px;
+  grid-gap: 2px;
+}
+
+.button-exclusion {
+  font-family: Prototype;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  font-size: 12px;
+  border-top: 2px solid #bbb;
+  border-left: 2px solid #bbb;
+  border-right: 2px solid #666;
+  border-bottom: 2px solid #666;
+  background: linear-gradient(to bottom right, #fff, #bbb, #fff,#fff);
+  border-radius: 5px;
+  box-shadow: 0 0 2px 1px black;
+}
+
+
+
 #nozzle {
   position: absolute;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  width: 450px;
+  width: 400px;
   height: 25px;
   border-radius: 50px;
   border: 6px solid #444;
   border-bottom: 6px solid #888;
   border-right: 6px solid #888;
   background: black;
-  margin-left: 250px;
-  margin-top: 30px;
+  margin-left: 290px;
+  margin-top: 20px;
   box-shadow: 0 0 2px 1px black;
 }
 
@@ -505,7 +530,7 @@ body {
   padding: 20px;
   padding-bottom: 5px;
   min-height: 10px;
-  font-size: 18px;
+  font-size: 16px;
   width: 98%;
   background: linear-gradient(to bottom, #444 1%, #eee 5%);  margin-left: 5px;
   margin-top: 5px;
@@ -534,6 +559,7 @@ body {
   border-top:1px solid black;
   text-align: right;
   line-height: 30px;
+  font-size: 18px;
 }
 
 #total-sum {
@@ -542,6 +568,7 @@ body {
   border-top:1px solid black;
   text-align: center;
   line-height: 30px;
+  font-size: 18px;
 }
 
 #slot-display {

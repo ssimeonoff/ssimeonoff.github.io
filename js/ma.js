@@ -31,6 +31,7 @@
    [0,0,0,0,0,0,0,0,0,0,0,0,0,"",0,0,  0,0,0,3,0,0,6,0,0,0,0,0,0,0,0,0],
    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,"",0,  0,0,0,0,0,2,0,0,0,0,0,1,3,0,0,0],
    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"",  0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,5],
+
    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  "",0,0,0,0,0,0,7,7,0,8,0,0,0,0,0],
    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,"",0,0,0,0,0,0,0,0,0,2,0,0,0,0],
    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,"",0,0,0,0,0,0,1,0,0,0,0,0,0],
@@ -92,7 +93,7 @@ gauge(0,0);
                     combinationsText = "";
                     sumsText = "";
                     //generate the spins
-                    spinsArray = generateSpins();
+                    generateSpins();
 
                     //display the conflict SUM
                     setTimeout(function(){
@@ -375,17 +376,18 @@ function generateSpins() {
     spinsArray.push(spin[9]);
 
     //loop through the matrix interconnections
+    //sorting the array - crucial for pair checking with the matrix
+    sortedArray = spinsArray.sort(function(a, b){return a - b});
+
     for (i=0; i<9; i++) {
       for (j=i+1; j<10; j++) {
-        if (SYNERGIES[spinsArray[i]][spinsArray[j]] > 0) {
-          conflictSUM += SYNERGIES[spinsArray[i]][spinsArray[j]];
-          sumsText += SYNERGIES[spinsArray[i]][spinsArray[j]] + "<br>";
-          combinationsText += NAMES[spinsArray[i]] + "&nbsp; + &nbsp;" + NAMES[spinsArray[j]] + "<br>"; }
+        if (SYNERGIES[sortedArray[i]][sortedArray[j]] > 0) {
+          conflictSUM += SYNERGIES[sortedArray[i]][sortedArray[j]];
+          sumsText += SYNERGIES[sortedArray[i]][sortedArray[j]] + "<br>";
+          combinationsText += NAMES[sortedArray[i]] + "&nbsp; + &nbsp;" + NAMES[sortedArray[j]] + "<br>"; }
       }
     }
   }
-
-  return spinsArray.sort(function(a, b){return a - b});
 }
 
 function changeLimit (x) {
