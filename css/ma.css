@@ -225,6 +225,7 @@ body {
     top: -4px;
     width: 156px;
     z-index: 1;
+    filter: brightness(120%);
 }
 
 #wheel1, #wheel6 {
