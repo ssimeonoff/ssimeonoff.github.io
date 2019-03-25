@@ -1,5 +1,5 @@
 .layout2 {
-  width: 2000px;
+  width: 2100px;
   margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
@@ -10,69 +10,120 @@
   vertical-align: top;
 }
 
-
-.grid16 {
-  padding:2px;
-  padding-top: 3px;
+.grid-row {
   display: grid;
-  grid-template-columns: auto auto auto auto auto auto auto auto;
-  grid-gap:2px;
+  font-family: Prototype;
+  background: linear-gradient(to right,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
+  grid-template-columns: 450px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px;
+  width: 2043px;
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
   border-bottom: 2px solid rgb(137,137,137);
   border-right: 2px solid rgb(137,137,137);
 }
 
+.grid-row > div {
+  border-top: 2px solid rgb(221,221,221);
+  border-left: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
+}
+
+
+.grid2-mysolo {
+  display: grid;
+  grid-template-columns: 50px 400px;
+  height: 150px;
+}
+
+.grid-results {
+  display: grid;
+  grid-template-columns: 70px;
+}
+
+.grid-cell-corporation-mysolo {
+  text-align: center;
+  padding-right: 5px;
+  font-size: 15px;
+  width: 135px;
+  height: 50px;
+  padding-top: 5px;
+  line-height: 18px;
+  border-radius: 1px;
+  color:black;
+  font-weight: normal;
+  text-shadow: none;
+  transform: rotate(-90deg);
+  border-right: 2px solid rgb(221,221,221) !important;
+  border-left: 2px solid rgb(137,137,137) !important;
+  margin-left: -42px;
+  margin-top: 42px;
+}
+
+.chart-div-mysolo {
+  height: 150px;
+}
+
+.grid16 {
+  padding:2px;
+  padding-top: 4px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap:2px;
+  border-top: 2px solid rgb(221,221,221);
+  border-left: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
+  text-align: center;
+}
+
 .grid16 > div {
 
-  font-size: 16px;
-  height: 20px;
-  line-height: 20px;
-  width: 36px;
-  border-radius: 1px;
+  font-size: 14px;
+  height: 16px;
+  line-height: 16px;
+  width: 24px;
+  border-radius: 2px;
   text-shadow: 0 0 1px #222, 0 1px 1px #222;
 }
 
 .grid-cell-solo {
       text-align: center;
-      font-size: 18px;
+      font-size: 16px;
       color: white;
       text-shadow: 0 0px 1px black, 0 1px 1px black;
-      height: 32px;
-      line-height: 32px;
+      height: 20px;
+      line-height: 20px;
       border-radius: 1px;
-      border-top: 2px solid rgb(221,221,221);
-      border-left: 2px solid rgb(221,221,221);
-      border-bottom: 2px solid rgb(137,137,137);
-      border-right: 2px solid rgb(137,137,137);
 }
 
 .grid-cell-solo-title {
       text-align: center;
-      font-size: 22px;
+      font-size: 18px;
       color: white;
       text-shadow: 0 0 0 black, 0 1px 1px black;
-      height: 32px;
-      line-height: 32px;
+      height: 20px;
+      line-height: 20px;
       border-radius: 1px;
-      border-top: 2px solid rgb(221,221,221);
-      border-left: 2px solid rgb(221,221,221);
-      border-bottom: 2px solid rgb(137,137,137);
-      border-right: 2px solid rgb(137,137,137);
+      text-align: left;
+      padding-left: 10px;
 }
 
-.grid2 {
-  display: grid;
-  grid-template-columns: 140px auto ;
+.table-header {
+  height:119px;
+  padding:10px;
+  font-family: Prototype;
+  font-size: 30px;
+  color: #444;
+  letter-spacing: 1px;
 }
-
 
 .failed {
     color: #cc3333;
 }
 .failed::after {
   content: "\2717";
-  font-size: 20px !important;
+  font-size: 18px !important;
 }
 
 .background-gold {
@@ -89,3 +140,19 @@
   color: #aaa;
   background: #444;
 }
+
+.icon-mysolo:after {
+        position: absolute;
+        font-size: 11px;
+        line-height: 15px;
+        width: 16px;
+        height:16px;
+        text-align: center;
+        color: white;
+        border-radius: 50%;
+        box-shadow: 0 0 0 1px #bbb, 0 0 0 3px #444;
+        content: "";
+        background-size: 10px 10px !important;
+        background-position: bottom 4px right 3px !important;
+        background-repeat: no-repeat !important;
+  }

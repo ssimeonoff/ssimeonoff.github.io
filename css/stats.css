@@ -454,20 +454,20 @@
 }
 
 .grid-cell-corporation {
-      text-align: center;
-      padding-right: 5px;
-      font-size: 15px;
-      height: 45px;
-      padding-top: 5px;
-      line-height: 18px;
-      border-radius: 1px;
-      border-top: 2px solid rgb(221,221,221);
-      border-left: 2px solid rgb(221,221,221);
-      border-bottom: 2px solid rgb(137,137,137);
-      border-right: 2px solid rgb(137,137,137);
-      color:black;
-      font-weight: normal;
-      text-shadow: none;
+  text-align: center;
+  padding-right: 5px;
+  font-size: 15px;
+  height: 45px;
+  padding-top: 5px;
+  line-height: 18px;
+  border-radius: 1px;
+  border-top: 2px solid rgb(221,221,221);
+  border-left: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
+  color:black;
+  font-weight: normal;
+  text-shadow: none;
 }
 
 .corporations-font-size {
