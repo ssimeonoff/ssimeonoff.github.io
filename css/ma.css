@@ -478,21 +478,21 @@ body {
   filter: brightness(110%);
 }
 
-.grib-button-exclusion {
-  display: grid;
-  position: absolute;
-  margin: 70px 0 20px 20px;
-  width: 600px;
-  grid-template-columns: 150px 150px;
-  grid-gap: 2px;
-}
 
-.button-exclusion {
+.btn-exclude {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
   font-family: Prototype;
-  height: 25px;
+  position: absolute;
+  height: 55px;
+  width: 250px;
+  padding-left: 15px;
+  margin-top: 30px;
+  margin-left: 20px;
   line-height: 25px;
   text-align: center;
-  font-size: 12px;
+  font-size: 22px;
   border-top: 2px solid #bbb;
   border-left: 2px solid #bbb;
   border-right: 2px solid #666;

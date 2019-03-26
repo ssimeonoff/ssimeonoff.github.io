@@ -332,47 +332,57 @@ function generateSpins() {
   while(conflictSUM == 0 || conflictSUM > limit) {
     conflictSUM = 0;
     spinsArray = [];
+    exclusionsArray = [];
     combinationsText = "";
     sumsText = "";
+
+    //////// Adding exclusions //////////
+    exclusions = document.querySelectorAll("select");
+    for (i=0; i<exclusions.length; i++) {
+      if (exclusions[i].value != "label") {exclusionsArray.push(parseInt(exclusions[i].value))}
+    }
+    console.log(exclusionsArray)
     //////// Calculating the conflict SUM /////////////
 
     spin[0] = parseInt(Math.random() * 16);
+    while (spinsArray.indexOf(spin[0]) > -1 || exclusionsArray.indexOf(spin[0]) > -1) { spin[0] = parseInt(Math.random() * 16);}
     spinsArray.push(spin[0]);
 
     spin[1] = parseInt(Math.random() * 16);
-    while (spinsArray.indexOf(spin[1]) > -1) { spin[1] = parseInt(Math.random() * 16);}
+    while (spinsArray.indexOf(spin[1]) > -1 || exclusionsArray.indexOf(spin[1]) > -1) { spin[1] = parseInt(Math.random() * 16);}
     spinsArray.push(spin[1]);
 
     spin[2] = parseInt(Math.random() * 16);
-    while (spinsArray.indexOf(spin[2]) > -1) { spin[2] = parseInt(Math.random() * 16);}
+    while (spinsArray.indexOf(spin[2]) > -1 || exclusionsArray.indexOf(spin[2]) > -1) { spin[2] = parseInt(Math.random() * 16);}
     spinsArray.push(spin[2]);
 
     spin[3] = parseInt(Math.random() * 16);
-    while (spinsArray.indexOf(spin[3]) > -1) { spin[3] = parseInt(Math.random() * 16);}
+    while (spinsArray.indexOf(spin[3]) > -1 || exclusionsArray.indexOf(spin[3]) > -1) { spin[3] = parseInt(Math.random() * 16);}
     spinsArray.push(spin[3]);
 
     spin[4] = parseInt(Math.random() * 16);
-    while (spinsArray.indexOf(spin[4]) > -1) { spin[4] = parseInt(Math.random() * 16);}
+    while (spinsArray.indexOf(spin[4]) > -1 || exclusionsArray.indexOf(spin[4]) > -1) { spin[4] = parseInt(Math.random() * 16);}
     spinsArray.push(spin[4]);
 
     //adding offset of 16 for the awards
     spin[5] = parseInt(Math.random() * 16) + 16;
+    while (spinsArray.indexOf(spin[5]) > -1 || exclusionsArray.indexOf(spin[5]) > -1) { spin[5] = parseInt(Math.random() * 16) + 16;}
     spinsArray.push(spin[5]);
 
     spin[6] = parseInt(Math.random() * 16) + 16;
-    while (spinsArray.indexOf(spin[6]) > -1) { spin[6] = parseInt(Math.random() * 16) + 16;}
+    while (spinsArray.indexOf(spin[6]) > -1 || exclusionsArray.indexOf(spin[6]) > -1) { spin[6] = parseInt(Math.random() * 16) + 16;}
     spinsArray.push(spin[6]);
 
     spin[7] = parseInt(Math.random() * 16) + 16;
-    while (spinsArray.indexOf(spin[7]) > -1) { spin[7] = parseInt(Math.random() * 16) + 16;}
+    while (spinsArray.indexOf(spin[7]) > -1 || exclusionsArray.indexOf(spin[7]) > -1) { spin[7] = parseInt(Math.random() * 16) + 16;}
     spinsArray.push(spin[7]);
 
     spin[8] = parseInt(Math.random() * 16) + 16;
-    while (spinsArray.indexOf(spin[8]) > -1) { spin[8] = parseInt(Math.random() * 16) + 16;}
+    while (spinsArray.indexOf(spin[8]) > -1 || exclusionsArray.indexOf(spin[8]) > -1) { spin[8] = parseInt(Math.random() * 16) + 16;}
     spinsArray.push(spin[8]);
 
     spin[9] = parseInt(Math.random() * 16) + 16;
-    while (spinsArray.indexOf(spin[9]) > -1) { spin[9] = parseInt(Math.random() * 16) + 16;}
+    while (spinsArray.indexOf(spin[9]) > -1 || exclusionsArray.indexOf(spin[9]) > -1) { spin[9] = parseInt(Math.random() * 16) + 16;}
     spinsArray.push(spin[9]);
 
     //loop through the matrix interconnections
