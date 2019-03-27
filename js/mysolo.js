@@ -26,27 +26,28 @@ function histogramCorporate () {
     };
 
     //CORPORATE GAMES
-          var games = [
+        var games = [
           ['Corporation', 'Score'],
-
-          ['Mining Guild', 84],['Mining Guild', 92],['Mining Guild', 0],['Mining Guild', 85],['Mining Guild', 80],
-          ['Teractor', 96],['Teractor', 77],['Teractor', 102],['Teractor', 84],['Teractor', 122],['Teractor', 101],
-          ['Tharsis Republic', 108],['Tharsis Republic', 96],['Tharsis Republic', 94],
-          ['Thorgate', 101],['Thorgate', 91],['Thorgate', 102],['Thorgate', 104],
-          ['Phobolog', 104],['Phobolog', 106],['Phobolog', 0],['Phobolog', 70],['Phobolog', 0],['Phobolog', 78],['Phobolog', 80],['Phobolog', 105],['Phobolog', 103],['Phobolog', 76],
-          ['Inventrix', 95],['Inventrix', 87],['Inventrix', 77],['Inventrix', 75],['Inventrix', 0],['Inventrix', 89],['Inventrix', 0],['Inventrix', 83],
-          ['Saturn Systems', 79],['Saturn Systems', 94],['Saturn Systems', 0],['Saturn Systems', 91],['Saturn Systems', 89],['Saturn Systems', 132],['Saturn Systems', 99],['Saturn Systems', 88],
-          ['Saturn Systems', 91],['Saturn Systems', 0],['Saturn Systems', 0],['Saturn Systems', 95],['Saturn Systems', 81]
         ];
 
-        pushGamesData(games, "Credicor", [108,94,87,89,0,95,82,89,107,106,106,113,110]);
-        pushGamesData(games, "Ecoline", [88,91,99,104,108,107,77,101,106,102,94,81,99,99,97,91]);
-        pushGamesData(games, "Helion", [97,101,94,81,91,104,98,92,96,95,96,94,89,91,0,82]);
+        data = [
+          ["Credicor", 108,94,87,89,0,95,82,89,107,106,106,113,110],
+          ["Ecoline", 88,91,99,104,108,107,77,101,106,102,94,81,99,99,97,91],
+          ["Helion", 97,101,94,81,91,104,98,92,96,95,96,94,89,91,0,82],
+          ["Mining Guild", 84,92,0,85,80],
+          ["Teractor", 96,77,102,84,122,101],
+          ["Tharsis Republic", 108,96,94],
+          ["Thorgate", 101,91,102,104],
+          ["Phobolog", 104,106,0,70,0,78,80,105,103,76],
+          ["Inventrix", 95,87,77,75,0,89,0,83],
+          ["Saturn Systems", 79,94,0,91,89,132,99,88,91,0,0,95,81],
+          ["Interplanetary", 102,99,97,107,0,97]
+        ];
 
-
-        pushGamesData(games, "Interplanetary", [102,99,97,107,0,97]);
-
+        pushGamesData(games, data)
         generateHTML("corporate_div",games);
+        div = document.getElementById("corporate_div")
+
 
         var losses = removeZeros(games);
         var sum = 0;
@@ -54,17 +55,16 @@ function histogramCorporate () {
           sum += parseInt(games[i][1]); //don't forget to add the base
         }
         var avg = Math.round(parseFloat(sum/(games.length-1)));
-        div = document.getElementById("corporate_div")
         var winrate = Math.round(parseFloat(100*(games.length-1)/(games.length-1+losses)));
 
 
-        document.getElementById("wins_corporate").innerHTML = games.length -1 + " <span style='font-size:20px;font-weight:bold'>&#x2713;</span>";
-        document.getElementById("points_corporate").innerHTML = avg + " <span style='font-size:14px'>P</span>";
-        document.getElementById("losses_corporate").innerHTML = losses + " <span style='font-size:20px;'>&#x2717;</span>";
-        document.getElementById("winrate_corporate").innerHTML = " " + winrate + " <span style='font-size:14px'>%</span>";
+        div.querySelector(".wins-mysolo").innerHTML = games.length -1 + " <span style='font-size:20px;font-weight:bold'>&#x2713;</span>";
+        div.querySelector(".points-mysolo").innerHTML = avg + " <span style='font-size:14px'>P</span>";
+        div.querySelector(".losses-mysolo").innerHTML = losses + " <span style='font-size:20px;'>&#x2717;</span>";
+        div.querySelector(".winrate-mysolo").innerHTML = " " + winrate + " <span style='font-size:14px'>%</span>";
 
     var games = google.visualization.arrayToDataTable(games);
-    var chart = new google.visualization.Histogram(document.getElementById('histogram_corporate'));
+    var chart = new google.visualization.Histogram(div.querySelector(".chart-div-mysolo"));
     chart.draw(games, options);
   }
 }
@@ -316,8 +316,10 @@ function generateHTML(expansions,games) {
   }
 }
 
-function pushGamesData (main_arr, corporation, data_arr) {
-  for (i=0; i<data_arr.length; i++) {
-    main_arr.push([corporation, data_arr[i]]);
+function pushGamesData (main_arr, data_arr) {
+  for (i=0; i< data_arr.length; i++) {
+    for (j=1; j <data_arr[i].length; j++) {
+      main_arr.push([data_arr[i][0],data_arr[i][j]])
+    }
   }
 }
