@@ -1,53 +1,72 @@
-histogramCorporate();
-histogramVenus();
 histogramPrelude();
 histogramColonies();
 
+data_ce = [
+  ["Credicor", 108,94,87,89,0,95,82,89,107,106,106,113,110],
+  ["Ecoline", 88,91,99,104,108,107,77,101,106,102,94,81,99,99,97,91],
+  ["Helion", 97,101,94,81,91,104,98,92,96,95,96,94,89,91,0,82],
+  ["Mining Guild", 84,92,0,85,80],
+  ["Interplanetary", 102,99,97,107,0,97],
+  ["Inventrix", 95,87,77,75,0,89,0,83],
+  ["Phobolog", 104,106,0,70,0,78,80,105,103,76],
+  ["Tharsis Republic", 108,96,94],
+  ["Thorgate", 101,91,102,104],
+  ["UNMI"],
+  ["Teractor", 96,77,102,84,122,101],
+  ["Saturn Systems", 79,94,0,91,89,132,99,88,91,0,0,95,81]
+
+];
+histogram("div_ce", data_ce);
+
+data_ce_vn = [
+  ["Credicor", 0,77,112,97,0,94,108,103,99,92,0,92],
+  ["Ecoline", 104,106,112,92,94,110,114,107,118,91],
+  ["Helion", 82,87,123,0,95,92,95,92,113],
+  ["Mining Guild", 79,0,103],
+  ["Interplanetary", 99],
+  ["Inventrix", 0,87,89,103,92,95,96,0],
+  ["Phobolog", 89,116,0,0,79,80],
+  ["Tharsis Republic", 86,0,0],
+  ["Thorgate", 96,0,0,85,0,75,85,0,82],
+  ["UNMI"],
+  ["Teractor", 90,93,73,75,86,90,100,105,105],
+  ["Saturn Systems", 0,108],
+  ['Aphrodite', 81,110,93,79,80,77,96,100,112],
+  ['Celestic', 99,106,111],
+  ['Manutech', 72,104,98,95,71],
+  ['Viron', 105,94,96],
+  ['MSI', 93,106,101,94,104,104,108,91]
+];
+histogram("div_ce_vn", data_ce_vn);
 
 
+function histogram (div_id, data) {
+  
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
 
-function histogramCorporate () {
-  google.charts.load("current", {packages:["corechart"]});
-  google.charts.setOnLoadCallback(drawChart);
-  function drawChart() {
+      var options = {
+          title: '',
+          titleTextStyle: {fontSize:20, color:"#444444"},
+          legend: { position: 'none' },
+          fontSize: 12,
+          backgroundColor: "transparent",
+          vAxis: { gridlines: { count: 1}, maxValue:20 },
+          hAxis: {textStyle : {fontSize: 10, fontName: 'Prototype'}},
+          bar: {gap: 1},
+          chartArea:{left:0,bottom:20,top:0,width:380},
+          colors: ['#444444','#888888'],
+          histogram: {bucketSize: 5, minValue: 75, maxValue: 135}
+        };
 
-  var options = {
-      title: '',
-      titleTextStyle: {fontSize:20, color:"#444444"},
-      legend: { position: 'none' },
-      fontSize: 12,
-      backgroundColor: "transparent",
-      vAxis: { gridlines: { count: 1}, maxValue:20 },
-      hAxis: {textStyle : {fontSize: 10, fontName: 'Prototype'}},
-      bar: {gap: 1},
-      chartArea:{left:0,bottom:20,top:0,width:380},
-      colors: ['#444444','#888888'],
-      histogram: {bucketSize: 5, minValue: 75, maxValue: 135}
-    };
-
-    //CORPORATE GAMES
         var games = [
           ['Corporation', 'Score'],
         ];
 
-        data = [
-          ["Credicor", 108,94,87,89,0,95,82,89,107,106,106,113,110],
-          ["Ecoline", 88,91,99,104,108,107,77,101,106,102,94,81,99,99,97,91],
-          ["Helion", 97,101,94,81,91,104,98,92,96,95,96,94,89,91,0,82],
-          ["Mining Guild", 84,92,0,85,80],
-          ["Teractor", 96,77,102,84,122,101],
-          ["Tharsis Republic", 108,96,94],
-          ["Thorgate", 101,91,102,104],
-          ["Phobolog", 104,106,0,70,0,78,80,105,103,76],
-          ["Inventrix", 95,87,77,75,0,89,0,83],
-          ["Saturn Systems", 79,94,0,91,89,132,99,88,91,0,0,95,81],
-          ["Interplanetary", 102,99,97,107,0,97]
-        ];
-
         pushGamesData(games, data)
-        generateHTML("corporate_div",games);
-        div = document.getElementById("corporate_div")
-
+        generateHTML(div_id, games);
+        div = document.getElementById(div_id)
 
         var losses = removeZeros(games);
         var sum = 0;
@@ -57,7 +76,6 @@ function histogramCorporate () {
         var avg = Math.round(parseFloat(sum/(games.length-1)));
         var winrate = Math.round(parseFloat(100*(games.length-1)/(games.length-1+losses)));
 
-
         div.querySelector(".wins-mysolo").innerHTML = games.length -1 + " <span style='font-size:20px;font-weight:bold'>&#x2713;</span>";
         div.querySelector(".points-mysolo").innerHTML = avg + " <span style='font-size:14px'>P</span>";
         div.querySelector(".losses-mysolo").innerHTML = losses + " <span style='font-size:20px;'>&#x2717;</span>";
@@ -65,71 +83,6 @@ function histogramCorporate () {
 
     var games = google.visualization.arrayToDataTable(games);
     var chart = new google.visualization.Histogram(div.querySelector(".chart-div-mysolo"));
-    chart.draw(games, options);
-  }
-}
-
-function histogramVenus () {
-  google.charts.load("current", {packages:["corechart"]});
-  google.charts.setOnLoadCallback(drawChart);
-  function drawChart() {
-
-  var options = {
-      title: '',
-      titleTextStyle: {fontSize:20, color:"#444444"},
-      legend: { position: 'none' },
-      fontSize: 12,
-      backgroundColor: "transparent",
-      vAxis: { gridlines: { count: 1}, maxValue:20 },
-      hAxis: {textStyle : {fontSize: 10, fontName: 'Prototype'}},
-      bar: {gap: 1},
-      chartArea:{left:0,bottom:20,top:0,width:380},
-      colors: ['#444444','#888888'],
-      histogram: {bucketSize: 5, minValue: 70, maxValue: 135}
-    };
-
-    //VENUS GAMES
-    var games = [
-        ['Corporation', 'Score'],
-
-        ['Credicor', 0], ['Credicor', 77],['Credicor', 112],['Credicor', 97],['Credicor', 0],['Credicor', 94],['Credicor', 108],['Credicor', 103],['Credicor', 99],['Credicor', 92],['Credicor', 0],['Credicor', 92],
-        ['Ecoline', 104],['Ecoline', 106],['Ecoline', 112],['Ecoline', 92],['Ecoline', 94],['Ecoline', 110],['Ecoline', 114],['Ecoline', 107],['Ecoline', 118],['Ecoline', 91],
-        ['Helion', 82],['Helion', 87],['Helion', 123],['Helion', 0],['Helion', 95],['Helion', 92],['Helion', 95],['Helion', 92],['Helion', 113],
-        ['Mining Guild', 79],['Mining Guild', 0],['Mining Guild', 103],
-        ['Interplanetary', 99],
-        ['Inventrix', 0], ['Inventrix', 87],['Inventrix', 89],['Inventrix', 103],['Inventrix', 92],['Inventrix', 95],['Inventrix', 96],['Inventrix', 0],
-        ['Phobolog', 89],['Phobolog', 116],['Phobolog', 0],['Phobolog', 0],['Phobolog', 79],['Phobolog', 80],
-        ['Tharsis Republic', 86],['Tharsis Republic', 0],['Tharsis Republic', 0],
-        ['Thorgate', 96],['Thorgate', 0],['Thorgate', 0],['Thorgate', 85],['Thorgate', 0],['Thorgate', 75],['Thorgate', 85],['Thorgate', 0],['Thorgate', 82],
-        ['Teractor', 90],['Teractor', 93],['Teractor', 73],['Teractor', 75],['Teractor', 86],['Teractor', 90],['Teractor', 100],['Teractor', 105],['Teractor', 105],
-        ['Saturn Systems', 0],['Saturn Systems', 108],
-        ['Aphrodite', 81],['Aphrodite', 110],['Aphrodite', 93],['Aphrodite', 79],['Aphrodite', 80],['Aphrodite', 77],['Aphrodite', 96],['Aphrodite', 100],['Aphrodite', 112],
-        ['Celestic', 99],['Celestic', 106], ['Celestic', 111],
-        ['Manutech', 72],['Manutech', 104],['Manutech', 98],['Manutech', 95],['Manutech', 71],
-        ['Viron', 105],['Viron', 94],['Viron', 96],
-        ['MSI', 93],['MSI', 106],['MSI', 101],['MSI', 94],['MSI', 104],['MSI', 104],['MSI', 108],['MSI', 91],
-
-      ];
-
-
-      generateHTML("venus_div",games);
-
-      var losses = removeZeros(games);
-      var sum = 0;
-      for( var i = 1; i < games.length; i++ ){
-        sum += parseInt(games[i][1]); //don't forget to add the base
-      }
-      var avg = Math.round(parseFloat(sum/(games.length-1)));
-      var winrate = Math.round(parseFloat(100*(games.length-1)/(games.length-1+losses)));
-
-
-      document.getElementById("wins_venus").innerHTML = games.length -1 + " <span style='font-size:20px;font-weight:bold'>&#x2713;</span>";
-      document.getElementById("points_venus").innerHTML = avg + " <span style='font-size:14px'>P</span>";
-      document.getElementById("losses_venus").innerHTML = losses + " <span style='font-size:20px;'>&#x2717;</span>";
-      document.getElementById("winrate_venus").innerHTML = " " + winrate + " <span style='font-size:14px'>%</span>";
-
-    var games = google.visualization.arrayToDataTable(games);
-    var chart = new google.visualization.Histogram(document.getElementById('histogram_venus'));
     chart.draw(games, options);
   }
 }
