@@ -159,3 +159,13 @@
         background-position: bottom 4px right 3px !important;
         background-repeat: no-repeat !important;
   }
+
+.icon-mode {
+  background: #444;
+  border-radius: 20px;
+  width: 50px;
+  height: 17px;
+  line-height: 16px;
+  margin-top: -2px;
+  border: 2px solid #eee;
+}
