@@ -101,12 +101,13 @@
       text-align: center;
       font-size: 18px;
       color: white;
-      text-shadow: 0 0 0 black, 0 1px 1px black;
+      text-shadow: 0 0 1px black;
+      filter: drop-shadow(0 0 5px #ccc);
       height: 20px;
       line-height: 20px;
       border-radius: 1px;
       text-align: left;
-      padding-left: 10px;
+      padding-left: 8px;
 }
 
 .table-header {
@@ -150,7 +151,7 @@
         text-align: center;
         color: white;
         border-radius: 50%;
-        box-shadow: 0 0 0 1px #bbb, 0 0 0 3px #444;
+        box-shadow: 0 0 0 2px #eee;
         content: "";
         background-size: 10px 10px !important;
         background-position: bottom 4px right 3px !important;
