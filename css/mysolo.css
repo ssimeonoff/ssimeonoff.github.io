@@ -111,12 +111,14 @@
 }
 
 .table-header {
-  height:119px;
+  height:114px;
   padding:10px;
+  padding-top: 15px;
+  padding-left: 25px;
   font-family: Prototype;
   font-size: 30px;
   color: #444;
-  letter-spacing: 1px;
+  letter-spacing: 5px;
 }
 
 .failed {
