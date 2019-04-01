@@ -14,8 +14,8 @@
   display: grid;
   font-family: Prototype;
   background: linear-gradient(to right,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
-  grid-template-columns: 450px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px;
-  width: 2043px;
+  grid-template-columns: 470px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px;
+  width: 2063px;
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
   border-bottom: 2px solid rgb(137,137,137);
@@ -38,7 +38,7 @@
 
 .grid-results {
   display: grid;
-  grid-template-columns: 70px;
+  grid-template-columns: 50px 50px;
 }
 
 .grid-cell-corporation-mysolo {
@@ -62,6 +62,7 @@
 
 .chart-div-mysolo {
   height: 150px;
+  margin-left: 20px;
 }
 
 .grid16 {
@@ -99,7 +100,7 @@
 
 .grid-cell-solo-title {
       text-align: center;
-      font-size: 18px;
+      font-size: 16px;
       color: white;
       text-shadow: 0 0 1px black;
       filter: drop-shadow(0 0 5px #ccc);
@@ -168,4 +169,20 @@
   line-height: 16px;
   margin-top: -2px;
   border: 2px solid #eee;
+}
+
+.ribbon {
+  width: 100px;
+  height: 15px;
+  line-height: 15px;
+  background: #cc3333;
+  font-size: 12px;
+  margin-top: 2px;
+  border-radius: 1px 5px 5px 1px;
+  border: 2px solid #ccc;
+  border-left: none;
+  box-shadow:  0 0px 2px #444, 0 2px 2px #444;
+  margin-left: -4px;
+  color: #eee;
+  text-shadow: 0 0 3px #222;
 }
