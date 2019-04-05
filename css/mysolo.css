@@ -22,7 +22,7 @@
   border-right: 2px solid rgb(137,137,137);
 }
 
-.grid-row > div {
+.grid-row > div, .grid-values > div{
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
   border-bottom: 2px solid rgb(137,137,137);
@@ -38,8 +38,28 @@
 
 .grid-results {
   display: grid;
-  grid-template-columns: 50px 50px;
+  grid-template-columns: 120px;
 }
+
+.grid-expansions {
+  display: grid;
+  grid-template-columns: 120px;
+}
+
+.grid-expansions > div {
+  border-top: 2px solid rgb(221,221,221);
+  border-left: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
+  height: 20px;
+  font-size: 13px;
+}
+
+.grid-values {
+  display: grid;
+  grid-template-columns: 60px 60px;
+}
+
 
 .grid-cell-corporation-mysolo {
   text-align: center;
@@ -104,10 +124,10 @@
       color: white;
       text-shadow: 0 0 1px black;
       filter: drop-shadow(0 0 5px #ccc);
-      height: 20px;
-      line-height: 20px;
+      height: 23px;
+      line-height: 23px;
       border-radius: 1px;
-      text-align: left;
+      text-align: center;
       padding-left: 8px;
 }
 

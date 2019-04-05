@@ -108,7 +108,7 @@ function histogram (div_id, data) {
       vAxis: { gridlines: { count: 1}, maxValue:20 },
       hAxis: {textStyle : {fontSize: 10, fontName: 'Prototype'}},
       bar: {gap: 1},
-      chartArea:{left:0,bottom:20,top:0,width:380},
+      chartArea:{left:0,bottom:26,top:0,width:380},
       colors: ['#444444','#888888'],
       histogram: {bucketSize: 5, minValue: 75, maxValue: 135}
     };
