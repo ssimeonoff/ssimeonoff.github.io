@@ -14,8 +14,8 @@
   display: grid;
   font-family: Prototype;
   background: linear-gradient(to right,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
-  grid-template-columns: 470px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px;
-  width: 2063px;
+  grid-template-columns: 500px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px;
+  width: 2093px;
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
   border-bottom: 2px solid rgb(137,137,137);
@@ -32,7 +32,7 @@
 
 .grid2-mysolo {
   display: grid;
-  grid-template-columns: 50px 400px;
+  grid-template-columns: 85px 400px;
   height: 150px;
 }
 
