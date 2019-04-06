@@ -71,6 +71,7 @@ data_ce_vn_pr_co = [
   ['Thorgate'],
   ['UNMI', 90,108,101],
   ['Teractor'],
+  ['Saturn Systems'],
   ['Celestic', 80,99,0,106,0],
   ['Manutech', 97,0],
   ['MSI', 95,99,97],
@@ -81,16 +82,38 @@ data_ce_vn_pr_co = [
   ['Valley Trust', 90,107,110],
   ['Vitor', 91],
   ['Aridor', 114,116,110],
+  ['Arklight'],
   ['Polyphemos', 99,80,100],
   ['Poseidon', 87,108],
-  ['Polyphemos'],
   ['Stormcraft', 90,113]
+];
+
+data_ce_co = [
+  ['Credicor', 122,90,126,110,75,102,121,0,0],
+  ['Ecoline', 114,106,94,111,100,129,82,104],
+  ['Helion'],
+  ['Mining Guild', 122,96,98],
+  ['Interplanetary', 110,112],
+  ['Inventrix', 113,0],
+  ['Phobolog', 81,111,102,113,120,82,110,105],
+  ['Tharsis Republic', 85],
+  ['Thorgate', 93,98,101,109,107,100,111,96,101,96,96],
+  ['UNMI', 86,95],
+  ['Teractor', 104,0,103,100,0],
+  ['Saturn Systems', 100,96,106,108,0,103,132,86],
+  ['Aridor', 92,129,114,113,139,106],
+  ['Arklight',99,107],
+  ['Polyphemos', 124,129,105,97,102,111,112,89,109],
+  ['Poseidon', 85,82,112,106,82,127,0,97,95,144,102,101,112,106],
+  ['Stormcraft', 96,79,139,102,101,129,104,91,96,108]
 ];
 
 histogram("div_ce", data_ce);
 histogram("div_ce_vn", data_ce_vn);
 histogram("div_ce_vn_pr", data_ce_vn_pr);
 histogram("div_ce_vn_pr_co", data_ce_vn_pr_co);
+histogram("div_ce_co", data_ce_co);
+
 
 /////////////////////////////////////////////////////
 function histogram (div_id, data) {
@@ -106,11 +129,11 @@ function histogram (div_id, data) {
       fontSize: 12,
       backgroundColor: "transparent",
       vAxis: { gridlines: { count: 1}, maxValue:20 },
-      hAxis: {textStyle : {fontSize: 10, fontName: 'Prototype'}},
+      hAxis: {textStyle : {fontSize: 8, fontName: 'Prototype'}},
       bar: {gap: 1},
       chartArea:{left:0,bottom:26,top:0,width:380},
       colors: ['#444444','#888888'],
-      histogram: {bucketSize: 5, minValue: 75, maxValue: 135}
+      histogram: {bucketSize: 5, minValue: 75, maxValue: 145}
     };
 
     var games = [
