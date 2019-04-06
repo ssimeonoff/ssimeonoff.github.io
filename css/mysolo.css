@@ -14,15 +14,19 @@
   display: grid;
   font-family: Prototype;
   background: linear-gradient(to right,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
-  grid-template-columns: 500px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px;
-  width: 2093px;
+  grid-template-columns: 530px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px;
+  width: 2123px;
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
   border-bottom: 2px solid rgb(137,137,137);
   border-right: 2px solid rgb(137,137,137);
 }
 
-.grid-row > div, .grid-values > div{
+.grid-row2 {
+  grid-template-columns: 120px 410px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px;
+}
+
+.grid-row > div, .grid-values > div, .grid-expansions > div {
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
   border-bottom: 2px solid rgb(137,137,137);
@@ -39,6 +43,7 @@
 .grid-results {
   display: grid;
   grid-template-columns: 120px;
+  border: none !important;
 }
 
 .grid-expansions {
@@ -47,10 +52,6 @@
 }
 
 .grid-expansions > div {
-  border-top: 2px solid rgb(221,221,221);
-  border-left: 2px solid rgb(221,221,221);
-  border-bottom: 2px solid rgb(137,137,137);
-  border-right: 2px solid rgb(137,137,137);
   height: 20px;
   font-size: 13px;
 }
@@ -82,7 +83,7 @@
 
 .chart-div-mysolo {
   height: 150px;
-  margin-left: 20px;
+  padding-left: 10px;
 }
 
 .grid16 {
@@ -105,15 +106,13 @@
   line-height: 16px;
   width: 24px;
   border-radius: 2px;
-  text-shadow: 0 0 1px #222, 0 1px 1px #222;
+  text-shadow: 0 0 1px black, 0 1px 1px black;
 }
 
 .grid-cell-solo {
       text-align: center;
-      font-size: 16px;
       color: white;
       text-shadow: 0 0px 1px black, 0 1px 1px black;
-      height: 20px;
       line-height: 20px;
       border-radius: 1px;
 }
@@ -122,10 +121,9 @@
       text-align: center;
       font-size: 16px;
       color: white;
-      text-shadow: 0 0 1px black;
-      filter: drop-shadow(0 0 5px #ccc);
-      height: 23px;
-      line-height: 23px;
+      text-shadow: 0 0px 1px black, 0 1px 1px black;
+      height: 25px;
+      line-height: 25px;
       border-radius: 1px;
       text-align: center;
       padding-left: 8px;

@@ -972,6 +972,7 @@ function pushHistory() {
     scoresSections = gameSections[i].querySelectorAll(".history-section-score");
     var corporationsArray =  games[games.length-1-i]["corporations"];
     var scoresArray = games[games.length-1-i]["scores"];
+
     if (scoresArray == undefined) {scoresArray = [];}
     var winnerIndex = indexOfMax(scoresArray);
     var winningScore = scoresArray[winnerIndex];
