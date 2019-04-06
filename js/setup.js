@@ -50,7 +50,7 @@ function generateHand() {
 
 function displayCards() {
 
-  var url = "https://ssimeonoff.github.io/";
+  var url = "https://ssimeonoff.github.io/cards-list";
 
   titles_corporations = "";
   titles_projects = "";

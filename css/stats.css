@@ -287,22 +287,6 @@
   margin-left: 232px;
 }
 
-.chart-div-solo {
-  border-top: 2px solid rgb(221,221,221);
-  border-left: 2px solid rgb(221,221,221);
-  border-bottom: 2px solid rgb(137,137,137);
-  border-right: 2px solid rgb(137,137,137);
-  height: 426px;
-}
-
-.chart-div-solo2 {
-  height:180px;
-  width: 220px;
-  position: absolute;
-  margin-top: -400px;
-  margin-left: 230px;
-}
-
 .generalStats2 {
     display: grid;
     grid-template-columns: 140px 160px 160px;

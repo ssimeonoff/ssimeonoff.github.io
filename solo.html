@@ -147,6 +147,19 @@
 
       </form>
       </div>
+
+      <div class="chartStats">
+        <div class="grid-cell grid-corporations-title" style="font-size:18px"> <div>WINS/LOSSES/SCORES DISTRIBUTION</div></div>
+        <div class="grid4">
+          <div id="wins" class="grid-cell-solo"></div>
+          <div id="losses" class="grid-cell-solo" style="color:#661919"></div>
+          <div id="winrate" class="grid-cell-solo"></div>
+          <div id="average" class="grid-cell-solo"></div>
+        </div>
+        <div><div class="chart-div-solo" id="histogram"></div><div class="chart-div-solo2" id="histogram-losses"></div></div>
+        <div></div>
+      </div>
+
     </div>
 
     <div class="column">
@@ -159,7 +172,7 @@
             <img src="images/file.png" width="26" height="26" style="margin-top:3px;">
           </div>
         </div>
-        <div class="filters-div" style="height: 210px;">
+        <div class="filters-div" style="height: 258px;">
 
           <button disabled id="mygames" class="button btn-mygames-solo" onclick="filterFunction(id)" title="filter my games"><div>MY GAMES ONLY</div></button>
           <br>
@@ -675,22 +688,6 @@
         </div>
 
       </div>
-    </div>
-  </div>
-
-  <div class="column">
-
-    <div class="chartStats">
-      <div class="grid-cell grid-corporations-title" style="font-size:18px"> <div>WINS/LOSSES/SCORES DISTRIBUTION</div></div>
-      <div class="grid4">
-        <div id="wins" class="grid-cell-solo"></div>
-        <div id="losses" class="grid-cell-solo" style="color:#661919"></div>
-        <div id="winrate" class="grid-cell-solo"></div>
-        <div id="average" class="grid-cell-solo"></div>
-      </div>
-      <div><div class="chart-div-solo" id="histogram"></div><div class="chart-div-solo2" id="histogram-losses"></div></div>
-      <div></div>
-
     </div>
   </div>
 
