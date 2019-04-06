@@ -264,7 +264,8 @@ function generateGameStats (players, corporationName) {
   for (i = 0; i < totalGames; i++) {
     //checking if that corporation is the winner
     var corpsArray = playedGames[i]["corporations"];
-    var scoresArray = playedGames[i]["scores"];
+    try {var scoresArray = playedGames[i]["scores"];}
+    catch (err) {scoresArray = []}
 
     corpIndex = corpsArray.indexOf(corporationName); //find the corporation index
     //findind the max score
@@ -824,7 +825,9 @@ function generateScoresArray (players) {
   if (btnMyGames.length == 1 ) {
     for (i = 0; i < gamesPerPlayers.length; i++) {
       try {var position = gamesPerPlayers[i]["rank"]} catch(er) {}
-      var scoresArray = gamesPerPlayers[i]["scores"];
+      try {var scoresArray = gamesPerPlayers[i]["scores"];}catch(err) {}
+      if (scoresArray == undefined) {scoresArray = [];}
+
       var corporationsArray = gamesPerPlayers[i]["corporations"];
       //['Ecoline', 88]
       var arr = [corporationsArray[position], parseInt(scoresArray[position])];
@@ -835,7 +838,8 @@ function generateScoresArray (players) {
     }
   } else {
     for (i = 0; i < gamesPerPlayers.length; i++) {
-      var scoresArray = gamesPerPlayers[i]["scores"];
+      try {var scoresArray = gamesPerPlayers[i]["scores"];} catch(err) {}
+      if (scoresArray == undefined) {scoresArray = [];}
       var corporationsArray = gamesPerPlayers[i]["corporations"];
       for (j = 0; j < scoresArray.length; j++) {
         //['Ecoline', 88]
@@ -968,6 +972,7 @@ function pushHistory() {
     scoresSections = gameSections[i].querySelectorAll(".history-section-score");
     var corporationsArray =  games[games.length-1-i]["corporations"];
     var scoresArray = games[games.length-1-i]["scores"];
+    if (scoresArray == undefined) {scoresArray = [];}
     var winnerIndex = indexOfMax(scoresArray);
     var winningScore = scoresArray[winnerIndex];
 
