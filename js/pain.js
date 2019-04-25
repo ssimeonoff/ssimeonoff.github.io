@@ -16,7 +16,10 @@ PAIN_DESCRIPTION = ['"I have no pain."',
 
 
 function painDescription() {
-  document.getElementById("text").innerHTML = PAIN_VALUE[document.getElementById("pain-input").value];
-  document.getElementById("text-description").innerHTML = PAIN_DESCRIPTION[document.getElementById("pain-input").value];
+  document.getElementById("text").innerHTML = PAIN_VALUE[Math.round(document.getElementById("pain-input").value/100)];
+  document.getElementById("text-description").innerHTML = PAIN_DESCRIPTION[Math.round(document.getElementById("pain-input").value/100)];
+}
 
+function adjustThumb() {
+  document.getElementById("pain-input").value = Math.round(document.getElementById("pain-input").value/100)*100;
 }
