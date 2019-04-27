@@ -830,7 +830,7 @@ function generateScoresArray (players) {
 
       var corporationsArray = gamesPerPlayers[i]["corporations"];
       //['Ecoline', 88]
-      var arr = [corporationsArray[position], parseInt(scoresArray[position])];
+      var arr = [corporationsArray[parseInt(position)], parseInt(scoresArray[parseInt(position)])];
       scores.push(arr);
       //average scores calculation for the chart headers
       totalGames++;
