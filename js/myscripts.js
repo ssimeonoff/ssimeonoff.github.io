@@ -56,6 +56,7 @@ function parseURLParams(url) {
     cards = query.replace(/\#/g, " #").toUpperCase().split(" ");
     if (query === url || query === "") return "ALL";
     return cards;
+    console.log(cards);
 }
 
 ////////////////////// Display only pointed cards ///////////////////
