@@ -19,10 +19,10 @@
         // tosUrl and privacyPolicyUrl accept either url string or a callback
         // function.
         // Terms of service url/callback.
-        tosUrl: '<your-tos-url>',
+        tosUrl: 'https://firebase.google.com/support/privacy/',
         // Privacy policy url/callback.
         privacyPolicyUrl: function() {
-          window.location.assign('<your-privacy-policy-url>');
+          window.location.assign('https://firebase.google.com/support/privacy/');
         }
       };
 

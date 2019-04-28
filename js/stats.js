@@ -36,6 +36,8 @@ firebase.auth().onAuthStateChanged(function(user) {
       console.log("logged")
       document.getElementById("title-auth").innerHTML = user.displayName + " - " + user.email
       document.getElementById("mygames").disabled = false;
+      document.getElementById("mygames-group").disabled = false;
+
     } else {
       // No user is signed in.
       console.log("not logged")
@@ -58,15 +60,22 @@ function snapshotToArray(snapshot) {
     return returnArr;
 };
 
-
-function filterFunction(id) {
-  // getting the constant GAMES_ALL
-  // filter games from it and return/create new array "games"
-  games = GAMES_ALL;
-
+function toggleButton(id) {
   //toggling active buttons state
   clickedElementID = document.getElementById(id);
   if (clickedElementID != null) {clickedElementID.classList.toggle("active");}
+}
+
+function toggleMyGamesButtons (id) {
+  if (id == "mygames") {document.getElementById("mygames-group").classList.remove("active");}
+  if (id == "mygames-group") {document.getElementById("mygames").classList.remove("active");}
+
+}
+
+function filterFunction() {
+  // getting the constant GAMES_ALL
+  // filter games from it and return/create new array "games"
+  games = GAMES_ALL;
 
   //filtering by Maps
   btnMap = document.querySelectorAll(".btn-map.active");
@@ -239,8 +248,7 @@ function generateGameStats (players, corporationName) {
     if (corpsArray == undefined) {} //to chatch firebase errors if the array is undefined
     else {
       //check if onlyplayers button filter is clicked
-      btnMyGames = document.querySelectorAll(".btn-mygames-solo.active");
-      if (btnMyGames.length == 1 ) {
+      if (document.getElementById("mygames").classList.contains("active")) {
         try {var position = gamesPerPlayers[i]["rank"]} catch(er) {}
         if (corpsArray.indexOf(corporationName) == position) {
             //if the corporation is present in the corporations' arrayAwards
@@ -822,7 +830,7 @@ function generateScoresArray (players) {
   });
 
   btnMyGames = document.querySelectorAll(".btn-mygames-solo.active");
-  if (btnMyGames.length == 1 ) {
+  if (document.getElementById("mygames").classList.contains("active")) {
     for (i = 0; i < gamesPerPlayers.length; i++) {
       try {var position = gamesPerPlayers[i]["rank"]} catch(er) {}
       try {var scoresArray = gamesPerPlayers[i]["scores"];}catch(err) {}
@@ -834,7 +842,7 @@ function generateScoresArray (players) {
       scores.push(arr);
       //average scores calculation for the chart headers
       totalGames++;
-      totalScores = totalScores + parseInt(scoresArray[j]);
+      totalScores = totalScores + parseInt(scoresArray[parseInt(position)]);
     }
   } else {
     for (i = 0; i < gamesPerPlayers.length; i++) {
@@ -1088,20 +1096,6 @@ function changeColours (id) {
   menu = document.getElementById(id);
   if (menu.querySelector("option[value='NOT SELECTED']").selected) {menu.classList.remove("change-colours");}
   else {menu.classList.add("change-colours");}
-}
-
-function resetFilters() {
-  var x = document.querySelectorAll(".active");
-  for (i = 0; i < x.length; i++) {
-    x[i].classList.remove("active")
-  }
-  y = document.querySelectorAll(".change-colours");
-  if (y.length > 0) {
-    for (i = 0; i < y.length; i++) {
-    y[i].classList.remove("change-colours");
-    }
-  }
-  filterFunction();
 }
 
 function download(data, filename, json) {
