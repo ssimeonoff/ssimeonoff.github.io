@@ -53,7 +53,7 @@ function parseURLParams(url) {
     var queryStart = url.indexOf("#") + 1,
         queryEnd   = url.indexOf("%") + 1 || url.length + 1,
         query = url.slice(queryStart, queryEnd - 1)
-    cards = query.replace(/\#/g, " #").toUpperCase().split(" ");
+    cards = "#" + query.replace(/\#/g, " #").toUpperCase().split(" ");
     if (query === url || query === "") return "ALL";
     return cards;
     console.log(cards);
