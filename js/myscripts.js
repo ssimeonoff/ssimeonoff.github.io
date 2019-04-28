@@ -595,10 +595,10 @@ function selectCard (clickedCard) {
 
     //adding or removing the clicked card number or id to the string
     if (clickedCard.querySelector(".number") != null) {
-      selectedCardNumber = "#" + clickedCard.querySelector(".number").textContent;
+      selectedCardNumber = clickedCard.querySelector(".number").textContent;
     }
     else {
-      selectedCardNumber = "#" + clickedCard.id;
+      selectedCardNumber = clickedCard.id;
     }
 
     if (selectedCards.indexOf(selectedCardNumber) >= 0) {
