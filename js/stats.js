@@ -637,6 +637,15 @@ function generateAverageGenerations (players) {
   });
   generateAverageGenerationsValue(players, games_ce_pl, "_ce_pl")
 
+  games_ce_co = gamesPerPlayers.filter(function(el) {
+    if (el.expansions == undefined) {el.expansions =""}
+    return  el.expansions.indexOf("CORPORATE") > -1 &&
+        el.expansions.indexOf("VENUS") < 0 &&
+        el.expansions.indexOf("PRELUDE") < 0 &&
+        el.expansions.indexOf("COLONIES") > -1
+  });
+  generateAverageGenerationsValue(players, games_ce_co, "_ce_co")
+
   games_ce_vn_pl = gamesPerPlayers.filter(function(el) {
     if (el.expansions == undefined) {el.expansions =""}
     return  el.expansions.indexOf("CORPORATE") > -1 &&
