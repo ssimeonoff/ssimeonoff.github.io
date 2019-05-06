@@ -64,7 +64,7 @@
   text-align: left;
   margin-left: -4px;
   border-left: 1px solid rgb(221,221,221);
-  width: 80px;
+  width: 90px;
 }
 
 .history-section-expansions2 {
@@ -75,8 +75,8 @@
 
 .history-section-expansion-ribbon {
   display: inline-block;
-  margin-right: 8px;
-  margin-left: 8px;
+  margin-right: 12px;
+  margin-left: 6px;
 }
 
 .history-section-expansion-ribbon-solo {
@@ -88,39 +88,39 @@
 
 .history-section-map {
   display: inline-block;
-  margin-left: 4px;
-  width: 60px;
+  margin-left: 5px;
+  width: 50px;
   line-height: 16px;
   text-align: center;
-  font-size: 14px;
+  font-size: 12px;
   color:#222;
   text-shadow: none;
 }
 
 
 .history-section-map-value {
-  border-radius: 2px;
-  width: 60px;
+  border-radius: 3px;
+  width: 50px;
+  box-shadow: 0 0 0 1px #222;
 }
 
 .history-section-map-solo {
   display: inline-block;
   margin-left: -6px;
   margin-top: 13px;
-  width: 66px;
-  line-height: 16px;
+  width: 50px;
+  line-height: 15px;
   text-align: center;
-  font-size: 14px;
+  font-size: 12px;
   color:#222;
   text-shadow: none;
 }
 
 
 .history-section-map-value-solo {
-  border-radius: 10px;
-  width: 66px;
+  border-radius: 2px;
+  width: 50px;
   box-shadow: 0 0 0 1px #222;
-  border-radius: 20px;
 }
 
 .history-section-generation {

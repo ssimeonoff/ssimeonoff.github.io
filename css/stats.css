@@ -955,7 +955,7 @@
         text-align: center;
         color: white;
         border-radius: 50%;
-        box-shadow: 0 0 0 1px #eee, 0 0 0 2px #888;
+        box-shadow: 0 0 0 1px #eee;
         content: "";
         background-size: 10px 10px !important;
         background-position: bottom 4px right 3px !important;
