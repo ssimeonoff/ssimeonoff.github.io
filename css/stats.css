@@ -1002,8 +1002,15 @@
   background-color: #444;
   background-image: url("../images/triangle16.png");
 }
+
 .colonies-icon2:after {
   background-color: #444;
+}
+
+.turmoil-icon:after {
+  background: darkorange;
+  background-image: url("../images/triangle16.png");
+  transform: rotate(180deg);
 }
 
 .promo-icon:after {

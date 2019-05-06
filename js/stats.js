@@ -1014,6 +1014,9 @@ function pushHistory() {
     if (expansionsArray.indexOf("COLONIES") > -1) {
       expansionsHTML = expansionsHTML + '<div class="history-section-expansion-ribbon"><div class="icon colonies-icon icon-align2"></div></div>'
     }
+    if (expansionsArray.indexOf("TURMOIL") > -1) {
+      expansionsHTML = expansionsHTML + '<div class="history-section-expansion-ribbon"><div class="icon turmoil-icon icon-align2"></div></div>'
+    }
     gameSections[i].querySelector(".history-section-expansions").innerHTML = expansionsHTML;
 
     //the map

@@ -88,13 +88,19 @@
 
 .history-section-map {
   display: inline-block;
-  margin-left: -4px;
-  width: 66px;
+  margin-left: 4px;
+  width: 60px;
   line-height: 16px;
   text-align: center;
   font-size: 14px;
   color:#222;
   text-shadow: none;
+}
+
+
+.history-section-map-value {
+  border-radius: 2px;
+  width: 60px;
 }
 
 .history-section-map-solo {
@@ -109,10 +115,6 @@
   text-shadow: none;
 }
 
-.history-section-map-value {
-  border-radius: 10px;
-  width: 66px;
-}
 
 .history-section-map-value-solo {
   border-radius: 10px;
