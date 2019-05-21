@@ -390,6 +390,14 @@ function filterFunction(id) {
                el.expansions == undefined
       });
     } else if (btnExpansion.length == 4 ){
+        games = games.filter(function(el) {
+          return el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[0].id) == -1 &&
+                 el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[1].id) == -1 &&
+                 el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[2].id) == -1 &&
+                 el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[3].id) == -1 ||
+                 el.expansions == undefined
+        });
+    } else if (btnExpansion.length == 5 ){
       games = games.filter(function(el) {
         return el.expansions == undefined
       });
@@ -419,6 +427,14 @@ function filterFunction(id) {
           el.expansions.indexOf(btnExpansion[1].id) > -1 &&
           el.expansions.indexOf(btnExpansion[2].id) > -1 &&
           el.expansions.indexOf(btnExpansion[3].id) > -1
+      });
+    } else if (btnExpansion.length == 5 ){
+        games = games.filter(function(el) {
+          return el.expansions != undefined  &&
+          el.expansions.indexOf(btnExpansion[1].id) > -1 &&
+          el.expansions.indexOf(btnExpansion[2].id) > -1 &&
+          el.expansions.indexOf(btnExpansion[3].id) > -1 &&
+          el.expansions.indexOf(btnExpansion[4].id) > -1
       });
     }
   }
@@ -536,9 +552,6 @@ function pushHistory() {
     if (mode == "TFALL") {el_mode.innerHTML = "<div class='history-section-mode mode-all'></div>"}
     if (mode == "TR63") {el_mode.innerHTML = "<div class='history-section-mode mode-63'></div>"}
 
-
-
-
     //the expansions
     var expansionsHTML = "";
     try {
@@ -553,6 +566,9 @@ function pushHistory() {
       }
       if (expansionsArray.indexOf("COLONIES") > -1) {
         expansionsHTML = expansionsHTML + '<div class="history-section-expansion-ribbon"><div class="icon colonies-icon icon-align2"></div></div>'
+      }
+      if (expansionsArray.indexOf("TURMOIL") > -1) {
+        expansionsHTML = expansionsHTML + '<div class="history-section-expansion-ribbon"><div class="icon turmoil-icon icon-align2"></div></div>'
       }
       gameSections[i].querySelector(".history-section-expansions").innerHTML = expansionsHTML;
     }   catch (err) {}
