@@ -206,18 +206,16 @@ input::placeholder {
   cursor: not-allowed;
 }
 .label-expansions {
-  border: 1px solid;
     border-radius: 16px;
-    width: 63px;
     height: 20px;
-    padding-left: 16px;
     text-align: center;
-    margin-left: -24px;
+    margin-left: -20px;
     margin-top: -3px;
+    letter-spacing: 1px;
 }
 
 .icon-align-solo {
-  margin-left: -21px;
+  margin-left: -17px;
   margin-top: 7px;
 }
 
@@ -228,7 +226,7 @@ input::placeholder {
     width: 60px;
     padding-left: 26px;
     height: 31px;
-    font-size: 11px;
+    font-size: 16px;
     line-height: 21px;
     display: inline-block;
     font-family: Prototype;
@@ -336,13 +334,12 @@ input::placeholder {
 
 .btn-map-background {
   background: #ee792b;
-  border: 1px solid;
   border-radius: 20px;
   margin-left: 15px;
   margin-right: 15px;
   margin-top: 15px;
-  height: 22px;
-  line-height: 22px;
+  height: 24px;
+  line-height: 24px;
   font-size: 16px;
   letter-spacing: 1px;
 }

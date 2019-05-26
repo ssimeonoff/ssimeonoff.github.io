@@ -1118,13 +1118,12 @@
 }
 
 .btn-map > div {
-  line-height: 16px;
+  line-height: 18px;
   font-size: 14px;
   background: #ee792b;
-  border:1px solid;
   width: 68px;
   border-radius: 20px;
-  margin-left: 4px;
+  margin-left: 5px;
 }
 
 .drop-down {
