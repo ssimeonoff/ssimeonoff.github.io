@@ -3,18 +3,20 @@
   display: grid;
   font-family: Prototype;
   background: linear-gradient(to right,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
-  grid-template-columns: 530px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px;
-  width: 2123px;
+  grid-template-columns: 530px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px;
+  width: 1339px;
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
   border-bottom: 2px solid rgb(137,137,137);
   border-right: 2px solid rgb(137,137,137);
   margin-left: auto;
   margin-right: auto;
+  margin-top: 10px;
+  border-radius: 5px;
 }
 
 .grid-row2 {
-  grid-template-columns: 120px 410px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px 59px;
+  grid-template-columns: 120px 410px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px;
 }
 
 .grid-row > div, .grid-values > div, .grid-expansions > div {
@@ -43,13 +45,19 @@
 }
 
 .grid-expansions > div {
-  height: 20px;
-  font-size: 13px;
+    height: 23px;
+    font-size: 12px;
+    line-height: 23px;
+    margin: 5px;
+    border-radius: 20px;
+    box-shadow: 0 1px 2px #222;
 }
 
 .grid-values {
   display: grid;
-  grid-template-columns: 60px 60px;
+  grid-template-columns: 52px 52px;
+  gap: 5px;
+  padding: 5px;
 }
 
 
@@ -58,31 +66,32 @@
   padding-right: 5px;
   font-size: 15px;
   width: 135px;
-  height: 50px;
+  height: 47px;
   padding-top: 5px;
   line-height: 18px;
   border-radius: 1px;
   color:black;
   font-weight: normal;
   text-shadow: none;
-  transform: rotate(-90deg);
-  border-right: 2px solid rgb(221,221,221) !important;
-  border-left: 2px solid rgb(137,137,137) !important;
-  margin-left: -42px;
-  margin-top: 42px;
+  transform: rotate(-90deg) scale(0.5);
+  border-right: 4px solid rgb(221,221,221) !important;
+  border-top: 4px solid rgb(221,221,221) !important;
+  border-left: 4px solid rgb(137,137,137) !important;
+  border-bottom: 4px solid rgb(137,137,137) !important;
+  margin-left: -59px;
+  margin-top: 7px;
 }
 
 .chart-div-mysolo {
-  height: 150px;
+  height: 287px;
   padding-left: 10px;
 }
 
 .grid16 {
-  padding:2px;
-  padding-top: 4px;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-rows: 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px;
   grid-gap:2px;
+  padding-top: 1px;
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
   border-bottom: 2px solid rgb(137,137,137);
@@ -91,12 +100,9 @@
 }
 
 .grid16 > div {
-
-  font-size: 14px;
+  font-size: 13px;
   height: 16px;
   line-height: 16px;
-  width: 24px;
-  border-radius: 2px;
   text-shadow: 0 0 1px black, 0 1px 1px black;
 }
 
@@ -112,23 +118,24 @@
       text-align: center;
       font-size: 20px;
       color: white;
-      text-shadow: 0 0px 1px black, 0 1px 1px black;
-      height: 25px;
-      line-height: 25px;
-      border-radius: 1px;
+      text-shadow: 0 0px 1px black, 0 1px 0px black;
+      height: 40px;
+      border-radius: 10px;
+      line-height: 43px;
       text-align: center;
-      padding-left: 8px;
+      box-shadow: 0 1px 2px #222;
 }
 
 .table-header {
-  height:114px;
+  height:55px;
+  line-height: 30px;
   padding:10px;
-  padding-top: 15px;
-  padding-left: 25px;
+  padding-top: 5px;
+  padding-left: 15px;
   font-family: Prototype;
-  font-size: 30px;
+  font-size: 28px;
   color: #444;
-  letter-spacing: 5px;
+  letter-spacing: 1px;
 }
 
 .failed {
@@ -194,4 +201,20 @@
   margin-left: -4px;
   color: #eee;
   text-shadow: 0 0 3px #222;
+}
+
+.background-corporate {
+  background-color: #cc333333;
+}
+.background-venus {
+  background-color: rgba(84,150,201,.3);
+}
+.background-prelude {
+  background-color: rgba(235,118,171,0.3);
+}
+.background-colonies {
+  background-color: #4444;
+}
+.background-turmoil {
+  background-color: #cc333333;
 }
