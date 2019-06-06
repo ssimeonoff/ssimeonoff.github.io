@@ -37,11 +37,13 @@
   display: grid;
   grid-template-columns: 120px;
   border: none !important;
+  background: #ccc;
 }
 
 .grid-expansions {
   display: grid;
   grid-template-columns: 120px;
+  grid-template-rows: 37px 37px 37px 37px 37px;
 }
 
 .grid-expansions > div {
@@ -124,6 +126,7 @@
       line-height: 43px;
       text-align: center;
       box-shadow: 0 1px 2px #222;
+      background: #aaa;
 }
 
 .table-header {
