@@ -1,4 +1,8 @@
-
+@media screen and (max-width: 1400px) {
+    .grid-row {
+      margin-left: 20px !important;
+    }
+}
 .grid-row {
   display: grid;
   font-family: Prototype;
