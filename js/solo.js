@@ -365,14 +365,6 @@ function filterFunction(id) {
     });
   }
 
-  //filter by corporation
-  selectedCorporation = document.querySelectorAll(".drop-down.change-colours")
-  if (selectedCorporation.length > 0) {
-    games = games.filter(function(el) {
-      return el.corporation.indexOf(selectedCorporation[0].value) > -1 ;
-    });
-  }
-
   //filter by expansions
 
   if (document.getElementById("expansions_switch").checked) {
@@ -433,7 +425,8 @@ function filterFunction(id) {
           return el.expansions != undefined  &&
           el.expansions.indexOf(btnExpansion[1].id) > -1 &&
           el.expansions.indexOf(btnExpansion[2].id) > -1 &&
-          el.expansions.indexOf(btnExpansion[3].id) > -1
+          el.expansions.indexOf(btnExpansion[3].id) > -1 &&
+          el.expansions.indexOf(btnExpansionInactive[0].id) == -1
       });
     } else if (btnExpansion.length == 5 ){
         games = games.filter(function(el) {
@@ -444,6 +437,14 @@ function filterFunction(id) {
           el.expansions.indexOf(btnExpansion[4].id) > -1
       });
     }
+  }
+
+  //filter by corporation
+  selectedCorporation = document.querySelectorAll(".drop-down.change-colours")
+  if (selectedCorporation.length > 0) {
+    games = games.filter(function(el) {
+      return el.corporation.indexOf(selectedCorporation[0].value) > -1 ;
+    });
   }
 
   //filter by win condition
