@@ -418,6 +418,34 @@ input::placeholder {
   cursor: not-allowed;
 }
 
+.btn-delete {
+  display: none;
+  vertical-align: middle;
+  margin-top: -14px;
+  margin-left: 15px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  outline: none;
+  cursor: pointer;
+  font-family: Prototype;
+  height: 60px;
+  border-radius: 1px;
+  font-size: 14px;
+  border-top: 2px solid rgb(221,221,221);
+  border-left: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
+  box-shadow: 0 1px 3px 1px rgba(0,0,0,.8);
+  width: 100px;
+  background-color: rgb(102, 25, 25);
+  background-color: rgb(102, 25, 25);
+  color: #ccc;
+  text-shadow: 0 0px 0px black;
+  letter-spacing: 1px;
+  transition: 0.3s ease-in-out;
+}
+
 
 
 .checkbox{

@@ -86,7 +86,7 @@ function submitForm(e) {
 
 // Save Game to firebasejs
 function saveGame(name, email, corporation, expansions, result, mode, map, timestamp, country) {
-  var newGameRef = gamesRef.push();
+  newGameRef = gamesRef.push();
   newGameRef.set({
     name: name,
     email: email,
@@ -98,8 +98,23 @@ function saveGame(name, email, corporation, expansions, result, mode, map, times
     timestamp: timestamp,
     country: country
   })
+  //shrinking the submit button and showing the delete button
+  setTimeout(function() {
+    document.getElementById("submit").style.width = "275px";
+    document.getElementById("delete").style.display = "inline-block";
+    document.getElementById("delete").style.transform = "scale(1)";
+  },300)
 }
 
+function deleteLastGame () {
+  console.log(newGameRef.key);
+  gamesRef.child(newGameRef.key).remove();
+  document.getElementById("delete").style.transform = "scale(0)";
+  setTimeout(function() {
+    document.getElementById("submit").style.width = "393px";
+    document.getElementById("delete").style.display = "none";
+  },300)
+}
 
 //getting form values
 
