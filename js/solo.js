@@ -852,40 +852,45 @@ function pushCorporationsData(corporation) {
   document.getElementById("winrate-kuiper").innerHTML =  corporationWinrate(games_kuiper);
   document.getElementById("score-kuiper").innerHTML =  corporationScore(games_kuiper);
 
-  games_kuiper = games.filter(function(el) {return el.corporation == "PHILARES"});
-  document.getElementById("games-philares").innerHTML = games_kuiper.length;
-  document.getElementById("winrate-philares").innerHTML =  corporationWinrate(games_kuiper);
-  document.getElementById("score-philares").innerHTML =  corporationScore(games_kuiper);
+  games_philares = games.filter(function(el) {return el.corporation == "PHILARES"});
+  document.getElementById("games-philares").innerHTML = games_philares.length;
+  document.getElementById("winrate-philares").innerHTML =  corporationWinrate(games_philares);
+  document.getElementById("score-philares").innerHTML =  corporationScore(games_philares);
 
-  games_kuiper = games.filter(function(el) {return el.corporation == "MONS INSURANCE"});
-  document.getElementById("games-mons").innerHTML = games_kuiper.length;
-  document.getElementById("winrate-mons").innerHTML =  corporationWinrate(games_kuiper);
-  document.getElementById("score-mons").innerHTML =  corporationScore(games_kuiper);
+  games_mons = games.filter(function(el) {return el.corporation == "MONS INSURANCE"});
+  document.getElementById("games-mons").innerHTML = games_mons.length;
+  document.getElementById("winrate-mons").innerHTML =  corporationWinrate(games_mons);
+  document.getElementById("score-mons").innerHTML =  corporationScore(games_mons);
 
-  games_kuiper = games.filter(function(el) {return el.corporation == "LAKEFRONT RESORTS"});
-  document.getElementById("games-lakefront").innerHTML = games_kuiper.length;
-  document.getElementById("winrate-lakefront").innerHTML =  corporationWinrate(games_kuiper);
-  document.getElementById("score-lakefront").innerHTML =  corporationScore(games_kuiper);
+  games_lakefront = games.filter(function(el) {return el.corporation == "LAKEFRONT RESORTS"});
+  document.getElementById("games-lakefront").innerHTML = games_lakefront.length;
+  document.getElementById("winrate-lakefront").innerHTML =  corporationWinrate(games_lakefront);
+  document.getElementById("score-lakefront").innerHTML =  corporationScore(games_lakefront);
 
-  games_kuiper = games.filter(function(el) {return el.corporation == "PRISTAR"});
-  document.getElementById("games-pristar").innerHTML = games_kuiper.length;
-  document.getElementById("winrate-pristar").innerHTML =  corporationWinrate(games_kuiper);
-  document.getElementById("score-pristar").innerHTML =  corporationScore(games_kuiper);
+  games_pristar = games.filter(function(el) {return el.corporation == "PRISTAR"});
+  document.getElementById("games-pristar").innerHTML = games_pristar.length;
+  document.getElementById("winrate-pristar").innerHTML =  corporationWinrate(games_pristar);
+  document.getElementById("score-pristar").innerHTML =  corporationScore(games_pristar);
 
-  games_kuiper = games.filter(function(el) {return el.corporation == "SEPTEM TRIBUS"});
-  document.getElementById("games-septem").innerHTML = games_kuiper.length;
-  document.getElementById("winrate-septem").innerHTML =  corporationWinrate(games_kuiper);
-  document.getElementById("score-septem").innerHTML =  corporationScore(games_kuiper);
+  games_septem = games.filter(function(el) {return el.corporation == "SEPTEM TRIBUS"});
+  document.getElementById("games-septem").innerHTML = games_septem.length;
+  document.getElementById("winrate-septem").innerHTML =  corporationWinrate(games_septem);
+  document.getElementById("score-septem").innerHTML =  corporationScore(games_septem);
 
-  games_kuiper = games.filter(function(el) {return el.corporation == "TERALABS"});
-  document.getElementById("games-teralabs").innerHTML = games_kuiper.length;
-  document.getElementById("winrate-teralabs").innerHTML =  corporationWinrate(games_kuiper);
-  document.getElementById("score-teralabs").innerHTML =  corporationScore(games_kuiper);
+  games_teralabs = games.filter(function(el) {return el.corporation == "TERALABS"});
+  document.getElementById("games-teralabs").innerHTML = games_teralabs.length;
+  document.getElementById("winrate-teralabs").innerHTML =  corporationWinrate(games_teralabs);
+  document.getElementById("score-teralabs").innerHTML =  corporationScore(games_teralabs);
 
-  games_kuiper = games.filter(function(el) {return el.corporation == "UTOPIA"});
-  document.getElementById("games-utopia").innerHTML = games_kuiper.length;
-  document.getElementById("winrate-utopia").innerHTML =  corporationWinrate(games_kuiper);
-  document.getElementById("score-utopia").innerHTML =  corporationScore(games_kuiper);
+  games_utopia = games.filter(function(el) {return el.corporation == "UTOPIA"});
+  document.getElementById("games-utopia").innerHTML = games_utopia.length;
+  document.getElementById("winrate-utopia").innerHTML =  corporationWinrate(games_utopia);
+  document.getElementById("score-utopia").innerHTML =  corporationScore(games_utopia);
+
+  games_factorum = games.filter(function(el) {return el.corporation == "FACTORUM"});
+  document.getElementById("games-factorum").innerHTML = games_factorum.length;
+  document.getElementById("winrate-factorum").innerHTML =  corporationWinrate(games_factorum);
+  document.getElementById("score-factorum").innerHTML =  corporationScore(games_factorum);
 }
 
 function histogram () {
