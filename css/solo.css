@@ -657,9 +657,9 @@ input::-webkit-inner-spin-button {
 
 .corporation-row > div {
     text-align: center;
-    font-size: 18px;
-    height: 32px;
-    line-height: 32px;
+    font-size: 17px;
+    height: 25px;
+    line-height: 25px;
     color: #222;
     font-weight: normal;
     text-shadow: none;
@@ -676,7 +676,8 @@ input::-webkit-inner-spin-button {
 
 .corporation-name {
   color: #ffd27f !important;
-  text-shadow: 0 0 1px black,  0 2px 2px black !important;
+  text-shadow: 0 0 1px black,  0 1px 1px black !important;
+  background: #444;
 }
 
 .chart-div-solo {
@@ -684,13 +685,13 @@ input::-webkit-inner-spin-button {
   border-left: 2px solid rgb(221,221,221);
   border-bottom: 2px solid rgb(137,137,137);
   border-right: 2px solid rgb(137,137,137);
-  height: 382px;
+  height: 362px;
 }
 
 .chart-div-solo2 {
   height:180px;
   width: 220px;
   position: absolute;
-  margin-top: -380px;
+  margin-top: -360px;
   margin-left: 230px;
 }
