@@ -1144,3 +1144,11 @@ function parseURLParams(url) {
     if (query === url || query === "") return "ALL";
     return cards;
 }
+
+function copyGameID () {
+  var clickedGame;
+  $(document).click(function(event) {
+    clickedGame = event.target.closest(".grid-cell-history");
+    navigator.clipboard.writeText(clickedGame.title);
+  });
+}

@@ -1,3 +1,21 @@
+.grid-cell-history {
+  display: grid;
+  grid-template-columns: 190px 36px;
+  text-align: center;
+  color: #222;
+  font-size: 15px;
+  border-radius: 1px;
+  border-top: 2px solid rgb(221,221,221);
+  border-left: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
+  cursor: pointer;
+}
+
+.grid-cell-history:hover {
+  border: 2px solid black;
+}
+
 .history-section-corporation {
   display: inline-block;
   border-top: 1px solid rgb(221,221,221);

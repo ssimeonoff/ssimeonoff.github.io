@@ -326,38 +326,6 @@
     border-right: 2px solid rgb(137,137,137);
 }
 
-.generalStats-history-solo {
-    display: grid;
-    grid-template-columns: 230px 230px;
-    position: relative;
-    font-family: Prototype;
-    background: #ccc;
-    color: #222;
-    background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
-    border-radius: 2px;
-    width: 460px;
-    position: relative;
-    text-align: center;
-    margin-bottom: 10px;
-    border-top: 2px solid rgb(221,221,221);
-    border-left: 2px solid rgb(221,221,221);
-    border-bottom: 2px solid rgb(137,137,137);
-    border-right: 2px solid rgb(137,137,137);
-}
-
-.grid-cell-history {
-  display: grid;
-  grid-template-columns: 190px 36px;
-  text-align: center;
-  color: #222;
-  font-size: 15px;
-  border-radius: 1px;
-  border-top: 2px solid rgb(221,221,221);
-  border-left: 2px solid rgb(221,221,221);
-  border-bottom: 2px solid rgb(137,137,137);
-  border-right: 2px solid rgb(137,137,137);
-}
-
 .header-cell {
   color: #222;
   font-size: 16px;
