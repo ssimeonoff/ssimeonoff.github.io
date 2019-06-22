@@ -66,12 +66,6 @@ function toggleButton(id) {
   if (clickedElementID != null) {clickedElementID.classList.toggle("active");}
 }
 
-function toggleMyGamesButtons (id) {
-  if (id == "mygames") {document.getElementById("mygames-group").classList.remove("active");}
-  if (id == "mygames-group") {document.getElementById("mygames").classList.remove("active");}
-
-}
-
 function filterFunction() {
   // getting the constant GAMES_ALL
   // filter games from it and return/create new array "games"
@@ -100,6 +94,11 @@ function filterFunction() {
       return el.corporations.indexOf(selectedCorporation[0].value) > -1 ;
     });
   }
+  if (selectedCorporation.length > 1) {
+    games = games.filter(function(el) {
+      return el.corporations.indexOf(selectedCorporation[1].value) > -1 ;
+    });
+  }
 
   //filter by generations
   selectedGenerations = document.querySelectorAll(".drop-down-generation.change-colours")
@@ -125,101 +124,88 @@ function filterFunction() {
 
 
   //filter by expansions
-  btnExpansion = document.querySelectorAll(".btn-expansion.active");
-  if (document.getElementById("expansions_switch").checked) {
-    //if the toggle EXCLUDE is on
-    if (btnExpansion.length == 1 ) {
-      games = games.filter(function(el) {
-        return el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[0].id) == -1 ||
-               el.expansions == undefined
-      });
-    } else if (btnExpansion.length == 2 ){
-      games = games.filter(function(el) {
-          return el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[0].id) == -1 &&
-                 el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[1].id) == -1 ||
-                 el.expansions == undefined
-      });
-    } else if (btnExpansion.length == 3 ){
-      games = games.filter(function(el) {
-        return el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[0].id) == -1 &&
-               el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[1].id) == -1 &&
-               el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[2].id) == -1 ||
-               el.expansions == undefined
-      });
-    } else if (btnExpansion.length == 4 ){
-      games = games.filter(function(el) {
-        return el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[0].id) == -1 &&
-               el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[1].id) == -1 &&
-               el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[2].id) == -1 &&
-               el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[3].id) == -1 ||
-               el.expansions == undefined
-      });
-    } else if (btnExpansion.length == 5 ){
-      games = games.filter(function(el) {
-        return el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[0].id) == -1 &&
-               el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[1].id) == -1 &&
-               el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[2].id) == -1 &&
-               el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[3].id) == -1 &&
-               el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[4].id) == -1 ||
-               el.expansions == undefined
-      });
-    }
-  } else {
-    //if the toggle INCLUDE is on
-    if (btnExpansion.length == 1 ) {
-      games = games.filter(function(el) {
-        return el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[0].id) > -1 && el.expansions.length == 1
-      });
-    } else if (btnExpansion.length == 2 ){
-      games = games.filter(function(el) {
-        return el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[0].id) > -1 &&
-        el.expansions != undefined  && el.expansions.indexOf(btnExpansion[1].id) > -1 && el.expansions.length == 2
-      });
-    } else if (btnExpansion.length == 3 ){
-      games = games.filter(function(el) {
-        return el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[0].id) > -1 &&
-        el.expansions != undefined  && el.expansions.indexOf(btnExpansion[1].id) > -1 &&
-        el.expansions != undefined  && el.expansions.indexOf(btnExpansion[2].id) > -1 && el.expansions.length == 3
-      });
-    } else if (btnExpansion.length == 4 ){
-      games = games.filter(function(el) {
-        return el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[0].id) > -1 &&
-        el.expansions != undefined  && el.expansions.indexOf(btnExpansion[1].id) > -1 &&
-        el.expansions != undefined  && el.expansions.indexOf(btnExpansion[2].id) > -1 &&
-        el.expansions != undefined  && el.expansions.indexOf(btnExpansion[3].id) > -1 && el.expansions.length == 4
-      });
-    } else if (btnExpansion.length == 5 ){
-      games = games.filter(function(el) {
-        return el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[0].id) > -1 &&
-        el.expansions != undefined  && el.expansions.indexOf(btnExpansion[1].id) > -1 &&
-        el.expansions != undefined  && el.expansions.indexOf(btnExpansion[2].id) > -1 &&
-        el.expansions != undefined  && el.expansions.indexOf(btnExpansion[3].id) > -1 &&
-        el.expansions != undefined  && el.expansions.indexOf(btnExpansion[4].id) > -1 && el.expansions.length == 5
-      });
-    }
+  filter_corporate = document.getElementById("filter_corporate").value;
+  filter_venus = document.getElementById("filter_venus").value;
+  filter_prelude = document.getElementById("filter_prelude").value;
+  filter_colonies = document.getElementById("filter_colonies").value;
+  filter_turmoil = document.getElementById("filter_turmoil").value;
+
+  if (filter_corporate == -1) {
+    games = games.filter(function(el) {
+      return el.expansions == undefined || el.expansions.indexOf("CORPORATE") == -1
+    });
+  }
+  if (filter_venus == -1) {
+    games = games.filter(function(el) {
+      return el.expansions == undefined || el.expansions.indexOf("VENUS") == -1
+
+    });
+  }
+  if (filter_prelude == -1) {
+    games = games.filter(function(el) {
+      return el.expansions == undefined || el.expansions.indexOf("PRELUDE") == -1
+    });
+  }
+  if (filter_colonies == -1) {
+    games = games.filter(function(el) {
+      return el.expansions == undefined || el.expansions.indexOf("COLONIES") == -1
+    });
+  }
+  if (filter_turmoil == -1) {
+    games = games.filter(function(el) {
+      return el.expansions == undefined || el.expansions.indexOf("TURMOIL") == -1
+    });
+  }
+
+  if (filter_corporate == 1) {
+    games = games.filter(function(el) {
+      return el.expansions == undefined || el.expansions.indexOf("CORPORATE") > -1
+    });
+  }
+  if (filter_venus == 1) {
+    games = games.filter(function(el) {
+      return el.expansions == undefined || el.expansions.indexOf("VENUS") > -1
+    });
+  }
+  if (filter_prelude == 1) {
+    games = games.filter(function(el) {
+      return el.expansions == undefined || el.expansions.indexOf("PRELUDE") > -1
+    });
+  }
+  if (filter_colonies == 1) {
+    games = games.filter(function(el) {
+      return el.expansions == undefined || el.expansions.indexOf("COLONIES") > -1
+    });
+  }
+  if (filter_turmoil == 1) {
+    games = games.filter(function(el) {
+      return el.expansions == undefined || el.expansions.indexOf("TURMOIL") > -1
+    });
   }
 
   //filter by draft
-  btnDraft = document.querySelectorAll(".btn-draft.active")
-  if (btnDraft.length == 1) {
+  filter_draft = document.getElementById("filter_draft").value;
+  if (filter_draft == -1) {
     games = games.filter(function(el) {
-      return el.draft ==  btnDraft[0].value
+      return el.draft == undefined || el.draft == "NO"
     });
-  } else if (btnDraft.length == 2) {
+  }
+  if (filter_draft == 1) {
     games = games.filter(function(el) {
-      return el.draft ==  "YES" || el.draft ==  "NO"
+      return el.draft == undefined || el.draft == "YES"
     });
   }
 
   //filter by WGT
-  btnWGT = document.querySelectorAll(".btn-wgt.active")
-  if (btnWGT.length == 1) {
+  filter_wgt = document.getElementById("filter_wgt").value;
+  if (filter_wgt == -1) {
     games = games.filter(function(el) {
-      return el.wgt != undefined && el.wgt ==  btnWGT[0].value
+      return el.wgt == undefined || el.wgt == "NO"
     });
-  } else if (btnWGT.length == 2) {
+  }
+  if (filter_wgt == 1) {
     games = games.filter(function(el) {
-      return el.wgt ==  "YES" || el.wgt ==  "NO"
+      return el.wgt == undefined || el.wgt == "YES"
     });
   }
 
@@ -1151,4 +1137,20 @@ function copyGameID () {
     clickedGame = event.target.closest(".grid-cell-history");
     navigator.clipboard.writeText(clickedGame.title);
   });
+}
+
+function changeSliderColour (id) {
+  el = document.getElementById(id);
+  if (el.value == -1) {
+      el.classList.remove("track-background-include");
+      el.classList.add("track-background-exclude");
+  }
+  if (el.value == 0) {
+      el.classList.remove("track-background-include");
+      el.classList.remove("track-background-exclude");
+  }
+  if (el.value == 1) {
+      el.classList.add("track-background-include");
+      el.classList.remove("track-background-exclude");
+  }
 }
