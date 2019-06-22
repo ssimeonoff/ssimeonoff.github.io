@@ -66,6 +66,12 @@ function toggleButton(id) {
   if (clickedElementID != null) {clickedElementID.classList.toggle("active");}
 }
 
+function toggleMyGamesButtons (id) {
+  if (id == "mygames") {document.getElementById("mygames-group").classList.remove("active");}
+  if (id == "mygames-group") {document.getElementById("mygames").classList.remove("active");}
+}
+
+
 function filterFunction() {
   // getting the constant GAMES_ALL
   // filter games from it and return/create new array "games"
@@ -482,11 +488,50 @@ function pushCorporationsData() {
   document.getElementById("games4p-stormcraft").innerHTML = generateGameStats(4, "STORMCRAFT");
   document.getElementById("games5p-stormcraft").innerHTML = generateGameStats(5, "STORMCRAFT");
 
-  //promo
   document.getElementById("games2p-arcadian").innerHTML = generateGameStats(2, "ARCADIAN COMMUNITIES");
   document.getElementById("games3p-arcadian").innerHTML = generateGameStats(3, "ARCADIAN COMMUNITIES");
   document.getElementById("games4p-arcadian").innerHTML = generateGameStats(4, "ARCADIAN COMMUNITIES");
   document.getElementById("games5p-arcadian").innerHTML = generateGameStats(5, "ARCADIAN COMMUNITIES");
+
+  document.getElementById("games2p-factorum").innerHTML = generateGameStats(2, "FACTORUM");
+  document.getElementById("games3p-factorum").innerHTML = generateGameStats(3, "FACTORUM");
+  document.getElementById("games4p-factorum").innerHTML = generateGameStats(4, "FACTORUM");
+  document.getElementById("games5p-factorum").innerHTML = generateGameStats(5, "FACTORUM");
+
+  document.getElementById("games2p-lakefront").innerHTML = generateGameStats(2, "LAKEFRONT RESORTS");
+  document.getElementById("games3p-lakefront").innerHTML = generateGameStats(3, "LAKEFRONT RESORTS");
+  document.getElementById("games4p-lakefront").innerHTML = generateGameStats(4, "LAKEFRONT RESORTS");
+  document.getElementById("games5p-lakefront").innerHTML = generateGameStats(5, "LAKEFRONT RESORTS");
+
+  document.getElementById("games2p-mons").innerHTML = generateGameStats(2, "MONS INSURANCE");
+  document.getElementById("games3p-mons").innerHTML = generateGameStats(3, "MONS INSURANCE");
+  document.getElementById("games4p-mons").innerHTML = generateGameStats(4, "MONS INSURANCE");
+  document.getElementById("games5p-mons").innerHTML = generateGameStats(5, "MONS INSURANCE");
+
+  document.getElementById("games2p-philares").innerHTML = generateGameStats(2, "PHILARES");
+  document.getElementById("games3p-philares").innerHTML = generateGameStats(3, "PHILARES");
+  document.getElementById("games4p-philares").innerHTML = generateGameStats(4, "PHILARES");
+  document.getElementById("games5p-philares").innerHTML = generateGameStats(5, "PHILARES");
+
+  document.getElementById("games2p-pristar").innerHTML = generateGameStats(2, "PRISTAR");
+  document.getElementById("games3p-pristar").innerHTML = generateGameStats(3, "PRISTAR");
+  document.getElementById("games4p-pristar").innerHTML = generateGameStats(4, "PRISTAR");
+  document.getElementById("games5p-pristar").innerHTML = generateGameStats(5, "PRISTAR");
+
+  document.getElementById("games2p-septem").innerHTML = generateGameStats(2, "SEPTEM TRIBUS");
+  document.getElementById("games3p-septem").innerHTML = generateGameStats(3, "SEPTEM TRIBUS");
+  document.getElementById("games4p-septem").innerHTML = generateGameStats(4, "SEPTEM TRIBUS");
+  document.getElementById("games5p-septem").innerHTML = generateGameStats(5, "SEPTEM TRIBUS");
+
+  document.getElementById("games2p-utopia").innerHTML = generateGameStats(2, "UTOPIA");
+  document.getElementById("games3p-utopia").innerHTML = generateGameStats(3, "UTOPIA");
+  document.getElementById("games4p-utopia").innerHTML = generateGameStats(4, "UTOPIA");
+  document.getElementById("games5p-utopia").innerHTML = generateGameStats(5, "UTOPIA");
+
+  document.getElementById("games2p-teralabs").innerHTML = generateGameStats(2, "TERALABS");
+  document.getElementById("games3p-teralabs").innerHTML = generateGameStats(3, "TERALABS");
+  document.getElementById("games4p-teralabs").innerHTML = generateGameStats(4, "TERALABS");
+  document.getElementById("games5p-teralabs").innerHTML = generateGameStats(5, "TERALABS");
 
   //fanmade
   document.getElementById("games2p-kuiper").innerHTML = generateGameStats(2, "KUIPER BELT COOP.");
