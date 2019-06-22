@@ -165,27 +165,27 @@ function filterFunction() {
 
   if (filter_corporate == 1) {
     games = games.filter(function(el) {
-      return el.expansions == undefined || el.expansions.length > 0 && el.expansions.indexOf("CORPORATE") > -1
+      return el.expansions != undefined && el.expansions.indexOf("CORPORATE") > -1
     });
   }
   if (filter_venus == 1) {
     games = games.filter(function(el) {
-      return el.expansions == undefined || el.expansions.length > 0 && el.expansions.indexOf("VENUS") > -1
+      return el.expansions != undefined && el.expansions.indexOf("VENUS") > -1
     });
   }
   if (filter_prelude == 1) {
     games = games.filter(function(el) {
-      return el.expansions == undefined || el.expansions.length > 0 && el.expansions.indexOf("PRELUDE") > -1
+      return el.expansions != undefined && el.expansions.indexOf("PRELUDE") > -1
     });
   }
   if (filter_colonies == 1) {
     games = games.filter(function(el) {
-      return el.expansions == undefined || el.expansions.length > 0 && el.expansions.indexOf("COLONIES") > -1
+      return el.expansions != undefined && el.expansions.indexOf("COLONIES") > -1
     });
   }
   if (filter_turmoil == 1) {
     games = games.filter(function(el) {
-      return el.expansions == undefined || el.expansions.length > 0 && el.expansions.indexOf("TURMOIL") > -1
+      return el.expansions != undefined && el.expansions.indexOf("TURMOIL") > -1
     });
   }
 
@@ -198,7 +198,7 @@ function filterFunction() {
   }
   if (filter_draft == 1) {
     games = games.filter(function(el) {
-      return el.draft == undefined || el.draft == "YES"
+      return el.draft != undefined && el.draft == "YES"
     });
   }
 
@@ -211,7 +211,7 @@ function filterFunction() {
   }
   if (filter_wgt == 1) {
     games = games.filter(function(el) {
-      return el.wgt == undefined || el.wgt == "YES"
+      return el.wgt != undefined && el.wgt == "YES"
     });
   }
 
