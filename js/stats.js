@@ -1145,7 +1145,7 @@ function compareTime(time) {
 
 function changeColours (id) {
   menu = document.getElementById(id);
-  if (menu.querySelector("option[value='NOT SELECTED']").selected) {menu.classList.remove("change-colours");}
+  if (menu.value == "NOT SELECTED") {menu.classList.remove("change-colours");}
   else {menu.classList.add("change-colours");}
 }
 

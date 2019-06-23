@@ -50,6 +50,11 @@
     transition: 1s;
 }
 
+.grid3-solo {
+  display: grid;
+  grid-template-columns: 113px 300px 50px;
+}
+
 .grid-cell-solo {
       text-align: center;
       font-size: 18px;

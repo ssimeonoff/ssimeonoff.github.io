@@ -381,94 +381,83 @@ function filterFunction(id) {
   }
 
   //filter by expansions
+  filter_venus = document.getElementById("filter_venus").value;
+  filter_prelude = document.getElementById("filter_prelude").value;
+  filter_colonies = document.getElementById("filter_colonies").value;
+  filter_turmoil = document.getElementById("filter_turmoil").value;
 
-  if (document.getElementById("expansions_switch").checked) {
-    //if the toggle EXCLUDE is on
-    btnExpansion = document.querySelectorAll(".btn-expansion.active");
+  if (filter_venus == -1) {
+    games = games.filter(function(el) {
+      return el.expansions == undefined || el.expansions.indexOf("VENUS") == -1
 
-    if (btnExpansion.length == 1 ) {
-      games = games.filter(function(el) {
-        return el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[0].id) == -1 ||
-               el.expansions == undefined
-      });
-    } else if (btnExpansion.length == 2 ){
-      games = games.filter(function(el) {
-          return el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[0].id) == -1 &&
-                 el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[1].id) == -1 ||
-                 el.expansions == undefined
-      });
-    } else if (btnExpansion.length == 3 ){
-      games = games.filter(function(el) {
-        return el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[0].id) == -1 &&
-               el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[1].id) == -1 &&
-               el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[2].id) == -1 ||
-               el.expansions == undefined
-      });
-    } else if (btnExpansion.length == 4 ){
-        games = games.filter(function(el) {
-          return el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[0].id) == -1 &&
-                 el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[1].id) == -1 &&
-                 el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[2].id) == -1 &&
-                 el.expansions != undefined  &&  el.expansions.indexOf(btnExpansion[3].id) == -1 ||
-                 el.expansions == undefined
-        });
-    } else if (btnExpansion.length == 5 ){
-      games = games.filter(function(el) {
-        return el.expansions == undefined
-      });
-    }
-  } else {
-    //if the toggle INCLUDE is on
-    btnExpansion = document.querySelectorAll(".btn-expansion.active");
-    btnExpansionInactive = document.querySelectorAll(".btn-expansion.inactive");
-    if (btnExpansion.length == 2 ){
-      games = games.filter(function(el) {
-        return el.expansions != undefined &&
-         el.expansions.indexOf(btnExpansion[1].id) > -1
-         && el.expansions.indexOf(btnExpansionInactive[0].id) == -1
-         && el.expansions.indexOf(btnExpansionInactive[1].id) == -1
-      });
-    } else if (btnExpansion.length == 3 ){
-      games = games.filter(function(el) {
-        return el.expansions != undefined &&
-          el.expansions.indexOf(btnExpansion[1].id) > -1 &&
-          el.expansions.indexOf(btnExpansion[2].id) > -1 &&
-          el.expansions.indexOf(btnExpansionInactive[0].id) == -1
-      });
-    } else if (btnExpansion.length == 4 ){
-        games = games.filter(function(el) {
-          return el.expansions != undefined  &&
-          el.expansions.indexOf(btnExpansion[1].id) > -1 &&
-          el.expansions.indexOf(btnExpansion[2].id) > -1 &&
-          el.expansions.indexOf(btnExpansion[3].id) > -1 &&
-          el.expansions.indexOf(btnExpansionInactive[0].id) == -1
-      });
-    } else if (btnExpansion.length == 5 ){
-        games = games.filter(function(el) {
-          return el.expansions != undefined  &&
-          el.expansions.indexOf(btnExpansion[1].id) > -1 &&
-          el.expansions.indexOf(btnExpansion[2].id) > -1 &&
-          el.expansions.indexOf(btnExpansion[3].id) > -1 &&
-          el.expansions.indexOf(btnExpansion[4].id) > -1
-      });
-    }
+    });
+  }
+  if (filter_prelude == -1) {
+    games = games.filter(function(el) {
+      return el.expansions == undefined || el.expansions.indexOf("PRELUDE") == -1
+    });
+  }
+  if (filter_colonies == -1) {
+    games = games.filter(function(el) {
+      return el.expansions == undefined || el.expansions.indexOf("COLONIES") == -1
+    });
+  }
+  if (filter_turmoil == -1) {
+    games = games.filter(function(el) {
+      return el.expansions == undefined || el.expansions.indexOf("TURMOIL") == -1
+    });
+  }
+
+  if (filter_venus == 1) {
+    games = games.filter(function(el) {
+      return el.expansions != undefined && el.expansions.indexOf("VENUS") > -1
+    });
+  }
+  if (filter_prelude == 1) {
+    games = games.filter(function(el) {
+      return el.expansions != undefined && el.expansions.indexOf("PRELUDE") > -1
+    });
+  }
+  if (filter_colonies == 1) {
+    games = games.filter(function(el) {
+      return el.expansions != undefined && el.expansions.indexOf("COLONIES") > -1
+    });
+  }
+  if (filter_turmoil == 1) {
+    games = games.filter(function(el) {
+      return el.expansions != undefined && el.expansions.indexOf("TURMOIL") > -1
+    });
+  }
+
+  //filter by mode
+  filter_mode = document.getElementById("filter_mode").value;
+  if (filter_mode == 1) {
+    games = games.filter(function(el) {
+      return el.expansions == undefined || el.mode == "TFALL"
+    });
+  }
+  filter_mode = document.getElementById("filter_mode").value;
+  if (filter_mode == -1) {
+    games = games.filter(function(el) {
+      return el.expansions != undefined && el.mode == "TR63"
+    });
   }
 
   //filter by corporation
   selectedCorporation = document.querySelectorAll(".drop-down.change-colours")
-  if (selectedCorporation.length > 0) {
+  if (selectedCorporation.length == 1) {
     games = games.filter(function(el) {
-      return el.corporation.indexOf(selectedCorporation[0].value) > -1 ;
+      return el.corporation == selectedCorporation[0].value
+    });
+  }
+  if (selectedCorporation.length == 2) {
+    games = games.filter(function(el) {
+      return el.corporation == selectedCorporation[0].value || el.corporation == selectedCorporation[1].value
     });
   }
 
-  //filter by win condition
-  btnMode = document.querySelectorAll(".btn-draft.active")
-  if (btnMode.length == 1) {
-    games = games.filter(function(el) {
-      return el.mode ==  btnMode[0].id
-    });
-  }
+
+
 
   //pushing the new filtered data
   pushData();
@@ -605,7 +594,7 @@ function pushHistory() {
 
 function changeColours (id) {
   menu = document.getElementById(id);
-  if (document.querySelector("option[value='NOT SELECTED']").selected) {menu.classList.remove("change-colours");}
+  if (menu.value == "NOT SELECTED") {menu.classList.remove("change-colours");}
   else {menu.classList.add("change-colours");}
 }
 
@@ -1040,4 +1029,20 @@ function copyGameID () {
     clickedGame = event.target.closest(".grid-cell-history");
     navigator.clipboard.writeText(clickedGame.title);
   });
+}
+
+function changeSliderColour (id) {
+  el = document.getElementById(id);
+  if (el.value == -1) {
+      el.classList.remove("track-background-include");
+      el.classList.add("track-background-exclude");
+  }
+  if (el.value == 0) {
+      el.classList.remove("track-background-include");
+      el.classList.remove("track-background-exclude");
+  }
+  if (el.value == 1) {
+      el.classList.add("track-background-include");
+      el.classList.remove("track-background-exclude");
+  }
 }

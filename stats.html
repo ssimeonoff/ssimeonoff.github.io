@@ -63,7 +63,7 @@
         </div>
 
         <div style= "position:absolute;margin-left: 111px; margin-top:50px;width:110px;" title="filter by generations">
-          <select id="generation1" class="drop-down-generation" name="generations" size="1" onchange="changeColours(id); toggleButton(id)">
+          <select id="generation1" class="drop-down-generation" name="generations" size="1" onchange="changeColours(id);">
           <option value="NOT SELECTED" selected>GEN FROM</option>
           <option value="4">GEN 4</option>
           <option value="5">GEN 5</option>
@@ -79,7 +79,7 @@
           <option value="15">GEN 15</option>
           <option value="16">GEN 16</option>
           </select>
-          <select id="generation2" class="drop-down-generation" name="generations" size="1" onchange="changeColours(id); toggleButton(id)">
+          <select id="generation2" class="drop-down-generation" name="generations" size="1" onchange="changeColours(id);">
           <option value="NOT SELECTED" selected>GEN TO</option>
           <option value="4">GEN 4</option>
           <option value="5">GEN 5</option>
@@ -178,11 +178,7 @@
         </div>
         <button id="filter-trigger" class="button btn-apply-filters" onclick="filterFunction();" title="Apply selected filters"><div>APPLY SELECTED FILTERS</div></button>
 
-
-    </div>
-    <div></div>
-    <div></div>
-
+      </div>
 
       <div class="grid5b">
       <div class="grid-cell-stats stats-general"><div class="header-cell">TOTAL</div><div id="total_games" class="odometer header-cell" data-minintegerlen="4" style="font-size:26px"></div></div>

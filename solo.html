@@ -177,44 +177,32 @@
     <div class="column">
 
       <div class="buttons-container">
-        <div class="grid3">
+        <div class="grid3-solo">
           <div class="grid-cell grid-corporations-title"><div id="total_games" class="odometer header-cell" data-minintegerlen="4" style="font-size:26px;line-height:30px;">000</div></div>
           <div class="grid-cell grid-corporations-title" style="font-size:20px;">FILTERS</div>
           <div class="btn-grid-cell" onclick="download();" style="width:26px;height:32px;margin-left:6px;" title="Download the database">
             <img src="images/file.png" width="26" height="26" style="margin-top:3px;">
           </div>
         </div>
-        <div class="filters-div" style="height: 266px;">
 
-          <div class="onoffswitch">
-            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="expansions_switch" onclick="toggleButton(id);toggleButton('CORPORATE')">
-            <label class="onoffswitch-label" for="expansions_switch">
-              <span class="onoffswitch-inner"></span>
-              <span class="onoffswitch-switch"></span>
-            </label>
-          </div>
+      <div class="filters-div" style="height:250px;">
 
-          <button disabled id="CORPORATE" style="margin-left:0px;" class="active button btn-expansion button-icon corporate-era-icon icon  " onclick="toggleButton(id)" title="filter Corporate Era games"></button>
-          <button id="VENUS" class="button inactive btn-expansion button-icon venus-icon icon  " onclick="toggleButton(id);toggleButtonInactivity(id)" title="filter Venus Next games"></button>
-          <button id="PRELUDE" class="button inactive btn-expansion button-icon prelude-icon icon  " onclick="toggleButton(id);toggleButtonInactivity(id)" title="filter Prelude games"></button>
-          <button id="COLONIES" class="button inactive btn-expansion button-icon colonies-icon icon " onclick="toggleButton(id);toggleButtonInactivity(id)" title="filter Colonies games"></button>
-          <button id="TURMOIL" class="button inactive btn-expansion button-icon turmoil-icon icon " onclick="toggleButton(id);toggleButtonInactivity(id)" title="filter Turmoil games"></button>
+        <div class ="grid-expansions-filters">
+          <input id="filter_venus" title=" EXCLUDE < > INCLUDE - filter by Venus Next" type="range" min="-1" max="1" value="0" step="1" list="tickmarks" oninput="changeSliderColour(id);" class="thumb-venus"  >
+          <input id="filter_prelude" title=" EXCLUDE < > INCLUDE - filter by Prelude" type="range" min="-1" max="1" value="0" step="1" list="tickmarks" oninput="changeSliderColour(id);" class="thumb-prelude"  >
+          <input id="filter_colonies" title=" EXCLUDE < > INCLUDE - filter by Colonies" type="range" min="-1" max="1" value="0" step="1" list="tickmarks" oninput="changeSliderColour(id);" class="thumb-colonies"  >
+          <input id="filter_turmoil" title=" EXCLUDE < > INCLUDE - filter by Turmoil" type="range" min="-1" max="1" value="0" step="1" list="tickmarks" oninput="changeSliderColour(id);" class="thumb-turmoil"  >
+          <input id="filter_mode" title=" 63TR < > TF ALL - filter by mode" type="range" min="-1" max="1" value="0" step="1" list="tickmarks" oninput="changeSliderColour(id);" class="thumb-mode">
+        </div>
 
-          <br>
-
-          <button style="margin-left:6px;background-image: url(images/ALL.png);" id="TFALL" class="button btn-draft btn-filter-mode" onclick="toggleButton(id)" title="filter Draft games" value="YES">ALL</button>
-          <button id="TR63" class="button btn-draft btn-filter-mode" onclick="toggleButton(id)" title="filter No Draft games" value="NO">63</button>
-
-          <button id="THARSIS"  style="margin-left:16px;" class="button btn-map" onclick="toggleButton(id)" title="filter games played on THARSIS"><div>THARSIS</div></button>
-          <button id="HELLAS" class="button btn-map" onclick="toggleButton(id)" title="filter games played on HELLAS"><div style="background:#3b9ae3">HELLAS</div></button>
+        <div class="grid-maps-filters" title="filter by map">
+          <button id="THARSIS" class="button btn-map" onclick="toggleButton(id)" title="filter games played on THARSIS"><div>THARSIS</div></button>
+          <button id="HELLAS"  class="button btn-map" onclick="toggleButton(id)" title="filter games played on HELLAS"><div style="background:#3b9ae3">HELLAS</div></button>
           <button id="ELYSIUM" class="button  btn-map" onclick="toggleButton(id)" title="filter games played on ELYSIUM"><div style="background:#09aa09">ELYSIUM</div></button>
-          <br>
+        </div>
 
-
-          <button style="width:123px;font-size:13px;margin-top:0px;" disabled id="mygames" class="button btn-mygames-solo" onclick="toggleButton(id)" title="filter my games"><div>MY GAMES ONLY</div></button>
-
-
-          <select id="corporation1" class="drop-down" name="corporations" size="1" onchange="changeColours(id); toggleButton(id)">
+        <div style="position:absolute; margin-top:50px; margin-left:226px;" title="filter by corporation">
+          <select id="corporation1" class="drop-down" name="corporations" size="1" onchange="changeColours(id)">
             <option value="NOT SELECTED" selected>SELECT CORPORATION</option>
             <option value="APHRODITE">APHRODITE</option>
             <option value="ARCADIAN COMMUNITIES">ARCADIAN COMMUNITIES</option>
@@ -251,14 +239,47 @@
             <option value="KUIPER BELT COOP.">KUIPER BELT COOP.</option>
           </select>
 
-          <button style="margin-top:15px;" id="filter-trigger" class="button btn-apply-filters" onclick="filterFunction();" title="Apply selected filters"><div>APPLY SELECTED FILTERS</div></button>
-
-
+          <select id="corporation2" class="drop-down" name="corporations" size="1" onchange="changeColours(id)">
+            <option value="NOT SELECTED" selected>SELECT CORPORATION</option>
+            <option value="APHRODITE">APHRODITE</option>
+            <option value="ARCADIAN COMMUNITIES">ARCADIAN COMMUNITIES</option>
+            <option value="ARIDOR">ARIDOR</option>
+            <option value="ARKLIGHT">ARKLIGHT</option>
+            <option value="CELESTIC">CELESTIC</option>
+            <option value="CHEUNG SHING MARS">CHEUNG SHING MARS</option>
+            <option value="CREDICOR">CREDICOR</option>
+            <option value="ECOLINE">ECOLINE</option>
+            <option value="HELION">HELION</option>
+            <option value="INTERPLAN. CINEMATICS">INTERPLAN. CINEMATICS</option>
+            <option value="INVENTRIX">INVENTRIX</option>
+            <option value="MANUTECH">MANUTECH</option>
+            <option value="MINING GUILD">MINING GUILD</option>
+            <option value="MORNING STAR">MORNING STAR</option>
+            <option value="PHOBOLOG">PHOBOLOG</option>
+            <option value="POINT LUNA">POINT LUNA</option>
+            <option value="POLYPHEMOS">POLYPHEMOS</option>
+            <option value="POSEIDON">POSEIDON</option>
+            <option value="RECYCLON">RECYCLON</option>
+            <option value="ROBINSON INDUSTRIES">ROBINSON INDUSTRIES</option>
+            <option value="SATURN SYSTEMS">SATURN SYSTEMS</option>
+            <option value="SPLICE">SPLICE</option>
+            <option value="STORMCRAFT">STORMCRAFT</option>
+            <option value="TERACTOR">TERACTOR</option>
+            <option value="THARSIS REPUBLIC">THARSIS REPUBLIC</option>
+            <option value="THORGATE">THORGATE</option>
+            <option value="UNMI">U.N.M.I.</option>
+            <option value="VALLEY TRUST">VALLEY TRUST</option>
+            <option value="VIRON">VIRON</option>
+            <option value="VITOR">VITOR</option>
+            <option value disabled>---</option>
+            <option value="BEGINNER">BEGINNER</option>
+            <option value="KUIPER BELT COOP.">KUIPER BELT COOP.</option>
+          </select>
         </div>
-        <div></div>
-        <div></div>
-
+        <button style="position:absolute;margin-left:111px;margin-top:50px;" disabled id="mygames" class="button btn-mygames-solo" onclick="toggleButton(id);toggleMyGamesButtons(id);" title="filter my games (for logged users)"><div>MY STATS</div></button>
+        <button style="margin-top:157px;" id="filter-trigger" class="button btn-apply-filters" onclick="filterFunction();" title="Apply selected filters"><div>APPLY SELECTED FILTERS</div></button>
       </div>
+    </div>
 
 
       <div class="generalStats-history">
