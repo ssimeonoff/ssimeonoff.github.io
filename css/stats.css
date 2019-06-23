@@ -1400,11 +1400,11 @@ input[type=range]::-webkit-slider-thumb:hover {
 }
 .thumb-mode::-webkit-slider-thumb {
   background-image: url("../images/thumb-mode.png") !important;
-  background-size: 30px 30px;
+  width: 42px !important;
 }
 .thumb-mode::-moz-range-thumb {
   background: url("../images/thumb-mode.png") !important;
-  background-size: 30px 30px;
+  width: 42px !important;
 }
 
 input[type=range]::-moz-range-track {

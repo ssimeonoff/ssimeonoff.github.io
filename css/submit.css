@@ -694,7 +694,7 @@ input::-webkit-inner-spin-button {
     border-right: 2px solid rgb(137,137,137);
 }
 
-.grid-cell-history {
+.grid-cell-history-submit {
   position: relative;
   display: grid;
   grid-template-columns: 182px 36px;;
