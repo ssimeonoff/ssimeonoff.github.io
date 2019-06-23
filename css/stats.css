@@ -1069,7 +1069,6 @@
   outline: none;
   height: 50px;
   width: 115px;
-  margin-right: -5px;
   cursor: pointer;
   color:white;
   text-align: center;
@@ -1178,7 +1177,6 @@
 .btn-mygames-solo {
   width: 115px;
   height: 100px;
-  vertical-align: top;
   font-size: 16px;
   line-height: 36px;
   color:#222;
@@ -1482,4 +1480,18 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .grid-expansions-filters > div {
   height: 48px;
+}
+
+.grid-maps-filters {
+  position:absolute;
+  margin-left: 111px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.grid-personal-filters {
+  position:absolute;
+  margin-left:111px;
+  margin-top: 150px;
+  grid-template-columns: auto auto;
 }

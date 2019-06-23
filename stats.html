@@ -56,9 +56,9 @@
         </div>
 
 
-        <div style="position:absolute;margin-left: 111px;" title="filter by map">
+        <div class="grid-maps-filters" title="filter by map">
           <button id="THARSIS" class="button btn-map" onclick="toggleButton(id)" title="filter games played on THARSIS"><div>THARSIS</div></button>
-          <button id="HELLAS" style="margin-right:-4px" class="button btn-map" onclick="toggleButton(id)" title="filter games played on HELLAS"><div style="background:#3b9ae3">HELLAS</div></button>
+          <button id="HELLAS"  class="button btn-map" onclick="toggleButton(id)" title="filter games played on HELLAS"><div style="background:#3b9ae3">HELLAS</div></button>
           <button id="ELYSIUM" class="button  btn-map" onclick="toggleButton(id)" title="filter games played on ELYSIUM"><div style="background:#09aa09">ELYSIUM</div></button>
         </div>
 
@@ -172,9 +172,9 @@
             <option value="KUIPER BELT COOP.">KUIPER BELT COOP.</option>
           </select>
         </div>
-        <div style="position:absolute;margin-left:111px;margin-top: 150px;">
+        <div class="grid-personal-filters">
           <button disabled id="mygames" class="button btn-mygames-solo" onclick="toggleButton(id);toggleMyGamesButtons(id);" title="filter my games (for logged users)"><div>MY STATS</div></button>
-          <button style="width:230px;margin-left:-5px;" disabled id="mygames-group" class="button btn-mygames-solo" onclick="toggleButton(id);toggleMyGamesButtons(id);" title="filter my group games (for logged users)"><div>MY GROUP STATS</div></button>
+          <button style="width:230px;margin-left:-4px;" disabled id="mygames-group" class="button btn-mygames-solo" onclick="toggleButton(id);toggleMyGamesButtons(id);" title="filter my group games (for logged users)"><div>MY GROUP STATS</div></button>
         </div>
         <button id="filter-trigger" class="button btn-apply-filters" onclick="filterFunction();" title="Apply selected filters"><div>APPLY SELECTED FILTERS</div></button>
 
