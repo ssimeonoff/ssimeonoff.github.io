@@ -662,7 +662,7 @@ input::-webkit-inner-spin-button {
 
 .corporation-row > div {
     text-align: center;
-    font-size: 17px;
+    font-size: 22px;
     height: 25px;
     line-height: 25px;
     color: #222;
@@ -683,6 +683,7 @@ input::-webkit-inner-spin-button {
   color: #ffd27f !important;
   text-shadow: 0 0 1px black,  0 1px 1px black !important;
   background: #444;
+  font-size: 17px !important;
 }
 
 .chart-div-solo {

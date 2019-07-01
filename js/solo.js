@@ -641,7 +641,7 @@ function corporationWinrate(corporationGamesArray) {
       result = parseInt(corporationGamesArray[i]["result"]);
       if (result > 20) {wins++}
     }
-  return Math.round(wins*100/corporationGamesArray.length) + "<span style='font-size:12px'>%</span>"
+  return Math.round(wins*100/corporationGamesArray.length) + "<span style='font-size:17px'>%</span>"
   }
   else return 0 + "<span style='font-size:12px'>%</span>"
 }
