@@ -84,7 +84,7 @@
   width: 365px;
   height: 60px;
   font-size: 24px;
-  border-radius: 1px;
+  border-radius: 10px;
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
   border-bottom: 2px solid rgb(137,137,137);
@@ -109,6 +109,7 @@
   text-align: center;
   background-color: #ccc;
   color:#222;
+  border-radius: 10px;
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
   border-bottom: 2px solid rgb(137,137,137);
@@ -155,7 +156,7 @@
   width: 120px;
   height: 90px;
   font-size: 24px;
-  border-radius: 1px;
+  border-radius: 10px;
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
   border-bottom: 2px solid rgb(137,137,137);
@@ -188,7 +189,7 @@
   margin-left: 14px;
   margin-top: -87px;
   font-size: 40px;
-  border-radius: 1px;
+  border-radius: 10px;
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
   border-bottom: 2px solid rgb(137,137,137);
@@ -214,13 +215,12 @@ input::placeholder {
     border-radius: 16px;
     height: 20px;
     text-align: center;
-    margin-left: -20px;
+    margin-left: -28px;
     margin-top: -3px;
-    letter-spacing: 1px;
 }
 
 .icon-align-solo {
-  margin-left: -17px;
+  margin-left: 9px;
   margin-top: 7px;
 }
 
@@ -239,7 +239,7 @@ input::placeholder {
     color: #222;
     text-align: left;
     cursor: pointer;
-    border-radius: 1px;
+    border-radius: 10px;
     border-top: 2px solid rgb(221,221,221);
     border-left: 2px solid rgb(221,221,221);
     border-bottom: 2px solid rgb(137,137,137);
@@ -247,7 +247,7 @@ input::placeholder {
     box-shadow: 0 1px 3px 1px rgba(0,0,0,.8);
     background: #ccc;
     margin-right: -2px;
-    margin-bottom: 2px;
+    margin-bottom: -2px;
     transition: box-shadow 0.3s;
 }
 
@@ -263,10 +263,11 @@ input::placeholder {
   box-shadow: 0 2px 4px 1px #444;
   font-size: 16px;
   background: transparent;
-  border-top: 4px solid rgb(221,221,221);
-  border-left: 4px solid rgb(221,221,221);
-  border-bottom: 4px solid rgb(137,137,137);
-  border-right: 4px solid rgb(137,137,137);
+  border-radius: 10px;
+  border-top: 2px solid rgb(221,221,221);
+  border-left: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
   width:72px;
   height: 40px;
 }
@@ -291,7 +292,7 @@ input::placeholder {
   color: #222;
   text-align: center;
   cursor: pointer;
-  border-radius: 1px;
+  border-radius: 10px;
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
   border-bottom: 2px solid rgb(137,137,137);
@@ -322,7 +323,7 @@ input::placeholder {
     color: #222;
     text-align: center;
     cursor: pointer;
-    border-radius: 1px;
+    border-radius: 10px;
     border-top: 2px solid rgb(221,221,221);
     border-left: 2px solid rgb(221,221,221);
     border-bottom: 2px solid rgb(137,137,137);
@@ -371,7 +372,7 @@ input::placeholder {
   margin-left: auto;
   margin-right: auto;
   font-family: Prototype;
-  border-radius: 1px;
+  border-radius: 10px;
   font-size: 30px;
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
@@ -400,7 +401,7 @@ input::placeholder {
   cursor: pointer;
   font-family: Prototype;
   height: 60px;
-  border-radius: 1px;
+  border-radius: 10px;
   font-size: 30px;
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
@@ -437,6 +438,7 @@ input::placeholder {
   height: 60px;
   border-radius: 1px;
   font-size: 14px;
+  border-radius: 10px;
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
   border-bottom: 2px solid rgb(137,137,137);

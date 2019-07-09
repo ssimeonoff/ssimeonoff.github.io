@@ -1160,6 +1160,7 @@
   margin-top: 260px;
   font-family: Prototype;
   outline: none;
+  border-radius: 10px;
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
   border-bottom: 2px solid rgb(137,137,137);
