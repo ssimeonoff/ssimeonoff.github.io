@@ -691,13 +691,17 @@ input::-webkit-inner-spin-button {
   border-left: 2px solid rgb(221,221,221);
   border-bottom: 2px solid rgb(137,137,137);
   border-right: 2px solid rgb(137,137,137);
-  height: 389px;
+  height: 327px;
 }
 
 .chart-div-solo2 {
-  height:180px;
-  width: 220px;
+  height: 68px;
+  width: 286px;
   position: absolute;
-  margin-top: -360px;
-  margin-left: 230px;
+  margin-top: 50px;
+  margin-left: 170px;
+  border-top: 2px solid rgb(221,221,221);
+  border-left: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
 }

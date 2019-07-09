@@ -130,7 +130,7 @@
            <legend class="fieldset2">RESULT</legend>
 
              <div id="lossSection" class="section" onclick="activateLoss()">
-               <div id="lossLabel" style="color:#cc3333;font-weight:bold;font-size:50px;">&#x2717;</div>
+               <div id="lossLabel" style="color:rgb(102, 25, 25);font-weight:bold;font-size:50px;">&#x2717;</div>
                <select id="steps" class="drop-down2" name="steps" size="1" onchange="changeColours2(id)">
                  <option value="0" disabled selected class="selected-option">&nbsp;FAILED</option>
                    <option value="1">1 STEP</option>
@@ -161,15 +161,15 @@
       </div>
 
       <div class="chartStats">
-        <div class="grid-cell grid-corporations-title" style="font-size:18px"> <div>WINS/LOSSES/SCORES DISTRIBUTION</div></div>
-        <div class="grid4">
-          <div id="wins" class="grid-cell-solo"></div>
+        <div class="grid-cell grid-corporations-title" style="font-size:18px"> <div>SCORES DISTRIBUTION</div></div>
+        <div class="grid2" style="width:200px;">
+          <div id="average" class="grid-cell-solo"></div>
           <div id="losses" class="grid-cell-solo" style="color:#661919"></div>
           <div id="winrate" class="grid-cell-solo"></div>
-          <div id="average" class="grid-cell-solo"></div>
+          <div id="wins" class="grid-cell-solo"></div>
         </div>
-        <div><div class="chart-div-solo" id="histogram"></div><div class="chart-div-solo2" id="histogram-losses"></div></div>
-        <div></div>
+        <div class="chart-div-solo2" id="histogram-losses"></div>
+        <div class="chart-div-solo" id="histogram"></div>
       </div>
 
     </div>

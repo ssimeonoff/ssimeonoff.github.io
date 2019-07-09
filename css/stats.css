@@ -187,6 +187,11 @@
     border-right: 2px solid rgb(137,137,137);
 }
 
+.grid2 {
+  display: grid;
+  grid-template-columns: 70px 100px;
+}
+
 .grid3 {
   display: grid;
   grid-template-columns: 345px 42px 50px;

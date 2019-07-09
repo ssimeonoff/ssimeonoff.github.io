@@ -922,7 +922,7 @@ function histogram () {
       vAxis: { gridlines: { count: 0}, maxValue:20 , textPosition: 'none'},
       hAxis: {textStyle : {fontSize: 10, fontName: 'Prototype'},minValue:1, maxValue:9},
       bar: {gap: 1},
-      chartArea:{left:0,bottom:20,top:00,width:220, height:170},
+      chartArea:{left:10,bottom:20,top:00,width:265, height:270},
       colors: ['#661919','#888888'],
       histogram: {bucketSize: 1, minValue: 0, maxValue: 10},
     };
