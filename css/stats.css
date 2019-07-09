@@ -53,10 +53,11 @@
   cursor: pointer;
   outline: none;
   font-family: Prototype;
-  border-top: 4px solid rgb(221,221,221);
-  border-left: 4px solid rgb(221,221,221);
-  border-bottom: 4px solid rgb(137,137,137);
-  border-right: 4px solid rgb(137,137,137);
+  border-radius: 5px;
+  border-top: 2px solid rgb(221,221,221);
+  border-left: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
   cursor: pointer;
   outline: none;
   line-height: 24px;
@@ -77,24 +78,23 @@
   font-family: Prototype;
   cursor: pointer;
   outline: none;
-  line-height: 32px;
-  height: 32px;
+  line-height: 36px;
+  height: 36px;
   margin: 4px;
   box-shadow: 0 2px 4px 1px #444;
-  width: 56px;
+  width: 60px;
   font-size: 14px;
   color: #222;
   background: transparent;
-  border-top: 4px solid rgb(221,221,221);
-  border-left: 4px solid rgb(221,221,221);
-  border-bottom: 4px solid rgb(137,137,137);
-  border-right: 4px solid rgb(137,137,137);
+  border-radius: 5px;
+  border-top: 2px solid rgb(221,221,221);
+  border-left: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
 }
 
 .btn-submit:hover, .btn-grid-cell:hover {
-  box-shadow: 0 1px 1px 1px #444 !important;
   background: #ccc !important;
-
 }
 
 .btn-grid-cell {
@@ -108,10 +108,11 @@
   box-shadow: 0 2px 4px 1px #444;
   font-size: 20px;
   background: transparent;
-  border-top: 4px solid rgb(221,221,221);
-  border-left: 4px solid rgb(221,221,221);
-  border-bottom: 4px solid rgb(137,137,137);
-  border-right: 4px solid rgb(137,137,137);
+  border-radius: 5px;
+  border-top: 2px solid rgb(221,221,221);
+  border-left: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
   width:72px;
   height: 40px;
 }
@@ -194,7 +195,7 @@
 
 .grid3 {
   display: grid;
-  grid-template-columns: 345px 42px 50px;
+  grid-template-columns: 344px 42px 50px;
 }
 
 .grid4 {

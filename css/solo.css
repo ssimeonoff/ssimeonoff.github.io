@@ -272,6 +272,10 @@ input::placeholder {
   height: 40px;
 }
 
+.btn-grid-cell-solo:active {
+  transform: translate(0,1px); 
+}
+
 
 .btn-mode {
   height: 86px;
