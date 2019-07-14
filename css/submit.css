@@ -29,12 +29,21 @@
   grid-template-columns: 412px 412px;
 }
 
+
 #title-auth {
   font-family: Prototype;
-  padding-left: 30px;
   color: #222;
-  font-size: 16px;
-  margin-bottom: 5px;
+  font-size: 18px;
+  height: 46px;
+  line-height: 44px;
+  padding-left: 15px;
+  margin-bottom: 10px;
+  border-radius: 2px;
+  border-top: 4px solid rgb(221,221,221);
+  border-left: 4px solid rgb(221,221,221);
+  border-bottom: 4px solid rgb(137,137,137);
+  border-right: 4px solid rgb(137,137,137);
+  background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
 }
 
 #title {
@@ -83,27 +92,22 @@
   margin-top: 6px;
 }
 
-#title-auth {
-  font-family: Prototype;
-  color: white;
-  text-shadow: 0 0 1px black, 0 2px 2px black;
-  font-size: 18px;
-  height: 46px;
-  line-height: 44px;
-  padding-left: 15px;
-  margin-bottom: 10px;
-  border-radius: 2px;
-  border-top: 4px solid rgb(221,221,221);
-  border-left: 4px solid rgb(221,221,221);
-  border-bottom: 4px solid rgb(137,137,137);
-  border-right: 4px solid rgb(137,137,137);
-  background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
-}
+
 .link-auth {
   text-shadow: none;
   text-decoration: none;
   vertical-align: top;
-  font-size:24px;
+  font-size: 16px;
+  background: #eee;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #222;
+  border-top: 2px solid rgb(221,221,221);
+  border-left: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
+  box-shadow: 0 1px 3px 0px rgba(0,0,0,.8);
+  margin-left: 5px;
 }
 
 .link-auth:hover {
@@ -415,9 +419,9 @@ input::placeholder {
   border-right: 2px solid rgb(137,137,137);
   box-shadow: 0 1px 3px 1px rgba(0,0,0,.8);
   width: 805px;
-  margin-top: 20px;
+  margin-top: 33px;
   margin-left: 3px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   color: #222;
   background: #eee;
   letter-spacing: 1px;
@@ -709,12 +713,13 @@ input::-webkit-inner-spin-button {
 }
 
 .title-cell {
-  width: 440px;
-  color: white;
-  font-size: 16px;
-  line-height: 24px;
-  height: 24px;
-  text-shadow: 0 0 1px black, 0 2px 2px black;
+  width: 425px;
+  text-align: left;
+  padding-left: 15px;
+  color: #222;
+  font-size: 18px;
+  line-height: 46px;
+  height: 46px;
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
   border-bottom: 2px solid rgb(137,137,137);

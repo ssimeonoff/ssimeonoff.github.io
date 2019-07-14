@@ -168,9 +168,7 @@ function elysiumAwards() {
   resetAwards();
 }
 
-
-
-//modal functions
+//submit confirmation modal functions
 
 var closeBtns = [...document.querySelectorAll(".close")];
 closeBtns.forEach(function(btn){
@@ -235,6 +233,7 @@ function clearInputs() {
     scores[i].placeholder = "";
   }
 }
+
 //////////////////////////////////////////////////////////////////////////////
 function resetAwards() {
   x = document.querySelectorAll("input[name='milestones']:checked,input[name='awards']:checked ");

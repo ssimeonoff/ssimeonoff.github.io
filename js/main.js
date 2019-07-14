@@ -34,7 +34,7 @@ r1.on('value', (snap) => {
     } else {
       // No user is signed in.
       console.log("not logged")
-      document.getElementById("title-auth").innerHTML = "NOT SIGNED - " + '<a class="link-auth" href="https://ssimeonoff.github.io/login">SIGN IN HERE</a>'
+      document.getElementById("title-auth").innerHTML = "Submit games as Anonymous or you can " + '<a class="link-auth" href="https://ssimeonoff.github.io/login">Sign In</a>'
       //pushHistory("s.simeonoff@gmail.com");
     }
   });
@@ -287,7 +287,7 @@ function pushHistory(email) {
 
   //current time in seconds
   now = Math.floor((new Date()).getTime() / 1000);
-  gameSections = document.querySelectorAll(".grid-cell-history");
+  gameSections = document.querySelectorAll(".grid-cell-history-submit");
 
   for(i=0; i < gameSections.length && i < games.length ; i++) {
 
