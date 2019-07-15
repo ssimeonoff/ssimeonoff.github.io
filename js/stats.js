@@ -232,6 +232,7 @@ function filterFunction() {
 
 
 function pushData() {
+  calculateGamesPerPlayerCount();
   pushGeneralStats();
   pushCorporationsData();
   pushMapStats();
@@ -242,13 +243,22 @@ function pushData() {
   pushRanking();
 }
 
+function calculateGamesPerPlayerCount() {
+  //splitting all games in 4 arrays based on player count
+  games_2 = games.filter(function(el) {return el.players == 2});
+  games_3 = games.filter(function(el) {return el.players == 3});
+  games_4 = games.filter(function(el) {return el.players == 4});
+  games_5 = games.filter(function(el) {return el.players == 5});
+}
+
 function generateGameStats (players, corporationName) {
   //returning html formatted text
 
-  //filtering the games per players' count
-  gamesPerPlayers = games.filter(function(el) {
-    return el.players == players
-  });
+  //getting the games per players' count
+  if (players == 2) {gamesPerPlayers = games_2}
+  if (players == 3) {gamesPerPlayers = games_3}
+  if (players == 4) {gamesPerPlayers = games_4}
+  if (players == 5) {gamesPerPlayers = games_5}
 
   //calculated played and won games per corporation
   playedGames = [];
@@ -552,10 +562,10 @@ function pushCorporationsData() {
 function pushGeneralStats() {
   //total games
   document.getElementById("total_games").innerHTML = games.length;
-  document.getElementById("2p_games").innerHTML = games.filter(function(el) {return el.players == 2}).length;
-  document.getElementById("3p_games").innerHTML = games.filter(function(el) {return el.players == 3}).length;
-  document.getElementById("4p_games").innerHTML = games.filter(function(el) {return el.players == 4}).length;
-  document.getElementById("5p_games").innerHTML = games.filter(function(el) {return el.players == 5}).length;
+  document.getElementById("2p_games").innerHTML = games_2.length;
+  document.getElementById("3p_games").innerHTML = games_3.length;
+  document.getElementById("4p_games").innerHTML = games_4.length;
+  document.getElementById("5p_games").innerHTML = games_5.length;
 
 
   //draft games
@@ -873,9 +883,12 @@ function generateScoresArray (players) {
   var totalGames = 0
   //Generating the array for the Google histograms
   var scores = [['Corporation', 'Score']];
-  var gamesPerPlayers = games.filter(function(el) {
-    return el.players == players
-  });
+
+  //getting the games per players' count
+  if (players == 2) {gamesPerPlayers = games_2}
+  if (players == 3) {gamesPerPlayers = games_3}
+  if (players == 4) {gamesPerPlayers = games_4}
+  if (players == 5) {gamesPerPlayers = games_5}
 
   btnMyGames = document.querySelectorAll(".btn-mygames-solo.active");
   if (document.getElementById("mygames").classList.contains("active")) {
@@ -914,12 +927,15 @@ function generateScoresArray (players) {
 }
 
 function generateGenerationsArray (players) {
-
   //Generating the array for the Google histograms
   var generationsArr = [["Generations", "GenerationsValue"]]
-  var gamesPerPlayers = games.filter(function(el) {
-    return el.players == players
-  });
+
+  //getting the games per players' count
+  if (players == 2) {gamesPerPlayers = games_2}
+  if (players == 3) {gamesPerPlayers = games_3}
+  if (players == 4) {gamesPerPlayers = games_4}
+  if (players == 5) {gamesPerPlayers = games_5}
+
   for (i = 0; i < gamesPerPlayers.length; i++) {
       var generations = gamesPerPlayers[i]["generations"];
       var arr = ["Generations", parseInt(generations)];
