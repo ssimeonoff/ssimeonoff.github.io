@@ -96,9 +96,9 @@
 .link-auth {
   text-shadow: none;
   text-decoration: none;
+  vertical-align: top;
   font-size: 16px;
-  background: transparent;
-  padding: 3px;
+  background: #eee;
   padding-left: 10px;
   padding-right: 10px;
   color: #222;
@@ -111,7 +111,8 @@
 }
 
 .link-auth:hover {
-  background: #ccc;
+  color: white;
+  text-shadow: 0 0 1px black, 0 0px 3px orange;
 }
 
 .link {

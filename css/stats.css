@@ -12,16 +12,7 @@
     }
 }
 
-#spinner {
-  position: absolute;
-  transition: 2.5s;
-  margin-left: 70px;
-  margin-top: 100px;
-}
-
 .buttons-container {
-    transform: scale(0);
-    transition: 0.5s ease-in-out; transform-origin: top;
     position: relative;
     font-family: Prototype;
     background: #ccc;
@@ -180,8 +171,6 @@
 }
 
 .playerStats {
-    transform: scale(0);
-    transition: 0.5s ease-in-out; transform-origin: top;
     display: inline-block;
     position: relative;
     font-family: Prototype;
@@ -225,8 +214,6 @@
 }
 
 .generalStats {
-    transform: scale(0);
-    transition: 0.5s ease-in-out; transform-origin: top;
     display: grid;
     grid-template-columns: 140px 80px 80px 80px 80px;
     position: relative;
@@ -246,8 +233,6 @@
 }
 
 .stats-ranking {
-  transform: scale(0);
-  transition: 0.5s ease-in-out; transform-origin: top;
   display: grid;
   grid-template-columns: 90px 110px 120px 140px;
   position: relative;
@@ -273,8 +258,6 @@
 }
 
 .chartStats {
-    transform: scale(0);
-    transition: 0.5s ease-in-out; transform-origin: top;
     display: grid;
     grid-template-columns: 460px;
     position: relative;
@@ -310,8 +293,6 @@
 }
 
 .generalStats2 {
-    transform: scale(0);
-    transition: 0.5s ease-in-out; transform-origin: top;
     display: grid;
     grid-template-columns: 140px 160px 160px;
     position: relative;
@@ -332,8 +313,6 @@
 
 
 .generalStats-history {
-    transform: scale(0);
-    transition: 0.5s ease-in-out; transform-origin: top;
     display: grid;
     grid-template-columns: 230px 230px;
     position: relative;
@@ -519,7 +498,8 @@
 
 #title-auth {
   font-family: Prototype;
-  color: #222;
+  color: white;
+  text-shadow: 0 0 1px black, 0 2px 2px black;
   font-size: 18px;
   height: 46px;
   line-height: 44px;
@@ -535,22 +515,13 @@
 .link-auth {
   text-shadow: none;
   text-decoration: none;
-  font-size: 16px;
-  background: transparent;
-  padding: 3px;
-  padding-left: 10px;
-  padding-right: 10px;
-  color: #222;
-  border-top: 2px solid rgb(221,221,221);
-  border-left: 2px solid rgb(221,221,221);
-  border-bottom: 2px solid rgb(137,137,137);
-  border-right: 2px solid rgb(137,137,137);
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,.8);
-  margin-left: 5px;
+  vertical-align: top;
+  font-size:24px;
 }
 
 .link-auth:hover {
-  background: #ccc;
+  color: white;
+  text-shadow: 0 0 1px black, 0 0px 3px orange;
 }
 
 .link {

@@ -24,14 +24,7 @@ firebase.database().ref("games-production").on('value', function(snapshot) {
       });
       games = GAMES_ALL;
     }
-    //pushing the initial data
     pushData();
-    //removing the spinner
-    hideSpinner();
-    //revealing the tableaus
-    setTimeout(function functionName() {
-      revealTableaus();
-    },2000)
 });
 
 firebase.auth().onAuthStateChanged(function(user) {
@@ -48,7 +41,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     } else {
       // No user is signed in.
       console.log("not logged")
-      document.getElementById("title-auth").innerHTML = "Submit games as Anonymous or you can " + '<a class="link-auth" href="https://ssimeonoff.github.io/login">Sign In</a>'
+      document.getElementById("title-auth").innerHTML = "NOT SIGNED - " + '<a class="link-auth" href="https://ssimeonoff.github.io/login">SIGN IN HERE</a>'
     }
   }
 });
@@ -80,24 +73,6 @@ function pushData() {
   pushRanking();
 }
 
-
-function hideSpinner () {
-  spinner = document.getElementById("spinner");
-  spinner.style.transform = "scale(0) translate(500px, -300px)"
-}
-
-function revealTableaus () {
-  //revealing all tableaus with random delay
-  setTimeout(function() {document.querySelector(".buttons-container").style.transform = "scale(1)"}, 0)
-  setTimeout(function() {document.querySelector(".generalStats-history").style.transform = "scale(1)"}, 500)
-  setTimeout(function() {document.querySelector(".playerStats").style.transform = "scale(1)"}, 1000)
-  setTimeout(function() {document.querySelector(".stats-ranking").style.transform = "scale(1)"}, 1500)
-  setTimeout(function() {document.querySelector(".generalStats").style.transform = "scale(1)"}, 2000)
-  setTimeout(function() {document.querySelector(".generalStats2").style.transform = "scale(1)"}, 2500)
-  setTimeout(function() {document.querySelector(".generalStats3").style.transform = "scale(1)"}, 3000)
-  setTimeout(function() {document.querySelector(".chartStats").style.transform = "scale(1)"}, 3500)
-
-}
 function calculateGamesPerPlayerCount() {
   //splitting all games in 4 arrays based on player count
   games_2 = games.filter(function(el) {return el.players == 2});
