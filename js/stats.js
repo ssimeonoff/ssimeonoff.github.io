@@ -60,6 +60,35 @@ function snapshotToArray(snapshot) {
     return returnArr;
 };
 
+function pushData() {
+  //displaying and updating the tableaus
+  calculateGamesPerPlayerCount();
+  pushGeneralStats();
+  pushCorporationsData();
+  pushMapStats();
+  pushAwardsStats();
+  pushAverageGenerations();
+  pushHistograms();
+  pushHistory();
+  pushRanking();
+}
+
+function calculateGamesPerPlayerCount() {
+  //splitting all games in 4 arrays based on player count
+  games_2 = games.filter(function(el) {return el.players == 2});
+  games_3 = games.filter(function(el) {return el.players == 3});
+  games_4 = games.filter(function(el) {return el.players == 4});
+  games_5 = games.filter(function(el) {return el.players == 5});
+
+  //total games
+  document.getElementById("total_games").innerHTML = games.length;
+  document.getElementById("2p_games").innerHTML = games_2.length;
+  document.getElementById("3p_games").innerHTML = games_3.length;
+  document.getElementById("4p_games").innerHTML = games_4.length;
+  document.getElementById("5p_games").innerHTML = games_5.length;
+}
+
+
 function toggleButton(id) {
   //toggling active buttons state
   clickedElementID = document.getElementById(id);
@@ -228,27 +257,6 @@ function filterFunction() {
   pushData();
   //to keep the corporations sorting
   if (playersButton > 1) {sortBy(playersButton)}
-}
-
-
-function pushData() {
-  calculateGamesPerPlayerCount();
-  pushGeneralStats();
-  pushCorporationsData();
-  pushMapStats();
-  pushAwardsStats();
-  pushAverageGenerations();
-  pushHistograms();
-  pushHistory();
-  pushRanking();
-}
-
-function calculateGamesPerPlayerCount() {
-  //splitting all games in 4 arrays based on player count
-  games_2 = games.filter(function(el) {return el.players == 2});
-  games_3 = games.filter(function(el) {return el.players == 3});
-  games_4 = games.filter(function(el) {return el.players == 4});
-  games_5 = games.filter(function(el) {return el.players == 5});
 }
 
 function generateGameStats (players, corporationName) {
@@ -560,14 +568,6 @@ function pushCorporationsData() {
 }
 
 function pushGeneralStats() {
-  //total games
-  document.getElementById("total_games").innerHTML = games.length;
-  document.getElementById("2p_games").innerHTML = games_2.length;
-  document.getElementById("3p_games").innerHTML = games_3.length;
-  document.getElementById("4p_games").innerHTML = games_4.length;
-  document.getElementById("5p_games").innerHTML = games_5.length;
-
-
   //draft games
   var draftGames = games.filter(function(el) {
     return el.draft == "YES"

@@ -208,9 +208,9 @@
   grid-template-columns: 140px 80px 80px 80px 80px;
 }
 
-.grid5b {
+.grid5-odometers {
   display: grid;
-  grid-template-columns: auto auto auto auto auto;
+  grid-template-columns: 112px auto auto auto auto;
 }
 
 .generalStats {

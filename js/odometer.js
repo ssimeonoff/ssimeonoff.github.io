@@ -408,7 +408,7 @@
     Odometer.prototype.addSpacer = function(chr, before, extraClasses) {
       var spacer;
       spacer = createFromHTML(FORMAT_MARK_HTML);
-      spacer.innerHTML = chr;
+      spacer.innerHTML = "";
       if (extraClasses) {
         addClass(spacer, extraClasses);
       }
