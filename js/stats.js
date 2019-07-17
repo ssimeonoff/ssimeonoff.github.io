@@ -18,7 +18,7 @@ firebase.database().ref("games-production").on('value', function(snapshot) {
     games = snapshotToArray(snapshot);
     if (email_guest != "ALL")  {
       console.log(email_guest[0])
-      document.getElementById("title-auth").innerHTML = "games from " + email_guest + "****"
+      document.getElementById("account-name").innerHTML = "Games submitted by<br>" + email_guest + "****"
       GAMES_ALL = games.filter(function(el) {
         return el.email != undefined && el.email.search(email_guest) > -1;
       });
@@ -34,14 +34,14 @@ firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       // User is signed in.
       console.log("logged")
-      document.getElementById("title-auth").innerHTML = user.displayName + " - " + user.email
+      document.getElementById("account-name").innerHTML = user.displayName + "<br>" + user.email
       document.getElementById("mygames").disabled = false;
       document.getElementById("mygames-group").disabled = false;
 
     } else {
       // No user is signed in.
       console.log("not logged")
-      document.getElementById("title-auth").innerHTML = "NOT SIGNED - " + '<a class="link-auth" href="https://ssimeonoff.github.io/login">SIGN IN HERE</a>'
+      document.getElementById("account-name").innerHTML = "<div class='link-auth'>Sign In</div>Not Signed<br>Personal statistics are unavailable"
     }
   }
 });

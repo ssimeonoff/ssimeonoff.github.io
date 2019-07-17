@@ -12,6 +12,14 @@
     }
 }
 
+.astronaut {
+  width: 36px;
+  height: 36px;
+  margin-top: 5px;
+  margin-left: -5px;
+  margin-right: 5px;
+}
+
 .buttons-container {
     position: relative;
     font-family: Prototype;
@@ -498,8 +506,7 @@
 
 #title-auth {
   font-family: Prototype;
-  color: white;
-  text-shadow: 0 0 1px black, 0 2px 2px black;
+  color: #222;
   font-size: 18px;
   height: 46px;
   line-height: 44px;
@@ -512,11 +519,35 @@
   border-right: 4px solid rgb(137,137,137);
   background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
 }
+
+#account-name {
+  position: absolute;
+  height: 50px;
+  line-height: 18px;
+  margin-left: 45px;
+  margin-top: -52px;
+}
 .link-auth {
+  position: absolute;
+  margin-left: 285px;
+  margin-top: 0px;
   text-shadow: none;
   text-decoration: none;
   vertical-align: top;
-  font-size:24px;
+  box-shadow: 0 2px 4px 1px #444;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  width: 100px;
+  font-size: 18px;  
+  color: #222;
+  background: transparent;
+  border-radius: 5px;
+  border-top: 2px solid rgb(221,221,221);
+  border-left: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
+
 }
 
 .link-auth:hover {
