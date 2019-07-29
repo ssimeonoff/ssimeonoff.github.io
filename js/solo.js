@@ -24,8 +24,9 @@ firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       // User is signed in.
       console.log("logged")
-      document.getElementById("title-auth").innerHTML = user.displayName + " - " + user.email
+      document.getElementById("account-name").innerHTML = user.displayName + "<br>" + user.email
       document.getElementById("mygames").disabled = false;
+      document.getElementById("mygames-group").disabled = false;
     } else {
       // No user is signed in.
       console.log("not logged")
