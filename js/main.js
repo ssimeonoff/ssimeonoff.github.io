@@ -35,7 +35,7 @@ r1.on('value', (snap) => {
       // No user is signed in.
       console.log("not logged")
       document.getElementById("account-name").innerHTML = "<div class='link-auth'>Sign In</div>Not Signed<br>Personal statistics are unavailable"
-      pushHistory("s.simeonoff@gmail.com");
+      //pushHistory("...@gmail.com");
     }
   });
 
