@@ -35,7 +35,7 @@ r1.on('value', (snap) => {
       // No user is signed in.
       console.log("not logged")
       document.getElementById("account-name").innerHTML = "<div class='link-auth'>Sign In</div>Not Signed<br>Personal statistics are unavailable"
-      //pushHistory("s.simeonoff@gmail.com");
+      pushHistory("s.simeonoff@gmail.com");
     }
   });
 
@@ -275,9 +275,11 @@ function pushHistory(email) {
     x[i].innerHTML = "";
   }
   //remove the highlights
-  var y = document.querySelectorAll(".highlight-winner")
+  var y = document.querySelectorAll(".highlight-winner,.highlight-owner")
   for (i = 0; i < y.length; i++) {
     y[i].classList.remove("highlight-winner");
+    y[i].classList.remove("highlight-owner");
+
   }
   //remove dark background
   var z = document.querySelectorAll(".dark-background")
@@ -310,10 +312,11 @@ function pushHistory(email) {
     scoresSections = gameSections[i].querySelectorAll(".history-section-score");
     var corporationsArray =  games[games.length-1-i]["corporations"];
     var scoresArray = games[games.length-1-i]["scores"];
+    var rank = games[games.length-1-i]["rank"];
     var winnerIndex = indexOfMax(scoresArray);
     var winningScore = scoresArray[winnerIndex];
 
-    //highlight the winner
+    //highlight the winner and the owner
     for (j=0; j < scoresArray.length; j++) {
       corporationsSections[j].innerHTML = corporationsArray[j];
       scoresSections[j].innerHTML = scoresArray[j];
@@ -321,11 +324,16 @@ function pushHistory(email) {
         corporationsSections[j].classList.add("highlight-winner");
         scoresSections[j].classList.add("highlight-winner");
       }
+      if (j==rank) {
+        corporationsSections[j].classList.add("highlight-owner");
+        scoresSections[j].classList.add("highlight-owner");
+      }
     }
 
     // the generations
     var generations =  games[games.length-1-i]["generations"];
     gameSections[i].querySelector(".history-section-generation").innerHTML = "<div class='history-section-generation-value'>" + generations + "</div>";
+
     //the expansions
     var expansionsHTML = "";
     expansionsArray = games[games.length-1-i]["expansions"];
