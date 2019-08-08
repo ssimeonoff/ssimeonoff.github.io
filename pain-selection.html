@@ -5,15 +5,15 @@
     <meta name="viewport" content='width=device-width, user-scalable=0'>
     <title>Pain Selection</title>
     <meta name="viewport" content='width=400'>
-    <link type="text/css" rel="stylesheet" href="css/pain.css">
+    <link type="text/css" rel="stylesheet" href="css/pain2.css">
   </head>
   <body  style="background-color:rgb(245,245,245);background-repeat:no-repeat; background-size:100%">
 
     <div class="div">
-      <div id="text">0 - No pain</div>
+      <div id="text">0 - No Pain</div>
       <div id="text-description">"I have no pain."</div>
 
-      <input id="pain-input" type="range" name="" min="0" max="10" value="0" step="1" list="tickmarks" oninput="painDescription();">
+      <input id="pain-input" type="range" name="" min="-20" max="1020" value="0" step="1" list="tickmarks" oninput="painDescription();" onchange="adjustThumb();">
       <div class="grid">
         <div style="border-left:none;">0</div>
         <div>1</div>
