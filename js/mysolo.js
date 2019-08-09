@@ -87,6 +87,32 @@ data_ce_vn_pr_co = [
   ['Stormcraft', 90,113,89,0,102,102,111]
 ];
 
+data_ce_vn_prAll_co = [
+  ['Aphrodite', 93,96],
+  ['Aridor', 93,115,106,116,96,0,131,121],
+  ['Celestic', 95,94],
+  ['Cheung Shing Mars', 125,101,108,98,107,105,94,98],
+  ['Credicor', 0,89,100,103,70,93,97,86,0],
+  ['Ecoline', 98,102,135,98,85,92,0,104],
+  ['Helion', 77,98,0,100,101,106,122],
+  ['Interplanetary', 80,0,97],
+  ['Manutech', 93],
+  ['Mining Guild', 92,123,91,0,110],
+  ['MSI', 82,102],
+  ['Phobolog', 103,101,106],
+  ['Point Luna', 105,0,97,82,99,92],
+  ['Poseidon', 99,85,0,103,88,107],
+  ['Robinson Industries', 111,92,101,0],
+  ['Saturn Systems', 100,104,88,114,110,0],
+  ['Stormcraft', 0,101,113,98,0],
+  ['Teractor', 113,112,96,121,0],
+  ['Thorgate', 93,0,111],
+  ['UNMI', 103,91],
+  ['Valley Trust', 113,93],
+  ['Viron', 0,93],
+  ['Vitor', 93]
+];
+
 data_ce_co = [
   ['Credicor', 122,90,126,110,75,102,121,0,0],
   ['Ecoline', 114,106,94,111,100,129,82,104],
@@ -111,6 +137,7 @@ histogram("div_ce", data_ce);
 histogram("div_ce_vn", data_ce_vn);
 histogram("div_ce_vn_pr", data_ce_vn_pr);
 histogram("div_ce_vn_pr_co", data_ce_vn_pr_co);
+histogram("div_ce_vn_prAll_co", data_ce_vn_prAll_co);
 histogram("div_ce_co", data_ce_co);
 
 
