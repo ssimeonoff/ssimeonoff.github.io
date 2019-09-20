@@ -132,7 +132,6 @@ function arrayExpansions() {
 // Reference Games collection
   firebase.database().ref("games-solo").on('value', function(snapshot) {
     GAMES_ALL = snapshotToArray(snapshot);
-    GAMES_ALL_JSON = JSON.stringify(snapshot)
     games = snapshotToArray(snapshot);
     if (email_guest != "ALL")  {
       console.log(email_guest[0])
@@ -143,6 +142,7 @@ function arrayExpansions() {
       });
       games = GAMES_ALL;
     }
+    GAMES_ALL_JSON = JSON.stringify(GAMES_ALL); //for the download file
     pushData();
   });
 
