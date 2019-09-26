@@ -1,28 +1,80 @@
+@font-face {
+    font-family: Prototype;
+    src: url(../fonts/Prototype.ttf);
+}
 
-.section-styling {
-  background: white;
-  margin-top: 50px;
+.form {
   margin-left: auto;
   margin-right: auto;
-  border-radius: 120px 20px 20px 120px;
+  width: 800px;
+}
+
+.section-header {
+  width: 800px;
+  height: 200px;
+  font-family: Arial;
+  padding: 10px;
+  color: #444;
+  background: #eeeeee;
+  background: linear-gradient(to right, #bbb,#fff,#bbb);
+  margin-top: 50px;
+  margin-bottom: 30px;
+  border-radius: 0px;
+  box-shadow: 0 1px 3px 1px #666;
   border-top: 4px solid #eee;
   border-left: 4px solid #eee;
   border-bottom: 4px solid #aaa;
   border-right: 4px solid #aaa;
+}
+
+.section-job {
+  width: 800px;
+  height: 100px;
+  margin-bottom: 20px;
+  font-family: Arial;
+  padding: 10px;
+  color: #222;
+  background: #eeeeee;
+  background: linear-gradient(to right, #bbb,#fff,#bbb);
+  border-radius: 0px;
   box-shadow: 0 1px 3px 1px #666;
+  border-top: 4px solid #eee;
+  border-left: 4px solid #eee;
+  border-bottom: 4px solid #aaa;
+  border-right: 4px solid #aaa;
 }
 
-.section-header {
-    width: 800px;
-    height: 200px;
+.section-label {
+  width: 820px;
+  font-family: Arial;
+  color: #444;
+  font-size: 40px;
+  margin-bottom: 20px;
 }
 
-.avatar {
+.image-avatar {
+  display: inline-block;
   border-radius: 50%;
   width: 180px;
   height: 180px;
-  margin-top: 7px;
+  margin-top: 8px;
   margin-left: 10px;
-  border: 2px solid white;
-  box-shadow: 0 0px 0px 1px #888;
+  border: 2px solid #ddd;
+}
+.image-job {
+  display: inline-block;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin-top: 8px;
+  margin-left: 10px;
+  border: 2px solid #ddd;
+}
+
+.name {
+  display: inline-block;
+  font-size: 50px;
+  color: #444;
+  vertical-align: top;
+  margin: 10px;
 }
