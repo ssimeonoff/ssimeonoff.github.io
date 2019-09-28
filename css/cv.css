@@ -7,49 +7,41 @@
   margin-left: auto;
   margin-right: auto;
   width: 800px;
+  background-color: #eee;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  margin-top: 20px;
 }
 
 .section-header {
-  width: 800px;
   height: 200px;
   font-family: Arial;
   padding: 10px;
   color: #444;
-  background: #eeeeee;
-  background: linear-gradient(to right, #bbb,#fff,#bbb);
-  margin-top: 50px;
+  background-color: #fff;
   margin-bottom: 30px;
-  border-radius: 0px;
-  box-shadow: 0 1px 3px 1px #666;
-  border-top: 4px solid #eee;
-  border-left: 4px solid #eee;
-  border-bottom: 4px solid #aaa;
-  border-right: 4px solid #aaa;
+  border-radius: 200px;
+  box-shadow: 0 1px 3px 1px rgba(0,0,0,.5);
 }
 
 .section-job {
-  width: 800px;
   height: 100px;
   margin-bottom: 20px;
   font-family: Arial;
   padding: 10px;
-  color: #222;
-  background: #eeeeee;
-  background: linear-gradient(to right, #bbb,#fff,#bbb);
-  border-radius: 0px;
-  box-shadow: 0 1px 3px 1px #666;
-  border-top: 4px solid #eee;
-  border-left: 4px solid #eee;
-  border-bottom: 4px solid #aaa;
-  border-right: 4px solid #aaa;
+  color: #444;
+  background-color: #fff;
+  border-radius: 100px;
+  box-shadow: 0 1px 3px 1px rgba(0,0,0,.5);
+
 }
 
 .section-label {
-  width: 820px;
   font-family: Arial;
-  color: #444;
-  font-size: 40px;
-  margin-bottom: 20px;
+  color: #888;
+  font-size: 30px;
+  margin-bottom: 10px;
 }
 
 .image-avatar {
@@ -59,7 +51,7 @@
   height: 180px;
   margin-top: 8px;
   margin-left: 10px;
-  border: 2px solid #ddd;
+  border: 2px solid rgba(0,0,0,.1);
 }
 .image-job {
   display: inline-block;
@@ -68,7 +60,7 @@
   height: 80px;
   margin-top: 8px;
   margin-left: 10px;
-  border: 2px solid #ddd;
+  border: 2px solid rgba(0,0,0,.1);
 }
 
 .name {
