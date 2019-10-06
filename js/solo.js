@@ -59,7 +59,6 @@ function submitForm(e) {
   //Get values
   user = firebase.auth().currentUser;
   if (user != null) {
-    console.log(user.displayName)
     name = user.displayName;
     email = user.email;
   }
@@ -109,7 +108,6 @@ function saveGame(name, email, corporation, expansions, result, mode, map, times
 }
 
 function deleteLastGame () {
-  console.log(newGameRef.key);
   gamesRef.child(newGameRef.key).remove();
   document.getElementById("delete").style.transform = "scale(0)";
   setTimeout(function() {
@@ -142,7 +140,6 @@ function arrayExpansions() {
       });
       games = GAMES_ALL;
     }
-    GAMES_ALL_JSON = JSON.stringify(GAMES_ALL); //for the download file
     pushData();
   });
 
@@ -619,7 +616,11 @@ function compareTime(time) {
 }
 
 function download(data, filename, json) {
-    var file = new Blob([GAMES_ALL_JSON], {type: "text/plain;charset=utf-8"});
+    var data_scubbed = scrubData(GAMES_ALL);
+    var games_as_text = JSON.stringify(GAMES_ALL); //for the download file
+
+    var file = new Blob([games_as_text], {type: "text/plain;charset=utf-8"});
+
     if (window.navigator.msSaveOrOpenBlob) // IE10+
         window.navigator.msSaveOrOpenBlob(file, filename);
     else { // Others
@@ -634,6 +635,14 @@ function download(data, filename, json) {
             window.URL.revokeObjectURL(url);
         }, 0);
     }
+}
+
+function scrubData(data) {
+  //remove names and emails upon download
+  for(i=0; i < data.length; i++) {
+    delete data[i]["name"];
+    delete data[i]["email"];
+  }
 }
 
 function corporationWinrate(corporationGamesArray) {
@@ -973,7 +982,7 @@ function sortBy(sortRule) {
    //get the sort rule
   // get array of elements
     var myArray = document.querySelectorAll('.corporation-row');
-    console.log(myArray)
+
     var count = 0;
     // sort based on timestamp attribute
     myArray = [].slice.call(myArray);
@@ -982,7 +991,7 @@ function sortBy(sortRule) {
       a = parseInt($(a).find("div[id*=" + sortRule + "-]").text(), 10);
       if (a == null || isNaN(a)) {a = 0}
       b = parseInt($(b).find("div[id*=" + sortRule + "-]").text(), 10);
-      console.log(b)
+
       if (b == null || isNaN(b)) {b = 0}
       count += 2;
       // compare

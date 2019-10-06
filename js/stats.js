@@ -14,7 +14,6 @@ firebase.initializeApp(config);
 // Reference Games collection
 firebase.database().ref("games-production").on('value', function(snapshot) {
     GAMES_ALL = snapshotToArray(snapshot);
-    GAMES_ALL_JSON = JSON.stringify(snapshot)
     games = snapshotToArray(snapshot);
     if (email_guest != "ALL")  {
       console.log(email_guest[0])
@@ -1166,14 +1165,18 @@ function changeColours (id) {
 }
 
 function download(data, filename, json) {
-    var file = new Blob([GAMES_ALL_JSON], {type: "text/plain;charset=utf-8"});
+    var data_scubbed = scrubData(GAMES_ALL);
+    var games_as_text = JSON.stringify(GAMES_ALL); //for the download file
+
+    var file = new Blob([games_as_text], {type: "text/plain;charset=utf-8"});
+
     if (window.navigator.msSaveOrOpenBlob) // IE10+
         window.navigator.msSaveOrOpenBlob(file, filename);
     else { // Others
         var a = document.createElement("a"),
                 url = URL.createObjectURL(file);
         a.href = url;
-        a.download = "TM Games - " + GAMES_ALL.length;
+        a.download = "Solo Games - " + GAMES_ALL.length;
         document.body.appendChild(a);
         a.click();
         setTimeout(function() {
@@ -1181,6 +1184,14 @@ function download(data, filename, json) {
             window.URL.revokeObjectURL(url);
         }, 0);
     }
+}
+
+function scrubData(data) {
+  //remove names and emails upon download
+  for(i=0; i < data.length; i++) {
+    delete data[i]["name"];
+    delete data[i]["email"];
+  }
 }
 
 function parseURLParams(url) {
