@@ -51,19 +51,25 @@
 }
 
 .grid-expansions > div {
-    height: 23px;
+    height: 27px;
     font-size: 12px;
-    line-height: 23px;
+    line-height: 27px;
     margin: 5px;
     border-radius: 20px;
     box-shadow: 0 1px 2px #222;
 }
 
 .grid-values {
-  display: grid;
-  grid-template-columns: 52px 52px;
-  gap: 5px;
-  padding: 5px;
+
+}
+
+.grid-cell-solo-values {
+      text-align: center;
+      font-size: 24px;
+      color: #333;
+      height: 49px;
+      text-align: center;
+      background: #aaa;
 }
 
 
@@ -118,19 +124,6 @@
       text-shadow: 0 0px 1px black, 0 1px 1px black;
       line-height: 20px;
       border-radius: 1px;
-}
-
-.grid-cell-solo-title {
-      text-align: center;
-      font-size: 20px;
-      color: white;
-      text-shadow: 0 0px 1px black, 0 1px 0px black;
-      height: 40px;
-      border-radius: 10px;
-      line-height: 43px;
-      text-align: center;
-      box-shadow: 0 1px 2px #222;
-      background: #aaa;
 }
 
 .table-header {

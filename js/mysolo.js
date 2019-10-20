@@ -178,10 +178,8 @@ function histogram (div_id, data) {
     var avg = Math.round(parseFloat(sum/(games.length-1)));
     var winrate = Math.round(parseFloat(100*(games.length-1)/(games.length-1+losses)));
 
-    div.querySelector(".wins-mysolo").innerHTML = games.length -1 + "<span style='font-size:20px;font-weight:bold'>&#x2713;</span>";
-    div.querySelector(".points-mysolo").innerHTML = avg +"<span style='font-size:16px'>P</span>";
-    div.querySelector(".losses-mysolo").innerHTML = losses +"<span style='font-size:20px;'>&#x2717;</span>";
-    div.querySelector(".winrate-mysolo").innerHTML =  winrate +"<span style='font-size:16px'>%</span>";
+    div.querySelector(".points-mysolo").innerHTML = "<div style='font-size:12px;margin-top:5px;'>AVERAGE SCORE</div>" +  avg +"<span style='font-size:16px'>P</span>";
+    div.querySelector(".winrate-mysolo").innerHTML = "<div style='font-size:12px;margin-top:5px;'>WINRATE</div>" +  winrate +"<span style='font-size:16px'>%</span>";
 
     var games = google.visualization.arrayToDataTable(games);
     var chart = new google.visualization.Histogram(div.querySelector(".chart-div-mysolo"));
