@@ -34,6 +34,25 @@ data_ce_vn = [
   ['MSI', 93,106,101,94,104,104,108,91]
 ];
 
+data_ce_pr = [
+  ['Credicor', 93,95,6,114,117,98,4,123],
+  ['Ecoline', 112,101,2,2,100,93,109],
+  ['Helion', 96,91,85,89,116,112],
+  ['Interplanetary', 101,107,100,91,110,114,117],
+  ['Inventrix', 92],
+  ['Phobolog', 113,95,9,107,9,4],
+  ['Tharsis Republic', 8,93,98,91,107,112],
+  ['Thorgate', 3,104],
+  ['UNMI', 109,112,95,92,115,107,99,124,111,116,97],
+  ['Teractor', 102,7,81,93,84,77],
+  ['Saturn Systems', 6,113,2,90,2,2,106,114,94,98,108],
+  ['Cheung Shing Mars', 124,100,99,100,98,4,82,111],
+  ['Point Luna', 96,109,108,102,111,90],
+  ['Robinson Industries', 109,97,2],
+  ['Valley Trust', 93,88,93,4],
+  ['Vitor']
+];
+
 data_ce_vn_pr = [
   ['Credicor', 82],
   ['Ecoline', 111,96,0,99,109,102,96,114,93,98,117],
@@ -135,6 +154,7 @@ data_ce_co = [
 
 histogram("div_ce", data_ce);
 histogram("div_ce_vn", data_ce_vn);
+histogram("div_ce_pr", data_ce_pr);
 histogram("div_ce_vn_pr", data_ce_vn_pr);
 histogram("div_ce_vn_pr_co", data_ce_vn_pr_co);
 histogram("div_ce_vn_prAll_co", data_ce_vn_prAll_co);
@@ -225,7 +245,7 @@ function generateHTML(expansions,games) {
     if (games[i][1] > 0 && games[i][1] < 80) {
       el.innerHTML += "<div class='result background-bronze'>"+games[i][1]+"</div>";
     }
-    if (games[i][1] == 0 ) {
+    if (games[i][1] < 10 ) {
       el.innerHTML += "<div class='failed'></div>";
     }
   }
