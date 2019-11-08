@@ -1481,3 +1481,18 @@ input[type=number]::-webkit-outer-spin-button {
   margin-top: 150px;
   grid-template-columns: auto auto;
 }
+
+.pro-label {
+  display: inline-block;
+  background: orange;
+  padding-left:15px;
+  padding-right: 15px;
+  line-height: 30px;
+  margin-left: -70px;
+  margin-right: 65px;
+  text-align: center;
+  color:white;
+  border:1px solid #444;
+  box-shadow: 0 1px 2px rgba(0,0,0,.5);
+  width: 60px;
+}
