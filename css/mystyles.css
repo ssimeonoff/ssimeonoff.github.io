@@ -302,6 +302,32 @@ border-right: 2px solid rgb(137,137,137);
     margin-top: -6px;
 }
 
+.globalTag {
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
+    position: absolute;
+    width: 80px;
+    height: 40px;
+    background-size: 42px 42px;
+    background-position: -1px -1px;
+    text-align: center;
+    border-radius: 40px;
+    border-top: 2px solid rgb(221,221,221);
+    border-left: 2px solid rgb(221,221,221);
+    border-bottom: 2px solid rgb(137,137,137);
+    border-right: 2px solid rgb(137,137,137);
+    background-color: white;
+    margin-top: -6px;
+}
+
+.globalTag1 {
+  margin-left: -5px;
+}
+
+.globalTag2 {
+  margin-left: 160px;
+  margin-top: 40px;
+}
+
 .tag1 {
     margin-left: 200px;
 }
@@ -325,6 +351,22 @@ border-right: 2px solid rgb(137,137,137);
     border: 1px solid black;
     border-radius: 4px;
     line-height: 30px;
+    text-align: center;
+    font-size: 16px;
+    text-align: center;
+}
+
+.globalTitle {
+    text-transform: uppercase;
+    font-family: Prototype;
+    float: left;
+    margin-top: 20px;
+    margin-left: -1px;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 4px;
+    height: 40px;
+    line-height: 15px;
     text-align: center;
     font-size: 16px;
     text-align: center;
@@ -761,8 +803,10 @@ border-right: 2px solid rgb(137,137,137);
 
 .contentCorporation {
     position: relative;
+    font-family: Prototype;
+    font-size: 18px;
+    font-weight: normal;
     display: inline-block;
-    font-weight:bold;
     padding: 8px;
 }
 
@@ -821,6 +865,7 @@ border-right: 2px solid rgb(137,137,137);
     font-size: 11px;
     line-height: 13px;
     font-weight:normal;
+    font-family: Arial;
 }
 
 .production-box {
@@ -1010,7 +1055,17 @@ border-right: 2px solid rgb(137,137,137);
             -ms-transform: scale(1.6,1); /* IE 9 */
             -o-transform: scale(1.6,1); /* Opera */
             transform: scale(1.6,1); /* W3C */
-        }
+          }
+
+ .empty-tile-small {
+   background-color: rgb(190,190,190);
+   color: rgb(50,50,50);
+   font-weight: normal;
+   vertical-align: middle;
+   width:20px;
+   height: 15px;
+   padding:5px;
+ }
 
 
 .special-tile {
@@ -1233,6 +1288,17 @@ border-right: 2px solid rgb(137,137,137);
   box-shadow: 0 0 0 1px rgba(0,0,0,0.6);
 }
 
+.pristar {
+    background: radial-gradient(orange, orangered);
+    font-weight: normal;
+    color: black;
+}
+
+    .pristar:before {
+        content: "P";
+        font-size: 20px;
+    }
+
 
 .card-icon-venus {
   background: rgb(84,150,201);
@@ -1386,7 +1452,7 @@ border-right: 2px solid rgb(137,137,137);
   background-color: rgb(44,44,44);
   background: linear-gradient(to right bottom, black, rgb(60,60,60), rgb(150,150,150), rgb(60,60,60), rgb(60,60,60),black);
   color: black;
-  font-size:12px;
+  font-size:12px;.
   width: 44px;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -1401,6 +1467,7 @@ border-right: 2px solid rgb(137,137,137);
     background: linear-gradient(orange, orangered);
     font-size: 28px;
     font-weight: normal;
+    padding-top: 8px;
     padding-bottom: 7px;
     padding-left: 5px;
     vertical-align: middle;
@@ -1408,6 +1475,23 @@ border-right: 2px solid rgb(137,137,137);
     .rating:after {
         content: "\1F30F\FE0E";
     }
+.left-line {
+    border-bottom: 2px solid black;
+    transform: rotate(30deg);
+    width: 50px;
+    margin-top: 7px;
+    margin-left: -5px;
+    position: absolute;
+}
+
+.right-line {
+  border-bottom: 2px solid black;
+  transform: rotate(-30deg);
+  width: 50px;
+  margin-top: 7px;
+  margin-left: -5px;
+  position: absolute;
+}
 
 /************** Extras ************/
 .red-arrow {
@@ -1420,6 +1504,7 @@ border-right: 2px solid rgb(137,137,137);
         position: relative;
         color: red;
         content: "\27a1";
+        text-shadow: 0 0px 1px black;
 }
 
 .triangle {
@@ -1557,12 +1642,30 @@ border-right: 2px solid rgb(137,137,137);
     border-radius: 7px 7px 2px 2px;
 }
 
+.globalEventLabel {
+    float: left;
+    position:absolute;
+    font-family: Prototype;
+    width: 115px;
+    height: 14px;
+    line-height: 15px;
+    text-align: center;
+    margin-top: -10px;
+    margin-left: 100px;
+    font-size: 13px;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
+    background: #cccccc;
+    background-color: rgb(255,204,100);
+    background: linear-gradient(to right, lightblue,white,lightblue);
+    border-radius: 7px 7px 2px 2px;
+}
+
 .corporationEffectBox {
     position: absolute;
     border-top: 2px solid rgb(221,221,221);
-border-left: 2px solid rgb(221,221,221);
-border-bottom: 2px solid rgb(137,137,137);
-border-right: 2px solid rgb(137,137,137);
+    border-left: 2px solid rgb(221,221,221);
+    border-bottom: 2px solid rgb(137,137,137);
+    border-right: 2px solid rgb(137,137,137);
     height: 135px;
     width: 212px;
     margin-top: 145px;
@@ -1582,8 +1685,7 @@ border-right: 2px solid rgb(137,137,137);
     height: 12px;
     line-height: 12px;
     text-align: center;
-    font-weight: bold;
-    font-size: 10px;
+    font-size: 11px;
     padding-top:2px;
     box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
 }
@@ -1778,7 +1880,15 @@ border-right: 2px solid rgb(137,137,137);
   font-size: 20px;
   font-weight: bold;
   color:white;
+}
 
+.delegate {
+  display: inline-block;
+  background-image: url("../images/solo2.png");
+  width: 30px;
+  height: 36px;
+  background-repeat: no-repeat;
+  vertical-align: middle;
 }
 
 
@@ -2320,4 +2430,87 @@ input[type=radio]:checked + label {
   text-shadow: 0 5px 10px black;
   margin-top: -23px;
   margin-left: 90px;
+}
+
+.utopia {
+  background: green;
+  color: white;
+  font-family: Prototype;
+  box-shadow: 3px 3px 3px 0px #444;
+  text-align: center;
+  margin-left: 10px;
+  margin-top: 10px;
+  width: 160px;
+  padding: 2px;
+  border-top: 3px solid #09aa09;
+  border-left: 3px solid #09aa09;
+  border-right: 3px solid #005100;
+  border-bottom: 3px solid #005100;
+
+}
+.utopia1 {
+  font-size: 20px;
+  transform: scaleX(1.5);
+  letter-spacing: 5px;
+  margin-left: 5px;
+}
+.utopia2 {
+  font-size: 10px;
+  letter-spacing: 16px;
+  margin-left: 13px;
+}
+
+.factorum {
+  color: #ee792b;
+  text-shadow: 0 0 1px black, 0 1px black,  1px 0px black,  -1px 0px black,  0 -1px black;
+  letter-spacing: 5px;
+  font-size: 30px;
+  transform: scaleX(0.7);
+  margin-left: -35px;
+}
+
+.mons {
+  background: rgb(200, 110, 35);
+  color: white;
+  text-align: center;
+  width: 80px;
+  height: 75px;
+  box-shadow: 3px 3px 6px #444;
+}
+
+.mons0 {
+  font-size: 38px;
+  transform: scaleX(2.5);
+}
+
+.mons1 {
+  letter-spacing: 5px;
+  font-size: 20px;
+  margin-top: -10px;
+  margin-left: 5px;
+}
+.mons2 {
+  margin-top: 0px;
+  letter-spacing: 3px;
+  margin-left: 2px;
+  font-size: 7px;
+}
+
+.philares {
+  color: #444;
+  text-shadow: 0 1px 1px white, 0 -1px 1px white, -1px 0px 1px white, 1px 0px 1px white;
+  filter: drop-shadow(0 0 1px black);
+  letter-spacing: 4px;
+  font-size: 20px;
+  transform: scaleX(1.5);
+  margin-left: 48px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.septem {
+  color: white;
+  font-family: Times;
+  text-shadow: 0 0 1px black, 0 2px 2px black;
+  font-size: 30px;
 }

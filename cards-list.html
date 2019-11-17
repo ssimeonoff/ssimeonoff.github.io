@@ -3898,7 +3898,8 @@
               <div class="content ">
                 <div class="requirements">2 Science</div>
                 <div class="red-arrow "></div>
-                <div class="resource card"><div class="production" style="position:absolute;background:white;color:black;margin-left:-4px;margin-top:7px;">2</div><div class="card-icon card-icon-space">&#x2734;</div><div class="card-icon card-icon-building" style="margin-left:37px">&#x2617;</div></div>
+                <div class="resource card"><div class="production" style="position:absolute;background:white;color:black;
+                  margin-left:-4px;margin-top:7px;">2</div><div class="card-icon card-icon-space">&#x2734;</div><div class="card-icon card-icon-building" style="margin-left:37px">&#x2617;</div></div>
                 &nbsp;&nbsp;&nbsp;OR&nbsp;&nbsp;&nbsp;
                 <div class="red-arrow "></div>
                 <div class="production" style="background:white;color:black;vertical-align:middle">X</div> x2
@@ -5932,8 +5933,10 @@
                       (Effect: After you pay for a card or standard project with a basic cost of 20MC or more, you gain 4MC.)
                   </div>
               </div>
-              <span style="font-size:40px; color: white; font-family: 'Times New Roman'; font-weight:normal;line-height:60px; border:2px solid purple; padding-left:5px; padding-bottom:5px; margin-left:10px; box-shadow: 6px 6px 10px grey; text-shadow:
-          -1px 0 purple, 0 1px purple, 1px 0 purple, 0 -1px purple, 6px 6px 10px grey; ">
+              <span style="font-size:40px; color: white; font-family: 'Times New Roman';
+              font-weight:normal;line-height:60px; border:2px solid purple; padding-left:5px;
+              padding-bottom:5px; padding-right: 5px; margin-left:10px; box-shadow: 6px 6px 10px grey;
+              text-shadow: -1px 0 purple, 0 1px purple, 1px 0 purple, 0 -1px purple, 6px 6px 10px grey;">
                   credicor
               </span><br><br>
               <div class="description " style="text-align:center ">
@@ -6727,6 +6730,230 @@
           </div>
         </li>
 
+
+        <li id="#CORP31" onclick="getClickedCard();" class="filterDiv corporation buildingTag turmoil">
+          <div class="tag tag1 tag-building"></div>
+            <div class="corporationLabel ">CORPORATION</div>
+            <div class="turmoil-icon corporation-icon"></div>
+            <div class="contentCorporation ">
+                <div class="corporationEffectBox ">
+                    <div class="corporationEffectBoxLabel" style="margin-bottom:0px;">EFFECT</div>
+                    <div class="resource ocean-resource red-outline"></div>*: <div class="production-box"><div class="production money">1</div></div>&nbsp;&nbsp;
+                      <div class="resource" style="height:29px;width:30px;background:#eee"></div>
+                      <div class="resource ocean-resource" style="position:absolute;margin-left:-39px;margin-top:36px;"></div>
+                      :<div class="resource money">3</div>
+                    <div class="description " style="text-align:center;margin-top:0px; ">
+                        (Effect: When any ocean tile is placed, increase your MC production 1 step. Your bonus for placing adjacent to oceans in 3MC instead of 2MC.)
+                    </div>
+                </div>
+                <div style="font-size:22px;margin-top:10px;margin-left:10px;font-family:Times;color:white;
+                text-shadow:0 1px 0px #444, 0px -1px 0px #444, -1px 0px 0px #444, 1px 0px 0px #444;letter-spacing:4px;">
+                  LAKEFRONT <br> &nbsp;&nbsp;RESORTS
+                  </div>
+                <div class="resource money " style="margin-left:75px;margin-top:10px;">54</div>
+                <div class="description " style="text-align:center;margin-left:15px;">
+                    (You start with 54 MC.)
+                </div>
+            </div>
+        </li>
+
+        <li id="#CORP32" onclick="getClickedCard();" class="filterDiv corporation earthTag scienceTag turmoil">
+          <div class="tag tag1 tag-earth"></div>
+          <div class="tag tag2 tag-science"></div>
+            <div class="corporationLabel ">CORPORATION</div>
+            <div class="turmoil-icon corporation-icon"></div>
+            <div class="contentCorporation ">
+                <div class="corporationEffectBox ">
+                    <div class="corporationEffectBoxLabel">EFFECT</div>
+                      <div class="resource card"></div> : <div class="resource money">1</div>
+                    <div class="description " style="text-align:center;margin-top:0px; ">
+                        (Effect: Buying cards to hand costs 1MC.)
+                    </div>
+                </div>
+                <div style="font-size:16px;margin-top:33px;margin-left:75px;margin-bottom:5px; font-family:Prototype;color:#222;transform:scale(2,1)">
+                  TERRALABS
+                  </div>
+                  <div style="font-size:8px;letter-spacing:2px;font-family:Prototype;margin-left:100px;margin-top:-5px;transform:scale(2,1)">RESEARCH</div>
+                <div class="resource money " style="margin-left:25px;margin-right:20px;">14</div> - <div class="tile rating"></div>
+                <div class="description " style="text-align:center;">
+                    (You start with 14 MC. Lower your TR 1 step.)
+                </div>
+            </div>
+        </li>
+
+        <li id="#CORP33" onclick="getClickedCard();" class="filterDiv corporation  turmoil">
+            <div class="corporationLabel ">CORPORATION</div>
+            <div class="turmoil-icon corporation-icon"></div>
+            <div class="contentCorporation ">
+              <div class="points" style="z-index:1;margin-top:231px;margin-left:124px;">1/<div class="resource pristar"></div></div>
+                <div class="corporationEffectBox ">
+                    <div class="corporationEffectBoxLabel" style="margin-bottom:5px;">EFFECT</div>
+
+                      <div class="tile rating"><div class="left-line"></div><div class="right-line"></div></div> : <div class="resource pristar"></div> <div class="resource money">6</div>
+                    <div class="description " style="text-align:center;margin-top:-7px; text-align:left;">
+                        (Effect: During production phase, if you did not get TR so far this <br> generation, add one <br> preservation resource<br> here and gain 6MC.)
+                    </div>
+                </div>
+                <div style="color:#ff5d21;text-shadow: 3px 3px 3px black;font-size:30px;transform:scaleX(0.8);letter-spacing:1px;">
+                  PRISTAR
+                  </div>
+                <div class="resource money " style="margin-left:10px;margin-right:20px;">53</div> - <div class="tile rating"></div><div class="tile rating"></div>
+                <div class="description " style="text-align:center;">
+                    (You start with 53 MC. Decrease your TR 2 steps.<br>
+                    1 VP per preservation resource here.)
+                </div>
+            </div>
+        </li>
+
+        <li id="#CORP34" onclick="getClickedCard();" class="filterDiv corporation buildingTag turmoil">
+          <div class="tag tag1 tag-building"></div>
+          <div class="corporationLabel">CORPORATION</div>
+          <div class="turmoil-icon corporation-icon"></div>
+          <div class="contentCorporation">
+            <div class="corporationEffectBox">
+              <div class="corporationEffectBoxLabel">ACTION</div>
+              <div class="production-box">
+                <div class="production" style="background:white;">?</div>
+              </div>
+              <div class="red-arrow"></div>
+              4<div class="resource" style="background:white;">?</div>
+              <div class="description" style="text-align:center;margin-top:0px;">
+                (Action: Decrease any production to gain 4 resources of that kind.)
+              </div>
+            </div>
+            <div class="utopia">
+              <div class="utopia1">UTOPIA</div>
+              <div class="utopia2">INVEST</div>
+            </div>
+            <div class="resource money" style="margin-left:35px;margin-right:20px;margin-top:20px;">40</div>
+            <div class="production-box production-box-size2">
+              <div class="production steel"></div><div class="production titanium"></div>
+            </div>
+            <div class="description" style="margin-top:-5px;text-align:center;">
+              (You start with 40 MC. Increase your steel and titanium production 1 step each.)
+            </div>
+          </div>
+        </li>
+
+        <li id="#CORP38" onclick="getClickedCard();" class="filterDiv corporation wildTag turmoil">
+          <div class="tag tag1 tag-wild"></div>
+          <div class="corporationLabel">CORPORATION</div>
+          <div class="turmoil-icon corporation-icon"></div>
+          <div class="contentCorporation">
+            <div class="corporationEffectBox">
+              <div class="corporationEffectBoxLabel">ACTION</div>
+              <div class="red-arrow"></div> <div class="resource money">2</div> / <div class="delegate"></div>*
+              <div class="description" style="text-align:center;margin-top:0px;">
+                (Action: Gain 2MC for EACH PARTY WHERE YOU HAVE AT LEAST 1 DELEGATE.)
+              </div>
+            </div>
+            <div class="septem">
+              Septem Tribus
+            </div>
+            <div class="resource money" style="margin-left:70px;margin-right:20px;margin-top:20px;">36</div>
+            </div>
+            <div class="description" style="margin-top:0px;text-align:center;">
+              (You start with 46 MC. When you perform an action, the wild tag counts as any tag of your choice.)
+            </div>
+          </div>
+        </li>
+
+        <li id="#CORP35" onclick="getClickedCard();" class="filterDiv corporation buildingTag powerTag promo">
+          <div class="tag tag1 tag-building"></div>
+          <div class="tag tag2 tag-power"></div>
+          <div class="corporationLabel">CORPORATION</div>
+          <div class="promo-icon corporation-icon"></div>
+          <div class="contentCorporation">
+            <div class="corporationEffectBox">
+              <div class="corporationEffectBoxLabel">ACTION</div>
+              <div class="red-arrow"></div><div class="production-box">
+                <div class="production energy"></div>
+              </div> * OR
+              <div class="resource money">3</div><div class="red-arrow"></div><div class="resource card">
+                <div class="card-icon card-icon-building" style="margin-top:-17px;">&#x2617;</div>
+              </div>
+              <div class="description" style="text-align:center;margin-top:0px;">
+                (Action: Increase your energy production 1 step IF YOU HAVE NO ENERGY RESOURCES, or sped 3MC to draw a building card.)
+              </div>
+            </div>
+            <div class="factorum">
+              FACTORUM
+            </div>
+            <div class="resource money" style="margin-left:35px;margin-right:20px;margin-top:20px;">37</div>
+            <div class="production-box">
+              <div class="production steel"></div>
+            </div>
+            <div class="description" style="margin-top:-5px;text-align:center;">
+              (You start with 37 MC. Increase your steel production 1 step.)
+            </div>
+          </div>
+        </li>
+
+        <li id="#CORP36" onclick="getClickedCard();" class="filterDiv corporation promo">
+          <div class="corporationLabel">CORPORATION</div>
+          <div class="promo-icon corporation-icon"></div>
+          <div class="contentCorporation">
+            <div class="corporationEffectBox">
+              <div class="corporationEffectBoxLabel">EFFECT</div>
+              <div class="production-box" style="width:50px;">
+                -<div class="production red-outline" style="background:white;">?</div>
+              </div>
+              OR -<div class="resource red-outline" style="background:white;">?</div>:
+              PAY<div class="resource money">3</div>
+              <div class="description" style="text-align:center;margin-top:0px;">
+                (Effect: When aplayer causes another player to decrease production or lose resources, pay 3MC to the victim,
+                or as much as possible.)
+              </div>
+            </div>
+            <div class="mons">
+              <div class="mons0">&#x25b2;</div>
+              <div class="mons1">mons</div>
+              <div class="mons2">INSURANCE</div>
+            </div>
+            <div class="resource money" style="margin-left: 145px;
+                  margin-right: 20px;
+                  margin-top: -84px;
+                  position: absolute;">48</div>
+            <div class="production-box production-box-size2a" style="
+                  position: absolute;
+                  margin-top: -53px;
+                  margin-left: 92px;">
+              <div class="production money">4</div> <div class="production money red-outline">-2</div>*
+            </div>
+            <div class="description" style="margin-top:2px;text-align:center;">
+              (You start with 48 MC. Increase your MC production 4 steps. ALL OPPONENTS DECREASE THEIR MC PRODUCTION 2 STEPS.
+              THIS DOES NOT TRIGGER THE EFFECT BELOW.)
+            </div>
+          </div>
+        </li>
+
+        <li id="#CORP37" onclick="getClickedCard();" class="filterDiv corporation buildingTag promo">
+          <div class="tag tag1 tag-building"></div>
+          <div class="corporationLabel">CORPORATION</div>
+          <div class="promo-icon corporation-icon"></div>
+          <div class="contentCorporation">
+            <div class="corporationEffectBox">
+              <div class="corporationEffectBoxLabel">EFFECT</div>
+              <div class="tile empty-tile-small red-outline" style="
+                padding: 6px; margin-right: -3px;
+              "></div><div class="tile empty-tile-small"></div>
+               : <div class="resource" style="background:white;">?</div>
+              <div class="description" style="text-align:center;margin-top:0px;">
+                (Effect: Each new adjacency between your tile and an opponent's tile gives you a standard resource of your choice(regardless of who just placed a tile).)
+              </div>
+            </div>
+            <div class="philares">
+              PHIL<span style="color:#ff5858">A</span>RES
+            </div>
+            <div class="resource money" style="margin-left:35px;margin-right:20px;margin-top:20px;">47</div>
+            <div class="tile greenery-tile">
+            </div>
+            <div class="description" style="margin-top:-5px;text-align:center;">
+              (You start with 47 MC. As your first action, place a greenery tile and raise the oxygen 1 step.)
+            </div>
+          </div>
+        </li>
+
         <li id="#CORP28" onclick="getClickedCard();" class="filterDiv corporation promo noneTag">
           <div class="corporationLabel">CORPORATION</div>
           <div class="promo-icon corporation-icon"></div>
@@ -6796,55 +7023,6 @@
             <div class="description" style="margin-top:-8px;text-align:center;">(You start with 44 MC. As your first action, reveal cards until you have revealed a microbe tag. Take that card into hand, and discard the rest.)</div>
           </div>
         </li>
-
-        <li id="#CORP31" onclick="getClickedCard();" class="filterDiv corporation buildingTag turmoil">
-          <div class="tag tag1 tag-building"></div>
-            <div class="corporationLabel ">CORPORATION</div>
-            <div class="turmoil-icon corporation-icon"></div>
-            <div class="contentCorporation ">
-                <div class="corporationEffectBox ">
-                    <div class="corporationEffectBoxLabel" style="margin-bottom:0px;">EFFECT</div>
-                    <div class="resource ocean-resource red-outline"></div>*: <div class="production-box"><div class="production money">1</div></div>&nbsp;&nbsp;
-                      <div class="resource" style="height:29px;width:32px;background:#eee"></div>
-                      <div class="resource ocean-resource" style="position:absolute;margin-left:-39px;margin-top:36px;"></div>
-                      :<div class="resource money">3</div>
-                    <div class="description " style="text-align:center;margin-top:0px; ">
-                        (Effect: When any ocean tile is placed, increase your MC production 1 step. Your bonus for placing adjacent to oceans in 3MC instead of 2MC.)
-                    </div>
-                </div>
-                <div style="font-size:30px;font-style: italic;margin-top:10px;margin-left:30px;font-family:Times;color:#222;">
-                  Lakefront <br> &nbsp;&nbsp;Resorts
-                  </div>
-                <div class="resource money " style="margin-left:75px;">52</div>
-                <div class="description " style="text-align:center;margin-left:15px;">
-                    (You start with 52 MC.)
-                </div>
-            </div>
-        </li>
-
-        <li id="#CORP32" onclick="getClickedCard();" class="filterDiv corporation earthTag scienceTag turmoil">
-          <div class="tag tag1 tag-earth"></div>
-          <div class="tag tag2 tag-science"></div>
-            <div class="corporationLabel ">CORPORATION</div>
-            <div class="turmoil-icon corporation-icon"></div>
-            <div class="contentCorporation ">
-                <div class="corporationEffectBox ">
-                    <div class="corporationEffectBoxLabel">EFFECT</div>
-                      <div class="resource card"></div> : <div class="resource money">1</div>
-                    <div class="description " style="text-align:center;margin-top:0px; ">
-                        (Effect: Buying cards to hand costs 1MC.)
-                    </div>
-                </div>
-                <div style="font-size:24px;margin-top:33px;margin-left:5px;margin-bottom:5px; font-family:Prototype;letter-spacing:5px;color:#222;">
-                  TERRALABS
-                  </div>
-                <div class="resource money " style="margin-left:25px;margin-right:20px;">20</div> -1 <div class="tile rating"></div>
-                <div class="description " style="text-align:center;">
-                    (You start with 20 MC. Lower your TR 1 step.)
-                </div>
-            </div>
-        </li>
-
 
 
 
@@ -7904,13 +8082,13 @@
 
     <!--G01-->
     <li onclick="getClickedCard();" class="filterDiv global-card turmoil">
-        <div class="title background-color-global">Gloabal Event</div>
-        <div class="tag tag1 "></div>
-        <div class="tag tag2 "></div>
-        <div class="number">#G01</div>
-        <div class="content">
-          TEST
-        </div>
+      <div class="globalTitle">Gloabal Event</div>
+      <div class="globalTitle globalTitle2">Gloabal Event</div>
+      <div class="globalTag globalTag1"></div>
+      <div class="globalTag globalTag2"></div>
+      <div class="content">
+        TEST
+      </div>
     </li>
 
 
