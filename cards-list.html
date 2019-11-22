@@ -23,7 +23,7 @@
 </head>
 <html>
 
-<body background="images/mars.jpg" style="background-color:black;background-repeat:no-repeat; background-size:100%">
+<body>
 
 
   <div id="buttonsContainer">
@@ -6743,7 +6743,7 @@
                       <div class="resource ocean-resource" style="position:absolute;margin-left:-39px;margin-top:36px;"></div>
                       :<div class="resource money">3</div>
                     <div class="description " style="text-align:center;margin-top:0px; ">
-                        (Effect: When any ocean tile is placed, increase your MC production 1 step. Your bonus for placing adjacent to oceans in 3MC instead of 2MC.)
+                        (Effect: When any ocean tile is placed, increase your MC production 1 step. Your bonus for placing adjacent to oceans is 3MC instead of 2MC.)
                     </div>
                 </div>
                 <div style="font-size:22px;margin-top:10px;margin-left:10px;font-family:Times;color:white;
@@ -6853,7 +6853,7 @@
             <div class="resource money" style="margin-left:70px;margin-right:20px;margin-top:20px;">36</div>
             </div>
             <div class="description" style="margin-top:0px;text-align:center;">
-              (You start with 46 MC. When you perform an action, the wild tag counts as any tag of your choice.)
+              (You start with 36 MC. When you perform an action, the wild tag counts as any tag of your choice.)
             </div>
           </div>
         </li>
@@ -6873,7 +6873,7 @@
                 <div class="card-icon card-icon-building" style="margin-top:-17px;">&#x2617;</div>
               </div>
               <div class="description" style="text-align:center;margin-top:0px;">
-                (Action: Increase your energy production 1 step IF YOU HAVE NO ENERGY RESOURCES, or sped 3MC to draw a building card.)
+                (Action: Increase your energy production 1 step IF YOU HAVE NO ENERGY RESOURCES, or spend 3MC to draw a building card.)
               </div>
             </div>
             <div class="factorum">
@@ -6901,7 +6901,7 @@
               OR -<div class="resource red-outline" style="background:white;">?</div>:
               PAY<div class="resource money">3</div>
               <div class="description" style="text-align:center;margin-top:0px;">
-                (Effect: When aplayer causes another player to decrease production or lose resources, pay 3MC to the victim,
+                (Effect: When a player causes another player to decrease production or lose resources, pay 3MC to the victim,
                 or as much as possible.)
               </div>
             </div>
@@ -6939,7 +6939,7 @@
               "></div><div class="tile empty-tile-small"></div>
                : <div class="resource" style="background:white;">?</div>
               <div class="description" style="text-align:center;margin-top:0px;">
-                (Effect: Each new adjacency between your tile and an opponent's tile gives you a standard resource of your choice(regardless of who just placed a tile).)
+                (Effect: Each new adjacency between your tile and an opponent's tile gives you a standard resource of your choice (regardless of who just placed a tile).)
               </div>
             </div>
             <div class="philares">
@@ -8081,7 +8081,7 @@
     <div class="ul-title">GLOBAL EVENTS</div>
 
     <!--G01-->
-    <li onclick="getClickedCard();" class="filterDiv global-card turmoil">
+    <li id="G01" onclick="getClickedCard();" class="filterDiv global-card turmoil">
       <div class="globalTitle">Gloabal Event</div>
       <div class="globalTitle globalTitle2">Gloabal Event</div>
       <div class="globalTag globalTag1"></div>

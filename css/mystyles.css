@@ -4,6 +4,14 @@
     src: url(../fonts/Prototype.ttf);
 }
 
+body {
+  background-image: url("../images/mars.jpg");
+  background-color:black;
+  background-repeat:no-repeat;
+  background-size:100%;background-attachment: fixed;
+  background-position-y:-200px;
+}
+
 /*project card div*/
 .filterDiv {
     cursor: pointer;
@@ -1691,6 +1699,9 @@ border-right: 2px solid rgb(137,137,137);
 }
 
 #buttonsContainer {
+  position: sticky;
+  top:-256px;
+  z-index: 2;
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
   border-bottom: 2px solid rgb(137,137,137);
@@ -1700,9 +1711,8 @@ border-right: 2px solid rgb(137,137,137);
   background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
   box-shadow: 0 0 10px 5px black;
   width: 879px;
-  margin-top: 40px;
-  margin-left: 40px;
   border-radius: 20px;
+  margin-left: 40px;
 
 }
 
