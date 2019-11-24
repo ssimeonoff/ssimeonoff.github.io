@@ -1577,35 +1577,33 @@ border-right: 2px solid rgb(137,137,137);
     margin-bottom: 25px;
     margin-right: 8px;
     border-radius: 8px;
-    border-top: 2px solid rgb(221,221,221);
-    border-left: 2px solid rgb(221,221,221);
-    border-bottom: 2px solid rgb(137,137,137);
-    border-right: 2px solid rgb(137,137,137);
-    box-shadow: 0 1px 2px 1px rgba(0,0,0,.8);
+    border-bottom: 2px solid rgb(221,221,221);
+    border-right: 2px solid rgb(221,221,221);
+    border-top: 2px solid rgb(137,137,137);
+    border-left: 2px solid rgb(137,137,137);
     color: rgb(48,48,48);
 }
 
 #price {
-    outline: none;
-    font-family: Prototype;
-    background-repeat: no-repeat;
-    text-align: center;
-    width: 44px;
-    height: 44px;
-    font-size: 26px;
-    border-radius: 10px;
-    border-top: 2px solid rgb(221,221,221);
-border-left: 2px solid rgb(221,221,221);
-border-bottom: 2px solid rgb(137,137,137);
-border-right: 2px solid rgb(137,137,137);
-    box-shadow: 0 2px 2px 1px rgba(0,0,0,.8);
-    background: linear-gradient(rgb(255,208,4),rgb(255,255,104),rgb(255,208,4),rgb(255,208,4));
-    padding: 0px;
+  outline: none;
+  font-family: Prototype;
+  background-repeat: no-repeat;
+  text-align: center;
+  width: 44px;
+  height: 44px;
+  font-size: 26px;
+  border-radius: 10px;
+  border-top: 2px solid rgb(221,221,221);
+  border-left: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
+  box-shadow: 0 2px 2px 1px rgba(0,0,0,.8);
+  background: linear-gradient(rgb(255,208,4),rgb(255,255,104),rgb(255,208,4),rgb(255,208,4));
+  padding: 0px;
 }
 
 .myUL {
     list-style-type: none;
-    margin: 15px 0px 0px 25px;
 }
 
 .ul-title {
@@ -1620,7 +1618,7 @@ border-right: 2px solid rgb(137,137,137);
   border-radius: 10px;
   background: linear-gradient(to right,#d8ab00, #c19900, #bb511d88,#bb511d00);
   margin: 0px 0px 0px -25px;
-  width: 880px;
+  width: 800px;
 }
 
 .totalCardsCount {
@@ -1709,11 +1707,10 @@ border-right: 2px solid rgb(137,137,137);
   display: none;
   background: #cccccc;
   background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
-  box-shadow: 0 0 10px 5px black;
+  box-shadow: 0 5px 10px 5px rgba(0,0,0,.5);
   width: 879px;
   border-radius: 20px;
-  margin-left: 40px;
-
+  margin-left:15px;
 }
 
 #buttonsContainer-body {
