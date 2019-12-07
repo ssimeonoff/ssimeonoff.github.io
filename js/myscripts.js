@@ -18,7 +18,7 @@ else {
 
 function showAll() {
   var x, i;
-  displayedProjects = 317;
+  displayedProjects = 322;
   displayedCorporations = 38;
   displayedPreludes = 35;
   displayedColonies = 11;
@@ -312,7 +312,7 @@ function filterFunction(id) {
   displayedColonies = document.querySelectorAll('li.show.colony-card').length;
   displayedGlobals = document.querySelectorAll('li.show.global-card').length;
 
-  displayedProjects = displayedCards - displayedCorporations - displayedPreludes - displayedColonies;
+  displayedProjects = displayedCards - displayedCorporations - displayedPreludes - displayedColonies - displayedGlobals;
   document.getElementById("totalProjects").innerHTML = displayedProjects;
   document.getElementById("totalCorporations").innerHTML = displayedCorporations;
   document.getElementById("totalPreludes").innerHTML = displayedPreludes;

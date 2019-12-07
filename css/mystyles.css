@@ -274,12 +274,12 @@ border-right: 2px solid rgb(137,137,137);
           }
 
 .project-icon:after {
-  margin-left: -510px;
-  margin-top: 284px;
+  margin-left: -235px;
+margin-top: 284px;
 }
 
 .preludeCard-icon:after {
-  margin-left: -510px;
+  margin-left: -235px;
   margin-top: 214px;
 }
 
@@ -414,20 +414,20 @@ border-right: 2px solid rgb(137,137,137);
 
 
 /*********** Style the tags ************/
-.tag-wild {background-image: url("../images/tag-wild.png")}
-.tag-building {background-image: url("../images/tag-building.png")}
-.tag-space {background-image: url("../images/tag-space.png")}
-.tag-power {background-image: url("../images/tag-power.png")}
-.tag-jovian {background-image: url("../images/tag-jovian.png")}
-.tag-venus {background-image: url("../images/tag-venus.png")}
-.tag-earth { background-image: url("../images/tag-earth.png");}
-.tag-city { background-image: url("../images/tag-city.png");}
-.tag-microbe {background-image: url("../images/tag-microbe.png")}
-.tag-plant {background-image: url("../images/tag-plant.png")}
-.tag-animal {background-image: url("../images/tag-animal.png")}
-.tag-event {background-image: url("../images/tag-event.png")}
-.tag-science {background-image: url("../images/tag-science.png")}
-.tag-none {background-image: url("../images/tag-none.png")}
+.tag-wild {background-image: url("../images/tags/tag-wild.png")}
+.tag-building {background-image: url("../images/tags/tag-building.png")}
+.tag-space {background-image: url("../images/tags/tag-space.png")}
+.tag-power {background-image: url("../images/tags/tag-power.png")}
+.tag-jovian {background-image: url("../images/tags/tag-jovian.png")}
+.tag-venus {background-image: url("../images/tags/tag-venus.png")}
+.tag-earth { background-image: url("../images/tags/tag-earth.png");}
+.tag-city { background-image: url("../images/tags/tag-city.png");}
+.tag-microbe {background-image: url("../images/tags/tag-microbe.png")}
+.tag-plant {background-image: url("../images/tags/tag-plant.png")}
+.tag-animal {background-image: url("../images/tags/tag-animal.png")}
+.tag-event {background-image: url("../images/tags/tag-event.png")}
+.tag-science {background-image: url("../images/tags/tag-science.png")}
+.tag-none {background-image: url("../images/tags/tag-none.png")}
 
 /************** Style the buttons ************/
 .button, .button2 {
@@ -1891,11 +1891,25 @@ border-right: 2px solid rgb(137,137,137);
 
 .delegate {
   display: inline-block;
-  background-image: url("../images/solo2.png");
+  background-image: url("../images/delegate.png");
   width: 30px;
   height: 36px;
   background-repeat: no-repeat;
   vertical-align: middle;
+  filter: drop-shadow(0px 1px 1px black)
+}
+
+.influence {
+  display: inline-block;
+  background-image: url(../images/delegate.png);
+  width: 28px;
+  height: 28px;
+  background-size: 20px 19px;
+  background-position: 4px 4px;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  background-color: #222;
+  border-radius: 50%;
 }
 
 
@@ -1950,14 +1964,14 @@ input[type=range]:focus {
 }
 
 .track-temp-thumb::-webkit-slider-thumb {
-  background: url("../images/thumb1.png") !important;
+  background: url("../images/thumbs/thumb1.png") !important;
   height: 48px !important;
   margin-top: -18px !important;
   background-repeat: no-repeat;
 
 }
 .track-temp-thumb::-moz-range-thumb {
-  background: url("../images/thumb1.png") !important;
+  background: url("../images/thumbs/thumb1.png") !important;
   height: 44px !important;
   margin-top: -18px !important;
   background-repeat: no-repeat;
@@ -1965,20 +1979,20 @@ input[type=range]:focus {
 }
 
 .track-oxygen-thumb::-webkit-slider-thumb {
-  background: url("../images/thumb2.png") !important;
+  background: url("../images/thumbs/thumb2.png") !important;
   width: 50px !important;
   background-repeat: no-repeat;
 
 
 }
 .track-oxygen-thumb::-moz-range-thumb {
-  background: url("../images/thumb2.png") !important;
+  background: url("../images/thumbs/thumb2.png") !important;
   width: 46px !important;
   background-repeat: no-repeat;
 }
 
 .track-oceans-thumb::-webkit-slider-thumb {
-  background: url("../images/thumb3.png") !important;
+  background: url("../images/thumbs/thumb3.png") !important;
   height: 48px !important;
   width: 52px !important;
   margin-top: -18px !important;
@@ -1986,7 +2000,7 @@ input[type=range]:focus {
 
 }
 .track-oceans-thumb::-moz-range-thumb {
-  background: url("../images/thumb3.png") !important;
+  background: url("../images/thumbs/thumb3.png") !important;
   height: 44px !important;
   width: 48px !important;
   margin-top: -18px !important;
@@ -1995,57 +2009,57 @@ input[type=range]:focus {
 }
 
 .track-venus-thumb::-webkit-slider-thumb {
-  background: url("../images/thumb4.png") !important;
+  background: url("../images/thumbs/thumb4.png") !important;
   width: 50px !important;
   background-repeat: no-repeat;
 
 }
 .track-venus-thumb::-moz-range-thumb {
-  background: url("../images/thumb4.png") !important;
+  background: url("../images/thumbs/thumb4.png") !important;
   width: 46px !important;
   background-repeat: no-repeat;
 }
 
 .track-science-thumb::-webkit-slider-thumb {
-  background: url("../images/thumb5.png") !important;
+  background: url("../images/thumbs/thumb5.png") !important;
   border-radius: 50% !important;
   background-repeat: no-repeat;
 }
 .track-science-thumb::-moz-range-thumb {
-  background: url("../images/thumb5.png") !important;
+  background: url("../images/thumbs/thumb5.png") !important;
   border-radius: 50% !important;
   background-repeat: no-repeat;
 }
 
 .track-jovian-thumb::-webkit-slider-thumb {
-  background: url("../images/thumb6.png") !important;
+  background: url("../images/thumbs/thumb6.png") !important;
   border-radius: 50% !important;
   background-repeat: no-repeat;
 }
 .track-jovian-thumb::-moz-range-thumb {
-  background: url("../images/thumb6.png") !important;
+  background: url("../images/thumbs/thumb6.png") !important;
   border-radius: 50% !important;
   background-repeat: no-repeat;
 }
 
 .track-venusTag-thumb::-webkit-slider-thumb {
-  background: url("../images/thumb7.png") !important;
+  background: url("../images/thumbs/thumb7.png") !important;
   border-radius: 50% !important;
   background-repeat: no-repeat;
 }
 .track-venusTag-thumb::-moz-range-thumb {
-  background: url("../images/thumb7.png") !important;
+  background: url("../images/thumbs/thumb7.png") !important;
   border-radius: 50% !important;
   background-repeat: no-repeat;
 }
 
 .track-earth-thumb::-webkit-slider-thumb {
-  background: url("../images/thumb8.png") !important;
+  background: url("../images/thumbs/thumb8.png") !important;
   border-radius: 50% !important;
   background-repeat: no-repeat;
 }
 .track-earth-thumb::-moz-range-thumb {
-  background: url("../images/thumb8.png") !important;
+  background: url("../images/thumbs/thumb8.png") !important;
   border-radius: 50% !important;
   background-repeat: no-repeat;
 }
