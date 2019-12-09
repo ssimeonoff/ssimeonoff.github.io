@@ -22,7 +22,8 @@ body {
     width: 240px;
     height: 310px;
     display: none;
-    font-family:  Arial,Helvetica,sans-serif;
+    font-family:  Prototype;
+    font-size: 18px;
     margin: 15px;
     margin-bottom: 10px;
     border-top: 4px solid rgb(221,221,221);
@@ -919,6 +920,10 @@ border-right: 2px solid rgb(137,137,137);
 
 .production-box-size4 {
     width: 150px;
+}
+
+.production-box-size4a {
+    width: 165px;
 }
 
 .production {
@@ -1893,10 +1898,29 @@ border-right: 2px solid rgb(137,137,137);
   display: inline-block;
   background-image: url("../images/delegate.png");
   width: 30px;
-  height: 36px;
+  height: 30px;
+  margin-bottom: 6px;
   background-repeat: no-repeat;
   vertical-align: middle;
-  filter: drop-shadow(0px 1px 1px black)
+  filter: drop-shadow(0px 1px 1px #222) drop-shadow(0px -1px 1px #222);
+}
+
+.delegate-red {
+  filter: drop-shadow(0px 1px 1px darkred) drop-shadow(0px -1px 1px red) drop-shadow(0px 0px 2px black)
+}
+
+.chairman {
+  display: inline-block;
+  background-image: url("../images/delegate.png");
+  width: 30px;
+  height: 30px;
+  background-position: -1px 0px;
+  background-color: #222;
+  border-radius: 10px 10px 2px 2px;
+  margin-bottom: 6px;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  filter: drop-shadow(0px 1px 1px #222) drop-shadow(0px -1px 1px #222);
 }
 
 .influence {
@@ -1910,6 +1934,15 @@ border-right: 2px solid rgb(137,137,137);
   vertical-align: middle;
   background-color: #222;
   border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,0,0,0.3);
+  border: 1px solid rgb(221,221,221);
+}
+
+.party {
+  background: #ddd;
+  padding: 0px 10px 0px 10px;
+  border: 1px solid #666;
+  border-radius: 20px;
 }
 
 

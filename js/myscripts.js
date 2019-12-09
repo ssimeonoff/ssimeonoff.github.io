@@ -18,7 +18,7 @@ else {
 
 function showAll() {
   var x, i;
-  displayedProjects = 322;
+  displayedProjects = 345;
   displayedCorporations = 38;
   displayedPreludes = 35;
   displayedColonies = 11;
@@ -78,6 +78,7 @@ function displayCardsOnly() {
 
   }
 }
+
 ////////////////////// FILTER FUCTION ///////////////////////////////
 function filterFunction(id) {
   var input, filter, ul, li, a, i, x;
