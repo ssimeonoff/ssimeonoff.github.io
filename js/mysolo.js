@@ -53,6 +53,26 @@ data_ce_pr = [
   ['Vitor']
 ];
 
+data_ce_prAll = [
+  ['Credicor', 81,109,100,85,86,91,93,102,98,104],
+  ['Ecoline', 130,108,101,94,93,115,105,91],
+  ['Helion', 4,97,99,111,1],
+  ['Interplanetary', 102,85,98,98,92,98],
+  ['Inventrix', 100,111,1,117,81],
+  ['Mining Guild', 7,92,113,140],
+  ['Phobolog', 91,91,98,117,1,78,108,2,115],
+  ['Tharsis Republic', 119,105,5,127,108,115,96,93,97,94,100,95,116],
+  ['Thorgate', 92,101,86],
+  ['UNMI', 125,96],
+  ['Teractor', 91,98],
+  ['Saturn Systems', 95,104,111,108,93,94,98,111],
+  ['Cheung Shing Mars', 95,82,90,81],
+  ['Point Luna', 118,94,2,103,108],
+  ['Robinson Industries', 80,99,97,101,104],
+  ['Valley Trust', 110,86,101,116,102,120,1],
+  ['Vitor', 84,124,87,90]
+];
+
 data_ce_vn_pr = [
   ['Credicor', 82],
   ['Ecoline', 111,96,0,99,109,102,96,114,93,98,117],
@@ -155,6 +175,7 @@ data_ce_co = [
 histogram("div_ce", data_ce);
 histogram("div_ce_vn", data_ce_vn);
 histogram("div_ce_pr", data_ce_pr);
+histogram("div_ce_prAll", data_ce_prAll);
 histogram("div_ce_vn_pr", data_ce_vn_pr);
 histogram("div_ce_vn_pr_co", data_ce_vn_pr_co);
 histogram("div_ce_vn_prAll_co", data_ce_vn_prAll_co);

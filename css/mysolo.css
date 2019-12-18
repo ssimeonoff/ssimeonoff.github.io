@@ -7,8 +7,8 @@
   display: grid;
   font-family: Prototype;
   background: linear-gradient(to right,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
-  grid-template-columns: 530px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px;
-  width: 1339px;
+  grid-template-columns: 530px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px;
+  width: 1580px;
   border-top: 2px solid rgb(221,221,221);
   border-left: 2px solid rgb(221,221,221);
   border-bottom: 2px solid rgb(137,137,137);
@@ -20,7 +20,7 @@
 }
 
 .grid-row2 {
-  grid-template-columns: 120px 410px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px;
+  grid-template-columns: 120px 410px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px;
 }
 
 .grid-row > div, .grid-values > div, .grid-expansions > div {
@@ -215,5 +215,5 @@
   background-color: #4444;
 }
 .background-turmoil {
-  background-color: #cc333333;
+  background-color: #ee792b44;
 }
