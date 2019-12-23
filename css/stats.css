@@ -888,6 +888,116 @@
   text-shadow: 0 5px 10px black;
 }
 
+.factorum {
+  color: #ee792b;
+  text-shadow: 0 0 1px black, 0 1px black,  1px 0px black,  -1px 0px black,  0 -1px black;
+  letter-spacing: 3px;
+  font-size: 28px;
+  transform: scaleX(0.7);
+  margin-top: 5px;
+  margin-left: -10px;
+}
+
+.lakefront {
+  margin-left: 5px;
+  margin-top: 3px;
+  font-size:16px;
+  font-family:Times;
+  color:white;
+  text-shadow:0 1px 0px #444, 0px -1px 0px #444, -1px 0px 0px #444, 1px 0px 0px #444;
+  letter-spacing:3px;
+}
+
+.mons {
+  margin-left: 5px;
+  background: rgb(200, 110, 35);
+  color: white;
+  text-align: center;
+  width: 120px;
+  height: 40px;
+  box-shadow: 3px 3px 6px #444;
+}
+.mons1 {
+  letter-spacing: 5px;
+  font-size: 26px;
+  padding-top: 1px;
+  margin-top: 0px;
+  margin-left: 5px;
+}
+.mons2 {
+  margin-top: 3px;
+  letter-spacing: 2px;
+  margin-left: 2px;
+  font-size: 11px;
+}
+
+.philares {
+  color: #444;
+    text-shadow: 0 1px 1px white, 0 -1px 1px white, -1px 0px 1px white, 1px 0px 1px white;
+    filter: drop-shadow(0 0 1px black);
+    letter-spacing: 2px;
+    font-size: 15px;
+    transform: scaleX(1.5);
+    margin-left: 9px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.pristar {
+  color:#ff5d21;
+  text-shadow: 3px 3px 3px black;
+  font-size:30px;
+  transform:scaleX(0.8);
+  letter-spacing:1px;
+  margin-top: 5px;
+}
+
+.septem {
+  color: white;
+  font-family: Times;
+  text-shadow: 0 0 1px black, 0 2px 2px black;
+  font-size: 24px;
+  line-height: 22px;
+  margin-top: -3px;
+}
+
+.terralabs {
+  font-size: 15px;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    font-family: Prototype;
+    color: #222;
+    transform: scale(1.5,1);
+}
+
+.utopia {
+  background: green;
+  color: white;
+  font-family: Prototype;
+  box-shadow: 1px 1px 2px 0px #444;
+  text-align: center;
+  width: 110px;
+  height: 35px;
+  margin-left: 7px;
+  margin-top: -3px;
+  padding: 2px;
+  border-top: 3px solid #09aa09;
+  border-left: 3px solid #09aa09;
+  border-right: 3px solid #005100;
+  border-bottom: 3px solid #005100;
+}
+.utopia1 {
+  font-size: 16px;
+  transform: scaleX(1.5);
+  letter-spacing: 3px;
+  margin-left: 5px;
+}
+.utopia2 {
+  font-size: 10px;
+  letter-spacing: 9px;
+  margin-left: 10px;
+}
 
 /* expansion icons */
 
