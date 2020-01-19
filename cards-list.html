@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 
 <head>
-  <meta name="viewport" content="width=device-width">
   <meta charset="UTF-8">
   <meta name="description" content="TERRAFORMING MARS COMPLETE ANIMATED LIST">
   <meta name="keywords" content="HTML,CSS,JavaScript">
-  <meta name="viewport" content='width=890'>
+  <meta name="viewport" content='width=930, user-scalable=0'>
+
   <link rel="shortcut icon" type="image/png" href="images/favicon.png">
   <link rel="stylesheet" type="text/css" href="css/mystyles.css">
   <link rel="stylesheet" href="css/odometer.css">
@@ -29,15 +29,9 @@
       <div id="titleContainer">
         <div class="title-style">TERRAFORMING MARS CARDS LIST</div>
       </div>
-      <div id="myBtnContainer3" style="display:inline-block">
-        <div class="onoffswitch">
-          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" onclick="toggleCardsDesign();" >
-          <label class="onoffswitch-label" for="myonoffswitch">
-            <span class="onoffswitch-inner"></span>
-            <span class="onoffswitch-switch"></span>
-          </label>
-        </div>
-      </div>
+      <a disabled id="btn-selectedCards" class="button btn-selected-cards disabled" title="open selected cards" href="no-selected-card.html" target="_blank">SELECTED
+        <div id="selectedCardsAmount">0</div>
+      </a>
   </div>
 
 
@@ -85,9 +79,6 @@
       <button id="colonies" class="button btn3 colonies-icon button-icon  " onclick="filterFunction(id)" title="filter Colonies cards"></button>
       <button id="turmoil" class="button btn3 turmoil-icon button-icon  " onclick="filterFunction(id)" title="filter Turmoil cards"></button>
       <button id="promo" class="button btn3 promo-icon button-icon  " onclick="filterFunction(id)" title="filter Promo cards"></button>
-      <a disabled id="btn-selectedCards" class="button btn-selected-cards disabled" title="open selected cards" href="no-selected-card.html" target="_blank">SELECTED<br>CARDS
-        <div id="selectedCardsAmount">0</div>
-      </a>
     </div>
 
 
@@ -181,7 +172,6 @@
 
   <!--PROJECT CARDS-->
     <ul class="myUL">
-      <div class="ul-title">PROJECT CARDS</div>
       <div id="projectCards">
 
         <!--1-->
@@ -6442,7 +6432,6 @@
 
   <!--CORPORATIONS-->
   <ul class="myUL" style="clear:both;">
-      <div class="ul-title">CORPORATIONS</div>
 
       <li id="#CORP01" onclick="getClickedCard();" class="filterDiv corporation standard noneTag">
           <div class="corporationLabel ">CORPORATION</div>
@@ -7559,7 +7548,6 @@
 
   <!--PRELUDES-->
   <ul class="myUL" style="clear:both;">
-    <div class="ul-title">PRELUDES</div>
 
         <li onclick="getClickedCard();" class="filterDiv prelude prelude-card earthTag">
           <div class="title background-color-prelude">Allied Banks</div>
@@ -8122,7 +8110,6 @@
 
   <!--COLONIES-->
   <ul class="myUL" style="clear:both;">
-    <div class="ul-title">COLONIES</div>
 
       <!--EUROPA-->
       <li id="#EUROPA" onclick="getClickedCard();" class="filterDiv colony-card colonies" style="
@@ -8574,7 +8561,6 @@
 
   <!--GLOBAL EVENTS-->
   <ul class="myUL" style="clear:both;">
-    <div class="ul-title">GLOBAL EVENTS</div>
 
     <!--G01-->
     <li id="G01" onclick="getClickedCard();" class="filterDiv global-card turmoil">

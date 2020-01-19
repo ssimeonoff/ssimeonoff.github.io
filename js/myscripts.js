@@ -328,7 +328,7 @@ function clearInput() {
   document.getElementById("price").value = 0;
   document.getElementById("contentFilters").style.display = "none"; //hides the range inputs div
   document.getElementById("subfilterReqs").style.display = "none"; //hides the range inputs div
-  document.getElementById("btn-selectedCards").classList.toggle("disabled") //hide the selected cards button
+  document.getElementById("btn-selectedCards").classList.add("disabled") //hide the selected cards button
 
 
   //resets the range inputs
@@ -430,50 +430,6 @@ function toggleRequirementsFilters() {
     document.getElementById("contentFilters").style.height = CONTENT_FILTERS + "px";
     document.getElementById("buttonsContainer-body").style.height = containerHeight + "px";
   }
-}
-
-var design = 1;
-function toggleCardsDesign() {
-  if (design == 1) {stackedCards(); design = 2;}
-  else {casualCards(); design = 1;}
-}
-
-function casualCards() {
-    $('.colonyCards').css("margin-right", 40);
-    $('.colonyCards').css("margin-left", -20);
-
-    cards = document.querySelectorAll('.filterDiv');
-    for (i = 0; i < cards.length; i++) {
-        cards[i].classList.remove("filterDiv-stacked");
-    }
-    tables = document.querySelectorAll('.myUL');
-    for (i = 0; i < tables.length; i++) {
-        tables[i].style.width = "auto";
-        tables[i].style.margin = "15px 0px 0px 25px";
-    }
-    tableTitles = document.querySelectorAll('.ul-title');
-    for (i = 0; i < tableTitles.length; i++) {
-        tableTitles[i].style.margin = "0px 0px 0px -25px";
-    }
-}
-
-function stackedCards() {
-    $('.colonyCards').css("margin-right", -200);
-    $('.colonyCards').css("margin-left", 15);
-
-    cards = document.querySelectorAll('.filterDiv');
-    for (i = 0; i < cards.length; i++) {
-        cards[i].classList.add("filterDiv-stacked");
-    }
-    tables = document.querySelectorAll('.myUL');
-    for (i = 0; i < tables.length; i++) {
-      tables[i].style.width = "85%";
-      tables[i].style.margin = "15px 0px 0px -25px";
-    }
-    tableTitles = document.querySelectorAll('.ul-title');
-    for (i = 0; i < tableTitles.length; i++) {
-        tableTitles[i].style.margin = "15px 0px 0px 25px";
-    }
 }
 
 function reduceOne() {
