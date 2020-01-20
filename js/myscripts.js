@@ -67,6 +67,8 @@ function displayCards() {
     w3AddClass(arr[i], "display");
     w3RemoveClass(arr[i], "show");
   }
+
+  document.getElementById("button_load_more").display = "block";
 }
 
 //////////////////////PARSE function ////////////////////////////////
