@@ -87,12 +87,12 @@ function displayCardsOnly() {
   for (i = 0; i < x.length; i++) {
     if (x[i].querySelector(".number") != null) {
       if (cards.includes(x[i].querySelector(".number").textContent)) {
-        w3AddClass(x[i], "show");
+        w3AddClass(x[i], "display");
       }
     }
     else {
       if (cards.includes(x[i].id)) {
-        w3AddClass(x[i], "show");
+        w3AddClass(x[i], "display");
       }
     }
 
