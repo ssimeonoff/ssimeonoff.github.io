@@ -380,6 +380,10 @@ border-right: 2px solid rgb(137,137,137);
 }
 
 .show {
+
+}
+
+.display {
     display: block;
 }
 
@@ -536,6 +540,21 @@ border-right: 2px solid rgb(137,137,137);
       font-family: Prototype;
       background-color: #cc3333;
       text-shadow: 0 0 1px black;
+}
+
+.btn-load-more {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  height: 60px;
+  line-height: 54px;
+  width: 803px;
+  border-radius: 10px;
+  margin-left: 55px;
+  border-top: 4px solid rgb(221,221,221);
+  border-left: 4px solid rgb(221,221,221);
+  border-bottom: 4px solid rgb(137,137,137);
+  border-right: 4px solid rgb(137,137,137);
 }
 
 .icon-image {

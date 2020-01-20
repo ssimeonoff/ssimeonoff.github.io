@@ -46,6 +46,27 @@ function showAll() {
   x = document.querySelectorAll('.filterDiv');
   for (i = 0; i < x.length; i++) {w3AddClass(x[i], "show");}
 
+  //displaying first 24 cards that have "show"
+  displayCards();
+}
+
+function displayCards() {
+  button_load_more = document.getElementById("button-load-more");
+
+  arr = document.querySelectorAll('li.show');
+  if (arr.length > 24) {
+    display_length = 24
+    button_load_more.style.display = "block"
+  }
+  else {
+    display_length = arr.length
+    button_load_more.style.display = "none"
+  }
+
+  for (i=0; i < display_length; i++) {
+    w3AddClass(arr[i], "display");
+    w3RemoveClass(arr[i], "show");
+  }
 }
 
 //////////////////////PARSE function ////////////////////////////////
@@ -55,7 +76,6 @@ function parseURLParams(url) {
         query = url.slice(queryStart, queryEnd - 1)
     cards = "#" + query.replace(/\#/g, " #").toUpperCase().split(" ");
     if (query === url || query === "") return "ALL";
-    console.log(cards);
     return cards;
 }
 
@@ -109,7 +129,7 @@ function filterFunction(id) {
           show = true;
         }
         if (show == true) {w3AddClass(x[i], "show");}
-        else {w3RemoveClass(x[i], "show");}
+        else {w3RemoveClass(x[i], "show"); }
         }
     }
     x = document.querySelectorAll('li.show');
@@ -124,7 +144,7 @@ function filterFunction(id) {
           show = true;
         }
         if (show == true) {w3AddClass(x[i], "show");}
-        else {w3RemoveClass(x[i], "show");}
+        else {w3RemoveClass(x[i], "show"); }
         }
     }
     x = document.querySelectorAll('li.show');
@@ -139,7 +159,7 @@ function filterFunction(id) {
           show = true;
         }
         if (show == true) {w3AddClass(x[i], "show");}
-        else {w3RemoveClass(x[i], "show");}
+        else {w3RemoveClass(x[i], "show"); }
         }
     }
     x = document.querySelectorAll('li.show');
@@ -149,7 +169,7 @@ function filterFunction(id) {
   if (btnReq.classList.contains("active")) {
     for (i = 0; i < x.length; i++) {
         if (x[i].className.indexOf(btnReq.id) > -1) {w3AddClass(x[i], "show");}
-        else {w3RemoveClass(x[i], "show");}
+        else {w3RemoveClass(x[i], "show"); }
         }
     x = document.querySelectorAll('li.show');
   } else {
@@ -160,7 +180,7 @@ function filterFunction(id) {
   if (btnVP.classList.contains("active")) {
     for (i = 0; i < x.length; i++) {
         if (x[i].querySelectorAll(".points").length > 0) {w3AddClass(x[i], "show");}
-        else {w3RemoveClass(x[i], "show");}
+        else {w3RemoveClass(x[i], "show"); }
       }
     x = document.querySelectorAll('li.show');
   }
@@ -174,7 +194,7 @@ function filterFunction(id) {
           show = true;
         }
         if (show == true) {w3AddClass(x[i], "show");}
-        else {w3RemoveClass(x[i], "show");}
+        else {w3RemoveClass(x[i], "show"); }
         }
     }
     x = document.querySelectorAll('li.show');
@@ -190,7 +210,7 @@ function filterFunction(id) {
           show = true;
         }
         if (show == true) {w3AddClass(x[i], "show");}
-        else {w3RemoveClass(x[i], "show");}
+        else {w3RemoveClass(x[i], "show"); }
         }
     }
     x = document.querySelectorAll('li.show');
@@ -206,7 +226,7 @@ function filterFunction(id) {
         if (x[i].querySelector(".price") == null) {cardValue = 0;}
         else {cardValue = parseInt(x[i].querySelector(".price").textContent);}
         if (cardValue >= priceValue) {w3AddClass(x[i], "show");}
-        else {w3RemoveClass(x[i], "show");}
+        else {w3RemoveClass(x[i], "show"); }
       }
     x = document.querySelectorAll('li.show');
   }
@@ -214,7 +234,7 @@ function filterFunction(id) {
   //Filtering for the Requirements inputs
   if (document.getElementById("reqs").classList.contains("active")) {
     document.getElementById("subfilterReqs").classList.remove("subfilterReqs-disabled"); //enabling the subfilters
-    li = document.querySelectorAll('li.show');
+
     //Requirements input filtering
     temperatureValue = document.getElementById("slider1").value;
     oxygenValue = document.getElementById("slider2").value;
@@ -230,14 +250,14 @@ function filterFunction(id) {
       for (i = 0; i < x.length; i++) {
 
         //obtaining the data without writing over it
-        temperatureData = parseInt(li[i].dataset.temperature);
-        oxygenData = parseInt(li[i].dataset.oxygen);
-        oceansData = parseInt(li[i].dataset.oceans);
-        venusData = parseInt(li[i].dataset.venus);
-        scienceData = parseInt(li[i].dataset.science);
-        jovianData = parseInt(li[i].dataset.jovian);
-        venusTagData = parseInt(li[i].dataset.venustag);
-        earthData = parseInt(li[i].dataset.earth);
+        temperatureData = parseInt(x[i].dataset.temperature);
+        oxygenData = parseInt(x[i].dataset.oxygen);
+        oceansData = parseInt(x[i].dataset.oceans);
+        venusData = parseInt(x[i].dataset.venus);
+        scienceData = parseInt(x[i].dataset.science);
+        jovianData = parseInt(x[i].dataset.jovian);
+        venusTagData = parseInt(x[i].dataset.venustag);
+        earthData = parseInt(x[i].dataset.earth);
 
 
 
@@ -268,8 +288,8 @@ function filterFunction(id) {
         }
 
         //the check
-        if (show) {w3AddClass(li[i], "show");}
-        else {w3RemoveClass(li[i], "show");}
+        if (show) {w3AddClass(x[i], "show");}
+        else {w3RemoveClass(x[i], "show");}
       }
     }
   } else {
@@ -319,6 +339,13 @@ function filterFunction(id) {
   document.getElementById("totalPreludes").innerHTML = displayedPreludes;
   document.getElementById("totalColonies").innerHTML = displayedColonies;
   document.getElementById("totalGlobals").innerHTML = displayedGlobals;
+
+
+ //clearing all displayed cards
+ y = document.querySelectorAll('.display');
+ for (i = 0; i < y.length; i++) {w3RemoveClass(y[i], "display");}
+ //displaying the first N cards that have class "show"
+  displayCards();
 
 }
 
