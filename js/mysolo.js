@@ -73,6 +73,27 @@ data_ce_prAll = [
   ['Vitor', 84,124,87,90]
 ];
 
+data_ce_tu = [
+  ['Credicor', 4,111,126,90,182,4,105,107],
+  ['Ecoline', 113,111,100,120,109,97],
+  ['Factorum', 121,125,110,135,126,123,134],
+  ['Helion', 93,115,125,139,103,107],
+  ['Interplanetary', 101,151,133],
+  ['Inventrix', 109,98,110],
+  ['Mining Guild', 131,126,88,89],
+  ['Philares', 125,2,95,105,105,140,149,110],
+  ['Phobolog', 134 ,152,142,1],
+  ['Tharsis Republic',122,125,125,128,119,131,114,125,101,109,142,100],
+  ['Thorgate', 128,125,127,109,83],
+  ['UNMI', 89,119],
+  ['Teractor', 150,118],
+  ['Saturn Systems', 115,1,89,121,124,3,107,133,85,111,133],
+  ['Utopia', 101,120,113],
+  ['Lakefront',161,108,116,83,148,151,103,94,152,157],
+  ['Septem', 124,112,140,131,140]
+
+];
+
 data_ce_vn_pr = [
   ['Credicor', 82],
   ['Ecoline', 111,96,0,99,109,102,96,114,93,98,117],
@@ -176,6 +197,7 @@ histogram("div_ce", data_ce);
 histogram("div_ce_vn", data_ce_vn);
 histogram("div_ce_pr", data_ce_pr);
 histogram("div_ce_prAll", data_ce_prAll);
+histogram("div_ce_tu", data_ce_tu);
 histogram("div_ce_vn_pr", data_ce_vn_pr);
 histogram("div_ce_vn_pr_co", data_ce_vn_pr_co);
 histogram("div_ce_vn_prAll_co", data_ce_vn_prAll_co);
@@ -195,12 +217,12 @@ function histogram (div_id, data) {
       legend: { position: 'none' },
       fontSize: 12,
       backgroundColor: "transparent",
-      vAxis: { gridlines: { count: 1}, maxValue:20 },
+      vAxis: { gridlines: { count: 1}, maxValue:25 },
       hAxis: {textStyle : {fontSize: 8, fontName: 'Prototype'}},
       bar: {gap: 1},
       chartArea:{left:0,bottom:26,top:0,width:380},
       colors: ['#444444','#888888'],
-      histogram: {bucketSize: 5, minValue: 75, maxValue: 145}
+      histogram: {bucketSize: 5, minValue: 70, maxValue: 185}
     };
 
     var games = [
