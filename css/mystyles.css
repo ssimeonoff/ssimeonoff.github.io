@@ -12,6 +12,14 @@ body {
   background-position-y:-200px;
 }
 
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
 /*project card div*/
 .filterDiv {
     cursor: pointer;
