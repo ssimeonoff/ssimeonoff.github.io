@@ -1,4 +1,7 @@
 playersButton = 0;
+enableCorporationData = false;
+enableMapData = false;
+enableHistogramData = false;
 
 var config = {
   apiKey: "AIzaSyD6HEAHfcXGN-WrUxSaraO3TYNzGbAr8ts",
@@ -24,6 +27,10 @@ firebase.database().ref("games-production").on('value', function(snapshot) {
       games = GAMES_ALL;
     }
     pushData();
+    document.querySelectorAll(".btn-stats-activation").forEach((item, i) => {
+      item.style.transform = "scale(1)";
+    });
+    ;
 });
 
 firebase.auth().onAuthStateChanged(function(user) {
@@ -62,14 +69,13 @@ function snapshotToArray(snapshot) {
 function pushData() {
   //displaying and updating the tableaus
   calculateGamesPerPlayerCount();
-  pushGeneralStats();
-  pushCorporationsData();
-  pushMapStats();
-  pushAwardsStats();
-  pushAverageGenerations();
-  pushHistograms();
   pushHistory();
   pushRanking();
+
+  if (enableCorporationData) {pushCorporationsData();}
+  if (enableMapData) {pushMapStats();pushAwardsStats();}
+  if (enableHistogramData) {pushHistograms();}
+
 }
 
 function calculateGamesPerPlayerCount() {
@@ -566,19 +572,6 @@ function pushCorporationsData() {
 
 }
 
-function pushGeneralStats() {
-  //draft games
-  var draftGames = games.filter(function(el) {
-    return el.draft == "YES"
-  });
-  document.getElementById("draft_games").innerHTML = Math.round(draftGames.length*100/games.length) + "%" ;
-  document.getElementById("corporate_games").innerHTML =  Math.round(checkForElement("expansions", "CORPORATE")*100/games.length) + "%"
-  document.getElementById("venus_games").innerHTML =  Math.round(checkForElement("expansions", "VENUS")*100/games.length) + "%"
-  document.getElementById("prelude_games").innerHTML =  Math.round(checkForElement("expansions", "PRELUDE")*100/games.length) + "%"
-  document.getElementById("colonies_games").innerHTML =  Math.round(checkForElement("expansions", "COLONIES")*100/games.length) + "%"
-
-}
-
 function checkForElement (subArrayName, element) {
   //calculated played and won games per corporation
   var playedElement = 0
@@ -662,67 +655,6 @@ function pushAwardsStats() {
   document.getElementById("venuphile").innerHTML =  Math.round(checkForElement("awards", "VENUPHILE")*100/(1+Math.round(checkForElement("expansions", "VENUS")))) + "%";
 }
 
-function generateAverageGenerations (players) {
-  gamesPerPlayers = games.filter(function(el) {
-    return el.players == players
-  });
-
-  games_ce = gamesPerPlayers.filter(function(el) {
-    if (el.expansions == undefined) {el.expansions =""}
-    return  el.expansions.indexOf("CORPORATE") > -1 &&
-            el.expansions.indexOf("VENUS") < 0 &&
-            el.expansions.indexOf("PRELUDE") < 0 &&
-            el.expansions.indexOf("COLONIES") < 0
-  });
-  generateAverageGenerationsValue(players, games_ce, "_ce")
-
-  games_ce_vn = gamesPerPlayers.filter(function(el) {
-    if (el.expansions == undefined) {el.expansions =""}
-    return  el.expansions.indexOf("CORPORATE") > -1 &&
-            el.expansions.indexOf("VENUS") > -1 &&
-            el.expansions.indexOf("PRELUDE") < 0 &&
-            el.expansions.indexOf("COLONIES") < 0
-  });
-  generateAverageGenerationsValue(players, games_ce_vn, "_ce_vn")
-
-  games_ce_pl = gamesPerPlayers.filter(function(el) {
-    if (el.expansions == undefined) {el.expansions =""}
-    return  el.expansions.indexOf("CORPORATE") > -1 &&
-            el.expansions.indexOf("VENUS") < 0 &&
-            el.expansions.indexOf("PRELUDE") > -1 &&
-            el.expansions.indexOf("COLONIES") < 0
-  });
-  generateAverageGenerationsValue(players, games_ce_pl, "_ce_pl")
-
-  games_ce_vn_pl = gamesPerPlayers.filter(function(el) {
-    if (el.expansions == undefined) {el.expansions =""}
-    return  el.expansions.indexOf("CORPORATE") > -1 &&
-            el.expansions.indexOf("VENUS") > -1 &&
-            el.expansions.indexOf("PRELUDE") > -1 &&
-            el.expansions.indexOf("COLONIES") < 0
-  });
-  generateAverageGenerationsValue(players, games_ce_vn_pl, "_ce_vn_pl")
-
-  games_ce_pl_co = gamesPerPlayers.filter(function(el) {
-    if (el.expansions == undefined) {el.expansions =""}
-    return  el.expansions.indexOf("CORPORATE") > -1 &&
-            el.expansions.indexOf("VENUS") < 0 &&
-            el.expansions.indexOf("PRELUDE") > -1 &&
-            el.expansions.indexOf("COLONIES") > -1
-  });
-  generateAverageGenerationsValue(players, games_ce_pl_co, "_ce_pl_co")
-
-  games_ce_vn_pl_co = gamesPerPlayers.filter(function(el) {
-    if (el.expansions == undefined) {el.expansions =""}
-    return  el.expansions.indexOf("CORPORATE") > -1 &&
-            el.expansions.indexOf("VENUS") > -1 &&
-            el.expansions.indexOf("PRELUDE") > -1 &&
-            el.expansions.indexOf("COLONIES") > -1
-  });
-  generateAverageGenerationsValue(players, games_ce_vn_pl_co, "_ce_vn_pl_co")
-
-}
-
 function generateAverageGenerationsValue (players, games, id) {
   games_NO = games.filter(function(el) {return el.wgt == "NO" });
   games_YES = games.filter(function(el) {return el.wgt == "YES" });
@@ -753,13 +685,6 @@ function generateAverageGenerationsValue (players, games, id) {
     averageYES = "--"
   }
   document.getElementById("generations_" + players + id).innerHTML = averageNO + " <span style='font-size:14px;'>[" + averageYES + "]</span>";
-}
-
-function pushAverageGenerations () {
-  generateAverageGenerations(2);
-  generateAverageGenerations(3);
-  generateAverageGenerations(4);
-  generateAverageGenerations(5);
 }
 
 function pushHistograms() {
@@ -1113,8 +1038,9 @@ function pushHistory() {
 
 function pushRanking () {
   var user = firebase.auth().currentUser;
-  if (user) {
-    email = user.email;
+  if (true) {
+    //email = user.email;
+    email = "s.simeonoff@gmail.com"
     console.log(email)
     games_player = games.filter(function(el) {
       return el.email == email;
@@ -1225,4 +1151,27 @@ function changeSliderColour (id) {
       el.classList.add("track-background-include");
       el.classList.remove("track-background-exclude");
   }
+}
+
+function enableStats(id) {
+  el = document.getElementById(id);
+  setTimeout(function() {
+    el.style.transform = "scale(0)";
+    if (id === "show-corporations") {
+      enableCorporationData = true;
+      document.getElementById("data-corporations").style = "opacity:1";
+    };
+    if (id === "show-histograms") {
+      enableHistogramData = true;
+      document.getElementById("data-histograms").style = "opacity:1";
+    };
+    if (id === "show-maps") {
+      enableMapData = true;
+      document.getElementById("data-maps").style = "opacity:1";
+    };
+  }, 200);
+  setTimeout(function() {
+      pushData();
+  }, 400);
+
 }

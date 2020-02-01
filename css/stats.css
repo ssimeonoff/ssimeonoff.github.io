@@ -8,8 +8,6 @@
     .layout {
       width: 460px !important;
     }
-    .playerStats {
-    }
 }
 
 .buttons-container {
@@ -153,7 +151,7 @@
 .chart-points {
   display: inline-block;
   position: absolute;
-  margin-top: -225px;
+  margin-top: -430px;
   margin-left: -220px;
   font-size: 18px;
   height: 27px;
@@ -172,6 +170,7 @@
 
 .playerStats {
     display: inline-block;
+    opacity: 0.3;
     position: relative;
     font-family: Prototype;
     grid-template-columns: auto;
@@ -234,15 +233,9 @@
 
 .stats-ranking {
   display: grid;
-  grid-template-columns: 90px 110px 120px 140px;
-  position: relative;
-  font-family: Prototype;
-  background: #ccc;
-  color: #222;
   background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
-  border-radius: 2px;
-  width: 460px;
-  position: relative;
+  font-family: Prototype;
+  grid-template-columns: 90px 110px 120px 140px;
   text-align: center;
   margin-bottom: 10px;
   border-top: 2px solid rgb(221,221,221);
@@ -259,6 +252,7 @@
 
 .chartStats {
     display: grid;
+    opacity: 0.3;
     grid-template-columns: 460px;
     position: relative;
     font-family: Prototype;
@@ -281,19 +275,20 @@
   border-left: 2px solid rgb(221,221,221);
   border-bottom: 2px solid rgb(137,137,137);
   border-right: 2px solid rgb(137,137,137);
-  height: 231px;
+  height: 438px;
 }
 
 .chart-div2 {
-  height: 100px;
+  height: 200px;
   width: 220px;
   position: absolute;
-  margin-top: -230px;
+  margin-top: -430px;
   margin-left: 232px;
 }
 
 .generalStats2 {
     display: grid;
+    opacity: 0.3;
     grid-template-columns: 140px 160px 160px;
     position: relative;
     font-family: Prototype;
@@ -387,8 +382,8 @@
       text-align: center;
       font-size: 20px;
       color: #222;
-      height: 60px;
-      line-height: 60px;
+      height: 40px;
+      line-height: 40px;
       border-radius: 1px;
       border-top: 2px solid rgb(221,221,221);
       border-left: 2px solid rgb(221,221,221);
@@ -1176,6 +1171,23 @@
   margin-left: 9px;
 }
 
+.btn-stats-activation {
+  position: absolute;
+  cursor: pointer;
+  transform: scale(0);
+  background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#cacaca, #919191);
+  z-index: 1;
+  box-shadow: 0 2px 4px 2px black;
+  font-size: 20px;
+  height: 100px;
+  width: 200px;
+  font-size: 20px;
+  margin-left: 240px;
+  margin-top: 20px;
+  border-radius: 5px;
+  transition: transform 0.2s;
+}
+
 .drop-down {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1262,6 +1274,9 @@
 .btn-reset:active, .btn-grid-cell:active, .btn-apply-filters:active {
   transform: translate(0,1px);
 }
+ .btn-stats-activation:active {
+   transform: translate(0,2px);
+ }
 
 .btn-mygames-solo {
   width: 115px;

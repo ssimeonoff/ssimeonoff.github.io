@@ -35,6 +35,17 @@
       <div id="account-name">Authenticating...</div>
     </div>
 
+    <div class="stats-ranking">
+      <div class="grid-cell title-cell" style="width: 456px;">MY RANKINGS</div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div class="grid-cell-rank" id="rank_2"></div>
+      <div class="grid-cell-rank" id="rank_3"></div>
+      <div class="grid-cell-rank" id="rank_4"></div>
+      <div class="grid-cell-rank" id="rank_5"></div>
+    </div>
+
     <div class="buttons-container">
       <div class="grid3">
         <div class="grid-cell title-cell" style="height:46px;line-height:46px;font-size:22px !important"><div>FILTERS</div></div>
@@ -516,7 +527,8 @@
 
 <div class="column">
 
-  <div class="playerStats">
+  <button id= "show-corporations" class="button btn-stats-activation" onclick="enableStats(id)"> SHOW </button>
+  <div id= "data-corporations" class="playerStats">
     <div class="grid5">
       <select class="sort-menu" id="sorting"  size="1" name="sort types" onchange="">
         <option selected value="winrate">WINRATE</option>
@@ -929,103 +941,8 @@
 
 <div class="column">
 
-    <div class="stats-ranking">
-
-      <div class="grid-cell title-cell" style="width: 456px;"> <div>MY RANKING</div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-
-      <div class="grid-cell-rank" id="rank_2"></div>
-      <div class="grid-cell-rank" id="rank_3"></div>
-      <div class="grid-cell-rank" id="rank_4"></div>
-      <div class="grid-cell-rank" id="rank_5"></div>
-
-
-    </div>
-
-    <div class="generalStats">
-      <div class="grid-cell title-cell"> <div>DRAFT</div></div>
-      <div class="grid-cell title-cell" style="width:316px;"> <div>EXPANSIONS</div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-
-      <div class="grid-cell-stats stats-general"><div style="margin-top:20px;" id="draft_games"></div></div>
-      <div class="grid-cell-stats stats-general"><div class="icon corporate-era-icon icon-align"></div><div id="corporate_games" style="  margin-top:32px;"></div></div>
-      <div class="grid-cell-stats stats-general"><div class="icon venus-icon icon-align"></div><div id="venus_games" style="  margin-top:32px;"></div></div>
-      <div class="grid-cell-stats stats-general"><div class="icon prelude-icon icon-align"></div><div id="prelude_games" style="  margin-top:32px;"></div></div>
-      <div class="grid-cell-stats stats-general"><div class="icon colonies-icon icon-align"></div><div id="colonies_games" style="  margin-top:32px;"></div></div>
-    </div>
-
-    <div class="generalStats" title="Average generation values WITHOUT and [WITH] WGT.">
-
-      <div class="grid-cell title-cell"> <div>GENERATIONS</div></div>
-      <div class="grid-cell title-cell"> <div>2P</div></div>
-      <div class="grid-cell title-cell"> <div>3P</div></div>
-      <div class="grid-cell title-cell"> <div>4P</div></div>
-      <div class="grid-cell title-cell"> <div>5P</div></div>
-
-      <div class="grid-cell" style="font-size:14px; ">
-        <div class="icon corporate-era-icon icon-align"></div>
-      </div>
-      <div class="grid-cell" style="font-size:18px; " id="generations_2_ce"></div>
-      <div class="grid-cell" style="font-size:18px; " id="generations_3_ce"></div>
-      <div class="grid-cell" style="font-size:18px; " id="generations_4_ce"></div>
-      <div class="grid-cell" style="font-size:18px; " id="generations_5_ce"></div>
-
-      <div class="grid-cell" style="font-size:14px; ">
-        <div style="margin-left:-35px;" class="icon corporate-era-icon icon-align"></div>
-        <div style="margin-left: 5px;" class="icon venus-icon icon-align"></div>
-      </div>
-      <div class="grid-cell" style="font-size:18px; " id="generations_2_ce_vn"></div>
-      <div class="grid-cell" style="font-size:18px; " id="generations_3_ce_vn"></div>
-      <div class="grid-cell" style="font-size:18px; " id="generations_4_ce_vn"></div>
-      <div class="grid-cell" style="font-size:18px; " id="generations_5_ce_vn"></div>
-
-      <div class="grid-cell" style="font-size:14px; ">
-        <div style="margin-left:-35px;" class="icon corporate-era-icon icon-align"></div>
-        <div style="margin-left: 5px;" class="icon prelude-icon icon-align"></div>
-      </div>
-      <div class="grid-cell" style="font-size:18px; " id="generations_2_ce_pl"></div>
-      <div class="grid-cell" style="font-size:18px; " id="generations_3_ce_pl"></div>
-      <div class="grid-cell" style="font-size:18px; " id="generations_4_ce_pl"></div>
-      <div class="grid-cell" style="font-size:18px; " id="generations_5_ce_pl"></div>
-
-      <div class="grid-cell" style="font-size:14px; ">
-        <div style="margin-left:-55px;" class="icon corporate-era-icon icon-align"></div>
-        <div style="margin-left: -15px;" class="icon venus-icon icon-align"></div>
-        <div style="margin-left: 25px;" class="icon prelude-icon icon-align"></div>
-      </div>
-      <div class="grid-cell" style="font-size:18px; " id="generations_2_ce_vn_pl"></div>
-      <div class="grid-cell" style="font-size:18px; " id="generations_3_ce_vn_pl"></div>
-      <div class="grid-cell" style="font-size:18px; " id="generations_4_ce_vn_pl"></div>
-      <div class="grid-cell" style="font-size:18px; " id="generations_5_ce_vn_pl"></div>
-
-      <div class="grid-cell" style="font-size:14px; ">
-        <div style="margin-left:-55px;" class="icon corporate-era-icon icon-align"></div>
-        <div style="margin-left: -15px;" class="icon prelude-icon icon-align"></div>
-        <div style="margin-left: 25px;" class="icon colonies-icon icon-align"></div>
-      </div>
-      <div class="grid-cell" style="font-size:18px; " id="generations_2_ce_pl_co"></div>
-      <div class="grid-cell" style="font-size:18px; " id="generations_3_ce_pl_co"></div>
-      <div class="grid-cell" style="font-size:18px; " id="generations_4_ce_pl_co"></div>
-      <div class="grid-cell" style="font-size:18px; " id="generations_5_ce_pl_co"></div>
-
-      <div class="grid-cell" style="font-size:14px; ">
-        <div style="margin-left:-75px;" class="icon corporate-era-icon icon-align"></div>
-        <div style="margin-left:-35px;" class="icon venus-icon icon-align"></div>
-        <div style="margin-left: 5px;" class="icon prelude-icon icon-align"></div>
-        <div style="margin-left: 45px;" class="icon colonies-icon icon-align"></div>
-      </div>
-      <div class="grid-cell" style="font-size:18px; " id="generations_2_ce_vn_pl_co"></div>
-      <div class="grid-cell" style="font-size:18px; " id="generations_3_ce_vn_pl_co"></div>
-      <div class="grid-cell" style="font-size:18px; " id="generations_4_ce_vn_pl_co"></div>
-      <div class="grid-cell" style="font-size:18px; " id="generations_5_ce_vn_pl_co"></div>
-
-    </div>
-
-    <div class="chartStats">
+    <button id= "show-histograms" class="button btn-stats-activation" onclick="enableStats(id)"> SHOW </button>
+    <div id= "data-histograms" class="chartStats">
       <div class="grid-cell title-cell"> <div>SCORES DISTRIBUTION AND MEAN VALUES</div></div>
       <div>
         <div class="chart-header">2P</div>
@@ -1053,7 +970,8 @@
       </div>
     </div>
 
-    <div class="generalStats2">
+    <button id= "show-maps" class="button btn-stats-activation" onclick="enableStats(id)"> SHOW </button>
+    <div id= "data-maps" class="generalStats2">
         <div class="grid-cell title-cell"> <div>MAPS</div></div>
         <div class="grid-cell title-cell"> <div>MILESTONES</div></div>
         <div class="grid-cell title-cell"> <div>AWARDS</div></div>
