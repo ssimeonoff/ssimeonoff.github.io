@@ -94,7 +94,7 @@
   padding-left: 10px;
 }
 
-.drop-down3:hover, #submit:hover {
+.drop-down3:hover, #submit:hover, .map:hover, .mode:hover, .section:hover {
   filter: brightness(110%);
 }
 
@@ -102,6 +102,7 @@
   font-family: Prototype;
   display: inline-block;
   position: relative;
+  cursor: pointer;
   width: 177px;
   height: 86px;
   font-size: 30px;
@@ -273,7 +274,7 @@ input::placeholder {
 }
 
 .btn-grid-cell-solo:active {
-  transform: translate(0,1px); 
+  transform: translate(0,1px);
 }
 
 
@@ -653,6 +654,7 @@ input::-webkit-inner-spin-button {
 
 .corporations-solo {
   position: relative;
+  opacity: 0.3;
   font-family: Prototype;
   background: #ccc;
   background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);

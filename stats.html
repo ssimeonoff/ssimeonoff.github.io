@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="css/auth.css">
   <meta name="viewport" content='width=500, user-scalable=0'>
 
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/er.js"></script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116626580-5"></script>
 <script>
@@ -49,7 +49,7 @@
     <div class="buttons-container">
       <div class="grid3">
         <div class="grid-cell title-cell" style="height:46px;line-height:46px;font-size:22px !important"><div>FILTERS</div></div>
-        <div class="btn-grid-cell" onclick="download();" style="width:30px;height:36px;margin-left:6px;" title="Download the database">
+        <div class="btn-grid-cell" onclick="down();" style="width:30px;height:36px;margin-left:6px;" title="Download the database">
           <img src="images/file.png" width="26" height="26" style="margin-top:5px;">
         </div>
         <a class="link btn-submit" href="https://ssimeonoff.github.io/submit" target="_blank"><div>SUBMIT</div></a>
@@ -527,7 +527,7 @@
 
 <div class="column">
 
-  <button id= "show-corporations" class="button btn-stats-activation" onclick="enableStats(id)"> SHOW </button>
+  <button id= "show-corporations" class="button btn-stats-activation" onclick="enableStats(id)"> LOAD </button>
   <div id= "data-corporations" class="playerStats">
     <div class="grid5">
       <select class="sort-menu" id="sorting"  size="1" name="sort types" onchange="">
@@ -941,7 +941,7 @@
 
 <div class="column">
 
-    <button id= "show-histograms" class="button btn-stats-activation" onclick="enableStats(id)"> SHOW </button>
+    <button id= "show-histograms" class="button btn-stats-activation" onclick="enableStats(id)"> LOAD </button>
     <div id= "data-histograms" class="chartStats">
       <div class="grid-cell title-cell"> <div>SCORES DISTRIBUTION AND MEAN VALUES</div></div>
       <div>
@@ -970,7 +970,7 @@
       </div>
     </div>
 
-    <button id= "show-maps" class="button btn-stats-activation" onclick="enableStats(id)"> SHOW </button>
+    <button id= "show-maps" class="button btn-stats-activation" onclick="enableStats(id)"> LOAD </button>
     <div id= "data-maps" class="generalStats2">
         <div class="grid-cell title-cell"> <div>MAPS</div></div>
         <div class="grid-cell title-cell"> <div>MILESTONES</div></div>

@@ -1,4 +1,5 @@
-
+enableCorporationData = false;
+enableHistogramData = false;
 countryValue = "";
 try {getCountry();}
 catch (err) {console.log("cannot get country")}
@@ -141,6 +142,9 @@ function arrayExpansions() {
       games = GAMES_ALL;
     }
     pushData();
+    document.querySelectorAll(".btn-stats-activation").forEach((item, i) => {
+      item.style.transform = "scale(1)";
+    });
   });
 
 $("#form").keypress(function (event) {
@@ -465,8 +469,8 @@ function filterFunction(id) {
 function pushData() {
   setTimeout(function() {pushGeneralStats()}, 500); //for smoother animation
   pushHistory();
-  pushCorporationsData();
-  histogram();
+  if (enableCorporationData) { pushCorporationsData(); }
+  if (enableHistogramData) { histogram(); }
 }
 
 function pushGeneralStats() {
@@ -1056,4 +1060,23 @@ function changeSliderColour (id) {
       el.classList.add("track-background-include");
       el.classList.remove("track-background-exclude");
   }
+}
+
+function enableStats(id) {
+  el = document.getElementById(id);
+  setTimeout(function() {
+    el.style.transform = "scale(0)";
+    if (id === "show-corporations") {
+      enableCorporationData = true;
+      document.getElementById("data-corporations").style = "opacity:1";
+    };
+    if (id === "show-histograms") {
+      enableHistogramData = true;
+      document.getElementById("data-histograms").style = "opacity:1";
+    };
+  }, 200);
+  setTimeout(function() {
+      pushData();
+  }, 400);
+
 }
