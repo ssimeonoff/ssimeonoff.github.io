@@ -1039,8 +1039,7 @@ function pushHistory() {
 function pushRanking () {
   var user = firebase.auth().currentUser;
   if (true) {
-    //email = user.email;
-    email = "s.simeonoff@gmail.com"
+    email = user.email;
     console.log(email)
     games_player = games.filter(function(el) {
       return el.email == email;
