@@ -86,7 +86,7 @@
   padding-left: 10px;
 }
 
-.drop-down3:hover, #submit:hover, .map:hover, .mode:hover, .section:hover {
+.drop-down3:hover, #submit:hover, .map:hover, .mode:hover {
   filter: brightness(110%);
 }
 
