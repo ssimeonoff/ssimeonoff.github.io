@@ -36,7 +36,4 @@ Author's detailed table with completed Solo games based on included expansions.
 
 * **[Simeon Simeonov](https://github.com/ssimeonoff)** - *Initial work*
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
 ## Acknowledgments
-Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
