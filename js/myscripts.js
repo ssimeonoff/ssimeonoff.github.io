@@ -557,6 +557,7 @@ function sortByID() {
   });
   // put sorted results back on page
   $("#projectCards").append(myArray);
+  filterFunction(null);
 }
 
 function toggleActive(id) {
