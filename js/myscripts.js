@@ -503,6 +503,7 @@ function sortByPriceUp() {
   });
   // put sorted results back on page
   $("#projectCards").append(myArray);
+  filterFunction(null);
 }
 
 function sortByPriceDown() {
@@ -529,6 +530,7 @@ function sortByPriceDown() {
   });
   // put sorted results back on page
   $("#projectCards").append(myArray);
+  filterFunction(null);
 }
 
 function sortByID() {
@@ -539,9 +541,9 @@ function sortByID() {
     myArray = [].slice.call(myArray);
     myArray.sort(function (a, b) {
     // convert to integers from strings
-    a = parseInt($(a).find(".number").text(), 10);
+    a = $(a).find(".number").text();
     if (a == null) {a = 0}
-    b = parseInt($(b).find(".number").text(), 10);
+    b = $(b).find(".number").text();
     if (b == null) {b = 0}
     count += 2;
     // compare
