@@ -78,7 +78,7 @@ function submitForm(e) {
   var map = document.querySelector('input[name="map"]:checked').value;
   var milestones = arrayMilestones();
   var awards = arrayAwards();
-  var timestamp = Math.floor((new Date()).getTime() / 1000);
+  var timestamp = firebase.database.ServerValue.TIMESTAMP;
   //ordering the two arrays by the scores values
   var corporations = newCorporations;
   var scores = newScores;

@@ -15,6 +15,7 @@ var config = {
 
 firebase.initializeApp(config);
 
+
 // Reference Games collection
 var gamesRef = firebase.database().ref("games-solo");
 
@@ -32,7 +33,6 @@ firebase.auth().onAuthStateChanged(function(user) {
       // No user is signed in.
       console.log("not logged")
       document.getElementById("account-name").innerHTML = "<a class='link-auth' href='https://ssimeonoff.github.io/login'>Sign in</a>Not Signed<br>Personal statistics are unavailable"
-
     }
   }
 });
@@ -69,8 +69,9 @@ function submitForm(e) {
   var expansions = arrayExpansions();
   var map = document.querySelector('input[name="map"]:checked').value;
   var mode = document.querySelector('input[name="mode"]:checked').value;
-  var timestamp = Math.floor((new Date()).getTime() / 1000);
+  var timestamp = firebase.database.ServerValue.TIMESTAMP;
   var country = countryValue;
+
 
   //win and loss saves data in result - losses keeps values under 10
   if (outcome == "win") {
@@ -524,8 +525,10 @@ function pushHistory() {
 
     //game timestamp in seconds
     timestamp = games[games.length-1-i]["timestamp"];
+
     if (timestamp == undefined) {gameSections[i].querySelector(".history-section-time").innerHTML = "-- ----"}
     else {
+      if (timestamp.toString().length > 12) {timestamp = Math.round(timestamp/1000)};
       time = now - timestamp;
       gameSections[i].querySelector(".history-section-time").innerHTML = compareTime(time);
 
