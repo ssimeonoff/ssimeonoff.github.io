@@ -23,6 +23,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     const val = snap.val()
     games = Object.keys(val)
       .map(key => val[key])
+    })
     document.getElementById("title3").innerHTML = games.length; //for the odometer counter
 
     console.log("logged")
@@ -30,7 +31,6 @@ firebase.auth().onAuthStateChanged(function(user) {
     pushHistory(user.email);
   } else {
     // No user is signed in.
-    games = [];
     console.log("not logged")
     document.getElementById("account-name").innerHTML = "<a class='link-auth' href='https://ssimeonoff.github.io/login'>Sign in</a>Not Signed<br>Personal statistics are unavailable"
     //pushHistory("...@gmail.com");
@@ -40,6 +40,8 @@ firebase.auth().onAuthStateChanged(function(user) {
 // Reference Games collection
 var gamesRef = firebase.database().ref("games-production");
 //get the games as an array
+
+
 //listen for form SUBMIT
 document.getElementById("form").addEventListener("submit", submitForm);
 
