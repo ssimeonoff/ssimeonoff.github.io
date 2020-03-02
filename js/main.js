@@ -23,8 +23,8 @@ firebase.auth().onAuthStateChanged(function(user) {
     const val = snap.val()
     games = Object.keys(val)
       .map(key => val[key])
-    })
     document.getElementById("title3").innerHTML = games.length; //for the odometer counter
+    })
 
     console.log("logged")
     document.getElementById("account-name").innerHTML = user.displayName + "<br>" + user.email
@@ -39,8 +39,6 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 // Reference Games collection
 var gamesRef = firebase.database().ref("games-production");
-//get the games as an array
-
 
 //listen for form SUBMIT
 document.getElementById("form").addEventListener("submit", submitForm);
