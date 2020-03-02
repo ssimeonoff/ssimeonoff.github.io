@@ -14,33 +14,33 @@ var config = {
 };
 firebase.initializeApp(config);
 //get the signed user
+user = firebase.auth().currentUser;
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+    console.log("logged")
+    document.getElementById("account-name").innerHTML = user.displayName + "<br>" + user.email
+    pushHistory(user.email);
+  } else {
+    // No user is signed in.
+    console.log("not logged")
+    document.getElementById("account-name").innerHTML = "<a class='link-auth' href='https://ssimeonoff.github.io/login'>Sign in</a>Not Signed<br>Personal statistics are unavailable"
+    //pushHistory("...@gmail.com");
+  }
+});
 
 // Reference Games collection
 var gamesRef = firebase.database().ref("games-production");
 //get the games as an array
-var r1 = firebase.database().ref('games-production')
-r1.on('value', (snap) => {
+if (user) {
+  var r1 = firebase.database().ref('games-production').orderByChild("email").equalTo(user.email);
+  r1.on('value', (snap) => {
   const val = snap.val()
   games = Object.keys(val)
     .map(key => val[key])
   document.getElementById("title3").innerHTML = games.length; //for the odometer counter
-
-  firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-      // User is signed in.
-      console.log("logged")
-      document.getElementById("account-name").innerHTML = user.displayName + "<br>" + user.email
-      pushHistory(user.email);
-    } else {
-      // No user is signed in.
-      console.log("not logged")
-      document.getElementById("account-name").innerHTML = "<a class='link-auth' href='https://ssimeonoff.github.io/login'>Sign in</a>Not Signed<br>Personal statistics are unavailable"
-      //pushHistory("...@gmail.com");
-    }
-  });
-
-})
-
+  })
+}
 
 //listen for form SUBMIT
 document.getElementById("form").addEventListener("submit", submitForm);
@@ -61,8 +61,6 @@ function submitForm(e) {
 
   email = "";
   name = "";
-  //Get values
-  user = firebase.auth().currentUser;
   if (user != null) {
     console.log(user.displayName)
     name = user.displayName;
