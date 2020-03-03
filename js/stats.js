@@ -41,7 +41,6 @@ firebase.auth().onAuthStateChanged(function(user) {
       document.getElementById("account-name").innerHTML = user.displayName + "<br>" + user.email
       document.getElementById("mygames").disabled = false;
       document.getElementById("mygames-group").disabled = false;
-
     } else {
       // No user is signed in.
       console.log("not logged")
@@ -58,18 +57,17 @@ function displayGames() {
     getFirebaseGames();
   }
   games = GAMES_ALL;
-  pushData();
   document.querySelectorAll(".btn-stats-activation").forEach((item, i) => {
     item.style.transform = "scale(1)";
   });
   if (email_guest != "ALL" && email_guest != undefined)  {
-    console.log(email_guest[0])
     document.getElementById("account-name").innerHTML = "Games submitted by<br>" + email_guest + "****"
     GAMES_ALL = games.filter(function(el) {
       return el.email != undefined && el.email.search(email_guest) > -1;
     });
     games = GAMES_ALL;
   }
+  pushData();
 }
 
 function getFirebaseGames() {
@@ -282,15 +280,14 @@ function filterFunction() {
     });
   }
 
-  var user = firebase.auth().currentUser;
   //filter by user email (my games only)
   btnMyGames = document.querySelectorAll(".btn-mygames-solo.active");
   if (btnMyGames.length == 1 ) {
+    var user = firebase.auth().currentUser;
     games = games.filter(function(el) {
       return el.email == user.email;
     });
   }
-
   //pushing the new filtered data
   pushData();
   //to keep the corporations sorting
@@ -351,11 +348,6 @@ function generateGameStats (players, corporationName) {
    }
   }
 
-
-
-
-
-
   //calculating the average score
   avg = sum/totalGames;
 
@@ -385,9 +377,6 @@ function indexOfMax(arr) {
     }
     return maxIndex;
 }
-
-
-
 
 function pushCorporationsData() {
   //standard
@@ -731,7 +720,6 @@ function pushHistograms() {
   histogram_generations(5);
 
 }
-
 
 /// charts and their functions
 
