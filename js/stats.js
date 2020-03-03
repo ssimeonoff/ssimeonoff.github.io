@@ -54,6 +54,9 @@ function displayGames() {
   urlString = window.location.href;
   email_guest = parseURLParams(urlString);
   GAMES_ALL = JSON.parse(localStorage.getItem("games"));
+  if (GAMES_ALL == undefined) {
+    getFirebaseGames();
+  }
   games = GAMES_ALL;
   pushData();
   document.querySelectorAll(".btn-stats-activation").forEach((item, i) => {
