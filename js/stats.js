@@ -12,30 +12,28 @@ var config = {
   messagingSenderId: "969120080569"
 };
 
-
 firebase.initializeApp(config);
-// Reference Games collection
-firebase.database().ref("games-production").on('value', function(snapshot) {
-    GAMES_ALL = snapshotToArray(snapshot);
-    games = snapshotToArray(snapshot);
-    if (email_guest != "ALL")  {
-      console.log(email_guest[0])
-      document.getElementById("account-name").innerHTML = "Games submitted by<br>" + email_guest + "****"
-      GAMES_ALL = games.filter(function(el) {
-        return el.email != undefined && el.email.search(email_guest) > -1;
-      });
-      games = GAMES_ALL;
+user = firebase.auth().currentUser;
+
+displayGames();
+
+firebase.database().ref("count").on('value', function(snapshot) {
+    countRef = snapshotToArray(snapshot);
+    console.log("count " + countRef[0])
+    console.log("storage " + GAMES_ALL.length)
+    el = document.getElementById("btn_refresh");
+    if (countRef[0] > GAMES_ALL.length) {
+      value = countRef[0] - GAMES_ALL.length;
+      el.innerHTML = "Fetch new games: " + value;
+      el.disabled = false;
     }
-    pushData();
-    document.querySelectorAll(".btn-stats-activation").forEach((item, i) => {
-      item.style.transform = "scale(1)";
-    });
-    ;
+    else {
+      el.innerHTML = "No New Games";
+      el.disabled = true;
+    }
 });
 
 firebase.auth().onAuthStateChanged(function(user) {
-  urlString = window.location.href;
-  email_guest = parseURLParams(urlString);
   if (email_guest == "ALL") {
     if (user) {
       // User is signed in.
@@ -52,8 +50,40 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
 });
 
-//getting the user
-user = firebase.auth().currentUser;
+function displayGames() {
+  urlString = window.location.href;
+  email_guest = parseURLParams(urlString);
+  GAMES_ALL = JSON.parse(localStorage.getItem("games"));
+  games = GAMES_ALL;
+  pushData();
+  document.querySelectorAll(".btn-stats-activation").forEach((item, i) => {
+    item.style.transform = "scale(1)";
+  });
+  if (email_guest != "ALL" && email_guest != undefined)  {
+    console.log(email_guest[0])
+    document.getElementById("account-name").innerHTML = "Games submitted by<br>" + email_guest + "****"
+    GAMES_ALL = games.filter(function(el) {
+      return el.email != undefined && el.email.search(email_guest) > -1;
+    });
+    games = GAMES_ALL;
+  }
+}
+
+function getFirebaseGames() {
+  //downloads all games and saves them in the local storage
+  firebase.database().ref("games-production").on('value', function(snapshot) {
+      GAMES_ALL = snapshotToArray(snapshot);
+      games = GAMES_ALL;
+      localStorage.setItem("games", JSON.stringify(games));
+      pushData();
+      document.querySelectorAll(".btn-stats-activation").forEach((item, i) => {
+        item.style.transform = "scale(1)";
+      });
+      ;
+  });
+  firebase.database().ref("count").update({ multi: GAMES_ALL.length });
+  displayGames();
+}
 
 function snapshotToArray(snapshot) {
     var returnArr = [];
@@ -1101,7 +1131,7 @@ function download(data, filename, json) {
         var a = document.createElement("a"),
                 url = URL.createObjectURL(file);
         a.href = url;
-        a.download = "Solo Games - " + GAMES_ALL.length;
+        a.download = "Games - " + GAMES_ALL.length;
         document.body.appendChild(a);
         a.click();
         setTimeout(function() {

@@ -18,22 +18,24 @@ user = firebase.auth().currentUser;
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
-    var r1 = firebase.database().ref('games-production').orderByChild("email").equalTo(user.email);
-    r1.on('value', (snap) => {
-    const val = snap.val()
-    games = Object.keys(val)
-      .map(key => val[key])
+    GAMES_ALL = JSON.parse(localStorage.getItem("games"));
+    games = GAMES_ALL.filter(function(el) {
+      return el.email != undefined && el.email == user.email;
+    });
     document.getElementById("title3").innerHTML = games.length; //for the odometer counter
-    })
-
     console.log("logged")
     document.getElementById("account-name").innerHTML = user.displayName + "<br>" + user.email
-    pushHistory(user.email);
+    pushHistory();
   } else {
     // No user is signed in.
+    GAMES_ALL = JSON.parse(localStorage.getItem("games"));
+    games = GAMES_ALL.filter(function(el) {
+      return el.email != undefined && el.email == "s.simeonoff@gmail.com";
+    });
+    pushHistory();
+    document.getElementById("title3").innerHTML = games.length; //for the odometer counter
     console.log("not logged")
     document.getElementById("account-name").innerHTML = "<a class='link-auth' href='https://ssimeonoff.github.io/login'>Sign in</a>Not Signed<br>Personal statistics are unavailable"
-    //pushHistory("...@gmail.com");
   }
 });
 
@@ -145,6 +147,8 @@ function saveGame(name, email, players, rank, generations, corporations, scores,
     country: country,
     colonies: colonies
   })
+  //increment firebase games count by 1
+  firebase.database().ref("count").child("multi").transaction(function(games) {return games + 1});
 }
 
 //getting form values
@@ -258,12 +262,7 @@ function resetAll () {
 }
 
 ///History functions
-function pushHistory(email) {
-
-  //filter only user's games
-  games = games.filter(function(el) {
-    return el.email == email;
-  });
+function pushHistory() {
 
   //clear the sections
   var x = document.querySelectorAll(".flag-div,.history-section-submitted,.history-section-map-value, .history-section-corporation, .history-section-time, .history-section-score, .history-section-generation, .history-section-expansions")
@@ -439,3 +438,14 @@ function getWGT() {
   catch (err) {}
   return wgt
 }
+
+function snapshotToArray(snapshot) {
+    var returnArr = [];
+    snapshot.forEach(function(childSnapshot) {
+        var item = childSnapshot.val();
+        item.key = childSnapshot.key;
+
+        returnArr.push(item);
+    });
+    return returnArr;
+};

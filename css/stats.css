@@ -134,7 +134,7 @@ a {
 }
 
 .layout {
-  width: 1440px;
+  width: 1910px;
   margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
@@ -207,7 +207,7 @@ a {
 
 .grid4 {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: 114px auto auto auto;
 }
 
 .grid5 {
@@ -1194,6 +1194,26 @@ a {
   transition: transform 0.2s;
 }
 
+.btn-refresh {
+  outline: none;
+  background: #444;
+  box-shadow: 0 2px 4px 1px #444;
+  border-radius: 10px;
+  color: white;
+  letter-spacing: 1px;
+  cursor: pointer;
+  width:216px;
+  height:40px;
+  font-size: 20px;
+  line-height:36px;
+  margin-left:6px;
+  margin-top: 4px;
+  border-top: 2px solid rgb(221,221,221);
+  border-left: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
+}
+
 .drop-down {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1277,7 +1297,7 @@ a {
 }
 
 
-.btn-reset:active, .btn-grid-cell:active, .btn-apply-filters:active {
+.btn-reset:active, .btn-grid-cell:active, .btn-apply-filters:active, .btn-refresh:active {
   transform: translate(0,1px);
 }
  .btn-stats-activation:active {
@@ -1298,7 +1318,7 @@ a {
   filter: brightness(120%);
 }
 
-.btn-mygames-solo:disabled {
+.btn-mygames-solo:disabled, .btn-refresh:disabled {
   opacity: 0.5;
   box-shadow: none;
   cursor: not-allowed;
