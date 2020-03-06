@@ -80,9 +80,8 @@ function getFirebaseGames() {
       document.querySelectorAll(".btn-stats-activation").forEach((item, i) => {
         item.style.transform = "scale(1)";
       });
-      ;
   });
-  firebase.database().ref("count").update({ multi: GAMES_ALL.length });
+  //firebase.database().ref("count").update({ multi: GAMES_ALL.length });
   displayGames();
 }
 
