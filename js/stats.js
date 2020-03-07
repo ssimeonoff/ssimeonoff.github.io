@@ -1191,7 +1191,7 @@ function triggerRefreshButton(countRef) {
   el = document.getElementById("btn_refresh");
   if (countRef[0] > GAMES_ALL.length) {
     value = countRef[0] - GAMES_ALL.length;
-    el.innerHTML = "Fetch new games: " + value;
+    el.innerHTML = "New Games: " + value;
     el.disabled = false;
   }
   else {
