@@ -14,23 +14,21 @@ var config = {
 
 firebase.initializeApp(config);
 user = firebase.auth().currentUser;
+urlString = window.location.href;
+email_guest = parseURLParams(urlString);
+GAMES_ALL = JSON.parse(localStorage.getItem("games"));
+if (GAMES_ALL == undefined) {
+  getFirebaseGames();
+} else {
+  displayGames();
+}
 
-displayGames();
 
 firebase.database().ref("count").on('value', function(snapshot) {
     countRef = snapshotToArray(snapshot);
     console.log("count " + countRef[0])
     console.log("storage " + GAMES_ALL.length)
-    el = document.getElementById("btn_refresh");
-    if (countRef[0] > GAMES_ALL.length) {
-      value = countRef[0] - GAMES_ALL.length;
-      el.innerHTML = "Fetch new games: " + value;
-      el.disabled = false;
-    }
-    else {
-      el.innerHTML = "No New Games";
-      el.disabled = true;
-    }
+    triggerRefreshButton(countRef)
 });
 
 firebase.auth().onAuthStateChanged(function(user) {
@@ -50,12 +48,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 });
 
 function displayGames() {
-  urlString = window.location.href;
-  email_guest = parseURLParams(urlString);
   GAMES_ALL = JSON.parse(localStorage.getItem("games"));
-  if (GAMES_ALL == undefined) {
-    getFirebaseGames();
-  }
   games = GAMES_ALL;
   document.querySelectorAll(".btn-stats-activation").forEach((item, i) => {
     item.style.transform = "scale(1)";
@@ -76,13 +69,12 @@ function getFirebaseGames() {
       GAMES_ALL = snapshotToArray(snapshot);
       games = GAMES_ALL;
       localStorage.setItem("games", JSON.stringify(games));
-      pushData();
       document.querySelectorAll(".btn-stats-activation").forEach((item, i) => {
         item.style.transform = "scale(1)";
       });
+      displayGames();
   });
   //firebase.database().ref("count").update({ multi: GAMES_ALL.length });
-  displayGames();
 }
 
 function snapshotToArray(snapshot) {
@@ -1192,5 +1184,17 @@ function enableStats(id) {
   setTimeout(function() {
       pushData();
   }, 400);
+}
 
+function triggerRefreshButton(countRef) {
+  el = document.getElementById("btn_refresh");
+  if (countRef[0] > GAMES_ALL.length) {
+    value = countRef[0] - GAMES_ALL.length;
+    el.innerHTML = "Fetch new games: " + value;
+    el.disabled = false;
+  }
+  else {
+    el.innerHTML = "No New Games";
+    el.disabled = true;
+  }
 }
