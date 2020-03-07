@@ -42,7 +42,8 @@ firebase.auth().onAuthStateChanged(function(user) {
     } else {
       // No user is signed in.
       console.log("not logged")
-      document.getElementById("account-name").innerHTML = "<div class='link-auth'>Sign In</div>Not Signed<br>Personal statistics are unavailable"
+      document.getElementById("account-name").innerHTML = "<a class='link-auth' href='https://ssimeonoff.github.io/login'>Sign in</a>Not Signed<br>Personal statistics are unavailable"
+
     }
   }
 });
