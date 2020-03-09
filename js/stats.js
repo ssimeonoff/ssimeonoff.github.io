@@ -13,15 +13,6 @@ var config = {
 };
 
 firebase.initializeApp(config);
-user = firebase.auth().currentUser;
-urlString = window.location.href;
-email_guest = parseURLParams(urlString);
-GAMES_ALL = JSON.parse(localStorage.getItem("games"));
-if (GAMES_ALL == undefined) {
-  getFirebaseGames();
-} else {
-  displayGames();
-}
 
 
 firebase.database().ref("count").on('value', function(snapshot) {
@@ -32,19 +23,25 @@ firebase.database().ref("count").on('value', function(snapshot) {
 });
 
 firebase.auth().onAuthStateChanged(function(user) {
+  urlString = window.location.href;
+  email_guest = parseURLParams(urlString);
   if (email_guest == "ALL") {
     if (user) {
       // User is signed in.
       console.log("logged")
       document.getElementById("account-name").innerHTML = user.displayName + "<br>" + user.email
       document.getElementById("mygames").disabled = false;
-      document.getElementById("mygames-group").disabled = false;
     } else {
       // No user is signed in.
       console.log("not logged")
       document.getElementById("account-name").innerHTML = "<a class='link-auth' href='https://ssimeonoff.github.io/login'>Sign in</a>Not Signed<br>Personal statistics are unavailable"
-
     }
+  }
+  GAMES_ALL = JSON.parse(localStorage.getItem("games"));
+  if (GAMES_ALL == undefined) {
+    getFirebaseGames();
+  } else {
+    displayGames();
   }
 });
 
@@ -74,6 +71,9 @@ function getFirebaseGames() {
         item.style.transform = "scale(1)";
       });
       displayGames();
+      el = document.getElementById("btn_refresh");
+      el.innerHTML = "No New Games";
+      el.disabled = true;
   });
   //firebase.database().ref("count").update({ multi: GAMES_ALL.length });
 }
