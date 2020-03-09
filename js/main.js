@@ -14,7 +14,7 @@ var config = {
 };
 firebase.initializeApp(config);
 //get the signed user
-user = firebase.auth().currentUser;
+
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
@@ -52,7 +52,7 @@ function getCountry() {
 // Submit form
 function submitForm(e) {
   e.preventDefault();
-
+  user = firebase.auth().currentUser;
   email = "";
   name = "";
   if (user != null) {
