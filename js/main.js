@@ -141,8 +141,6 @@ function saveGame(name, email, players, rank, generations, corporations, scores,
     country: country,
     colonies: colonies
   })
-  //increment firebase games count by 1
-  firebase.database().ref("count").child("multi").transaction(function(games) {return games + 1});
 }
 
 //getting form values

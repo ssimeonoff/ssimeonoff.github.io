@@ -1,7 +1,3 @@
-playersButton = 0;
-enableCorporationData = false;
-enableMapData = false;
-enableHistogramData = false;
 
 var config = {
   apiKey: "AIzaSyD6HEAHfcXGN-WrUxSaraO3TYNzGbAr8ts",
@@ -13,13 +9,12 @@ var config = {
 };
 
 firebase.initializeApp(config);
+GAMES_ALL = JSON.parse(localStorage.getItem("games"));
+hideSecondaryStats();
 
-
-firebase.database().ref("count").on('value', function(snapshot) {
-    countRef = snapshotToArray(snapshot);
-    console.log("count " + countRef[0])
-    console.log("storage " + GAMES_ALL.length)
-    triggerRefreshButton(countRef)
+firebase.database().ref("games-production").on('value', function(snapshot) {
+    console.log(snapshot.numChildren())
+    triggerRefreshButton(snapshot.numChildren())
 });
 
 firebase.auth().onAuthStateChanged(function(user) {
@@ -37,20 +32,16 @@ firebase.auth().onAuthStateChanged(function(user) {
       document.getElementById("account-name").innerHTML = "<a class='link-auth' href='https://ssimeonoff.github.io/login'>Sign in</a>Not Signed<br>Personal statistics are unavailable"
     }
   }
-  GAMES_ALL = JSON.parse(localStorage.getItem("games"));
   if (GAMES_ALL == undefined) {
     getFirebaseGames();
   } else {
     displayGames();
   }
+
 });
 
 function displayGames() {
-  GAMES_ALL = JSON.parse(localStorage.getItem("games"));
   games = GAMES_ALL;
-  document.querySelectorAll(".btn-stats-activation").forEach((item, i) => {
-    item.style.transform = "scale(1)";
-  });
   if (email_guest != "ALL" && email_guest != undefined)  {
     document.getElementById("account-name").innerHTML = "Games submitted by<br>" + email_guest + "****"
     GAMES_ALL = games.filter(function(el) {
@@ -67,13 +58,10 @@ function getFirebaseGames() {
       GAMES_ALL = snapshotToArray(snapshot);
       games = GAMES_ALL;
       localStorage.setItem("games", JSON.stringify(games));
-      document.querySelectorAll(".btn-stats-activation").forEach((item, i) => {
-        item.style.transform = "scale(1)";
-      });
-      displayGames();
       el = document.getElementById("btn_refresh");
       el.innerHTML = "No New Games";
       el.disabled = true;
+      displayGames();
   });
   //firebase.database().ref("count").update({ multi: GAMES_ALL.length });
 }
@@ -1165,6 +1153,19 @@ function changeSliderColour (id) {
   }
 }
 
+function triggerRefreshButton(count) {
+  el = document.getElementById("btn_refresh");
+  if (count > GAMES_ALL.length) {
+    value = count - GAMES_ALL.length;
+    el.innerHTML = "New Games: " + value;
+    el.disabled = false;
+  }
+  else {
+    el.innerHTML = "No New Games";
+    el.disabled = true;
+  }
+}
+
 function enableStats(id) {
   el = document.getElementById(id);
   setTimeout(function() {
@@ -1187,15 +1188,12 @@ function enableStats(id) {
   }, 400);
 }
 
-function triggerRefreshButton(countRef) {
-  el = document.getElementById("btn_refresh");
-  if (countRef[0] > GAMES_ALL.length) {
-    value = countRef[0] - GAMES_ALL.length;
-    el.innerHTML = "New Games: " + value;
-    el.disabled = false;
-  }
-  else {
-    el.innerHTML = "No New Games";
-    el.disabled = true;
-  }
+function hideSecondaryStats() {
+  playersButton = 0;
+  enableCorporationData = false;
+  enableMapData = false;
+  enableHistogramData = false;
+  document.querySelectorAll(".btn-stats-activation").forEach((item, i) => {
+    item.style.transform = "scale(1)";
+  });
 }
