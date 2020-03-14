@@ -72,7 +72,7 @@ function getFirebaseGames() {
       let games = GAMES_ALL;
       localStorage.setItem("games", JSON.stringify(games));
       let el = document.getElementById("btn_refresh");
-      el.innerHTML = "No New Games";
+      el.innerHTML = "NO NEW GAMES";
       el.disabled = true;
       displayGames(games);
   });
@@ -1171,10 +1171,10 @@ function triggerRefreshButton(count) {
   try {
     if (count > GAMES_ALL.length) {
       value = count - GAMES_ALL.length;
-      el.innerHTML = "New Games: " + value;
+      el.innerHTML = "NEW GAMES: " + value;
       el.disabled = false;
     }   else {
-        el.innerHTML = "No New Games";
+        el.innerHTML = "NO NEW GAMES";
         el.disabled = true;
       }
   }

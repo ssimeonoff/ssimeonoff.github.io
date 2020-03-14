@@ -1196,22 +1196,23 @@ a {
 
 .btn-refresh {
   outline: none;
-  background: #444;
-  box-shadow: 0 2px 4px 1px #444;
-  border-radius: 10px;
-  color: white;
-  letter-spacing: 1px;
-  cursor: pointer;
-  width:216px;
-  height:40px;
-  font-size: 20px;
-  line-height:36px;
-  margin-left:6px;
-  margin-top: 4px;
-  border-top: 2px solid rgb(221,221,221);
-  border-left: 2px solid rgb(221,221,221);
-  border-bottom: 2px solid rgb(137,137,137);
-  border-right: 2px solid rgb(137,137,137);
+  font-family: Prototype;
+    background: #444;
+    box-shadow: 0 2px 4px 1px #444;
+    border-radius: 5px;
+    color: white;
+    letter-spacing: 1px;
+    cursor: pointer;
+    width: 216px;
+    height: 40px;
+    font-size: 16px;
+    line-height: 36px;
+    margin-left: 6px;
+    margin-top: 4px;
+    border-top: 2px solid rgb(221,221,221);
+    border-left: 2px solid rgb(221,221,221);
+    border-bottom: 2px solid rgb(137,137,137);
+    border-right: 2px solid rgb(137,137,137);
 }
 
 .drop-down {
@@ -1318,11 +1319,17 @@ a {
   filter: brightness(120%);
 }
 
-.btn-mygames-solo:disabled, .btn-refresh:disabled {
+.btn-mygames-solo:disabled {
   opacity: 0.5;
   box-shadow: none;
   cursor: not-allowed;
 }
+
+ .btn-refresh:disabled {
+   background: transparent;
+   color: #222;
+   box-shadow: none;
+ }
 
 .crossed::before {
   position: absolute;
