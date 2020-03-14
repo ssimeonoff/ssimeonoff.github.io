@@ -1,3 +1,5 @@
+//import pushAwardsStats from "./milestonesAndAwards.js";
+
 
 var config = {
   apiKey: "AIzaSyD6HEAHfcXGN-WrUxSaraO3TYNzGbAr8ts",
@@ -7,9 +9,19 @@ var config = {
   storageBucket: "tm-games1.appspot.com",
   messagingSenderId: "969120080569"
 };
+let playersButton = 0;
+let enableCorporationData = false;
+let enableMapData = false;
+let enableHistogramData = false;
+let games;
+let games_2;
+let games_3;
+let games_4;
+let games_5;
+
 
 firebase.initializeApp(config);
-GAMES_ALL = JSON.parse(localStorage.getItem("games"));
+let GAMES_ALL = JSON.parse(localStorage.getItem("games"));
 hideSecondaryStats();
 
 firebase.database().ref("games-production").on('value', function(snapshot) {
@@ -17,9 +29,15 @@ firebase.database().ref("games-production").on('value', function(snapshot) {
     triggerRefreshButton(snapshot.numChildren())
 });
 
+if (GAMES_ALL == undefined) {
+  getFirebaseGames(games);
+} else {
+  displayGames(GAMES_ALL);
+}
+
 firebase.auth().onAuthStateChanged(function(user) {
-  urlString = window.location.href;
-  email_guest = parseURLParams(urlString);
+  const urlString = window.location.href;
+  let email_guest = parseURLParams(urlString);
   if (email_guest == "ALL") {
     if (user) {
       // User is signed in.
@@ -32,16 +50,11 @@ firebase.auth().onAuthStateChanged(function(user) {
       document.getElementById("account-name").innerHTML = "<a class='link-auth' href='https://ssimeonoff.github.io/login'>Sign in</a>Not Signed<br>Personal statistics are unavailable"
     }
   }
-  if (GAMES_ALL == undefined) {
-    getFirebaseGames();
-  } else {
-    displayGames();
-  }
-
 });
 
 function displayGames() {
   games = GAMES_ALL;
+  let email_guest = parseURLParams(window.location.href);
   if (email_guest != "ALL" && email_guest != undefined)  {
     document.getElementById("account-name").innerHTML = "Games submitted by<br>" + email_guest + "****"
     GAMES_ALL = games.filter(function(el) {
@@ -49,19 +62,19 @@ function displayGames() {
     });
     games = GAMES_ALL;
   }
-  pushData();
+  pushData(games);
 }
 
 function getFirebaseGames() {
   //downloads all games and saves them in the local storage
   firebase.database().ref("games-production").on('value', function(snapshot) {
       GAMES_ALL = snapshotToArray(snapshot);
-      games = GAMES_ALL;
+      let games = GAMES_ALL;
       localStorage.setItem("games", JSON.stringify(games));
-      el = document.getElementById("btn_refresh");
+      let el = document.getElementById("btn_refresh");
       el.innerHTML = "No New Games";
       el.disabled = true;
-      displayGames();
+      displayGames(games);
   });
   //firebase.database().ref("count").update({ multi: GAMES_ALL.length });
 }
@@ -77,19 +90,19 @@ function snapshotToArray(snapshot) {
     return returnArr;
 };
 
-function pushData() {
+function pushData(games) {
   //displaying and updating the tableaus
-  calculateGamesPerPlayerCount();
-  pushHistory();
-  pushRanking();
+  calculateGamesPerPlayerCount(games);
+  pushHistory(games);
+  pushRanking(games);
 
-  if (enableCorporationData) {pushCorporationsData();}
-  if (enableMapData) {pushMapStats();pushAwardsStats();}
-  if (enableHistogramData) {pushHistograms();}
+  if (enableCorporationData) {pushCorporationsData(games);}
+  if (enableMapData) {pushMapStats(games);pushAwardsStats(games);}
+  if (enableHistogramData) {pushHistograms(games);}
 
 }
 
-function calculateGamesPerPlayerCount() {
+function calculateGamesPerPlayerCount(games) {
   //splitting all games in 4 arrays based on player count
   games_2 = games.filter(function(el) {return el.players == 2});
   games_3 = games.filter(function(el) {return el.players == 3});
@@ -105,7 +118,7 @@ function calculateGamesPerPlayerCount() {
 }
 
 
-function toggleButton(id) {
+function toggleButton (id) {
   //toggling active buttons state
   clickedElementID = document.getElementById(id);
   if (clickedElementID != null) {clickedElementID.classList.toggle("active");}
@@ -269,7 +282,7 @@ function filterFunction() {
     });
   }
   //pushing the new filtered data
-  pushData();
+  pushData(games);
   //to keep the corporations sorting
   if (playersButton > 1) {sortBy(playersButton)}
 }
@@ -285,7 +298,7 @@ function generateGameStats (players, corporationName) {
 
   //calculated played and won games per corporation
   playedGames = [];
-  for (i = 0; i < gamesPerPlayers.length; i++) {
+  for (let i = 0; i < gamesPerPlayers.length; i++) {
     var corpsArray = gamesPerPlayers[i]["corporations"]; //getting the corporations array
     if (corpsArray == undefined) {} //to chatch firebase errors if the array is undefined
     else {
@@ -311,7 +324,7 @@ function generateGameStats (players, corporationName) {
   var sum = 0;
 
 
-  for (i = 0; i < totalGames; i++) {
+  for (let i = 0; i < totalGames; i++) {
     //checking if that corporation is the winner
     var corpsArray = playedGames[i]["corporations"];
     try {var scoresArray = playedGames[i]["scores"];}
@@ -577,7 +590,7 @@ function pushCorporationsData() {
 function checkForElement (subArrayName, element) {
   //calculated played and won games per corporation
   var playedElement = 0
-  for (i = 0; i < games.length; i++) {
+  for (let i = 0; i < games.length; i++) {
     var subArray = games[i][subArrayName]; //getting the expansions array
     if (subArray == undefined) {} //to chatch firebase errors if the array is undefined
     else {
@@ -606,57 +619,6 @@ function pushMapStats() {
   document.getElementById("map_elysium").innerHTML = Math.round(elysiumGames.length*100/games.length) + "%" ;
 }
 
-function pushAwardsStats() {
-
-  var tharsisGames = games.filter(function(el) {
-    return el.map == "THARSIS"
-  }).length+1;
-  var hellasGames = games.filter(function(el) {
-    return el.map == "HELLAS"
-  }).length+1;
-  var elysiumGames = games.filter(function(el) {
-    return el.map == "ELYSIUM"
-  }).length+1;
-
-
-  //THARSIS milestones and awards
-  document.getElementById("terraformer").innerHTML =  Math.round(checkForElement("milestones", "TERRAFORMER")*100/tharsisGames) + "%";
-  document.getElementById("mayor").innerHTML =  Math.round(checkForElement("milestones", "MAYOR")*100/tharsisGames) + "%";
-  document.getElementById("gardener").innerHTML =  Math.round(checkForElement("milestones", "GARDENER")*100/tharsisGames) + "%";
-  document.getElementById("builder").innerHTML =  Math.round(checkForElement("milestones", "BUILDER")*100/tharsisGames) + "%";
-  document.getElementById("planner").innerHTML =  Math.round(checkForElement("milestones", "PLANNER")*100/tharsisGames) + "%";
-  document.getElementById("landlord").innerHTML =  Math.round(checkForElement("awards", "LANDLORD")*100/tharsisGames) + "%";
-  document.getElementById("banker").innerHTML =  Math.round(checkForElement("awards", "BANKER")*100/tharsisGames) + "%";
-  document.getElementById("scientist").innerHTML =  Math.round(checkForElement("awards", "SCIENTIST")*100/tharsisGames) + "%";
-  document.getElementById("thermalist").innerHTML =  Math.round(checkForElement("awards", "THERMALIST")*100/tharsisGames) + "%";
-  document.getElementById("miner").innerHTML =  Math.round(checkForElement("awards", "MINER")*100/tharsisGames) + "%";
-  //HELLAS milestones and awards
-  document.getElementById("diversifier").innerHTML =  Math.round(checkForElement("milestones", "DIVERSIFIER")*100/hellasGames) + "%";
-  document.getElementById("tactician").innerHTML =  Math.round(checkForElement("milestones", "TACTICIAN")*100/hellasGames) + "%";
-  document.getElementById("polar_explorer").innerHTML =  Math.round(checkForElement("milestones", "POLAR EXPLORER")*100/hellasGames) + "%";
-  document.getElementById("energizer").innerHTML =  Math.round(checkForElement("milestones", "ENERGIZER")*100/hellasGames) + "%";
-  document.getElementById("rim_settler").innerHTML =  Math.round(checkForElement("milestones", "RIM SETTLER")*100/hellasGames) + "%";
-  document.getElementById("cultivator").innerHTML =  Math.round(checkForElement("awards", "CULTIVATOR")*100/hellasGames) + "%";
-  document.getElementById("magnate").innerHTML =  Math.round(checkForElement("awards", "MAGNATE")*100/hellasGames) + "%";
-  document.getElementById("space_baron").innerHTML =  Math.round(checkForElement("awards", "SPACE BARON")*100/hellasGames) + "%";
-  document.getElementById("excentric").innerHTML =  Math.round(checkForElement("awards", "EXCENTRIC")*100/hellasGames) + "%";
-  document.getElementById("contractor").innerHTML =  Math.round(checkForElement("awards", "CONTRACTOR")*100/hellasGames) + "%";
-  //ELYSIUM milestones and awards
-  document.getElementById("generelast").innerHTML =  Math.round(checkForElement("milestones", "GENERALIST")*100/elysiumGames) + "%";
-  document.getElementById("specialist").innerHTML =  Math.round(checkForElement("milestones", "SPECIALIST")*100/elysiumGames) + "%";
-  document.getElementById("ecologist").innerHTML =  Math.round(checkForElement("milestones", "ECOLOGIST")*100/elysiumGames) + "%";
-  document.getElementById("tycoon").innerHTML =  Math.round(checkForElement("milestones", "TYCOON")*100/elysiumGames) + "%";
-  document.getElementById("legend").innerHTML =  Math.round(checkForElement("milestones", "LEGEND")*100/elysiumGames) + "%";
-  document.getElementById("celebrity").innerHTML =  Math.round(checkForElement("awards", "CELEBRITY")*100/elysiumGames) + "%";
-  document.getElementById("industrialist").innerHTML =  Math.round(checkForElement("awards", "INDUSTRIALIST")*100/elysiumGames) + "%";
-  document.getElementById("desert_settler").innerHTML =  Math.round(checkForElement("awards", "DESERT SETTLER")*100/elysiumGames) + "%";
-  document.getElementById("estate_dealer").innerHTML =  Math.round(checkForElement("awards", "ESTATE DEALER")*100/elysiumGames) + "%";
-  document.getElementById("benefactor").innerHTML =  Math.round(checkForElement("awards", "BENEFACTOR")*100/elysiumGames) + "%";
-
-  document.getElementById("hoverlord").innerHTML =  Math.round(checkForElement("milestones", "HOVERLORD")*100/(1+Math.round(checkForElement("expansions", "VENUS")))) + "%";
-  document.getElementById("venuphile").innerHTML =  Math.round(checkForElement("awards", "VENUPHILE")*100/(1+Math.round(checkForElement("expansions", "VENUS")))) + "%";
-}
-
 function generateAverageGenerationsValue (players, games, id) {
   games_NO = games.filter(function(el) {return el.wgt == "NO" });
   games_YES = games.filter(function(el) {return el.wgt == "YES" });
@@ -666,11 +628,11 @@ function generateAverageGenerationsValue (players, games, id) {
   var totalSumYes = 0;
 
   //calculating average generations
-  for (i = 0; i < games_NO.length; i++) {
+  for (let i = 0; i < games_NO.length; i++) {
     var generationsValue = games_NO[i]["generations"]; //getting the generations value
     totalSum = totalSum + parseInt(generationsValue);
   }
-  for (i = 0; i < games_YES.length; i++) {
+  for (let i = 0; i < games_YES.length; i++) {
     var generationsValue = games_YES[i]["generations"]; //getting the generations value
     totalSumYes = totalSumYes + parseInt(generationsValue);
   }
@@ -802,6 +764,57 @@ function histogram_generations (players) {
   }
 }
 
+function pushAwardsStats(games) {
+
+  var tharsisGames = games.filter(function(el) {
+    return el.map == "THARSIS"
+  }).length+1;
+  var hellasGames = games.filter(function(el) {
+    return el.map == "HELLAS"
+  }).length+1;
+  var elysiumGames = games.filter(function(el) {
+    return el.map == "ELYSIUM"
+  }).length+1;
+
+
+  //THARSIS milestones and awards
+  document.getElementById("terraformer").innerHTML =  Math.round(checkForElement("milestones", "TERRAFORMER")*100/tharsisGames) + "%";
+  document.getElementById("mayor").innerHTML =  Math.round(checkForElement("milestones", "MAYOR")*100/tharsisGames) + "%";
+  document.getElementById("gardener").innerHTML =  Math.round(checkForElement("milestones", "GARDENER")*100/tharsisGames) + "%";
+  document.getElementById("builder").innerHTML =  Math.round(checkForElement("milestones", "BUILDER")*100/tharsisGames) + "%";
+  document.getElementById("planner").innerHTML =  Math.round(checkForElement("milestones", "PLANNER")*100/tharsisGames) + "%";
+  document.getElementById("landlord").innerHTML =  Math.round(checkForElement("awards", "LANDLORD")*100/tharsisGames) + "%";
+  document.getElementById("banker").innerHTML =  Math.round(checkForElement("awards", "BANKER")*100/tharsisGames) + "%";
+  document.getElementById("scientist").innerHTML =  Math.round(checkForElement("awards", "SCIENTIST")*100/tharsisGames) + "%";
+  document.getElementById("thermalist").innerHTML =  Math.round(checkForElement("awards", "THERMALIST")*100/tharsisGames) + "%";
+  document.getElementById("miner").innerHTML =  Math.round(checkForElement("awards", "MINER")*100/tharsisGames) + "%";
+  //HELLAS milestones and awards
+  document.getElementById("diversifier").innerHTML =  Math.round(checkForElement("milestones", "DIVERSIFIER")*100/hellasGames) + "%";
+  document.getElementById("tactician").innerHTML =  Math.round(checkForElement("milestones", "TACTICIAN")*100/hellasGames) + "%";
+  document.getElementById("polar_explorer").innerHTML =  Math.round(checkForElement("milestones", "POLAR EXPLORER")*100/hellasGames) + "%";
+  document.getElementById("energizer").innerHTML =  Math.round(checkForElement("milestones", "ENERGIZER")*100/hellasGames) + "%";
+  document.getElementById("rim_settler").innerHTML =  Math.round(checkForElement("milestones", "RIM SETTLER")*100/hellasGames) + "%";
+  document.getElementById("cultivator").innerHTML =  Math.round(checkForElement("awards", "CULTIVATOR")*100/hellasGames) + "%";
+  document.getElementById("magnate").innerHTML =  Math.round(checkForElement("awards", "MAGNATE")*100/hellasGames) + "%";
+  document.getElementById("space_baron").innerHTML =  Math.round(checkForElement("awards", "SPACE BARON")*100/hellasGames) + "%";
+  document.getElementById("excentric").innerHTML =  Math.round(checkForElement("awards", "EXCENTRIC")*100/hellasGames) + "%";
+  document.getElementById("contractor").innerHTML =  Math.round(checkForElement("awards", "CONTRACTOR")*100/hellasGames) + "%";
+  //ELYSIUM milestones and awards
+  document.getElementById("generelast").innerHTML =  Math.round(checkForElement("milestones", "GENERALIST")*100/elysiumGames) + "%";
+  document.getElementById("specialist").innerHTML =  Math.round(checkForElement("milestones", "SPECIALIST")*100/elysiumGames) + "%";
+  document.getElementById("ecologist").innerHTML =  Math.round(checkForElement("milestones", "ECOLOGIST")*100/elysiumGames) + "%";
+  document.getElementById("tycoon").innerHTML =  Math.round(checkForElement("milestones", "TYCOON")*100/elysiumGames) + "%";
+  document.getElementById("legend").innerHTML =  Math.round(checkForElement("milestones", "LEGEND")*100/elysiumGames) + "%";
+  document.getElementById("celebrity").innerHTML =  Math.round(checkForElement("awards", "CELEBRITY")*100/elysiumGames) + "%";
+  document.getElementById("industrialist").innerHTML =  Math.round(checkForElement("awards", "INDUSTRIALIST")*100/elysiumGames) + "%";
+  document.getElementById("desert_settler").innerHTML =  Math.round(checkForElement("awards", "DESERT SETTLER")*100/elysiumGames) + "%";
+  document.getElementById("estate_dealer").innerHTML =  Math.round(checkForElement("awards", "ESTATE DEALER")*100/elysiumGames) + "%";
+  document.getElementById("benefactor").innerHTML =  Math.round(checkForElement("awards", "BENEFACTOR")*100/elysiumGames) + "%";
+
+  document.getElementById("hoverlord").innerHTML =  Math.round(checkForElement("milestones", "HOVERLORD")*100/(1+Math.round(checkForElement("expansions", "VENUS")))) + "%";
+  document.getElementById("venuphile").innerHTML =  Math.round(checkForElement("awards", "VENUPHILE")*100/(1+Math.round(checkForElement("expansions", "VENUS")))) + "%";
+}
+
 function generateScoresArray (players) {
   //average scores calculation for the chart headers
   var totalScores = 0
@@ -817,7 +830,7 @@ function generateScoresArray (players) {
 
   btnMyGames = document.querySelectorAll(".btn-mygames-solo.active");
   if (document.getElementById("mygames").classList.contains("active")) {
-    for (i = 0; i < gamesPerPlayers.length; i++) {
+    for (let i = 0; i < gamesPerPlayers.length; i++) {
       try {var position = gamesPerPlayers[i]["rank"]} catch(er) {}
       try {var scoresArray = gamesPerPlayers[i]["scores"];}catch(err) {}
       if (scoresArray == undefined) {scoresArray = [];}
@@ -831,7 +844,7 @@ function generateScoresArray (players) {
       totalScores = totalScores + parseInt(scoresArray[parseInt(position)]);
     }
   } else {
-    for (i = 0; i < gamesPerPlayers.length; i++) {
+    for (let i = 0; i < gamesPerPlayers.length; i++) {
       try {var scoresArray = gamesPerPlayers[i]["scores"];} catch(err) {}
       if (scoresArray == undefined) {scoresArray = [];}
       var corporationsArray = gamesPerPlayers[i]["corporations"];
@@ -861,7 +874,7 @@ function generateGenerationsArray (players) {
   if (players == 4) {gamesPerPlayers = games_4}
   if (players == 5) {gamesPerPlayers = games_5}
 
-  for (i = 0; i < gamesPerPlayers.length; i++) {
+  for (let i = 0; i < gamesPerPlayers.length; i++) {
       var generations = gamesPerPlayers[i]["generations"];
       var arr = ["Generations", parseInt(generations)];
       generationsArr.push(arr);
@@ -926,29 +939,29 @@ function sortByRule(players, sortRule) {
     }
 }
 
-function pushHistory() {
+function pushHistory(games) {
 
   //clear the sections
   var x = document.querySelectorAll(".flag-div,.history-section-submitted,.history-section-map-value, .history-section-corporation, .history-section-time, .history-section-score, .history-section-generation, .history-section-expansions")
-  for (i = 0; i < x.length; i++) {
+  for (let i = 0; i < x.length; i++) {
     x[i].innerHTML = "";
   }
   //remove the highlights
   var y = document.querySelectorAll(".highlight-winner")
-  for (i = 0; i < y.length; i++) {
+  for (let i = 0; i < y.length; i++) {
     y[i].classList.remove("highlight-winner");
   }
   //remove dark background
   var z = document.querySelectorAll(".dark-background")
-  for (i = 0; i < z.length; i++) {
+  for (let i = 0; i < z.length; i++) {
     z[i].classList.remove("dark-background");
   }
 
   //current time in seconds
-  now = Math.floor((new Date()).getTime() / 1000);
-  gameSections = document.querySelectorAll(".grid-cell-history");
+  let now = Math.floor((new Date()).getTime() / 1000);
+  let gameSections = document.querySelectorAll(".grid-cell-history");
 
-  for(i=0; i < gameSections.length && i < games.length ; i++) {
+  for (let i=0; i < gameSections.length && i < games.length ; i++) {
 
     if (games.length-i > 0) {
       //add dark background to the headers
@@ -956,27 +969,27 @@ function pushHistory() {
       gameSections[i].querySelector(".history-section-generation").classList.add("dark-background");
     }
     //game timestamp in seconds
-    timestamp = games[games.length-1-i]["timestamp"];
+    let timestamp = games[games.length-1-i]["timestamp"];
     if (timestamp == undefined) {gameSections[i].querySelector(".history-section-time").innerHTML = "-- ----"}
     else {
       if (timestamp.toString().length > 12) {timestamp = Math.round(timestamp/1000)};
-      time = now - timestamp;
+      let time = now - timestamp;
       gameSections[i].querySelector(".history-section-time").innerHTML = compareTime(time);
 
     }
 
     //the corporations array
-    corporationsSections = gameSections[i].querySelectorAll(".history-section-corporation");
-    scoresSections = gameSections[i].querySelectorAll(".history-section-score");
-    var corporationsArray =  games[games.length-1-i]["corporations"];
-    var scoresArray = games[games.length-1-i]["scores"];
+    let corporationsSections = gameSections[i].querySelectorAll(".history-section-corporation");
+    let scoresSections = gameSections[i].querySelectorAll(".history-section-score");
+    let corporationsArray =  games[games.length-1-i]["corporations"];
+    let scoresArray = games[games.length-1-i]["scores"];
 
     if (scoresArray == undefined) {scoresArray = [];}
-    var winnerIndex = indexOfMax(scoresArray);
-    var winningScore = scoresArray[winnerIndex];
+    let winnerIndex = indexOfMax(scoresArray);
+    let winningScore = scoresArray[winnerIndex];
 
     //highlight the winner
-    for (j=0; j < scoresArray.length; j++) {
+    for (let j=0; j < scoresArray.length; j++) {
       corporationsSections[j].innerHTML = corporationsArray[j];
       scoresSections[j].innerHTML = scoresArray[j];
       if (scoresArray[j] == winningScore) {
@@ -986,11 +999,11 @@ function pushHistory() {
     }
 
     // the generations
-    var generations =  games[games.length-1-i]["generations"];
+    let generations =  games[games.length-1-i]["generations"];
     gameSections[i].querySelector(".history-section-generation").innerHTML = "<div class='history-section-generation-value'>" + generations + "</div>";
     //the expansions
-    var expansionsHTML = "";
-    expansionsArray = games[games.length-1-i]["expansions"];
+    let expansionsHTML = "";
+    let expansionsArray = games[games.length-1-i]["expansions"];
     if (expansionsArray == undefined) {expansionsArray = []}
     if (expansionsArray.indexOf("CORPORATE") > -1) {
       expansionsHTML = expansionsHTML + '<div class="history-section-expansion-ribbon"><div class="icon corporate-era-icon icon-align2"></div></div>'
@@ -1017,12 +1030,12 @@ function pushHistory() {
     if (map == "ELYSIUM") {el.innerHTML = "<div class='history-section-map-value' style='background:#09aa09'>"+map+"</div>"}
 
     //display the flag
-    country =  games[games.length-1-i]["country"];
+    let country =  games[games.length-1-i]["country"];
     if (country != undefined && country.length > 1) {
-      countryDivContent = '<img class="flag" src="flags/'+country+'.png" title="'+country+'">';
+      let countryDivContent = '<img class="flag" src="flags/'+country+'.png" title="'+country+'">';
       gameSections[i].querySelector(".flag-div").innerHTML = countryDivContent;
     } else {
-      countryDivContent = '<img class="flag" src="flags/TM.png" title="TM">';
+      let countryDivContent = '<img class="flag" src="flags/TM.png" title="TM">';
       gameSections[i].querySelector(".flag-div").innerHTML = countryDivContent;
     }
     //add the key as title
@@ -1121,10 +1134,10 @@ function scrubData(data) {
 }
 
 function parseURLParams(url) {
-    var queryStart = url.indexOf("#") + 1,
+    let queryStart = url.indexOf("#") + 1,
         queryEnd   = url.indexOf("%") + 1 || url.length + 1,
         query = url.slice(queryStart, queryEnd - 1)
-    cards = query.replace(/\#/g, " ").split(" ");
+    let cards = query.replace(/\#/g, " ").split(" ");
     if (query === url || query === "") return "ALL";
     return cards;
 }
@@ -1154,20 +1167,22 @@ function changeSliderColour (id) {
 }
 
 function triggerRefreshButton(count) {
-  el = document.getElementById("btn_refresh");
-  if (count > GAMES_ALL.length) {
-    value = count - GAMES_ALL.length;
-    el.innerHTML = "New Games: " + value;
-    el.disabled = false;
+  let el = document.getElementById("btn_refresh");
+  try {
+    if (count > GAMES_ALL.length) {
+      value = count - GAMES_ALL.length;
+      el.innerHTML = "New Games: " + value;
+      el.disabled = false;
+    }   else {
+        el.innerHTML = "No New Games";
+        el.disabled = true;
+      }
   }
-  else {
-    el.innerHTML = "No New Games";
-    el.disabled = true;
-  }
+  catch(err) {console.log("GAMES_ALL is null")}
 }
 
 function enableStats(id) {
-  el = document.getElementById(id);
+  let el = document.getElementById(id);
   setTimeout(function() {
     el.style.transform = "scale(0)";
     if (id === "show-corporations") {
@@ -1184,15 +1199,11 @@ function enableStats(id) {
     };
   }, 200);
   setTimeout(function() {
-      pushData();
+      pushData(games);
   }, 400);
 }
 
 function hideSecondaryStats() {
-  playersButton = 0;
-  enableCorporationData = false;
-  enableMapData = false;
-  enableHistogramData = false;
   document.querySelectorAll(".btn-stats-activation").forEach((item, i) => {
     item.style.transform = "scale(1)";
   });
