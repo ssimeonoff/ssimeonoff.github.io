@@ -289,6 +289,7 @@ function pushHistory() {
     timestamp = games[games.length-1-i]["timestamp"];
     if (timestamp == undefined) {gameSections[i].querySelector(".history-section-time").innerHTML = "-- ----"}
     else {
+      if (timestamp.toString().length > 12) {timestamp = Math.round(timestamp/1000)};
       time = now - timestamp;
       gameSections[i].querySelector(".history-section-time").innerHTML = compareTime(time);
 
