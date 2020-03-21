@@ -29,7 +29,7 @@ firebase.auth().onAuthStateChanged(function(user) {
   } else {
     // No user is signed in.
     console.log("not logged")
-    document.getElementById("account-name").innerHTML = "<a class='link-auth' href='https://ssimeonoff.github.io/login'>Sign in</a>Not Signed<br>Personal statistics are unavailable"
+    document.getElementById("account-name").innerHTML = "<a class='link-auth' href='https://ssimeonoff.github.io/login'>Sign in</a>Not Signed<br>Personal statistics are unavailable";
   }
 });
 
@@ -337,6 +337,9 @@ function pushHistory() {
     }
     if (expansionsArray.indexOf("COLONIES") > -1) {
       expansionsHTML = expansionsHTML + '<div class="history-section-expansion-ribbon"><div class="icon colonies-icon icon-align2"></div></div>'
+    }
+    if (expansionsArray.indexOf("TURMOIL") > -1) {
+      expansionsHTML = expansionsHTML + '<div class="history-section-expansion-ribbon"><div class="icon turmoil-icon icon-align2"></div></div>'
     }
     gameSections[i].querySelector(".history-section-expansions").innerHTML = expansionsHTML;
 
