@@ -89,7 +89,7 @@
   height:60px;
   line-height: 60px;
   border-radius: 10px;
-  background-color: white;
+  background-color: lightsalmon;
   margin-top:10px;
   margin-left: 10px;;
   font-size:14px;
@@ -111,7 +111,7 @@
   width: 100px;
   margin-top: 10px;
   line-height: 60px;
-  background-color: white;
+  background-color: #eee;
   border-radius: 10px;
   margin-left:5px;
   text-align: center;
@@ -140,7 +140,7 @@
   width: 80px;
   height: 80px;
   line-height: 80px;
-  background-color: white;
+  background-color: lightsalmon;
   border-radius: 10px;
   margin-top: 10px;
   margin-left: 20px;
@@ -152,7 +152,7 @@
   width: 100px;
   height: 100px;
   line-height: 100px;
-  background-color: white;
+  background-color: #eee;
   border-radius: 10px 10px 10px 10px;
   margin-left: 5px;
   text-align: center;
