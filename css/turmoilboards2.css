@@ -50,8 +50,8 @@
 }
 
 .event-title {
-  height: 65px;
-  line-height: 65px;
+  height: 60px;
+  line-height: 60px;
 }
 .event-parties {
   margin-bottom: 10px;
@@ -60,7 +60,7 @@
 .event-party {
   display: inline-block;
   width: 100px;
-  background-color: lightsalmon;
+  background-color: rgba(0,0,0,.2);
   height: 40px;
   line-height: 40px;
   border-radius: 5px;
