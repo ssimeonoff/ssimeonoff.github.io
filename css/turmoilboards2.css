@@ -8,15 +8,30 @@
   margin-left: auto;
   margin-right: auto;
   font-family: Prototype;
+  position: relative;
+  width: 1660px;
+}
+
+.app::after {
+  content: "";
+    background: url("../images/mars.png") no-repeat center center;
+    width: 100%;
+    height: 100%;
+    background-size: 1710px;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
 }
 .events-board {
   display: inline-block;
   width: 665px;
   padding: 10px;
-  background:#fff;
   border-radius: 15px;
   text-align: center;
-  margin-right: 20px;
 }
 
 .global-event {
@@ -59,19 +74,7 @@
   text-align: center;
 }
 
-.turmoil-board::before {
-    content: "";
-      background: url("../images/mars.png") no-repeat center center;
-      opacity: 0.5;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      position: absolute;
-      z-index: -1;
-      -webkit-filter: grayscale(1); /* Old WebKit */
-      filter: grayscale(1);
-}
+
 
 .grid-parties {
   display: grid;
@@ -82,7 +85,7 @@
 .party {
   width: 150px;
   height: 160px;
-  border-radius:5px;
+  border-radius: 0 0 10px 10px;
   background: white;
 }
 
@@ -110,19 +113,21 @@
   gap:10px;
 }
 
+.party-bonus {
+  line-height: 30px;
+}
+
 .leader-spot {
   width: 40px;
-  padding: 0 10px 0 10px;
+  padding: 7px 55px 0 55px;
   height:45px;
   background: linear-gradient(transparent, rgba(0,0,0,.2));
-  margin-left:45px;
   z-index: 2;
 }
 
 .turmoil-header {
   display: flex;
-  margin-bottom: 5px;
-  border-bottom: 2px solid #ddd;
+  border-bottom: 5px solid rgba(0,0,0,.3);
 }
 
 .grid-lobby {
@@ -132,16 +137,18 @@
 }
 
 .lobby-spot {
-  width: 50px;
-  height:30px;
-  padding: 5px;
-  background: linear-gradient(rgba(0,0,0,.2), transparent);
+  width: 44px;
+    height: 30px;
+    padding: 5px;
+    background: linear-gradient(rgba(0,0,0,.5), transparent);
+    border-radius: 10px 10px 0 0;
 }
 .chairman-spot {
   width: 60px;
-  height:43px;
-  padding: 10px;
-  background: linear-gradient(rgba(0,0,0,.5), transparent);
+    height: 35px;
+    padding: 10px;
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.3));
+    border-radius: 20px 20px 0 0;
 }
 
 .label-lobby {
@@ -157,17 +164,25 @@
 }
 
 .player-token {
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 5px;
   box-shadow: 0 2px 2px rgba(0,0,0,.5);
   text-align: center;
-  font-size: 26px;
+  font-size: 30px;
   color: white;
   text-shadow: 0 0  2px black;
+  border-top: 2px solid rgb(221,221,221);
+  border-left: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
+}
+
+.player-token-new-leader {
+  box-shadow:0 2px 5px 5px #fff;
 }
 
 .red {background-color: red}
