@@ -1,0 +1,178 @@
+/* fonts */
+@font-face {
+  font-family: Prototype;
+  src: url(../fonts/Prototype.ttf);
+}
+
+.app {
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Prototype;
+}
+.events-board {
+  display: inline-block;
+  width: 665px;
+  padding: 10px;
+  background:#fff;
+  border-radius: 15px;
+  text-align: center;
+  margin-right: 20px;
+}
+
+.global-event {
+  display: inline-block;
+  width: 205px;
+  background: linear-gradient(lightyellow, lightblue, lightblue);
+  height: 260px;
+  padding: 5px;
+  border: 1px solid #444;
+  border-radius: 10px;
+  box-shadow: 0 2px 2px rgba(0,0,0,.5);
+}
+
+.global-event-current {
+  filter: brightness(110%);
+}
+
+.event-title {
+  height: 65px;
+  line-height: 65px;
+}
+.event-parties {
+  margin-bottom: 10px;
+}
+
+.event-party {
+  display: inline-block;
+  width: 100px;
+  background-color: lightsalmon;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 5px;
+}
+
+.turmoil-board {
+  display: inline-block;
+  vertical-align: bottom;
+  padding: 10px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.turmoil-board::before {
+    content: "";
+      background: url("../images/mars.png") no-repeat center center;
+      opacity: 0.5;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: -1;
+      -webkit-filter: grayscale(1); /* Old WebKit */
+      filter: grayscale(1);
+}
+
+.grid-parties {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  gap:10px;
+}
+
+.party {
+  width: 150px;
+  height: 160px;
+  border-radius:5px;
+  background: white;
+}
+
+.grid-delegates {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+  gap:5px;
+}
+
+.delegate-spot {
+  width: 40px;
+  height:40px;
+  background: linear-gradient(transparent, rgba(0,0,0,.1));
+}
+
+.party-name {
+  height: 20px;
+  line-height: 20px;
+}
+
+.grid-leaders {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  gap:10px;
+}
+
+.leader-spot {
+  width: 40px;
+  padding: 0 10px 0 10px;
+  height:45px;
+  background: linear-gradient(transparent, rgba(0,0,0,.2));
+  margin-left:45px;
+  z-index: 2;
+}
+
+.turmoil-header {
+  display: flex;
+  margin-bottom: 5px;
+  border-bottom: 2px solid #ddd;
+}
+
+.grid-lobby {
+  display: grid;
+  width: 320px;
+  grid-template-columns: auto auto auto auto auto;
+}
+
+.lobby-spot {
+  width: 50px;
+  height:30px;
+  padding: 5px;
+  background: linear-gradient(rgba(0,0,0,.2), transparent);
+}
+.chairman-spot {
+  width: 60px;
+  height:43px;
+  padding: 10px;
+  background: linear-gradient(rgba(0,0,0,.5), transparent);
+}
+
+.label-lobby {
+  color:rgba(0,0,0,.5);
+  text-align: left;
+  width:115px;
+}
+.label-5mc {
+  color:rgba(0,0,0,.5);
+  text-align: right;
+  width: 110px;
+  margin-right: 5px;
+}
+
+.player-token {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px rgba(0,0,0,.5);
+  text-align: center;
+  font-size: 26px;
+  color: white;
+  text-shadow: 0 0  2px black;
+}
+
+.red {background-color: red}
+.green {background-color: green}
+.blue {background-color: blue}
+.yellow {background-color: rgba(255, 255, 0, 0.726)}
+.black {background-color: #444}
+.neutral {background-color: #ccc;}
