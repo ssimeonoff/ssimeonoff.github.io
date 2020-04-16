@@ -218,7 +218,7 @@ function histogram (div_id, data) {
       fontSize: 12,
       backgroundColor: "transparent",
       vAxis: { gridlines: { count: 1}, maxValue:25 },
-      hAxis: {textStyle : {fontSize: 8, fontName: 'Prototype'}},
+      hAxis: {textStyle : {fontSize: 10, fontName: 'Prototype'}},
       bar: {gap: 1},
       chartArea:{left:0,bottom:26,top:0,width:380},
       colors: ['#444444','#888888'],
@@ -285,7 +285,7 @@ function generateHTML(expansions,games) {
     if (games[i][1] > 79 && games[i][1] < 100) {
       el.innerHTML += "<div class='result background-silver'>"+games[i][1]+"</div>";
     }
-    if (games[i][1] > 0 && games[i][1] < 80) {
+    if (games[i][1] > 20 && games[i][1] < 80) {
       el.innerHTML += "<div class='result background-bronze'>"+games[i][1]+"</div>";
     }
     if (games[i][1] < 10 ) {
