@@ -115,7 +115,6 @@
   font-size: 13px;
   height: 16px;
   line-height: 16px;
-  text-shadow: 0 0 1px black, 0 1px 1px black;
 }
 
 .grid-cell-solo {
@@ -134,15 +133,16 @@
   padding-left: 15px;
   font-family: Prototype;
   font-size: 28px;
-  color: #444;
+  color: #222;
   letter-spacing: 1px;
 }
 
 .failed {
     color: #cc3333;
+    text-shadow: 0 0 1px black, 0 1px 1px black;
 }
 .failed::after {
-  content: "\2717";
+  content: "\2716";
   font-size: 18px !important;
 }
 
@@ -152,13 +152,11 @@
 }
 
 .background-silver {
-  color: #ddd;
-  background: #444;
+  background-color: #ddd;
 }
 
 .background-bronze {
-  color: #aaa;
-  background: #444;
+  color: #222;
 }
 
 .icon-mysolo:after {
