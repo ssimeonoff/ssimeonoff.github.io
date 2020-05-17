@@ -30,6 +30,14 @@ corporations_names = [
   "POLYPHEMOS",
   "POSEIDON",
   "STORMCRAFT",
+  "LAKEFRONT RESORTS",
+  "PRISTAR",
+  "SEPTEM TRIBUS",
+  "TERRALABS",
+  "UTOPIA",
+  "FACTORUM",
+  "MONS INSURANCE",
+  "PHILARES",
   "ARCADIAN COMMUNITIES",
   "RECYCLON",
   "SPLICE"
@@ -42,7 +50,7 @@ function generateHand() {
     x[i].style.display = "none";
   }
 
-  document.getElementById("link").classList.remove("disabled-link");
+  document.getElementById("link-setup").classList.remove("disabled-link");
 
   displayCards();
 }
@@ -71,6 +79,9 @@ function displayCards() {
   if (document.querySelectorAll(".active.colonies-icon").length > 0) {
     query_corporations = query_corporations + ", .corporation.colonies"
   }
+  if (document.querySelectorAll(".active.turmoil-icon").length > 0) {
+    query_corporations = query_corporations + ", .corporation.turmoil"
+  }
   if (document.querySelectorAll(".active.promo-icon").length > 0) {
     query_corporations = query_corporations + ", .corporation.promo"
   }
@@ -80,8 +91,8 @@ function displayCards() {
     //display the 2 corporations
     $(corporations[corporations_numbers[i]]).fadeIn(0);
     //append the ids to the url
-    url = url + "#" +  corporations[corporations_numbers[i]].id;
-    corporation_id = corporations[corporations_numbers[i]].id.substring(4,6);
+    url = url +  corporations[corporations_numbers[i]].id;
+    corporation_id = corporations[corporations_numbers[i]].id.substring(5,7);
     titles_corporations = titles_corporations + corporations_names[parseInt(corporation_id)] + "<br>";
   }
 
@@ -96,18 +107,21 @@ function displayCards() {
   if (document.querySelectorAll(".active.prelude-icon").length > 0) {
     query_projects = query_projects + ", .filterDiv.prelude.automated, .filterDiv.prelude.active, .filterDiv.prelude.events"
     //preludes
-    preludes = document.querySelectorAll(".preludeCards")
+    preludes = document.querySelectorAll(".prelude-card")
     preludes_numbers = generateArray(4, preludes.length)
     for (i=0; i<4; i++) {
       //display the 4 preludes
       $(preludes[preludes_numbers[i]]).fadeIn(0);
       //append the ids to the url
-      url = url + "#" +  preludes[preludes_numbers[i]].querySelector(".number").textContent;
+      url = url +  preludes[preludes_numbers[i]].querySelector(".number").textContent;
       titles_preludes = titles_preludes + preludes[preludes_numbers[i]].querySelector(".title").textContent + "<br>";
     }
   }
   if (document.querySelectorAll(".active.colonies-icon").length > 0) {
     query_projects = query_projects + ", .filterDiv.colonies.automated, .filterDiv.colonies.active, .filterDiv.colonies.events"
+  }
+  if (document.querySelectorAll(".active.turmoil-icon").length > 0) {
+    query_projects = query_projects + ", .filterDiv.turmoil.automated, .filterDiv.turmoil.active, .filterDiv.turmoil.events"
   }
   if (document.querySelectorAll(".active.promo-icon").length > 0) {
     query_projects = query_projects + ", .filterDiv.promo.automated, .filterDiv.promo.active, .filterDiv.promo.events"
@@ -120,7 +134,7 @@ function displayCards() {
     //display the 10 projects
     $(projects[projects_numbers[i]]).fadeIn(0);
     //append the ids to the url
-    url = url + "#" +  projects[projects_numbers[i]].querySelector(".number").textContent;
+    url = url +  projects[projects_numbers[i]].querySelector(".number").textContent;
     titles_projects = titles_projects + projects[projects_numbers[i]].querySelector(".title").textContent + "<br>"
   }
 
@@ -128,7 +142,7 @@ function displayCards() {
   document.getElementById("titles_corporations").innerHTML = titles_corporations;
   document.getElementById("titles_projects").innerHTML = titles_projects;
   document.getElementById("titles_preludes").innerHTML = titles_preludes;
-  document.getElementById("link").href = url;
+  document.getElementById("link-setup").href = url;
 }
 
 
