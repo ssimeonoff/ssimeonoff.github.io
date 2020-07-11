@@ -1337,6 +1337,32 @@ border-right: 2px solid rgb(137,137,137);
         font-size: 20px;
     }
 
+.asteroid {
+  background: url("../images/asteroid.png");
+  background-color: #222;
+  background-size: 25px 20px;
+  background-repeat: no-repeat;
+  background-position: 2px 3px;
+  height: 26px;
+}    
+.asteroid::after {
+  content: ".";
+  color: transparent;
+}
+
+.biohazard {
+  background: url("../images/biohazard.png");
+  background-color: orange;
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-position: 2px 1px;
+  height: 26px;
+  vertical-align: middle;
+}    
+.asteroid::after {
+  content: ".";
+  color: transparent;
+}
 
 .card-icon-venus {
   background: rgb(84,150,201);
@@ -1360,10 +1386,17 @@ border-right: 2px solid rgb(137,137,137);
   color:white;
   font-size: 14px;
   border-radius: 2px;
-  text-shadow: 0 0 1px black;
+  text-shadow: 0 1px 1px black, -1px 0 1px black, 1px 0 1px black, 0 -1px 1px black;
 }
 
 .card-icon-space {
+  background: black;
+  color:yellow;
+  font-size: 14px;
+  border-radius: 50%;
+}
+
+.card-icon-science {
   background: black;
   color:yellow;
   font-size: 14px;
@@ -1384,14 +1417,6 @@ border-right: 2px solid rgb(137,137,137);
   font-size: 12px;
   border-radius: 50%;
   text-shadow: 0 0 1px black;
-}
-
-.card-icon-jovian {
-  background: url("images/tag-jovian.png");
-  border-radius: 50%;
-  margin-top: -10px;
-  box-shadow: 0 0 1px black;
-  border: 1px solid #444;
 }
 
 .card-footer {
@@ -1490,7 +1515,7 @@ border-right: 2px solid rgb(137,137,137);
   background-color: rgb(44,44,44);
   background: linear-gradient(to right bottom, black, rgb(60,60,60), rgb(150,150,150), rgb(60,60,60), rgb(60,60,60),black);
   color: black;
-  font-size:12px;.
+  font-size:12px;
   width: 44px;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -2517,4 +2542,18 @@ input[type=radio]:checked + label {
   font-family: Times;
   text-shadow: 0 0 1px black, 0 2px 2px black;
   font-size: 30px;
+}
+
+.astrodrill {
+  color: #d8d891;
+  letter-spacing: 2px;
+  text-shadow: 0 0 2px black;
+  border-top: 3px solid orange;
+  border-radius: 50% 50% 0 0;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  margin-left: 20px;
+  margin-top: 5px;
 }

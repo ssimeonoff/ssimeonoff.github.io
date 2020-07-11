@@ -80,7 +80,7 @@
       <button id="prelude" class="button btn3 prelude-icon button-icon  " onclick="filterFunction(id)" title="filter Prelude cards"></button>
       <button id="colonies" class="button btn3 colonies-icon button-icon  " onclick="filterFunction(id)" title="filter Colonies cards"></button>
       <button id="turmoil" class="button btn3 turmoil-icon button-icon  " onclick="filterFunction(id)" title="filter Turmoil cards"></button>
-      <button id="promo" class="button btn3 promo-icon button-icon  " onclick="filterFunction(id)" title="filter Promo cards"></button>
+      <button id="promo" class="button btn3 promo-icon button-icon" onclick="filterFunction(id)" title="filter Promo cards"></button>
     </div>
 
 
@@ -272,7 +272,7 @@
             <div class="tag tag1 tag-science "></div>
             <div class="number">#006</div>
             <div class="content ">
-                <span class="red-arrow "></span> <span style="font-size:14px; ">ACTION: LOOK AT THE TOP CARD AND EITHER BUY IT OR DISCARD IT</span>
+                <span class="red-arrow "></span> <span style="font-size:14px;font-weight: normal;">ACTION: LOOK AT THE TOP CARD AND EITHER BUY IT OR DISCARD IT</span>
             </div>
         </li>
 
@@ -2937,7 +2937,7 @@
           <div class="corporate-icon project-icon"></div>
           <div class="number">#156</div>
           <div class="content">
-            <div class="tile" style="width:100px;text-shadow:none;color:black;font-size:14px;line-height:17px;vertical-align:middle;background-color: rgb(255,204,100);padding:5px;">Standard projects</div> : <div class="money resource">3</div>
+            <div class="tile" style="width:100px;text-shadow:none;color:black;font-size:17px;font-weight:normal;line-height:17px;vertical-align:middle;background-color: rgb(255,204,100);padding:5px;">Standard projects</div> : <div class="money resource">3</div>
             <div class="description">
               (Effect: After you pay for a standard project, except selling patents, you gain 3 MC.)
             </div>
@@ -3916,27 +3916,27 @@
                 (Requires 2 oceans. Increase your Plant production and your heat production 1 step each.)
               </div>
             </div>
+          </li> 
 
-            <!--212-->
-            <li onclick="getClickedCard();" class="filterDiv active animalTag promo reqs" data-oceans ="8">
-                <div class="title background-color-active ">Penguins</div>
-                <div class="price">7</div>
-                <div class="tag tag1 tag-animal "></div>
-                <div class="promo-icon project-icon"></div>
-                <div class="number">#212</div>
-                <div class="content ">
-                    <div class="points ">1/<div class="animal resource "></div></div>
-                    <div class="requirements ">8 Oceans</div>
-                    <span class="red-arrow "></span> <div class="animal resource "></div>
-                    <div class="description ">
-                        (Action: Add 1 animal to this card.)
-                    </div><br><br>
-                    <div class="description ">
-                        (Requires 8 oceans. 1 VP for each animal on this card.)
-                    </div>
-                </div>
-            </li>
-
+          <!--212-->
+          <li onclick="getClickedCard();" class="filterDiv active animalTag promo reqs" data-oceans ="8">
+            <div class="title background-color-active ">Penguins</div>
+            <div class="price">7</div>
+            <div class="tag tag1 tag-animal "></div>
+            <div class="promo-icon project-icon"></div>
+            <div class="number">#212</div>
+            <div class="content ">
+                <div class="points ">1/<div class="animal resource "></div></div>
+                <div class="requirements ">8 Oceans</div>
+                <span class="red-arrow "></span> <div class="animal resource "></div>
+                <div class="description ">
+                    (Action: Add 1 animal to this card.)
+                </div><br><br>
+                <div class="description ">
+                    (Requires 8 oceans. 1 VP for each animal on this card.)
+              </div>
+            </div>
+          </li>
 
             <!--Project Cards - VenusNext ---------------------------------------->
 
@@ -4515,8 +4515,8 @@
                 <div class="content ">
                     <div class="requirements requirements-max">max 14% Venus</div>
                     <div class=" money resource ">6</div> (<span class="titanium " style="margin:0px;padding:1px;padding-top:3px;border-radius:5px; "></span>)
-                    <span class="red-arrow "></span> <div class="resource" style="background:black;color:#bbb;">A</div> <br>
-                    OR <div class="resource" style="background:black;color:#bbb;">A</div> <span class="red-arrow "></span> <div class="tile venus-tile">V</div>
+                    <span class="red-arrow "></span> <div class="resource asteroid"></div> <br>
+                    OR <div class="resource asteroid"></div> <span class="red-arrow "></span> <div class="tile venus-tile">V</div>
                     <div class="description ">
                       (Action: spend 6 MC to add an asteroid resource to this card (TITANIUM MAY BE USED), or spend 1 resource from this card to increase Venus 1 step).
                       <br><br>(Venus must be 14% or lower).
@@ -6237,8 +6237,9 @@
                   <div class="number">#X02</div>
                   <div class="promo-icon project-icon"></div>
                   <div class="content ">
-                    USE A CARD ACTION THAT HAS BEEN USED THIS GENERATION
-                  </div>
+                    <span style="font-weight:normal">USE A CARD ACTION THAT HAS BEEN USED THIS GENERATION
+                      </span>
+                    </div>
               </li>
 
               <!--X03-->
@@ -6423,10 +6424,358 @@
                       </div>
                   </div>
               </li>
+               
+          <!--X13-->
+          <li onclick="getClickedCard();" class="filterDiv active  spaceTag  promo ">
+            <div class="title background-color-active">Asteroid Hollowing</div>
+            <div class="price">16</div>
+            <div class="tag tag1 tag-space"></div>
+            <div class="promo-icon project-icon"></div>
+            <div class="number">#X13</div>
+            <div class="content">
+              <div class="points">1/2<div class="resource asteroid" style="vertical-align: middle;"></div></div>
+              <div class="resource titanium"></div><div class="red-arrow"></div>
+              <div class="resource asteroid"></div> <div class="production-box"><div class="production money">1</div></div>
+              <div class="description">
+                (Action: Spend 1 titanium to add 1 asteroid resource here and increase MC production 1 step.)
+              </div>
+              <br><br>
+              <div class="description">
+                (1VP for each 2 asteroids on this card.)
+              </div>
+            </div>
+          </li>
+
+          <!--X14-->
+          <li onclick="getClickedCard();" class="filterDiv active  earthTag  promo ">
+            <div class="title background-color-active">Advertising</div>
+            <div class="price">4</div>
+            <div class="tag tag1 tag-earth"></div>
+            <div class="promo-icon project-icon"></div>
+            <div class="number">#X14</div>
+            <div class="content">
+              <div class="resource card"><div class="card-icon" style="
+                background: linear-gradient(rgb(255,208,4),rgb(255,255,104),rgb(255,208,4),rgb(255,208,4));
+                color: black;
+                font-family: Prototype;
+                border-radius: 4px;
+                margin-left: -13px;
+                font-size: 12px;
+                ">20</div></div> : <div class="production-box" style="margin-left: 5px;"><div class="production money">1</div></div>
+              <div class="description">
+                (Effect: When you play a card with basic cost of 20MC or more, increase your Mc production 1 step.)
+              </div>
+            </div>
+          </li>
+
+          <!--X15-->
+          <li onclick="getClickedCard();" class="filterDiv active  spaceTag  promo ">
+            <div class="title background-color-active">Comet Aiming</div>
+            <div class="price">17</div>
+            <div class="tag tag1 tag-space"></div>
+            <div class="promo-icon project-icon"></div>
+            <div class="number">#X15</div>
+            <div class="content">
+              <div class="resource titanium"></div> <div class="red-arrow"></div> <div class="resource asteroid"></div>*
+              <br>
+              OR <div class="resource asteroid"></div>  <div class="red-arrow"></div>  <div class="tile ocean-tile"></div>
+              <div class="description">
+                (Action: Spend 1 titanium to add 1 asteroid resource to ANY CARD or remove 1 asteroid here to place an ocean.)
+              </div>
+            </div>
+          </li>
+
+          <!--X16-->
+          <li onclick="getClickedCard();" class="filterDiv events promo eventTag reqs">
+            <div class="title background-color-events ">Crash site Cleanup</div>
+            <div class="price">4</div>
+            <div class="tag tag1 tag-event"></div>
+            <div class="number">#X16</div>
+            <div class="promo-icon project-icon"></div>
+            <div class="content ">
+              <div class="requirements">- Plant</div>
+              <div class="resource titanium"></div> OR <div class="resource steel"></div><div class="resource steel"></div>
+              <div class="description ">
+                (REQUIRES THAT A PLAYER REMOVED ANOTHER PLAYERS PLANTS THIS GENERATION. Gain 1 titanium or 2 steel.)
+              </div>
+            </div>
+          </li>
+
+          <!--X17-->
+          <li onclick="getClickedCard();" class="filterDiv active  scienceTag  promo ">
+            <div class="title background-color-active">Cutting Edge Technology</div>
+            <div class="price">11</div>
+            <div class="tag tag1 tag-science"></div>
+            <div class="promo-icon project-icon"></div>
+            <div class="number">#X17</div>
+            <div class="content">
+              <div class="points points-big">1</div>
+              <div class="resource card"><div class="card-icon" style="
+                background: linear-gradient(to right, #e28c22, rgb(255,204,100),rgb(255,204,100), #e28c22);
+                color: black;
+                font-family: Prototype;
+                border-radius: 0px;
+                margin-left: -0px;
+                font-size: 12px;
+                width: 28px;
+                ">REQ</div>
+              </div> : <div class="resource money">2</div>
+              <div class="description">
+                (Effect: When playing a card with a requirement, pay 2MC less.)
+              </div>
+            </div>
+          </li>
+
+          <!--X18-->
+          <li onclick="getClickedCard();" class="filterDiv active spaceTag promo ">
+            <div class="title background-color-active ">Directed Impactors</div>
+            <div class="price">8</div>
+            <div class="tag tag1 tag-space "></div>
+            <div class="number">#X18</div>
+            <div class="promo-icon project-icon"></div>
+            <div class="content ">
+                <div class=" money resource ">6</div> (<span class="titanium " style="margin:0px;padding:1px;padding-top:3px;border-radius:5px; "></span>)
+                <span class="red-arrow "></span> <div class="resource asteroid"></div>* <br>
+                OR <div class="resource asteroid"></div> <span class="red-arrow "></span> <div class="tile temperature-tile"></div>
+                <div class="description ">
+                  (Action: Spend 6 MC to add 1 asteroid to ANY CARD (titanium may be used to pay for this), 
+                  or remove 1 asteroid here to raise temperature 1 step).
+                </div>
+            </div>
+          </li>
+
+          <!--X19-->
+          <li onclick="getClickedCard();" class="filterDiv automated buildingTag cityTag powerTag promo ">
+            <div class="title background-color-automated">Field-Capped City</div>
+            <div class="price">29</div>
+            <div class="tag tag1 tag-building"></div>
+            <div class="tag tag2 tag-city"></div>
+            <div class="tag tag3 tag-power"></div>
+            <div class="number">#X19</div>
+            <div class="promo-icon project-icon"></div>
+            <div class="content">
+              <div class="production-box production-box-size2">
+                <div class="production money">2</div>
+                <div class="production energy"></div>
+              </div>
+              <br>
+              <div class="resource plant"></div><div class="resource plant"></div><div class="resource plant"></div>
+              <div class="tile city-tile"></div>
+              <div class="description ">
+                (Increase your MC production 2 steps, increase your energy production 1 step, gain 3 plants, and place a city tile.)
+              </div>
+            </div>
+          </li>
+
+          <!--X20-->
+          <li onclick="getClickedCard();" class="filterDiv automated spaceTag promo reqs" data-power ="2">
+            <div class="title background-color-automated">Magnetic Field</div>
+            <div class="price">26</div>
+            <div class="tag tag1 tag-space"></div>
+            <div class="promo-icon project-icon"></div>
+            <div class="number">#X20</div>
+            <div class="content">
+              <div class="requirements">Power Power</div>
+                4 <div class="tile rating"></div>
+              <div class="description">
+                (Requires 2 power tags. Raise your TR 4 steps.)
+              </div>
+            </div>
+          </li>
 
 
+          <!--X21-->
+          <li onclick="getClickedCard();" class="filterDiv active buildingTag promo ">
+            <div class="title background-color-active">Meltworks</div>
+            <div class="price">4</div>
+            <div class="tag tag1 tag-building"></div>
+            <div class="promo-icon project-icon"></div>
+            <div class="number">#X21</div>
+            <div class="content">
+              5 <div class="resource heat"></div>
+              <div class="red-arrow"></div>
+              <div class="resource steel"></div><div class="resource steel"></div><div class="resource steel"></div>
+              <div class="description">
+                (Action: Spend 5 het to gain 3 steel.)
+              </div>
+            </div>
+          </li>
 
+          <!--X22-->
+          <li onclick="getClickedCard();" class="filterDiv active buildingTag promo ">
+            <div class="title background-color-active">Mohole Lake</div>
+            <div class="price">31</div>
+            <div class="tag tag1 tag-building"></div>
+            <div class="promo-icon project-icon"></div>
+            <div class="number">#X22</div>
+            <div class="content">
+              <div class="red-arrow"></div>
+              <div class="resource microbe"></div>* OR <div class="resource animal"></div>*
+              <div class="description">
+                (Action: Add a microbe or animal to ANOTHER card.)
+              </div>
+              <br>
+              <div class="resource plant"></div><div class="tile temperature-tile"></div><div class="tile ocean-tile"></div>
+              <div class="description">
+                (Effect: Gain 1 plant. Raise temperature 1 step, and place 1 ocean tile.)
+              </div>
+            </div>
+          </li>
 
+          <!--X23-->
+          <li onclick="getClickedCard();" class="filterDiv events promo eventTag reqs">
+            <div class="title background-color-events ">Diversity Support</div>
+            <div class="price">1</div>
+            <div class="tag tag1 tag-event"></div>
+            <div class="number">#X23</div>
+            <div class="promo-icon project-icon"></div>
+            <div class="content ">
+              <div class="requirements">9 different resources</div>
+              <div class="tile rating"></div>
+              <div class="description ">
+                (Requires that you have 9 different types of resources. Gain 1 TR.)
+              </div>
+            </div>
+          </li>
+
+          <!--X24-->
+          <li onclick="getClickedCard();" class="filterDiv automated jovianTag buildingTag promo ">
+            <div class="title background-color-automated ">Jovian Embassy</div>
+            <div class="price">14</div>
+            <div class="tag tag1 tag-building "></div>
+            <div class="tag tag2 tag-jovian "></div>
+            <div class="number">#X24</div>
+            <div class="promo-icon project-icon"></div>
+            <div class="content ">
+              <div class="points points-big">1</div>
+                <div class="tile rating"></div>
+                <div class="description ">
+                  (Raise your TR 1 step.)
+                </div>
+            </div>
+          </li>          
+        
+          <!--X25-->
+          <li onclick="getClickedCard();" class="filterDiv active microbeTag earthTag promo ">
+            <div class="title background-color-active">Topsoil Contract</div>
+            <div class="price">8</div>
+            <div class="tag tag1 tag-microbe"></div>
+            <div class="tag tag2 tag-earth"></div>
+            <div class="promo-icon project-icon"></div>
+            <div class="number">#X25</div>
+            <div class="content">
+              <div class="resource microbe"></div>* : <div class="resource money">1</div>
+              <div class="description">
+                (Effect: When you game a microbe to ANY CARD, also gain 1MC.)
+              </div>
+              <br>
+              <div class="resource plant"></div><div class="resource plant"></div><div class="resource plant"></div>
+              <div class="description">
+                (Gain 3 plants.)
+              </div>
+            </div>
+          </li>
+
+          <!--X26-->
+          <li onclick="getClickedCard();" class="filterDiv events promo eventTag spacetag earthTag ">
+            <div class="title background-color-events ">Imported Nutrients</div>
+            <div class="price">14</div>
+            <div class="tag tag1 tag-event"></div>
+            <div class="tag tag2 tag-space"></div>
+            <div class="tag tag3 tag-earth"></div>
+            <div class="number">#X26</div>
+            <div class="promo-icon project-icon"></div>
+            <div class="content ">
+              4 <div class="resource plant" style="margin-right: 20px;"></div> 4 <div class="resource microbe"></div>*
+              <div class="description">
+                (Gain 4 plants and add 4 microbes to ANOTHER CARD.)
+              </div>
+            </div>
+          </li>
+
+          <!--X27-->
+          <li onclick="getClickedCard();" class="filterDiv active buildingTag spaceTag earthTag promo ">
+            <div class="title background-color-active">Asteroid Deflection System</div>
+            <div class="price">13</div>
+            <div class="tag tag1 tag-building"></div>
+            <div class="tag tag2 tag-space"></div>
+            <div class="tag tag3 tag-earth"></div>
+            <div class="promo-icon project-icon"></div>
+            <div class="number">#X27</div>
+            <div class="content">
+              <div class="points points-big">1/<div class="resource asteroid" style="vertical-align: middle;"></div></div>
+              <div class="red-arrow"></div>
+              <div class="resource card"></div>*  <div class="resource-tag tag-space" style="margin-left:20px;margin-right:5px;"></div>: <div class="resource asteroid"></div>
+              <div class="description">
+                (Action: REVEAL AND DISCARD the top card of the deck. If it has a space tag, add an asteroid here.)
+              </div>
+              <div style="font-weight:normal;line-height: 15px;margin-bottom: 5px;">OPPONENTS MAY NOT REMOVE YOUR PLANTS</div>
+              <div class="production-box production-box-size1a" style="position: absolute;margin-left:-110px;">
+                <div class="production-prefix">&#x2796;&#xFE0E;</div><div class="production energy"></div>
+              </div>
+              <div class="description" style="margin-left: 80px;text-align: left;">
+                (Decrease your energy production 1 step. 1VP per asteroid on this card.)
+              </div>
+            </div>
+          </li>
+
+          <!--X28-->
+          <li onclick="getClickedCard();" class="filterDiv active buildingTag scienceTag earthTag promo reqs" data-science="2">
+            <div class="title background-color-active">Sub-Crust Measurements</div>
+            <div class="price">20</div>
+            <div class="tag tag1 tag-building"></div>
+            <div class="tag tag2 tag-science"></div>
+            <div class="tag tag3 tag-earth"></div>
+            <div class="promo-icon project-icon"></div>
+            <div class="number">#X28</div>
+            <div class="content">
+              <div class="points points-big">2</div>
+              <div class="requirements">Science Science</div>
+              <div class="red-arrow"></div>
+              <div class="resource card"></div> 
+              <div class="description">
+                (Action: Draw a card.)
+              </div>
+              <br><br>
+              <div class="description">
+                (Requires 2 science tags.)
+              </div>
+            </div>
+          </li>
+
+          <!--X29-->
+          <li onclick="getClickedCard();" class="filterDiv automated plantTag promo">
+            <div class="title background-color-automated">Potatoes</div>
+            <div class="price">2</div>
+            <div class="tag tag1 tag-plant"></div>
+            <div class="promo-icon project-icon"></div>
+            <div class="number">#X29</div>
+            <div class="content">
+              - <div class="resource plant"></div><div class="resource plant"></div>
+              <br>
+              <div class="production-box">
+                <div class="money production">2</div>
+              </div>
+              <div class="description">
+                (Lose 2 plants. Increase your MC production 2 steps)
+              </div>
+            </div>
+          </li>
+          
+          <!--X30-->
+          <li onclick="getClickedCard();" class="filterDiv active buildingTag promo">
+            <div class="title background-color-active">Meat Industries</div>
+            <div class="price">5</div>
+            <div class="tag tag1 tag-building"></div>
+            <div class="promo-icon project-icon"></div>
+            <div class="number">#X30</div>
+            <div class="content">
+              <div class="resource animal"></div>* : <div class="resource money">2</div>
+              <div class="description">
+                (Effect: When you gain an animal to ANY CARD, gain 2MC.)
+              </div>
+            </div>
+          </li>
 
         </div>
    </ul>
@@ -7541,6 +7890,67 @@
                     <div class="resource money" style="margin-left:60px;margin-right:25px;">44</div>
                     <div class="resource card" style="margin-left:20px;"><div class="card-icon card-icon-microbe">&#x2042;</div></div>
             <div class="description" style="margin-top:-8px;text-align:center;">(You start with 44 MC. As your first action, reveal cards until you have revealed a microbe tag. Take that card into hand, and discard the rest.)</div>
+          </div>
+        </li>
+
+        <li id="#CORP39" onclick="getClickedCard();" class="filterDiv corporation spaceTag  promo">
+          <div class="tag tag1 tag-space"></div>
+          <div class="corporationLabel">CORPORATION</div>
+          <div class="promo-icon corporation-icon"></div>
+          <div class="contentCorporation">
+            <div class="corporationEffectBox">
+              <div class="corporationEffectBoxLabel" style="margin-bottom:2px">ACTION</div>
+              <div class="red-arrow"></div> <div class="resource asteroid"></div>* / <div class="resource ">?</div><br>
+              OR <div class="resource asteroid"></div> <div class="red-arrow"></div> 3 <div class="resource titanium"></div>
+              <div class="description">
+                (Action: Either add 1 asteroid to ANY CARD or gain any standard resource OR remove 1 asteroid here to gain 3 titanium.)
+              </div>
+            </div>
+            <div class="astrodrill">ASTRODRILL</div>
+            <div class="astrodrill" style="margin-top:-5px;margin-bottom:-20px"></div>
+            <div class="resource money" style="margin-left:40px;margin-right:25px;">38</div>
+            3 <div class="resource asteroid"></div>
+            <div class="description" style="text-align: center;">
+              (You start with 38MC, and 3 asteroid resources here.)
+            </div>
+          </div>
+        </li>
+
+        <li id="#CORP40" onclick="getClickedCard();" class="filterDiv corporation microbeTag  promo">
+          <div class="tag tag1 tag-microbe"></div>
+          <div class="tag tag2 tag-microbe"></div>
+          <div class="corporationLabel">CORPORATION</div>
+          <div class="promo-icon corporation-icon"></div>
+          <div class="contentCorporation" >
+            <div class="corporationEffectBox" style="margin-top:75px; height: 205px;text-align: left;padding-left: 5px;">
+              <div class="corporationEffectBoxLabel" style="margin-bottom:2px">EFFECT</div>
+              <div class="resource-tag red-outline tag-microbe"></div> :<div class="resource biohazard"></div><div class="resource money">-4</div><br>
+              <div class="resource-tag tag-science"></div> :-<div class="resource biohazard"></div>
+              <div class="tile rating" style="transform: scale(.8);width: 30px;
+              margin-left: -8px;"></div><br>
+              OR 3 <div class="tile rating" style="transform: scale(.8); width: 30px;
+              margin-left: -3px;margin-right: -5px;"></div> 
+              <span style="font-size: 28px;color:white;text-shadow: 0 1px 1px black, 0 0px 2px black;">&#129095;</span>
+              <div class="description" style="position: absolute;
+              margin-top: -142px;
+              margin-left: 125px;">
+                (Effect: When ANY microbe is played, including these, add a disease here and lose 4MC or as much as possible. 
+                When you play a science tag, remove 1 disease
+              </div>
+              <div class="description" style="margin-top:-10px;">
+                from here and raise your TR 1 step, OR, if there are no deseases here, 
+                you MAY raise your TR 3 steps and TURN THIS CARD FACE DOWN
+                (lose this card tags/effects).)
+              </div>
+            </div>
+            <div style="font-size:16px;">PHARMACY UNION</div>
+            <div class="resource money" style="margin-right:5px;">54</div>
+            <div class="resource card"><div class="card-icon science" style="color:black;font-size: 20px;"></div></div>
+            <div class="description" style="margin-top: -40px;
+            margin-left: 90px;
+            width: 110px;">
+              (You start with 54MC. Draw a science card.)
+            </div>
           </div>
         </li>
 
