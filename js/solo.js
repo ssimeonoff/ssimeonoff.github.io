@@ -897,6 +897,16 @@ function pushCorporationsData(corporation) {
   document.getElementById("games-factorum").innerHTML = games_factorum.length;
   document.getElementById("winrate-factorum").innerHTML =  corporationWinrate(games_factorum);
   document.getElementById("score-factorum").innerHTML =  corporationScore(games_factorum);
+
+  games_astrodrill = games.filter(function(el) {return el.corporation == "ASTRODRILL"});
+  document.getElementById("games-astrodrill").innerHTML = games_astrodrill.length;
+  document.getElementById("winrate-astrodrill").innerHTML =  corporationWinrate(games_astrodrill);
+  document.getElementById("score-astrodrill").innerHTML =  corporationScore(games_astrodrill);
+
+  games_pharmacy = games.filter(function(el) {return el.corporation == "PHARMACY"});
+  document.getElementById("games-pharmacy").innerHTML = games_pharmacy.length;
+  document.getElementById("winrate-pharmacy").innerHTML =  corporationWinrate(games_pharmacy);
+  document.getElementById("score-pharmacy").innerHTML =  corporationScore(games_pharmacy);
 }
 
 function histogram () {

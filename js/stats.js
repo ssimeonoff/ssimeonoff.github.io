@@ -573,6 +573,16 @@ function pushCorporationsData() {
   document.getElementById("games4p-teralabs").innerHTML = generateGameStats(4, "TERALABS");
   document.getElementById("games5p-teralabs").innerHTML = generateGameStats(5, "TERALABS");
 
+  document.getElementById("games2p-astrodrill").innerHTML = generateGameStats(2, "ASTRODRILL");
+  document.getElementById("games3p-astrodrill").innerHTML = generateGameStats(3, "ASTRODRILL");
+  document.getElementById("games4p-astrodrill").innerHTML = generateGameStats(4, "ASTRODRILL");
+  document.getElementById("games5p-astrodrill").innerHTML = generateGameStats(5, "ASTRODRILL");
+
+  document.getElementById("games2p-pharmacy").innerHTML = generateGameStats(2, "PHARMACY");
+  document.getElementById("games3p-pharmacy").innerHTML = generateGameStats(3, "PHARMACY");
+  document.getElementById("games4p-pharmacy").innerHTML = generateGameStats(4, "PHARMACY");
+  document.getElementById("games5p-pharmacy").innerHTML = generateGameStats(5, "PHARMACY");
+
   //fanmade
   document.getElementById("games2p-kuiper").innerHTML = generateGameStats(2, "KUIPER BELT COOP.");
   document.getElementById("games3p-kuiper").innerHTML = generateGameStats(3, "KUIPER BELT COOP.");
