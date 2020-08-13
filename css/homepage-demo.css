@@ -1,0 +1,99 @@
+
+/* fonts */
+@font-face {
+    font-family: Prototype;
+    src: url(../fonts/Prototype.ttf);
+}
+
+
+.title {
+  font-family: Prototype;
+  font-size: 38px;
+  letter-spacing: 1px;
+  fill: #bb8760;
+  text-shadow: 0 2px 2px black;
+}
+
+.text {
+  position: absolute;
+  font-family: Prototype;
+  color: black;
+  z-index: 1;
+  font-size: 26px;
+  background: linear-gradient(to right,transparent, rgba(0,0,0,.5), transparent);
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0px 1px 1px 0px rgba(0,0,0,.5);
+}
+
+.text:hover {
+  background: rgba(0,0,0,.8);
+  color: #bb8760;
+}
+
+.new-game {
+  width: 100px;
+  margin-left: 120px;
+  margin-top: -10px;
+  padding: 55px 35px 55px 35px;
+  border-radius: 50%;
+  transform: rotate(-10deg);
+}
+
+.cards-list {
+  width: 100px;
+  margin-left: 191px;
+  margin-top: -69px;
+  font-size: 16px;
+  padding: 15px 10px 10px 10px;
+  border-radius: 50% 50% 20px 20px;
+  transform: rotate(0deg);
+  line-height: 10px;
+}
+
+.about {
+  width: 100px;
+  margin-left: 191px;
+  margin-top: 254px;
+  font-size: 16px;
+  padding: 12px 10px 13px 10px;
+  border-radius:  20px 20px 50% 50%;
+  box-shadow: 0px 1px 1px 0px rgba(0,0,0,.5);
+  transform: rotate(0deg);
+  background: linear-gradient(to right,transparent, rgba(0,0,0,.5), transparent);
+  line-height: 10px;
+}
+
+.chat {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  margin: 195px 0 0 320px;
+  font-size: 14px;
+  border-radius: 50%;
+  transform: rotate(-31deg);
+  background: linear-gradient(transparent, rgba(0,0,0,.5), transparent);
+}
+
+.changelog {
+  margin: 190px 0 0 154px;
+  font-size: 14px;
+  padding: 10px 20px;
+  transform: rotate(5deg);
+}
+
+.the-game {
+  margin: 126px 0 0 317px;
+    padding: 10px;
+    font-size: 14px;
+    transform: rotate(-17deg);
+}
+
+.flag {
+  margin: 60px 0 0 -20px;
+  position: absolute;
+  z-index: 1;
+  width: 40px;
+  border-radius: 50%;
+  border: 2px solid #bb8760;
+}
