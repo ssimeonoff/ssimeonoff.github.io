@@ -23,7 +23,7 @@
   text-decoration: none;
   cursor: pointer;
   color: #ccc;
-  box-shadow: inset 0 0 10px 1px white;
+  box-shadow: inset 0 0 0px 1px #222;
   height: 90px;
   line-height: 130px;
   border-radius: 10px;
