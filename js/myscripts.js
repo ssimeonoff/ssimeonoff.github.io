@@ -46,7 +46,7 @@ function showAll() {
   x = document.querySelectorAll('.filterDiv');
   for (i = 0; i < x.length; i++) {w3AddClass(x[i], "show");}
 
-  //displaying first 24 cards that have "show"
+  //displaying first 48 cards that have "show"
   displayCards();
 }
 
@@ -54,8 +54,8 @@ function displayCards() {
   button_load_more = document.getElementById("button-load-more");
 
   arr = document.querySelectorAll('li.show');
-  if (arr.length > 24) {
-    display_length = 24
+  if (arr.length > 48) {
+    display_length = 48
     button_load_more.style.display = "block"
   }
   else {
@@ -98,7 +98,7 @@ function displayCardsOnly() {
 
   }
 }
-
+filterFunction('global-card')
 ////////////////////// FILTER FUCTION ///////////////////////////////
 function filterFunction(id) {
   var input, filter, ul, li, a, i, x;
@@ -387,6 +387,9 @@ function clearInput() {
   x = document.querySelectorAll(".clicked-card");
   for (i = 0; i < x.length; i++) {w3RemoveClass(x[i], "clicked-card");}
   selectedCards = "";
+
+  //scroll to the top
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function w3AddClass(element, name) {
