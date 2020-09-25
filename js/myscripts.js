@@ -98,7 +98,6 @@ function displayCardsOnly() {
 
   }
 }
-filterFunction('global-card')
 ////////////////////// FILTER FUCTION ///////////////////////////////
 function filterFunction(id) {
   var input, filter, ul, li, a, i, x;
