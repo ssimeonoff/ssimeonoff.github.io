@@ -22,7 +22,7 @@ function showAll() {
   displayedCorporations = 40;
   displayedPreludes = 35;
   displayedColonies = 11;
-  displayedGlobals = 1;
+  displayedGlobals = 36;
 
   document.getElementById("buttonsContainer").style.display = "block";
 
