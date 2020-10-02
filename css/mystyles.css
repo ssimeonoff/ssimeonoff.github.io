@@ -586,8 +586,8 @@ li.global-card::before{
 .tag-plant {background-image: url("../images/tags/plant.png");}
 .tag-animal {background-image: url("../images/tags/animal.png");}
 .tag-event {background-image: url("../images/tags/event.png");  }
-.tag-science {background-image: url("../images/tags/science.png");}
-.tag-none {background-image: url("../images/tags/tag-none.png");}
+.tag-science {background-image: url("../images/tags/science.png"); background-size: 46px; background-position: -3px;}
+.tag-none {background-image: url("../images/tags/tag-none.png"); }
 
 /************** Style the buttons ************/
 .button, .button2 {
@@ -1078,7 +1078,7 @@ li.global-card::before{
     padding-bottom: 4px;
     line-height: 32px;
     background-image: url(../images/misc/production.png);
-    background-size: 120px;
+    background-size: cover;
 }
 
 .production-box-size1a {
