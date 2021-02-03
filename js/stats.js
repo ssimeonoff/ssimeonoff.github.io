@@ -776,55 +776,64 @@ function histogram_generations (players) {
   }
 }
 
+function safeDivide(numerator, denominator) {
+  if (denominator === 0 || isNaN(denominator)) {
+        return 0;
+  }
+  else {
+        return numerator / denominator;
+  }
+}
+
 function pushAwardsStats(games) {
 
   var tharsisGames = games.filter(function(el) {
     return el.map == "THARSIS"
-  }).length+1;
+  }).length;
   var hellasGames = games.filter(function(el) {
     return el.map == "HELLAS"
-  }).length+1;
+  }).length;
   var elysiumGames = games.filter(function(el) {
     return el.map == "ELYSIUM"
-  }).length+1;
+  }).length;
 
 
   //THARSIS milestones and awards
-  document.getElementById("terraformer").innerHTML =  Math.round(checkForElement("milestones", "TERRAFORMER")*100/tharsisGames) + "%";
-  document.getElementById("mayor").innerHTML =  Math.round(checkForElement("milestones", "MAYOR")*100/tharsisGames) + "%";
-  document.getElementById("gardener").innerHTML =  Math.round(checkForElement("milestones", "GARDENER")*100/tharsisGames) + "%";
-  document.getElementById("builder").innerHTML =  Math.round(checkForElement("milestones", "BUILDER")*100/tharsisGames) + "%";
-  document.getElementById("planner").innerHTML =  Math.round(checkForElement("milestones", "PLANNER")*100/tharsisGames) + "%";
-  document.getElementById("landlord").innerHTML =  Math.round(checkForElement("awards", "LANDLORD")*100/tharsisGames) + "%";
-  document.getElementById("banker").innerHTML =  Math.round(checkForElement("awards", "BANKER")*100/tharsisGames) + "%";
-  document.getElementById("scientist").innerHTML =  Math.round(checkForElement("awards", "SCIENTIST")*100/tharsisGames) + "%";
-  document.getElementById("thermalist").innerHTML =  Math.round(checkForElement("awards", "THERMALIST")*100/tharsisGames) + "%";
-  document.getElementById("miner").innerHTML =  Math.round(checkForElement("awards", "MINER")*100/tharsisGames) + "%";
+  document.getElementById("terraformer").innerHTML =  Math.round(safeDivide(checkForElement("milestones", "TERRAFORMER")*100,tharsisGames)) + "%";
+  document.getElementById("mayor").innerHTML =  Math.round(safeDivide(checkForElement("milestones", "MAYOR")*100,tharsisGames)) + "%";
+  document.getElementById("gardener").innerHTML =  Math.round(safeDivide(checkForElement("milestones", "GARDENER")*100,tharsisGames)) + "%";
+  document.getElementById("builder").innerHTML =  Math.round(safeDivide(checkForElement("milestones", "BUILDER")*100,tharsisGames)) + "%";
+  document.getElementById("planner").innerHTML =  Math.round(safeDivide(checkForElement("milestones", "PLANNER")*100,tharsisGames)) + "%";
+  document.getElementById("landlord").innerHTML =  Math.round(safeDivide(checkForElement("awards", "LANDLORD")*100,tharsisGames)) + "%";
+  document.getElementById("banker").innerHTML =  Math.round(safeDivide(checkForElement("awards", "BANKER")*100,tharsisGames)) + "%";
+  document.getElementById("scientist").innerHTML =  Math.round(safeDivide(checkForElement("awards", "SCIENTIST")*100,tharsisGames)) + "%";
+  document.getElementById("thermalist").innerHTML =  Math.round(safeDivide(checkForElement("awards", "THERMALIST")*100,tharsisGames)) + "%";
+  document.getElementById("miner").innerHTML =  Math.round(safeDivide(checkForElement("awards", "MINER")*100,tharsisGames)) + "%";
   //HELLAS milestones and awards
-  document.getElementById("diversifier").innerHTML =  Math.round(checkForElement("milestones", "DIVERSIFIER")*100/hellasGames) + "%";
-  document.getElementById("tactician").innerHTML =  Math.round(checkForElement("milestones", "TACTICIAN")*100/hellasGames) + "%";
-  document.getElementById("polar_explorer").innerHTML =  Math.round(checkForElement("milestones", "POLAR EXPLORER")*100/hellasGames) + "%";
-  document.getElementById("energizer").innerHTML =  Math.round(checkForElement("milestones", "ENERGIZER")*100/hellasGames) + "%";
-  document.getElementById("rim_settler").innerHTML =  Math.round(checkForElement("milestones", "RIM SETTLER")*100/hellasGames) + "%";
-  document.getElementById("cultivator").innerHTML =  Math.round(checkForElement("awards", "CULTIVATOR")*100/hellasGames) + "%";
-  document.getElementById("magnate").innerHTML =  Math.round(checkForElement("awards", "MAGNATE")*100/hellasGames) + "%";
-  document.getElementById("space_baron").innerHTML =  Math.round(checkForElement("awards", "SPACE BARON")*100/hellasGames) + "%";
-  document.getElementById("excentric").innerHTML =  Math.round(checkForElement("awards", "EXCENTRIC")*100/hellasGames) + "%";
-  document.getElementById("contractor").innerHTML =  Math.round(checkForElement("awards", "CONTRACTOR")*100/hellasGames) + "%";
+  document.getElementById("diversifier").innerHTML =  Math.round(safeDivide(checkForElement("milestones", "DIVERSIFIER")*100,hellasGames)) + "%";
+  document.getElementById("tactician").innerHTML =  Math.round(safeDivide(checkForElement("milestones", "TACTICIAN")*100,hellasGames)) + "%";
+  document.getElementById("polar_explorer").innerHTML =  Math.round(safeDivide(checkForElement("milestones", "POLAR EXPLORER")*100,hellasGames)) + "%";
+  document.getElementById("energizer").innerHTML =  Math.round(safeDivide(checkForElement("milestones", "ENERGIZER")*100,hellasGames)) + "%";
+  document.getElementById("rim_settler").innerHTML =  Math.round(safeDivide(checkForElement("milestones", "RIM SETTLER")*100,hellasGames)) + "%";
+  document.getElementById("cultivator").innerHTML =  Math.round(safeDivide(checkForElement("awards", "CULTIVATOR")*100,hellasGames)) + "%";
+  document.getElementById("magnate").innerHTML =  Math.round(safeDivide(checkForElement("awards", "MAGNATE")*100,hellasGames)) + "%";
+  document.getElementById("space_baron").innerHTML =  Math.round(safeDivide(checkForElement("awards", "SPACE BARON")*100,hellasGames)) + "%";
+  document.getElementById("excentric").innerHTML =  Math.round(safeDivide(checkForElement("awards", "EXCENTRIC")*100,hellasGames)) + "%";
+  document.getElementById("contractor").innerHTML =  Math.round(safeDivide(checkForElement("awards", "CONTRACTOR")*100,hellasGames)) + "%";
   //ELYSIUM milestones and awards
-  document.getElementById("generelast").innerHTML =  Math.round(checkForElement("milestones", "GENERALIST")*100/elysiumGames) + "%";
-  document.getElementById("specialist").innerHTML =  Math.round(checkForElement("milestones", "SPECIALIST")*100/elysiumGames) + "%";
-  document.getElementById("ecologist").innerHTML =  Math.round(checkForElement("milestones", "ECOLOGIST")*100/elysiumGames) + "%";
-  document.getElementById("tycoon").innerHTML =  Math.round(checkForElement("milestones", "TYCOON")*100/elysiumGames) + "%";
-  document.getElementById("legend").innerHTML =  Math.round(checkForElement("milestones", "LEGEND")*100/elysiumGames) + "%";
-  document.getElementById("celebrity").innerHTML =  Math.round(checkForElement("awards", "CELEBRITY")*100/elysiumGames) + "%";
-  document.getElementById("industrialist").innerHTML =  Math.round(checkForElement("awards", "INDUSTRIALIST")*100/elysiumGames) + "%";
-  document.getElementById("desert_settler").innerHTML =  Math.round(checkForElement("awards", "DESERT SETTLER")*100/elysiumGames) + "%";
-  document.getElementById("estate_dealer").innerHTML =  Math.round(checkForElement("awards", "ESTATE DEALER")*100/elysiumGames) + "%";
-  document.getElementById("benefactor").innerHTML =  Math.round(checkForElement("awards", "BENEFACTOR")*100/elysiumGames) + "%";
+  document.getElementById("generelast").innerHTML =  Math.round(safeDivide(checkForElement("milestones", "GENERALIST")*100,elysiumGames)) + "%";
+  document.getElementById("specialist").innerHTML =  Math.round(safeDivide(checkForElement("milestones", "SPECIALIST")*100,elysiumGames)) + "%";
+  document.getElementById("ecologist").innerHTML =  Math.round(safeDivide(checkForElement("milestones", "ECOLOGIST")*100,elysiumGames)) + "%";
+  document.getElementById("tycoon").innerHTML =  Math.round(safeDivide(checkForElement("milestones", "TYCOON")*100,elysiumGames)) + "%";
+  document.getElementById("legend").innerHTML =  Math.round(safeDivide(checkForElement("milestones", "LEGEND")*100,elysiumGames)) + "%";
+  document.getElementById("celebrity").innerHTML =  Math.round(safeDivide(checkForElement("awards", "CELEBRITY")*100,elysiumGames)) + "%";
+  document.getElementById("industrialist").innerHTML =  Math.round(safeDivide(checkForElement("awards", "INDUSTRIALIST")*100,elysiumGames)) + "%";
+  document.getElementById("desert_settler").innerHTML =  Math.round(safeDivide(checkForElement("awards", "DESERT SETTLER")*100,elysiumGames)) + "%";
+  document.getElementById("estate_dealer").innerHTML =  Math.round(safeDivide(checkForElement("awards", "ESTATE DEALER")*100,elysiumGames)) + "%";
+  document.getElementById("benefactor").innerHTML =  Math.round(safeDivide(checkForElement("awards", "BENEFACTOR")*100,elysiumGames)) + "%";
 
-  document.getElementById("hoverlord").innerHTML =  Math.round(checkForElement("milestones", "HOVERLORD")*100/(1+Math.round(checkForElement("expansions", "VENUS")))) + "%";
-  document.getElementById("venuphile").innerHTML =  Math.round(checkForElement("awards", "VENUPHILE")*100/(1+Math.round(checkForElement("expansions", "VENUS")))) + "%";
+  document.getElementById("hoverlord").innerHTML =  Math.round(safeDivide(checkForElement("milestones", "HOVERLORD")*100,(Math.round(checkForElement("expansions", "VENUS"))))) + "%";
+  document.getElementById("venuphile").innerHTML =  Math.round(safeDivide(checkForElement("awards", "VENUPHILE")*100,(Math.round(checkForElement("expansions", "VENUS"))))) + "%";
 }
 
 function generateScoresArray (players) {
@@ -1219,4 +1228,6 @@ function hideSecondaryStats() {
   document.querySelectorAll(".btn-stats-activation").forEach((item, i) => {
     item.style.transform = "scale(1)";
   });
+  
+ 
 }
