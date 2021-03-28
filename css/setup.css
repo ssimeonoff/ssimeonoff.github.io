@@ -7,13 +7,16 @@
   border-bottom: 2px solid rgb(137,137,137);
   border-right: 2px solid rgb(137,137,137);
   border-radius: 32px;
-  margin-left: 50px;
+  margin-left: 20px;
   width: 1060px;
   height: 60px;
   margin-top: 20px;
-  margin-left: 100px;
   transition: height 0.2s;
   box-shadow: 0 0 1px 1px black;
+}
+
+.cards-container-setup {
+  margin-left: -70px;
 }
 
 .btn-generate {
