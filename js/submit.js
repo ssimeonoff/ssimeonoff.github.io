@@ -315,3 +315,155 @@ function resizeDivs() {
    btnAwards[i].classList.toggle("btn-awards-resized");
  }
 }
+
+
+// Load game info from query params
+window.addEventListener("load", function () {
+  // https://stackoverflow.com/a/901144
+  function getQueryParameterByName(name) {
+    var url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+      results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return "";
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+  }
+
+  function checkCheckbox(selector, callback) {
+    var element = document.querySelector(selector);
+    if (element) {
+      element.checked = true;
+      if (callback) callback();
+    }
+  }
+
+
+  // QUERY: Number of players
+  var playersQuery = parseInt(getQueryParameterByName("players"));
+  if (playersQuery !== null) {
+    checkCheckbox("input[name='players'][value='" + playersQuery + "']", function () {
+      enableCorporations();
+      limitColonies();
+    });
+  }
+
+  // QUERY: Players' corporations
+  var corporationOptions = document.querySelectorAll("#corporation1 option");
+  var availableCorporations = [];
+  for (var i = 0; i < corporationOptions.length; i++) {
+    var option = corporationOptions[i];
+    if (option.disabled) continue;
+    availableCorporations.push(option.value);
+  }
+
+  for (var playerIndex = 1; playerIndex <= playersQuery; playerIndex++) {
+    var corporationQuery = getQueryParameterByName("player-" + playerIndex + "-corporation");
+    if (corporationQuery === null) continue;
+
+    corporationQuery = corporationQuery.toUpperCase();
+    if (availableCorporations.indexOf(corporationQuery) === -1) continue;
+  
+    var selectId = "corporation" + playerIndex;
+    var corporationSelect = document.getElementById(selectId);
+    corporationSelect.value = corporationQuery;
+
+    disableSelectedCorporation();
+    changeColours(selectId);
+    limitColonies();
+  }
+
+
+  // QUERY: Generations
+  var generationQuery = parseInt(getQueryParameterByName("generations"));
+  if (generationQuery >= 4 && generationQuery <= 18) {
+    var generationSelectId = "generations";
+    var generationSelect = document.getElementById(generationSelectId);
+    generationSelect.value = generationQuery;
+    changeColours(generationSelectId);
+  }
+
+  // QUERY: Scores
+  for (var playerIndex = 1; playerIndex <= playersQuery; playerIndex++) {
+    var scoreQuery = parseInt(getQueryParameterByName("player-" + playerIndex + "-score"));
+    if (!scoreQuery) continue;
+
+    var scoreInputId = "corporation" + playerIndex + "-score";
+    var scoreInput = document.getElementById(scoreInputId);
+    scoreInput.value = scoreQuery;
+    changeColours2(scoreInputId);
+  }
+
+  // QUERY: Expansions
+  var expansionsQuery = getQueryParameterByName("expansions");
+  if (expansionsQuery !== null) {
+    expansionsQuery.split(',').forEach(function (expansion) {
+      checkCheckbox("#" + expansion, function () {
+        if (expansion === 'venus') {
+          displayVenusAwards();
+        }
+
+        if (expansion === 'colonies') {
+          toggleColoniesDiv();
+          resizeDivs();
+        }
+      });
+    });
+  }
+
+
+  // QUERY: Colonies
+  var coloniesQuery = getQueryParameterByName("colonies");
+  if (coloniesQuery !== null && expansionsQuery.indexOf('colonies') !== -1) {
+    coloniesQuery.split(',').forEach(function (colony) {
+      checkCheckbox("#" + colony, limitColonies);
+    });
+  }
+
+  var mapQuery = getQueryParameterByName("map");
+  if (mapQuery !== null) {
+    checkCheckbox("#" + mapQuery, function () {
+      if (mapQuery === "elysium") elysiumAwards();
+      else if (mapQuery === "hellas") hellasAwards();
+      else if (mapQuery === "tharsis") tharsisAwards();
+    });
+  }
+
+  // QUERY: Milestones
+  var milestonesQuery = getQueryParameterByName("milestones");
+  if (milestonesQuery !== null && mapQuery !== null) {
+    milestonesQuery.split(",").forEach(function (milestone) {
+      if (milestone === "hoverlord") {
+        if (mapQuery === "hellas") milestone += "2";
+        if (mapQuery === "elysium") milestone += "3";
+      }
+      var selector = "#" + milestone.toLowerCase().replace(" ", "-")
+      checkCheckbox(selector, limitAwards);
+    });
+  }
+
+  // QUERY: Awards
+  var awardsQuery = getQueryParameterByName("awards");
+  if (awardsQuery !== null && mapQuery !== null) {
+    awardsQuery.split(",").forEach(function (award) {
+      if (award === "venuphile") {
+        if (mapQuery === "hellas") award += "2";
+        if (mapQuery === "elysium") award += "3";
+      }
+      var selector = "#" + milestone.toLowerCase().replace(" ", "-")
+      checkCheckbox(selector, limitAwards);
+    });
+  }
+
+  // QUERY: Draft
+  var draftQuery = getQueryParameterByName("draft");
+  if (draftQuery === "true") {
+    document.getElementById('draft').checked = true;
+  }
+
+  // QUERY: WGT
+  var wgtQuery = getQueryParameterByName("wgt");
+  if (wgtQuery === "true") {
+    document.getElementById('wgt').checked = true;
+  }
+});
