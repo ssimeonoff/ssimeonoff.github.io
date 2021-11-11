@@ -18,7 +18,7 @@ else {
 
 function showAll() {
   var x, i;
-  displayedProjects = 369;
+  displayedProjects = 370;
   displayedCorporations = 40;
   displayedPreludes = 35;
   displayedColonies = 11;
