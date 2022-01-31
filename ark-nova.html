@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Ark Nova Cards">
+  <meta name="keywords" content="HTML,CSS,JavaScript">
+  <meta name="viewport" content='width=930'>
+
+  <link rel="shortcut icon" type="image/png" href="images-ark/favicon.png">
+  <link rel="stylesheet" type="text/css" href="css/mystyles-ark.css">
+  <link rel="stylesheet" href="css/odometer.css">
+  <link rel="stylesheet" href="css/odometer-cards-ark.css">
+  <title>Ark Nova Cards</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116626580-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-116626580-1');
+</script>
+</head>
+
+<html>
+<body>
+  <div class="app-container">
+    <div class="list-container">
+      <div id="buttonsContainer">
+      <div id="buttonsContainer-header">
+        <div id="titleContainer">
+          <div class="title-style">ARK NOVA CARDS LIST</div>
+        </div>
+        <a disabled id="btn-selectedCards" class="button btn-selected-cards disabled" title="open selected cards" href="no-selected-card.html" target="_blank">SELECTED
+          <div id="selectedCardsAmount">0</div>
+        </a>
+    </div>
+
+
+  <div id="buttonsContainer-body">
+    <div id="myBtnContainer1" style="line-height:55px;margin-bottom:10px;">
+      <button id="animal" class="button btn1 background-color-animals  " onclick="filterFunction(id)" title="filter Animals cards">ANIMALS</button>
+      <button id="sponsor" class="button btn1 background-color-sponsors  " onclick="filterFunction(id)" title="filter Sponsor Cards">SPONSORS</button>
+      <button id="project" class="button btn1 background-color-projects  " onclick="filterFunction(id)" title="filter Conservation Projects Cards">PROJECTS</button>
+      <button id="endgame" class="button btn1 background-color-endgame  " onclick="filterFunction(id)" title="filter Endgame Scoring Cards">ENDGAME</button>
+    </div>
+
+    <div id="myBtnContainer2" style="line-height:55px;">
+      <button id="ape" class="button btn3 icon-ape" onclick="filterFunction(id)" title="filter by Ape icon"></button>
+      <button id="lizard" class="button btn3 icon-lizard" onclick="filterFunction(id)" title="filter by Lizard icon"></button>
+      <button id="predator" class="button btn3 icon-predator" onclick="filterFunction(id)" title="filter by Predator icon"></button>
+      <button id="herbivore" class="button btn3 icon-herbivore"  onclick="filterFunction(id)" title="filter by Herbivor icon"></button>
+      <button id="bird" class="button btn3 icon-bird"  onclick="filterFunction(id)" title="filter by Bird icon"></button>
+      <button id="pet" class="button btn3 icon-pet "  onclick="filterFunction(id)" title="filter by Pet icon"></button>
+      <button id="bear" style="margin-right:64px;" class="button btn3 icon-bear  " onclick="filterFunction(id)" title="filter by Bear icon"></button>
+
+      <button id="africa" class="button btn2 icon-africa"  onclick="filterFunction(id)" title="filter by Africa icons"></button>
+      <button id="america" class="button btn2 icon-america  " onclick="filterFunction(id)" title="filter by America icon"></button>
+      <button id="australia" class="button btn2 icon-australia  " onclick="filterFunction(id)" title="filter Australia icon"></button>
+      <button id="asia" class="button btn2 icon-asia" onclick="filterFunction(id)" title="filter by Asia icon"></button>
+      <button id="europe" class="button btn2 icon-europe" onclick="filterFunction(id)" title="filter by europe icon"></button>
+      <button id="science" class="button btn2 icon-science" onclick="filterFunction(id)" title="filter by Science icon"></button>
+
+
+
+    </div>
+    <div>
+
+      <button id="rock" class="button btn4 icon-rock" onclick="filterFunction(id)" title="filter by Rock icon"></button>
+      <button id="water" style="margin-right:50px;"  class="button btn4 icon-water" onclick="filterFunction(id)" title="filter by Water icon"></button>
+
+      <button id="size1" class="button btn5 icon-size1" onclick="filterFunction(id)" title="filter size 1 animals"></button>
+      <button id="size2" class="button btn5 icon-size2" onclick="filterFunction(id)" title="filter size 2 animals"></button>
+      <button id="size3" class="button btn5 icon-size3" onclick="filterFunction(id)" title="filter size 3 animals"></button>
+      <button id="size4" class="button btn5 icon-size4" onclick="filterFunction(id)" title="filter size 4 animals"></button>
+      <button id="size5" class="button btn5 icon-size5" onclick="filterFunction(id)" title="filter size 5 animals"></button>
+
+    </div>
+
+    <div id="contentFilters">
+      <form id="sortButtons">
+        <fieldset style="margin-bottom: -30px;">
+          <legend class="sort-title">SORT PROJECT CARDS BY</legend>
+          <input type="radio" name='radio' id="radio-choice-1" value="on" checked="checked" onclick="sortByID();"style="display:none;">
+          <label class= "btn-sort" for="radio-choice-1">ID</label>
+          <input type="radio" name='radio' id="radio-choice-2" value="off" onclick="sortByPriceUp();" style="display:none;">
+          <label class= "btn-sort" for="radio-choice-2" >MC UP</label>
+          <input type="radio" name='radio' id="radio-choice-3" value="other" onclick="sortByPriceDown();" style="display:none;">
+          <label class= "btn-sort" for="radio-choice-3">MC Down</label>
+        </fieldset>
+      </form>
+
+      <button title="decrease Price filter by 1" class="button2   btn-price" onclick="reduceOne()" title="decrease Price filter by 1">-</button>
+      <input  type="number" title="filter by Price" id="price" oninput="filterFunction(id);" value="0" min="0" max="50"></input>
+      <button class="button2   btn-price" style="margin-right:10px;" onclick="increaseOne()" title="increase Price filter by 1">+</button>
+
+      <button id=".production.money" class="button btn-production" onclick="filterFunction(id)" title="filter cards with money production" style="margin-left:6px;"><div class="production money">M</div></button>
+      <button id=".production.steel" class="button btn-production" onclick="filterFunction(id)" title="filter cards with steel production"><div class="production steel"></div></button>
+      <button id=".production.titanium" class="button btn-production" onclick="filterFunction(id)" title="filter cards with titanium production"><div class="production titanium"></div></button>
+      <button id=".production.plant" class="button btn-production" onclick="filterFunction(id)" title="filter cards with plant production"><div class="production plant"></div></button>
+      <button id=".production.energy" class="button btn-production" onclick="filterFunction(id)" title="filter cards with enery production"><div class="production energy"></div></button>
+      <button id=".production.heat" class="button btn-production" onclick="filterFunction(id)" title="filter cards with heat production"><div class="production heat"></div></button>
+      <br>
+
+      <button id="reqs" class="button btn-req" onclick="filterFunction(id);toggleRequirementsFilters();" title="filter cards having Requirements">REQUIREMENTS</button>
+      <button id="vp" class="button btn-vp points" onclick="filterFunction(id)" title="filter cards with VP">VP</button>
+
+      <button id="rating" class="button btn-tile rating" onclick="filterFunction(id)" title="filter cards which increase TR" style="    background-size: 36px 30px !important;background-position: 10px;"></button>
+      <button id="temperature-tile" class="button btn-tile temperature-tile" onclick="filterFunction(id)" title="filter cards which increase Temperature" style="background-size: 11px 34px !important;background-position: 22px;"></button>
+      <button id="ocean-tile" class="button btn-tile ocean-tile" onclick="filterFunction(id)" title="filter cards which place Ocean tiles" style="background-position: 10px;"></button>
+      <button id="greenery-tile" class="button btn-tile greenery-tile" onclick="filterFunction(id)" title="filter cards which place Greenery tiles" style="background-position: 10px;background-size: 40px 34px !important;"></button>
+      <button id="oxygen-tile" class="button btn-tile oxygen-tile" onclick="filterFunction(id)" title="filter cards which increase Oxygen" style="background-position: 10px 3px;"></button>
+      <button id="venus-tile" class="button btn-tile venus-tile" onclick="filterFunction(id)" title="filter cards which increase Venus" style="background-size: 45px 30px !important;
+      background-position: 5px 4px;
+  "></button>
+
+
+      <div id ="subfilterReqs" class="subfilterReqs-disabled">
+        <output id="output1" for="slider1" class="output-label" style="color:#f25540; margin-left: 225px;">-30</output> <!-- Just to display selected value -->
+        <input id="slider1" type="range" min="-30" max="8" value="-30" step="2" list="tickmarks" oninput="output1.value = slider1.value; filterFunction(id);" class="track-temp-background track-temp-thumb" style="width:200px;margin-right:70px;margin-left:15px;">
+
+        <output id="output3" for="slider3" class="output-label" style="margin-left: 110px;">0</output> <!-- Just to display selected value -->
+        <input id="slider3" type="range" min="0" max="9" value="-0" step="1" list="tickmarks" oninput="output3.value = slider3.value; filterFunction(id);" class=" track-oceans-thumb" style="width:100px;">
+
+        <output id="output2" for="slider2" class="output-label" style="color:rgb(246,241,175);">0</output> <!-- Just to display selected value -->
+        <input id="slider2" type="range" min="0" max="14" value="0" step="1" list="tickmarks" oninput="output2.value = slider2.value; filterFunction(id);" class="track-oxygen-background track-oxygen-thumb">
+
+        <output id="output4" for="slider4" class="output-label" style="color: #8bb8da">0</output> <!-- Just to display selected value -->
+        <input id="slider4" type="range" min="0" max="30" value="0" step="2" list="tickmarks" oninput="output4.value = slider4.value; filterFunction(id);" class="track-venus-background track-venus-thumb" style="margin-right:0px;">
+        <br>
+        <p></p>
+        <output id="output5" for="slider5" class="output-label" style="color: white;margin-left:198px;">0</output> <!-- Just to display selected value -->
+        <input style="margin-left:60px" id="slider5" type="range" min="0" max="7" value="0" step="1" list="tickmarks" oninput="output5.value = slider5.value; filterFunction(id);" class="track-science-background track-science-thumb thumb-tab">
+
+        <output id="output8" for="slider8" class="output-label" style="margin-left: 90px;color: rgb(15,96,151);">0</output> <!-- Just to display selected value -->
+        <input id="slider8" type="range" min="0" max="3" value="0" step="1" list="tickmarks" oninput="output8.value = slider8.value; filterFunction(id);" class="track-earth-background track-earth-thumb thumb-tab" style="width:80px;">
+
+        <output id="output6" for="slider6" class="output-label" style="margin-left: 70px;color:rgb(255,223,149)">0</output> <!-- Just to display selected value -->
+        <input id="slider6" type="range" min="0" max="2" value="0" step="1" list="tickmarks" oninput="output6.value = slider6.value; filterFunction(id);" class="track-jovian-background track-jovian-thumb thumb-tab" style="width:60px;">
+
+        <output id="output7" for="slider7" class="output-label" style="margin-left: 70px; color:rgb(84,150,201)">0</output> <!-- Just to display selected value -->
+        <input id="slider7" type="range" min="0" max="2" value="0" step="1" list="tickmarks" oninput="output7.value = slider7.value; filterFunction(id);" class="track-venusTag-background track-venusTag-thumb thumb-tab" style="width:60px;">
+      </div>
+    </div>
+  </div>
+    <div id="buttonsContainer-footer">
+      <button id="reset" class="button2 btn-reset" onclick="clearInput();showAll();" title="Reset all selected filters">RESET</button>
+
+      <div class="card-footer" style="margin-left:0px"><div class="card-footer-projects">A</div></div>
+      <div id="totalProjects" class="totalCardsCount odometer" data-minintegerlen="3"></div>
+
+      <div class="card-footer"><div class="card-footer-corp">S</div></div>
+      <div id="totalCorporations" class="totalCardsCount odometer"></div>
+
+      <div class="card-footer" ><div class="card-footer-prelude">P</div></div>
+      <div id="totalPreludes" class="totalCardsCount odometer"></div>
+
+      <div class="card-footer" ><div class=" card-footer-colony">E</div></div>
+      <div id="totalColonies" class="totalCardsCount odometer"></div>
+
+    </div>
+
+  </div>
+
+
+  <!--PROJECT CARDS-->
+    <ul class="myUL">
+        
+          <li onclick="getClickedCard();"
+            class="cards1 filterDiv endgame"> 
+            <div class="number">#001</div>
+          </li>
+
+          <li onclick="getClickedCard();"
+            class="cards1 filterDiv endgame c2"> 
+            <div class="number">#002</div>
+          </li>
+
+          <li onclick="getClickedCard();"
+            class="cards1 filterDiv endgame c3"> 
+            <div class="number">#003</div>
+          </li>
+
+          <li onclick="getClickedCard();"
+            class="cards1 filterDiv endgame c4"> 
+            <div class="number">#004</div>
+          </li>
+
+          <li onclick="getClickedCard();"
+            class="cards1 filterDiv endgame c5">
+            <div class="number">#005</div>
+          </li>
+
+          <li onclick="getClickedCard();"
+            class="cards1 filterDiv endgame c6"> 
+            <div class="number">#006</div>
+          </li>
+
+          <li onclick="getClickedCard();"
+            class="cards1 filterDiv endgame r2">
+            <div class="number">#007</div>
+          </li>
+
+          <li onclick="getClickedCard();"
+            class="cards1 filterDiv endgame r2 c2"> 
+            <div class="number">#008</div>
+          </li>
+   
+          <li onclick="getClickedCard();"
+            class="cards1 filterDiv endgame r2 c3"> 
+            <div class="number">#009</div>
+          </li>
+
+          <li onclick="getClickedCard();"
+            class="cards1 filterDiv endgame r2 c4">
+            <div class="number">#010</div>
+          </li>
+ 
+          <li onclick="getClickedCard();"
+            class="cards1 filterDiv endgame r2 c5"> 
+            <div class="number">#011</div>
+          </li>
+
+   </ul>
+
+    <!--STANDARD PROJECTS-->
+    <ul class="myUL" style="clear:both;">
+
+      <li onclick="getClickedCard();"
+        class="cards2 filterDiv project predator bird pet lizard bear ape herbivore"> 
+        <div class="number">#101</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards2 c2 filterDiv project europe africa america asia australia"> 
+        <div class="number">#102</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards2 c3 filterDiv project africa"> 
+        <div class="number">#103</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards2 c4 filterDiv project america"> 
+        <div class="number">#104</div>
+      </li>
+
+      <li onclick="getClickedCard();" 
+        class="cards2 c5 filterDiv project australia">
+        <div class="number">#105</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards2 c6 filterDiv project asia"> 
+        <div class="number">#106</div>
+      </li>
+   
+      <li onclick="getClickedCard();"
+        class="cards2 r2 filterDiv project europe">
+        <div class="number">#107</div>
+      </li>
+ 
+      <li onclick="getClickedCard();"
+        class="cards2 r2 c2 filterDiv project ape"> 
+        <div class="number">#108</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards2 r2 c3 filterDiv project lizard"> 
+        <div class="number">#109</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards2 r2 c4 filterDiv project predator">
+        <div class="number">#110</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards2 r2 c5 filterDiv project herbivore"> 
+        <div class="number">#111</div>
+   
+        <li onclick="getClickedCard();"
+          class="cards2 r2 c6 filterDiv project bird"> 
+          <div class="number">#112</div>
+        </li>
+      <!--CARDS3-->
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv project europe"> 
+          <div class="number">#113</div>
+        </li>
+     
+        <li onclick="getClickedCard();"
+          class="cards3 c2 filterDiv project america"> 
+          <div class="number">#114</div>
+        </li>
+     
+        <li onclick="getClickedCard();"
+          class="cards3 c3 filterDiv project asia"> 
+          <div class="number">#115</div>
+        </li>
+      
+        <li onclick="getClickedCard();"
+          class="cards3 c4 filterDiv project africa"> 
+          <div class="number">#116</div>
+        </li>
+      
+        <li onclick="getClickedCard();"
+          class="cards3 c5 filterDiv project australia">
+          <div class="number">#117</div>
+        </li>
+      
+        <li onclick="getClickedCard();"
+          class="cards3 c6 filterDiv project predator"> 
+          <div class="number">#118</div>
+        </li>
+      
+        <li onclick="getClickedCard();"
+          class="cards3 c7 filterDiv project bird">
+          <div class="number">#119</div>
+        </li>
+      
+        <li onclick="getClickedCard();"
+          class="cards3 c8 filterDiv project herbivore"> 
+          <div class="number">#120</div>
+        </li>
+      
+        <li onclick="getClickedCard();"
+          class="cards3 c9 filterDiv project lizard"> 
+          <div class="number">#121</div>
+        </li>
+      
+        <li onclick="getClickedCard();"
+          class="cards3 c10 filterDiv project ape">
+          <div class="number">#122</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 r2 filterDiv project bird"> 
+          <div class="number">#123</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 r2 c2 filterDiv project predator"> 
+          <div class="number">#124</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv project r2 c3 lizard"> 
+          <div class="number">#125</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv project r2 c4 herbivore"> 
+          <div class="number">#126</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv project r2 c5 ape"> 
+          <div class="number">#127</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv project r2 c6 water"> 
+          <div class="number">#128</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv project r2 c7 rock"> 
+          <div class="number">#129</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv project r2 c8 size1 size2"> 
+          <div class="number">#130</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv project r2 c9 size4 size5"> 
+          <div class="number">#131</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv project r2 c10 science"> 
+          <div class="number">#132</div>
+        </li>
+    </ul>
+
+    <!--SPONSORS-->
+    <ul class="myUL" style="clear:both;">
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r3 science"> 
+          <div class="number">#201</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r3 c2 science"> 
+          <div class="number">#202</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r3 c3 science"> 
+          <div class="number">#203</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r3 c4 science"> 
+          <div class="number">#204</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r3 c5 science"> 
+          <div class="number">#205</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r3 c6 science"> 
+          <div class="number">#206</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r3 c7 science"> 
+          <div class="number">#207</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r3 c8 science"> 
+          <div class="number">#208</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r3 c9 science"> 
+          <div class="number">#209</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r3 c10 africa"> 
+          <div class="number">#210</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r4 europe"> 
+          <div class="number">#211</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r4 c2 australia"> 
+          <div class="number">#212</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r4 c3 asia"> 
+          <div class="number">#213</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r4 c4 africa"> 
+          <div class="number">#214</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r4 c5"> 
+          <div class="number">#215</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r4 c6"> 
+          <div class="number">#216</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r4 c7"> 
+          <div class="number">#217</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r4 c8"> 
+          <div class="number">#218</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r4 c9 science"> 
+          <div class="number">#219</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r4 c10 science"> 
+          <div class="number">#220</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r5 science"> 
+          <div class="number">#221</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r5 c2"> 
+          <div class="number">#222</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r5 c3 science"> 
+          <div class="number">#223</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r5 c4 science"> 
+          <div class="number">#224</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r5 c5 science"> 
+          <div class="number">#225</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r5 c6 science"> 
+          <div class="number">#226</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r5 c7"> 
+          <div class="number">#227</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r5 c8"> 
+          <div class="number">#228</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r5 c9"> 
+          <div class="number">#229</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r5 c10"> 
+          <div class="number">#230</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r6"> 
+          <div class="number">#231</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r6 c2"> 
+          <div class="number">#232</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r6 c3"> 
+          <div class="number">#233</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r6 c4"> 
+          <div class="number">#234</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r6 c4"> 
+          <div class="number">#234</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r6 c5"> 
+          <div class="number">#235</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r6 c6 ape"> 
+          <div class="number">#236</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r6 c7 lizard"> 
+          <div class="number">#237</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r6 c8 bird"> 
+          <div class="number">#238</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r6 c9 predator"> 
+          <div class="number">#239</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r6 c10 herbivore"> 
+          <div class="number">#240</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r7 water"> 
+          <div class="number">#241</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r7 c2 rock"> 
+          <div class="number">#242</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r7 c3 herbivore rock"> 
+          <div class="number">#243</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r7 c4 bird water"> 
+          <div class="number">#244</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r7 c5 water"> 
+          <div class="number">#245</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r7 c6 rock"> 
+          <div class="number">#246</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r7 c7 ape rock"> 
+          <div class="number">#247</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r7 c8 ape"> 
+          <div class="number">#248</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards3 filterDiv sponsor r7 c9 bird"> 
+          <div class="number">#249</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards4 filterDiv sponsor lizard water"> 
+          <div class="number">#250</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards4 filterDiv sponsor c2 bear predator water"> 
+          <div class="number">#251</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards4 filterDiv sponsor c3 predator"> 
+          <div class="number">#252</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards4 filterDiv sponsor c4 herbivore"> 
+          <div class="number">#253</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards4 filterDiv sponsor c5"> 
+          <div class="number">#254</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards4 filterDiv sponsor c6 rock"> 
+          <div class="number">#255</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards4 filterDiv sponsor c7 water"> 
+          <div class="number">#256</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards4 filterDiv sponsor c8"> 
+          <div class="number">#257</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards4 filterDiv sponsor c9 bird"> 
+          <div class="number">#258</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards4 filterDiv sponsor c9 lizard"> 
+          <div class="number">#259</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards4 filterDiv sponsor r2 herbivore"> 
+          <div class="number">#260</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards4 filterDiv sponsor r2 c2 "> 
+          <div class="number">#261</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards4 filterDiv sponsor r2 c3"> 
+          <div class="number">#262</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards4 filterDiv sponsor r2 c4"> 
+          <div class="number">#263</div>
+        </li>
+
+        <li onclick="getClickedCard();"
+          class="cards4 filterDiv sponsor r2 c5 ape"> 
+          <div class="number">#264</div>
+        </li>
+
+    </ul>
+ 
+    <!--ANIMALS-->
+    <ul class="myUL" style="clear:both;">
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r2 c6 africa predator size5"> 
+        <div class="number">#401</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r2 c7 africa predator size4"> 
+        <div class="number">#402</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r2 c8 africa predator size3 rock"> 
+        <div class="number">#403</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r2 c9 africa predator size2"> 
+        <div class="number">#404</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r2 c10 africa predator size1"> 
+        <div class="number">#405</div>
+      </li>
+       
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r3 asia predator size5"> 
+        <div class="number">#406</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r3 c2 asia predator size4 water"> 
+        <div class="number">#407</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r3 c3 asia predator bear size3"> 
+        <div class="number">#408</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r3 c4 asia predator bear size2"> 
+        <div class="number">#409</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r3 c5 asia predator size1"> 
+        <div class="number">#410</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r3 c6 america predator bear size5"> 
+        <div class="number">#411</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r3 c7 america predator size4"> 
+        <div class="number">#412</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r3 c8 america predator size3 rock"> 
+        <div class="number">#413</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r3 c9 america predator bear size2 rock"> 
+        <div class="number">#414</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r3 c10 america predator bear size1"> 
+        <div class="number">#415</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r4 europe predator bear size5 water"> 
+        <div class="number">#416</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r4 c2 europe predator size4"> 
+        <div class="number">#417</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r4 c3 europe predator size3"> 
+        <div class="number">#418</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r4 c4 europe predator size2"> 
+        <div class="number">#419</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r4 c5 europe predator size1"> 
+        <div class="number">#420</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r4 c6 australia predator size5 water rock"> 
+        <div class="number">#421</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r4 c7 australia predator size4 water"> 
+        <div class="number">#422</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r4 c8 australia predator size3 water"> 
+        <div class="number">#423</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r4 c9 australia predator size2"> 
+        <div class="number">#424</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r4 c10 australia predator size1"> 
+        <div class="number">#425</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r5 africa herbivore size5"> 
+        <div class="number">#426</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r5 c2 africa herbivore size4 rock"> 
+        <div class="number">#427</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r5 c3 africa herbivore size3"> 
+        <div class="number">#428</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r5 c4 africa herbivore size2"> 
+        <div class="number">#429</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r5 c5 africa herbivore size2 water"> 
+        <div class="number">#430</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r5 c6 asia herbivore size5 water"> 
+        <div class="number">#431</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r5 c7 asia herbivore size4"> 
+        <div class="number">#432</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r5 c8 asia herbivore bear size3"> 
+        <div class="number">#433</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r5 c9 asia herbivore bear size2"> 
+        <div class="number">#434</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r5 c10 asia herbivore size2"> 
+        <div class="number">#435</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r6 america herbivore size5"> 
+        <div class="number">#436</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r6 c2 america herbivore size4"> 
+        <div class="number">#437</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r6 c3 america herbivore size3"> 
+        <div class="number">#438</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r6 c4 america herbivore size2"> 
+        <div class="number">#439</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r6 c5 america herbivore size2 rock"> 
+        <div class="number">#440</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r6 c6 europe herbivore size5"> 
+        <div class="number">#441</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r6 c7 europe herbivore size4"> 
+        <div class="number">#442</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r6 c8 europe herbivore size3"> 
+        <div class="number">#443</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r6 c9 europe herbivore size2 rock"> 
+        <div class="number">#444</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r6 c10 europe herbivore size1"> 
+        <div class="number">#445</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r7 australia herbivore size5"> 
+        <div class="number">#446</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r7 c2 australia herbivore size4"> 
+        <div class="number">#447</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r7 c3 australia herbivore size3 rock"> 
+        <div class="number">#448</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r7 c4 australia herbivore size2 water"> 
+        <div class="number">#449</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r7 c5 australia herbivore size2"> 
+        <div class="number">#450</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r7 c6 asia ape size5 rock"> 
+        <div class="number">#451</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r7 c7 africa ape size1"> 
+        <div class="number">#452</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r7 c8 africa ape size4"> 
+        <div class="number">#453</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards4 filterDiv animal r7 c9 africa ape size3 rock"> 
+        <div class="number">#454</div>
+      </li>
+     
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal africa ape size3"> 
+        <div class="number">#455</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal c2 africa ape size2"> 
+        <div class="number">#456</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal c3 africa ape size5"> 
+        <div class="number">#457</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal c4 asia ape size3 water"> 
+        <div class="number">#458</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal c5 asia ape size4"> 
+        <div class="number">#459</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal c6 asia ape size2"> 
+        <div class="number">#460</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal c7 asia ape size1"> 
+        <div class="number">#461</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal c8 asia ape size3 rock"> 
+        <div class="number">#462</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal c9 america ape size2"> 
+        <div class="number">#463</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal c10 america ape size4"> 
+        <div class="number">#464</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r2 america ape size1"> 
+        <div class="number">#465</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r2 c2 america ape size3"> 
+        <div class="number">#466</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r2 c3 america ape size2"> 
+        <div class="number">#467</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r2 c4 america ape size1"> 
+        <div class="number">#468</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r2 c5 africa lizard size5 water"> 
+        <div class="number">#469</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r2 c6 africa lizard size2"> 
+        <div class="number">#470</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r2 c7 africa lizard size3"> 
+        <div class="number">#471</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r2 c8 africa lizard size2 rock"> 
+        <div class="number">#472</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r2 c9 africa lizard size1"> 
+        <div class="number">#473</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r2 c10 asia lizard size2"> 
+        <div class="number">#474</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r3 asia lizard size2"> 
+        <div class="number">#475</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r3 c2 asia lizard size3"> 
+        <div class="number">#476</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r3 c3 asia lizard size1"> 
+        <div class="number">#477</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r3 c4 asia lizard size1 water"> 
+        <div class="number">#478</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r3 c5 america lizard size4 water"> 
+        <div class="number">#479</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r3 c6 america lizard size4 water"> 
+        <div class="number">#480</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r3 c7 america lizard size3"> 
+        <div class="number">#481</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r3 c8 america lizard size2 water"> 
+        <div class="number">#482</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r3 c9 america lizard size2"> 
+        <div class="number">#483</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r3 c10 europe lizard size1 water"> 
+        <div class="number">#484</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r4 europe lizard size1"> 
+        <div class="number">#485</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r4 c2 europe lizard size1 rock"> 
+        <div class="number">#486</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r4 c3 europe lizard size1 water"> 
+        <div class="number">#487</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r4 c4 europe lizard size1 water"> 
+        <div class="number">#488</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r4 c5 australia lizard size5 water"> 
+        <div class="number">#489</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r4 c6 australia lizard size3"> 
+        <div class="number">#490</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r4 c7 australia lizard size2 rock"> 
+        <div class="number">#491</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r4 c8 australia size2 rock"> 
+        <div class="number">#492</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r4 c9 australia lizard size1 rock"> 
+        <div class="number">#493</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r4 c10 africa bird size5"> 
+        <div class="number">#494</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r5 africa bird size4"> 
+        <div class="number">#495</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r5 c2 africa bird size3"> 
+        <div class="number">#496</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r5 c3 africa bird size2 water"> 
+        <div class="number">#497</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r5 c4 africa bird size1"> 
+        <div class="number">#498</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r5 c5 asia bird size5"> 
+        <div class="number">#499</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r5 c6 asia bird size4 rock"> 
+        <div class="number">#500</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r5 c7 asia bird size3"> 
+        <div class="number">#501</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r5 c8 asia bird size2"> 
+        <div class="number">#502</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r5 c9 asia bird size1"> 
+        <div class="number">#503</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r5 c10 america bird size5 rock"> 
+        <div class="number">#504</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r6 america bird size4 water"> 
+        <div class="number">#505</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r6 c2 america bird size3"> 
+        <div class="number">#506</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r6 c3 america bird size2"> 
+        <div class="number">#507</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r6 c4 america bird size1"> 
+        <div class="number">#508</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r6 c5 europe bird size5 rock"> 
+        <div class="number">#509</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r6 c6 europe bird size4"> 
+        <div class="number">#510</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r6 c7 europe bird size3 water"> 
+        <div class="number">#511</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r6 c8 europe bird size2"> 
+        <div class="number">#512</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r6 c9 europe bird size1"> 
+        <div class="number">#513</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r6 c10 australia bird size5"> 
+        <div class="number">#514</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r7 australia bird size4 water"> 
+        <div class="number">#515</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r7 c2 australia bird size3"> 
+        <div class="number">#516</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r7 c3 australia bird size2"> 
+        <div class="number">#517</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r7 c4 australia bird size1"> 
+        <div class="number">#518</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r7 c5 pet size1"> 
+        <div class="number">#519</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r7 c6 pet size1"> 
+        <div class="number">#520</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r7 c7 pet size1"> 
+        <div class="number">#521</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r7 c8 pet size1"> 
+        <div class="number">#522</div>
+      </li>
+
+      <li onclick="getClickedCard();"
+        class="cards5 filterDiv animal r7 c9 pet size1"> 
+        <div class="number">#523</div>
+      </li>
+
+    </ul>
+  <button id="button-load-more" class="button button2 btn-load-more" onClick="displayCards()">LOAD MORE</button>
+
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="js/odometer.js"></script>
+<script src="js/myscripts-ark.js"></script>
+
+
+
+</body>
+</html>
