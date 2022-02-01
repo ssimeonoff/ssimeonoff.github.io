@@ -687,7 +687,7 @@ a {
   font-size: 12px;
   letter-spacing: 1px;
   text-align: left;
-  margin-left: 16px;
+  margin-left: 11px;
   margin-top: 12px;
   background: #eee;
 }
@@ -1375,7 +1375,7 @@ a {
 
 
 .card-footer {
-  font-size: 14px;
+  font-size: 11px;
   font-weight: normal;
   height: 25px;
   line-height: 20px;
@@ -1404,7 +1404,7 @@ a {
 }
 
 .card-footer-prelude {
-  background: linear-gradient(to right,#639850, #245b1f,#245b1f,#639850);
+  background: linear-gradient(to right,#538043, #245b1f,#245b1f,#538043)
 }
 
 .card-footer-colony {
@@ -1713,7 +1713,7 @@ a {
     line-height: 40px;
     display: inline-block;
     width: 650px;
-    margin-left: 5px;
+    margin-left: 10px;
     text-align: center;
 }
 

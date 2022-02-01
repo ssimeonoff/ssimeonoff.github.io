@@ -18,19 +18,19 @@ else {
 
 function showAll() {
   var x, i;
-  displayedProjects = 123;
-  displayedCorporations = 65;
-  displayedPreludes = 32;
-  displayedColonies = 11;
+  displayedAnimals = 123;
+  displayedSponsors = 65;
+  displayedProjects = 32;
+  displayedEndgames = 11;
 
   document.getElementById("buttonsContainer").style.display = "block";
 
   var elements = document.querySelectorAll('.ul-title');
   for (i=0; i<elements.length; i++){elements[i].style.display = "block";}
-  document.getElementById("totalProjects").innerHTML = displayedProjects;
-  document.getElementById("totalCorporations").innerHTML = displayedCorporations;
-  document.getElementById("totalPreludes").innerHTML = displayedPreludes;
-  document.getElementById("totalColonies").innerHTML = displayedColonies;
+  document.getElementById("totalProjects").innerHTML = displayedAnimals;
+  document.getElementById("totalCorporations").innerHTML = displayedSponsors;
+  document.getElementById("totalPreludes").innerHTML = displayedProjects;
+  document.getElementById("totalColonies").innerHTML = displayedEndgames;
 
   //making all buttons inactive
   y = document.querySelectorAll('button.active');
@@ -340,15 +340,15 @@ function filterFunction(id) {
 
   //Display Cards Numbers
   displayedCards = document.querySelectorAll('li.show').length;
-  displayedCorporations = document.querySelectorAll('li.show.corporation').length;
-  displayedPreludes = document.querySelectorAll('li.show.prelude-card').length;
-  displayedColonies = document.querySelectorAll('li.show.colony-card').length;
+  displayedSponsors = document.querySelectorAll('li.show.sponsor').length;
+  displayedProjects = document.querySelectorAll('li.show.project').length;
+  displayedEndgames = document.querySelectorAll('li.show.endgame').length;
 
-  displayedProjects = displayedCards - displayedCorporations - displayedPreludes - displayedColonies;
-  document.getElementById("totalProjects").innerHTML = displayedProjects;
-  document.getElementById("totalCorporations").innerHTML = displayedCorporations;
-  document.getElementById("totalPreludes").innerHTML = displayedPreludes;
-  document.getElementById("totalColonies").innerHTML = displayedColonies;
+  displayedAnimals = displayedCards - displayedSponsors - displayedProjects - displayedEndgames;
+  document.getElementById("totalProjects").innerHTML = displayedAnimals;
+  document.getElementById("totalCorporations").innerHTML = displayedSponsors;
+  document.getElementById("totalPreludes").innerHTML = displayedProjects;
+  document.getElementById("totalColonies").innerHTML = displayedEndgames;
 
 
  //clearing all displayed cards
