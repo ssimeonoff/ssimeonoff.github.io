@@ -18,8 +18,8 @@ else {
 
 function showAll() {
   var x, i;
-  displayedAnimals = 123;
-  displayedSponsors = 65;
+  displayedAnimals = 128;
+  displayedSponsors = 64;
   displayedProjects = 32;
   displayedEndgames = 11;
 
