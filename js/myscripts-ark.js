@@ -118,6 +118,22 @@ function filterFunction(id) {
 
   btnProduction = document.querySelectorAll('button.active.btn-production');
 
+  //Text input filtering
+  li = document.querySelectorAll('li.show');   //obtaining the new visible list after the subfilters check
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  filter = filter.split(" ");
+  for (i = 0;  i < li.length; i++) {
+    display = true;
+    for (j = 0;  j < filter.length; j++) {
+      if (li[i].innerHTML.toUpperCase().indexOf(filter[j]) > -1) {}
+      else {display = false;}
+        }
+    if (display) {
+        li[i].classList.add("show");
+      } else { li[i].classList.remove("show");}
+  }
+
   //filter by Card type
   if (btnType.length > 0) {
     for (i = 0; i < x.length; i++) {
@@ -363,7 +379,7 @@ function filterFunction(id) {
 function clearInput() {
   document.getElementById("contentFilters").style.display = "none"; //hides the range inputs div
   document.getElementById("btn-selectedCards").classList.add("disabled") //hide the selected cards button
-
+  document.getElementById("myInput").value = ""; //resets the text input
 
   // clear any selected cards
   selectedCardsAmount = 0;

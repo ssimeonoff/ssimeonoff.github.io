@@ -1542,29 +1542,27 @@ a {
 
 /************** Style the Input field************/
 #myInput {
-    font-family: Prototype;
-    outline: none;
-    background-position: 10px 12px;
-    background-repeat: no-repeat;
-    width: 322px;
-    height: 36px;
-    line-height: 36px;
-    font-size: 20px;
-    padding: 0px 2px 0px 15px;
-    margin-bottom: 25px;
-    margin-right: 8px;
-    border-radius: 8px;
-    background: #ccc8;
-    letter-spacing: 1px;
-    border-left: 2px solid #000a;
-    border-top: 2px solid #000a;
+  font-family: Arial;
+  outline: none;
+  width: 305px;
+  height: 38px;
+  line-height: 11px;
+  font-size: 20px;
+  padding: 0px 2px 0px 15px;
+  margin-right: 50px;
+  border-radius: 2px;
+  background: #fff4;
+  letter-spacing: 1px;
+  border-left: 2px solid #000a;
+  border-top: 2px solid #000a;
+  vertical-align: bottom;
 }
 #myInput::placeholder {
   color: #000a;
 }
 
 #myInput:focus {
-  background-color: #ccc;
+  background-color: #fff8;
 }
 
 #price {
