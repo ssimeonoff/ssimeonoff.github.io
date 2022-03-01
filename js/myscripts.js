@@ -20,7 +20,7 @@ function showAll() {
   var x, i;
   displayedProjects = 371;
   displayedCorporations = 40;
-  displayedPreludes = 35;
+  displayedPreludes = 36;
   displayedColonies = 11;
   displayedGlobals = 36;
 
