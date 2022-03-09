@@ -133,7 +133,7 @@ function filterFunction(id) {
         li[i].classList.add("show");
       } else { li[i].classList.remove("show");}
   }
-
+  x = document.querySelectorAll('li.show');
   //filter by Card type
   if (btnType.length > 0) {
     for (i = 0; i < x.length; i++) {
