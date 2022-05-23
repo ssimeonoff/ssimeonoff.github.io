@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="TERRAFORMING MARS COMPLETE ANIMATED LIST">
+  <meta name="keywords" content="HTML,CSS,JavaScript">
+  <meta name="viewport" content='width=930'>
+
+  <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" type="text/css" href="css/mystyles-ares.css">
+  <link rel="stylesheet" href="css/odometer.css">
+  <link rel="stylesheet" href="css/odometer-cards-list.css">
+  <title>TM Cards List</title>
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116626580-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-116626580-1');
+</script>
+</head>
+
+<html>
+<body>
+  <div class="app-container">
+    <div class="list-container">
+      <div id="buttonsContainer"  style="display: none;">
+        <div id="buttonsContainer-header">
+          <div id="titleContainer">
+            <div class="title-style">TERRAFORMING MARS CARDS LIST</div>
+          </div>
+          <a disabled id="btn-selectedCards" class="button btn-selected-cards disabled" title="open selected cards" href="no-selected-card.html" target="_blank">SELECTED
+            <div id="selectedCardsAmount">0</div>
+          </a>
+        </div>
+
+
+  <div id="buttonsContainer-body">
+    <div id="myBtnContainer1" style="line-height:55px;margin-bottom:10px;">
+      <button id="automated" class="button btn1 background-color-automated  " onclick="filterFunction(id)" title="filter Automated Project Cards">AUTOMATED</button>
+      <button id="active" class="button btn1 background-color-active  " onclick="filterFunction(id)" title="filter Active Project Cards">ACTIVE</button>
+      <button id="events" class="button btn1 background-color-events  " onclick="filterFunction(id)" title="filter Space Events Project Cards">EVENTS</button>
+      <button id="corporation" class="button btn1 background-color-corporation  " onclick="filterFunction(id)" title="filter Corporations Cards">CORPS</button>
+      <button id="prelude-card" class="button btn1 background-color-prelude  " onclick="filterFunction(id)" title="filter Preludes Cards">PRELUDES</button>
+      <button id="colony-card" class="button btn1 background-color-colony  " onclick="filterFunction(id)" title="filter Colonies cards">COLONIES</button>
+      <button id="global-card" class="button btn1 background-color-global" onclick="filterFunction(id)" style="margin-right:0px;" title="filter Global Events cards">GLOBALS</button>
+    </div>
+
+    <div id="myBtnContainer2" style="line-height:55px;">
+      <button id="buildingTag" class="button btn2 tag-building  "  onclick="filterFunction(id)" title="filter by Building tag"></button>
+      <button id="spaceTag" class="button btn2 tag-space  " onclick="filterFunction(id)" title="filter by Space tag"></button>
+      <button id="scienceTag" class="button btn2 tag-science  " onclick="filterFunction(id)" title="filter by Science tag"></button>
+
+      <button id="plantTag" class="button btn2 tag-plant  " onclick="filterFunction(id)" title="filter by Plant tag"></button>
+      <button id="microbeTag" class="button btn2 tag-microbe  " onclick="filterFunction(id)" title="filter by Microbe tag"></button>
+      <button id="animalTag" class="button btn2 tag-animal  " onclick="filterFunction(id)" title="filter by Animal tag"></button>
+
+      <button id="powerTag" class="button btn2 tag-power  " onclick="filterFunction(id)" title="filter by Power tag"></button>
+      <button id="jovianTag" class="button btn2 tag-jovian  " onclick="filterFunction(id)" title="filter by Jovian tag"></button>
+      <button id="earthTag" class="button btn2 tag-earth  "  onclick="filterFunction(id)" title="filter by Earth tag"></button>
+
+      <button id="cityTag" class="button btn2 tag-city  "  onclick="filterFunction(id)" title="filter by City tag"></button>
+      <button id="eventTag" class="button btn2 tag-event  "  onclick="filterFunction(id)" title="filter by Event tag"></button>
+      <button id="venusTag" class="button btn2 tag-venus  " onclick="filterFunction(id)" title="filter by Venus tag"></button>
+
+      <button id="wildTag" class="button btn2 tag-wild" onclick="filterFunction(id)" title="filter by Wild tag"></button>
+      <button id="noneTag" class="button btn2 tag-none" onclick="filterFunction(id)" title="filter cards with no tags"></button>
+
+
+    </div>
+
+    <div id="myBtnContainer4" style="display:inline-block;">
+      <button id="content"  class="button btn-content  " onclick="toggleContentDiv();" title="reveal Card Content filters">CONTENT</button>
+      <input type="text" id="myInput" oninput="filterFunction(id);" placeholder="Search by text ..." title="Search by card's title, number or keywords">
+      <button id="standard" class="button btn3 standard-icon button-icon  " onclick="filterFunction(id)" title="filter Base game cards"></button>
+      <button id="corporate" class="button btn3 corporate-icon button-icon  " onclick="filterFunction(id)" title="filter Corporate Era cards"></button>
+      <button id="venusNext" class="button btn3 venus-icon button-icon  " onclick="filterFunction(id)" title="filter Venus Next cards"></button>
+      <button id="prelude" class="button btn3 prelude-icon button-icon  " onclick="filterFunction(id)" title="filter Prelude cards"></button>
+      <button id="colonies" class="button btn3 colonies-icon button-icon  " onclick="filterFunction(id)" title="filter Colonies cards"></button>
+      <button id="turmoil" class="button btn3 turmoil-icon button-icon  " onclick="filterFunction(id)" title="filter Turmoil cards"></button>
+      <button id="promo" class="button btn3 promo-icon button-icon" onclick="filterFunction(id)" title="filter Promo cards"></button>
+    </div>
+
+
+
+    <div id="contentFilters">
+      <form id="sortButtons">
+        <fieldset style="margin-bottom: -30px;">
+          <legend class="sort-title">SORT PROJECT CARDS BY</legend>
+          <input type="radio" name='radio' id="radio-choice-1" value="on" checked="checked" onclick="sortByID();"style="display:none;">
+          <label class= "btn-sort" for="radio-choice-1">ID</label>
+          <input type="radio" name='radio' id="radio-choice-2" value="off" onclick="sortByPriceUp();" style="display:none;">
+          <label class= "btn-sort" for="radio-choice-2" >MC UP</label>
+          <input type="radio" name='radio' id="radio-choice-3" value="other" onclick="sortByPriceDown();" style="display:none;">
+          <label class= "btn-sort" for="radio-choice-3">MC Down</label>
+        </fieldset>
+      </form>
+
+      <button title="decrease Price filter by 1" class="button2   btn-price" onclick="reduceOne()" title="decrease Price filter by 1">-</button>
+      <input  type="number" title="filter by Price" id="price" oninput="filterFunction(id);" value="0" min="0" max="50"></input>
+      <button class="button2   btn-price" style="margin-right:10px;" onclick="increaseOne()" title="increase Price filter by 1">+</button>
+
+      <button id=".production.money" class="button btn-production" onclick="filterFunction(id)" title="filter cards with money production" style="margin-left:6px;"><div class="production money">M</div></button>
+      <button id=".production.steel" class="button btn-production" onclick="filterFunction(id)" title="filter cards with steel production"><div class="production steel"></div></button>
+      <button id=".production.titanium" class="button btn-production" onclick="filterFunction(id)" title="filter cards with titanium production"><div class="production titanium"></div></button>
+      <button id=".production.plant" class="button btn-production" onclick="filterFunction(id)" title="filter cards with plant production"><div class="production plant"></div></button>
+      <button id=".production.energy" class="button btn-production" onclick="filterFunction(id)" title="filter cards with enery production"><div class="production energy"></div></button>
+      <button id=".production.heat" class="button btn-production" onclick="filterFunction(id)" title="filter cards with heat production"><div class="production heat"></div></button>
+      <br>
+
+      <button id="reqs" class="button btn-req" onclick="filterFunction(id);toggleRequirementsFilters();" title="filter cards having Requirements">REQUIREMENTS</button>
+      <button id="vp" class="button btn-vp points" onclick="filterFunction(id)" title="filter cards with VP">VP</button>
+
+      <button id="rating" class="button btn-tile rating" onclick="filterFunction(id)" title="filter cards which increase TR" style="    background-size: 36px 30px !important;background-position: 10px;"></button>
+      <button id="temperature-tile" class="button btn-tile temperature-tile" onclick="filterFunction(id)" title="filter cards which increase Temperature" style="background-size: 11px 34px !important;background-position: 22px;"></button>
+      <button id="ocean-tile" class="button btn-tile ocean-tile" onclick="filterFunction(id)" title="filter cards which place Ocean tiles" style="background-position: 10px;"></button>
+      <button id="greenery-tile" class="button btn-tile greenery-tile" onclick="filterFunction(id)" title="filter cards which place Greenery tiles" style="background-position: 10px;background-size: 40px 34px !important;"></button>
+      <button id="oxygen-tile" class="button btn-tile oxygen-tile" onclick="filterFunction(id)" title="filter cards which increase Oxygen" style="background-position: 10px 3px;"></button>
+      <button id="venus-tile" class="button btn-tile venus-tile" onclick="filterFunction(id)" title="filter cards which increase Venus" style="background-size: 45px 30px !important;
+      background-position: 5px 4px;
+  "></button>
+
+
+      <div id ="subfilterReqs" class="subfilterReqs-disabled">
+        <output id="output1" for="slider1" class="output-label" style="color:#f25540; margin-left: 225px;">-30</output> <!-- Just to display selected value -->
+        <input id="slider1" type="range" min="-30" max="8" value="-30" step="2" list="tickmarks" oninput="output1.value = slider1.value; filterFunction(id);" class="track-temp-background track-temp-thumb" style="width:200px;margin-right:70px;margin-left:15px;">
+
+        <output id="output3" for="slider3" class="output-label" style="margin-left: 110px;">0</output> <!-- Just to display selected value -->
+        <input id="slider3" type="range" min="0" max="9" value="-0" step="1" list="tickmarks" oninput="output3.value = slider3.value; filterFunction(id);" class=" track-oceans-thumb" style="width:100px;">
+
+        <output id="output2" for="slider2" class="output-label" style="color:rgb(246,241,175);">0</output> <!-- Just to display selected value -->
+        <input id="slider2" type="range" min="0" max="14" value="0" step="1" list="tickmarks" oninput="output2.value = slider2.value; filterFunction(id);" class="track-oxygen-background track-oxygen-thumb">
+
+        <output id="output4" for="slider4" class="output-label" style="color: #8bb8da">0</output> <!-- Just to display selected value -->
+        <input id="slider4" type="range" min="0" max="30" value="0" step="2" list="tickmarks" oninput="output4.value = slider4.value; filterFunction(id);" class="track-venus-background track-venus-thumb" style="margin-right:0px;">
+        <br>
+        <p></p>
+        <output id="output5" for="slider5" class="output-label" style="color: white;margin-left:198px;">0</output> <!-- Just to display selected value -->
+        <input style="margin-left:60px" id="slider5" type="range" min="0" max="7" value="0" step="1" list="tickmarks" oninput="output5.value = slider5.value; filterFunction(id);" class="track-science-background track-science-thumb thumb-tab">
+
+        <output id="output8" for="slider8" class="output-label" style="margin-left: 90px;color: rgb(15,96,151);">0</output> <!-- Just to display selected value -->
+        <input id="slider8" type="range" min="0" max="3" value="0" step="1" list="tickmarks" oninput="output8.value = slider8.value; filterFunction(id);" class="track-earth-background track-earth-thumb thumb-tab" style="width:80px;">
+
+        <output id="output6" for="slider6" class="output-label" style="margin-left: 70px;color:rgb(255,223,149)">0</output> <!-- Just to display selected value -->
+        <input id="slider6" type="range" min="0" max="2" value="0" step="1" list="tickmarks" oninput="output6.value = slider6.value; filterFunction(id);" class="track-jovian-background track-jovian-thumb thumb-tab" style="width:60px;">
+
+        <output id="output7" for="slider7" class="output-label" style="margin-left: 70px; color:rgb(84,150,201)">0</output> <!-- Just to display selected value -->
+        <input id="slider7" type="range" min="0" max="2" value="0" step="1" list="tickmarks" oninput="output7.value = slider7.value; filterFunction(id);" class="track-venusTag-background track-venusTag-thumb thumb-tab" style="width:60px;">
+      </div>
+    </div>
+  </div>
+    <div id="buttonsContainer-footer">
+      <button id="reset" class="button2 btn-reset" onclick="clearInput();showAll();" title="Reset all selected filters">RESET</button>
+      <div class="card-footer card-footer-projects" style="margin-left:0px"></div>
+      <div id="totalProjects" class="totalCardsCount odometer" data-minintegerlen="3"></div>
+
+      <div class="card-footer card-footer-corp" ></div>
+      <div id="totalCorporations" class="totalCardsCount odometer"></div>
+
+      <div class="card-footer card-footer-prelude" ></div>
+      <div id="totalPreludes" class="totalCardsCount odometer"></div>
+
+      <div class="card-footer card-footer-colony" ></div>
+      <div id="totalColonies" class="totalCardsCount odometer"></div>
+
+      <div class="card-footer card-footer-globals" ></div>
+      <div id="totalGlobals" class="totalCardsCount odometer">00</div>
+
+    </div>
+
+  </div>
+
+
+
+         <!--19-->
+         <li onclick="getClickedCard();" class="filterDiv events earthTag spaceTag eventTag standard ">
+          <div class="title">Imported Hydrogen</div>
+          <div class="tags-header background-color-events ">
+            <div class="price">16</div>
+            <div class="tag-wrapper tag1"><div class="tag  tag-event "></div></div>
+            <div class="tag-wrapper tag2"><div class="tag  tag-space "></div></div>
+            <div class="tag-wrapper tag3"><div class="tag tag-earth "></div></div>
+          </div>
+          <div class="content ">
+              <span>3</span><div class="resource plant "></div> OR <span>3</span><div class="resource microbe "></div>* OR <span>2</span><div class="resource animal "></div>*
+              <br><div class="tile ocean-tile "></div>
+              <div class="description ">
+                  (Gain 3 Plants, or add 3 Microbes or 2 Animals to ANOTHER card. Place an ocean tile.)
+              </div>
+          </div>
+      </li>
+
+      <!--20-->
+      <li onclick="getClickedCard();" class="filterDiv active cityTag buildingTag scienceTag standard ">
+          <div class="title ">Research Outpost</div>
+          <div class="price">18</div>
+          <div class="tags-header background-color-active ">
+            <div class="price">16</div>
+            <div class="tag-wrapper tag1"><div class="tag  tag-building"></div></div>
+            <div class="tag-wrapper tag2"><div class="tag  tag-city "></div></div>
+            <div class="tag-wrapper tag3"><div class="tag tag-science "></div></div>
+          </div>
+          <div class="content ">
+              : <span class="money resource ">-1</span>
+              <div class="description ">
+                  (Effect: When you play a card, you pay 1 MC less for it.)
+              </div><br>
+              <div class="tile city-tile "></div>
+              <div class="description ">
+                  (Place a city tile NEXT TO NO OTHER TILE.)
+              </div>
+          </div>
+      </li>
+
+      <!--21-->
+      <li onclick="getClickedCard();" class="filterDiv automated spaceTag cityTag standard ">
+          <div class="title ">Phobos Space Haven</div>
+          <div class="price">25</div>
+          <div class="tags-header background-color-automated ">
+            <div class="price">16</div>
+            <div class="tag-wrapper tag1"><div class="tag  tag-space"></div></div>
+            <div class="tag-wrapper tag2"><div class="tag  tag-city "></div></div>
+            <div class="tag-wrapper tag3"></div>
+          </div>
+          <div class="content ">
+              <div class="points points-big ">3</div>
+              <div class="production-box "><div class="titanium production "></div></div>
+              <div class="tile city-tile " style="margin-left:20px "></div>
+              <div class="description ">
+                  (Increase your titanium production 1 step and place a City tile ON THE RESERVED AREA.)
+              </div>
+          </div>
+
+      </li>
+  <button id="button-load-more" class="button button2 btn-load-more" onClick="displayCards()">LOAD MORE</button>
+
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="js/odometer.js"></script>
+<script src="js/myscripts-ares.js"></script>
+
+
+
+</body>
+</html>
