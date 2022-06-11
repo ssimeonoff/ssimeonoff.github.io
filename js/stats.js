@@ -1019,7 +1019,7 @@ function pushHistory(games) {
         scoresSections[j].classList.add("highlight-winner");
       }
       btnMyGames = document.querySelectorAll(".btn-mygames-solo.active");
-      if (btnMyGames.length == 0 ) {
+      if (btnMyGames.length > 0 ) {
         if (j==games[games.length-1-i]["rank"]) {
           corporationsSections[j].classList.add("highlight-owner");
           scoresSections[j].classList.add("highlight-owner");
