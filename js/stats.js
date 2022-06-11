@@ -968,9 +968,10 @@ function pushHistory(games) {
     x[i].innerHTML = "";
   }
   //remove the highlights
-  var y = document.querySelectorAll(".highlight-winner")
-  for (let i = 0; i < y.length; i++) {
+  var y = document.querySelectorAll(".highlight-winner,.highlight-owner")
+  for (i = 0; i < y.length; i++) {
     y[i].classList.remove("highlight-winner");
+    y[i].classList.remove("highlight-owner");
   }
   //remove dark background
   var z = document.querySelectorAll(".dark-background")
@@ -1009,13 +1010,20 @@ function pushHistory(games) {
     let winnerIndex = indexOfMax(scoresArray);
     let winningScore = scoresArray[winnerIndex];
 
-    //highlight the winner
+    //highlight the winner and the owner
     for (let j=0; j < scoresArray.length; j++) {
       corporationsSections[j].innerHTML = corporationsArray[j];
       scoresSections[j].innerHTML = scoresArray[j];
       if (scoresArray[j] == winningScore) {
         corporationsSections[j].classList.add("highlight-winner");
         scoresSections[j].classList.add("highlight-winner");
+      }
+      btnMyGames = document.querySelectorAll(".btn-mygames-solo.active");
+      if (btnMyGames.length == 0 ) {
+        if (j==games[games.length-1-i]["rank"]) {
+          corporationsSections[j].classList.add("highlight-owner");
+          scoresSections[j].classList.add("highlight-owner");
+        }
       }
     }
 
