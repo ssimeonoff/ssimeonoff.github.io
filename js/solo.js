@@ -853,11 +853,6 @@ function pushCorporationsData(corporation) {
   document.getElementById("winrate-splice").innerHTML =  corporationWinrate(games_splice);
   document.getElementById("score-splice").innerHTML =  corporationScore(games_splice);
 
-  games_kuiper = games.filter(function(el) {return el.corporation == "KUIPER BELT COOP."});
-  document.getElementById("games-kuiper").innerHTML = games_kuiper.length;
-  document.getElementById("winrate-kuiper").innerHTML =  corporationWinrate(games_kuiper);
-  document.getElementById("score-kuiper").innerHTML =  corporationScore(games_kuiper);
-
   games_philares = games.filter(function(el) {return el.corporation == "PHILARES"});
   document.getElementById("games-philares").innerHTML = games_philares.length;
   document.getElementById("winrate-philares").innerHTML =  corporationWinrate(games_philares);

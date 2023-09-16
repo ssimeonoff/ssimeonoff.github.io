@@ -583,12 +583,6 @@ function pushCorporationsData() {
   document.getElementById("games4p-pharmacy").innerHTML = generateGameStats(4, "PHARMACY");
   document.getElementById("games5p-pharmacy").innerHTML = generateGameStats(5, "PHARMACY");
 
-  //fanmade
-  document.getElementById("games2p-kuiper").innerHTML = generateGameStats(2, "KUIPER BELT COOP.");
-  document.getElementById("games3p-kuiper").innerHTML = generateGameStats(3, "KUIPER BELT COOP.");
-  document.getElementById("games4p-kuiper").innerHTML = generateGameStats(4, "KUIPER BELT COOP.");
-  document.getElementById("games5p-kuiper").innerHTML = generateGameStats(5, "KUIPER BELT COOP.");
-
   //hide cells with no games
   winrate_cells = document.querySelectorAll(".winrate")
   for (i=0; i < winrate_cells.length; i++) {
