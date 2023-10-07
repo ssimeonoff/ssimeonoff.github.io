@@ -903,14 +903,7 @@ function pushCorporationsData(corporation) {
   document.getElementById("winrate-pharmacy").innerHTML =  corporationWinrate(games_pharmacy);
   document.getElementById("score-pharmacy").innerHTML =  corporationScore(games_pharmacy);
 
-  /*
-  <option value="TYCHO MAGNETICS">TYCHO MAGNETICS</option>
-  <option value="SPIRE">SPIRE</option>
-  <option value="SAGITTA">SAGITTA</option>
-  <option value="PALLADIN SHIPPING">PALLADIN SHIPPING</option>
-  <option value="ECOTEC">ECOTEC</option>
-  <option value="NIRGAL ENTERPRISES">NIRGAL ENTERPRISES</option>
-  <option value="KUIPER COOPERATIVE">KUIPER COOPERATIVE</option>*/
+  /* prelude 2 corps */
 
   games_pharmacy = games.filter(function(el) {return el.corporation == "TYCHO MAGNETICS"});
   document.getElementById("games-tycho").innerHTML = games_pharmacy.length;
