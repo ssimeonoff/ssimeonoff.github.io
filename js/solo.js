@@ -698,11 +698,6 @@ function resetFilters() {
 
 function pushCorporationsData(corporation) {
 
-  games_beginner = games.filter(function(el) {return el.corporation == "BEGINNER"});
-  document.getElementById("games-beginner").innerHTML = games_beginner.length;
-  document.getElementById("winrate-beginner").innerHTML =  corporationWinrate(games_beginner);
-  document.getElementById("score-beginner").innerHTML =  corporationScore(games_beginner);
-
   games_credicor = games.filter(function(el) {return el.corporation == "CREDICOR"});
   document.getElementById("games-credicor").innerHTML = games_credicor.length;
   document.getElementById("winrate-credicor").innerHTML =  corporationWinrate(games_credicor);
