@@ -902,6 +902,50 @@ function pushCorporationsData(corporation) {
   document.getElementById("games-pharmacy").innerHTML = games_pharmacy.length;
   document.getElementById("winrate-pharmacy").innerHTML =  corporationWinrate(games_pharmacy);
   document.getElementById("score-pharmacy").innerHTML =  corporationScore(games_pharmacy);
+
+  /*
+  <option value="TYCHO MAGNETICS">TYCHO MAGNETICS</option>
+  <option value="SPIRE">SPIRE</option>
+  <option value="SAGITTA">SAGITTA</option>
+  <option value="PALLADIN SHIPPING">PALLADIN SHIPPING</option>
+  <option value="ECOTEC">ECOTEC</option>
+  <option value="NIRGAL ENTERPRISES">NIRGAL ENTERPRISES</option>
+  <option value="KUIPER COOPERATIVE">KUIPER COOPERATIVE</option>*/
+
+  games_pharmacy = games.filter(function(el) {return el.corporation == "TYCHO MAGNETICS"});
+  document.getElementById("games-tycho").innerHTML = games_pharmacy.length;
+  document.getElementById("winrate-tycho").innerHTML =  corporationWinrate(games_pharmacy);
+  document.getElementById("score-tycho").innerHTML =  corporationScore(games_pharmacy);
+
+  games_pharmacy = games.filter(function(el) {return el.corporation == "SPIRE"});
+  document.getElementById("games-spire").innerHTML = games_pharmacy.length;
+  document.getElementById("winrate-spire").innerHTML =  corporationWinrate(games_pharmacy);
+  document.getElementById("score-spire").innerHTML =  corporationScore(games_pharmacy);
+
+  games_pharmacy = games.filter(function(el) {return el.corporation == "SAGITTA"});
+  document.getElementById("games-sagitta").innerHTML = games_pharmacy.length;
+  document.getElementById("winrate-sagitta").innerHTML =  corporationWinrate(games_pharmacy);
+  document.getElementById("score-sagitta").innerHTML =  corporationScore(games_pharmacy);
+
+  games_pharmacy = games.filter(function(el) {return el.corporation == "PALLADIN SHIPPING"});
+  document.getElementById("games-palladin").innerHTML = games_pharmacy.length;
+  document.getElementById("winrate-palladin").innerHTML =  corporationWinrate(games_pharmacy);
+  document.getElementById("score-palladin").innerHTML =  corporationScore(games_pharmacy);
+
+  games_pharmacy = games.filter(function(el) {return el.corporation == "ECOTEC"});
+  document.getElementById("games-ecotec").innerHTML = games_pharmacy.length;
+  document.getElementById("winrate-ecotec").innerHTML =  corporationWinrate(games_pharmacy);
+  document.getElementById("score-ecotec").innerHTML =  corporationScore(games_pharmacy);
+
+  games_pharmacy = games.filter(function(el) {return el.corporation == "NIRGAL ENTERPRISES"});
+  document.getElementById("games-nirgal").innerHTML = games_pharmacy.length;
+  document.getElementById("winrate-nirgal").innerHTML =  corporationWinrate(games_pharmacy);
+  document.getElementById("score-nirgal").innerHTML =  corporationScore(games_pharmacy);
+
+  games_pharmacy = games.filter(function(el) {return el.corporation == "KUIPER COOPERATIVE"});
+  document.getElementById("games-kuiper").innerHTML = games_pharmacy.length;
+  document.getElementById("winrate-kuiper").innerHTML =  corporationWinrate(games_pharmacy);
+  document.getElementById("score-kuiper").innerHTML =  corporationScore(games_pharmacy);
 }
 
 function histogram () {
@@ -944,7 +988,7 @@ function histogram () {
       vAxis: { gridlines: { count: 0}, maxValue:20 , textPosition: 'none'},
       hAxis: {textStyle : {fontSize: 10, fontName: 'Prototype'},minValue:1, maxValue:9},
       bar: {gap: 1},
-      chartArea:{left:10,bottom:20,top:00,width:265, height:270},
+      chartArea:{left:10,bottom:20,top:0,width:265, height:270},
       colors: ['#661919','#888888'],
       histogram: {bucketSize: 1, minValue: 0, maxValue: 10},
     };
