@@ -1,3 +1,9 @@
+// Default counts 
+PROJECTS = 389;
+CORPORATIONS = 40;
+PRELUDES = 40;
+COLONIES = 11;
+GLOBALS = 36; 
 
 CONTAINER = 200; //the default height of the buttons container
 CONTENT_FILTERS = 125 //the default height of the Content filters area
@@ -18,21 +24,15 @@ else {
 
 function showAll() {
   var x, i;
-  displayedProjects = 374;
-  displayedCorporations = 40;
-  displayedPreludes = 40;
-  displayedColonies = 11;
-  displayedGlobals = 36;
-
   document.getElementById("buttonsContainer").style.display = "block";
 
   var elements = document.querySelectorAll('.ul-title');
   for (i=0; i<elements.length; i++){elements[i].style.display = "block";}
-  document.getElementById("totalProjects").innerHTML = displayedProjects;
-  document.getElementById("totalCorporations").innerHTML = displayedCorporations;
-  document.getElementById("totalPreludes").innerHTML = displayedPreludes;
-  document.getElementById("totalColonies").innerHTML = displayedColonies;
-  document.getElementById("totalGlobals").innerHTML = displayedGlobals;
+  document.getElementById("totalProjects").innerHTML = PROJECTS;
+  document.getElementById("totalCorporations").innerHTML = CORPORATIONS;
+  document.getElementById("totalPreludes").innerHTML = PRELUDES;
+  document.getElementById("totalColonies").innerHTML = COLONIES;
+  document.getElementById("totalGlobals").innerHTML = GLOBALS;
 
 
   //making all buttons inactive
@@ -327,17 +327,17 @@ function filterFunction(id) {
 
   //Display Cards Numbers
   displayedCards = document.querySelectorAll('li.show').length;
-  displayedCorporations = document.querySelectorAll('li.show.corporation').length;
-  displayedPreludes = document.querySelectorAll('li.show.prelude-card').length;
-  displayedColonies = document.querySelectorAll('li.show.colony-card').length;
-  displayedGlobals = document.querySelectorAll('li.show.global-card').length;
+  CORPORATIONS = document.querySelectorAll('li.show.corporation').length;
+  PRELUDES = document.querySelectorAll('li.show.prelude-card').length;
+  COLONIES = document.querySelectorAll('li.show.colony-card').length;
+  GLOBALS = document.querySelectorAll('li.show.global-card').length;
 
-  displayedProjects = displayedCards - displayedCorporations - displayedPreludes - displayedColonies - displayedGlobals;
-  document.getElementById("totalProjects").innerHTML = displayedProjects;
-  document.getElementById("totalCorporations").innerHTML = displayedCorporations;
-  document.getElementById("totalPreludes").innerHTML = displayedPreludes;
-  document.getElementById("totalColonies").innerHTML = displayedColonies;
-  document.getElementById("totalGlobals").innerHTML = displayedGlobals;
+  PROJECTS = displayedCards - CORPORATIONS - PRELUDES - COLONIES - GLOBALS;
+  document.getElementById("totalProjects").innerHTML = PROJECTS;
+  document.getElementById("totalCorporations").innerHTML = CORPORATIONS;
+  document.getElementById("totalPreludes").innerHTML = PRELUDES;
+  document.getElementById("totalColonies").innerHTML = COLONIES;
+  document.getElementById("totalGlobals").innerHTML = GLOBALS;
 
 
  //clearing all displayed cards
