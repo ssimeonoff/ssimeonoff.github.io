@@ -468,13 +468,14 @@ body {
   box-shadow: 0 0 2px 1px black, inset 0 0 0px 1px #222;
   color: #222;
   font-size: 20px;
+  cursor: pointer;
 }
 
 .button2:active {
   transform: translate(0,1px);
 }
 
-.button:hover, .button2:hover {
+.button:hover, .button2:hover, .btn-exclude:hover {
   filter: brightness(110%);
 }
 
@@ -485,21 +486,21 @@ body {
   -ms-appearance: none;
   font-family: Prototype;
   position: absolute;
-  height: 55px;
+  height: 50px;
   width: 250px;
-  padding-left: 15px;
-  margin-top: 30px;
+  margin-top: 80px;
   margin-left: 20px;
   line-height: 25px;
   text-align: center;
-  font-size: 22px;
-  border-top: 2px solid #bbb;
-  border-left: 2px solid #bbb;
-  border-right: 2px solid #666;
-  border-bottom: 2px solid #666;
+  font-size: 18px;
+  border-top: 2px solid #666;
+  border-left: 2px solid #666;
+  border-right: 2px solid #bbb;
+  border-bottom: 2px solid #bbb;
   background: linear-gradient(to bottom right, #fff, #bbb, #fff,#fff);
   border-radius: 5px;
-  box-shadow: 0 0 2px 1px black;
+  box-shadow: 0 1px 1px 1px black, inset 0 1px 2px 1px #222;
+  cursor: pointer;
 }
 
 
