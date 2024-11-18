@@ -1193,7 +1193,7 @@ li.global-card::before {
 }
 
 .production-box-size1a {
-  width: 66px;
+  width: 65px;
 }
 
 .production-box-size2 {
@@ -1201,7 +1201,7 @@ li.global-card::before {
 }
 
 .production-box-size2a {
-  width: 100px;
+  width: 105px;
 }
 
 .production-box-size3 {
@@ -1209,15 +1209,15 @@ li.global-card::before {
 }
 
 .production-box-size3a {
-  width: 130px;
+  width: 140px;
 }
 
 .production-box-size4 {
-  width: 150px;
+  width: 155px;
 }
 
 .production-box-size4a {
-  width: 165px;
+  width: 170px;
 }
 
 .production {
@@ -1227,7 +1227,7 @@ li.global-card::before {
   height: 30px;
   background-size: 30px;
   line-height: 30px;
-  margin: 2px;
+  margin: 2px 0;
   text-align: center;
   vertical-align: bottom;
 }
@@ -1268,8 +1268,8 @@ li.global-card::before {
   line-height: 16px;
   text-align: center;
   margin-bottom: 10px;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 2px;
+  margin-right: 2px;
   margin-top: 5px;
   filter: drop-shadow(0px 0px 1px black);
   background-image: url(../images/tiles/empty.png);
@@ -1393,8 +1393,8 @@ li.global-card::before {
   position: relative;
   display: inline-block;
   margin-top: 5px;
-  margin-left: 3px;
-  margin-right: 3px;
+  margin-left: 0px;
+  margin-right: 0px;
   margin-bottom: 10px;
   width: 30px;
   height: 30px;

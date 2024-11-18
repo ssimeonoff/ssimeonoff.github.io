@@ -99,6 +99,8 @@ function displayCardsOnly() {
     }
   }
 }
+filterFunction("prelude2");
+
 ////////////////////// FILTER FUCTION ///////////////////////////////
 function filterFunction(id) {
   var input, filter, ul, li, a, i, x;
