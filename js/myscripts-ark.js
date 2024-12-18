@@ -18,10 +18,10 @@ else {
 
 function showAll() {
   var x, i;
-  displayedAnimals = 128;
-  displayedSponsors = 64;
-  displayedProjects = 32;
-  displayedEndgames = 11;
+  displayedAnimals = 128 + 32;
+  displayedSponsors = 64 + 16;
+  displayedProjects = 32 + 7;
+  displayedEndgames = 11 + 6;
 
   document.getElementById("buttonsContainer").style.display = "block";
 
